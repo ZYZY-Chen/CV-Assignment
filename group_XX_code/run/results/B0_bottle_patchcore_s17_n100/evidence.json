@@ -1,0 +1,33 @@
+{
+  "run_id": "B0_bottle_patchcore_s17_n100",
+  "config_hash": "05834170663B2CECDC0AAD8E4DA1F87A29DBB1CB48BE8C9DC470EB516D1F4B6D",
+  "split_hash": "128F88F7EFA3B5F8D06B27CC80E67FF4D8E2163B4ABD24ECF90801FA828E4B71",
+  "dataset": "mvtec_ad",
+  "category": "bottle",
+  "method": "patchcore",
+  "backbone": "resnet18",
+  "layers": [
+    "layer2",
+    "layer3"
+  ],
+  "seed": 17,
+  "normal_train_n": 100,
+  "method_detail": {
+    "sampling": "coreset",
+    "coreset_ratio": 0.05,
+    "memory_bank_full": 25600,
+    "memory_bank_kept": 1280,
+    "fit_seconds": 1.4132
+  },
+  "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+  "torch_version": "2.11.0+cu128",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "n_dev": 42,
+  "n_test": 83,
+  "fit_seconds": 1.4132,
+  "predict_seconds": 16.552,
+  "evaluate_seconds": 33.9236,
+  "gpu_peak_memory_mb": 238.8,
+  "slurm_job_id": null,
+  "finished_at": "2026-10-17 23:21:45"
+}
