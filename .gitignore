@@ -8,7 +8,5 @@ datasets/file_inventory.csv
 __pycache__/
 *.pyc
 
-# Feature caches other than the bottle file already stored with Git LFS.
-# The rest are about 2 GB and exceed GitHub's free LFS quota.
+# Feature caches are local-only and must not be committed.
 group_XX_code/run/feature_cache/*.npz
-!group_XX_code/run/feature_cache/cache_mvtec_ad_bottle.npz

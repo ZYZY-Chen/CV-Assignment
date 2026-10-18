@@ -1,1 +1,0 @@
-group_XX_code/run/feature_cache/*.npz filter=lfs diff=lfs merge=lfs -text
