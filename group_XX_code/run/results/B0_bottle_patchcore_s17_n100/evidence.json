@@ -29,5 +29,8 @@
   "evaluate_seconds": 33.9236,
   "gpu_peak_memory_mb": 238.8,
   "slurm_job_id": null,
-  "finished_at": "2026-10-17 23:21:45"
+  "finished_at": "2026-10-17 23:21:45",
+  "image_score_grid": 256,
+  "image_scores_recomputed_at": "2026-10-18 13:06:37",
+  "image_scores_source": "predictions.npz float16 maps bilinear to 256"
 }

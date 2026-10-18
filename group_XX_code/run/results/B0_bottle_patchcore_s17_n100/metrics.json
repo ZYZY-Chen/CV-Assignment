@@ -3,7 +3,7 @@
     "max": {
       "image_auroc": 1.0,
       "image_ap": 0.9999999999999998,
-      "threshold_95pct": 2.031388300657272,
+      "threshold_95pct": 2.0083419799804685,
       "normal_fpr": 0.05,
       "anomaly_recall": 1.0,
       "per_defect_recall": {
@@ -15,7 +15,7 @@
     "top_0.001": {
       "image_auroc": 1.0,
       "image_ap": 0.9999999999999998,
-      "threshold_95pct": 2.031388300657272,
+      "threshold_95pct": 1.9383939266204828,
       "normal_fpr": 0.05,
       "anomaly_recall": 1.0,
       "per_defect_recall": {
@@ -27,7 +27,7 @@
     "top_0.01": {
       "image_auroc": 1.0,
       "image_ap": 0.9999999999999998,
-      "threshold_95pct": 1.857544791698455,
+      "threshold_95pct": 1.705578368902206,
       "normal_fpr": 0.05,
       "anomaly_recall": 1.0,
       "per_defect_recall": {
@@ -39,8 +39,8 @@
     "top_0.05": {
       "image_auroc": 1.0,
       "image_ap": 0.9999999999999998,
-      "threshold_95pct": 1.4563598573207854,
-      "normal_fpr": 0.15,
+      "threshold_95pct": 1.3471658945083618,
+      "normal_fpr": 0.2,
       "anomaly_recall": 1.0,
       "per_defect_recall": {
         "broken_large": 1.0,

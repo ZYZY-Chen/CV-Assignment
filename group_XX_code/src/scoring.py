@@ -3,10 +3,10 @@
 scoring.py — 图像级异常分数聚合规则（手册第 5 页 I1/I2）
 ========================================================
 
-PatchCore 原生图像分数 = 异常图最大值；I1 预注册改进 = top 1% 像素均值；
-另保留 top 0.1%、top 5% 用于 q 敏感性分析（I2，不增加 fit）。
-
-所有规则均只对异常图（连续像素分数）操作，像素级指标不受这些规则影响。
+手册第 6 页：图像分数在 256×256 连续异常图上计算。
+K = max(1, ceil(q × H × W))。正式改进 q=0.01；q=0.001 与 0.05 只做敏感性分析。
+max 是该异常图的最大值（当前异常图已经是近邻加权分数）。
+像素级指标不经过这些规则。
 """
 from __future__ import annotations
 
@@ -14,12 +14,25 @@ import math
 from typing import Dict
 
 import torch
+import torch.nn.functional as F
 
 # 预注册的聚合规则：q 为取均值的像素比例；max 即原生最大值
 RULES = ("max", "top_0.001", "top_0.01", "top_0.05")
 # 正式改进预指定 q=0.01
 IMPROVEMENT_RULE = "top_0.01"
+IMAGE_SCORE_SIZE = 256
 _Q = {"top_0.001": 0.001, "top_0.01": 0.01, "top_0.05": 0.05}
+
+
+def to_image_score_grid(maps: torch.Tensor,
+                        size: int = IMAGE_SCORE_SIZE) -> torch.Tensor:
+    """把 patch 异常图双线性放到手册规定的 256×256。已是该尺寸则只转 float32。"""
+    maps = maps.float()
+    if maps.shape[-2:] == (size, size):
+        return maps
+    x = F.interpolate(maps.unsqueeze(1), size=(size, size),
+                      mode="bilinear", align_corners=False)
+    return x.squeeze(1)
 
 
 def aggregate(amap: torch.Tensor, rule: str) -> float:

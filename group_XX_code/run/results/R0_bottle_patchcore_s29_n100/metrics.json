@@ -1,0 +1,58 @@
+{
+  "image": {
+    "max": {
+      "image_auroc": 1.0,
+      "image_ap": 0.9999999999999998,
+      "threshold_95pct": 2.093319100141524,
+      "normal_fpr": 0.0,
+      "anomaly_recall": 1.0,
+      "per_defect_recall": {
+        "broken_large": 1.0,
+        "broken_small": 1.0,
+        "contamination": 1.0
+      }
+    },
+    "top_0.001": {
+      "image_auroc": 1.0,
+      "image_ap": 0.9999999999999998,
+      "threshold_95pct": 2.013943541049956,
+      "normal_fpr": 0.0,
+      "anomaly_recall": 1.0,
+      "per_defect_recall": {
+        "broken_large": 1.0,
+        "broken_small": 1.0,
+        "contamination": 1.0
+      }
+    },
+    "top_0.01": {
+      "image_auroc": 1.0,
+      "image_ap": 0.9999999999999998,
+      "threshold_95pct": 1.7165752887725825,
+      "normal_fpr": 0.05,
+      "anomaly_recall": 1.0,
+      "per_defect_recall": {
+        "broken_large": 1.0,
+        "broken_small": 1.0,
+        "contamination": 1.0
+      }
+    },
+    "top_0.05": {
+      "image_auroc": 1.0,
+      "image_ap": 0.9999999999999998,
+      "threshold_95pct": 1.4079409539699552,
+      "normal_fpr": 0.05,
+      "anomaly_recall": 1.0,
+      "per_defect_recall": {
+        "broken_large": 1.0,
+        "broken_small": 1.0,
+        "contamination": 1.0
+      }
+    }
+  },
+  "pixel": {
+    "pixel_auroc": 0.9801183019111129,
+    "pixel_ap": 0.7005615959290477,
+    "n_pixels": 67230000,
+    "n_positive_pixels": 3886731
+  }
+}

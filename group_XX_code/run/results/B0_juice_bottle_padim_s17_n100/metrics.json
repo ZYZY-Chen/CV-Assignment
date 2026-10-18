@@ -1,0 +1,161 @@
+{
+  "image": {
+    "max": {
+      "image_auroc": 0.8675171294626758,
+      "image_ap": 0.9465544673138333,
+      "threshold_95pct": 219.25425338745106,
+      "normal_fpr": 0.07446808510638298,
+      "anomaly_recall": 0.711864406779661,
+      "per_defect_recall": {
+        "logical_anomalies": 0.7887323943661971,
+        "structural_anomalies": 0.5957446808510638
+      }
+    },
+    "top_0.001": {
+      "image_auroc": 0.8740984493328524,
+      "image_ap": 0.9499523878252976,
+      "threshold_95pct": 201.83460388183585,
+      "normal_fpr": 0.06382978723404255,
+      "anomaly_recall": 0.711864406779661,
+      "per_defect_recall": {
+        "logical_anomalies": 0.7887323943661971,
+        "structural_anomalies": 0.5957446808510638
+      }
+    },
+    "top_0.01": {
+      "image_auroc": 0.8891543454742157,
+      "image_ap": 0.9591714712488046,
+      "threshold_95pct": 153.32510375976562,
+      "normal_fpr": 0.05319148936170213,
+      "anomaly_recall": 0.7415254237288136,
+      "per_defect_recall": {
+        "logical_anomalies": 0.8098591549295775,
+        "structural_anomalies": 0.6382978723404256
+      }
+    },
+    "top_0.05": {
+      "image_auroc": 0.8965470609448251,
+      "image_ap": 0.9622666007473449,
+      "threshold_95pct": 108.63845443725585,
+      "normal_fpr": 0.05319148936170213,
+      "anomaly_recall": 0.7330508474576272,
+      "per_defect_recall": {
+        "logical_anomalies": 0.823943661971831,
+        "structural_anomalies": 0.5957446808510638
+      }
+    }
+  },
+  "pixel": {
+    "pixel_auroc": 0.9206108161044251,
+    "pixel_ap": 0.6096034656924854,
+    "n_pixels": 422400000,
+    "n_positive_pixels": 23655372
+  },
+  "groups": {
+    "logical_anomalies": {
+      "n_good": 94,
+      "n_anomaly": 142,
+      "image": {
+        "max": {
+          "image_auroc": 0.885525921486365,
+          "image_ap": 0.93238473803915,
+          "threshold_95pct": 219.25425338745106,
+          "normal_fpr": 0.07446808510638298,
+          "anomaly_recall": 0.7887323943661971,
+          "per_defect_recall": {
+            "logical_anomalies": 0.7887323943661971
+          }
+        },
+        "top_0.001": {
+          "image_auroc": 0.8894216362001797,
+          "image_ap": 0.9359677988417694,
+          "threshold_95pct": 201.83460388183585,
+          "normal_fpr": 0.06382978723404255,
+          "anomaly_recall": 0.7887323943661971,
+          "per_defect_recall": {
+            "logical_anomalies": 0.7887323943661971
+          }
+        },
+        "top_0.01": {
+          "image_auroc": 0.902906802517231,
+          "image_ap": 0.9502063055433977,
+          "threshold_95pct": 153.32510375976562,
+          "normal_fpr": 0.05319148936170213,
+          "anomaly_recall": 0.8098591549295775,
+          "per_defect_recall": {
+            "logical_anomalies": 0.8098591549295775
+          }
+        },
+        "top_0.05": {
+          "image_auroc": 0.9127959244830687,
+          "image_ap": 0.9564823292404061,
+          "threshold_95pct": 108.63845443725585,
+          "normal_fpr": 0.05319148936170213,
+          "anomaly_recall": 0.823943661971831,
+          "per_defect_recall": {
+            "logical_anomalies": 0.823943661971831
+          }
+        }
+      },
+      "pixel": {
+        "pixel_auroc": 0.9213260708871384,
+        "pixel_ap": 0.6555032109262753,
+        "n_pixels": 302080000,
+        "n_positive_pixels": 20571561
+      }
+    },
+    "structural_anomalies": {
+      "n_good": 94,
+      "n_anomaly": 94,
+      "image": {
+        "max": {
+          "image_auroc": 0.8403123585332729,
+          "image_ap": 0.8596942612598106,
+          "threshold_95pct": 219.25425338745106,
+          "normal_fpr": 0.07446808510638298,
+          "anomaly_recall": 0.5957446808510638,
+          "per_defect_recall": {
+            "structural_anomalies": 0.5957446808510638
+          }
+        },
+        "top_0.001": {
+          "image_auroc": 0.8509506564056134,
+          "image_ap": 0.8700096365717387,
+          "threshold_95pct": 201.83460388183585,
+          "normal_fpr": 0.06382978723404255,
+          "anomaly_recall": 0.5957446808510638,
+          "per_defect_recall": {
+            "structural_anomalies": 0.5957446808510638
+          }
+        },
+        "top_0.01": {
+          "image_auroc": 0.8683793571751923,
+          "image_ap": 0.8893613376903617,
+          "threshold_95pct": 153.32510375976562,
+          "normal_fpr": 0.05319148936170213,
+          "anomaly_recall": 0.6382978723404256,
+          "per_defect_recall": {
+            "structural_anomalies": 0.6382978723404256
+          }
+        },
+        "top_0.05": {
+          "image_auroc": 0.8720009053870529,
+          "image_ap": 0.888623846628826,
+          "threshold_95pct": 108.63845443725585,
+          "normal_fpr": 0.05319148936170213,
+          "anomaly_recall": 0.5957446808510638,
+          "per_defect_recall": {
+            "structural_anomalies": 0.5957446808510638
+          }
+        }
+      },
+      "pixel": {
+        "pixel_auroc": 0.9285340773797768,
+        "pixel_ap": 0.3555791403107587,
+        "n_pixels": 240640000,
+        "n_positive_pixels": 3083811
+      }
+    }
+  },
+  "pixel_note": "pixel 是全部测试图混在一起的结果；LOCO 的正式像素指标看 groups 里分开的 logical / structural"
+}

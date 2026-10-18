@@ -1,0 +1,51 @@
+﻿[batch] 实验矩阵共 66 次 fit
+[batch] (1/66) 跳过（已完成）：B0_bottle_patchcore_s17_n100
+[batch] (2/66) 跳过（已完成）：B0_bottle_padim_s17_n100
+[batch] (3/66) 跳过（已完成）：B0_cable_patchcore_s17_n100
+[batch] (4/66) 跳过（已完成）：B0_cable_padim_s17_n100
+
+[batch] (5/66) 开始：B0_capsule_patchcore_s17_n100
+[run] B0_capsule_patchcore_s17_n100
+[run] config_hash=5735E4A885F4F1B9 split_hash=956CA7250A5AD597
+
+=== 图像 AUROC（聚合规则） ===
+  max        AUROC=0.8795  AP=0.9691  正常误报=0.043  异常召回=0.330
+  top_0.001  AUROC=0.8795  AP=0.9691  正常误报=0.043  异常召回=0.330
+  top_0.01   AUROC=0.9051  AP=0.9757  正常误报=0.000  异常召回=0.303
+  top_0.05   AUROC=0.9031  AP=0.9756  正常误报=0.000  异常召回=0.257
+像素 AUROC=0.9815  像素 AP=0.3835
+耗时 fit=1.14s predict=20.52s eval=51.35s；显存峰值=238.8 MB
+输出：C:\Users\theho\Documents\计算机视觉课程\小组作业\group_XX_code\run\results\B0_capsule_patchcore_s17_n100
+[batch] (5/66) 完成：B0_capsule_patchcore_s17_n100，74s
+
+[batch] (6/66) 开始：B0_capsule_padim_s17_n100
+[run] B0_capsule_padim_s17_n100
+[run] config_hash=16EDA1A92F54255B split_hash=956CA7250A5AD597
+
+=== 图像 AUROC（聚合规则） ===
+  max        AUROC=0.8233  AP=0.9459  正常误报=0.000  异常召回=0.055
+  top_0.001  AUROC=0.8233  AP=0.9459  正常误报=0.000  异常召回=0.055
+  top_0.01   AUROC=0.8855  AP=0.9705  正常误报=0.000  异常召回=0.110
+  top_0.05   AUROC=0.9019  AP=0.9757  正常误报=0.000  异常召回=0.138
+像素 AUROC=0.9839  像素 AP=0.3675
+耗时 fit=0.22s predict=20.23s eval=51.92s；显存峰值=258.6 MB
+输出：C:\Users\theho\Documents\计算机视觉课程\小组作业\group_XX_code\run\results\B0_capsule_padim_s17_n100
+[batch] (6/66) 完成：B0_capsule_padim_s17_n100，73s
+
+[batch] (7/66) 开始：B0_screw_patchcore_s17_n100
+[run] B0_screw_patchcore_s17_n100
+[run] config_hash=628C26EF90CD68CC split_hash=9A49E85293C36F31
+
+=== 图像 AUROC（聚合规则） ===
+  max        AUROC=0.7317  AP=0.8710  正常误报=0.024  异常召回=0.109
+  top_0.001  AUROC=0.7317  AP=0.8710  正常误报=0.024  异常召回=0.109
+  top_0.01   AUROC=0.7401  AP=0.8708  正常误报=0.024  异常召回=0.067
+  top_0.05   AUROC=0.7590  AP=0.8755  正常误报=0.024  异常召回=0.067
+像素 AUROC=0.9666  像素 AP=0.0665
+耗时 fit=1.02s predict=19.52s eval=67.21s；显存峰值=246.8 MB
+输出：C:\Users\theho\Documents\计算机视觉课程\小组作业\group_XX_code\run\results\B0_screw_patchcore_s17_n100
+[batch] (7/66) 完成：B0_screw_patchcore_s17_n100，88s
+
+[batch] (8/66) 开始：B0_screw_padim_s17_n100
+[run] B0_screw_padim_s17_n100
+[run] config_hash=02869F0D1384ED2A split_hash=9A49E85293C36F31

@@ -1,0 +1,19 @@
+run_tag: B0
+method: padim
+backbone: resnet18
+layers:
+- layer1
+- layer2
+- layer3
+image_size: 256
+seed: 17
+n: 100
+batch_size: 8
+workers: 0
+padim:
+  n_dims: 100
+  eps: 0.01
+dataset: mvtec_ad
+category: wood
+run_suffix: ''
+image_score_grid: 256

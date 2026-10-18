@@ -1,0 +1,36 @@
+{
+  "run_id": "B0_screw_patchcore_s17_n100",
+  "config_hash": "628C26EF90CD68CC180F510BB27ACD3394051D4D61A1367BF17B7A077E40686E",
+  "split_hash": "9A49E85293C36F31B2E097B588783661FAF037D4FDAED21FA5C8BC4420E4D0C7",
+  "dataset": "mvtec_ad",
+  "category": "screw",
+  "method": "patchcore",
+  "backbone": "resnet18",
+  "layers": [
+    "layer2",
+    "layer3"
+  ],
+  "seed": 17,
+  "normal_train_n": 100,
+  "method_detail": {
+    "sampling": "coreset",
+    "coreset_ratio": 0.05,
+    "memory_bank_full": 25600,
+    "memory_bank_kept": 1280,
+    "fit_seconds": 1.0211
+  },
+  "device": "NVIDIA GeForce RTX 5050 Laptop GPU",
+  "torch_version": "2.11.0+cu128",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "n_dev": 64,
+  "n_test": 160,
+  "fit_seconds": 1.0212,
+  "predict_seconds": 19.5205,
+  "evaluate_seconds": 67.2147,
+  "gpu_peak_memory_mb": 246.8,
+  "slurm_job_id": null,
+  "finished_at": "2026-10-18 11:45:35",
+  "image_score_grid": 256,
+  "image_scores_recomputed_at": "2026-10-18 13:06:37",
+  "image_scores_source": "predictions.npz float16 maps bilinear to 256"
+}

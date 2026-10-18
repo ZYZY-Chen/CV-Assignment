@@ -114,12 +114,20 @@ def load_image(path: Path) -> Tuple[torch.Tensor, Tuple[int, int]]:
     return tensor, orig_size
 
 
-def load_mask(paths: Sequence[Path], size: int = IMAGE_SIZE) -> torch.Tensor:
-    """读一个或多个掩膜，resize(NEAREST)、二值化、多掩膜取并集 → (size,size)。"""
-    mask = np.zeros((size, size), dtype=np.uint8)
+def load_mask(paths: Sequence[Path],
+              size: int | tuple[int, int] = IMAGE_SIZE) -> torch.Tensor:
+    """读掩膜，NEAREST 缩放到目标尺寸后二值化。多张掩膜取并集。
+
+    size 为 int 时得到正方形。像素评估传 (H, W)，因为 LOCO 原图不是正方形。
+    """
+    if isinstance(size, int):
+        height, width = size, size
+    else:
+        height, width = int(size[0]), int(size[1])
+    mask = np.zeros((height, width), dtype=np.uint8)
     for p in paths:
         with Image.open(p) as im:
-            im = im.convert("L").resize((size, size), MASK_RESAMPLE)
+            im = im.convert("L").resize((width, height), MASK_RESAMPLE)
             arr = np.asarray(im, dtype=np.uint8)
         mask = np.maximum(mask, (arr > 0).astype(np.uint8))
     return torch.from_numpy(mask.astype(np.float32))
@@ -164,9 +172,9 @@ class ManifestDataset(Dataset):
 
 def make_loader(datasets_root: str | Path, items: Sequence[dict],
                 batch_size: int = 8, shuffle: bool = False,
-                num_workers: int = 2) -> DataLoader:
+                num_workers: int = 2, pin_memory: bool = False) -> DataLoader:
     """统一 DataLoader；评估/拟合均默认不 shuffle，顺序由 manifest 决定。"""
     ds = ManifestDataset(datasets_root, items)
     return DataLoader(ds, batch_size=batch_size, shuffle=shuffle,
-                      num_workers=num_workers, pin_memory=True,
+                      num_workers=num_workers, pin_memory=pin_memory,
                       persistent_workers=(num_workers > 0))

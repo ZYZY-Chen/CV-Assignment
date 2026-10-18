@@ -1,0 +1,20 @@
+run_tag: H2
+method: patchcore
+backbone: resnet18
+layers:
+- layer2
+- layer3
+image_size: 256
+seed: 17
+n: 100
+batch_size: 8
+workers: 0
+patchcore:
+  coreset_ratio: 0.01
+  num_neighbors: 9
+  sampling: coreset
+  sampling_seed: 0
+dataset: mvtec_ad
+category: cable
+run_suffix: _coreset01
+image_score_grid: 256

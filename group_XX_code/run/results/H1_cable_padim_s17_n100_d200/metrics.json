@@ -1,0 +1,78 @@
+{
+  "image": {
+    "max": {
+      "image_auroc": 0.8365817091454273,
+      "image_ap": 0.862825524893176,
+      "threshold_95pct": 618.7981567382812,
+      "normal_fpr": 0.15517241379310345,
+      "anomaly_recall": 0.532608695652174,
+      "per_defect_recall": {
+        "bent_wire": 0.9230769230769231,
+        "cable_swap": 0.3333333333333333,
+        "combined": 0.8181818181818182,
+        "cut_inner_insulation": 0.5714285714285714,
+        "cut_outer_insulation": 1.0,
+        "missing_cable": 0.16666666666666666,
+        "missing_wire": 0.0,
+        "poke_insulation": 0.4
+      }
+    },
+    "top_0.001": {
+      "image_auroc": 0.8362068965517242,
+      "image_ap": 0.8566716907201939,
+      "threshold_95pct": 591.4183471679687,
+      "normal_fpr": 0.15517241379310345,
+      "anomaly_recall": 0.5,
+      "per_defect_recall": {
+        "bent_wire": 0.9230769230769231,
+        "cable_swap": 0.16666666666666666,
+        "combined": 0.7272727272727273,
+        "cut_inner_insulation": 0.5714285714285714,
+        "cut_outer_insulation": 1.0,
+        "missing_cable": 0.16666666666666666,
+        "missing_wire": 0.0,
+        "poke_insulation": 0.4
+      }
+    },
+    "top_0.01": {
+      "image_auroc": 0.8624437781109444,
+      "image_ap": 0.8792629143029824,
+      "threshold_95pct": 443.61998291015624,
+      "normal_fpr": 0.1724137931034483,
+      "anomaly_recall": 0.6086956521739131,
+      "per_defect_recall": {
+        "bent_wire": 0.9230769230769231,
+        "cable_swap": 0.3333333333333333,
+        "combined": 0.8181818181818182,
+        "cut_inner_insulation": 0.7142857142857143,
+        "cut_outer_insulation": 1.0,
+        "missing_cable": 0.25,
+        "missing_wire": 0.3,
+        "poke_insulation": 0.5
+      }
+    },
+    "top_0.05": {
+      "image_auroc": 0.8883058470764618,
+      "image_ap": 0.8996199996460449,
+      "threshold_95pct": 336.1669677734374,
+      "normal_fpr": 0.1206896551724138,
+      "anomaly_recall": 0.6304347826086957,
+      "per_defect_recall": {
+        "bent_wire": 0.8461538461538461,
+        "cable_swap": 0.5,
+        "combined": 1.0,
+        "cut_inner_insulation": 0.7142857142857143,
+        "cut_outer_insulation": 0.8,
+        "missing_cable": 0.5,
+        "missing_wire": 0.2,
+        "poke_insulation": 0.4
+      }
+    }
+  },
+  "pixel": {
+    "pixel_auroc": 0.9696428254554131,
+    "pixel_ap": 0.41016871622499607,
+    "n_pixels": 157286400,
+    "n_positive_pixels": 4515876
+  }
+}

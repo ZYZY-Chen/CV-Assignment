@@ -1,0 +1,66 @@
+{
+  "image": {
+    "max": {
+      "image_auroc": 0.8647786198643799,
+      "image_ap": 0.9348610177387116,
+      "threshold_95pct": 499.5686813354493,
+      "normal_fpr": 0.043478260869565216,
+      "anomaly_recall": 0.2018348623853211,
+      "per_defect_recall": {
+        "crack": 0.30434782608695654,
+        "faulty_imprint": 0.045454545454545456,
+        "poke": 0.19047619047619047,
+        "scratch": 0.17391304347826086,
+        "squeeze": 0.3
+      }
+    },
+    "top_0.001": {
+      "image_auroc": 0.8639808536098923,
+      "image_ap": 0.938286701549644,
+      "threshold_95pct": 471.52562866210945,
+      "normal_fpr": 0.043478260869565216,
+      "anomaly_recall": 0.1743119266055046,
+      "per_defect_recall": {
+        "crack": 0.2608695652173913,
+        "faulty_imprint": 0.045454545454545456,
+        "poke": 0.14285714285714285,
+        "scratch": 0.17391304347826086,
+        "squeeze": 0.25
+      }
+    },
+    "top_0.01": {
+      "image_auroc": 0.8775428799361787,
+      "image_ap": 0.9504639257626807,
+      "threshold_95pct": 351.3655151367188,
+      "normal_fpr": 0.043478260869565216,
+      "anomaly_recall": 0.13761467889908258,
+      "per_defect_recall": {
+        "crack": 0.21739130434782608,
+        "faulty_imprint": 0.045454545454545456,
+        "poke": 0.14285714285714285,
+        "scratch": 0.08695652173913043,
+        "squeeze": 0.2
+      }
+    },
+    "top_0.05": {
+      "image_auroc": 0.8946948544076586,
+      "image_ap": 0.9658312407232075,
+      "threshold_95pct": 213.48636093139655,
+      "normal_fpr": 0.0,
+      "anomaly_recall": 0.11926605504587157,
+      "per_defect_recall": {
+        "crack": 0.17391304347826086,
+        "faulty_imprint": 0.09090909090909091,
+        "poke": 0.047619047619047616,
+        "scratch": 0.043478260869565216,
+        "squeeze": 0.25
+      }
+    }
+  },
+  "pixel": {
+    "pixel_auroc": 0.9811197056832446,
+    "pixel_ap": 0.3206183817283738,
+    "n_pixels": 132000000,
+    "n_positive_pixels": 1208676
+  }
+}

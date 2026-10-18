@@ -1,0 +1,34 @@
+{
+  "run_id": "R0_bottle_patchcore_s43_n100",
+  "config_hash": "8111B5B90868D0C3C167198B553AA013C4ADD89B1D7677815A327F477DBEA5B6",
+  "split_hash": "128F88F7EFA3B5F8D06B27CC80E67FF4D8E2163B4ABD24ECF90801FA828E4B71",
+  "dataset": "mvtec_ad",
+  "category": "bottle",
+  "method": "patchcore",
+  "backbone": "resnet18",
+  "layers": [
+    "layer2",
+    "layer3"
+  ],
+  "seed": 43,
+  "normal_train_n": 100,
+  "method_detail": {
+    "sampling": "coreset",
+    "coreset_ratio": 0.05,
+    "memory_bank_full": 25600,
+    "memory_bank_kept": 1280,
+    "fit_seconds": 5.3874
+  },
+  "device": "cpu",
+  "torch_version": "2.11.0+cu128",
+  "platform": "Windows-10-10.0.26100-SP0",
+  "image_score_grid": 256,
+  "n_dev": 42,
+  "n_test": 83,
+  "fit_seconds": 5.3875,
+  "predict_seconds": 2.2919,
+  "evaluate_seconds": 24.6973,
+  "gpu_peak_memory_mb": null,
+  "slurm_job_id": null,
+  "finished_at": "2026-10-18 13:36:36"
+}

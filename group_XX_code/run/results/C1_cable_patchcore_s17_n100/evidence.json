@@ -1,0 +1,34 @@
+{
+  "run_id": "C1_cable_patchcore_s17_n100",
+  "config_hash": "A96494730025133CE54B808BDC2E90EE387D69C6F31C9901F6C94608AFE7B6FA",
+  "split_hash": "9D41EFE9559CFE2B50EC838F9853E0BCA8FE93FEB37C32B1F72F08D0A5AC7720",
+  "dataset": "mvtec_ad",
+  "category": "cable",
+  "method": "patchcore",
+  "backbone": "resnet18",
+  "layers": [
+    "layer2",
+    "layer3"
+  ],
+  "seed": 17,
+  "normal_train_n": 100,
+  "method_detail": {
+    "sampling": "random",
+    "coreset_ratio": 0.05,
+    "memory_bank_full": 25600,
+    "memory_bank_kept": 1280,
+    "fit_seconds": 0.0337
+  },
+  "device": "cpu",
+  "torch_version": "2.11.0+cu128",
+  "platform": "Windows-10-10.0.26100-SP0",
+  "image_score_grid": 256,
+  "n_dev": 45,
+  "n_test": 150,
+  "fit_seconds": 0.0338,
+  "predict_seconds": 6.0458,
+  "evaluate_seconds": 60.4559,
+  "gpu_peak_memory_mb": null,
+  "slurm_job_id": null,
+  "finished_at": "2026-10-18 13:22:52"
+}

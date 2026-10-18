@@ -1,0 +1,66 @@
+{
+  "image": {
+    "max": {
+      "image_auroc": 0.5187538430006149,
+      "image_ap": 0.7624667878191347,
+      "threshold_95pct": 1214.9718139648437,
+      "normal_fpr": 0.0975609756097561,
+      "anomaly_recall": 0.058823529411764705,
+      "per_defect_recall": {
+        "manipulated_front": 0.08333333333333333,
+        "scratch_head": 0.125,
+        "scratch_neck": 0.04,
+        "thread_side": 0.0,
+        "thread_top": 0.043478260869565216
+      }
+    },
+    "top_0.001": {
+      "image_auroc": 0.519163763066202,
+      "image_ap": 0.7655683857534954,
+      "threshold_95pct": 1146.5763671874997,
+      "normal_fpr": 0.0975609756097561,
+      "anomaly_recall": 0.058823529411764705,
+      "per_defect_recall": {
+        "manipulated_front": 0.08333333333333333,
+        "scratch_head": 0.125,
+        "scratch_neck": 0.04,
+        "thread_side": 0.0,
+        "thread_top": 0.043478260869565216
+      }
+    },
+    "top_0.01": {
+      "image_auroc": 0.517114162738266,
+      "image_ap": 0.7599934679480362,
+      "threshold_95pct": 1013.4381072998045,
+      "normal_fpr": 0.04878048780487805,
+      "anomaly_recall": 0.04201680672268908,
+      "per_defect_recall": {
+        "manipulated_front": 0.08333333333333333,
+        "scratch_head": 0.041666666666666664,
+        "scratch_neck": 0.04,
+        "thread_side": 0.0,
+        "thread_top": 0.043478260869565216
+      }
+    },
+    "top_0.05": {
+      "image_auroc": 0.5242877638860423,
+      "image_ap": 0.7600718301510286,
+      "threshold_95pct": 744.0129638671875,
+      "normal_fpr": 0.07317073170731707,
+      "anomaly_recall": 0.06722689075630252,
+      "per_defect_recall": {
+        "manipulated_front": 0.125,
+        "scratch_head": 0.08333333333333333,
+        "scratch_neck": 0.04,
+        "thread_side": 0.0,
+        "thread_top": 0.08695652173913043
+      }
+    }
+  },
+  "pixel": {
+    "pixel_auroc": 0.9342791923090005,
+    "pixel_ap": 0.021686520562553845,
+    "n_pixels": 167772160,
+    "n_positive_pixels": 418611
+  }
+}

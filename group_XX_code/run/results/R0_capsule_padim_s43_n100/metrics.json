@@ -1,0 +1,66 @@
+{
+  "image": {
+    "max": {
+      "image_auroc": 0.8915037893897089,
+      "image_ap": 0.9625852592077908,
+      "threshold_95pct": 463.9561813354493,
+      "normal_fpr": 0.043478260869565216,
+      "anomaly_recall": 0.11926605504587157,
+      "per_defect_recall": {
+        "crack": 0.21739130434782608,
+        "faulty_imprint": 0.045454545454545456,
+        "poke": 0.09523809523809523,
+        "scratch": 0.043478260869565216,
+        "squeeze": 0.2
+      }
+    },
+    "top_0.001": {
+      "image_auroc": 0.8927004387714399,
+      "image_ap": 0.9636577565452529,
+      "threshold_95pct": 414.71461334228525,
+      "normal_fpr": 0.043478260869565216,
+      "anomaly_recall": 0.11926605504587157,
+      "per_defect_recall": {
+        "crack": 0.21739130434782608,
+        "faulty_imprint": 0.045454545454545456,
+        "poke": 0.14285714285714285,
+        "scratch": 0.043478260869565216,
+        "squeeze": 0.15
+      }
+    },
+    "top_0.01": {
+      "image_auroc": 0.9038691663342641,
+      "image_ap": 0.9705487912531119,
+      "threshold_95pct": 330.6300521850587,
+      "normal_fpr": 0.0,
+      "anomaly_recall": 0.10091743119266056,
+      "per_defect_recall": {
+        "crack": 0.21739130434782608,
+        "faulty_imprint": 0.045454545454545456,
+        "poke": 0.047619047619047616,
+        "scratch": 0.043478260869565216,
+        "squeeze": 0.15
+      }
+    },
+    "top_0.05": {
+      "image_auroc": 0.9018747506980455,
+      "image_ap": 0.9732936203970934,
+      "threshold_95pct": 199.8570091247559,
+      "normal_fpr": 0.0,
+      "anomaly_recall": 0.12844036697247707,
+      "per_defect_recall": {
+        "crack": 0.17391304347826086,
+        "faulty_imprint": 0.045454545454545456,
+        "poke": 0.047619047619047616,
+        "scratch": 0.043478260869565216,
+        "squeeze": 0.35
+      }
+    }
+  },
+  "pixel": {
+    "pixel_auroc": 0.984356355828898,
+    "pixel_ap": 0.37130738262849783,
+    "n_pixels": 132000000,
+    "n_positive_pixels": 1208676
+  }
+}

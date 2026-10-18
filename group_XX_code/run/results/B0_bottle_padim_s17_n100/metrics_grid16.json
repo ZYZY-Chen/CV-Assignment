@@ -1,0 +1,58 @@
+{
+  "image": {
+    "max": {
+      "image_auroc": 0.9984126984126984,
+      "image_ap": 0.9995115995115993,
+      "threshold_95pct": 217.70621719360332,
+      "normal_fpr": 0.0,
+      "anomaly_recall": 0.9841269841269841,
+      "per_defect_recall": {
+        "broken_large": 1.0,
+        "broken_small": 1.0,
+        "contamination": 0.9523809523809523
+      }
+    },
+    "top_0.001": {
+      "image_auroc": 0.9984126984126984,
+      "image_ap": 0.9995115995115993,
+      "threshold_95pct": 217.70621719360332,
+      "normal_fpr": 0.0,
+      "anomaly_recall": 0.9841269841269841,
+      "per_defect_recall": {
+        "broken_large": 1.0,
+        "broken_small": 1.0,
+        "contamination": 0.9523809523809523
+      }
+    },
+    "top_0.01": {
+      "image_auroc": 0.9984126984126984,
+      "image_ap": 0.9995115995115993,
+      "threshold_95pct": 136.03409385681147,
+      "normal_fpr": 0.1,
+      "anomaly_recall": 0.9841269841269841,
+      "per_defect_recall": {
+        "broken_large": 1.0,
+        "broken_small": 1.0,
+        "contamination": 0.9523809523809523
+      }
+    },
+    "top_0.05": {
+      "image_auroc": 1.0,
+      "image_ap": 0.9999999999999998,
+      "threshold_95pct": 69.57382774353026,
+      "normal_fpr": 0.2,
+      "anomaly_recall": 1.0,
+      "per_defect_recall": {
+        "broken_large": 1.0,
+        "broken_small": 1.0,
+        "contamination": 1.0
+      }
+    }
+  },
+  "pixel": {
+    "pixel_auroc": 0.9833113100172653,
+    "pixel_ap": 0.7220898497881069,
+    "n_pixels": 67230000,
+    "n_positive_pixels": 3886731
+  }
+}

@@ -1,0 +1,17 @@
+# B0 必做：PaDiM 基线（手册第 3 页）
+# 用法：py run.py --config configs/b0_padim.yaml --dataset mvtec_ad --category bottle
+run_tag: B0
+method: padim
+backbone: resnet18
+layers: [layer1, layer2, layer3]
+image_size: 256
+
+# 实验参数（命令行可覆盖）
+seed: 17
+n: 100
+batch_size: 8
+workers: 2
+
+padim:
+  n_dims: 100      # 448 维中随机选 100 维（H1 消融：50/200）
+  eps: 0.01        # 协方差单位正则

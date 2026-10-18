@@ -1,0 +1,66 @@
+{
+  "image": {
+    "max": {
+      "image_auroc": 0.8232947746310332,
+      "image_ap": 0.9459076310953147,
+      "threshold_95pct": 653.6199554443364,
+      "normal_fpr": 0.0,
+      "anomaly_recall": 0.05504587155963303,
+      "per_defect_recall": {
+        "crack": 0.08695652173913043,
+        "faulty_imprint": 0.045454545454545456,
+        "poke": 0.0,
+        "scratch": 0.043478260869565216,
+        "squeeze": 0.1
+      }
+    },
+    "top_0.001": {
+      "image_auroc": 0.8232947746310332,
+      "image_ap": 0.9459076310953147,
+      "threshold_95pct": 653.6199554443364,
+      "normal_fpr": 0.0,
+      "anomaly_recall": 0.05504587155963303,
+      "per_defect_recall": {
+        "crack": 0.08695652173913043,
+        "faulty_imprint": 0.045454545454545456,
+        "poke": 0.0,
+        "scratch": 0.043478260869565216,
+        "squeeze": 0.1
+      }
+    },
+    "top_0.01": {
+      "image_auroc": 0.885520542481053,
+      "image_ap": 0.9705029392799724,
+      "threshold_95pct": 399.32667236328143,
+      "normal_fpr": 0.0,
+      "anomaly_recall": 0.11009174311926606,
+      "per_defect_recall": {
+        "crack": 0.21739130434782608,
+        "faulty_imprint": 0.045454545454545456,
+        "poke": 0.047619047619047616,
+        "scratch": 0.043478260869565216,
+        "squeeze": 0.2
+      }
+    },
+    "top_0.05": {
+      "image_auroc": 0.9018747506980455,
+      "image_ap": 0.9756596805946198,
+      "threshold_95pct": 206.29725265502935,
+      "normal_fpr": 0.0,
+      "anomaly_recall": 0.13761467889908258,
+      "per_defect_recall": {
+        "crack": 0.13043478260869565,
+        "faulty_imprint": 0.09090909090909091,
+        "poke": 0.047619047619047616,
+        "scratch": 0.043478260869565216,
+        "squeeze": 0.4
+      }
+    }
+  },
+  "pixel": {
+    "pixel_auroc": 0.983906114891711,
+    "pixel_ap": 0.3675381675945219,
+    "n_pixels": 132000000,
+    "n_positive_pixels": 1208676
+  }
+}

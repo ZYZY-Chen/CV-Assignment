@@ -1,0 +1,66 @@
+{
+  "image": {
+    "max": {
+      "image_auroc": 0.7423652387784383,
+      "image_ap": 0.8690592281261125,
+      "threshold_95pct": 464.86994323730454,
+      "normal_fpr": 0.07317073170731707,
+      "anomaly_recall": 0.1092436974789916,
+      "per_defect_recall": {
+        "manipulated_front": 0.08333333333333333,
+        "scratch_head": 0.125,
+        "scratch_neck": 0.08,
+        "thread_side": 0.08695652173913043,
+        "thread_top": 0.17391304347826086
+      }
+    },
+    "top_0.001": {
+      "image_auroc": 0.7319122771059644,
+      "image_ap": 0.8628449644930403,
+      "threshold_95pct": 448.0227752685545,
+      "normal_fpr": 0.04878048780487805,
+      "anomaly_recall": 0.08403361344537816,
+      "per_defect_recall": {
+        "manipulated_front": 0.08333333333333333,
+        "scratch_head": 0.125,
+        "scratch_neck": 0.0,
+        "thread_side": 0.043478260869565216,
+        "thread_top": 0.17391304347826086
+      }
+    },
+    "top_0.01": {
+      "image_auroc": 0.7042426726788277,
+      "image_ap": 0.8494186762041995,
+      "threshold_95pct": 389.06760406494124,
+      "normal_fpr": 0.04878048780487805,
+      "anomaly_recall": 0.08403361344537816,
+      "per_defect_recall": {
+        "manipulated_front": 0.041666666666666664,
+        "scratch_head": 0.125,
+        "scratch_neck": 0.0,
+        "thread_side": 0.08695652173913043,
+        "thread_top": 0.17391304347826086
+      }
+    },
+    "top_0.05": {
+      "image_auroc": 0.6853863496618159,
+      "image_ap": 0.8418393300449138,
+      "threshold_95pct": 269.93070220947266,
+      "normal_fpr": 0.04878048780487805,
+      "anomaly_recall": 0.08403361344537816,
+      "per_defect_recall": {
+        "manipulated_front": 0.041666666666666664,
+        "scratch_head": 0.125,
+        "scratch_neck": 0.0,
+        "thread_side": 0.08695652173913043,
+        "thread_top": 0.17391304347826086
+      }
+    }
+  },
+  "pixel": {
+    "pixel_auroc": 0.9699751767114557,
+    "pixel_ap": 0.05885435977922208,
+    "n_pixels": 167772160,
+    "n_positive_pixels": 418611
+  }
+}

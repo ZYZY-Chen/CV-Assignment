@@ -1,0 +1,2 @@
+﻿capsule  N=100 core05         max=0.8795 top1=0.9051
+capsule  N=100 rand05         max=0.6649 top1=0.6984

@@ -97,10 +97,13 @@ def anomaly_maps(model: PatchCoreModel, feats: Dict[str, torch.Tensor],
     bank = model.bank                                       # (B, 384)
     k = min(cfg.num_neighbors, bank.shape[0])
     maps = torch.empty((n, h, w), device=model.device, dtype=bank.dtype)
-    for s in range(0, n, cfg.chunk_size):
-        q = pts[s:s + cfg.chunk_size]                       # (b, 256, 384)
+    # 单块距离矩阵上限 256MB，避免全记忆库一次 cdist 打满内存或显存。
+    bytes_per_image = (h * w) * bank.shape[0] * bank.element_size()
+    safe_chunk = max(1, (256 * 1024 * 1024) // max(bytes_per_image, 1))
+    step = max(1, min(cfg.chunk_size, safe_chunk))
+    for s in range(0, n, step):
+        q = pts[s:s + step]                                 # (b, 256, 384)
         b = q.shape[0]
-        # 分块计算距离：(b, 256, B)
         dist = torch.cdist(q, bank.unsqueeze(0).expand(b, -1, -1))
         topk, _ = dist.topk(k, dim=2, largest=False)       # (b, 256, k)
         d1 = topk[..., :1]                                  # 最近邻距离

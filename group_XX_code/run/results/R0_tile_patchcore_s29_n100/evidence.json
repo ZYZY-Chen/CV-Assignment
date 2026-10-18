@@ -1,0 +1,34 @@
+{
+  "run_id": "R0_tile_patchcore_s29_n100",
+  "config_hash": "97BC7E3DB105ABE6BE38477F68CAD1584318C3E2A067F8F0D9EEA51D8C54FEA4",
+  "split_hash": "7EB9701532F80177D61DDB3B8C6DB9A036CBF04BA750683F695A7AE06F5B0ABF",
+  "dataset": "mvtec_ad",
+  "category": "tile",
+  "method": "patchcore",
+  "backbone": "resnet18",
+  "layers": [
+    "layer2",
+    "layer3"
+  ],
+  "seed": 29,
+  "normal_train_n": 100,
+  "method_detail": {
+    "sampling": "coreset",
+    "coreset_ratio": 0.05,
+    "memory_bank_full": 25600,
+    "memory_bank_kept": 1280,
+    "fit_seconds": 5.3398
+  },
+  "device": "cpu",
+  "torch_version": "2.11.0+cu128",
+  "platform": "Windows-10-10.0.26100-SP0",
+  "image_score_grid": 256,
+  "n_dev": 46,
+  "n_test": 117,
+  "fit_seconds": 5.3398,
+  "predict_seconds": 3.7724,
+  "evaluate_seconds": 30.1913,
+  "gpu_peak_memory_mb": null,
+  "slurm_job_id": null,
+  "finished_at": "2026-10-18 13:34:11"
+}
