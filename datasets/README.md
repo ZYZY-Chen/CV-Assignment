@@ -1,7 +1,16 @@
-# CA6129 小组项目 — 数据集说明（已下载整理）
+# CA6129 小组项目 — 数据集说明
+
+图片不在 Git 仓库里。按官方链接下载并解压：
+
+```powershell
+cd group_XX_code
+python scripts/download_datasets.py --accept-license
+```
+
+说明和许可见 `group_XX_code/README.md`。下面是下载完成后应有的内容。
 
 整理日期：2026-10-17
-本目录包含两个数据集，均为官方原始结构（MVTec 格式），可直接被 Anomalib / 自建 DataLoader 读取。
+本目录在下载后包含两个数据集，均为官方原始结构（MVTec 格式）。
 
 ## 1. 内容总览
 

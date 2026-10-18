@@ -1,5 +1,9 @@
-# Local archive of the files already stored under datasets/.
+# Local archive and the images themselves. Download with
+# group_XX_code/scripts/download_datasets.py
 datasets.zip
+datasets/mvtec_ad/
+datasets/mvtec_loco/
+datasets/file_inventory.csv
 
 __pycache__/
 *.pyc

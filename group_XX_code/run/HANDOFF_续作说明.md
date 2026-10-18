@@ -119,7 +119,7 @@ $env:CUDA_VISIBLE_DEVICES = "-1"
 D:\Anaconda\envs\ca6129-ad\python.exe -u scripts\extract_features.py --all --device cpu
 ```
 
-数据集在 `datasets/`，不要再提交 `datasets.zip`。课程讲义 `course project.pdf` 也没有放进仓库。
+图片不再放进仓库的当前版本。组员用 `python scripts/download_datasets.py --accept-license` 从 MVTec 官方链接下载 8 个类别，解压到 `datasets/`。旧提交的历史里仍有这批图片；要让克隆不再下载它们，需要改写历史并强制推送，尚未做。`datasets.zip` 和 `course project.pdf` 没有放进仓库。
 
 ## 接下来建议做的事
 
