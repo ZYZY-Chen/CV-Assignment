@@ -12,3 +12,6 @@ __pycache__/
 
 # Feature caches are local-only and must not be committed.
 group_XX_code/run/feature_cache/*.npz
+
+# FP32 TC2 GPU caches remain local to their execution host.
+group_XX_code/run/tc2_gpu/feature_cache/

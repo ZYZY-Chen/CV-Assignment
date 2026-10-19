@@ -8,7 +8,7 @@ The workflow name is `tc2_gpu`: `tc2` identifies the remote TC2 cluster and `gpu
 
 The corrected experiment protocol is frozen as TC2 GPU. See [EXPERIMENT_PROTOCOL_V2.md](docs/EXPERIMENT_PROTOCOL_V2.md) for its explanation and [protocol_v2.json](configs/protocol_v2.json) for the machine-readable configuration. The 66 existing runs are registered as V1 historical results, with file fingerprints in [legacy_v1_inventory.json](run/legacy_v1_inventory.json).
 
-Subsequent formal experiments use the TC2 GPU cluster, with TC2 GPU outputs under `run/tc2_gpu/`. The runner has not yet integrated the TC2 GPU protocol or output directories. Cache and runner/job integration remain for the approved later steps; independent acceptance of metric corrections and algorithm corrections was completed in steps 3 and 4. V1 results and SUCCESS markers do not establish TC2 GPU completion.
+Subsequent formal experiments use the TC2 GPU cluster, with TC2 GPU outputs under `run/tc2_gpu/`. The dedicated workflow integrates the frozen protocol, FP32 caches, and saved-result validation; synthetic integration acceptance completed in step 5. Real-data extraction and pilots follow the separately approved step 6. Independent acceptance of metric corrections and algorithm corrections was completed in steps 3 and 4. V1 results and SUCCESS markers do not establish TC2 GPU completion.
 
 ## TC2 GPU environment and input acceptance
 
@@ -33,6 +33,14 @@ The approved step-4 design is recorded in [TC2_GPU_ALGORITHMS.md](docs/TC2_GPU_A
 [predict_padim](src/padim_adapter.py) and [predict_patchcore](src/patchcore_adapter.py) return final FP32 256x256 anomaly maps and five image scores. [Shared postprocessing](src/anomaly_postprocess.py) applies bilinear resizing followed once by the fixed Gaussian filter. The legacy four-rule scoring default and map-only interfaces remain available; the unchanged legacy runner is not the formal TC2 GPU entry point.
 
 Step 4 completed on 2026-10-19. Current-naming metric regression job 43968 passed all 24 tests. Algorithm acceptance job 43970 on TC2N01 (NVIDIA A40) finished as COMPLETED / 0:0: all 19 CPU tests and two GPU tests passed, with full-mode `step_4_complete=true`. The [algorithm tests](tests/test_algorithms_tc2_gpu.py) cover independent references and actual ResNet18 feature shapes generated synthetically. All eleven source fingerprints and 163 returned files were verified. See the [step-4 acceptance record](run/validation_tc2_gpu/step4_20261019/setup_status.json) and [GPU acceptance entry point](scripts/slurm/check_tc2_gpu_algorithms.sh). No real-data fitting, cache generation, or formal experiment has been run.
+
+## TC2 GPU workflow and step-5 acceptance
+
+The approved [workflow design](docs/TC2_GPU_WORKFLOW.md) adds the dedicated [run_tc2_gpu.py](scripts/run_tc2_gpu.py) entry point with plan, extract, run, and verify actions. It derives all 66 fits from the frozen matrix, binds both method seeds to the run seed, and uses immutable FP32 NPY caches with ordered reads. Scientific settings and historical entry points remain unchanged. [runtime_tc2_gpu.json](configs/runtime_tc2_gpu.json) holds execution settings only.
+
+Formal outputs use run/tc2_gpu/. Predictions retain FP32 maps and all five scores. Runs publish SUCCESS only after saved-array checks and metric reproduction; reuse requires matching identities and intact artifacts. The new cache directory is excluded from Git. Planning is read-only; real extraction and pilots follow step 6.
+
+Step 5 completed on 2026-10-19. The [synthetic workflow acceptance job](scripts/slurm/check_tc2_gpu_workflow.sh), job 44012 on TC2N02 (NVIDIA A40), finished as COMPLETED / 0:0 with full-mode `step_5_complete=true`. All 65 tests passed: 24 metric tests, 19 CPU/two GPU algorithm tests, and the [workflow tests](tests/test_workflow_tc2_gpu.py)' 16 core/four GPU tests. Independent verification checked 421 returned files, 31 scientific source fingerprints, all 32 submitted files, and saved prediction/metric consistency. The previous 163 acceptance files were preserved. See the [final step-5 record](run/validation_tc2_gpu/step5_20261019/setup_status.json) and [returned-artifact verification](run/validation_tc2_gpu/step5_20261019/accepted_job_44012/verification.json). No resubmission is required. All cache and result fixtures are synthetic; real-data extraction and pilots remain step 6.
 
 ## 数据集
 
