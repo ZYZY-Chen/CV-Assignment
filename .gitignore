@@ -1,3 +1,5 @@
+.idea
+
 # Local archive and the images themselves. Download with
 # group_XX_code/scripts/download_datasets.py
 datasets.zip
