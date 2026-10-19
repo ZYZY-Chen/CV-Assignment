@@ -1,54 +1,60 @@
-# -*- coding: utf-8 -*-
-"""
-sampling.py — 记忆库采样策略（PatchCore C1 对照实验的核心）
-==========================================================
-
-- kcenter_coreset：PatchCore 原生贪心 k-center coreset（默认 0.05）
-- random_subset ：不放回均匀随机采样（C1 对照组，与 coreset 保持相同点数）
-
-两种采样输出数量必须相同，随机采样记录种子，保证可复现。
-"""
+"""Seeded, unique-index memory-bank sampling for the TC2 GPU protocol."""
 from __future__ import annotations
 
+import math
 import torch
+from anomaly_postprocess import fp32_arithmetic, fp32_tensor, integer, seed_value
 
 
-def kcenter_coreset(bank: torch.Tensor, ratio: float,
-                    device: torch.device | str = "cuda",
-                    seed: int = 0) -> torch.Tensor:
-    """
-    贪心 k-center coreset 选择。
-    bank: (M, D)；返回 (p, D) 的 coreset 张量，p = round(ratio * M)。
-    """
-    device = torch.device(device)
-    bank = bank.to(device)
-    m = bank.shape[0]
-    p = max(1, round(ratio * m))
-    p = min(p, m)
-
-    g = torch.Generator(device="cpu").manual_seed(seed)
-    first = int(torch.randint(m, (1,), generator=g).item())
-
-    selected = [first]
-    min_dist = torch.full((m,), float("inf"), device=device, dtype=bank.dtype)
-    for _ in range(p - 1):
-        # 新选中点到全部样本的距离（平方距离足以决定 argmax）
-        d = ((bank - bank[selected[-1]].unsqueeze(0)) ** 2).sum(dim=1)
-        torch.minimum(min_dist, d, out=min_dist)
-        nxt = int(torch.argmax(min_dist).item())
-        selected.append(nxt)
-        min_dist[nxt] = 0.0  # 防止重复选中
-    return bank[torch.tensor(selected, device=device)]
+def retained_count(size, ratio):
+    size = integer(size, "pool size")
+    if isinstance(ratio, bool) or not isinstance(ratio, (int, float)) or not math.isfinite(ratio) or not 0 < ratio <= 1:
+        raise ValueError("ratio must be finite and in (0, 1]")
+    return min(size, max(1, round(ratio * size)))
 
 
-def random_subset(bank: torch.Tensor, n: int,
-                  device: torch.device | str = "cuda",
-                  seed: int = 0) -> torch.Tensor:
-    """不放回均匀随机采样 n 个点（C1 对照）。"""
-    device = torch.device(device)
-    bank = bank.to(device)
-    m = bank.shape[0]
-    n = min(n, m)
-    g = torch.Generator(device="cpu").manual_seed(seed)
-    idx = torch.randperm(m, generator=g)[:n]
-    return bank[idx.to(device)]
+@torch.inference_mode()
+def kcenter_coreset(bank, ratio, device="cuda", seed=0, *, chunk_size=16384, return_indices=False):
+    """Exact greedy k-center in the original feature space, without repeated indices."""
+    bank = fp32_tensor(bank, "feature pool", 2)
+    count = retained_count(bank.shape[0], ratio)
+    chunk_size = integer(chunk_size, "sampling chunk size")
+    generator = torch.Generator(device="cpu").manual_seed(seed_value(seed))
+    with fp32_arithmetic(device):
+        bank = bank.to(device)
+        current = int(torch.randint(len(bank), (1,), generator=generator).item())
+        selected = []
+        chosen = torch.zeros(len(bank), dtype=torch.bool, device=bank.device)
+        nearest = torch.full((len(bank),), float("inf"), device=bank.device, dtype=torch.float32)
+        for index in range(count):
+            selected.append(current)
+            chosen[current] = True
+            if index + 1 == count:
+                break
+            for start in range(0, len(bank), chunk_size):
+                block = bank[start:start + chunk_size]
+                distances = (block - bank[current]).square().sum(dim=1)
+                if not bool(torch.isfinite(distances).all()):
+                    raise ValueError("Sampling distances overflowed FP32")
+                nearest[start:start + len(block)] = torch.minimum(nearest[start:start + len(block)], distances)
+            # Explicit exclusion handles duplicate vectors and all-zero distances.
+            nearest.masked_fill_(chosen, -float("inf"))
+            current = int(torch.argmax(nearest).item())
+        indices = torch.tensor(selected, dtype=torch.long, device=bank.device)
+        result = bank.index_select(0, indices)
+    return (result, indices) if return_indices else result
+
+
+@torch.inference_mode()
+def random_subset(bank, n, device="cuda", seed=0, *, return_indices=False):
+    """Uniform sampling without replacement, optionally returning pool indices."""
+    bank = fp32_tensor(bank, "feature pool", 2)
+    n = integer(n, "retained count")
+    if n > len(bank):
+        raise ValueError("Retained count exceeds the feature pool")
+    generator = torch.Generator(device="cpu").manual_seed(seed_value(seed))
+    with fp32_arithmetic(device):
+        bank = bank.to(device)
+        indices = torch.randperm(len(bank), generator=generator)[:n].to(bank.device)
+        result = bank.index_select(0, indices)
+    return (result, indices) if return_indices else result
