@@ -8,7 +8,7 @@ The workflow name is `tc2_gpu`: `tc2` identifies the remote TC2 cluster and `gpu
 
 The corrected experiment protocol is frozen as TC2 GPU. See [EXPERIMENT_PROTOCOL_V2.md](docs/EXPERIMENT_PROTOCOL_V2.md) for its explanation and [protocol_v2.json](configs/protocol_v2.json) for the machine-readable configuration. The 66 existing runs are registered as V1 historical results, with file fingerprints in [legacy_v1_inventory.json](run/legacy_v1_inventory.json).
 
-Subsequent formal experiments use the TC2 GPU cluster, with TC2 GPU outputs under `run/tc2_gpu/`. The runner has not yet integrated the TC2 GPU protocol or output directories. Models, caches, and job execution will be corrected and validated under the approved designs of their respective later steps; independent acceptance of metric corrections was completed in step 3. V1 results and SUCCESS markers do not establish TC2 GPU completion.
+Subsequent formal experiments use the TC2 GPU cluster, with TC2 GPU outputs under `run/tc2_gpu/`. The runner has not yet integrated the TC2 GPU protocol or output directories. Cache and runner/job integration remain for the approved later steps; independent acceptance of metric corrections and algorithm corrections was completed in steps 3 and 4. V1 results and SUCCESS markers do not establish TC2 GPU completion.
 
 ## TC2 GPU environment and input acceptance
 
@@ -25,6 +25,14 @@ The user-approved preparation workflow uses separate [environment preparation](s
 The user-approved step-3 design is documented in [TC2_GPU_METRICS.md](docs/TC2_GPU_METRICS.md). [metric_core.py](src/metric_core.py) implements exact AUROC/AP with tied scores grouped by threshold. [evaluate.py](src/evaluate.py) adds normal-development thresholds, input validation, and LOCO groups while preserving existing result fields and adding `metric_policy.version=tc2_gpu_tie_grouped`. Evaluation accepts the original four image scores and a subsequently supplied native score; model score generation remains in later steps.
 
 Step 3 completed on 2026-10-19. All nine local NumPy core checks passed. CPU acceptance job 43956 on TC2N01 finished as COMPLETED / 0:0, with all 24 full tests passing and `step_3_complete=true`. Across 81 scikit-learn comparisons, maximum AUROC/AP absolute errors were 1.11e-16 / 2.22e-16, below the 1e-12 limit. The returned archive's 100 files, five source fingerprints, and change scope were independently verified. See the [step-3 acceptance record](run/validation_v2/step3_20261019_081534/setup_status.json) for final status and the metric document for the complete design, commands, and evidence. No acceptance-job resubmission is required.
+
+## TC2 GPU algorithm corrections and step-4 acceptance
+
+The approved step-4 design is recorded in [TC2_GPU_ALGORITHMS.md](docs/TC2_GPU_ALGORITHMS.md). PaDiM now aligns selected layers to their highest resolution and uses square-root Mahalanobis distance. PatchCore pools both layers, retains the layer2 grid, and separates one-neighbor pixel distances from its weighted native image score. Sampling preserves distinct indices, including duplicate feature vectors.
+
+[predict_padim](src/padim_adapter.py) and [predict_patchcore](src/patchcore_adapter.py) return final FP32 256x256 anomaly maps and five image scores. [Shared postprocessing](src/anomaly_postprocess.py) applies bilinear resizing followed once by the fixed Gaussian filter. The legacy four-rule scoring default and map-only interfaces remain available; the unchanged legacy runner is not the formal TC2 GPU entry point.
+
+Step 4 completed on 2026-10-19. Current-naming metric regression job 43968 passed all 24 tests. Algorithm acceptance job 43970 on TC2N01 (NVIDIA A40) finished as COMPLETED / 0:0: all 19 CPU tests and two GPU tests passed, with full-mode `step_4_complete=true`. The [algorithm tests](tests/test_algorithms_tc2_gpu.py) cover independent references and actual ResNet18 feature shapes generated synthetically. All eleven source fingerprints and 163 returned files were verified. See the [step-4 acceptance record](run/validation_tc2_gpu/step4_20261019/setup_status.json) and [GPU acceptance entry point](scripts/slurm/check_tc2_gpu_algorithms.sh). No real-data fitting, cache generation, or formal experiment has been run.
 
 ## 数据集
 
