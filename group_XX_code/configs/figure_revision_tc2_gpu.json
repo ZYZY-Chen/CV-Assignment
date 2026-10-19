@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "display_name": "TC2 GPU Experiment Protocol",
+  "scope": "CPU-only figure layout revision of accepted analysis job 44284",
+  "input_analysis": {
+    "identity": "6077F6D3F5244ECB28EF67BECBE454E989C99246F285CD63C85DBEC8A6239B5C",
+    "relative_path": "run/tc2_gpu/summaries/analysis/6077F6D3F5244ECB28EF67BECBE454E989C99246F285CD63C85DBEC8A6239B5C",
+    "artifacts_sha256": "1B5326EE8EB707E75BCD3F043B3479DCD8C6472ECB78FA770F0B2C618D5C33DA",
+    "inputs_sha256": "59F8F62DA7E14B2F1710F8EBE43ABF2A64D42B3B2A878B5677607D7FE4C06454",
+    "tables_sha256": "E92DDEB9DEF288C34664E0D91CC9F66AD1902FCA7FF96378F8935CEBB498C0F0",
+    "cases_sha256": "83DBAE5C4C5B78AC27BC61A6208C3CA7DE3A0710DC7FE68E1C1E348201B01B27",
+    "plot_manifest_sha256": "A3AC879DEB953BA15759AF5CFE4EDAA02B812BE9037118E561EFE3E36BBFB632"
+  },
+  "new_sources": [
+    "configs/figure_revision_tc2_gpu.json",
+    "scripts/revise_figures_tc2_gpu.py",
+    "scripts/collect_figure_revision_tc2_gpu.py",
+    "scripts/slurm/figure_revision_tc2_gpu.sh",
+    "tests/test_figure_revision_tc2_gpu.py",
+    "docs/TC2_GPU_FIGURE_REVISION.md"
+  ],
+  "layout": {
+    "dpi": 300,
+    "minimum_pdf_glyph_pt": 7,
+    "body_font_pt": 7.5,
+    "footer_gap_pt": 8,
+    "outer_margin_pt": 8,
+    "panel_alignment_tolerance_pt": 1.5,
+    "final_bound_clearance_pt": 3,
+    "plain_numeric_log_ticks": true,
+    "measured_footer_bands": true,
+    "diagram_text_containment": true
+  },
+  "policy": {
+    "figure_count": 15,
+    "exact_source_rows": true,
+    "copy_selected_assets_unchanged": true,
+    "only_plot_overrides": ["_save", "_methods"],
+    "new_fits": 0,
+    "model_predict_calls": 0,
+    "new_statistics": 0,
+    "environment_installations": false,
+    "post_download_visual_review_required": true
+  },
+  "collection_bounds": {
+    "compressed_archive_bytes": 536870912,
+    "decompressed_archive_bytes": 536870912,
+    "members": 512
+  }
+}
