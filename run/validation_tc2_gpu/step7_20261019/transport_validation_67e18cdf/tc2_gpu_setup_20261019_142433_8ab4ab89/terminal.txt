@@ -1,8 +1,0 @@
-TC2 GPU: RepairActivation
-Local output: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\step7_20261019\transport_validation_67e18cdf\tc2_gpu_setup_20261019_142433_8ab4ab89
-A submitted or running job is not a passed check. Passwords are not stored.
-SIMULATED SSH ONLY: rendered commands saved; no remote action.
-SIMULATED TRANSFER/DOWNLOAD ONLY: no network.
-SIMULATED SSH ONLY: rendered commands saved; no remote action.
-Action finished. Read the relevant status JSON: step 2 requires all-mode step_2_complete=true; metrics require full-mode step_3_complete=true; algorithms require full-mode step_4_complete=true.
-Send this local output path back: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\step7_20261019\transport_validation_67e18cdf\tc2_gpu_setup_20261019_142433_8ab4ab89\terminal.txt

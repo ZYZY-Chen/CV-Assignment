@@ -1,8 +1,19 @@
 # TC2 GPU Environment and Input Acceptance
 
-This guide uses the **TC2 GPU Experiment Protocol** display name and `tc2_gpu` entry points. See [TC2_GPU_NAMING.md](TC2_GPU_NAMING.md) for the mapping to the unchanged frozen protocol. Future setup records use `run/setup_tc2_gpu/`; completed `run/setup_v2/` records remain unchanged and may be read for readiness. The installed `ca6129_v2_setup` directory and `ca6129-ad-v2` environment are existing compatibility addresses, not new workflow names. Sections 6.5-6.9 retain historical commands, filenames, and snapshot paths as recorded; the naming change does not repeat those operations.
+> **Current profile and historical-record boundary (2026-10-25)**
+>
+> The retained design and acceptance account below describes the earlier implementation. Its job IDs, source hashes, remote paths, command blocks and completion flags are historical. Exact original bytes are in the [archive index](../archive/index.json); they do not certify this refactored checkout.
+>
+> Current configurations are under configs/tc2_gpu/, and independent fingerprints are in configs/tc2_gpu/source_manifest.json. The current deployment is unavailable. Formal actions refuse execution without new source/environment acceptance. Historical SSH and submission examples below are not current connection instructions.
+>
+> Use the [current protocol](TC2_GPU_PROTOCOL.md), [naming rules](TC2_GPU_NAMING.md) and [archive guide](TC2_GPU_ARCHIVE.md) for current paths. Local read-only commands from the repository root are python -B scripts/run_tc2_gpu.py plan and python -B scripts/verify_archive_tc2_gpu.py.
 
-Step 2 passed final combined acceptance on 2026-10-19, preparing the cluster environment, raw data, and pretrained weights for the subsequent corrected experiments. The final job was 43950, with state COMPLETED / 0:0 and `step_2_complete=true`; complete evidence is in section 6.9. The acceptance tool reads inputs and saves check records. It does not install software, download or repair data, extract caches, fit models, or modify V1 results or the frozen protocol.
+## Historical design and acceptance account
+
+
+This guide uses the **TC2 GPU Experiment Protocol** display name and `tc2_gpu` entry points. See [TC2_GPU_NAMING.md](../archive/index.json) (archived path: `docs/TC2_GPU_NAMING.md`) for the mapping to the unchanged frozen protocol. Future setup records use `run/setup_tc2_gpu/`; completed `run/setup_v2/` records remain unchanged and may be read for readiness. The installed `ca6129_v2_setup` directory and `ca6129-ad-v2` environment are existing compatibility addresses, not new workflow names. Sections 6.5-6.9 retain historical commands, filenames, and snapshot paths as recorded; the naming change does not repeat those operations.
+
+Step 2 passed final combined acceptance on 2026-10-19, preparing the cluster environment, raw data, and pretrained weights for the subsequent corrected experiments. The final job was 43950, with state COMPLETED / 0:0 and `step_2_complete=true`; complete evidence is in section 6.9. The acceptance tool reads inputs and saves check records. It does not install software, download or repair data, extract caches, fit models, or modify pre-correction results or the frozen protocol.
 
 After approval of the supplementary design in section 6, separate preparation scripts created a dedicated environment and restored inputs within the specified personal directory. Section 6.7 describes the approved source supplement. Hardware job 43939, environment preparation job 43940, input preparation job 43945, and final combined acceptance job 43950 all passed. The staged preparation history is retained below; section 6.9 and setup_status.json establish the current completion status.
 
@@ -10,7 +21,7 @@ Connect to `huajie001@10.96.189.12:22` using SSH. The user has confirmed passwor
 
 ## 1 Preparation discovery and input configuration
 
-[tc2_setup.json](../configs/tc2_setup.json) stores verified connection details, environment, directories, partition, QoS, and final acceptance status. During discovery, null remote fields mean unverified. Do not guess the account's Home path, environment name, or data location. The following queries retain their status at the time of discovery.
+[tc2_setup.json](../archive/index.json) (archived path: `configs/tc2_setup.json`) stores verified connection details, environment, directories, partition, QoS, and final acceptance status. During discovery, null remote fields mean unverified. Do not guess the account's Home path, environment name, or data location. The following queries retain their status at the time of discovery.
 
 The user's terminal query at 06:22 SGT on 2026-10-19 confirmed Home `/home/mcaai/huajie001`, partition `MGPU-TC2`, and QoS `normal`. That QoS limits each user to `cpu=10,gres/gpu=1,mem=30G`, at most two jobs, and a six-hour maximum per job. The partition's `infinite` setting does not override account QoS time limits. The planned acceptance request of 1 GPU, 2 CPU, 4 GB, and 15 minutes fits these limits; continue running one GPU acceptance job at a time.
 
@@ -38,7 +49,7 @@ That follow-up output was subsequently received: `anaconda/25.5.1` loaded succes
 
 ## 2 Acceptance tool and required files
 
-[check_tc2_gpu_setup.py](../scripts/check_tc2_gpu_setup.py) supports three modes:
+[check_tc2_gpu_setup.py](../archive/index.json) (archived path: `scripts/check_tc2_gpu_setup.py`) supports three modes:
 
 | Mode | Checks | Execution location |
 |---|---|---|
@@ -82,7 +93,7 @@ Create the backbone with `weights=None`, then explicitly load the verified file 
 
 ## 4 SLURM acceptance jobs
 
-[check_tc2_gpu_setup.sh](../scripts/slurm/check_tc2_gpu_setup.sh) runs only within an existing SLURM job and stops if invoked directly on the head node or local machine. It preserves the scheduler's `CUDA_VISIBLE_DEVICES` and activates the existing Conda environment prefix through the verified Anaconda module, without modifying `.bashrc` or the environment contents.
+[check_tc2_gpu_setup.sh](../archive/index.json) (archived path: `scripts/slurm/check_tc2_gpu_setup.sh`) runs only within an existing SLURM job and stops if invoked directly on the head node or local machine. It preserves the scheduler's `CUDA_VISIBLE_DEVICES` and activates the existing Conda environment prefix through the verified Anaconda module, without modifying `.bashrc` or the environment contents.
 
 The initial request is one node, one task, 1 GPU, 2 CPU, 4 GB host memory, and 15 minutes. Supply the partition and QoS from actual account queries instead of hardcoding user-guide examples. Revise the design before submitting a request that exceeds verified quotas. Run one GPU acceptance job per account at a time.
 
@@ -173,7 +184,7 @@ In addition to the approved step-2 configuration, documentation, README, SLURM a
 
 New remote content is limited to `envs/ca6129-ad-v2`, `datasets`, `weights`, `_downloads`, `_package_cache`, `tmp`, acceptance files/logs within the preparation directory, and the Conda personal registration above. If official website downloads require a local relay, stage packages in local `group_XX_code/run/setup_tc2_gpu/<check-id>/transfer`. Upload only the eight categories' original packages and specified weights, without historical results or caches. Do not automatically delete relay packages after transfer.
 
-Preserve existing environment files, the old downloader, algorithms, metrics, runner, frozen protocol, eight manifests, and V1 outputs. This supplement neither installs Anomalib nor generates feature caches, fits models, enables formal `run/tc2_gpu` outputs, or writes the report. The user continues entering SSH passwords in their own terminal; do not add or change SSH keys, agents, or configuration. That terminal performs transfers and submissions requiring interactive authentication; the assistant prepares the scoped files/commands and verifies returned evidence.
+Preserve existing environment files, the old downloader, algorithms, metrics, runner, frozen protocol, eight manifests, and pre-correction outputs. This supplement neither installs Anomalib nor generates feature caches, fits models, enables formal `run/tc2_gpu` outputs, or writes the report. The user continues entering SSH passwords in their own terminal; do not add or change SSH keys, agents, or configuration. That terminal performs transfers and submissions requiring interactive authentication; the assistant prepares the scoped files/commands and verifies returned evidence.
 
 ### 6.4 Local operation and output retrieval (additional user requirement)
 
@@ -235,7 +246,7 @@ After consulting the project's `datasets/README.md`, the user explicitly approve
 2. Stage the complete archive only in `_downloads`. Extract only bottle, cable, capsule, screw, tile, and wood into `datasets/mvtec_ad`. First stream-check all member paths, types, duplicates, required six-category file hashes, and destination conflicts; then extract in a second streaming pass. Do not extract the other nine categories or archive-root documentation, recompress images, or alter pixels. Stop on links, devices, traversal, missing entries, or hash conflicts. Do not overwrite existing files.
 3. Retain the two original official category packages for LOCO. Local sample requests on 2026-10-19 returned HTTP 206 and valid XZ headers: juice_bottle was 655555080 bytes and screw_bag was 1102844304 bytes. This establishes sampled reachability only, not acceptance of the full archives or images. Obtain ResNet18 weights from the official PyTorch source.
 4. Prefer downloads/restoration in the TC2 inputs job with the original resources. Retain one download attempt and controlled resume behavior. Do not publish mirror files with mismatching size/hash; preserve partial packages without increasing resources or changing sources automatically. If the cluster cannot obtain the fixed packages, run the same input script's download-only mode locally, staging packages in this project's `run/setup_v2/<check-id>/transfer` without extraction or importing Torch. Relay completed packages through the existing SSH upload workflow. Add the fixed complete AD archive to its allowlist while continuing to reject unknown filenames and overwrite conflicts.
-5. Limit changes to `scripts/prepare_tc2_inputs_v2.py`, `configs/tc2_setup.json`, local `output/tc2_setup_v2.ps1`, this document, and `run/setup_v2` validation/evidence. Preserve the old downloader, dataset README, algorithms, metrics, dependencies, frozen protocol, eight manifests, and V1 outputs. Retain original LOCO sources in the configuration and explicitly add the approved AD mirror identity and revision, without an automatic third-party fallback.
+5. Limit changes to `scripts/prepare_tc2_inputs_v2.py`, `configs/tc2_setup.json`, local `output/tc2_setup_v2.ps1`, this document, and `run/setup_v2` validation/evidence. Preserve the old downloader, dataset README, algorithms, metrics, dependencies, frozen protocol, eight manifests, and pre-correction outputs. Retain original LOCO sources in the configuration and explicitly add the approved AD mirror identity and revision, without an automatic third-party fallback.
 6. Add `UpdateInputSources` to the local helper. Generate a candidate configuration from job 43944's returned configuration, changing only the approved source fields, and package it with the input-preparation script. Require the latest remote inputs job to remain the recorded 43944 / HTTP 404, successful installation, no queued/running jobs owned by this user, and both target hashes to match known old or new values. After all checks, back up both originals, publish, and submit one inputs job with unchanged resources. Stop on unknown modifications. `-ValidateOnly` creates the local payload without connecting.
 7. Add `DownloadInputs` for that download-only fallback. Create a fresh transfer directory by default; reuse an old one and resume the same source only when explicitly supplied with `-InputDirectory <original-transfer-directory>`. `UploadInputs` accepts the complete AD package; neither action submits a job itself. Preserve original logs and partial packages on network failure without repeated retries. All inputs still require frozen-manifest verification of 3650 images and 1019 masks, and step 2 completes only after final environment / all GPU acceptance.
 
@@ -275,6 +286,6 @@ The user returned `output/tc2_setup_v2_20261019_080436_6b57e857/terminal.txt`. A
 
 The returned archive SHA-256 was `00646CDD5FC11334A28D8C52EE39D986FE3E73C77DDEB9B5052CBFDCD4913561`; all 55 records matched individually. The final data_audit.json was again checked against the frozen manifests: all 4669 unique paths, 3650 images, and 1019 masks matched. The GPU backbone loaded weights whose full SHA-256 matched the verified official file. The three FP32 feature CHW shapes were layer1=[64,64,64], layer2=[128,32,32], and layer3=[256,16,16]; shape, precision, and finite-value checks passed. Autocast and both TF32 settings were disabled.
 
-Both actual environment exports matched job 43949 and the locally saved files. Complete original records and local cross-checks are stored in `run/setup_v2/step2_20261019_060542/all_check_job_43950/snapshot_20261019_080436_6b57e857/`. The configuration's final_acceptance, these instructions, code README, and overall step-2 status were updated to complete as approved acceptance closeout. All 388 original baseline files were checked again: only the approved code README changed; all 346 V1 result/summary files, protocol, manifests, and the user's existing .gitignore were preserved.
+Both actual environment exports matched job 43949 and the locally saved files. Complete original records and local cross-checks are stored in `run/setup_v2/step2_20261019_060542/all_check_job_43950/snapshot_20261019_080436_6b57e857/`. The configuration's final_acceptance, these instructions, code README, and overall step-2 status were updated to complete as approved acceptance closeout. All 388 original baseline files were checked again: only the approved code README changed; all 346 pre-correction result/summary files, protocol, manifests, and the user's existing .gitignore were preserved.
 
 This acceptance establishes readiness of the GPU environment, fixed inputs, and pretrained backbone. Metrics, algorithms, runner, and subsequent experiments continue in the agreed design/execution order. At step-2 closeout, step-3 changes were not started; the assistant awaited the user's request to start step 3 before presenting its design.

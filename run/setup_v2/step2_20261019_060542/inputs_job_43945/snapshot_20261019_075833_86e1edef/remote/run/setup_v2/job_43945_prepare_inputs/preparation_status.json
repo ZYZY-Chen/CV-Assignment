@@ -1,9 +1,0 @@
-{
-  "ready": true,
-  "step_2_complete": false,
-  "input_counts": {
-    "match": 4669
-  },
-  "weights_ready": true,
-  "meaning": "Inputs restored; final GPU acceptance remains required."
-}

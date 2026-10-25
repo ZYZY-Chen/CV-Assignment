@@ -19,10 +19,12 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
-PROTOCOL_HASH = "3098B6A86DBA64EE439BFE61C7A4FCFFCD082371D5A80FFBC7940997ED6A1ED1"
+import tc2_gpu_protocol as current_protocol
+import tc2_gpu_provenance as provenance
+PROTOCOL_HASH = current_protocol.PROTOCOL_SHA256
 SOURCES = ["src/padim_adapter.py", "src/patchcore_adapter.py", "src/sampling.py", "src/scoring.py",
            "src/anomaly_postprocess.py", "tests/test_algorithms_tc2_gpu.py", "scripts/slurm/check_tc2_gpu_algorithms.sh",
-           "src/metric_core.py", "src/evaluate.py", "src/data.py", "configs/tc2_gpu.json"]
+           "src/metric_core.py", "src/evaluate.py", "src/data.py", "configs/tc2_gpu/workflow.json"]
 OUTPUT = None
 
 
@@ -399,7 +401,7 @@ class AlgorithmGPU(unittest.TestCase):
 
 
 def contract(full):
-    protocol_path = ROOT / "configs/protocol_v2.json"
+    protocol_path = ROOT / "configs/tc2_gpu/protocol.json"
     if sha(protocol_path) != PROTOCOL_HASH:
         raise ValueError("Frozen protocol changed")
     protocol = json.loads(protocol_path.read_text())
@@ -407,14 +409,16 @@ def contract(full):
         if sha(ROOT / manifest["path"]) != manifest["file_sha256"]:
             raise ValueError("Frozen manifest changed")
     if full:
+        provenance.require_current_acceptance(ROOT, "algorithms")
         if platform.system() != "Linux" or not os.environ.get("SLURM_JOB_ID", "").isdigit():
             raise RuntimeError("Full algorithm acceptance requires a Linux SLURM compute job")
         if any(not (ROOT / name).is_file() for name in SOURCES):
             raise RuntimeError("The approved eleven-file algorithm payload is incomplete")
-        naming = json.loads((ROOT / "configs/tc2_gpu.json").read_text())
-        if naming["workflow_id"] != "tc2_gpu" or naming["frozen_protocol"]["sha256"] != PROTOCOL_HASH:
-            raise RuntimeError("Workflow naming map differs from the frozen protocol alias")
-        setup = json.loads((ROOT / "configs/tc2_setup.json").read_text())
+        naming = json.loads((ROOT / "configs/tc2_gpu/workflow.json").read_text())
+        current_protocol.contract(ROOT)
+        if naming["workflow_id"] != "tc2_gpu":
+            raise RuntimeError("Current TC2 GPU workflow identity differs")
+        setup = json.loads((ROOT / "configs/tc2_gpu/setup.json").read_text())
         if ROOT != Path(setup["remote"]["setup_root"]) or Path(sys.prefix) != Path(setup["remote"]["conda_environment_prefix"]):
             raise RuntimeError("Use the verified TC2 staging root and environment")
         if os.environ.get("SLURM_JOB_PARTITION") != setup["remote"]["partition"]:
@@ -431,14 +435,10 @@ def contract(full):
                 raise RuntimeError("Read-only metric dependency differs from accepted regression")
         setup_root = ROOT / "run/setup_tc2_gpu"
         last = setup_root / "last_check_all_job.txt"
-        if not last.exists():
-            last = ROOT / "run/setup_v2/last_check_all_job.txt"
         all_job = last.read_text().strip()
         if not all_job.isdigit():
             raise RuntimeError("Invalid step-2 acceptance job ID")
         ready = setup_root / f"job_{all_job}_all/setup_status.json"
-        if not ready.exists():
-            ready = ROOT / f"run/setup_v2/job_{all_job}_all/setup_status.json"
         acceptance = json.loads(ready.read_text())
         if not acceptance["step_2_complete"]:
             raise RuntimeError("Step-2 all acceptance has not passed")

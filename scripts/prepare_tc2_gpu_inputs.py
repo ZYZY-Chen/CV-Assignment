@@ -340,7 +340,7 @@ def prepare(setup, manifests, out):
         raise RuntimeError('Restored inputs did not pass the complete frozen audit')
     setup['remote']['datasets_root'] = str(data_root)
     setup['remote']['weights_path'] = str(weight)
-    audit.write_json(root / 'configs/tc2_setup.json', setup)
+    audit.write_json(root / 'configs/tc2_gpu/setup.json', setup)
     return dict(ready=True, step_2_complete=False, input_counts=data_audit['counts'],
                 weights_ready=weights['ready'], meaning='Inputs restored; final GPU acceptance remains required.')
 
@@ -391,9 +391,10 @@ def main():
         parser.error('Input restoration requires acceptance of CC BY-NC-SA 4.0')
     if args.download_only != bool(args.transfer_dir):
         parser.error('Use --download-only and --transfer-dir together')
+    setup, _, manifests = audit.read_contract(audit.PROJECT / 'configs/tc2_gpu/setup.json')
     if not args.download_only:
+        audit.require_verified_remote(setup)
         audit.require_compute_job()
-    setup, _, manifests = audit.read_contract(audit.PROJECT / 'configs/tc2_setup.json')
     if args.download_only:
         try:
             status = download_transfer(setup, args.transfer_dir)
@@ -402,7 +403,6 @@ def main():
             return 2
         print(json.dumps(status, indent=2))
         return 0
-    audit.require_verified_remote(setup)
     out = inside(audit.PROJECT / 'run/setup_tc2_gpu' / ('job_' + os.environ['SLURM_JOB_ID'] + '_prepare_inputs'), audit.PROJECT)
     out.mkdir(parents=True, exist_ok=False)
     status = dict(ready=False, step_2_complete=False)

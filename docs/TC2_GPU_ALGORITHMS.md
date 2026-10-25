@@ -1,10 +1,21 @@
 # Step 4: TC2 GPU Algorithm Corrections and Acceptance
 
+> **Current profile and historical-record boundary (2026-10-25)**
+>
+> The retained design and acceptance account below describes the earlier implementation. Its job IDs, source hashes, remote paths, command blocks and completion flags are historical. Exact original bytes are in the [archive index](../archive/index.json); they do not certify this refactored checkout.
+>
+> Current configurations are under configs/tc2_gpu/, and independent fingerprints are in configs/tc2_gpu/source_manifest.json. The current deployment is unavailable. Formal actions refuse execution without new source/environment acceptance. Historical SSH and submission examples below are not current connection instructions.
+>
+> Use the [current protocol](TC2_GPU_PROTOCOL.md), [naming rules](TC2_GPU_NAMING.md) and [archive guide](TC2_GPU_ARCHIVE.md) for current paths. Local read-only commands from the repository root are python -B scripts/run_tc2_gpu.py plan and python -B scripts/verify_archive_tc2_gpu.py.
+
+## Historical design and acceptance account
+
+
 The user explicitly approved this design before implementation. It implements the **TC2 GPU Experiment Protocol** while preserving the exact frozen configs/protocol_v2.json, all manifests, dependency locks, existing logs, acceptance archives, and historical results. This step uses synthetic features only. Runner/cache integration belongs to step 5, and real-data pilots belong to step 6.
 
 ## Current acceptance status
 
-Step 4 is complete. Current-naming metric regression job 43968 and full algorithm acceptance job 43970 both passed. The final [acceptance record](../run/validation_tc2_gpu/step4_20261019/setup_status.json) binds this result to the exact verified source fingerprints. Validation used synthetic features; runner/cache integration and real-data experiments remain separate later steps.
+Step 4 is complete. Current-naming metric regression job 43968 and full algorithm acceptance job 43970 both passed. The final [acceptance record](../archive/index.json) (archived path: `run/validation_tc2_gpu/step4_20261019/setup_status.json`) binds this result to the exact verified source fingerprints. Validation used synthetic features; runner/cache integration and real-data experiments remain separate later steps.
 
 ## Approved implementation
 

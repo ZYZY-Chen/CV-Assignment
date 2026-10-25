@@ -27,7 +27,10 @@ LIMIT = 512 * 1024 * 1024
 MAX_PAGES = 32
 MAX_MEMBERS = 512
 MAX_INDEX = 8 * 1024 * 1024
-CONFIG = "configs/experiments_tc2_gpu.json"
+from tc2_gpu_provenance import current_source_hashes
+
+ROOT = Path(__file__).resolve().parents[1]
+CONFIG = "configs/tc2_gpu/experiments.json"
 MANIFEST = "experiments_export_manifest.json"
 RECEIPT = "page_verification.json"
 ANALYSIS_FILES = ("analysis.json", "analysis.csv", "evidence.json", "analysis.sha256", "SUCCESS")
@@ -121,10 +124,10 @@ def _design(value):
         raise ValueError("Experiment configuration has a different protocol or format")
     if value.get("maximum_export_bytes") != LIMIT or value.get("maximum_results_per_page") != 4:
         raise ValueError("Experiment export bounds differ from the approved design")
-    for field, count in (("scientific_source_hashes", 31), ("pilot_source_hashes", 6)):
+    for field, group in (("scientific_source_hashes", "workflow"), ("pilot_source_hashes", "pilot")):
         rows = value.get(field)
-        if not isinstance(rows, dict) or len(rows) != count:
-            raise ValueError("Accepted source fingerprint count differs")
+        if not isinstance(rows, dict) or rows != current_source_hashes(ROOT, group):
+            raise ValueError("Current source fingerprint set differs")
         for name, digest in rows.items():
             _relative(name); _hex(digest)
     if not MANIFESTS.issubset(value["scientific_source_hashes"]):

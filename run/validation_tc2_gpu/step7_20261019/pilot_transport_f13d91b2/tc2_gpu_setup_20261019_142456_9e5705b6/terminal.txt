@@ -1,9 +1,0 @@
-TC2 GPU: CollectPilot
-Local output: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\step7_20261019\pilot_transport_f13d91b2\tc2_gpu_setup_20261019_142456_9e5705b6
-A submitted or running job is not a passed check. Passwords are not stored.
-SIMULATED SSH ONLY: no network or job submission.
-PILOT_EXPORT_PATH=/home/mcaai/huajie001/ca6129_v2_setup/tmp/pilot-12345-20261019_142456_9e5705b6.tar.gz
-PILOT_EXPORT_SHA256=B2505E71A3574E9F7D25ACF8A67669C90825FF4DF93BE89655A88F78AA041DCD
-PILOT_EXPORT_BYTES=536870913
-STOPPED: Pilot output archive exceeds its transfer bound.
-Send this local output path back: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\step7_20261019\pilot_transport_f13d91b2\tc2_gpu_setup_20261019_142456_9e5705b6\terminal.txt

@@ -47,6 +47,18 @@ def fresh(prefix):
     return path
 
 
+def synthetic_pilot_results(design):
+    """Unit-only reuse fixtures; these records never authorize real execution."""
+    result = []
+    fits = {row["run_key"]: row["configuration"] for row in design["fits"]}
+    for key in experiments.pilot.RUN_KEYS:
+        identifier = protocol.digest({"unit_fixture_pilot": key})
+        result.append({"run_key": key, "path": "run/tc2_gpu/results/" + identifier,
+                       "identity_sha256": identifier, "method": fits[key]["method"], "run_seed": 17,
+                       "run_status": "completed", "verified": True, "reuse": "skipped"})
+    return result
+
+
 def completed_record(design, stage, index, previous=None):
     spec = experiments.stage_spec(design, stage)
     return {"mode": "formal_experiment_stage", "stage_id": stage, "job_id": str(50000 + index),
@@ -62,15 +74,17 @@ class ConfigurationTests(unittest.TestCase):
         self.root = fresh("config")
         self.design = experiments.load_design(ROOT)
 
-    def test_frozen_matrix_has_66_unique_fits_and_only_64_new_fits(self):
+    def test_frozen_matrix_has_66_unique_fits_without_historical_pilot_reuse(self):
         fits = self.design["fits"]
         self.assertEqual(len(fits), 66)
         self.assertEqual(len({row["run_key"] for row in fits}), 66)
         self.assertEqual(sum(row["configuration"]["dataset"] == "mvtec_ad" for row in fits), 62)
         self.assertEqual(sum(row["configuration"]["dataset"] == "mvtec_loco" for row in fits), 4)
-        self.assertEqual(sum(row["planned_new_fits"] for row in self.design["stages"]), 64)
+        self.assertEqual(sum(row["planned_new_fits"] for row in self.design["stages"]), 66)
         self.assertEqual(fits, protocol.build_plan(ROOT)["fits"])
-        self.assertEqual([row["run_key"] for row in self.design["accepted_pilot_results"]], list(experiments.pilot.RUN_KEYS))
+        self.assertEqual(self.design["accepted_pilot_results"], [])
+        self.assertIsNone(self.design["accepted_workflow_job_id"])
+        self.assertIsNone(self.design["accepted_pilot_job_id"])
 
     def test_stage_dependencies_and_allocations_match_approved_order(self):
         self.assertEqual([row["stage_id"] for row in self.design["stages"]], list(experiments.STAGES))
@@ -121,7 +135,7 @@ class ConfigurationTests(unittest.TestCase):
         with patch.object(sys, "argv", ["experiments_tc2_gpu.py", "plan", "--root", str(ROOT)]), patch.object(sys, "stdout", output):
             experiments.main()
         planned = json.loads(output.getvalue())
-        self.assertEqual((planned["fits"], planned["new_fits"]), (66, 64))
+        self.assertEqual((planned["fits"], planned["new_fits"]), (66, 66))
         self.assertEqual(formal.exists(), before)
         self.assertNotIn("torch", sys.modules)
 
@@ -130,6 +144,8 @@ class OrchestrationTests(unittest.TestCase):
     def setUp(self):
         self.root = fresh("orchestrate")
         self.design = experiments.load_design(ROOT)
+        self.design["accepted_pilot_results"] = synthetic_pilot_results(self.design)
+        self.design["accepted_pilot_job_id"] = "66024"
         self.calls = []
         self.emitted = []
 
@@ -321,7 +337,7 @@ class PublicationTests(unittest.TestCase):
         preflight.assert_called_once()
         for name in experiments.FILES:
             self.assertEqual(analysis.sha(self.root / name), analysis.sha(self.incoming / name))
-        self.assertFalse((self.root / "configs/tc2_setup.json").exists())
+        self.assertFalse((self.root / "configs/tc2_gpu/setup.json").exists())
         self.assertTrue((self.record / "experiments.sha256").is_file())
 
     def test_conflicting_source_is_preserved_before_publication(self):
@@ -338,7 +354,7 @@ class PublicationTests(unittest.TestCase):
 
     def test_extra_payload_member_is_refused_without_publication(self):
         path = self.incoming / "experiments.sha256"
-        path.write_text(path.read_text() + "F" * 64 + "  configs/tc2_setup.json\n", encoding="utf-8")
+        path.write_text(path.read_text() + "F" * 64 + "  configs/tc2_gpu/setup.json\n", encoding="utf-8")
         with patch.object(experiments, "preflight") as preflight, self.assertRaises(ValueError):
             experiments.publish(self.root, self.incoming, "B0", self.record)
         preflight.assert_not_called()
@@ -414,7 +430,10 @@ class AnalysisTests(unittest.TestCase):
         self.design = experiments.load_design(ROOT)
 
     def prepare(self):
-        for name in {*self.design["scientific_source_hashes"], analysis.DESIGN_FILE, analysis.ANALYSIS_FILE}:
+        # Copy the sealed current identity alongside its workflow files.
+        names = {*self.design["scientific_source_hashes"], analysis.DESIGN_FILE, analysis.ANALYSIS_FILE,
+                 "configs/tc2_gpu/source_manifest.json"}
+        for name in names:
             target = self.root / name
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(ROOT / name, target)

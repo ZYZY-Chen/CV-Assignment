@@ -1,3 +1,0 @@
-Traceback (most recent call last):
-  File "<stdin>", line 17, in <module>
-RuntimeError: Unexpected pilot source manifest entry

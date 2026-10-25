@@ -1,5 +1,0 @@
-TC2 GPU: RunExperiments
-Local output: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\step7_20261019\experiments_transport_b770bf7e\tc2_gpu_setup_20261019_142959_6daf50f8
-A submitted or running job is not a passed check. Passwords are not stored.
-STOPPED: RunExperiments requires an explicit -Stage from the frozen stage list.
-Send this local output path back: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\step7_20261019\experiments_transport_b770bf7e\tc2_gpu_setup_20261019_142959_6daf50f8\terminal.txt

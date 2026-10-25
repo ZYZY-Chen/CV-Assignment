@@ -23,19 +23,19 @@ import tc2_gpu_runner as r
 
 OUTPUT = None
 CASE = 0
-NEW_FILES = ["src/tc2_gpu_protocol.py", "src/tc2_gpu_cache.py", "src/tc2_gpu_runner.py",
-             "scripts/run_tc2_gpu.py", "configs/runtime_tc2_gpu.json", "tests/test_workflow_tc2_gpu.py",
+NEW_FILES = ["src/tc2_gpu_provenance.py", "src/tc2_gpu_protocol.py", "src/tc2_gpu_cache.py", "src/tc2_gpu_runner.py",
+             "scripts/run_tc2_gpu.py", "configs/tc2_gpu/runtime.json", "tests/test_workflow_tc2_gpu.py",
              "scripts/slurm/check_tc2_gpu_workflow.sh", "docs/TC2_GPU_WORKFLOW.md"]
 OLD_FILES = ["src/padim_adapter.py", "src/patchcore_adapter.py", "src/sampling.py", "src/scoring.py",
              "src/anomaly_postprocess.py", "tests/test_algorithms_tc2_gpu.py", "scripts/slurm/check_tc2_gpu_algorithms.sh",
-             "src/metric_core.py", "src/evaluate.py", "src/data.py", "configs/tc2_gpu.json",
+             "src/metric_core.py", "src/evaluate.py", "src/data.py", "configs/tc2_gpu/workflow.json",
              "tests/test_metrics_tc2_gpu.py", "scripts/slurm/check_tc2_gpu_metrics.sh"]
 
 
 def payload_files():
     protocol = p.contract(ROOT)[0]
-    return NEW_FILES + OLD_FILES + ["configs/protocol_v2.json", "environment-tc2.yml",
-                                  "requirements-tc2-lock.txt"] + [item["path"] for item in protocol["data"]["frozen_manifests"]]
+    return NEW_FILES + OLD_FILES + ["configs/tc2_gpu/protocol.json", "environment-tc2_gpu.yml",
+                                  "requirements-tc2_gpu-lock.txt"] + [item["path"] for item in protocol["data"]["frozen_manifests"]]
 
 
 def fixture(sandbox, train_n=2, dev_n=1):
@@ -137,16 +137,16 @@ class CoreTests(unittest.TestCase):
 
     def test_actual_setup_evidence_and_failed_primary_do_not_fall_back(self):
         base=self.ctx.storage/"acceptance"
-        old=base/"run/setup_v2";job=old/"job_43950_all"
+        old=base/"run/setup_tc2_gpu";job=old/"job_43950_all"
         job.mkdir(parents=True)
         (old/"last_check_all_job.txt").write_text("43950\n")
         p.write_json(job/"setup_status.json",{"step_2_complete":True,"weights_ready":True,
-            "environment_export":{"files":[{"path":"/record/environment-tc2.yml","sha256":"A"*64}]}})
+            "environment_export":{"files":[{"path":"/record/environment-tc2_gpu.yml","sha256":"A"*64}]}})
         p.write_json(job/"weights_info.json",{"sha256":"B"*64})
         result=p.accepted_inputs(base)
         self.assertEqual(result["weights_sha256"],"B"*64)
-        self.assertEqual(result["export_hashes"],{"environment-tc2.yml":"A"*64})
-        primary=base/"run/setup_tc2_gpu";primary.mkdir()
+        self.assertEqual(result["export_hashes"],{"environment-tc2_gpu.yml":"A"*64})
+        primary=base/"run/setup_tc2_gpu"
         (primary/"last_check_all_job.txt").write_text("43951\n")
         failed=primary/"job_43951_all";failed.mkdir()
         p.write_json(failed/"setup_status.json",{"step_2_complete":False,"weights_ready":False})

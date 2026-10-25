@@ -1,0 +1,2705 @@
+{
+  "schema_version": "1.0",
+  "workflow_id": "tc2_gpu",
+  "protocol_sha256": "17DB7042296F52F16C63687E06EDCE7A6D550155ABE718351904F5952043E5BD",
+  "accepted_workflow_job_id": null,
+  "accepted_pilot_job_id": null,
+  "scientific_source_hashes": {
+    "src/tc2_gpu_protocol.py": "CB80D6B8D57472EB730EC6B96802EAB760265AEB3FF06635C090C8EFF5636BFB",
+    "src/tc2_gpu_cache.py": "118F9990414DD8ADE116BEFC128AB829776C79C98DEB34E625250FEBAFC5E9BE",
+    "src/tc2_gpu_runner.py": "CEDC4ECD543DC25EFA6E4003F158954C775B842B98A2609BE943928AA900628D",
+    "scripts/run_tc2_gpu.py": "5F9199D820CCAD80F0C6065F612776E3467BDE5F978AC240B360B42D6D36F921",
+    "configs/tc2_gpu/runtime.json": "B057766AFDF473A89E74016B2F9DF6B311510BA8E444D42EE14C075BAF08AEAA",
+    "tests/test_workflow_tc2_gpu.py": "1943DFD1A2AC5CA97304A6A8F27199DE1B01A09B46956FF4C131F3F44CEEE8C5",
+    "scripts/slurm/check_tc2_gpu_workflow.sh": "F0D2F1FF96C734F83D1D3ED936DED5BF4948242B360A01F9EDC4A7A13A99D7FA",
+    "src/padim_adapter.py": "803E30F1AD1F591BDD26C0D458D252D397578F8E5398486855DAC0257F443AB3",
+    "src/patchcore_adapter.py": "4877D66625180BB36258EA6B99DE9427E545764614AB0CB245F5FAFC44EC307F",
+    "src/sampling.py": "BEDB33057BC7E938108E4B9B177ECDE121418B24DC348CDF07AD04F3F0284B79",
+    "src/scoring.py": "E8348550F0A55CC8A1EDBB4B1310FBE985493F22DAE71B6B562F34720C3D4B0B",
+    "src/anomaly_postprocess.py": "4BD9E9BE3CAD7B90A24F7DBFAABDB55EB403C94BCF4B771FF9D73A0631B9D4BD",
+    "tests/test_algorithms_tc2_gpu.py": "80064A1FC8C0547E2284D59E4C6C49A7C72B1D559A2E5CF79FD1283D0C89F3DB",
+    "scripts/slurm/check_tc2_gpu_algorithms.sh": "8977AD09689193BEC2735D2E2869EEF0FC1A777B3763FFBB2DC0F7EC94F1BEF2",
+    "src/metric_core.py": "D218A438031DE6B0A83B14951354CD66A85ED65F97FFC2CFBAEFF1D4FB91DB78",
+    "src/evaluate.py": "4DB2413CC6AAF4210B143285FE5FD7FC6A8C08E98C67073E9A92D31359E68BC6",
+    "src/data.py": "9A82D585203B376F41C3200A32D6971288DD70B5C7E71210F3E21F8C5C1F1F89",
+    "configs/tc2_gpu/workflow.json": "FDE4E6DA02FF080060933FAA7ED39643808FB2DBFB2DEF6B5AD1267B458BCB46",
+    "tests/test_metrics_tc2_gpu.py": "39AA46141206F591F0B8F1313DEC362BD1D0178B1523992465A8EB24EEF0E62E",
+    "scripts/slurm/check_tc2_gpu_metrics.sh": "62DB0DF905E6BC82997660877AE5CEEA1C9C1EB046BF6E768546AB310E42733D",
+    "configs/tc2_gpu/protocol.json": "17DB7042296F52F16C63687E06EDCE7A6D550155ABE718351904F5952043E5BD",
+    "environment-tc2_gpu.yml": "8361162136530EA353603EF4268EB1AE489B3DE009A5001C26B9DF9CFE0AD7A4",
+    "requirements-tc2_gpu-lock.txt": "F7B848F10FFB3F3CCEB707450B2A5FE4DCD9A6C3B489963A8932094E016840B6",
+    "manifests/manifest_mvtec_ad_bottle.json": "2922FA6E513F980CBDE53A303F86FE1160588DF7EFB0796F6888C95D2BAB6140",
+    "manifests/manifest_mvtec_ad_cable.json": "E188D05BD246C29503A35DBAF49DBCC326A35079ECC07973AE1A7BCCFD08FD95",
+    "manifests/manifest_mvtec_ad_capsule.json": "0E9F1BF5368DE03A2A6BE57CD8B13D8CE9D484DE3A05635206C7D8FC28D1E367",
+    "manifests/manifest_mvtec_ad_screw.json": "E209F4429C4056ECFA6F2DA82FAA9B5B3AE495EBFDBF94D5808C9676D8A99F9B",
+    "manifests/manifest_mvtec_ad_tile.json": "2B4274FE76BBCBCE3B968CCCAA0F3DAA6151FAF9AA6358445ACDA1B5DFBEE94C",
+    "manifests/manifest_mvtec_ad_wood.json": "57646007EBAFE8F015F976186197A7A08D338ECAEB6BF8B5D3764DE9A46888AE",
+    "manifests/manifest_mvtec_loco_juice_bottle.json": "E54AB3FA354E258D591F6C53B395ED9EED25518CF25F039FEB88040A2EC46C86",
+    "manifests/manifest_mvtec_loco_screw_bag.json": "7C02ED1CF33AFD35F8BEFB7342525F532213CC684ADC330414522DB51B1C66CA",
+    "src/tc2_gpu_provenance.py": "6DEA37ED683651606F44FB6A88D6F3B8D962F736EAD7937B15AE2F58485B76DD"
+  },
+  "pilot_source_hashes": {
+    "configs/tc2_gpu/pilot.json": "1F3547C109068F25DDB272906E037195CBCF7B9A7AB7FC0AC46523EA98A71F89",
+    "scripts/pilot_tc2_gpu.py": "CE9E655ECA6576A2A85E29FF876345EF9DF0C8E07EB674E6CF8A108811DE19CE",
+    "scripts/slurm/pilot_tc2_gpu.sh": "154B82C801F205010EF6184B981F9DF6DDB2F7B8F5868D47A8B0DDE13033B1CA",
+    "scripts/collect_tc2_gpu_pilot.py": "2C0EA8C738DAA2082CCBF8335C79492BEAFC310A7D2E0EFF8593F8676CB027D8",
+    "tests/test_pilot_tc2_gpu.py": "A7A58D065F97CEA98E9BFF4689D420BA3464DA2811CCC2917401B6055ACAC623",
+    "docs/TC2_GPU_PILOT.md": "C2A0737B0B1EA869C1E109E6F312839537A5D5AECFF874FA6D199BFDD8ABA51C"
+  },
+  "accepted_pilot_results": [],
+  "fits": [
+    {
+      "run_key": "B0_mvtec_ad_bottle_padim_s17_n100_B7B86DBB2043",
+      "configuration": {
+        "stage": "B0",
+        "dataset": "mvtec_ad",
+        "category": "bottle",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "B0_mvtec_ad_bottle_patchcore_s17_n100_BBC2B85C2FA8",
+      "configuration": {
+        "stage": "B0",
+        "dataset": "mvtec_ad",
+        "category": "bottle",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "B0_mvtec_ad_cable_padim_s17_n100_1272F0F1504D",
+      "configuration": {
+        "stage": "B0",
+        "dataset": "mvtec_ad",
+        "category": "cable",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "B0_mvtec_ad_cable_patchcore_s17_n100_AE108605F492",
+      "configuration": {
+        "stage": "B0",
+        "dataset": "mvtec_ad",
+        "category": "cable",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "B0_mvtec_ad_capsule_padim_s17_n100_5F1B72017297",
+      "configuration": {
+        "stage": "B0",
+        "dataset": "mvtec_ad",
+        "category": "capsule",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "B0_mvtec_ad_capsule_patchcore_s17_n100_55DB51B64838",
+      "configuration": {
+        "stage": "B0",
+        "dataset": "mvtec_ad",
+        "category": "capsule",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "B0_mvtec_ad_screw_padim_s17_n100_287B561ACFB1",
+      "configuration": {
+        "stage": "B0",
+        "dataset": "mvtec_ad",
+        "category": "screw",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "B0_mvtec_ad_screw_patchcore_s17_n100_D657B3B6C4C1",
+      "configuration": {
+        "stage": "B0",
+        "dataset": "mvtec_ad",
+        "category": "screw",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "B0_mvtec_ad_tile_padim_s17_n100_988C8D661753",
+      "configuration": {
+        "stage": "B0",
+        "dataset": "mvtec_ad",
+        "category": "tile",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "B0_mvtec_ad_tile_patchcore_s17_n100_71576E39ABDF",
+      "configuration": {
+        "stage": "B0",
+        "dataset": "mvtec_ad",
+        "category": "tile",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "B0_mvtec_ad_wood_padim_s17_n100_4A80A8A14AE8",
+      "configuration": {
+        "stage": "B0",
+        "dataset": "mvtec_ad",
+        "category": "wood",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "B0_mvtec_ad_wood_patchcore_s17_n100_468C39576EED",
+      "configuration": {
+        "stage": "B0",
+        "dataset": "mvtec_ad",
+        "category": "wood",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "H1_mvtec_ad_cable_padim_s17_n100_3D76B7DBD4F0",
+      "configuration": {
+        "stage": "H1",
+        "dataset": "mvtec_ad",
+        "category": "cable",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 50,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "H1_mvtec_ad_cable_padim_s17_n100_8B9E6A706091",
+      "configuration": {
+        "stage": "H1",
+        "dataset": "mvtec_ad",
+        "category": "cable",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 200,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "H1_mvtec_ad_screw_padim_s17_n100_A0CEFBA88A22",
+      "configuration": {
+        "stage": "H1",
+        "dataset": "mvtec_ad",
+        "category": "screw",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 50,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "H1_mvtec_ad_screw_padim_s17_n100_7E617B469530",
+      "configuration": {
+        "stage": "H1",
+        "dataset": "mvtec_ad",
+        "category": "screw",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 200,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "H2_mvtec_ad_cable_patchcore_s17_n100_A3F7BC278E27",
+      "configuration": {
+        "stage": "H2",
+        "dataset": "mvtec_ad",
+        "category": "cable",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.01,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "H2_mvtec_ad_cable_patchcore_s17_n100_9881522E49D9",
+      "configuration": {
+        "stage": "H2",
+        "dataset": "mvtec_ad",
+        "category": "cable",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.1,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "H2_mvtec_ad_screw_patchcore_s17_n100_E056497FC587",
+      "configuration": {
+        "stage": "H2",
+        "dataset": "mvtec_ad",
+        "category": "screw",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.01,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "H2_mvtec_ad_screw_patchcore_s17_n100_A705880105D7",
+      "configuration": {
+        "stage": "H2",
+        "dataset": "mvtec_ad",
+        "category": "screw",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.1,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "C1_mvtec_ad_cable_patchcore_s17_n100_230A94347D46",
+      "configuration": {
+        "stage": "C1",
+        "dataset": "mvtec_ad",
+        "category": "cable",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "random",
+          "sampling_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "C1_mvtec_ad_screw_patchcore_s17_n100_681E25673EEB",
+      "configuration": {
+        "stage": "C1",
+        "dataset": "mvtec_ad",
+        "category": "screw",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "random",
+          "sampling_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_bottle_padim_s29_n100_6F691F7CBABB",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "bottle",
+        "method": "padim",
+        "run_seed": 29,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 29
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_bottle_padim_s43_n100_E46054BE6CDC",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "bottle",
+        "method": "padim",
+        "run_seed": 43,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 43
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_bottle_patchcore_s29_n100_D49528C13187",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "bottle",
+        "method": "patchcore",
+        "run_seed": 29,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 29
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_bottle_patchcore_s43_n100_8026690C6BED",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "bottle",
+        "method": "patchcore",
+        "run_seed": 43,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 43
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_cable_padim_s29_n100_9462465EAC13",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "cable",
+        "method": "padim",
+        "run_seed": 29,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 29
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_cable_padim_s43_n100_C19AAE615FB8",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "cable",
+        "method": "padim",
+        "run_seed": 43,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 43
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_cable_patchcore_s29_n100_F081468F2C49",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "cable",
+        "method": "patchcore",
+        "run_seed": 29,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 29
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_cable_patchcore_s43_n100_4CEC5409E8CD",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "cable",
+        "method": "patchcore",
+        "run_seed": 43,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 43
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_capsule_padim_s29_n100_39B052393DEC",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "capsule",
+        "method": "padim",
+        "run_seed": 29,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 29
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_capsule_padim_s43_n100_81A16E96F359",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "capsule",
+        "method": "padim",
+        "run_seed": 43,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 43
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_capsule_patchcore_s29_n100_99227661E967",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "capsule",
+        "method": "patchcore",
+        "run_seed": 29,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 29
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_capsule_patchcore_s43_n100_9A3A68E2D4FC",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "capsule",
+        "method": "patchcore",
+        "run_seed": 43,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 43
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_screw_padim_s29_n100_EF53D7FD3502",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "screw",
+        "method": "padim",
+        "run_seed": 29,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 29
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_screw_padim_s43_n100_8E11137D5A05",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "screw",
+        "method": "padim",
+        "run_seed": 43,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 43
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_screw_patchcore_s29_n100_BAEC4291BE93",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "screw",
+        "method": "patchcore",
+        "run_seed": 29,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 29
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_screw_patchcore_s43_n100_8C620CBF229D",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "screw",
+        "method": "patchcore",
+        "run_seed": 43,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 43
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_tile_padim_s29_n100_93DCF109BAD8",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "tile",
+        "method": "padim",
+        "run_seed": 29,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 29
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_tile_padim_s43_n100_328CE646E1BD",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "tile",
+        "method": "padim",
+        "run_seed": 43,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 43
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_tile_patchcore_s29_n100_5B04C7470E20",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "tile",
+        "method": "patchcore",
+        "run_seed": 29,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 29
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_tile_patchcore_s43_n100_A2497C55E1CA",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "tile",
+        "method": "patchcore",
+        "run_seed": 43,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 43
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_wood_padim_s29_n100_1F22F497170E",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "wood",
+        "method": "padim",
+        "run_seed": 29,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 29
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_wood_padim_s43_n100_5C2FFC5405A8",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "wood",
+        "method": "padim",
+        "run_seed": 43,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 43
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_wood_patchcore_s29_n100_43A82BC3ABBB",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "wood",
+        "method": "patchcore",
+        "run_seed": 29,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 29
+        }
+      }
+    },
+    {
+      "run_key": "R0_mvtec_ad_wood_patchcore_s43_n100_9F7E9EF07BC6",
+      "configuration": {
+        "stage": "R0",
+        "dataset": "mvtec_ad",
+        "category": "wood",
+        "method": "patchcore",
+        "run_seed": 43,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 43
+        }
+      }
+    },
+    {
+      "run_key": "C1R_mvtec_ad_cable_patchcore_s29_n100_9814BB7B44E1",
+      "configuration": {
+        "stage": "C1R",
+        "dataset": "mvtec_ad",
+        "category": "cable",
+        "method": "patchcore",
+        "run_seed": 29,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "random",
+          "sampling_seed": 29
+        }
+      }
+    },
+    {
+      "run_key": "C1R_mvtec_ad_cable_patchcore_s43_n100_92ED23FC2EE2",
+      "configuration": {
+        "stage": "C1R",
+        "dataset": "mvtec_ad",
+        "category": "cable",
+        "method": "patchcore",
+        "run_seed": 43,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "random",
+          "sampling_seed": 43
+        }
+      }
+    },
+    {
+      "run_key": "C1R_mvtec_ad_screw_patchcore_s29_n100_0638518CE2D4",
+      "configuration": {
+        "stage": "C1R",
+        "dataset": "mvtec_ad",
+        "category": "screw",
+        "method": "patchcore",
+        "run_seed": 29,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "random",
+          "sampling_seed": 29
+        }
+      }
+    },
+    {
+      "run_key": "C1R_mvtec_ad_screw_patchcore_s43_n100_DDCD9BC45E32",
+      "configuration": {
+        "stage": "C1R",
+        "dataset": "mvtec_ad",
+        "category": "screw",
+        "method": "patchcore",
+        "run_seed": 43,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "random",
+          "sampling_seed": 43
+        }
+      }
+    },
+    {
+      "run_key": "C2_mvtec_ad_cable_padim_s17_n100_27FD8E215CF4",
+      "configuration": {
+        "stage": "C2",
+        "dataset": "mvtec_ad",
+        "category": "cable",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "C2_mvtec_ad_cable_padim_s17_n100_B697F21E778E",
+      "configuration": {
+        "stage": "C2",
+        "dataset": "mvtec_ad",
+        "category": "cable",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "C2_mvtec_ad_screw_padim_s17_n100_3200F9A8279F",
+      "configuration": {
+        "stage": "C2",
+        "dataset": "mvtec_ad",
+        "category": "screw",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "C2_mvtec_ad_screw_padim_s17_n100_42A014B089AD",
+      "configuration": {
+        "stage": "C2",
+        "dataset": "mvtec_ad",
+        "category": "screw",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "F1_mvtec_ad_cable_padim_s17_n20_4D90803933B4",
+      "configuration": {
+        "stage": "F1",
+        "dataset": "mvtec_ad",
+        "category": "cable",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 20,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "F1_mvtec_ad_cable_padim_s17_n50_FEA8D7553D95",
+      "configuration": {
+        "stage": "F1",
+        "dataset": "mvtec_ad",
+        "category": "cable",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 50,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "F1_mvtec_ad_cable_patchcore_s17_n20_6A3C64C2D2FD",
+      "configuration": {
+        "stage": "F1",
+        "dataset": "mvtec_ad",
+        "category": "cable",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 20,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "F1_mvtec_ad_cable_patchcore_s17_n50_2C6379649DE8",
+      "configuration": {
+        "stage": "F1",
+        "dataset": "mvtec_ad",
+        "category": "cable",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 50,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "F1_mvtec_ad_screw_padim_s17_n20_88E5FA51177F",
+      "configuration": {
+        "stage": "F1",
+        "dataset": "mvtec_ad",
+        "category": "screw",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 20,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "F1_mvtec_ad_screw_padim_s17_n50_CCE08434FDC3",
+      "configuration": {
+        "stage": "F1",
+        "dataset": "mvtec_ad",
+        "category": "screw",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 50,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "F1_mvtec_ad_screw_patchcore_s17_n20_CC13B8F41466",
+      "configuration": {
+        "stage": "F1",
+        "dataset": "mvtec_ad",
+        "category": "screw",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 20,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "F1_mvtec_ad_screw_patchcore_s17_n50_38ED7FB7B49E",
+      "configuration": {
+        "stage": "F1",
+        "dataset": "mvtec_ad",
+        "category": "screw",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 50,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "B0_LOCO_mvtec_loco_juice_bottle_padim_s17_n100_B8766FFB4CD0",
+      "configuration": {
+        "stage": "B0_LOCO",
+        "dataset": "mvtec_loco",
+        "category": "juice_bottle",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "B0_LOCO_mvtec_loco_juice_bottle_patchcore_s17_n100_F914F6B6532D",
+      "configuration": {
+        "stage": "B0_LOCO",
+        "dataset": "mvtec_loco",
+        "category": "juice_bottle",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "B0_LOCO_mvtec_loco_screw_bag_padim_s17_n100_8D20C5E59478",
+      "configuration": {
+        "stage": "B0_LOCO",
+        "dataset": "mvtec_loco",
+        "category": "screw_bag",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "B0_LOCO_mvtec_loco_screw_bag_patchcore_s17_n100_DC6E31A70CE5",
+      "configuration": {
+        "stage": "B0_LOCO",
+        "dataset": "mvtec_loco",
+        "category": "screw_bag",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 17
+        }
+      }
+    }
+  ],
+  "stages": [
+    {
+      "stage_id": "B0",
+      "kind": "fit",
+      "predecessor": null,
+      "run_keys": [
+        "B0_mvtec_ad_bottle_padim_s17_n100_B7B86DBB2043",
+        "B0_mvtec_ad_bottle_patchcore_s17_n100_BBC2B85C2FA8",
+        "B0_mvtec_ad_cable_padim_s17_n100_1272F0F1504D",
+        "B0_mvtec_ad_cable_patchcore_s17_n100_AE108605F492",
+        "B0_mvtec_ad_capsule_padim_s17_n100_5F1B72017297",
+        "B0_mvtec_ad_capsule_patchcore_s17_n100_55DB51B64838",
+        "B0_mvtec_ad_screw_padim_s17_n100_287B561ACFB1",
+        "B0_mvtec_ad_screw_patchcore_s17_n100_D657B3B6C4C1",
+        "B0_mvtec_ad_tile_padim_s17_n100_988C8D661753",
+        "B0_mvtec_ad_tile_patchcore_s17_n100_71576E39ABDF",
+        "B0_mvtec_ad_wood_padim_s17_n100_4A80A8A14AE8",
+        "B0_mvtec_ad_wood_patchcore_s17_n100_468C39576EED"
+      ],
+      "source_run_keys": [],
+      "score_rules": [],
+      "expected_rows": 0,
+      "expected_cumulative_fits": 12,
+      "planned_new_fits": 12,
+      "resources": {
+        "partition": "MGPU-TC2",
+        "qos": "normal",
+        "nodes": 1,
+        "tasks": 1,
+        "gpus": 1,
+        "cpus_per_task": 2,
+        "memory_gib": 24,
+        "time_limit": "02:00:00"
+      }
+    },
+    {
+      "stage_id": "H1",
+      "kind": "fit",
+      "predecessor": "B0",
+      "run_keys": [
+        "H1_mvtec_ad_cable_padim_s17_n100_3D76B7DBD4F0",
+        "H1_mvtec_ad_cable_padim_s17_n100_8B9E6A706091",
+        "H1_mvtec_ad_screw_padim_s17_n100_A0CEFBA88A22",
+        "H1_mvtec_ad_screw_padim_s17_n100_7E617B469530"
+      ],
+      "source_run_keys": [],
+      "score_rules": [],
+      "expected_rows": 0,
+      "expected_cumulative_fits": 16,
+      "planned_new_fits": 4,
+      "resources": {
+        "partition": "MGPU-TC2",
+        "qos": "normal",
+        "nodes": 1,
+        "tasks": 1,
+        "gpus": 1,
+        "cpus_per_task": 2,
+        "memory_gib": 24,
+        "time_limit": "02:00:00"
+      }
+    },
+    {
+      "stage_id": "H2",
+      "kind": "fit",
+      "predecessor": "H1",
+      "run_keys": [
+        "H2_mvtec_ad_cable_patchcore_s17_n100_A3F7BC278E27",
+        "H2_mvtec_ad_cable_patchcore_s17_n100_9881522E49D9",
+        "H2_mvtec_ad_screw_patchcore_s17_n100_E056497FC587",
+        "H2_mvtec_ad_screw_patchcore_s17_n100_A705880105D7"
+      ],
+      "source_run_keys": [],
+      "score_rules": [],
+      "expected_rows": 0,
+      "expected_cumulative_fits": 20,
+      "planned_new_fits": 4,
+      "resources": {
+        "partition": "MGPU-TC2",
+        "qos": "normal",
+        "nodes": 1,
+        "tasks": 1,
+        "gpus": 1,
+        "cpus_per_task": 2,
+        "memory_gib": 24,
+        "time_limit": "02:00:00"
+      }
+    },
+    {
+      "stage_id": "C1",
+      "kind": "fit",
+      "predecessor": "H2",
+      "run_keys": [
+        "C1_mvtec_ad_cable_patchcore_s17_n100_230A94347D46",
+        "C1_mvtec_ad_screw_patchcore_s17_n100_681E25673EEB"
+      ],
+      "source_run_keys": [],
+      "score_rules": [],
+      "expected_rows": 0,
+      "expected_cumulative_fits": 22,
+      "planned_new_fits": 2,
+      "resources": {
+        "partition": "MGPU-TC2",
+        "qos": "normal",
+        "nodes": 1,
+        "tasks": 1,
+        "gpus": 1,
+        "cpus_per_task": 2,
+        "memory_gib": 24,
+        "time_limit": "02:00:00"
+      }
+    },
+    {
+      "stage_id": "I1_seed17",
+      "kind": "analysis",
+      "predecessor": "C1",
+      "run_keys": [],
+      "source_run_keys": [
+        "B0_mvtec_ad_bottle_patchcore_s17_n100_BBC2B85C2FA8",
+        "B0_mvtec_ad_cable_patchcore_s17_n100_AE108605F492",
+        "B0_mvtec_ad_capsule_patchcore_s17_n100_55DB51B64838",
+        "B0_mvtec_ad_screw_patchcore_s17_n100_D657B3B6C4C1",
+        "B0_mvtec_ad_tile_patchcore_s17_n100_71576E39ABDF",
+        "B0_mvtec_ad_wood_patchcore_s17_n100_468C39576EED"
+      ],
+      "score_rules": [
+        "native",
+        "max",
+        "top_0.01"
+      ],
+      "expected_rows": 18,
+      "expected_cumulative_fits": 22,
+      "planned_new_fits": 0,
+      "resources": {
+        "partition": "MGPU-TC2",
+        "qos": "normal",
+        "nodes": 1,
+        "tasks": 1,
+        "gpus": 0,
+        "cpus_per_task": 2,
+        "memory_gib": 8,
+        "time_limit": "00:15:00"
+      }
+    },
+    {
+      "stage_id": "R0",
+      "kind": "fit",
+      "predecessor": "I1_seed17",
+      "run_keys": [
+        "R0_mvtec_ad_bottle_padim_s29_n100_6F691F7CBABB",
+        "R0_mvtec_ad_bottle_padim_s43_n100_E46054BE6CDC",
+        "R0_mvtec_ad_bottle_patchcore_s29_n100_D49528C13187",
+        "R0_mvtec_ad_bottle_patchcore_s43_n100_8026690C6BED",
+        "R0_mvtec_ad_cable_padim_s29_n100_9462465EAC13",
+        "R0_mvtec_ad_cable_padim_s43_n100_C19AAE615FB8",
+        "R0_mvtec_ad_cable_patchcore_s29_n100_F081468F2C49",
+        "R0_mvtec_ad_cable_patchcore_s43_n100_4CEC5409E8CD",
+        "R0_mvtec_ad_capsule_padim_s29_n100_39B052393DEC",
+        "R0_mvtec_ad_capsule_padim_s43_n100_81A16E96F359",
+        "R0_mvtec_ad_capsule_patchcore_s29_n100_99227661E967",
+        "R0_mvtec_ad_capsule_patchcore_s43_n100_9A3A68E2D4FC",
+        "R0_mvtec_ad_screw_padim_s29_n100_EF53D7FD3502",
+        "R0_mvtec_ad_screw_padim_s43_n100_8E11137D5A05",
+        "R0_mvtec_ad_screw_patchcore_s29_n100_BAEC4291BE93",
+        "R0_mvtec_ad_screw_patchcore_s43_n100_8C620CBF229D",
+        "R0_mvtec_ad_tile_padim_s29_n100_93DCF109BAD8",
+        "R0_mvtec_ad_tile_padim_s43_n100_328CE646E1BD",
+        "R0_mvtec_ad_tile_patchcore_s29_n100_5B04C7470E20",
+        "R0_mvtec_ad_tile_patchcore_s43_n100_A2497C55E1CA",
+        "R0_mvtec_ad_wood_padim_s29_n100_1F22F497170E",
+        "R0_mvtec_ad_wood_padim_s43_n100_5C2FFC5405A8",
+        "R0_mvtec_ad_wood_patchcore_s29_n100_43A82BC3ABBB",
+        "R0_mvtec_ad_wood_patchcore_s43_n100_9F7E9EF07BC6"
+      ],
+      "source_run_keys": [],
+      "score_rules": [],
+      "expected_rows": 0,
+      "expected_cumulative_fits": 46,
+      "planned_new_fits": 24,
+      "resources": {
+        "partition": "MGPU-TC2",
+        "qos": "normal",
+        "nodes": 1,
+        "tasks": 1,
+        "gpus": 1,
+        "cpus_per_task": 2,
+        "memory_gib": 24,
+        "time_limit": "02:00:00"
+      }
+    },
+    {
+      "stage_id": "C1R",
+      "kind": "fit",
+      "predecessor": "R0",
+      "run_keys": [
+        "C1R_mvtec_ad_cable_patchcore_s29_n100_9814BB7B44E1",
+        "C1R_mvtec_ad_cable_patchcore_s43_n100_92ED23FC2EE2",
+        "C1R_mvtec_ad_screw_patchcore_s29_n100_0638518CE2D4",
+        "C1R_mvtec_ad_screw_patchcore_s43_n100_DDCD9BC45E32"
+      ],
+      "source_run_keys": [],
+      "score_rules": [],
+      "expected_rows": 0,
+      "expected_cumulative_fits": 50,
+      "planned_new_fits": 4,
+      "resources": {
+        "partition": "MGPU-TC2",
+        "qos": "normal",
+        "nodes": 1,
+        "tasks": 1,
+        "gpus": 1,
+        "cpus_per_task": 2,
+        "memory_gib": 24,
+        "time_limit": "02:00:00"
+      }
+    },
+    {
+      "stage_id": "C2",
+      "kind": "fit",
+      "predecessor": "C1R",
+      "run_keys": [
+        "C2_mvtec_ad_cable_padim_s17_n100_27FD8E215CF4",
+        "C2_mvtec_ad_cable_padim_s17_n100_B697F21E778E",
+        "C2_mvtec_ad_screw_padim_s17_n100_3200F9A8279F",
+        "C2_mvtec_ad_screw_padim_s17_n100_42A014B089AD"
+      ],
+      "source_run_keys": [],
+      "score_rules": [],
+      "expected_rows": 0,
+      "expected_cumulative_fits": 54,
+      "planned_new_fits": 4,
+      "resources": {
+        "partition": "MGPU-TC2",
+        "qos": "normal",
+        "nodes": 1,
+        "tasks": 1,
+        "gpus": 1,
+        "cpus_per_task": 2,
+        "memory_gib": 24,
+        "time_limit": "02:00:00"
+      }
+    },
+    {
+      "stage_id": "F1",
+      "kind": "fit",
+      "predecessor": "C2",
+      "run_keys": [
+        "F1_mvtec_ad_cable_padim_s17_n20_4D90803933B4",
+        "F1_mvtec_ad_cable_padim_s17_n50_FEA8D7553D95",
+        "F1_mvtec_ad_cable_patchcore_s17_n20_6A3C64C2D2FD",
+        "F1_mvtec_ad_cable_patchcore_s17_n50_2C6379649DE8",
+        "F1_mvtec_ad_screw_padim_s17_n20_88E5FA51177F",
+        "F1_mvtec_ad_screw_padim_s17_n50_CCE08434FDC3",
+        "F1_mvtec_ad_screw_patchcore_s17_n20_CC13B8F41466",
+        "F1_mvtec_ad_screw_patchcore_s17_n50_38ED7FB7B49E"
+      ],
+      "source_run_keys": [],
+      "score_rules": [],
+      "expected_rows": 0,
+      "expected_cumulative_fits": 62,
+      "planned_new_fits": 8,
+      "resources": {
+        "partition": "MGPU-TC2",
+        "qos": "normal",
+        "nodes": 1,
+        "tasks": 1,
+        "gpus": 1,
+        "cpus_per_task": 2,
+        "memory_gib": 24,
+        "time_limit": "02:00:00"
+      }
+    },
+    {
+      "stage_id": "I1_all_seeds",
+      "kind": "analysis",
+      "predecessor": "F1",
+      "run_keys": [],
+      "source_run_keys": [
+        "B0_mvtec_ad_bottle_patchcore_s17_n100_BBC2B85C2FA8",
+        "B0_mvtec_ad_cable_patchcore_s17_n100_AE108605F492",
+        "B0_mvtec_ad_capsule_patchcore_s17_n100_55DB51B64838",
+        "B0_mvtec_ad_screw_patchcore_s17_n100_D657B3B6C4C1",
+        "B0_mvtec_ad_tile_patchcore_s17_n100_71576E39ABDF",
+        "B0_mvtec_ad_wood_patchcore_s17_n100_468C39576EED",
+        "R0_mvtec_ad_bottle_patchcore_s29_n100_D49528C13187",
+        "R0_mvtec_ad_bottle_patchcore_s43_n100_8026690C6BED",
+        "R0_mvtec_ad_cable_patchcore_s29_n100_F081468F2C49",
+        "R0_mvtec_ad_cable_patchcore_s43_n100_4CEC5409E8CD",
+        "R0_mvtec_ad_capsule_patchcore_s29_n100_99227661E967",
+        "R0_mvtec_ad_capsule_patchcore_s43_n100_9A3A68E2D4FC",
+        "R0_mvtec_ad_screw_patchcore_s29_n100_BAEC4291BE93",
+        "R0_mvtec_ad_screw_patchcore_s43_n100_8C620CBF229D",
+        "R0_mvtec_ad_tile_patchcore_s29_n100_5B04C7470E20",
+        "R0_mvtec_ad_tile_patchcore_s43_n100_A2497C55E1CA",
+        "R0_mvtec_ad_wood_patchcore_s29_n100_43A82BC3ABBB",
+        "R0_mvtec_ad_wood_patchcore_s43_n100_9F7E9EF07BC6"
+      ],
+      "score_rules": [
+        "native",
+        "max",
+        "top_0.01"
+      ],
+      "expected_rows": 54,
+      "expected_cumulative_fits": 62,
+      "planned_new_fits": 0,
+      "resources": {
+        "partition": "MGPU-TC2",
+        "qos": "normal",
+        "nodes": 1,
+        "tasks": 1,
+        "gpus": 0,
+        "cpus_per_task": 2,
+        "memory_gib": 8,
+        "time_limit": "00:15:00"
+      }
+    },
+    {
+      "stage_id": "I2",
+      "kind": "analysis",
+      "predecessor": "I1_all_seeds",
+      "run_keys": [],
+      "source_run_keys": [
+        "B0_mvtec_ad_bottle_patchcore_s17_n100_BBC2B85C2FA8",
+        "B0_mvtec_ad_cable_patchcore_s17_n100_AE108605F492",
+        "B0_mvtec_ad_capsule_patchcore_s17_n100_55DB51B64838",
+        "B0_mvtec_ad_screw_patchcore_s17_n100_D657B3B6C4C1",
+        "B0_mvtec_ad_tile_patchcore_s17_n100_71576E39ABDF",
+        "B0_mvtec_ad_wood_patchcore_s17_n100_468C39576EED",
+        "R0_mvtec_ad_bottle_patchcore_s29_n100_D49528C13187",
+        "R0_mvtec_ad_bottle_patchcore_s43_n100_8026690C6BED",
+        "R0_mvtec_ad_cable_patchcore_s29_n100_F081468F2C49",
+        "R0_mvtec_ad_cable_patchcore_s43_n100_4CEC5409E8CD",
+        "R0_mvtec_ad_capsule_patchcore_s29_n100_99227661E967",
+        "R0_mvtec_ad_capsule_patchcore_s43_n100_9A3A68E2D4FC",
+        "R0_mvtec_ad_screw_patchcore_s29_n100_BAEC4291BE93",
+        "R0_mvtec_ad_screw_patchcore_s43_n100_8C620CBF229D",
+        "R0_mvtec_ad_tile_patchcore_s29_n100_5B04C7470E20",
+        "R0_mvtec_ad_tile_patchcore_s43_n100_A2497C55E1CA",
+        "R0_mvtec_ad_wood_patchcore_s29_n100_43A82BC3ABBB",
+        "R0_mvtec_ad_wood_patchcore_s43_n100_9F7E9EF07BC6"
+      ],
+      "score_rules": [
+        "top_0.001",
+        "top_0.05"
+      ],
+      "expected_rows": 36,
+      "expected_cumulative_fits": 62,
+      "planned_new_fits": 0,
+      "resources": {
+        "partition": "MGPU-TC2",
+        "qos": "normal",
+        "nodes": 1,
+        "tasks": 1,
+        "gpus": 0,
+        "cpus_per_task": 2,
+        "memory_gib": 8,
+        "time_limit": "00:15:00"
+      }
+    },
+    {
+      "stage_id": "B0_LOCO",
+      "kind": "fit",
+      "predecessor": "I2",
+      "run_keys": [
+        "B0_LOCO_mvtec_loco_juice_bottle_padim_s17_n100_B8766FFB4CD0",
+        "B0_LOCO_mvtec_loco_juice_bottle_patchcore_s17_n100_F914F6B6532D",
+        "B0_LOCO_mvtec_loco_screw_bag_padim_s17_n100_8D20C5E59478",
+        "B0_LOCO_mvtec_loco_screw_bag_patchcore_s17_n100_DC6E31A70CE5"
+      ],
+      "source_run_keys": [],
+      "score_rules": [],
+      "expected_rows": 0,
+      "expected_cumulative_fits": 66,
+      "planned_new_fits": 4,
+      "resources": {
+        "partition": "MGPU-TC2",
+        "qos": "normal",
+        "nodes": 1,
+        "tasks": 1,
+        "gpus": 1,
+        "cpus_per_task": 2,
+        "memory_gib": 24,
+        "time_limit": "02:00:00"
+      }
+    }
+  ],
+  "expected_total_fits": 66,
+  "expected_new_fits": 66,
+  "expected_main_fits": 62,
+  "expected_extension_fits": 4,
+  "expected_hardware": {
+    "gpu": "NVIDIA A40",
+    "driver": "570.148.08",
+    "cuda_build": "12.8"
+  },
+  "minimum_free_remote_bytes": 21474836480,
+  "minimum_free_local_bytes": 8589934592,
+  "maximum_export_bytes": 536870912,
+  "maximum_results_per_page": 4,
+  "checkpoints": [
+    {
+      "checkpoint_id": "core",
+      "after_stage": "I1_seed17",
+      "expected_fits": 22
+    },
+    {
+      "checkpoint_id": "standard",
+      "after_stage": "I2",
+      "expected_fits": 62
+    },
+    {
+      "checkpoint_id": "full",
+      "after_stage": "B0_LOCO",
+      "expected_fits": 66
+    }
+  ]
+}

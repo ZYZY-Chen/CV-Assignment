@@ -1,8 +1,0 @@
-Offline rendering failed: CheckAlgorithms
-At C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\step7_20261019\loco_collection_s
-upplement_20261019\validate_legacy_transport.ps1:49 char:32
-+ ... ASTEXITCODE -ne 0) { throw ('Offline rendering failed: ' + $action) }
-+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : OperationStopped: (Offline renderi...CheckAlgorithms:String) [], RuntimeException
-    + FullyQualifiedErrorId : Offline rendering failed: CheckAlgorithms
- 

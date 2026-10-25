@@ -33,7 +33,10 @@ LIMIT = 512 * 1024 * 1024
 MAX_PAGES = 32
 MAX_MEMBERS = 512
 MAX_INDEX = 8 * 1024 * 1024
-CONFIG = "configs/experiments_tc2_gpu.json"
+from tc2_gpu_provenance import current_source_hashes, current_source_sha
+
+ROOT = Path(__file__).resolve().parents[1]
+CONFIG = "configs/tc2_gpu/experiments.json"
 MANIFEST = "experiments_export_manifest.json"
 RECEIPT = "page_verification.json"
 ANALYSIS_FILES = ("analysis.json", "analysis.csv", "evidence.json", "analysis.sha256", "SUCCESS")
@@ -59,7 +62,7 @@ MANIFESTS = {"manifests/manifest_" + dataset + "_" + category + ".json"
 PAGE = re.compile(r"page_([0-9]{3})\.tar\.gz\Z")
 
 
-BASE_COLLECTOR_SHA256 = "AC61772F65C9F2C4124761D2361E0A85E9F65DBCF4DF5BAB3E939B5111466010"
+BASE_COLLECTOR_SHA256 = current_source_sha(ROOT, "scripts/collect_experiments_tc2_gpu.py")
 LOCO_STAGE = "B0_LOCO"
 LOCO_GROUPS = ("logical_anomalies", "structural_anomalies")
 LOCO_PIXEL_NOTE = "pixel is pooled auxiliary output; formal LOCO metrics are separate logical/structural groups"
@@ -68,13 +71,15 @@ PIXEL_METRIC_FIELDS = {"pixel_auroc", "pixel_ap", "n_pixels", "n_positive_pixels
 
 
 def _collection_provenance():
-    """Pin the preserved source and the separately published collection derivative."""
+    """Pin the current base and collection derivative to the sealed source manifest."""
     collector = _extended(Path(__file__).absolute())
     base = collector.with_name("collect_experiments_tc2_gpu.py")
     _no_links(collector); _no_links(base)
     if not base.is_file() or _sha(base) != BASE_COLLECTOR_SHA256:
         raise ValueError("Preserved experiment collector fingerprint differs")
     fingerprint = _sha(collector)
+    if fingerprint != current_source_sha(ROOT, "scripts/collect_experiments_loco_tc2_gpu.py"):
+        raise ValueError("Current LOCO collector fingerprint differs")
     allowed_names = {"collect_experiments_loco_tc2_gpu.py",
                      "collect_experiments_loco_tc2_gpu_" + fingerprint[:16].lower() + ".py"}
     if collector.name not in allowed_names or not collector.is_file():
@@ -286,10 +291,10 @@ def _design(value):
         raise ValueError("Experiment configuration has a different protocol or format")
     if value.get("maximum_export_bytes") != LIMIT or value.get("maximum_results_per_page") != 4:
         raise ValueError("Experiment export bounds differ from the approved design")
-    for field, count in (("scientific_source_hashes", 31), ("pilot_source_hashes", 6)):
+    for field, group in (("scientific_source_hashes", "workflow"), ("pilot_source_hashes", "pilot")):
         rows = value.get(field)
-        if not isinstance(rows, dict) or len(rows) != count:
-            raise ValueError("Accepted source fingerprint count differs")
+        if not isinstance(rows, dict) or rows != current_source_hashes(ROOT, group):
+            raise ValueError("Current source fingerprint set differs")
         for name, digest in rows.items():
             _relative(name); _hex(digest)
     if not MANIFESTS.issubset(value["scientific_source_hashes"]):

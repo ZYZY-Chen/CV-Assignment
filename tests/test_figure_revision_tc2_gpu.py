@@ -21,6 +21,8 @@ from unittest.mock import patch
 import zlib
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+from tc2_gpu_provenance import historical_config, historical_sha
 OUTPUT = None
 FULL = False
 FULL_RENDERED = False
@@ -110,15 +112,18 @@ def pdf_bytes(size=7, compressed=False, content=None):
 
 
 def source_snapshot():
+    """Verify archived acceptance identities independently of current source identities."""
     preserved = load("_figure_revision_test_original_collector", "scripts/collect_analysis_tc2_gpu.py")
-    design = json.loads(local(ROOT / "configs/experiments_tc2_gpu.json").read_text(encoding="utf-8"))
+    design = historical_config(ROOT, "experiments")
     protected = {**design["scientific_source_hashes"], **design["pilot_source_hashes"], **preserved.OLD_SOURCES}
     if len(protected) != 44:
-        raise AssertionError("The frozen scientific, pilot and experiment source set must contain 44 files")
+        raise AssertionError("The historical scientific, pilot and experiment source set must contain 44 files")
     expected = {**protected, **FROZEN}
-    actual = {name: sha(ROOT / name) for name in expected}
+    actual = {name: historical_sha(ROOT, name) for name in expected}
     if actual != expected:
-        raise AssertionError("At least one of the 51 preserved source files differs from its accepted fingerprint")
+        raise AssertionError("At least one of the 51 archived sources differs from its accepted fingerprint")
+    if sha(ROOT / "scripts/plot_results_tc2_gpu.py") != FROZEN["scripts/plot_results_tc2_gpu.py"]:
+        raise AssertionError("The current numerical plotting implementation changed")
     return actual
 
 
@@ -142,7 +147,7 @@ class SourceAndDataTests(unittest.TestCase):
                 revision.assert_source_rows([{"score": 1.0}], [{"score": number}])
 
     def test_configuration_is_valid_and_binds_the_accepted_input(self):
-        config = json.loads(local(ROOT / "configs/figure_revision_tc2_gpu.json").read_text(encoding="utf-8"))
+        config = json.loads(local(ROOT / "configs/tc2_gpu/figure_revision.json").read_text(encoding="utf-8"))
         revision.validate_config(config)
         text = json.dumps(config)
         self.assertIn("6077F6D3F5244ECB28EF67BECBE454E989C99246F285CD63C85DBEC8A6239B5C", text)
@@ -240,6 +245,10 @@ class GeometryTests(unittest.TestCase):
 
 
 class LifecycleTests(unittest.TestCase):
+    def setUp(self):
+        gate = patch.object(revision, "require_current_acceptance", return_value=None)
+        gate.start(); self.addCleanup(gate.stop)
+
     ENVIRONMENT = {"SLURM_JOB_ID": "79867", "SLURM_CPUS_PER_TASK": "2", "SLURM_MEM_PER_NODE": "8192",
                    "SLURM_JOB_PARTITION": "MGPU-TC2", "SLURM_JOB_QOS": "normal", "CUDA_VISIBLE_DEVICES": "-1", "SLURM_GPUS": "0"}
 
@@ -314,6 +323,10 @@ class LifecycleTests(unittest.TestCase):
 
 
 class CollectionTests(unittest.TestCase):
+    def setUp(self):
+        gate = patch.object(collector, "require_current_acceptance", return_value=None)
+        gate.start(); self.addCleanup(gate.stop)
+
     def snapshot(self):
         root = temporary(self)
         for name in sorted(collector.SOURCES):

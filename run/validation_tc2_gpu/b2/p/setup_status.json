@@ -1,0 +1,20 @@
+{
+  "mode": "offline",
+  "status": "passed",
+  "step_6_complete": false,
+  "checked_at_utc": "2026-10-25T08:54:53.033196+00:00",
+  "tests_run": 28,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "actual_model_calls": 0,
+  "actual_tc2_connections": 0,
+  "actual_slurm_submissions": 0,
+  "failure_details": [],
+  "source_hashes": {
+    "scripts/pilot_tc2_gpu.py": "CE9E655ECA6576A2A85E29FF876345EF9DF0C8E07EB674E6CF8A108811DE19CE",
+    "scripts/collect_tc2_gpu_pilot.py": "2C0EA8C738DAA2082CCBF8335C79492BEAFC310A7D2E0EFF8593F8676CB027D8",
+    "configs/tc2_gpu/pilot.json": "1F3547C109068F25DDB272906E037195CBCF7B9A7AB7FC0AC46523EA98A71F89",
+    "tests/test_pilot_tc2_gpu.py": "A7A58D065F97CEA98E9BFF4689D420BA3464DA2811CCC2917401B6055ACAC623"
+  }
+}

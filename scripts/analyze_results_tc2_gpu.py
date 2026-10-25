@@ -17,9 +17,16 @@ import stat
 import statistics
 import sys
 
-CONFIG = "configs/analysis_tc2_gpu.json"
-DESIGN = "configs/experiments_tc2_gpu.json"
-PROTOCOL = "3098B6A86DBA64EE439BFE61C7A4FCFFCD082371D5A80FFBC7940997ED6A1ED1"
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+from tc2_gpu_provenance import (read_current_config, historical_config, read_historical_json,
+    historical_sha, historical_config_sha, current_source_sha, require_current_acceptance)
+CONFIG = "configs/tc2_gpu/analysis.json"
+DESIGN = "configs/tc2_gpu/experiments.json"
+HISTORICAL_DESIGN = "configs/experiments_tc2_gpu.json"
+PROTOCOL = current_source_sha(ROOT, "configs/tc2_gpu/protocol.json")
+HISTORICAL_PROTOCOL = historical_config_sha(ROOT, "protocol")
+HISTORICAL_DESIGN_SHA = historical_sha(ROOT, HISTORICAL_DESIGN)
 LOCO_COLLECTOR = "09AC7432F8F6BCE36F95EAEFF15D44A19F7852781A19FE65E5E573239E445967"
 AUDIT = "run/validation_tc2_gpu/step7_20261019"
 RULES = ("native", "max", "top_0.001", "top_0.01", "top_0.05")
@@ -98,7 +105,7 @@ def mean_std(values):
 
 
 def source_hashes(root, config):
-    return {name: sha(inside(root, name)) for name in config["analysis_sources"]}
+    return {name: current_source_sha(root, name) for name in config["analysis_sources"]}
 
 
 def job_resources(verification):
@@ -119,86 +126,106 @@ def locate(verification, relative):
 
 
 def plan(root):
-    root = Path(root).absolute(); config = read(inside(root, CONFIG)); design = read(inside(root, DESIGN))
+    """Bind immutable historical inputs to the independently identified current analysis."""
+    root = Path(root).absolute()
+    config = read_current_config(root, "analysis")
+    current_design = read_current_config(root, "experiments")
+    design = historical_config(root, "experiments")
+    checked(current_design["fits"] == design["fits"], "Current and historical scientific fit configurations differ")
+    checked([row["stage_id"] for row in current_design["stages"]] == [row["stage_id"] for row in design["stages"]], "Scientific stage order differs")
+    checked(config["design_sha256"] == current_source_sha(root, DESIGN), "Current analysis design fingerprint differs")
     analysis_sources = source_hashes(root, config)
-    master = read(inside(root, AUDIT + "/setup_status.json"))
-    checked(master.get("step_7_complete") is True and master.get("verified_formal_fits") == 66 and master.get("verified_analysis_rows") == 108, "Complete step-7 acceptance is required")
-    checked(master["design_sha256"] == sha(inside(root, DESIGN)) == config["design_sha256"], "Frozen design fingerprint differs")
+    master = read_historical_json(root, AUDIT + "/setup_status.json")
+    checked(master.get("step_7_complete") is True and master.get("verified_formal_fits") == 66 and master.get("verified_analysis_rows") == 108, "Complete historical step-7 acceptance is required")
+    checked(master["design_sha256"] == historical_sha(root, HISTORICAL_DESIGN) == HISTORICAL_DESIGN_SHA, "Historical design fingerprint differs")
     protected = {**design["scientific_source_hashes"], **design["pilot_source_hashes"], **master["experiment_sources"]}
-    checked(len(protected) == 44 and all(sha(inside(root, name)) == value for name, value in protected.items()), "The 44 protected source files differ")
-    checked(sha(inside(root, "scripts/collect_experiments_loco_tc2_gpu.py")) == LOCO_COLLECTOR, "Accepted LOCO collection source differs")
+    checked(len(protected) == 44 and all(historical_sha(root, name) == value for name, value in protected.items()), "The 44 historical source files differ")
+    checked(historical_sha(root, "scripts/collect_experiments_loco_tc2_gpu.py") == LOCO_COLLECTOR, "Historical LOCO collection source differs")
     stages, results, analyses, caches = [], [], [], {}
     accepted = master["accepted_step_7_stages"]
-    checked([entry["stage_id"] for entry in accepted] == [entry["stage_id"] for entry in design["stages"]], "All twelve ordered accepted stages are required")
+    checked([entry["stage_id"] for entry in accepted] == [entry["stage_id"] for entry in design["stages"]], "All twelve ordered historical stages are required")
     fits = {entry["run_key"]: entry["configuration"] for entry in design["fits"]}
     for entry in accepted:
-        verification_path = inside(root, entry["record"])
-        checked(sha(verification_path) == entry["record_sha256"], "Accepted stage record changed")
-        verification = read(verification_path)
-        directory = verification_path.parent
-        raw_path = directory / "remote_setup_status.json"
-        raw = read(raw_path)
-        checked(sha(raw_path) == entry["remote_status_sha256"] and raw["status"] == "passed" and raw["stage_complete"] is True, "Accepted remote stage status differs")
-        hashes = read(directory / "archive_file_hashes.json")
-        stages.append({"stage_id": entry["stage_id"], "job_id": entry["job_id"], "status_path": "run/validation_tc2_gpu/step7_job_" + entry["job_id"] + "/setup_status.json", "status_sha256": entry["remote_status_sha256"], "acceptance_record": entry["record"], "acceptance_sha256": entry["record_sha256"], "index_sha256": entry["index_sha256"], "accepted_job_resources": job_resources(verification)})
+        verification_name = entry["record"]
+        checked(historical_sha(root, verification_name) == entry["record_sha256"], "Historical stage record changed")
+        verification = read_historical_json(root, verification_name)
+        directory = PurePosixPath(verification_name).parent
+        raw_name = (directory / "remote_setup_status.json").as_posix()
+        raw = read_historical_json(root, raw_name)
+        checked(historical_sha(root, raw_name) == entry["remote_status_sha256"] and raw["status"] == "passed" and raw["stage_complete"] is True, "Historical remote stage status differs")
+        hashes = read_historical_json(root, (directory / "archive_file_hashes.json").as_posix())
+        stages.append({"stage_id": entry["stage_id"], "job_id": entry["job_id"],
+                       "status_path": "run/validation_tc2_gpu/step7_job_" + entry["job_id"] + "/setup_status.json",
+                       "historical_status_record": raw_name, "status_sha256": entry["remote_status_sha256"],
+                       "acceptance_record": verification_name, "acceptance_sha256": entry["record_sha256"],
+                       "index_sha256": entry["index_sha256"], "accepted_job_resources": job_resources(verification)})
         for record in raw["results"]:
-            relative = record["path"]; files = {}
+            relative = record["path"]; files = {}; locations = {}
             for name in RESULT_FILES:
-                path = relative + "/" + name
-                checked(path in hashes and sha(locate(verification, path)) == hashes[path], "Accepted result artifact changed")
-                files[name] = hashes[path]
-            cfg = read(locate(verification, relative + "/config.yaml"))
-            evidence = read(locate(verification, relative + "/evidence.json"))
-            checked(cfg == fits[record["run_key"]] and evidence["identity"]["configuration"] == cfg and digest(evidence["identity"]) == record["identity_sha256"], "Result identity differs from the frozen fit")
-            results.append({"run_key": record["run_key"], "path": relative, "identity_sha256": record["identity_sha256"], "configuration": cfg, "files": files})
+                logical = relative + "/" + name
+                physical = locate(verification, logical)
+                checked(logical in hashes and sha(physical) == hashes[logical], "Historical result artifact changed")
+                files[name] = hashes[logical]; locations[name] = str(physical)
+            cfg = read(locations["config.yaml"]); evidence = read(locations["evidence.json"])
+            checked(cfg == fits[record["run_key"]] and evidence["identity"]["configuration"] == cfg and digest(evidence["identity"]) == record["identity_sha256"], "Result identity differs from the historical fit")
+            results.append({"run_key": record["run_key"], "path": relative, "identity_sha256": record["identity_sha256"],
+                            "configuration": cfg, "files": files, "artifact_locations": locations,
+                            "acceptance_record": verification_name})
         for record in raw.get("analyses", []):
-            relative = record["path"]; files = {name: hashes[relative + "/" + name] for name in ANALYSIS_FILES}
-            checked(all(sha(locate(verification, relative + "/" + name)) == value for name, value in files.items()), "Accepted score analysis changed")
-            analyses.append({"stage_id": entry["stage_id"], "path": relative, "identity_sha256": record["identity_sha256"], "rows": record["rows"], "files": files})
+            relative = record["path"]
+            files = {name: hashes[relative + "/" + name] for name in ANALYSIS_FILES}
+            locations = {name: str(locate(verification, relative + "/" + name)) for name in ANALYSIS_FILES}
+            checked(all(sha(locations[name]) == value for name, value in files.items()), "Historical saved-score analysis changed")
+            analyses.append({"stage_id": entry["stage_id"], "path": relative, "identity_sha256": record["identity_sha256"],
+                             "rows": record["rows"], "files": files, "artifact_locations": locations})
         for record in raw["caches"]:
             relative = record["path"]
             files = {name: hashes[relative + "/" + name] for name in ("metadata.json", "COMPLETE")}
-            checked(all(sha(locate(verification, relative + "/" + name)) == value for name, value in files.items()), "Accepted cache metadata changed")
-            value = {"dataset": record["identity"]["dataset"], "category": record["identity"]["category"], "path": relative, "files": files, "layer_hashes": record["layer_hashes"]}
-            checked(relative not in caches or caches[relative] == value, "A cache has conflicting accepted fingerprints")
-            caches[relative] = value
-    checked(len(results) == 66 and len({row["identity_sha256"] for row in results}) == 66 and {row["run_key"] for row in results} == set(fits), "Expected exactly 66 unique accepted fits")
-    checked(len(caches) == 8 and len(analyses) == 3 and sum(row["rows"] for row in analyses) == 108, "Expected eight caches and three score analyses")
-    return {"schema_version": "1.0", "workflow_id": "tc2_gpu", "protocol_sha256": PROTOCOL, "config_sha256": sha(inside(root, CONFIG)), "design_sha256": sha(inside(root, DESIGN)), "step7_acceptance_sha256": sha(inside(root, AUDIT + "/setup_status.json")), "expected_total_fits": 66, "expected_analysis_rows": 108, "source_rows": 108, "unique_pc_analysis_rows": 90, "protected_sources": protected, "analysis_sources": analysis_sources, "loco_collector_sha256": LOCO_COLLECTOR, "stages": stages, "results": results, "caches": list(caches.values()), "analyses": analyses}
+            locations = {name: str(locate(verification, relative + "/" + name)) for name in files}
+            checked(all(sha(locations[name]) == value for name, value in files.items()), "Historical cache metadata changed")
+            value = {"dataset": record["identity"]["dataset"], "category": record["identity"]["category"],
+                     "path": relative, "files": files, "layer_hashes": record["layer_hashes"],
+                     "artifact_locations": locations}
+            if relative in caches:
+                checked({k: v for k, v in caches[relative].items() if k != "artifact_locations"} == {k: v for k, v in value.items() if k != "artifact_locations"}, "Historical cache fingerprints conflict")
+            else:
+                caches[relative] = value
+    checked(len(results) == 66 and len({row["identity_sha256"] for row in results}) == 66 and {row["run_key"] for row in results} == set(fits), "Expected exactly 66 unique historical fits")
+    checked(len(caches) == 8 and len(analyses) == 3 and sum(row["rows"] for row in analyses) == 108, "Expected eight historical caches and three score analyses")
+    return {"schema_version": "1.0", "workflow_id": "tc2_gpu", "source_profile": "historical_tc2_gpu",
+            "protocol_sha256": PROTOCOL, "historical_protocol_sha256": HISTORICAL_PROTOCOL,
+            "config_sha256": current_source_sha(root, CONFIG), "design_sha256": HISTORICAL_DESIGN_SHA,
+            "current_design_sha256": current_source_sha(root, DESIGN),
+            "step7_acceptance_sha256": historical_sha(root, AUDIT + "/setup_status.json"),
+            "expected_total_fits": 66, "expected_analysis_rows": 108, "source_rows": 108,
+            "unique_pc_analysis_rows": 90, "protected_sources": protected, "analysis_sources": analysis_sources,
+            "loco_collector_sha256": LOCO_COLLECTOR, "stages": stages, "results": results,
+            "caches": list(caches.values()), "analyses": analyses}
 
 
 def validate_registry(root, registry):
     checked(registry.get("protocol_sha256") == PROTOCOL and registry.get("expected_total_fits") == 66 and len(registry.get("results", [])) == 66 and registry.get("expected_analysis_rows") == 108, "Invalid analysis input registry")
-    design = read(inside(root, DESIGN)); config = read(inside(root, CONFIG))
-    checked(sha(inside(root, DESIGN)) == registry["design_sha256"] == config["design_sha256"] and sha(inside(root, CONFIG)) == registry["config_sha256"] and source_hashes(root, config) == registry["analysis_sources"], "Analysis or design sources changed")
-    protected = registry["protected_sources"]
-    original = read(inside(root, registry["stages"][0]["status_path"]))["experiment_sources"]
-    checked(protected == {**design["scientific_source_hashes"], **design["pilot_source_hashes"], **original} and len(protected) == 44 and all(sha(inside(root, name)) == value for name, value in protected.items()), "Protected experiment sources changed")
-    checked(sha(inside(root, "scripts/collect_experiments_loco_tc2_gpu.py")) == registry["loco_collector_sha256"] == LOCO_COLLECTOR, "LOCO provenance differs")
-    checked([row["stage_id"] for row in registry["stages"]] == [row["stage_id"] for row in design["stages"]], "Stage dependency order differs")
-    for entry in registry["stages"]:
-        checked(sha(inside(root, entry["status_path"])) == entry["status_sha256"], "Accepted remote status changed")
-        status = read(inside(root, entry["status_path"]))
-        checked(status["status"] == "passed" and status["stage_complete"] and status["job_id"] == entry["job_id"], "A required experiment is incomplete")
-        pointer = inside(root, "run/validation_tc2_gpu/last_experiments_" + entry["stage_id"] + "_job.txt")
-        checked(pointer.read_text().strip() == entry["job_id"], "Accepted stage is no longer the latest submitted stage")
-    fits = {row["run_key"]: row["configuration"] for row in design["fits"]}
-    checked({row["run_key"] for row in registry["results"]} == set(fits) and len({row["identity_sha256"] for row in registry["results"]}) == 66, "Fit registry has omissions or duplicates")
+    checked(registry.get("source_profile") == "historical_tc2_gpu" and registry.get("historical_protocol_sha256") == HISTORICAL_PROTOCOL and registry.get("design_sha256") == HISTORICAL_DESIGN_SHA, "Historical and current input identities must remain distinct")
+    config = read_current_config(root, "analysis")
+    checked(registry.get("current_design_sha256") == current_source_sha(root, DESIGN) == config["design_sha256"], "Current design sources changed")
+    checked(registry.get("config_sha256") == current_source_sha(root, CONFIG) and registry.get("analysis_sources") == source_hashes(root, config), "Current analysis sources changed")
+    # Rebuild the read-only registry from immutable acceptance records. This also
+    # binds every external artifact location to its recorded acceptance evidence.
+    checked(registry == plan(root), "Analysis registry differs from the verified historical inputs")
     records = []
     for record in registry["results"]:
-        checked(record["configuration"] == fits[record["run_key"]] and set(record["files"]) == set(RESULT_FILES), "Fit configuration or file schema differs")
-        directory = inside(root, record["path"])
-        checked({path.name for path in directory.iterdir()} == set(RESULT_FILES), "Formal result contains extra or missing files")
-        checked(all(sha(directory / name) == value for name, value in record["files"].items()), "A formal result artifact changed")
-        cfg = read(directory / "config.yaml"); evidence = read(directory / "evidence.json")
-        checked(cfg == record["configuration"] and digest(evidence["identity"]) == record["identity_sha256"], "Formal result identity differs")
-        checked(read(directory / "validation.json")["status"] == "passed", "Saved result metric verification is missing")
-        records.append({**record, "directory": directory, "metrics": read(directory / "metrics.json"), "evidence": evidence, "samples": read(directory / "samples.json")})
+        directory = local(Path(record["artifact_locations"]["config.yaml"]).parent)
+        checked({path.name for path in directory.iterdir()} == set(RESULT_FILES), "Historical result contains extra or missing files")
+        checked(all(sha(input_artifact(root, record, name)) == value for name, value in record["files"].items()), "A historical result artifact changed")
+        cfg = read(input_artifact(root, record, "config.yaml")); evidence = read(input_artifact(root, record, "evidence.json"))
+        checked(cfg == record["configuration"] and digest(evidence["identity"]) == record["identity_sha256"], "Historical result identity differs")
+        checked(read(input_artifact(root, record, "validation.json"))["status"] == "passed", "Historical saved metric verification is missing")
+        records.append({**record, "directory": directory, "metrics": read(input_artifact(root, record, "metrics.json")),
+                        "evidence": evidence, "samples": read(input_artifact(root, record, "samples.json"))})
     pc_rows = {}; checkpoint = []
     for analysis in registry["analyses"]:
-        directory = inside(root, analysis["path"])
-        checked(all(sha(directory / name) == value for name, value in analysis["files"].items()), "A saved-score analysis changed")
-        value = read(directory / "analysis.json")
+        checked(all(sha(input_artifact(root, analysis, name)) == value for name, value in analysis["files"].items()), "A historical saved-score analysis changed")
+        value = read(input_artifact(root, analysis, "analysis.json"))
         checked(value["identity_sha256"] == analysis["identity_sha256"] and value["row_count"] == analysis["rows"], "Saved-score analysis identity differs")
         if analysis["stage_id"] == "I1_seed17":
             checkpoint = value["rows"]
@@ -214,9 +241,17 @@ def validate_registry(root, registry):
         for metric in ("image_auroc", "image_ap", "normal_fpr", "anomaly_recall", "threshold_95pct"):
             checked(abs(row[metric] - by_id[identifier]["metrics"]["image"][rule][metric]) <= 1e-12, "Analysis and source image metrics disagree")
     for cache in registry["caches"]:
-        checked(all(sha(inside(root, cache["path"] + "/" + name)) == value for name, value in cache["files"].items()), "Cache metadata changed")
+        checked(all(sha(input_artifact(root, cache, name)) == value for name, value in cache["files"].items()), "Historical cache metadata changed")
     checked(len(registry["caches"]) == 8 and len(registry["analyses"]) == 3, "Expected eight caches and three analyses")
     return records
+
+
+def input_artifact(root, record, name):
+    """Locate a hash-bound external input, or a local synthetic test input."""
+    if "artifact_locations" in record:
+        path = Path(record["artifact_locations"][name])
+        return inside(path.parent, path.name)
+    return inside(root, record["path"] + "/" + name)
 
 
 def runtime_gate(root, config, job):
@@ -368,7 +403,7 @@ def masks_and_inputs(root, registry):
     for cache in registry["caches"]:
         manifest_name = "manifests/manifest_" + cache["dataset"] + "_" + cache["category"] + ".json"
         manifest = read(inside(root, manifest_name))
-        metadata_value = read(inside(root, cache["path"] + "/metadata.json"))
+        metadata_value = read(input_artifact(root, cache, "metadata.json"))
         sizes = {row["path"]: row["orig_hw"] for row in metadata_value["index"]}
         image_entries = manifest["dev"] + manifest["fit_pool"] + manifest["test"]["good"] + manifest["test"]["anomalies"]
         for image in image_entries:
@@ -563,7 +598,8 @@ def verify_output(directory, *, complete=True):
 
 
 def run(root, inputs, job):
-    root = Path(root).absolute(); inputs = local(inputs); registry = read(inputs); config = read(inside(root, CONFIG))
+    require_current_acceptance(root, "analysis")
+    root = Path(root).absolute(); inputs = local(inputs); registry = read(inputs); config = read_current_config(root, "analysis")
     job_directory = inside(root, "run/validation_tc2_gpu/step8_job_" + job); job_directory.mkdir(parents=True, exist_ok=True)
     status_path = job_directory / "setup_status.json"
     publication = None
@@ -590,7 +626,7 @@ def run(root, inputs, job):
         tables = aggregate_tables(records)
         tables["shared_extraction"] = []
         for cache in registry["caches"]:
-            value = read(inside(root, cache["path"] + "/metadata.json"))
+            value = read(input_artifact(root, cache, "metadata.json"))
             tables["shared_extraction"].append({"dataset": cache["dataset"], "category": cache["category"], "cache_path": cache["path"], "metadata_sha256": cache["files"]["metadata.json"], "images": len(value["index"]), "cache_array_bytes": sum(math.prod(layer["shape"]) * 4 for layer in value["layers"].values()), "write_pipeline_seconds": value["write_pipeline_seconds"], **value["extraction"], "scope": "one shared extraction per category; never multiplied by fits"})
         areas, masks = masks_and_inputs(root, registry)
         tables["mask_areas"] = list(areas.values())

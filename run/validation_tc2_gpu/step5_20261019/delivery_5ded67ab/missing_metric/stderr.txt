@@ -1,1 +1,0 @@
-cat: run/validation_tc2_gpu/last_check_metrics_job.txt: No such file or directory

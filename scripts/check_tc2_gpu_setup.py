@@ -21,7 +21,11 @@ from urllib.parse import urlsplit
 import zipfile
 
 PROJECT = Path(__file__).resolve().parents[1]
-EXPECTED_PROTOCOL_SHA256 = "3098B6A86DBA64EE439BFE61C7A4FCFFCD082371D5A80FFBC7940997ED6A1ED1"
+sys.path.insert(0, str(PROJECT / "src"))
+import tc2_gpu_protocol as current_protocol
+import tc2_gpu_provenance as provenance
+
+EXPECTED_PROTOCOL_SHA256 = current_protocol.PROTOCOL_SHA256
 REQUIRED_PACKAGES = ("torch", "torchvision", "numpy", "scipy", "scikit-learn",
                      "pillow", "pandas", "matplotlib", "PyYAML", "tqdm")
 
@@ -30,8 +34,8 @@ def setup_record(relative):
     path = Path(relative)
     if path.anchor or str(relative) in ("", ".") or ".." in path.parts or "\\" in str(relative) or ":" in str(relative):
         raise ValueError("Invalid setup-record path")
-    primary = PROJECT / "run/setup_tc2_gpu" / path
-    return primary if primary.exists() else PROJECT / "run/setup_v2" / path
+    # Historical records are read explicitly through the archive provenance API.
+    return PROJECT / "run/setup_tc2_gpu" / path
 
 
 def now_utc():
@@ -57,12 +61,13 @@ def write_json(path, value):
 
 
 def read_contract(config_path):
-    setup = json.loads(Path(config_path).read_text(encoding="utf-8"))
-    protocol_path = PROJECT / "configs" / "protocol_v2.json"
-    actual = sha256(protocol_path)
-    if actual != EXPECTED_PROTOCOL_SHA256 or actual != setup["protocol_sha256"]:
-        raise ValueError("Frozen protocol fingerprint mismatch; review before execution")
-    protocol = json.loads(protocol_path.read_text(encoding="utf-8"))
+    canonical = PROJECT / "configs/tc2_gpu/setup.json"
+    if Path(config_path).resolve() != canonical.resolve():
+        raise ValueError("Use the current canonical TC2 GPU setup configuration")
+    setup = provenance.read_current_config(PROJECT, "setup")
+    protocol, _, _ = current_protocol.contract(PROJECT)
+    if sha256(PROJECT / "configs/tc2_gpu/protocol.json") != EXPECTED_PROTOCOL_SHA256:
+        raise ValueError("Current protocol fingerprint mismatch")
     manifests = []
     for entry in protocol["data"]["frozen_manifests"]:
         path = (PROJECT / entry["path"]).resolve()
@@ -186,14 +191,18 @@ def require_compute_job():
 
 
 def require_verified_remote(setup):
+    # Historical jobs cannot authorize this source profile or a reclaimed deployment.
+    provenance.require_current_acceptance(PROJECT, "setup")
     required = ("home", "setup_root", "conda_environment_prefix", "partition", "qos")
     missing = [key for key in required if not setup["remote"].get(key)]
     if missing:
         raise ValueError("Complete remote discovery before the GPU job: " + ", ".join(missing))
     home = Path(setup["remote"]["home"]).resolve()
     staging = Path(setup["remote"]["setup_root"]).resolve()
-    if staging != (home / "ca6129_v2_setup").resolve() or not staging.is_relative_to(home):
-        raise ValueError("Remote setup root must be ca6129_v2_setup inside the verified personal home")
+    if staging == home or not staging.is_relative_to(home):
+        raise ValueError("Configured TC2 GPU setup root must remain strictly inside the verified personal home")
+    if not Path(setup["remote"]["conda_environment_prefix"]).resolve().is_relative_to(staging / "envs"):
+        raise ValueError("Configured environment must remain inside the project envs directory")
     if PROJECT.resolve() != staging:
         raise ValueError("Run GPU audits from the verified staging copy, not an existing project directory")
     if Path(setup["remote"]["conda_environment_prefix"]).resolve() != Path(sys.prefix).resolve():
@@ -292,8 +301,12 @@ def probe_environment(weights, protocol, include_backbone):
     return result
 
 
-def export_environment():
-    """Export actual versions only after the GPU environment check passes."""
+def export_environment(output_dir):
+    """Export actual versions only into this new check record, never over templates."""
+    destination = Path(output_dir).resolve()
+    allowed = (PROJECT / "run/setup_tc2_gpu").resolve()
+    if destination == allowed or not destination.is_relative_to(allowed):
+        raise ValueError("Actual environment exports must stay inside a setup check record")
     conda = os.environ.get("CONDA_EXE") or shutil.which("conda")
     if not conda:
         return {"ready": False, "error": "Conda executable unavailable; no environment export fabricated"}
@@ -319,9 +332,9 @@ def export_environment():
     yml = yaml.safe_dump(environment, sort_keys=False, allow_unicode=True)
     packages = sorted({f"{dist.metadata['Name']}=={dist.version}"
                        for dist in metadata.distributions() if dist.metadata.get("Name")}, key=str.lower)
-    lock = "# Actual TC2 Python distribution versions; pair with environment-tc2.yml and GPU metadata.\n" + "\n".join(packages) + "\n"
-    files = {PROJECT / "environment-tc2.yml": yml,
-             PROJECT / "requirements-tc2-lock.txt": lock}
+    lock = "# Actual TC2 Python distribution versions; pair with environment-tc2_gpu-actual.yml and GPU metadata.\n" + "\n".join(packages) + "\n"
+    files = {destination / "environment-tc2_gpu-actual.yml": yml,
+             destination / "requirements-tc2_gpu-actual.txt": lock}
     conflicts = [str(path) for path, content in files.items()
                  if path.exists() and path.read_text(encoding="utf-8") != content]
     if conflicts:
@@ -336,13 +349,11 @@ def export_environment():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--mode", choices=("environment", "inputs", "all"), default="all")
-    parser.add_argument("--config", default="configs/tc2_setup.json")
+    parser.add_argument("--config", default="configs/tc2_gpu/setup.json")
     parser.add_argument("--datasets-root")
     parser.add_argument("--weights-path")
     parser.add_argument("--output-dir", required=True)
     args = parser.parse_args()
-    if args.mode != "inputs":
-        require_compute_job()
     output = resolve_project_path(args.output_dir)
     output_root = (PROJECT / "run" / "setup_tc2_gpu").resolve()
     if output == output_root or not output.is_relative_to(output_root):
@@ -352,6 +363,7 @@ def main():
     setup, protocol, manifests = read_contract(resolve_project_path(args.config))
     if args.mode != "inputs":
         require_verified_remote(setup)
+        require_compute_job()
     data_root = args.datasets_root or setup["remote"]["datasets_root"]
     weight_path = args.weights_path or setup["remote"]["weights_path"]
     if args.mode in ("inputs", "all") and not data_root:
@@ -376,7 +388,7 @@ def main():
             "packages": environment["packages"]}, indent=2) + "\n", encoding="utf-8")
         status["environment_ready"] = environment["ready"]
         if environment["ready"]:
-            status["environment_export"] = export_environment()
+            status["environment_export"] = export_environment(output)
         status["backbone_ready"] = environment["gpu"]["backbone"]["status"] == "pass"
     status["weights_ready"] = weights["ready"]
     status["step_2_complete"] = (args.mode == "all" and status.get("inputs_ready", False)

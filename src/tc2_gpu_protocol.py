@@ -15,19 +15,22 @@ import subprocess
 import sys
 import uuid
 
+from tc2_gpu_provenance import (read_current_config, current_source_sha, historical_config,
+    require_current_acceptance)
+
 ROOT = Path(__file__).resolve().parents[1]
-PROTOCOL_SHA256 = "3098B6A86DBA64EE439BFE61C7A4FCFFCD082371D5A80FFBC7940997ED6A1ED1"
+PROTOCOL_SHA256 = current_source_sha(ROOT, "configs/tc2_gpu/protocol.json")
 SHAPES = {"layer1": (64, 64, 64), "layer2": (128, 32, 32), "layer3": (256, 16, 16)}
 RULES = ("native", "max", "top_0.001", "top_0.01", "top_0.05")
 EXECUTION = {"schema_version": "1.0", "workflow_id": "tc2_gpu", "extraction_batch_size": 1,
              "prediction_batch_size": 1, "workers": 0, "cpu_threads": 2, "warmup_iterations": 20,
              "padim_position_chunk_size": 256, "patchcore_query_chunk_size": 1024,
              "patchcore_bank_chunk_size": 4096, "patchcore_sampling_chunk_size": 16384}
-SOURCE_FILES = ("src/tc2_gpu_protocol.py", "src/tc2_gpu_cache.py", "src/tc2_gpu_runner.py",
-                "scripts/run_tc2_gpu.py", "configs/runtime_tc2_gpu.json", "src/data.py",
+SOURCE_FILES = ("src/tc2_gpu_provenance.py", "src/tc2_gpu_protocol.py", "src/tc2_gpu_cache.py", "src/tc2_gpu_runner.py",
+                "scripts/run_tc2_gpu.py", "configs/tc2_gpu/runtime.json", "src/data.py",
                 "src/padim_adapter.py", "src/patchcore_adapter.py", "src/sampling.py",
                 "src/scoring.py", "src/anomaly_postprocess.py", "src/metric_core.py", "src/evaluate.py")
-CACHE_SOURCES = ("src/tc2_gpu_protocol.py", "src/tc2_gpu_cache.py", "src/data.py", "configs/runtime_tc2_gpu.json")
+CACHE_SOURCES = ("src/tc2_gpu_provenance.py", "src/tc2_gpu_protocol.py", "src/tc2_gpu_cache.py", "src/data.py", "configs/tc2_gpu/runtime.json")
 
 
 def sha(path):
@@ -112,11 +115,11 @@ def versions():
 
 def contract(root=ROOT):
     root = Path(root).resolve()
-    if sha(root / "configs/protocol_v2.json") != PROTOCOL_SHA256:
+    if sha(root / "configs/tc2_gpu/protocol.json") != PROTOCOL_SHA256:
         raise ValueError("Frozen protocol changed")
-    protocol = read_json(root / "configs/protocol_v2.json")
-    naming = read_json(root / "configs/tc2_gpu.json")
-    execution = read_json(root / "configs/runtime_tc2_gpu.json")
+    protocol = read_json(root / "configs/tc2_gpu/protocol.json")
+    naming = read_json(root / "configs/tc2_gpu/workflow.json")
+    execution = read_json(root / "configs/tc2_gpu/runtime.json")
     if execution != EXECUTION or naming["workflow_id"] != "tc2_gpu" or naming["frozen_protocol"]["sha256"] != PROTOCOL_SHA256:
         raise ValueError("Workflow configuration differs from the approved design")
     for entry in protocol["data"]["frozen_manifests"]:
@@ -239,37 +242,38 @@ def select_spec(root, run_key):
 
 
 def accepted_inputs(root, *, allow_local_summary=False):
-    """Prefer actual job evidence; only isolated local fixtures may use its local summary."""
-    root = Path(root)
+    """Current input receipts only; isolated validation may reference frozen weight identity."""
+    root = Path(root).resolve()
+    validation = (ROOT / "run/validation_tc2_gpu").resolve()
+    isolated = root != ROOT and root.is_relative_to(validation)
+    if allow_local_summary and root == ROOT:
+        # This is metadata for synthetic fixtures, never a current acceptance receipt.
+        historical = historical_config(ROOT, "setup")["final_acceptance"]
+        return {"job": None, "weights_sha256": historical["weights_sha256"],
+                "export_hashes": {}, "source": "historical_weight_identity_for_synthetic_validation"}
+    if not isolated:
+        require_current_acceptance(root, "setup")
     pointer = root / "run/setup_tc2_gpu/last_check_all_job.txt"
-    if not pointer.exists():
-        pointer = root / "run/setup_v2/last_check_all_job.txt"
-    if pointer.exists():
-        job = pointer.read_text().strip()
-        if not job.isdigit():
-            raise RuntimeError("Invalid environment acceptance pointer")
-        path = root / f"run/setup_tc2_gpu/job_{job}_all/setup_status.json"
-        if not path.exists():
-            path = root / f"run/setup_v2/job_{job}_all/setup_status.json"
-        ready = read_json(path)
-        if ready.get("step_2_complete") is not True or ready.get("weights_ready") is not True:
-            raise RuntimeError("Combined environment/input acceptance has not passed")
-        weight_path = path.parent / "weights_info.json"
-        return {"job": job, "weights_sha256": read_json(weight_path)["sha256"],
-                "export_hashes": {Path(item["path"]).name: item["sha256"] for item in ready["environment_export"]["files"]},
-                "record_sha256": sha(path), "weights_record_sha256": sha(weight_path)}
-    if allow_local_summary:
-        summary = read_json(root / "configs/tc2_setup.json")["final_acceptance"]
-        if summary.get("step_2_complete") is True:
-            return {"job": summary["slurm_job_id"], "weights_sha256": summary["weights_sha256"],
-                    "export_hashes": summary["export_hashes"], "source": "local_validation_summary"}
-    raise RuntimeError("Actual combined environment/input acceptance is required")
+    if not pointer.is_file():
+        raise RuntimeError("Actual current combined environment/input acceptance is required")
+    job = pointer.read_text().strip()
+    if not job.isdigit():
+        raise RuntimeError("Invalid current environment acceptance pointer")
+    path = root / f"run/setup_tc2_gpu/job_{job}_all/setup_status.json"
+    ready = read_json(path)
+    if ready.get("step_2_complete") is not True or ready.get("weights_ready") is not True:
+        raise RuntimeError("Current combined environment/input acceptance has not passed")
+    weight_path = path.parent / "weights_info.json"
+    return {"job": job, "weights_sha256": read_json(weight_path)["sha256"],
+            "export_hashes": {Path(item["path"]).name: item["sha256"] for item in ready["environment_export"]["files"]},
+            "record_sha256": sha(path), "weights_record_sha256": sha(weight_path)}
 
 
 def prerequisites(root=ROOT):
     root = Path(root).resolve()
     contract(root)
-    setup = read_json(root / "configs/tc2_setup.json")
+    require_current_acceptance(root, "workflow")
+    setup = read_json(root / "configs/tc2_gpu/setup.json")
     if platform.system() != "Linux" or not os.environ.get("SLURM_JOB_ID", "").isdigit():
         raise RuntimeError("GPU work requires a Linux SLURM compute job")
     if root != Path(setup["remote"]["setup_root"]) or Path(sys.prefix) != Path(setup["remote"]["conda_environment_prefix"]):
@@ -322,5 +326,5 @@ def prepare_torch(ctx, device="cuda", seed=17):
         driver = drivers.pop()
     return {"device": device, "gpu": torch.cuda.get_device_name(0) if device == "cuda" else None,
             "driver": driver, "cuda_build": torch.version.cuda, "software": versions(), "acceptance_jobs": records,
-            "compatibility_configuration_sha256": sha(ctx.root / "configs/tc2_setup.json"),
+            "compatibility_configuration_sha256": sha(ctx.root / "configs/tc2_gpu/setup.json"),
             "slurm_job_id": os.environ.get("SLURM_JOB_ID"), "tf32": False, "autocast": False}

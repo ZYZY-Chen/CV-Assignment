@@ -1,6 +1,0 @@
-TC2 step 2: PrepareEnvironment
-Local output: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_v2\step3_20261019_081534\transport_validation_ff50724d\tc2_setup_v2_20261019_082933_8158bdac
-A submitted or running job is not a passed check. Passwords are not stored.
-SIMULATED SSH ONLY: rendered commands saved; no remote action.
-Action finished. Read the relevant status JSON: step 2 requires all-mode step_2_complete=true; metrics require full-mode step_3_complete=true.
-Send this local output path back: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_v2\step3_20261019_081534\transport_validation_ff50724d\tc2_setup_v2_20261019_082933_8158bdac\terminal.txt

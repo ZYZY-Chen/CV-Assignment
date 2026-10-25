@@ -1,9 +1,0 @@
-test_01_actual_backbone_and_preprocessing (__main__.GPUTests) ... ok
-test_02_both_methods_saved_metrics_and_skip (__main__.GPUTests) ... ok
-test_03_failure_then_recovery_and_corruption (__main__.GPUTests) ... ok
-test_04_other_run_seeds_and_incomplete_result (__main__.GPUTests) ... ok
-
-----------------------------------------------------------------------
-Ran 4 tests in 11.352s
-
-OK

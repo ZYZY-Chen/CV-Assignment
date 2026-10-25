@@ -70,7 +70,7 @@ class PilotTests(unittest.TestCase):
         self.root = OUTPUT / ("case_" + uuid.uuid4().hex[:10])
         self.root.mkdir()
         self.design = {"run_keys": ["B0_bottle_padim_seed17_N100", "B0_bottle_patchcore_seed17_N100"],
-                       "workflow_acceptance_job_id": "44012"}
+                       "workflow_acceptance_job_id": "66012"}
         self.calls = []
         self.records = []
         self.fit_counts = {}
@@ -106,8 +106,11 @@ class PilotTests(unittest.TestCase):
         return pilot.perform_steps(self.design, invoke, self.record)
 
     def gate_fixture(self):
+        # This explicit unit mock never creates current environment acceptance.
+        guard = patch.object(pilot, "require_current_acceptance", return_value={"scope": "unit_fixture_only"})
+        guard.start(); self.addCleanup(guard.stop)
         hashes = {}
-        for number in range(31):
+        for number in range(32):
             name = "src/frozen_" + str(number) + ".py"
             path = self.root / name
             path.parent.mkdir(parents=True, exist_ok=True)
@@ -116,13 +119,13 @@ class PilotTests(unittest.TestCase):
         self.design["workflow_source_hashes"] = hashes
         pointer = self.root / "run/validation_tc2_gpu/last_check_workflow_job.txt"
         pointer.parent.mkdir(parents=True)
-        pointer.write_text("44012\n", encoding="utf-8")
+        pointer.write_text("66012\n", encoding="utf-8")
         status = {"mode": "full", "status": "passed", "step_5_complete": True,
                   "source_hashes": hashes, "core": passed(16), "gpu": passed(4),
                   "metric_regression": {**passed(24), "mode": "full", "status": "passed", "step_3_complete": True},
                   "algorithm_regression": {"mode": "full", "status": "passed", "step_4_complete": True,
                                            "cpu": passed(19), "gpu": passed(2)}}
-        destination = self.root / "run/validation_tc2_gpu/step5_job_44012/setup_status.json"
+        destination = self.root / "run/validation_tc2_gpu/step5_job_66012/setup_status.json"
         write_json(destination, status)
         return destination, status, pointer
 
@@ -212,7 +215,7 @@ class PilotTests(unittest.TestCase):
 
     def test_gate_rejects_missing_or_different_workflow_pointer(self):
         _, _, pointer = self.gate_fixture()
-        for text in ("44013\n", "../44012\n", ""):
+        for text in ("66013\n", "../66012\n", ""):
             with self.subTest(pointer=text):
                 pointer.write_text(text, encoding="utf-8")
                 with self.assertRaises((ValueError, RuntimeError, FileNotFoundError)):
@@ -305,8 +308,8 @@ class CollectorTests(unittest.TestCase):
 
     def completed_fixture(self):
         """Byte-evidence fixture only: no image, NumPy array, model or GPU work."""
-        config = json.loads((ROOT / "configs/pilot_tc2_gpu.json").read_text(encoding="utf-8"))
-        write_json(self.root / "configs/pilot_tc2_gpu.json", config)
+        config = json.loads((ROOT / "configs/tc2_gpu/pilot.json").read_text(encoding="utf-8"))
+        write_json(self.root / "configs/tc2_gpu/pilot.json", config)
         hardware = {"gpu": "NVIDIA A40", "driver": "570.148.08", "cuda_build": "12.8"}
         software = {"python": "3.10.22", "torch": "2.11.0+cu128"}
         runtime = {**hardware, "software": software, "device": "cuda", "slurm_job_id": "12345",
@@ -357,7 +360,7 @@ class CollectorTests(unittest.TestCase):
         record = {"job_id": "12345", "mode": "real_data_pilot", "status": "passed", "step_6_complete": True,
                   "cache": {"path": cache_name, "identity": identity, "metadata_sha256": cache_fingerprint["metadata_sha256"],
                             "layer_hashes": cache_fingerprint["layer_hashes"]}, "results": results, "runtime": runtime,
-                  "design_sha256": sha(self.root / "configs/pilot_tc2_gpu.json")}
+                  "design_sha256": sha(self.root / "configs/tc2_gpu/pilot.json")}
         write_json(self.root / "run/validation_tc2_gpu/step6_job_12345/setup_status.json", record)
         return record
 
@@ -533,7 +536,7 @@ def main():
               "actual_slurm_submissions": 0,
               "failure_details": [{"test": test.id(), "traceback": trace} for test, trace in result.failures + result.errors],
               "source_hashes": {name: sha(ROOT / name) for name in ["scripts/pilot_tc2_gpu.py", "scripts/collect_tc2_gpu_pilot.py",
-                                                                  "configs/pilot_tc2_gpu.json", "tests/test_pilot_tc2_gpu.py"]}}
+                                                                  "configs/tc2_gpu/pilot.json", "tests/test_pilot_tc2_gpu.py"]}}
     write_json(OUTPUT / "setup_status.json", status)
     print(text)
     print(json.dumps(status, indent=2))

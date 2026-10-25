@@ -11,12 +11,12 @@ import shutil
 import subprocess
 import sys
 
-# Isolated publication loads the already accepted pilot from the verified root.
+# Isolated publication loads the current pilot controller from the verified root.
 _root_argument = Path(sys.argv[sys.argv.index("--root") + 1]) if "--root" in sys.argv else Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(_root_argument.resolve() / "scripts"))
 import pilot_tc2_gpu as pilot
 
-FILES = ("configs/experiments_tc2_gpu.json", "scripts/experiments_tc2_gpu.py",
+FILES = ("configs/tc2_gpu/experiments.json", "scripts/experiments_tc2_gpu.py",
          "scripts/analyze_scores_tc2_gpu.py", "scripts/slurm/experiments_tc2_gpu.sh",
          "scripts/collect_experiments_tc2_gpu.py", "tests/test_experiments_tc2_gpu.py",
          "docs/TC2_GPU_EXPERIMENTS.md")
@@ -35,11 +35,19 @@ def load_design(root, config_path=None):
     p = pilot.protocol(root)
     value = read(config_path or root / FILES[0])
     accepted = pilot.load_design(root)
+    for field in ("accepted_workflow_job_id", "accepted_pilot_job_id"):
+        if value.get(field) is not None:
+            pilot.acceptance_job(value[field])
+    reused = value.get("accepted_pilot_results")
+    if not isinstance(reused, list) or len(reused) not in (0, 2):
+        raise ValueError("Current pilot reuse must identify zero or two results")
+    if reused and value.get("accepted_pilot_job_id") is None:
+        raise ValueError("Pilot reuse requires an explicitly accepted current job")
     fixed = {"schema_version": "1.0", "workflow_id": "tc2_gpu", "protocol_sha256": p.PROTOCOL_SHA256,
-             "accepted_workflow_job_id": "44012", "accepted_pilot_job_id": "44024",
+             "accepted_workflow_job_id": value.get("accepted_workflow_job_id"), "accepted_pilot_job_id": value.get("accepted_pilot_job_id"),
              "scientific_source_hashes": accepted["workflow_source_hashes"],
-             "pilot_source_hashes": {name: sha(root / name) for name in pilot.FILES},
-             "expected_total_fits": 66, "expected_new_fits": 64, "expected_main_fits": 62,
+             "pilot_source_hashes": pilot.current_source_hashes(root, "pilot"),
+             "expected_total_fits": 66, "expected_new_fits": 66 - len(reused), "expected_main_fits": 62,
              "expected_extension_fits": 4, "expected_hardware": {"gpu": "NVIDIA A40", "driver": "570.148.08", "cuda_build": "12.8"},
              "minimum_free_remote_bytes": 20 * 1024**3, "minimum_free_local_bytes": 8 * 1024**3,
              "maximum_export_bytes": 512 * 1024**2, "maximum_results_per_page": 4,
@@ -51,11 +59,10 @@ def load_design(root, config_path=None):
     fits = p.build_plan(root)["fits"]
     if value["fits"] != fits or len(fits) != 66 or len({item["run_key"] for item in fits}) != 66:
         raise ValueError("The experiment matrix must be the exact 66 frozen fits")
-    reused = value["accepted_pilot_results"]
-    if ([item.get("run_key") for item in reused] != list(pilot.RUN_KEYS)
+    if reused and ([item.get("run_key") for item in reused] != list(pilot.RUN_KEYS)
             or any(item.get("verified") is not True or item.get("reuse") != "skipped"
                    or item.get("path") != "run/tc2_gpu/results/" + item.get("identity_sha256", "") for item in reused)):
-        raise ValueError("Require the two accepted and intact bottle results")
+        raise ValueError("Require the two accepted current bottle results")
     expected_stages, cumulative = [], 0
     for index, (stage, count) in enumerate(zip(STAGES, FIT_COUNTS)):
         kind = "analysis" if stage in ANALYSIS_RULES else "fit"
@@ -70,7 +77,7 @@ def load_design(root, config_path=None):
         expected_stages.append({"stage_id": stage, "kind": kind, "predecessor": STAGES[index - 1] if index else None,
             "run_keys": keys, "source_run_keys": sources, "score_rules": rules,
             "expected_rows": len(sources) * len(rules), "expected_cumulative_fits": cumulative,
-            "planned_new_fits": count - (2 if stage == "B0" else 0),
+            "planned_new_fits": count - sum(key in {row["run_key"] for row in reused} for key in keys),
             "resources": {"partition": "MGPU-TC2", "qos": "normal", "nodes": 1, "tasks": 1,
                           "gpus": int(kind == "fit"), "cpus_per_task": 2, "memory_gib": 24 if kind == "fit" else 8,
                           "time_limit": "02:00:00" if kind == "fit" else "00:15:00"}})
@@ -177,10 +184,12 @@ def preflight(root, stage, config_path=None, *, running=False):
     p = pilot.protocol(root)
     design = load_design(root, config_path)
     checked = pilot.preflight(root)
+    pilot.require_current_acceptance(root, "pilot", design)
+    pilot_job = pilot.acceptance_job(design.get("accepted_pilot_job_id"))
     pointer = p.inside(root, "run/validation_tc2_gpu/last_pilot_job.txt")
     if pointer.read_text().strip() != design["accepted_pilot_job_id"]:
-        raise RuntimeError("Require the latest accepted real-data pilot job 44024")
-    accepted_path = p.inside(root, "run/validation_tc2_gpu/step6_job_44024/setup_status.json")
+        raise RuntimeError("Require the latest accepted current real-data pilot job")
+    accepted_path = p.inside(root, "run/validation_tc2_gpu/step6_job_" + pilot_job + "/setup_status.json")
     accepted = read(accepted_path)
     if (accepted.get("mode") != "real_data_pilot" or accepted.get("status") != "passed"
             or accepted.get("step_6_complete") is not True or accepted.get("pilot_sources") != design["pilot_source_hashes"]
@@ -190,7 +199,7 @@ def preflight(root, stage, config_path=None, *, running=False):
         raise RuntimeError("At least 20 GiB of free remote storage is required")
     for record in design["accepted_pilot_results"]:
         verify_artifacts(root, record, design)
-    hashes = sources(root) if config_path is None else {name: sha(Path(config_path).parents[1] / name) for name in FILES}
+    hashes = sources(root) if config_path is None else {name: sha(Path(config_path).parents[2] / name) for name in FILES}
     design_sha = sha(config_path or root / FILES[0])
     completed, previous = predecessors(root, stage, design, hashes, design_sha)
     current = p.inside(root, "run/validation_tc2_gpu/last_experiments_" + stage + "_job.txt")
@@ -201,7 +210,7 @@ def preflight(root, stage, config_path=None, *, running=False):
         status = p.inside(root, "run/validation_tc2_gpu/step7_job_" + job + "/setup_status.json")
         if status.exists() and read(status).get("stage_complete") is True:
             raise RuntimeError("This stage already completed; collect and review its existing job")
-    return {"status": "passed", "stage_id": stage, "pilot_job_id": "44024", "pilot_status_sha256": sha(accepted_path),
+    return {"status": "passed", "stage_id": stage, "pilot_job_id": pilot_job, "pilot_status_sha256": sha(accepted_path),
             "workflow_preflight": checked, "design_sha256": design_sha, "experiment_sources": hashes,
             "predecessor": previous, "completed_stages": completed,
             "free_bytes": checked["free_bytes"], "quota_query": checked["quota_query"]}
@@ -461,7 +470,7 @@ def main():
     args = parser.parse_args()
     if args.action == "plan":
         design = load_design(args.root)
-        result = {"status": "planned", "fits": len(design["fits"]), "new_fits": 64, "stages": design["stages"]}
+        result = {"status": "planned", "fits": len(design["fits"]), "new_fits": design["expected_new_fits"], "stages": design["stages"]}
     elif args.action == "preflight":
         result = preflight(args.root, args.stage, args.config)
     elif args.action == "publish":

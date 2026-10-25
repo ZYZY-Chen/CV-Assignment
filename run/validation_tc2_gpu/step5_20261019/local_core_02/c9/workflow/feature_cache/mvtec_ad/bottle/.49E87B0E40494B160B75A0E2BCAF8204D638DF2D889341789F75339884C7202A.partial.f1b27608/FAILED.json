@@ -1,3 +1,0 @@
-{
-  "error": "ValueError: Extraction batches must cover each indexed image once in order"
-}

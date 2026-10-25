@@ -1,9 +1,0 @@
-{
-  "status": "passed",
-  "powershell_ast_errors": 0,
-  "shell_templates_parsed": 3,
-  "python_heredocs_parsed": 2,
-  "helper_sha256": "1C181ED883F347E5C8EFB7F0FF1D9B3172C57BC0C9759D4B8A538C6F493EEC02",
-  "actual_tc2_connections": 0,
-  "actual_slurm_submissions": 0
-}

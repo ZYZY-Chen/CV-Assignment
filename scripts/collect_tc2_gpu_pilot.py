@@ -14,12 +14,18 @@ import stat
 import tarfile
 import tempfile
 import uuid
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+import tc2_gpu_protocol as current_protocol
+from tc2_gpu_provenance import current_source_hashes
 
 LIMIT = 512 * 1024 * 1024
 MAX_MEMBERS = 512
 MANIFEST = "pilot_export_manifest.json"
-PROTOCOL_SHA256 = "3098B6A86DBA64EE439BFE61C7A4FCFFCD082371D5A80FFBC7940997ED6A1ED1"
-CONFIG = "configs/pilot_tc2_gpu.json"
+PROTOCOL_SHA256 = current_protocol.PROTOCOL_SHA256
+CONFIG = "configs/tc2_gpu/pilot.json"
 RUN_KEYS = {
     "padim": "B0_mvtec_ad_bottle_padim_s17_n100_B7B86DBB2043",
     "patchcore": "B0_mvtec_ad_bottle_patchcore_s17_n100_BBC2B85C2FA8",
@@ -34,11 +40,8 @@ EXECUTION = {"schema_version": "1.0", "workflow_id": "tc2_gpu", "extraction_batc
              "prediction_batch_size": 1, "workers": 0, "cpu_threads": 2, "warmup_iterations": 20,
              "padim_position_chunk_size": 256, "patchcore_query_chunk_size": 1024,
              "patchcore_bank_chunk_size": 4096, "patchcore_sampling_chunk_size": 16384}
-SCIENCE_SOURCES = ("src/tc2_gpu_protocol.py", "src/tc2_gpu_cache.py", "src/tc2_gpu_runner.py",
-                   "scripts/run_tc2_gpu.py", "configs/runtime_tc2_gpu.json", "src/data.py",
-                   "src/padim_adapter.py", "src/patchcore_adapter.py", "src/sampling.py",
-                   "src/scoring.py", "src/anomaly_postprocess.py", "src/metric_core.py", "src/evaluate.py")
-CACHE_SOURCES = ("src/tc2_gpu_protocol.py", "src/tc2_gpu_cache.py", "src/data.py", "configs/runtime_tc2_gpu.json")
+SCIENCE_SOURCES = current_protocol.SOURCE_FILES
+CACHE_SOURCES = current_protocol.CACHE_SOURCES
 
 
 def _extended(path):
@@ -196,19 +199,20 @@ def _status(value, job_id):
 def _pilot_config(value):
     required = {"schema_version": "1.0", "workflow_id": "tc2_gpu", "protocol_sha256": PROTOCOL_SHA256,
                 "dataset": "mvtec_ad", "category": "bottle", "run_seed": 17, "normal_train_n": 100,
-                "workflow_acceptance_job_id": "44012", "expected_gpu": "NVIDIA A40",
+                "expected_gpu": "NVIDIA A40",
                 "expected_driver": "570.148.08", "expected_cuda_build": "12.8"}
     for key, expected in required.items():
         actual = value.get(key)
-        if key == "workflow_acceptance_job_id":
-            actual = str(actual)
         if actual != expected:
             raise ValueError("Pilot configuration differs at " + key)
+    workflow_job = value.get("workflow_acceptance_job_id")
+    if workflow_job is not None and (not isinstance(workflow_job, str) or not re.fullmatch(r"[0-9]{1,12}", workflow_job)):
+        raise ValueError("Invalid current workflow acceptance job declaration")
     if value.get("expected_counts") != {"images": 292, "fit_pool": 167, "dev": 42, "test": 83}:
         raise ValueError("Pilot data counts differ from the approved design")
     sources = value.get("workflow_source_hashes")
-    if not isinstance(sources, dict) or len(sources) != 31:
-        raise ValueError("Expected the 31 accepted workflow source fingerprints")
+    if not isinstance(sources, dict) or sources != current_source_hashes(ROOT, "workflow"):
+        raise ValueError("Expected the exact current workflow source fingerprints")
     for name, digest in sources.items():
         _relative(name)
         if not isinstance(digest, str) or not re.fullmatch(HEX, digest):

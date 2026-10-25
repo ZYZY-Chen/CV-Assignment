@@ -13,7 +13,7 @@ from tc2_gpu_protocol import (CACHE_SOURCES, EXECUTION, PROTOCOL_SHA256, SHAPES,
 
 def cache_identity(ctx, value, manifest_sha256, runtime=None):
     accepted = accepted_inputs(ctx.root, allow_local_summary=ctx.namespace == "validation")
-    protocol = read_json(ctx.root / "configs/protocol_v2.json")
+    protocol = read_json(ctx.root / "configs/tc2_gpu/protocol.json")
     runtime = runtime or {}
     return {"format": "tc2_gpu_fp32_npy_1", "namespace": ctx.namespace,
             "protocol_sha256": PROTOCOL_SHA256, "manifest_sha256": manifest_sha256,

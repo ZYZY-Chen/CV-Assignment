@@ -1,3 +1,0 @@
-Traceback (most recent call last):
-  File "<stdin>", line 29, in <module>
-RuntimeError: Pilot source bytes do not match the verified manifest

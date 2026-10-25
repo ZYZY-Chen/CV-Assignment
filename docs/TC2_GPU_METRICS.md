@@ -1,6 +1,17 @@
 # Step 3: Metric Corrections and Reference Acceptance
 
-This guide belongs to the **TC2 GPU Experiment Protocol**, workflow `tc2_gpu`; see [TC2_GPU_NAMING.md](TC2_GPU_NAMING.md). Current metric metadata uses `tc2_gpu_tie_grouped`. Job 43956 and its archived `v2_tie_grouped` metadata remain unchanged. Current entry points and future validation records use `tc2_gpu`; archived paths below retain their original names. The naming change preserves metric calculations and does not claim a new full remote acceptance; its local checks are recorded in `run/validation_tc2_gpu/naming_20261019/`.
+> **Current profile and historical-record boundary (2026-10-25)**
+>
+> The retained design and acceptance account below describes the earlier implementation. Its job IDs, source hashes, remote paths, command blocks and completion flags are historical. Exact original bytes are in the [archive index](../archive/index.json); they do not certify this refactored checkout.
+>
+> Current configurations are under configs/tc2_gpu/, and independent fingerprints are in configs/tc2_gpu/source_manifest.json. The current deployment is unavailable. Formal actions refuse execution without new source/environment acceptance. Historical SSH and submission examples below are not current connection instructions.
+>
+> Use the [current protocol](TC2_GPU_PROTOCOL.md), [naming rules](TC2_GPU_NAMING.md) and [archive guide](TC2_GPU_ARCHIVE.md) for current paths. Local read-only commands from the repository root are python -B scripts/run_tc2_gpu.py plan and python -B scripts/verify_archive_tc2_gpu.py.
+
+## Historical design and acceptance account
+
+
+This guide belongs to the **TC2 GPU Experiment Protocol**, workflow `tc2_gpu`; see [TC2_GPU_NAMING.md](../archive/index.json) (archived path: `docs/TC2_GPU_NAMING.md`). Current metric metadata uses `tc2_gpu_tie_grouped`. Job 43956 and its archived `v2_tie_grouped` metadata remain unchanged. Current entry points and future validation records use `tc2_gpu`; archived paths below retain their original names. The naming change preserves metric calculations and does not claim a new full remote acceptance; its local checks are recorded in `run/validation_tc2_gpu/naming_20261019/`.
 
 The user explicitly approved the step-3 changes. This design implements the frozen protocol_v2.json without changing the protocol or splits. Step 3 was completed on 2026-10-19: local core checks and full reference acceptance in TC2 job 43956 passed, as did verification of returned files, source fingerprints, and change scope.
 
@@ -22,7 +33,7 @@ The user explicitly approved the step-3 changes. This design implements the froz
 - Modify the local output/tc2_gpu_setup.ps1: add CheckMetrics, limiting uploads to the metric core, evaluator, tests, CPU entry point, and a read-only copy of existing data.py; Collect retrieves current run/validation_tc2_gpu logs and preserved run/validation_v2 logs through an explicit path allowlist.
 - Use this document, README, and run/validation_tc2_gpu/step3_<id>/ for the design, evidence, and status. Pre-step-3 fingerprints and originals of the helper/evaluator are saved in step3_20261019_081534.
 
-Preserve models, score generation, raw data, the frozen protocol, manifests, environment and dependency locks, V1 results, and old caches. Do not recompute old results, fit models, or start formal run/tc2_gpu experiments. Cross-category/seed aggregation and runner integration remain in their respective later steps.
+Preserve models, score generation, raw data, the frozen protocol, manifests, environment and dependency locks, pre-correction results, and old caches. Do not recompute old results, fit models, or start formal run/tc2_gpu experiments. Cross-category/seed aggregation and runner integration remain in their respective later steps.
 
 ## 3 Acceptance order and resources
 
@@ -64,7 +75,7 @@ TC2 job 43956 completed on TC2N01 on 2026-10-19 with state COMPLETED / 0:0 in 19
 
 All 24 full-mode tests passed, with zero failures, errors, or skips. Across 81 scikit-learn comparisons, the maximum absolute errors were 1.1102230246251565e-16 for AUROC and 2.220446049250313e-16 for AP, both below the agreed 1e-12 limit. Tests covered ties and chunk boundaries, all pixels at original resolution, zero masks and multiple-mask unions, development-threshold isolation, strict greater-than classification, four/five scoring rules, separate LOCO anomaly groups, and invalid-input rejection. The remote full-mode status is `step_3_complete=true`, and stderr is empty.
 
-Independent local verification confirmed the returned archive SHA-256 as `E4D4112A233B39754EB10BC35E877F820379B00588BC525C3A8DBFCDF041515A`. All 100 regular files matched the downloaded contents byte for byte; member paths and types passed verification. At the recorded acceptance time, the five source files had identical hashes in local files, the upload payload, remote stage manifest, and test record. The frozen protocol, eight manifests, environment exports, dependency locks, and step-2 completion record were preserved. Of the 750 pre-step-3 files, only the approved evaluate.py and README changed; all 346 V1 files were preserved, and no formal run/tc2_gpu directory was created.
+Independent local verification confirmed the returned archive SHA-256 as `E4D4112A233B39754EB10BC35E877F820379B00588BC525C3A8DBFCDF041515A`. All 100 regular files matched the downloaded contents byte for byte; member paths and types passed verification. At the recorded acceptance time, the five source files had identical hashes in local files, the upload payload, remote stage manifest, and test record. The frozen protocol, eight manifests, environment exports, dependency locks, and step-2 completion record were preserved. Of the 750 pre-step-3 files, only the approved evaluate.py and README changed; all 346 pre-correction files were preserved, and no formal run/tc2_gpu directory was created.
 
 Evidence is stored in `run/validation_v2/step3_20261019_081534/`:
 

@@ -25,14 +25,19 @@ from collect_tc2_gpu_pilot import (_extended, _plain, _job, _relative, _no_links
     _inside, _sha, _bytes_sha, _json as _protected_json, _encode, _digest, _read_bounded, _tar_layout,
     _atomic_publish, PROTOCOL_SHA256, PHASE)
 
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+from tc2_gpu_provenance import (historical_config, historical_sha, historical_config_sha, current_source_sha,
+    require_current_acceptance)
 LIMIT = 512 * 1024 * 1024
 MAX_PAGES = 32
 MAX_MEMBERS = 512
 MAX_INDEX = 8 * 1024 * 1024
-CONFIG = "configs/analysis_tc2_gpu.json"
-EXPERIMENT_CONFIG = "configs/experiments_tc2_gpu.json"
-PROTOCOL = "configs/protocol_v2.json"
-DESIGN_SHA256 = "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75"
+CONFIG = "configs/tc2_gpu/analysis.json"
+EXPERIMENT_CONFIG = "configs/tc2_gpu/experiments.json"
+PROTOCOL = "configs/tc2_gpu/protocol.json"
+DESIGN_SHA256 = historical_sha(ROOT, "configs/experiments_tc2_gpu.json")
+CURRENT_DESIGN_SHA256 = current_source_sha(ROOT, EXPERIMENT_CONFIG)
 HEX = r"[0-9A-F]{64}"
 MANIFEST = "analysis_export_manifest.json"
 RECEIPT = "page_verification.json"
@@ -82,7 +87,7 @@ def _hex(value):
 def _provenance():
     protection = Path(__file__).with_name("collect_tc2_gpu_pilot.py")
     _no_links(protection)
-    protection_hash = "D8D3B072A6B769D81023AC0BE0770A24C999C822B5A63869992BFF084848DAC4"
+    protection_hash = current_source_sha(ROOT, "scripts/collect_tc2_gpu_pilot.py")
     if _sha(protection) != protection_hash:
         raise ValueError("Preserved path and archive protection source differs")
     return {"schema_version": "1.0", "purpose": "tc2_gpu_analysis_collection_only",
@@ -187,6 +192,8 @@ def _artifact_manifest(data):
 def _registry(value, state, design):
     if not isinstance(value, dict) or value.get("protocol_sha256") != PROTOCOL_SHA256 or value.get("design_sha256") != DESIGN_SHA256:
         raise ValueError("Input registry belongs to another frozen protocol")
+    if value.get("source_profile") != "historical_tc2_gpu" or value.get("historical_protocol_sha256") != historical_config_sha(ROOT, "protocol") or value.get("current_design_sha256") != CURRENT_DESIGN_SHA256:
+        raise ValueError("Historical inputs and current analysis sources are not separated")
     if value.get("expected_total_fits") != 66 or value.get("expected_analysis_rows") != 108:
         raise ValueError("Input registry counts differ")
     if value.get("analysis_sources") != state["sources"]:
@@ -196,7 +203,8 @@ def _registry(value, state, design):
     _hex(value.get("step7_acceptance_sha256"))
     if value.get("loco_collector_sha256") != "09AC7432F8F6BCE36F95EAEFF15D44A19F7852781A19FE65E5E573239E445967":
         raise ValueError("Registry LOCO acceptance collector fingerprint differs")
-    protected = {**design["scientific_source_hashes"], **design["pilot_source_hashes"], **OLD_SOURCES}
+    historical_design = historical_config(ROOT, "experiments")
+    protected = {**historical_design["scientific_source_hashes"], **historical_design["pilot_source_hashes"], **OLD_SOURCES}
     if len(protected) != 44 or value.get("protected_sources") != protected:
         raise ValueError("Input registry does not preserve all 44 accepted sources")
     lookup = {row["run_key"]: row["configuration"] for row in design["fits"]}
@@ -489,11 +497,11 @@ def _metadata(meta, snapshot, job_id):
     state = _status(snapshot, job_id)
     if _bytes_sha(meta[CONFIG]) != (state.get("config_sha256") or _bytes_sha(meta[CONFIG])):
         raise ValueError("Exported analysis configuration differs")
-    if _bytes_sha(meta[PROTOCOL]) != PROTOCOL_SHA256 or _bytes_sha(meta[EXPERIMENT_CONFIG]) != DESIGN_SHA256:
+    if _bytes_sha(meta[PROTOCOL]) != PROTOCOL_SHA256 or _bytes_sha(meta[EXPERIMENT_CONFIG]) != CURRENT_DESIGN_SHA256:
         raise ValueError("Frozen protocol or experiment design bytes differ")
     design = _json(meta[EXPERIMENT_CONFIG])
     for name in MANIFESTS:
-        if _bytes_sha(meta[name]) != design["scientific_source_hashes"][name]:
+        if _bytes_sha(meta[name]) != historical_config(ROOT, "experiments")["scientific_source_hashes"][name]:
             raise ValueError("Frozen input manifest bytes differ")
     if state["status"] == "missing":
         return
@@ -606,6 +614,7 @@ def _write_page(root, target, rows, manifest, snapshots=None):
 
 
 def export_pages(root, job_id, directory):
+    require_current_acceptance(root, "analysis")
     if not Path(directory).is_absolute():
         raise ValueError("Export directory must be absolute")
     parent = _extended(directory).parent
@@ -690,8 +699,8 @@ def _export_pages(root, job_id, directory, snapshot_root):
     registry_name = analysis_path + "/inputs.json" if analysis_path else None
     if registry_name:
         for name, expected in _json(metadata[registry_name])["protected_sources"].items():
-            if _sha(_inside(root, name)) != expected:
-                raise ValueError("A protected experiment source changed before collection")
+            if historical_sha(ROOT, name) != expected:
+                raise ValueError("A historical experiment source changed before collection")
     common_rows = [_file_record(root, name, job_id, analysis_path, snapshots) for name in sorted(common)]
     if status_bytes:
         next(row for row in common_rows if row["path"] == status_name).update(size=len(status_bytes), sha256=_bytes_sha(status_bytes))

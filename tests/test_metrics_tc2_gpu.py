@@ -18,8 +18,9 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from metric_core import binary_auroc_ap, binary_inputs, finite_scores
+from tc2_gpu_provenance import current_source_sha, require_current_acceptance
 
-PROTOCOL_HASH = "3098B6A86DBA64EE439BFE61C7A4FCFFCD082371D5A80FFBC7940997ED6A1ED1"
+PROTOCOL_HASH = current_source_sha(ROOT, "configs/tc2_gpu/protocol.json")
 REFERENCE = {"cases": 0, "max_auroc_abs_error": 0.0, "max_ap_abs_error": 0.0}
 OUTPUT = None
 
@@ -343,7 +344,7 @@ class EvaluationTests(unittest.TestCase):
 
 
 def contract(full):
-    protocol = ROOT / "configs/protocol_v2.json"
+    protocol = ROOT / "configs/tc2_gpu/protocol.json"
     if sha(protocol) != PROTOCOL_HASH:
         raise ValueError("Frozen protocol hash differs")
     data = json.loads(protocol.read_text(encoding="utf-8"))
@@ -354,16 +355,17 @@ def contract(full):
     result = {"protocol_sha256":PROTOCOL_HASH,"frozen_manifests_verified":8,"python":sys.version,
               "numpy":np.__version__,"device":"cpu","gpu_requested":False,"slurm_job_id":os.environ.get("SLURM_JOB_ID")}
     if full:
+        require_current_acceptance(ROOT, "metrics")
         if platform.system() != "Linux" or not os.environ.get("SLURM_JOB_ID", "").isdigit():
             raise RuntimeError("Full acceptance must run in a Linux SLURM compute job")
-        setup = json.loads((ROOT / "configs/tc2_setup.json").read_text(encoding="utf-8"))
+        setup = json.loads((ROOT / "configs/tc2_gpu/setup.json").read_text(encoding="utf-8"))
         if ROOT != Path(setup["remote"]["setup_root"]) or Path(sys.prefix) != Path(setup["remote"]["conda_environment_prefix"]):
             raise RuntimeError("Use the verified TC2 staging root and dedicated environment")
         if os.environ.get("SLURM_JOB_PARTITION") != setup["remote"]["partition"]:
             raise RuntimeError("Partition differs from verified setup")
         def setup_record(relative):
             primary = ROOT / "run/setup_tc2_gpu" / relative
-            return primary if primary.exists() else ROOT / "run/setup_v2" / relative
+            return primary
         previous = setup_record("last_check_all_job.txt").read_text().strip()
         if not previous.isdigit(): raise RuntimeError("Invalid step-2 job ID")
         ready = json.loads(setup_record(f"job_{previous}_all/setup_status.json").read_text())

@@ -1,5 +1,16 @@
 # Step 5: TC2 GPU Workflow and FP32 Cache
 
+> **Current profile and historical-record boundary (2026-10-25)**
+>
+> The retained design and acceptance account below describes the earlier implementation. Its job IDs, source hashes, remote paths, command blocks and completion flags are historical. Exact original bytes are in the [archive index](../archive/index.json); they do not certify this refactored checkout.
+>
+> Current configurations are under configs/tc2_gpu/, and independent fingerprints are in configs/tc2_gpu/source_manifest.json. The current deployment is unavailable. Formal actions refuse execution without new source/environment acceptance. Historical SSH and submission examples below are not current connection instructions.
+>
+> Use the [current protocol](TC2_GPU_PROTOCOL.md), [naming rules](TC2_GPU_NAMING.md) and [archive guide](TC2_GPU_ARCHIVE.md) for current paths. Local read-only commands from the repository root are python -B scripts/run_tc2_gpu.py plan and python -B scripts/verify_archive_tc2_gpu.py.
+
+## Historical design and acceptance account
+
+
 The user explicitly approved this design before implementation. The workflow implements the frozen **TC2 GPU Experiment Protocol** without changing protocol bytes, scientific settings, manifests, accepted algorithms/metrics, environment locks, historical artifacts, or pre-existing Chinese. Real-data extraction and pilots belong to step 6.
 
 ## Approved design and scope
@@ -27,7 +38,7 @@ Step 5 completed on 2026-10-19. Acceptance job **44012** on **TC2N02**, using NV
 
 Independent local verification checked the downloaded archive and all 421 extracted files, all 31 scientific source fingerprints, the 32 submitted payload files, and the LF submission script. The previous acceptance archive's 163 files remained byte-identical. The synthetic eight-image FP32 cache passed three-layer shape, dtype, finiteness, ordering, raw-image hash, metadata, and completion checks. Saved arrays and all five scores passed validation for both methods at seeds 17, 29, and 43. Metrics in the five uncorrupted saved runs were reproduced within absolute 1e-12 using a separate NumPy image/pixel calculation. The deliberately corrupted PaDiM seed-29 metrics and deliberately missing PatchCore seed-43 SUCCESS marker were detected as expected; these are retained negative-test fixtures.
 
-See the [final acceptance record](../run/validation_tc2_gpu/step5_20261019/setup_status.json), [independent returned-artifact verification](../run/validation_tc2_gpu/step5_20261019/accepted_job_44012/verification.json), and [unchanged remote full-mode status](../run/validation_tc2_gpu/step5_20261019/accepted_job_44012/remote_setup_status.json). All generated caches and results belong to synthetic validation. The formal run/tc2_gpu directory remains absent; real-data extraction and pilots belong to the separately approved step 6.
+See the [final acceptance record](../archive/index.json) (archived path: `run/validation_tc2_gpu/step5_20261019/setup_status.json`), [independent returned-artifact verification](../archive/index.json) (archived path: `run/validation_tc2_gpu/step5_20261019/accepted_job_44012/verification.json`), and [unchanged remote full-mode status](../archive/index.json) (archived path: `run/validation_tc2_gpu/step5_20261019/accepted_job_44012/remote_setup_status.json`). All generated caches and results belong to synthetic validation. The formal run/tc2_gpu directory remains absent; real-data extraction and pilots belong to the separately approved step 6.
 
 All 16 earlier local core tests also passed. Full local mode was rejected by the Linux SLURM guard as expected, before importing the unavailable local PyTorch runtime. Remote acceptance supplied the required GPU execution.
 

@@ -35,7 +35,7 @@ def temporary(test):
 
 
 def synthetic_records():
-    design = analysis.read(ROOT / "configs/experiments_tc2_gpu.json")
+    design = analysis.read(ROOT / "configs/tc2_gpu/experiments.json")
     records = []
     for position, fit in enumerate(design["fits"]):
         cfg = copy.deepcopy(fit["configuration"])
@@ -442,6 +442,11 @@ class CaseSelectionAndMaskTests(unittest.TestCase):
 
 
 class CollectionTests(unittest.TestCase):
+    def setUp(self):
+        import collect_analysis_tc2_gpu as collector
+        gate = patch.object(collector, "require_current_acceptance", return_value=None)
+        gate.start(); self.addCleanup(gate.stop)
+
     def test_pending_collection_and_tamper_guards_without_models(self):
         import collect_analysis_tc2_gpu as collector
         root = temporary(self)

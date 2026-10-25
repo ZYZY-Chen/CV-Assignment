@@ -2,6 +2,9 @@
 from __future__ import annotations
 
 import ast
+import argparse
+from datetime import datetime, timezone
+import io
 import copy
 import hashlib
 import json
@@ -15,6 +18,9 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import collect_experiments_loco_tc2_gpu as collector
 import collect_experiments_tc2_gpu as original
+from tc2_gpu_provenance import current_source_sha, historical_sha
+
+OUTPUT = None
 
 BASE_SHA256 = "AC61772F65C9F2C4124761D2361E0A85E9F65DBCF4DF5BAB3E939B5111466010"
 NOTE = "pixel is pooled auxiliary output; formal LOCO metrics are separate logical/structural groups"
@@ -289,10 +295,11 @@ class MetricValidationTests(unittest.TestCase):
 
 
 class FrozenDerivationTests(unittest.TestCase):
-    def test_frozen_collector_bytes_and_derivation_fingerprint(self):
-        actual = hashlib.sha256((ROOT / "scripts/collect_experiments_tc2_gpu.py").read_bytes()).hexdigest().upper()
-        self.assertEqual(actual, BASE_SHA256)
-        self.assertEqual(collector.BASE_COLLECTOR_SHA256, BASE_SHA256)
+    def test_historical_and_current_collector_fingerprints_are_separate(self):
+        self.assertEqual(historical_sha(ROOT, "scripts/collect_experiments_tc2_gpu.py"), BASE_SHA256)
+        actual = current_source_sha(ROOT, "scripts/collect_experiments_tc2_gpu.py")
+        self.assertEqual(collector.BASE_COLLECTOR_SHA256, actual)
+        self.assertNotEqual(actual, BASE_SHA256)
 
     def test_security_bounds_and_whitelists_are_preserved(self):
         for name in ("LIMIT", "MAX_PAGES", "MAX_MEMBERS", "MAX_INDEX", "ARTIFACTS", "RESULT_FILES", "MANIFESTS", "SCIENCE_SOURCES", "CACHE_SOURCES"):
@@ -301,7 +308,7 @@ class FrozenDerivationTests(unittest.TestCase):
 
     def test_provenance_binds_actual_derivative_and_preserved_source_bytes(self):
         provenance = collector._collection_provenance()
-        self.assertEqual(provenance["base_collector_sha256"], BASE_SHA256)
+        self.assertEqual(provenance["base_collector_sha256"], current_source_sha(ROOT, "scripts/collect_experiments_tc2_gpu.py"))
         expected = hashlib.sha256((ROOT / "scripts/collect_experiments_loco_tc2_gpu.py").read_bytes()).hexdigest().upper()
         self.assertEqual(provenance["collector_sha256"], expected)
         self.assertEqual(provenance["purpose"], "B0_LOCO_collection_only")
@@ -427,11 +434,13 @@ def build_loco_fixture(root):
 
 class PagedCollectionTests(unittest.TestCase):
     def setUp(self):
-        self.temporary = tempfile.TemporaryDirectory(prefix="tc2_loco_test_", dir=ROOT.parent)
-        target = Path(self.temporary.name).resolve()
-        if target.parent != ROOT.parent.resolve() or not target.name.startswith("tc2_loco_test_"):
-            raise ValueError("Temporary fixture cleanup must stay inside the repository workspace")
-        self.addCleanup(self.temporary.cleanup)
+        if OUTPUT is None:
+            raise RuntimeError("Use --output-dir to keep generated fixtures inside validation")
+        fixture_base = OUTPUT / "s"
+        fixture_base.mkdir(exist_ok=True)
+        target = Path(tempfile.mkdtemp(prefix="c", dir=fixture_base)).resolve()
+        if target.parent != fixture_base.resolve() or not target.name.startswith("c"):
+            raise ValueError("Temporary fixtures must stay inside the approved validation sandbox")
         self.root = collector._extended(target)
         self.state = build_loco_fixture(self.root)
 
@@ -483,5 +492,35 @@ class PagedCollectionTests(unittest.TestCase):
             collector.export_pages(self.root, self.state["job_id"], self.root / ("tmp/experiments-" + self.state["job_id"] + "-changed"), "B0_LOCO")
 
 
+def main():
+    global OUTPUT
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output-dir", required=True, type=Path)
+    args = parser.parse_args()
+    OUTPUT = args.output_dir.absolute()
+    allowed = (ROOT / "run/validation_tc2_gpu").resolve()
+    if OUTPUT.exists() or OUTPUT.resolve() == allowed or not OUTPUT.resolve().is_relative_to(allowed):
+        parser.error("Use a fresh directory strictly inside run/validation_tc2_gpu")
+    OUTPUT.mkdir(parents=True)
+    stream = io.StringIO()
+    suite = unittest.defaultTestLoader.loadTestsFromModule(sys.modules[__name__])
+    result = unittest.TextTestRunner(stream=stream, verbosity=2).run(suite)
+    text = stream.getvalue()
+    (OUTPUT / "offline_tests.txt").write_text(text, encoding="utf-8")
+    status = {"mode": "offline", "status": "passed" if result.wasSuccessful() and not result.skipped else "failed",
+              "step_7_complete": False, "checked_at_utc": datetime.now(timezone.utc).isoformat(),
+              "tests_run": result.testsRun, "failures": len(result.failures), "errors": len(result.errors),
+              "skipped": len(result.skipped), "actual_model_calls": 0, "actual_tc2_connections": 0,
+              "actual_slurm_submissions": 0, "torch_imported": "torch" in sys.modules,
+              "failure_details": [{"test": test.id(), "traceback": trace} for test, trace in result.failures + result.errors],
+              "source_hashes": {name: current_source_sha(ROOT, name) for name in
+                               ("scripts/collect_experiments_loco_tc2_gpu.py", "scripts/collect_experiments_tc2_gpu.py",
+                                "tests/test_collect_experiments_loco_tc2_gpu.py")}}
+    (OUTPUT / "setup_status.json").write_text(json.dumps(status, indent=2) + "\n", encoding="utf-8")
+    print(text)
+    print(json.dumps(status, indent=2))
+    return 0 if status["status"] == "passed" else 1
+
+
 if __name__ == "__main__":
-    unittest.main()
+    raise SystemExit(main())

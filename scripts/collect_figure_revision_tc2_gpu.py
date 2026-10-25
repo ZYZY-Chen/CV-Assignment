@@ -30,6 +30,10 @@ from collect_tc2_gpu_pilot import (
     _tar_layout, _atomic_publish,
 )
 
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+from tc2_gpu_provenance import (historical_config, historical_sha, current_source_sha,
+    require_current_acceptance)
 LIMIT = 512 * 1024 * 1024
 MAX_MEMBERS = 512
 MAX_INDEX = 8 * 1024 * 1024
@@ -38,7 +42,7 @@ RECEIPT = "page_verification.json"
 HEX = r"[0-9A-F]{64}"
 STAGE = "figure_revision"
 SOURCES = {
-    "configs/figure_revision_tc2_gpu.json",
+    "configs/tc2_gpu/figure_revision.json",
     "scripts/revise_figures_tc2_gpu.py",
     "scripts/collect_figure_revision_tc2_gpu.py",
     "scripts/slurm/figure_revision_tc2_gpu.sh",
@@ -63,7 +67,7 @@ FIGURE_NAMES = {
     "F2_cases_01", "F2_cases_02", "F2_cases_03", "F2_cases_04",
 }
 PHASE = re.compile(r"phase_[a-z0-9][a-z0-9_-]{0,63}\.(?:stdout|stderr)\.txt\Z")
-PROTECTION_SHA256 = "D8D3B072A6B769D81023AC0BE0770A24C999C822B5A63869992BFF084848DAC4"
+PROTECTION_SHA256 = current_source_sha(ROOT, "scripts/collect_tc2_gpu_pilot.py")
 
 
 def _json(data):
@@ -293,6 +297,7 @@ def _write_page(target, rows, manifest, sources):
 
 
 def export_archive(root, job_id, destination):
+    require_current_acceptance(root, "figure_revision")
     job_id = _job(job_id)
     if not Path(destination).is_absolute():
         raise ValueError("Figure-revision export destination must be absolute")

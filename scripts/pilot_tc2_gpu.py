@@ -13,7 +13,11 @@ import subprocess
 import sys
 import uuid
 
-FILES = ("configs/pilot_tc2_gpu.json", "scripts/pilot_tc2_gpu.py", "scripts/slurm/pilot_tc2_gpu.sh",
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+from tc2_gpu_provenance import current_source_hashes, require_current_acceptance
+
+FILES = ("configs/tc2_gpu/pilot.json", "scripts/pilot_tc2_gpu.py", "scripts/slurm/pilot_tc2_gpu.sh",
          "scripts/collect_tc2_gpu_pilot.py", "tests/test_pilot_tc2_gpu.py", "docs/TC2_GPU_PILOT.md")
 RUN_KEYS = ("B0_mvtec_ad_bottle_padim_s17_n100_B7B86DBB2043", "B0_mvtec_ad_bottle_patchcore_s17_n100_BBC2B85C2FA8")
 
@@ -51,14 +55,24 @@ def atomic_json(path, value):
     os.replace(temporary, path)
 
 
+def acceptance_job(value):
+    """Validate an explicitly bound current job; historical jobs confer no permission."""
+    if not isinstance(value, str) or not value.isascii() or not value.isdecimal() or not 1 <= len(value) <= 12:
+        raise RuntimeError("An explicitly accepted current job is required")
+    return value
+
+
 def load_design(root, config_path=None):
     root = Path(root)
     p = protocol(root)
     value = read(config_path or root / FILES[0])
+    workflow_job = value.get("workflow_acceptance_job_id")
+    if workflow_job is not None:
+        acceptance_job(workflow_job)
     fixed = {"schema_version": "1.0", "workflow_id": "tc2_gpu", "protocol_sha256": p.PROTOCOL_SHA256,
              "dataset": "mvtec_ad", "category": "bottle", "run_seed": 17, "normal_train_n": 100,
              "run_keys": list(RUN_KEYS), "expected_counts": {"images": 292, "fit_pool": 167, "dev": 42, "test": 83},
-             "workflow_acceptance_job_id": "44012", "minimum_free_bytes": 4 * 1024**3,
+             "workflow_acceptance_job_id": workflow_job, "minimum_free_bytes": 4 * 1024**3,
              "maximum_export_bytes": 512 * 1024**2, "expected_gpu": "NVIDIA A40", "expected_driver": "570.148.08",
              "expected_cuda_build": "12.8", "resources": {"partition": "MGPU-TC2", "qos": "normal", "nodes": 1,
              "tasks": 1, "gpus": 1, "cpus_per_task": 2, "memory_gib": 24, "time_limit": "02:00:00"}}
@@ -67,17 +81,19 @@ def load_design(root, config_path=None):
     expected = [item for item in p.build_plan(root)["fits"] if item["run_key"] in RUN_KEYS]
     if value["fits"] != expected or [item["run_key"] for item in expected] != list(RUN_KEYS):
         raise ValueError("Pilot fits differ from the exact frozen B0 entries")
-    if len(value["workflow_source_hashes"]) != 31:
-        raise ValueError("Require all 31 accepted scientific source fingerprints")
+    if value["workflow_source_hashes"] != current_source_hashes(root, "workflow"):
+        raise ValueError("Require the exact current workflow source fingerprints")
     return value
 
 
 def accepted_workflow(root, design):
     root = Path(root)
+    require_current_acceptance(root, "workflow", design)
+    job = acceptance_job(design.get("workflow_acceptance_job_id"))
     pointer = protocol(root).inside(root, "run/validation_tc2_gpu/last_check_workflow_job.txt")
     if pointer.is_symlink() or pointer.read_text().strip() != design["workflow_acceptance_job_id"]:
         raise RuntimeError("The accepted workflow job pointer differs")
-    path = protocol(root).inside(root, "run/validation_tc2_gpu/step5_job_" + design["workflow_acceptance_job_id"] + "/setup_status.json")
+    path = protocol(root).inside(root, "run/validation_tc2_gpu/step5_job_" + job + "/setup_status.json")
     record = read(path)
     if record.get("mode") != "full" or record.get("status") != "passed" or record.get("step_5_complete") is not True:
         raise RuntimeError("Full workflow acceptance is required before real-data work")
@@ -106,10 +122,10 @@ def preflight(root, design=None):
     p = protocol(root)
     design = design or load_design(root)
     record = accepted_workflow(root, design)
-    setup = read(root / "configs/tc2_setup.json")
+    setup = read(root / "configs/tc2_gpu/setup.json")
     if root != Path(setup["remote"]["setup_root"]) or Path(sys.prefix) != Path(setup["remote"]["conda_environment_prefix"]):
         raise RuntimeError("Use the accepted TC2 directory and dedicated Python environment")
-    if sha(root / "configs/tc2_setup.json") != record["runtime"]["compatibility_configuration_sha256"]:
+    if sha(root / "configs/tc2_gpu/setup.json") != record["runtime"]["compatibility_configuration_sha256"]:
         raise RuntimeError("Remote compatibility snapshot changed; never overwrite it")
     accepted = p.accepted_inputs(root)
     for name, value in accepted["export_hashes"].items():

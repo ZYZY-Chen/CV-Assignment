@@ -1,6 +1,0 @@
-SSH: enter the password in this terminal when requested.
-OFFLINE SSH FIXTURE
-TC2_ARTIFACT_SHA256=BF7AB219F7ACE02641F599AB43E4E166D1A41EF784A8EA8A2B850EB1B663764C
-SSH exit code: 0
-Downloaded 4 output files. SHA256=BF7AB219F7ACE02641F599AB43E4E166D1A41EF784A8EA8A2B850EB1B663764C
-Remote records: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\naming_20261019\transport_validation_301fb4cb\good\remote

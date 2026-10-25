@@ -1,0 +1,24 @@
+{
+  "mode": "offline",
+  "status": "passed",
+  "step_7_complete": false,
+  "checked_at_utc": "2026-10-25T08:55:10.489027+00:00",
+  "tests_run": 33,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "torch_imported": false,
+  "actual_model_calls": 0,
+  "actual_tc2_connections": 0,
+  "actual_slurm_submissions": 0,
+  "failure_details": [],
+  "source_hashes": {
+    "configs/tc2_gpu/experiments.json": "1DB816E3E9CCD389641EB93DD6F95887044C6FBB255182B7359C6784DC44640C",
+    "scripts/experiments_tc2_gpu.py": "83B9535E6DB929CE62D391925B2D353DFA6786BEF692A35ECB93D988B67D1087",
+    "scripts/analyze_scores_tc2_gpu.py": "A694A3C31F95222FA76111ED5555DC9EB7031FE8AEDDE512AEC527E0BF4E42AB",
+    "scripts/slurm/experiments_tc2_gpu.sh": "75C7EFAC45C6EE357CE7426BBA5752BD1FAFF015527A2542D18142A2AB56EF0A",
+    "scripts/collect_experiments_tc2_gpu.py": "93135DF33E6F7179E0F1E79AE8AEF067D971FF24817C40A8BF905D23C66BCB11",
+    "tests/test_experiments_tc2_gpu.py": "B5AB89CD1F710C19CEE137AD9718C2DD8DE65CCB93D8590C9AE8AC728C927B8D",
+    "docs/TC2_GPU_EXPERIMENTS.md": "C0A004A0A0DDE15E248DE09D93D7106C40D1CABA2CA510D0093B4D92E5F31D14"
+  }
+}

@@ -20,7 +20,10 @@ import sys
 import zlib
 
 
-CONFIG = "configs/figure_revision_tc2_gpu.json"
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+from tc2_gpu_provenance import historical_sha, current_source_sha, require_current_acceptance
+CONFIG = "configs/tc2_gpu/figure_revision.json"
 FIGURES = ("F1_methods", "baseline_comparison", "F3_hyperparameters", "F3_components",
            "F3_fewshot", "F4_improvement", "F4_q_sensitivity", "F4_score_distributions",
            "F4_defect_size", "F5_resources", "loco_extension", "F2_cases_01",
@@ -185,7 +188,7 @@ def validate_input(root, config, analysis_root=None):
     if len(inputs["protected_sources"]) != 44 or inputs["analysis_sources"] != ANALYSIS_HASHES or len(protected) != 51:
         raise ValueError("Expected all 44 scientific and seven analysis sources")
     for name, expected in protected.items():
-        if sha(inside(root, name)) != expected:
+        if historical_sha(root, name) != expected:
             raise ValueError("Frozen source fingerprint differs: " + name)
     plot = load(original / "plot_manifest.json")
     if plot.get("status") != "passed" or plot.get("figure_count") != 15 or {item["name"] for item in plot["figures"]} != set(FIGURES):
@@ -202,7 +205,7 @@ def build_plan(root, analysis_root=None):
     root = extended(root)
     config = validate_config(load(inside(root, CONFIG)))
     original, protected, records = validate_input(root, config, analysis_root)
-    sources = {name: sha(inside(root, name)) for name in EXPECTED_SOURCES}
+    sources = {name: current_source_sha(root, name) for name in EXPECTED_SOURCES}
     plan = {"schema_version": "1.0", "workflow_id": "tc2_gpu", "scope": "figure_revision",
             "input_analysis": config["input_analysis"], "figure_revision_sources": sources,
             "preserved_sources": protected, "input_artifacts": records,
@@ -596,6 +599,7 @@ def verify_output(output, expected_identity=None):
 
 
 def run(root, job_id, plan):
+    require_current_acceptance(root, "figure_revision")
     if not re.fullmatch(r"[1-9][0-9]*", str(job_id)) or os.environ.get("SLURM_JOB_ID") != str(job_id):
         raise ValueError("Figure rendering requires its assigned scheduler job")
     if os.environ.get("CUDA_VISIBLE_DEVICES") not in ("-1", "") or os.environ.get("SLURM_GPUS") not in (None, "", "0"):

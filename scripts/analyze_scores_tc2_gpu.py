@@ -26,8 +26,9 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from metric_core import METRIC_POLICY_VERSION, binary_auroc_ap, binary_inputs, finite_scores
 import tc2_gpu_protocol as p
+from tc2_gpu_provenance import current_source_hashes
 
-DESIGN_FILE = "configs/experiments_tc2_gpu.json"
+DESIGN_FILE = "configs/tc2_gpu/experiments.json"
 ANALYSIS_FILE = "scripts/analyze_scores_tc2_gpu.py"
 ANALYSIS_ARTIFACTS = ("analysis.json", "analysis.csv", "evidence.json")
 RESULT_ARTIFACTS = ("config.yaml", "samples.json", "predictions.npz", "metrics.json", "evidence.json", "validation.json")
@@ -151,14 +152,14 @@ def normal_dev_threshold(dev_scores):
 
 
 def load_stage(root, stage):
-    """Bind analysis scope to the approved frozen fits and accepted source hashes."""
+    """Bind analysis scope to the frozen fits and current source fingerprints."""
     root = Path(root).resolve()
     design = read(root / DESIGN_FILE)
     if design.get("workflow_id") != "tc2_gpu" or design.get("protocol_sha256") != p.PROTOCOL_SHA256:
         raise ValueError("Analysis design belongs to another workflow or protocol")
     scientific = design["scientific_source_hashes"]
-    if len(scientific) != 31 or any(sha(p.inside(root, name)) != value for name, value in scientific.items()):
-        raise ValueError("Accepted scientific sources have changed")
+    if scientific != current_source_hashes(root, "workflow") or any(sha(p.inside(root, name)) != value for name, value in scientific.items()):
+        raise ValueError("Current scientific sources have changed")
     plan = p.build_plan(root)["fits"]
     if design["fits"] != plan:
         raise ValueError("Analysis design changed the frozen fit matrix")

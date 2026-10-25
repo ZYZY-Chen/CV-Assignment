@@ -1,5 +1,16 @@
 # Formal stages of the TC2 GPU Experiment Protocol
 
+> **Current profile and historical-record boundary (2026-10-25)**
+>
+> The retained design and acceptance account below describes the earlier implementation. Its job IDs, source hashes, remote paths, command blocks and completion flags are historical. Exact original bytes are in the [archive index](../archive/index.json); they do not certify this refactored checkout.
+>
+> Current configurations are under configs/tc2_gpu/, and independent fingerprints are in configs/tc2_gpu/source_manifest.json. The current deployment is unavailable. Formal actions refuse execution without new source/environment acceptance. Historical SSH and submission examples below are not current connection instructions.
+>
+> Use the [current protocol](TC2_GPU_PROTOCOL.md), [naming rules](TC2_GPU_NAMING.md) and [archive guide](TC2_GPU_ARCHIVE.md) for current paths. Local read-only commands from the repository root are python -B scripts/run_tc2_gpu.py plan and python -B scripts/verify_archive_tc2_gpu.py.
+
+## Historical design and acceptance account
+
+
 This is the approved step-7 implementation. It completes the frozen 66-fit matrix in twelve separate stages, reusing the two accepted bottle results from pilot job 44024. It therefore plans 64 new fits. The original protocol, manifests, accepted scientific implementations, environment locks, pilot files and historical artifacts remain unchanged. The frozen `protocol_v2.json` filename retains its original identity; `tc2_gpu` is the current workflow name.
 
 ## Stage order and dependencies

@@ -1,5 +1,16 @@
 # Step 8: analysis of the TC2 GPU Experiment Protocol
 
+> **Current profile and historical-record boundary (2026-10-25)**
+>
+> The retained design and acceptance account below describes the earlier implementation. Its job IDs, source hashes, remote paths, command blocks and completion flags are historical. Exact original bytes are in the [archive index](../archive/index.json); they do not certify this refactored checkout.
+>
+> Current configurations are under configs/tc2_gpu/, and independent fingerprints are in configs/tc2_gpu/source_manifest.json. The current deployment is unavailable. Formal actions refuse execution without new source/environment acceptance. Historical SSH and submission examples below are not current connection instructions.
+>
+> Use the [current protocol](TC2_GPU_PROTOCOL.md), [naming rules](TC2_GPU_NAMING.md) and [archive guide](TC2_GPU_ARCHIVE.md) for current paths. Local read-only commands from the repository root are python -B scripts/run_tc2_gpu.py plan and python -B scripts/verify_archive_tc2_gpu.py.
+
+## Historical design and acceptance account
+
+
 This is the user-approved result-analysis design. It consumes the twelve accepted experiment collections, 66 unique fits (64 new and two pilot results reused), and 108 saved-score analysis rows. It does not fit a model, modify a threshold, choose a new scoring rule, change the frozen protocol, or write report chapters. Existing scientific sources, seven experiment sources, environment locks, manifests, results and historical records remain unchanged.
 
 ## Inputs and provenance

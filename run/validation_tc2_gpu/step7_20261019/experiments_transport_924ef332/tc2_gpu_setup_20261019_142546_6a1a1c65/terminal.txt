@@ -1,5 +1,0 @@
-TC2 GPU: RunExperiments
-Local output: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\step7_20261019\experiments_transport_924ef332\tc2_gpu_setup_20261019_142546_6a1a1c65
-A submitted or running job is not a passed check. Passwords are not stored.
-STOPPED: Cannot find path 'C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\tests\test_experiments_tc2_gpu.py' because it does not exist.
-Send this local output path back: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\step7_20261019\experiments_transport_924ef332\tc2_gpu_setup_20261019_142546_6a1a1c65\terminal.txt

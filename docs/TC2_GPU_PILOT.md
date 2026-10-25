@@ -1,5 +1,16 @@
 # Step 6: TC2 GPU Real-Data Cache and Pilot
 
+> **Current profile and historical-record boundary (2026-10-25)**
+>
+> The retained design and acceptance account below describes the earlier implementation. Its job IDs, source hashes, remote paths, command blocks and completion flags are historical. Exact original bytes are in the [archive index](../archive/index.json); they do not certify this refactored checkout.
+>
+> Current configurations are under configs/tc2_gpu/, and independent fingerprints are in configs/tc2_gpu/source_manifest.json. The current deployment is unavailable. Formal actions refuse execution without new source/environment acceptance. Historical SSH and submission examples below are not current connection instructions.
+>
+> Use the [current protocol](TC2_GPU_PROTOCOL.md), [naming rules](TC2_GPU_NAMING.md) and [archive guide](TC2_GPU_ARCHIVE.md) for current paths. Local read-only commands from the repository root are python -B scripts/run_tc2_gpu.py plan and python -B scripts/verify_archive_tc2_gpu.py.
+
+## Historical design and acceptance account
+
+
 The user approved this design before implementation. It applies the frozen **TC2 GPU Experiment Protocol** to the MVTec AD bottle category and two existing B0 entries. All new comments, messages, documentation, and records use English. Existing Chinese, frozen inputs, environment locks, accepted scientific sources, historical records, and the Git index are preserved.
 
 ## Approved scope
@@ -65,4 +76,4 @@ The approved implementation is complete locally. All 28 offline tests passed wit
 
 The original thirteen helper actions passed offline transport regression, producing nineteen remote command fixtures. The new helper passed six transport cases, packaging-only validation, PowerShell syntax checks, nine Bash syntax checks, and nine bootstrap publication cases. Invalid source archive/hash/member/link/manifest cases were refused before extraction; an existing destination was preserved. These are isolated offline fixtures, not TC2 acceptance. No model execution, TC2 connection, or SLURM submission was performed by the assistant.
 
-Step 6 requires a COMPLETED/0:0 scheduler result, a complete FP32 cache, two verified formal results with all five scores and pixel metrics, saved metric reproduction within absolute 1e-12, both reuse calls skipped without artifact changes, and independent local verification. The current implementation/evidence status is recorded in [the local step-6 record](../run/validation_tc2_gpu/step6_20261019/setup_status.json). Real-data completion remains pending until returned TC2 records satisfy every condition.
+Step 6 requires a COMPLETED/0:0 scheduler result, a complete FP32 cache, two verified formal results with all five scores and pixel metrics, saved metric reproduction within absolute 1e-12, both reuse calls skipped without artifact changes, and independent local verification. The current implementation/evidence status is recorded in [the local step-6 record](../archive/index.json) (archived path: `run/validation_tc2_gpu/step6_20261019/setup_status.json`). Real-data completion remains pending until returned TC2 records satisfy every condition.

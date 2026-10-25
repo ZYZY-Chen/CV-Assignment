@@ -1,0 +1,18 @@
+name: ca6129-tc2_gpu
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip>=24
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu128
+      - torch==2.11.0
+      - torchvision==0.26.0
+      - numpy==1.26.4
+      - scipy==1.12.0
+      - scikit-learn==1.7.2
+      - pillow==12.3.0
+      - pandas==2.2.3
+      - matplotlib==3.10.9
+      - PyYAML==6.0.3
+      - tqdm==4.70.1
