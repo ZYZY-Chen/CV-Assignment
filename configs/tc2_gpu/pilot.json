@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0",
+  "workflow_id": "tc2_gpu",
+  "protocol_sha256": "52433DAF6E12195E53AFAD6F55F396B3B343131A315400AFDF85BAEA53F822F9",
+  "dataset": "mvtec_ad",
+  "category": "bottle",
+  "run_seed": 17,
+  "normal_train_n": 100,
+  "run_keys": [
+    "B0_mvtec_ad_bottle_padim_s17_n100_B7B86DBB2043",
+    "B0_mvtec_ad_bottle_patchcore_s17_n100_BBC2B85C2FA8"
+  ],
+  "fits": [
+    {
+      "run_key": "B0_mvtec_ad_bottle_padim_s17_n100_B7B86DBB2043",
+      "configuration": {
+        "stage": "B0",
+        "dataset": "mvtec_ad",
+        "category": "bottle",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      }
+    },
+    {
+      "run_key": "B0_mvtec_ad_bottle_patchcore_s17_n100_BBC2B85C2FA8",
+      "configuration": {
+        "stage": "B0",
+        "dataset": "mvtec_ad",
+        "category": "bottle",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 17
+        }
+      }
+    }
+  ],
+  "expected_counts": {
+    "images": 292,
+    "fit_pool": 167,
+    "dev": 42,
+    "test": 83
+  },
+  "workflow_acceptance_job_id": null,
+  "workflow_source_hashes": {
+    "src/tc2_gpu_protocol.py": "F188E125EA576033A042138A4A880B4922C3851F71253045163814C3BDAC401A",
+    "src/tc2_gpu_cache.py": "118F9990414DD8ADE116BEFC128AB829776C79C98DEB34E625250FEBAFC5E9BE",
+    "src/tc2_gpu_runner.py": "CEDC4ECD543DC25EFA6E4003F158954C775B842B98A2609BE943928AA900628D",
+    "scripts/tc2_gpu/workflow/run_workflow.py": "7316493DBE6D729AFB0FF218B62F6FF665BD831BA4E49D30B610C740BE8AD0D6",
+    "configs/tc2_gpu/runtime.json": "B057766AFDF473A89E74016B2F9DF6B311510BA8E444D42EE14C075BAF08AEAA",
+    "tests/test_workflow_tc2_gpu.py": "D4A58DC7A99124FF5DE32236D7C63FFEA978EB59A2A6A30226FE43052D11CEBE",
+    "scripts/tc2_gpu/slurm/check_workflow.sh": "F0D2F1FF96C734F83D1D3ED936DED5BF4948242B360A01F9EDC4A7A13A99D7FA",
+    "src/padim_adapter.py": "803E30F1AD1F591BDD26C0D458D252D397578F8E5398486855DAC0257F443AB3",
+    "src/patchcore_adapter.py": "4877D66625180BB36258EA6B99DE9427E545764614AB0CB245F5FAFC44EC307F",
+    "src/sampling.py": "BEDB33057BC7E938108E4B9B177ECDE121418B24DC348CDF07AD04F3F0284B79",
+    "src/scoring.py": "E8348550F0A55CC8A1EDBB4B1310FBE985493F22DAE71B6B562F34720C3D4B0B",
+    "src/anomaly_postprocess.py": "4BD9E9BE3CAD7B90A24F7DBFAABDB55EB403C94BCF4B771FF9D73A0631B9D4BD",
+    "tests/test_algorithms_tc2_gpu.py": "0D8AF1D6167B90D3B8B4334D01DD5A86D36DA2EC697761BCFAAA2E1A3CD42EFA",
+    "scripts/tc2_gpu/slurm/check_algorithms.sh": "8977AD09689193BEC2735D2E2869EEF0FC1A777B3763FFBB2DC0F7EC94F1BEF2",
+    "src/metric_core.py": "D218A438031DE6B0A83B14951354CD66A85ED65F97FFC2CFBAEFF1D4FB91DB78",
+    "src/evaluate.py": "4DB2413CC6AAF4210B143285FE5FD7FC6A8C08E98C67073E9A92D31359E68BC6",
+    "src/data.py": "23E66B1E76FC81E5C81D0DE1E739893F8FF509140AC6DA5B80CC4F0162063704",
+    "configs/tc2_gpu/workflow.json": "5CEC5E20C5E212AC035D59042A59DEDE5E396172BA1EBA7F47A467BA058AEF16",
+    "tests/test_metrics_tc2_gpu.py": "185FC0061DC2C439BEA9F3E89C4DD5FC62C2442E7CCDE2D22B0754590A6B7ED0",
+    "scripts/tc2_gpu/slurm/check_metrics.sh": "62DB0DF905E6BC82997660877AE5CEEA1C9C1EB046BF6E768546AB310E42733D",
+    "configs/tc2_gpu/protocol.json": "52433DAF6E12195E53AFAD6F55F396B3B343131A315400AFDF85BAEA53F822F9",
+    "environment-tc2_gpu.yml": "8361162136530EA353603EF4268EB1AE489B3DE009A5001C26B9DF9CFE0AD7A4",
+    "requirements-tc2_gpu-lock.txt": "F7B848F10FFB3F3CCEB707450B2A5FE4DCD9A6C3B489963A8932094E016840B6",
+    "manifests/manifest_mvtec_ad_bottle.json": "5F927514A0597D8A2E1300EE6BDB9391F28A942397321BC56176B1D48614414B",
+    "manifests/manifest_mvtec_ad_cable.json": "CE9CE7B89FD541A264DAC7D9CBA39D9C238E26256297EF36285746AEC458277A",
+    "manifests/manifest_mvtec_ad_capsule.json": "201C8ADE5E99338EBBA3EC4B28AE4CCA87F2D318D839C08D006E4687E461ACA0",
+    "manifests/manifest_mvtec_ad_screw.json": "FEBC973D6A76C1D7ED76775712207CF8D51328286FA22D0211C34ED280F6B6FB",
+    "manifests/manifest_mvtec_ad_tile.json": "7DA1674991D3971813C8E354C4FAA13EDC24848099CF067319704D0509DF6AA7",
+    "manifests/manifest_mvtec_ad_wood.json": "7A0CDDE6A6D894E993B3B7555F05CACC5C89CDC319F0B37258A1769CC5065C17",
+    "manifests/manifest_mvtec_loco_juice_bottle.json": "5C14708349BC29903A28D166A8E3FC5D71D9413A23C66405A20EC59CAC14FE86",
+    "manifests/manifest_mvtec_loco_screw_bag.json": "049C03AF010C34810B4D13AB9280B2295BB25231844AE90AA3610AD7D54F1C4A",
+    "src/tc2_gpu_provenance.py": "6DEA37ED683651606F44FB6A88D6F3B8D962F736EAD7937B15AE2F58485B76DD",
+    "scripts/__init__.py": "C6D7BD89FFF20924FF97415C6E911F38CB7F2C894EF1B99217ADC35F7615CF47",
+    "scripts/tc2_gpu/__init__.py": "AA9DB16FB9AD64D69B244F0B9E14821966036B52B0055207937DDA57507331D5",
+    "scripts/tc2_gpu/_bootstrap.py": "8325A2DA206793559CA99E20022501159E763781BFF9A7352612036C80978376",
+    "scripts/tc2_gpu/workflow/__init__.py": "21D7F2A77601A9DF715D59A521B23A1D551958B5917F5A45C46306E893CCBECC",
+    "tests/test_entrypoints_tc2_gpu.py": "A42909B16AE8146E0BEB2D5517D1EF5579804922E4382773A08D4E51FEED2A10"
+  },
+  "resources": {
+    "partition": "MGPU-TC2",
+    "qos": "normal",
+    "nodes": 1,
+    "tasks": 1,
+    "gpus": 1,
+    "cpus_per_task": 2,
+    "memory_gib": 24,
+    "time_limit": "02:00:00"
+  },
+  "minimum_free_bytes": 4294967296,
+  "maximum_export_bytes": 536870912,
+  "expected_gpu": "NVIDIA A40",
+  "expected_driver": "570.148.08",
+  "expected_cuda_build": "12.8"
+}

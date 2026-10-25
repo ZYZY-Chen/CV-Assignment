@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "workflow_id": "tc2_gpu",
+  "display_name": "TC2 GPU Experiment Protocol",
+  "meaning": {
+    "tc2": "The historical formal experiments ran on the TC2 cluster.",
+    "gpu": "Formal fitting requires GPU execution; offline validation may use CPU."
+  },
+  "protocol": {
+    "path": "configs/tc2_gpu/protocol.json",
+    "sha256": "52433DAF6E12195E53AFAD6F55F396B3B343131A315400AFDF85BAEA53F822F9",
+    "protocol_id": "ca6129_industrial_ad_tc2_gpu",
+    "human_readable_path": "docs/guides/TC2_GPU_PROTOCOL.md"
+  },
+  "frozen_protocol": {
+    "path": "configs/tc2_gpu/protocol.json",
+    "sha256": "52433DAF6E12195E53AFAD6F55F396B3B343131A315400AFDF85BAEA53F822F9",
+    "protocol_id": "ca6129_industrial_ad_tc2_gpu",
+    "protocol_version": "2.0.0",
+    "human_readable_path": "docs/guides/TC2_GPU_PROTOCOL.md"
+  },
+  "outputs": {
+    "formal_root": "run/tc2_gpu",
+    "results": "run/tc2_gpu/results",
+    "logs": "run/tc2_gpu/logs",
+    "summaries": "run/tc2_gpu/summaries",
+    "resources": "run/tc2_gpu/resources",
+    "feature_cache": "run/tc2_gpu/feature_cache",
+    "setup": "run/setup_tc2_gpu",
+    "validation": "run/validation_tc2_gpu",
+    "local_output_prefix": "tc2_gpu_setup_"
+  },
+  "metric_policy_version": "tc2_gpu_tie_grouped",
+  "history": {
+    "index": "archive/index.json",
+    "protocol_role": "protocol",
+    "original_protocol_sha256": "3098B6A86DBA64EE439BFE61C7A4FCFFCD082371D5A80FFBC7940997ED6A1ED1"
+  },
+  "source_manifest": "configs/tc2_gpu/source_manifest.json",
+  "current_source_status": "local_validation_required",
+  "current_deployment_status": "unavailable",
+  "local_helper": "output/tc2_gpu_setup.ps1",
+  "naming_design": "docs/guides/TC2_GPU_NAMING.md"
+}

@@ -1,0 +1,12 @@
+test_all_public_python_help_entries_start_without_output (__main__.EntrypointTests.test_all_public_python_help_entries_start_without_output) ... ok
+test_bootstrap_uses_entry_root_even_when_loaded_from_another_root (__main__.EntrypointTests.test_bootstrap_uses_entry_root_even_when_loaded_from_another_root) ... ok
+test_client_validate_and_unavailable_rejection_create_no_outputs (__main__.EntrypointTests.test_client_validate_and_unavailable_rejection_create_no_outputs) ... ok
+test_copied_hash_named_entry_honors_both_explicit_root_forms (__main__.EntrypointTests.test_copied_hash_named_entry_honors_both_explicit_root_forms) ... ok
+test_direct_plan_is_readonly_from_an_unrelated_directory (__main__.EntrypointTests.test_direct_plan_is_readonly_from_an_unrelated_directory) ... ok
+test_missing_dependency_in_second_root_never_falls_back (__main__.EntrypointTests.test_missing_dependency_in_second_root_never_falls_back) ... ok
+test_two_roots_replace_cached_phase_and_protocol_modules (__main__.EntrypointTests.test_two_roots_replace_cached_phase_and_protocol_modules) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 11.868s
+
+OK

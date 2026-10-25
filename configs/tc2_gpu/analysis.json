@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "workflow_id": "tc2_gpu",
+  "stage_id": "analysis",
+  "protocol_display_name": "TC2 GPU Experiment Protocol",
+  "protocol_sha256": "52433DAF6E12195E53AFAD6F55F396B3B343131A315400AFDF85BAEA53F822F9",
+  "design_sha256": "E527F8B26A457D91A3FA1A7006E7034DF04829ABC83ACE5396E4FA0C7F3C9FD9",
+  "expected_total_fits": 66,
+  "expected_analysis_rows": 108,
+  "unique_pc_analysis_rows": 90,
+  "main_categories": [
+    "bottle",
+    "cable",
+    "capsule",
+    "screw",
+    "tile",
+    "wood"
+  ],
+  "extension_categories": [
+    "juice_bottle",
+    "screw_bag"
+  ],
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "score_rules": [
+    "native",
+    "max",
+    "top_0.001",
+    "top_0.01",
+    "top_0.05"
+  ],
+  "primary_rules": [
+    "native",
+    "max",
+    "top_0.01"
+  ],
+  "statistics": {
+    "category_weighting": "equal",
+    "seed_standard_deviation_ddof": 1,
+    "single_seed_standard_deviation": null,
+    "paired_deltas": "same category and seed",
+    "checkpoint_rows": "verify overlap and retain lineage without adding observations"
+  },
+  "resources": {
+    "partition": "MGPU-TC2",
+    "qos": "normal",
+    "cpus": 2,
+    "memory_mib": 8192,
+    "gpus": 0,
+    "time_limit": "00:15:00",
+    "minimum_free_bytes": 8589934592
+  },
+  "case_policy": {
+    "seed": 17,
+    "maximum_cases": 16,
+    "maximum_per_category": 2,
+    "minimum_real_failures_when_available": 2,
+    "normal_false_positive_when_available": true,
+    "micro_hard_case_when_available": true,
+    "size_quartile_fraction": 0.25,
+    "area_ties": "relative image path",
+    "display_calibration": "normal development maps only",
+    "display_upper_percentile": 99.5,
+    "test_score_thresholds": "unchanged saved normal-development 95th percentile"
+  },
+  "analysis_sources": [
+    "configs/tc2_gpu/analysis.json",
+    "scripts/tc2_gpu/analysis/analyze_results.py",
+    "scripts/tc2_gpu/analysis/plot_results.py",
+    "scripts/tc2_gpu/collect/collect_analysis.py",
+    "scripts/tc2_gpu/slurm/run_analysis.sh",
+    "tests/test_analysis_tc2_gpu.py",
+    "docs/experiment_history/implementation/STEP_08_ANALYSIS.md",
+    "scripts/__init__.py",
+    "scripts/tc2_gpu/__init__.py",
+    "scripts/tc2_gpu/_bootstrap.py",
+    "scripts/tc2_gpu/analysis/__init__.py",
+    "scripts/tc2_gpu/collect/__init__.py",
+    "scripts/tc2_gpu/collect/collect_pilot.py",
+    "src/tc2_gpu_provenance.py"
+  ],
+  "pixel_metrics": "Use accepted original-resolution remote metrics; no local pixel-metric recomputation.",
+  "model_storage": "Analytical FP32 bank or Gaussian tensors plus PaDiM int64 dimension indices; not a serialized model file size.",
+  "report_writing": false
+}

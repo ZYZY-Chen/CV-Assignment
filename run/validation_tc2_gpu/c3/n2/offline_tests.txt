@@ -1,0 +1,28 @@
+test_all_public_python_help_entries_start_without_output (__main__.EntrypointTests.test_all_public_python_help_entries_start_without_output) ... ok
+test_bootstrap_uses_entry_root_even_when_loaded_from_another_root (__main__.EntrypointTests.test_bootstrap_uses_entry_root_even_when_loaded_from_another_root) ... ok
+test_client_validate_and_unavailable_rejection_create_no_outputs (__main__.EntrypointTests.test_client_validate_and_unavailable_rejection_create_no_outputs) ... FAIL
+test_copied_hash_named_entry_honors_both_explicit_root_forms (__main__.EntrypointTests.test_copied_hash_named_entry_honors_both_explicit_root_forms) ... ok
+test_direct_plan_is_readonly_from_an_unrelated_directory (__main__.EntrypointTests.test_direct_plan_is_readonly_from_an_unrelated_directory) ... ok
+test_two_roots_replace_cached_phase_and_protocol_modules (__main__.EntrypointTests.test_two_roots_replace_cached_phase_and_protocol_modules) ... ok
+
+======================================================================
+FAIL: test_client_validate_and_unavailable_rejection_create_no_outputs (__main__.EntrypointTests.test_client_validate_and_unavailable_rejection_create_no_outputs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\tests\test_entrypoints_tc2_gpu.py", line 120, in test_client_validate_and_unavailable_rejection_create_no_outputs
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+AssertionError: 1 != 0 : Current TC2 GPU action refused before output or network activity: ModuleNotFoundError: No module named 'tc2_gpu_provena
+nce'
+At C:\Users\mhjv_\PycharmProjects\6129_assignment\scripts\tc2_gpu\client\tc2_gpu.ps1:71 char:28
++ ... DE -ne 0) { throw ('Current TC2 GPU action refused before output or n ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Current TC2 GPU...gpu_provenance':String) [], RuntimeException
+    + FullyQualifiedErrorId : Current TC2 GPU action refused before output or network activity: ModuleNotFoundError: N 
+   o module named 'tc2_gpu_provenance'
+ 
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 7.430s
+
+FAILED (failures=1)

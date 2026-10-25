@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "protocol_sha256": "52433DAF6E12195E53AFAD6F55F396B3B343131A315400AFDF85BAEA53F822F9",
+  "connection": {
+    "username": null,
+    "host": null,
+    "port": 22,
+    "method": "ssh",
+    "authentication_configured": false
+  },
+  "remote": {
+    "home": null,
+    "setup_root_policy": null,
+    "setup_root": null,
+    "setup_root_created_or_inspected": false,
+    "existing_project_root": null,
+    "datasets_root": null,
+    "weights_path": null,
+    "conda_environment_prefix": null,
+    "anaconda_module": "anaconda/25.5.1",
+    "anaconda_module_load_verified": false,
+    "partition": "MGPU-TC2",
+    "qos": "normal"
+  },
+  "initial_job_request": {
+    "nodes": 1,
+    "tasks": 1,
+    "gpus": 1,
+    "cpus_per_task": 2,
+    "memory_gib": 4,
+    "time_limit": "00:15:00",
+    "submit_only_after_actual_qos_verification": true
+  },
+  "expected_inputs": {
+    "category_manifests": 8,
+    "images": 3650,
+    "masks": 1019,
+    "weights_enum": "torchvision.ResNet18_Weights.IMAGENET1K_V1",
+    "weights_official_url": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+    "weights_official_sha256_prefix": "f37072fd"
+  },
+  "preparation": {
+    "approved": false,
+    "environment_prefix": null,
+    "datasets_root": null,
+    "weights_path": null,
+    "python_major_minor": "3.10",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "torch_index": "https://download.pytorch.org/whl/cu128",
+    "minimum_driver": "570.26",
+    "minimum_glibc": "2.28",
+    "architecture": "x86_64",
+    "requirements_lock_sha256": "1402AD89C7D4ADB4AE8A35721AAA197BA31BE28A0231465D2E4841E269B5B10F",
+    "archive_sources": {
+      "mvtec_loco/juice_bottle": "https://www.mydrive.ch/shares/48239/3ad28d48636eada48f0caded666a804a/download/430647100-1646843074/juice_bottle.tar.xz",
+      "mvtec_loco/screw_bag": "https://www.mydrive.ch/shares/48241/be5dc3a69c92932644aaac945451d4e7/download/430647115-1646843129/screw_bag.tar.xz"
+    },
+    "input_source_revision": "readme_recovery_tc2_gpu",
+    "mvtec_ad_mirror": {
+      "approved": true,
+      "repository": "micguida1/mvtech_anomaly_detection",
+      "revision": "eb692b36147a3b3f12c561b879a062104c1f20b8",
+      "archive_name": "mvtec_anomaly_detection.tar.xz",
+      "url": "https://huggingface.co/datasets/micguida1/mvtech_anomaly_detection/resolve/eb692b36147a3b3f12c561b879a062104c1f20b8/mvtec_anomaly_detection.tar.xz",
+      "size_bytes": 5264982680,
+      "sha256": "CF4313B13603BEC67ABB49CA959488F7EEDCE2A9F7795EC54446C649AC98CD3D",
+      "categories": [
+        "bottle",
+        "cable",
+        "capsule",
+        "screw",
+        "tile",
+        "wood"
+      ],
+      "source_kind": "third_party_mirror",
+      "original_publisher": "MVTec Software GmbH",
+      "approval": "User confirmed step-2 data-source supplementary changes in this conversation.",
+      "identity_check": "Pinned mirror archive hash plus unchanged per-image and per-mask frozen manifest hashes."
+    }
+  },
+  "scope": {
+    "output_root": "run/setup_tc2_gpu",
+    "permit_package_install_or_upgrade": false,
+    "permit_dataset_or_weights_download": false,
+    "permit_feature_cache_generation": false,
+    "permit_model_fitting": false,
+    "permit_legacy_input_modification": false,
+    "current_deployment_changes_authorized": false,
+    "formal_tc2_gpu_output_activation_step": 5
+  },
+  "deployment": {
+    "status": "unavailable",
+    "reason": "The TC2 allocation has been reclaimed.",
+    "acceptance_record": null,
+    "acceptance_records": {}
+  },
+  "history": {
+    "index": "archive/index.json",
+    "original_configuration_role": "setup"
+  }
+}

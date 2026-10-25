@@ -1,0 +1,106 @@
+{
+  "status": "passed",
+  "validation_scope": "Local lifecycle migration and offline validation only",
+  "baseline_commit": "3efa04e3d76d846c88c13b24e2cdde66baa8cb80",
+  "head_unchanged": true,
+  "staged_content_unchanged": true,
+  "protected_files_unchanged": 59,
+  "numerical_files_byte_identical": 10,
+  "archive": {
+    "status": "passed",
+    "archive_count": 20,
+    "members_verified": 6444,
+    "bytes_verified": 457410962,
+    "physical_extraction_performed": false
+  },
+  "archive_index_sha256": "913DBB466000B33BB72C5C46DBFC6B1A5D3DCC8D7BF16E4D2CE1D6A25AFBEA37",
+  "protocol_sha256": "FC240CD6E9AD72D37C79AD169E3E8CE05BCAB8E5ABDE3A4BCB2226E911C296FF",
+  "source_manifest_sha256": "B20A6B928BA9A6A36298B0F4EF2F55450358EC1994BF881F032685AE2483E77D",
+  "current_sources_verified": 98,
+  "frozen_fits_unchanged": 66,
+  "scientific_stage_order_unchanged": [
+    "B0",
+    "H1",
+    "H2",
+    "C1",
+    "I1_seed17",
+    "R0",
+    "C1R",
+    "C2",
+    "F1",
+    "I1_all_seeds",
+    "I2",
+    "B0_LOCO"
+  ],
+  "offline_test_count": 195,
+  "suites": {
+    "m": {
+      "tag": "m3",
+      "tests": 9,
+      "report": "run/validation_tc2_gpu/c3/m3/setup_status.json"
+    },
+    "w": {
+      "tag": "w3",
+      "tests": 16,
+      "report": "run/validation_tc2_gpu/c3/w3/setup_status.json"
+    },
+    "v": {
+      "tag": "v3",
+      "tests": 10,
+      "report": "run/validation_tc2_gpu/c3/v3/setup_status.json"
+    },
+    "p": {
+      "tag": "p3",
+      "tests": 28,
+      "report": "run/validation_tc2_gpu/c3/p3/setup_status.json"
+    },
+    "e": {
+      "tag": "e3",
+      "tests": 33,
+      "report": "run/validation_tc2_gpu/c3/e3/setup_status.json"
+    },
+    "l": {
+      "tag": "l3",
+      "tests": 43,
+      "report": "run/validation_tc2_gpu/c3/l3/setup_status.json"
+    },
+    "a": {
+      "tag": "a3",
+      "tests": 28,
+      "report": "run/validation_tc2_gpu/c3/a3/test_report.json"
+    },
+    "f": {
+      "tag": "f3",
+      "tests": 21,
+      "report": "run/validation_tc2_gpu/c3/f3/test_report.json"
+    },
+    "n": {
+      "tag": "n5",
+      "tests": 7,
+      "report": "run/validation_tc2_gpu/c3/n5/setup_status.json"
+    }
+  },
+  "max_current_path_length": 120,
+  "max_current_path": "docs/experiment_history/repository_changes/REPOSITORY_LAYOUT_MIGRATION.md",
+  "chinese_lines_preserved": 7,
+  "new_gpu_acceptance": false,
+  "new_model_fits": 0,
+  "remote_connections": 0,
+  "slurm_submissions": 0,
+  "full_matplotlib_rendering": false,
+  "external_snapshot": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_structure_batch3_20261025_173324_22f7e540\\workspace_before.zip",
+  "static_checks": {
+    "python_files_compiled": 47,
+    "shell_files_parsed": 11,
+    "powershell_files_parsed": 2,
+    "embedded_python_blocks_compiled": 24,
+    "markdown_relative_links_checked": 243
+  },
+  "pre_migration_backup": {
+    "status": "verified",
+    "members": 131,
+    "zip_sha256": "7BFA47E01686E38C2EC59A19D6B178A63E134EA2C13D027705CB561BA3CFF7EB"
+  },
+  "external_wrapper_sha256": "134781584147F6AC4A73F6B89EC9284ED86571FE7B3F6E4FF7F41DDE474075EA",
+  "test_fixture_cleanup_scope": "Only new c3 fixtures; retained reports and all earlier records preserved"
+}

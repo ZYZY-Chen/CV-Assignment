@@ -1,0 +1,9 @@
+{
+  "mode": "offline",
+  "status": "passed",
+  "tests_run": 7,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "new_gpu_acceptance": false
+}
