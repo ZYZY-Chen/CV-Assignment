@@ -30,8 +30,8 @@ def module(name, filename):
     return value
 
 
-pilot = module("pilot_tc2_gpu_offline", "scripts/pilot_tc2_gpu.py")
-collector = module("collect_tc2_gpu_pilot_offline", "scripts/collect_tc2_gpu_pilot.py")
+pilot = module("pilot_tc2_gpu_offline", "scripts/tc2_gpu/pilot/run_pilot.py")
+collector = module("collect_tc2_gpu_pilot_offline", "scripts/tc2_gpu/collect/collect_pilot.py")
 
 
 def sha(path):
@@ -67,6 +67,9 @@ def passed(count):
 
 class PilotTests(unittest.TestCase):
     def setUp(self):
+        # Explicit unit helper: these tiny roots contain no executable source tree.
+        mocked = patch.object(pilot, "protocol", return_value=protocol)
+        mocked.start(); self.addCleanup(mocked.stop)
         self.root = OUTPUT / ("case_" + uuid.uuid4().hex[:10])
         self.root.mkdir()
         self.design = {"run_keys": ["B0_bottle_padim_seed17_N100", "B0_bottle_patchcore_seed17_N100"],
@@ -535,7 +538,7 @@ def main():
               "skipped": len(result.skipped), "actual_model_calls": 0, "actual_tc2_connections": 0,
               "actual_slurm_submissions": 0,
               "failure_details": [{"test": test.id(), "traceback": trace} for test, trace in result.failures + result.errors],
-              "source_hashes": {name: sha(ROOT / name) for name in ["scripts/pilot_tc2_gpu.py", "scripts/collect_tc2_gpu_pilot.py",
+              "source_hashes": {name: sha(ROOT / name) for name in ["scripts/tc2_gpu/pilot/run_pilot.py", "scripts/tc2_gpu/collect/collect_pilot.py",
                                                                   "configs/tc2_gpu/pilot.json", "tests/test_pilot_tc2_gpu.py"]}}
     write_json(OUTPUT / "setup_status.json", status)
     print(text)

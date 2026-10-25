@@ -15,9 +15,9 @@ import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "scripts"))
-import collect_experiments_loco_tc2_gpu as collector
-import collect_experiments_tc2_gpu as original
+sys.path.insert(0, str(ROOT))
+from scripts.tc2_gpu.collect import collect_experiments_loco as collector
+from scripts.tc2_gpu.collect import collect_experiments as original
 from tc2_gpu_provenance import current_source_sha, historical_sha
 
 OUTPUT = None
@@ -297,7 +297,7 @@ class MetricValidationTests(unittest.TestCase):
 class FrozenDerivationTests(unittest.TestCase):
     def test_historical_and_current_collector_fingerprints_are_separate(self):
         self.assertEqual(historical_sha(ROOT, "scripts/collect_experiments_tc2_gpu.py"), BASE_SHA256)
-        actual = current_source_sha(ROOT, "scripts/collect_experiments_tc2_gpu.py")
+        actual = current_source_sha(ROOT, "scripts/tc2_gpu/collect/collect_experiments.py")
         self.assertEqual(collector.BASE_COLLECTOR_SHA256, actual)
         self.assertNotEqual(actual, BASE_SHA256)
 
@@ -308,8 +308,8 @@ class FrozenDerivationTests(unittest.TestCase):
 
     def test_provenance_binds_actual_derivative_and_preserved_source_bytes(self):
         provenance = collector._collection_provenance()
-        self.assertEqual(provenance["base_collector_sha256"], current_source_sha(ROOT, "scripts/collect_experiments_tc2_gpu.py"))
-        expected = hashlib.sha256((ROOT / "scripts/collect_experiments_loco_tc2_gpu.py").read_bytes()).hexdigest().upper()
+        self.assertEqual(provenance["base_collector_sha256"], current_source_sha(ROOT, "scripts/tc2_gpu/collect/collect_experiments.py"))
+        expected = hashlib.sha256((ROOT / "scripts/tc2_gpu/collect/collect_experiments_loco.py").read_bytes()).hexdigest().upper()
         self.assertEqual(provenance["collector_sha256"], expected)
         self.assertEqual(provenance["purpose"], "B0_LOCO_collection_only")
 
@@ -318,8 +318,8 @@ class FrozenDerivationTests(unittest.TestCase):
             source = path.read_text(encoding="utf-8")
             function = next(node for node in ast.parse(source).body if isinstance(node, ast.FunctionDef) and node.name == "_semantic")
             return ast.get_source_segment(source, function)
-        before = semantic_source(ROOT / "scripts/collect_experiments_tc2_gpu.py")
-        after = semantic_source(ROOT / "scripts/collect_experiments_loco_tc2_gpu.py")
+        before = semantic_source(ROOT / "scripts/tc2_gpu/collect/collect_experiments.py")
+        after = semantic_source(ROOT / "scripts/tc2_gpu/collect/collect_experiments_loco.py")
         start = before.index('        if set(metrics) != ')
         end = before.index('    analysis_records = ', start)
         expected = before[:start] + '        _validate_result_metrics(metrics, cfg, samples)\n' + before[end:]
@@ -328,8 +328,8 @@ class FrozenDerivationTests(unittest.TestCase):
     def test_core_path_hash_runtime_and_final_chain_checks_are_unchanged(self):
         def definitions(path):
             return {node.name: ast.dump(node, include_attributes=False) for node in ast.parse(path.read_text(encoding="utf-8")).body if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef))}
-        before = definitions(ROOT / "scripts/collect_experiments_tc2_gpu.py")
-        after = definitions(ROOT / "scripts/collect_experiments_loco_tc2_gpu.py")
+        before = definitions(ROOT / "scripts/tc2_gpu/collect/collect_experiments.py")
+        after = definitions(ROOT / "scripts/tc2_gpu/collect/collect_experiments_loco.py")
         for name in ("_hex", "_result_path", "_cache_path", "_analysis_path", "_design", "_status", "_chain_evidence", "_runtime", "_expected_samples", "_artifact_manifest", "_tar_size", "_read_files", "_write_page"):
             with self.subTest(function=name):
                 self.assertEqual(after[name], before[name])
@@ -337,7 +337,7 @@ class FrozenDerivationTests(unittest.TestCase):
     def test_collector_and_test_are_standard_library_only(self):
         self.assertNotIn("torch", sys.modules)
         self.assertNotIn("numpy", sys.modules)
-        for relative in ("scripts/collect_experiments_loco_tc2_gpu.py", "tests/test_collect_experiments_loco_tc2_gpu.py"):
+        for relative in ("scripts/tc2_gpu/collect/collect_experiments_loco.py", "tests/test_collect_experiments_loco_tc2_gpu.py"):
             tree = ast.parse((ROOT / relative).read_text(encoding="utf-8"))
             imported = set()
             for node in ast.walk(tree):
@@ -348,7 +348,7 @@ class FrozenDerivationTests(unittest.TestCase):
             self.assertTrue(imported.isdisjoint({"numpy", "torch", "torchvision", "PIL"}))
 
     def test_cli_help_has_no_runtime_or_network_dependency(self):
-        result = subprocess.run([sys.executable, "-I", "-B", str(ROOT / "scripts/collect_experiments_loco_tc2_gpu.py"), "--help"],
+        result = subprocess.run([sys.executable, "-I", "-B", str(ROOT / "scripts/tc2_gpu/collect/collect_experiments_loco.py"), "--help"],
                                 capture_output=True, text=True, timeout=20)
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn("verify-collection", result.stdout)
@@ -514,7 +514,7 @@ def main():
               "actual_slurm_submissions": 0, "torch_imported": "torch" in sys.modules,
               "failure_details": [{"test": test.id(), "traceback": trace} for test, trace in result.failures + result.errors],
               "source_hashes": {name: current_source_sha(ROOT, name) for name in
-                               ("scripts/collect_experiments_loco_tc2_gpu.py", "scripts/collect_experiments_tc2_gpu.py",
+                               ("scripts/tc2_gpu/collect/collect_experiments_loco.py", "scripts/tc2_gpu/collect/collect_experiments.py",
                                 "tests/test_collect_experiments_loco_tc2_gpu.py")}}
     (OUTPUT / "setup_status.json").write_text(json.dumps(status, indent=2) + "\n", encoding="utf-8")
     print(text)

@@ -8,7 +8,7 @@
   "source_baseline_commit": "0828b30ebd030bcf55002d3efb4a69f73ccb930c",
   "authority": {
     "machine_readable_source": "configs/tc2_gpu/protocol.json",
-    "human_readable_explanation": "docs/TC2_GPU_PROTOCOL.md",
+    "human_readable_explanation": "docs/guides/TC2_GPU_PROTOCOL.md",
     "legacy_inventory": "archive/index.json",
     "protocol_fingerprint": "SHA-256 of the current protocol bytes; historical results retain their original protocol fingerprint in the archive.",
     "change_control": "Discuss every proposed modification, update its design, obtain explicit user confirmation, and then execute only that design. Approved protocol changes require a new version.",
@@ -690,7 +690,7 @@
   },
   "step_1_scope": {
     "new_files": [
-      "docs/TC2_GPU_PROTOCOL.md",
+      "docs/guides/TC2_GPU_PROTOCOL.md",
       "configs/tc2_gpu/protocol.json",
       "archive/index.json"
     ],

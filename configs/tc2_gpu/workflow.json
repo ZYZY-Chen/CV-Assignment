@@ -8,16 +8,16 @@
   },
   "protocol": {
     "path": "configs/tc2_gpu/protocol.json",
-    "sha256": "17DB7042296F52F16C63687E06EDCE7A6D550155ABE718351904F5952043E5BD",
+    "sha256": "FC240CD6E9AD72D37C79AD169E3E8CE05BCAB8E5ABDE3A4BCB2226E911C296FF",
     "protocol_id": "ca6129_industrial_ad_tc2_gpu",
-    "human_readable_path": "docs/TC2_GPU_PROTOCOL.md"
+    "human_readable_path": "docs/guides/TC2_GPU_PROTOCOL.md"
   },
   "frozen_protocol": {
     "path": "configs/tc2_gpu/protocol.json",
-    "sha256": "17DB7042296F52F16C63687E06EDCE7A6D550155ABE718351904F5952043E5BD",
+    "sha256": "FC240CD6E9AD72D37C79AD169E3E8CE05BCAB8E5ABDE3A4BCB2226E911C296FF",
     "protocol_id": "ca6129_industrial_ad_tc2_gpu",
     "protocol_version": "2.0.0",
-    "human_readable_path": "docs/TC2_GPU_PROTOCOL.md"
+    "human_readable_path": "docs/guides/TC2_GPU_PROTOCOL.md"
   },
   "outputs": {
     "formal_root": "run/tc2_gpu",
@@ -40,5 +40,5 @@
   "current_source_status": "local_validation_required",
   "current_deployment_status": "unavailable",
   "local_helper": "output/tc2_gpu_setup.ps1",
-  "naming_design": "docs/TC2_GPU_NAMING.md"
+  "naming_design": "docs/guides/TC2_GPU_NAMING.md"
 }

@@ -17,7 +17,7 @@ import uuid
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = None
-sys.path.insert(0, str(ROOT / "scripts"))
+sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "src"))
 import tc2_gpu_protocol as protocol
 
@@ -29,8 +29,8 @@ def module(name, filename):
     return value
 
 
-experiments = module("experiments_tc2_gpu_offline", "scripts/experiments_tc2_gpu.py")
-analysis = module("analyze_scores_tc2_gpu_offline", "scripts/analyze_scores_tc2_gpu.py")
+experiments = module("experiments_tc2_gpu_offline", "scripts/tc2_gpu/experiments/run_stages.py")
+analysis = module("analyze_scores_tc2_gpu_offline", "scripts/tc2_gpu/experiments/analyze_scores.py")
 
 
 def write_json(path, value):
@@ -243,6 +243,9 @@ class OrchestrationTests(unittest.TestCase):
 
 class DependencyTests(unittest.TestCase):
     def setUp(self):
+        # Tiny chain fixtures supply the protocol helper explicitly.
+        mocked = patch.object(experiments.pilot, "protocol", return_value=protocol)
+        mocked.start(); self.addCleanup(mocked.stop)
         self.root = fresh("dependency")
         self.design = experiments.load_design(ROOT)
         self.source_hashes = {"offline": "B" * 64}
@@ -319,6 +322,9 @@ class DependencyTests(unittest.TestCase):
 
 class PublicationTests(unittest.TestCase):
     def setUp(self):
+        # Publication guards use a unit protocol helper, never an implicit root fallback.
+        mocked = patch.object(experiments.pilot, "protocol", return_value=protocol)
+        mocked.start(); self.addCleanup(mocked.stop)
         self.root = fresh("publication")
         self.incoming = self.root / "tmp/incoming"
         self.incoming.mkdir(parents=True)
@@ -330,10 +336,10 @@ class PublicationTests(unittest.TestCase):
             shutil.copyfile(ROOT / name, target)
         (self.incoming / "experiments.sha256").write_text("".join(analysis.sha(self.incoming / name).lower() + "  " + name + "\n" for name in experiments.FILES), encoding="utf-8")
 
-    def test_lowercase_transport_hashes_publish_exactly_seven_new_files(self):
+    def test_lowercase_transport_hashes_publish_exact_current_files(self):
         with patch.object(experiments, "preflight", return_value={"status": "passed"}) as preflight:
             value = experiments.publish(self.root, self.incoming, "B0", self.record)
-        self.assertEqual((value["status"], value["files"]), ("published", 7))
+        self.assertEqual((value["status"], value["files"]), ("published", len(experiments.FILES)))
         preflight.assert_called_once()
         for name in experiments.FILES:
             self.assertEqual(analysis.sha(self.root / name), analysis.sha(self.incoming / name))
@@ -341,7 +347,7 @@ class PublicationTests(unittest.TestCase):
         self.assertTrue((self.record / "experiments.sha256").is_file())
 
     def test_conflicting_source_is_preserved_before_publication(self):
-        target = self.root / "scripts/experiments_tc2_gpu.py"
+        target = self.root / "scripts/tc2_gpu/experiments/run_stages.py"
         target.parent.mkdir(parents=True)
         target.write_text("Existing conflicting source\n", encoding="utf-8")
         before = analysis.sha(target)

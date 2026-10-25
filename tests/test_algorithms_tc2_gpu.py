@@ -23,7 +23,7 @@ import tc2_gpu_protocol as current_protocol
 import tc2_gpu_provenance as provenance
 PROTOCOL_HASH = current_protocol.PROTOCOL_SHA256
 SOURCES = ["src/padim_adapter.py", "src/patchcore_adapter.py", "src/sampling.py", "src/scoring.py",
-           "src/anomaly_postprocess.py", "tests/test_algorithms_tc2_gpu.py", "scripts/slurm/check_tc2_gpu_algorithms.sh",
+           "src/anomaly_postprocess.py", "tests/test_algorithms_tc2_gpu.py", "scripts/tc2_gpu/slurm/check_algorithms.sh",
            "src/metric_core.py", "src/evaluate.py", "src/data.py", "configs/tc2_gpu/workflow.json"]
 OUTPUT = None
 

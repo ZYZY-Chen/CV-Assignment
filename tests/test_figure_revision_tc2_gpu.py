@@ -61,9 +61,9 @@ def load(name, relative):
     return module
 
 
-sys.path.insert(0, str(ROOT / "scripts"))
-revision = load("_figure_revision_test_driver", "scripts/revise_figures_tc2_gpu.py")
-collector = load("_figure_revision_test_collector", "scripts/collect_figure_revision_tc2_gpu.py")
+sys.path.insert(0, str(ROOT))
+revision = load("_figure_revision_test_driver", "scripts/tc2_gpu/analysis/revise_figures.py")
+collector = load("_figure_revision_test_collector", "scripts/tc2_gpu/collect/collect_figure_revision.py")
 
 
 def temporary(test):
@@ -113,7 +113,7 @@ def pdf_bytes(size=7, compressed=False, content=None):
 
 def source_snapshot():
     """Verify archived acceptance identities independently of current source identities."""
-    preserved = load("_figure_revision_test_original_collector", "scripts/collect_analysis_tc2_gpu.py")
+    preserved = load("_figure_revision_test_original_collector", "scripts/tc2_gpu/collect/collect_analysis.py")
     design = historical_config(ROOT, "experiments")
     protected = {**design["scientific_source_hashes"], **design["pilot_source_hashes"], **preserved.OLD_SOURCES}
     if len(protected) != 44:
@@ -122,7 +122,7 @@ def source_snapshot():
     actual = {name: historical_sha(ROOT, name) for name in expected}
     if actual != expected:
         raise AssertionError("At least one of the 51 archived sources differs from its accepted fingerprint")
-    if sha(ROOT / "scripts/plot_results_tc2_gpu.py") != FROZEN["scripts/plot_results_tc2_gpu.py"]:
+    if sha(ROOT / "scripts/tc2_gpu/analysis/plot_results.py") != FROZEN["scripts/plot_results_tc2_gpu.py"]:
         raise AssertionError("The current numerical plotting implementation changed")
     return actual
 
@@ -331,7 +331,7 @@ class CollectionTests(unittest.TestCase):
         root = temporary(self)
         for name in sorted(collector.SOURCES):
             target = root / name; target.parent.mkdir(parents=True, exist_ok=True)
-            target.write_bytes(local(ROOT / name).read_bytes() if name == "scripts/collect_figure_revision_tc2_gpu.py" else ("Synthetic pending source: " + name + "\n").encode("ascii"))
+            target.write_bytes(local(ROOT / name).read_bytes() if name == "scripts/tc2_gpu/collect/collect_figure_revision.py" else ("Synthetic pending source: " + name + "\n").encode("ascii"))
         exported = collector.export_archive(root, "79865", root / "snapshot")
         index_path = local(exported["index_path"])
         index = json.loads(index_path.read_text(encoding="utf-8"))
@@ -561,7 +561,7 @@ def main():
               "local_core_tests_passed": result.wasSuccessful(), "gpu_or_models_executed": False, "torch_imported": "torch" in sys.modules,
               "lifecycle_scheduler_environment_simulated": True, "actual_network_or_scheduler_connections": False,
               "figure_count_required": 15, "minimum_pdf_glyph_pt": 7, "preserved_source_count": 51,
-              "source_hashes": {name: sha(ROOT / name) for name in ("scripts/revise_figures_tc2_gpu.py", "scripts/collect_figure_revision_tc2_gpu.py", "tests/test_figure_revision_tc2_gpu.py")},
+              "source_hashes": {name: sha(ROOT / name) for name in ("scripts/tc2_gpu/analysis/revise_figures.py", "scripts/tc2_gpu/collect/collect_figure_revision.py", "tests/test_figure_revision_tc2_gpu.py")},
               "render_scope": "All 15 real figure groups and 16 synthetic selected cases" if FULL else "Offline source, exact-row, PDF-font and archive guards; full rendering requires --full on TC2 CPU"}
     json_write(OUTPUT / "tests_summary.json", report)
     json_write(OUTPUT / "test_report.json", report)

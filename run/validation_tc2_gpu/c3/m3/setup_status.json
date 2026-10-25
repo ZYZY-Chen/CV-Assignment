@@ -1,0 +1,32 @@
+{
+  "mode": "core",
+  "step_3_complete": false,
+  "status": "passed",
+  "checked_at_utc": "2026-10-25T09:50:28+00:00",
+  "runtime": {
+    "protocol_sha256": "FC240CD6E9AD72D37C79AD169E3E8CE05BCAB8E5ABDE3A4BCB2226E911C296FF",
+    "frozen_manifests_verified": 8,
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.3.5",
+    "device": "cpu",
+    "gpu_requested": false,
+    "slurm_job_id": null
+  },
+  "tests_run": 9,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "reference": {
+    "cases": 0,
+    "max_auroc_abs_error": 0.0,
+    "max_ap_abs_error": 0.0
+  },
+  "failure_details": [],
+  "source_hashes": {
+    "src/metric_core.py": "D218A438031DE6B0A83B14951354CD66A85ED65F97FFC2CFBAEFF1D4FB91DB78",
+    "src/evaluate.py": "4DB2413CC6AAF4210B143285FE5FD7FC6A8C08E98C67073E9A92D31359E68BC6",
+    "src/data.py": "9A82D585203B376F41C3200A32D6971288DD70B5C7E71210F3E21F8C5C1F1F89",
+    "tests/test_metrics_tc2_gpu.py": "185FC0061DC2C439BEA9F3E89C4DD5FC62C2442E7CCDE2D22B0754590A6B7ED0",
+    "scripts/tc2_gpu/slurm/check_metrics.sh": "62DB0DF905E6BC82997660877AE5CEEA1C9C1EB046BF6E768546AB310E42733D"
+  }
+}

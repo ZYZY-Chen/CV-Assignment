@@ -24,12 +24,12 @@ import tc2_gpu_runner as r
 OUTPUT = None
 CASE = 0
 NEW_FILES = ["src/tc2_gpu_provenance.py", "src/tc2_gpu_protocol.py", "src/tc2_gpu_cache.py", "src/tc2_gpu_runner.py",
-             "scripts/run_tc2_gpu.py", "configs/tc2_gpu/runtime.json", "tests/test_workflow_tc2_gpu.py",
-             "scripts/slurm/check_tc2_gpu_workflow.sh", "docs/TC2_GPU_WORKFLOW.md"]
+             "scripts/tc2_gpu/workflow/run_workflow.py", "configs/tc2_gpu/runtime.json", "tests/test_workflow_tc2_gpu.py",
+             "scripts/tc2_gpu/slurm/check_workflow.sh", "docs/experiment_history/implementation/STEP_05_WORKFLOW.md"]
 OLD_FILES = ["src/padim_adapter.py", "src/patchcore_adapter.py", "src/sampling.py", "src/scoring.py",
-             "src/anomaly_postprocess.py", "tests/test_algorithms_tc2_gpu.py", "scripts/slurm/check_tc2_gpu_algorithms.sh",
+             "src/anomaly_postprocess.py", "tests/test_algorithms_tc2_gpu.py", "scripts/tc2_gpu/slurm/check_algorithms.sh",
              "src/metric_core.py", "src/evaluate.py", "src/data.py", "configs/tc2_gpu/workflow.json",
-             "tests/test_metrics_tc2_gpu.py", "scripts/slurm/check_tc2_gpu_metrics.sh"]
+             "tests/test_metrics_tc2_gpu.py", "scripts/tc2_gpu/slurm/check_metrics.sh"]
 
 
 def payload_files():
@@ -116,11 +116,11 @@ class CoreTests(unittest.TestCase):
 
     def test_plan_cli_is_readonly_and_requires_explicit_action(self):
         before = (ROOT / "run/tc2_gpu").exists()
-        completed = subprocess.run([sys.executable,"-B",str(ROOT/"scripts/run_tc2_gpu.py"),"plan"],capture_output=True,text=True)
+        completed = subprocess.run([sys.executable,"-B",str(ROOT/"scripts/tc2_gpu/workflow/run_workflow.py"),"plan"],capture_output=True,text=True)
         self.assertEqual(completed.returncode,0,completed.stderr)
         self.assertEqual(len(json.loads(completed.stdout)["fits"]),66)
         self.assertEqual((ROOT / "run/tc2_gpu").exists(),before)
-        no_action = subprocess.run([sys.executable,"-B",str(ROOT/"scripts/run_tc2_gpu.py")],capture_output=True,text=True)
+        no_action = subprocess.run([sys.executable,"-B",str(ROOT/"scripts/tc2_gpu/workflow/run_workflow.py")],capture_output=True,text=True)
         self.assertNotEqual(no_action.returncode,0)
 
     def test_paths_namespace_and_unknown_matrix_key(self):

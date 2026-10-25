@@ -1,0 +1,25 @@
+{
+  "actual_network_or_scheduler_connections": false,
+  "created_utc": "2026-10-25T09:50:51.553081+00:00",
+  "errors": 0,
+  "failures": 0,
+  "figure_count_required": 15,
+  "full_plot_render_executed": false,
+  "full_plot_render_passed": false,
+  "full_requested": false,
+  "gpu_or_models_executed": false,
+  "lifecycle_scheduler_environment_simulated": true,
+  "local_core_tests_passed": true,
+  "minimum_pdf_glyph_pt": 7,
+  "preserved_source_count": 51,
+  "render_scope": "Offline source, exact-row, PDF-font and archive guards; full rendering requires --full on TC2 CPU",
+  "skipped": 0,
+  "source_hashes": {
+    "scripts/tc2_gpu/analysis/revise_figures.py": "F15ADB5BA0E9B140ACFBDB439C0572B7402AF72AF618353B234E917E508CA086",
+    "scripts/tc2_gpu/collect/collect_figure_revision.py": "9B0DB172076998D80584F5CFD06F610135E8EA8E4DF4BE53E9C7E6BCBFB62844",
+    "tests/test_figure_revision_tc2_gpu.py": "68B5355AC5A20FFDD186CEC32D85FD762B6F448EB78E79394E8A1628BC7E5E27"
+  },
+  "status": "passed",
+  "tests_run": 21,
+  "torch_imported": false
+}

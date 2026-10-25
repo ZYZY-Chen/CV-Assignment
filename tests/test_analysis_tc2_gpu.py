@@ -18,9 +18,9 @@ import numpy as np
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "scripts"))
-import analyze_results_tc2_gpu as analysis
-import plot_results_tc2_gpu as plots
+sys.path.insert(0, str(ROOT))
+from scripts.tc2_gpu.analysis import analyze_results as analysis
+from scripts.tc2_gpu.analysis import plot_results as plots
 
 OUTPUT = None
 
@@ -443,12 +443,12 @@ class CaseSelectionAndMaskTests(unittest.TestCase):
 
 class CollectionTests(unittest.TestCase):
     def setUp(self):
-        import collect_analysis_tc2_gpu as collector
+        from scripts.tc2_gpu.collect import collect_analysis as collector
         gate = patch.object(collector, "require_current_acceptance", return_value=None)
         gate.start(); self.addCleanup(gate.stop)
 
     def test_pending_collection_and_tamper_guards_without_models(self):
-        import collect_analysis_tc2_gpu as collector
+        from scripts.tc2_gpu.collect import collect_analysis as collector
         root = temporary(self)
         for name in (collector.CONFIG, collector.EXPERIMENT_CONFIG, collector.PROTOCOL, *sorted(collector.MANIFESTS)):
             path = analysis.inside(root, name); path.parent.mkdir(parents=True, exist_ok=True)
@@ -505,7 +505,7 @@ def main():
               "tests_run": result.testsRun, "failures": len(result.failures), "errors": len(result.errors), "skipped": len(result.skipped),
               "full_requested": args.full, "full_plot_render_executed": args.full, "full_plot_render_passed": args.full and result.wasSuccessful() and not result.skipped,
               "local_core_tests_passed": result.wasSuccessful(), "gpu_or_models_executed": False, "torch_imported": "torch" in sys.modules,
-              "source_hashes": {name: analysis.sha(ROOT / name) for name in ("scripts/analyze_results_tc2_gpu.py", "scripts/plot_results_tc2_gpu.py", "scripts/collect_analysis_tc2_gpu.py", "tests/test_analysis_tc2_gpu.py")},
+              "source_hashes": {name: analysis.sha(ROOT / name) for name in ("scripts/tc2_gpu/analysis/analyze_results.py", "scripts/tc2_gpu/analysis/plot_results.py", "scripts/tc2_gpu/collect/collect_analysis.py", "tests/test_analysis_tc2_gpu.py")},
               "render_scope": "All quantitative figure groups plus two synthetic case rows" if args.full else "Core, hash, path, CSV and asset validation only; rendering awaits the required full TC2 CPU checks"}
     analysis.write(OUTPUT / "tests_summary.json", report)
     analysis.write(OUTPUT / "test_report.json", report)

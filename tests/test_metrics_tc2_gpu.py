@@ -408,7 +408,7 @@ def main():
         status["failure_details"]=[{"test":test.id(),"traceback":trace} for test,trace in result.failures+result.errors]
     except Exception as error:
         status["error"]=type(error).__name__+": "+str(error)
-    status["source_hashes"]={p:sha(ROOT/p) for p in ["src/metric_core.py","src/evaluate.py","src/data.py","tests/test_metrics_tc2_gpu.py","scripts/slurm/check_tc2_gpu_metrics.sh"] if (ROOT/p).exists()}
+    status["source_hashes"]={p:sha(ROOT/p) for p in ["src/metric_core.py","src/evaluate.py","src/data.py","tests/test_metrics_tc2_gpu.py","scripts/tc2_gpu/slurm/check_metrics.sh"] if (ROOT/p).exists()}
     (OUTPUT/"setup_status.json").write_text(json.dumps(status,indent=2,allow_nan=False)+"\n",encoding="utf-8")
     print(json.dumps(status,indent=2,allow_nan=False))
     return 0 if status["status"]=="passed" else 1

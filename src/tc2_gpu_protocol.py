@@ -26,11 +26,13 @@ EXECUTION = {"schema_version": "1.0", "workflow_id": "tc2_gpu", "extraction_batc
              "prediction_batch_size": 1, "workers": 0, "cpu_threads": 2, "warmup_iterations": 20,
              "padim_position_chunk_size": 256, "patchcore_query_chunk_size": 1024,
              "patchcore_bank_chunk_size": 4096, "patchcore_sampling_chunk_size": 16384}
-SOURCE_FILES = ("src/tc2_gpu_provenance.py", "src/tc2_gpu_protocol.py", "src/tc2_gpu_cache.py", "src/tc2_gpu_runner.py",
-                "scripts/run_tc2_gpu.py", "configs/tc2_gpu/runtime.json", "src/data.py",
+ENTRYPOINT_SOURCES = ("scripts/__init__.py", "scripts/tc2_gpu/__init__.py",
+                      "scripts/tc2_gpu/_bootstrap.py", "scripts/tc2_gpu/workflow/__init__.py")
+SOURCE_FILES = (*ENTRYPOINT_SOURCES, "src/tc2_gpu_provenance.py", "src/tc2_gpu_protocol.py", "src/tc2_gpu_cache.py", "src/tc2_gpu_runner.py",
+                "scripts/tc2_gpu/workflow/run_workflow.py", "configs/tc2_gpu/runtime.json", "src/data.py",
                 "src/padim_adapter.py", "src/patchcore_adapter.py", "src/sampling.py",
                 "src/scoring.py", "src/anomaly_postprocess.py", "src/metric_core.py", "src/evaluate.py")
-CACHE_SOURCES = ("src/tc2_gpu_provenance.py", "src/tc2_gpu_protocol.py", "src/tc2_gpu_cache.py", "src/data.py", "configs/tc2_gpu/runtime.json")
+CACHE_SOURCES = (*ENTRYPOINT_SOURCES, "src/tc2_gpu_provenance.py", "src/tc2_gpu_protocol.py", "src/tc2_gpu_cache.py", "src/data.py", "configs/tc2_gpu/runtime.json")
 
 
 def sha(path):
