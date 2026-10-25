@@ -1,0 +1,378 @@
+{
+  "status": "passed",
+  "result_count": 62,
+  "checks": [
+    {
+      "stage_id": "B0",
+      "run_key": "B0_mvtec_ad_bottle_padim_s17_n100_B7B86DBB2043",
+      "metric_sha256": "1AACD174D459DEBF022ED713B94256C154A12191153CFE23BC143798ABEAF297",
+      "status": "passed"
+    },
+    {
+      "stage_id": "B0",
+      "run_key": "B0_mvtec_ad_bottle_patchcore_s17_n100_BBC2B85C2FA8",
+      "metric_sha256": "2FB61746ED6144B9E6459F2AF277CC75C75E7D9DF600678F97B86A6B1ABD2E2B",
+      "status": "passed"
+    },
+    {
+      "stage_id": "B0",
+      "run_key": "B0_mvtec_ad_cable_padim_s17_n100_1272F0F1504D",
+      "metric_sha256": "44AD2FBEB0827731B9B4F8745D38DAA273F91000009DBAF2DDD9FC19792FF27F",
+      "status": "passed"
+    },
+    {
+      "stage_id": "B0",
+      "run_key": "B0_mvtec_ad_cable_patchcore_s17_n100_AE108605F492",
+      "metric_sha256": "C956337A09803079B630F005589351C722BD4ECE332BCB057DE865EA0105D6CF",
+      "status": "passed"
+    },
+    {
+      "stage_id": "B0",
+      "run_key": "B0_mvtec_ad_capsule_padim_s17_n100_5F1B72017297",
+      "metric_sha256": "3F3C6EA43AC150AB157A6E3F09B6CE753AABDE22FFE7F3F227259286E61BCAB2",
+      "status": "passed"
+    },
+    {
+      "stage_id": "B0",
+      "run_key": "B0_mvtec_ad_capsule_patchcore_s17_n100_55DB51B64838",
+      "metric_sha256": "6588DAE024166FB7098CC4ACEB2511EB8322D09FE306F42C09D554D39F44E71F",
+      "status": "passed"
+    },
+    {
+      "stage_id": "B0",
+      "run_key": "B0_mvtec_ad_screw_padim_s17_n100_287B561ACFB1",
+      "metric_sha256": "D99DA134E48F791BAD5C2737D7CC1B4E48826D9C0EBC6BD74FE825B49DE84823",
+      "status": "passed"
+    },
+    {
+      "stage_id": "B0",
+      "run_key": "B0_mvtec_ad_screw_patchcore_s17_n100_D657B3B6C4C1",
+      "metric_sha256": "1099239E1FDFEEFAA1BF90CD609A220FB889CBA3B9FD53AE7EA5E2EA28FB46ED",
+      "status": "passed"
+    },
+    {
+      "stage_id": "B0",
+      "run_key": "B0_mvtec_ad_tile_padim_s17_n100_988C8D661753",
+      "metric_sha256": "4DCE912FF0F34FD85D0933F34140798697516CBFF2729B4BF8BF2050C4DC9C65",
+      "status": "passed"
+    },
+    {
+      "stage_id": "B0",
+      "run_key": "B0_mvtec_ad_tile_patchcore_s17_n100_71576E39ABDF",
+      "metric_sha256": "23326AB233AC3502ECEC0591AD1CD767BD8D0908267CCF20E1F5A254E74D75C6",
+      "status": "passed"
+    },
+    {
+      "stage_id": "B0",
+      "run_key": "B0_mvtec_ad_wood_padim_s17_n100_4A80A8A14AE8",
+      "metric_sha256": "01A0ACA848AD42B48DADF0E0B15EA0EB09F66A5F94BF53B15D36118EB6F61E7D",
+      "status": "passed"
+    },
+    {
+      "stage_id": "B0",
+      "run_key": "B0_mvtec_ad_wood_patchcore_s17_n100_468C39576EED",
+      "metric_sha256": "93979CE4F05A06EAF2269B9A96619ECD87968AD6EB2F01736289FAD5848559C6",
+      "status": "passed"
+    },
+    {
+      "stage_id": "H1",
+      "run_key": "H1_mvtec_ad_cable_padim_s17_n100_3D76B7DBD4F0",
+      "metric_sha256": "50F738E8C29712A05CC944075B494AEDAB331EC8023E01909AF97C96F79D38EB",
+      "status": "passed"
+    },
+    {
+      "stage_id": "H1",
+      "run_key": "H1_mvtec_ad_cable_padim_s17_n100_8B9E6A706091",
+      "metric_sha256": "30D57A74B3FE83863AA0D0587FE23FC97307BEF9EFFAEDFEF12F43AB3FE78B3A",
+      "status": "passed"
+    },
+    {
+      "stage_id": "H1",
+      "run_key": "H1_mvtec_ad_screw_padim_s17_n100_A0CEFBA88A22",
+      "metric_sha256": "5EE31526152C2EAFECC5CFDD1927A456927A654C24CBE9F43045B21199D39CA8",
+      "status": "passed"
+    },
+    {
+      "stage_id": "H1",
+      "run_key": "H1_mvtec_ad_screw_padim_s17_n100_7E617B469530",
+      "metric_sha256": "5B90992B7D5173E2B80A1169191D3F92A176D6400F8A23D777D6614297C0972C",
+      "status": "passed"
+    },
+    {
+      "stage_id": "H2",
+      "run_key": "H2_mvtec_ad_cable_patchcore_s17_n100_A3F7BC278E27",
+      "metric_sha256": "CF805D8C9EB41819E5F9A3C076FAEE844E189841B5DC9811E7B41BA59728A1DF",
+      "status": "passed"
+    },
+    {
+      "stage_id": "H2",
+      "run_key": "H2_mvtec_ad_cable_patchcore_s17_n100_9881522E49D9",
+      "metric_sha256": "B2AB89A7A8851820E8ED31F7365DFCA818384A50750BCE907D3983030209A63F",
+      "status": "passed"
+    },
+    {
+      "stage_id": "H2",
+      "run_key": "H2_mvtec_ad_screw_patchcore_s17_n100_E056497FC587",
+      "metric_sha256": "60A49B14757733EAA3CE3B0B99114CBBAA968AB257ACAA2BEECE35D3FB55DFFF",
+      "status": "passed"
+    },
+    {
+      "stage_id": "H2",
+      "run_key": "H2_mvtec_ad_screw_patchcore_s17_n100_A705880105D7",
+      "metric_sha256": "460D9F191CCA0E5897A8CFDB5D849763B0A4AF3BC9B657F3DAE77C09104E899F",
+      "status": "passed"
+    },
+    {
+      "stage_id": "C1",
+      "run_key": "C1_mvtec_ad_cable_patchcore_s17_n100_230A94347D46",
+      "metric_sha256": "9AD6F8707A2DD4C65619E3229BD3CA77F0DB1BEBCC32DE86C2E476927AB62E70",
+      "status": "passed"
+    },
+    {
+      "stage_id": "C1",
+      "run_key": "C1_mvtec_ad_screw_patchcore_s17_n100_681E25673EEB",
+      "metric_sha256": "5F21B44085AEB6CA656396D16505EDEAF07401FC31DD8DF4DD1171AA01CA9C44",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_bottle_padim_s29_n100_6F691F7CBABB",
+      "metric_sha256": "851145AD01F004DF1B1C733286A2630E98F1DE200C23465B43F1DA40F19D55BC",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_bottle_padim_s43_n100_E46054BE6CDC",
+      "metric_sha256": "BED643CBB090FC5776DAE59EC65D609320EC3890C0D5C56A5AC92B5E4CB6775B",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_bottle_patchcore_s29_n100_D49528C13187",
+      "metric_sha256": "CA43044DD0D472F054764263C0BECF9BAA1D36A6DC3CF34EA6A7CE74A5502A1A",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_bottle_patchcore_s43_n100_8026690C6BED",
+      "metric_sha256": "04068A891587EFBB5F7B539AF93521BDF2A6B8CA2B74473790A3ECC2D3F955B6",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_cable_padim_s29_n100_9462465EAC13",
+      "metric_sha256": "E42AEBBA561B52A747A2FBFB248EB6CDF115E3150389CBDE23B4C3E8DB74807A",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_cable_padim_s43_n100_C19AAE615FB8",
+      "metric_sha256": "E5163D60AA640A9DDC89891AE286F07815D19F8BDB2603C14D835384BE226D19",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_cable_patchcore_s29_n100_F081468F2C49",
+      "metric_sha256": "67C30A130B9A815955B1E09EF1B775375422C7902E75B5B523C7761096516025",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_cable_patchcore_s43_n100_4CEC5409E8CD",
+      "metric_sha256": "988998402B7A15F9220A2C2B62592139C9152D3FB15991E31919D61E6912B847",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_capsule_padim_s29_n100_39B052393DEC",
+      "metric_sha256": "F88F16B98B63961FFAC2F490E85B8BB0BEECA0F7684265C6430FDDC2C962E2D1",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_capsule_padim_s43_n100_81A16E96F359",
+      "metric_sha256": "24E1CAD9FB06925813CD6CD27D8D035BBA526AA512AFE368859892B963F151B2",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_capsule_patchcore_s29_n100_99227661E967",
+      "metric_sha256": "66B19A0AE13AFA21FA5D2F72A9179FFB1F3F41F4F6028D8234AFFEBFFDFBD480",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_capsule_patchcore_s43_n100_9A3A68E2D4FC",
+      "metric_sha256": "7C2BCCFE69849554A0E1CE6F62CBAED2F771F0996A875215816E78818E3CE3C9",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_screw_padim_s29_n100_EF53D7FD3502",
+      "metric_sha256": "837EDD065A5F03AD580DE7FD85CE831B1052FECA60F99003DBA7122EA9A1AD27",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_screw_padim_s43_n100_8E11137D5A05",
+      "metric_sha256": "0E6BA8B41BAD751F117FEFCF5E7BD509FCD598F38786B3ABC4D54D3FEA31FBDA",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_screw_patchcore_s29_n100_BAEC4291BE93",
+      "metric_sha256": "3EA79F566BDA38FAF7FB5C410122B94DA6B7202FB7C7FD67AF021954DA453154",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_screw_patchcore_s43_n100_8C620CBF229D",
+      "metric_sha256": "D6B826557BE953655C8AC484B3BEAA09D8BC564AC1992A218CB3E2A8B4A5900F",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_tile_padim_s29_n100_93DCF109BAD8",
+      "metric_sha256": "54591F18FDCB28D0D8B4DF13CD8391AEDEC5AE5BD9097DA4F088240A8787B453",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_tile_padim_s43_n100_328CE646E1BD",
+      "metric_sha256": "80E30FD5E0397AA6BE519AB873340F98BCFB68B1633CFFD150D47B801D2C3470",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_tile_patchcore_s29_n100_5B04C7470E20",
+      "metric_sha256": "92E402F5952E43C0FA06054E800C5B4E3954F0A07D90D4DC985C33AC0971E3B6",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_tile_patchcore_s43_n100_A2497C55E1CA",
+      "metric_sha256": "8A10ADAAF2393E3BE5C9437FEAD52FB6FD3568CA38B85A6A75341BC600C3B074",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_wood_padim_s29_n100_1F22F497170E",
+      "metric_sha256": "391BCBC9A82F87D90E2B18AE0CDC0B706E77400132E4640E691AEBA1B9628537",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_wood_padim_s43_n100_5C2FFC5405A8",
+      "metric_sha256": "EDC0C1614EAB07BEC65A4B43AF0ADBD2A4003BB9DAB40479131B208E237521CF",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_wood_patchcore_s29_n100_43A82BC3ABBB",
+      "metric_sha256": "182F22D376AB8939775E80F164B7A31A29DF047ABFE25A5A3849ADD8C62ED021",
+      "status": "passed"
+    },
+    {
+      "stage_id": "R0",
+      "run_key": "R0_mvtec_ad_wood_patchcore_s43_n100_9F7E9EF07BC6",
+      "metric_sha256": "A808AD671AB258146E52D01F492D5A346D1C8ECBE4989A6673800732F5A615F5",
+      "status": "passed"
+    },
+    {
+      "stage_id": "C1R",
+      "run_key": "C1R_mvtec_ad_cable_patchcore_s29_n100_9814BB7B44E1",
+      "metric_sha256": "95B28413739DEB91A78453BBDA575A41AB6BE9BA5890535D93D46FD43557A3FB",
+      "status": "passed"
+    },
+    {
+      "stage_id": "C1R",
+      "run_key": "C1R_mvtec_ad_cable_patchcore_s43_n100_92ED23FC2EE2",
+      "metric_sha256": "579315B5523457838030A3DFFD98D3ED40A92530D7682D923124D0582A01CEB9",
+      "status": "passed"
+    },
+    {
+      "stage_id": "C1R",
+      "run_key": "C1R_mvtec_ad_screw_patchcore_s29_n100_0638518CE2D4",
+      "metric_sha256": "A1279F8E6E327AA67B1F15CB01BFDCEEBB69D78173C627A7066D26EE0F64C42D",
+      "status": "passed"
+    },
+    {
+      "stage_id": "C1R",
+      "run_key": "C1R_mvtec_ad_screw_patchcore_s43_n100_DDCD9BC45E32",
+      "metric_sha256": "03D7844028C62E9DB33B6F75A396007B84F5136E25D90863B8BB9DD0ABB1374B",
+      "status": "passed"
+    },
+    {
+      "stage_id": "C2",
+      "run_key": "C2_mvtec_ad_cable_padim_s17_n100_27FD8E215CF4",
+      "metric_sha256": "417540E0180D749131E6C9CA31DF704C19650EC6969CE2643CD1F8C1B93FF388",
+      "status": "passed"
+    },
+    {
+      "stage_id": "C2",
+      "run_key": "C2_mvtec_ad_cable_padim_s17_n100_B697F21E778E",
+      "metric_sha256": "17D206AEE2B8EBE4B3F817B6F7E81B2ED4563CBCEEA0DD601E28B554362E8699",
+      "status": "passed"
+    },
+    {
+      "stage_id": "C2",
+      "run_key": "C2_mvtec_ad_screw_padim_s17_n100_3200F9A8279F",
+      "metric_sha256": "9C808EC26762B8111B9CD94850744A10DB6471211ECB9ED7DD6B2EC8EB9D1A61",
+      "status": "passed"
+    },
+    {
+      "stage_id": "C2",
+      "run_key": "C2_mvtec_ad_screw_padim_s17_n100_42A014B089AD",
+      "metric_sha256": "CD8ED18A746CF4F7BE789D034AAEBB0798BC9C54D039CCAA5F3E7F9606F63C3D",
+      "status": "passed"
+    },
+    {
+      "stage_id": "F1",
+      "run_key": "F1_mvtec_ad_cable_padim_s17_n20_4D90803933B4",
+      "metric_sha256": "908D8EF42C716425D939149AA82A7B7E38E2661E735559230C59F9B4D5968A27",
+      "status": "passed"
+    },
+    {
+      "stage_id": "F1",
+      "run_key": "F1_mvtec_ad_cable_padim_s17_n50_FEA8D7553D95",
+      "metric_sha256": "DC1CBBD5D21BBE344838DC828A545730B25C018CF1AC86892C3248183A059792",
+      "status": "passed"
+    },
+    {
+      "stage_id": "F1",
+      "run_key": "F1_mvtec_ad_cable_patchcore_s17_n20_6A3C64C2D2FD",
+      "metric_sha256": "9A5B1BD870A12ECF89A2A18AFF58956F42D68047D290F92B9E189895D860D503",
+      "status": "passed"
+    },
+    {
+      "stage_id": "F1",
+      "run_key": "F1_mvtec_ad_cable_patchcore_s17_n50_2C6379649DE8",
+      "metric_sha256": "E28FCDB1720262B08F4F4327A0808DF7F7EBBFC9AC5F67379B21B416FA2F3512",
+      "status": "passed"
+    },
+    {
+      "stage_id": "F1",
+      "run_key": "F1_mvtec_ad_screw_padim_s17_n20_88E5FA51177F",
+      "metric_sha256": "A4BE0AACB7293963DB71E2A3DD529F090D2B0C3059A118562D3EBC97ADF2A624",
+      "status": "passed"
+    },
+    {
+      "stage_id": "F1",
+      "run_key": "F1_mvtec_ad_screw_padim_s17_n50_CCE08434FDC3",
+      "metric_sha256": "622847147B2059E6B8265D31ECE367508CCF12330BCFBF7899812C1C71D87671",
+      "status": "passed"
+    },
+    {
+      "stage_id": "F1",
+      "run_key": "F1_mvtec_ad_screw_patchcore_s17_n20_CC13B8F41466",
+      "metric_sha256": "EB44D62E7755637301DD10EFB405E1BB6F2DC4EC902095CDA7C01521EC0CEB15",
+      "status": "passed"
+    },
+    {
+      "stage_id": "F1",
+      "run_key": "F1_mvtec_ad_screw_patchcore_s17_n50_38ED7FB7B49E",
+      "metric_sha256": "DFB2DC1DBBE77D9D2E0E6E849FF3FDF654E2E540ED81ADF2ED8EE60D8299F15B",
+      "status": "passed"
+    }
+  ]
+}

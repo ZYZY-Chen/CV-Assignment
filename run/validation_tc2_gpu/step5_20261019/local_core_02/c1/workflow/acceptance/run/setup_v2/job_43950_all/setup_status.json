@@ -1,0 +1,12 @@
+{
+  "step_2_complete": true,
+  "weights_ready": true,
+  "environment_export": {
+    "files": [
+      {
+        "path": "/record/environment-tc2.yml",
+        "sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+      }
+    ]
+  }
+}

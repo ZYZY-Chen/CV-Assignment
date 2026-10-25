@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-19T06:46:12.219195+00:00",
+  "helper_before_sha256": "1C181ED883F347E5C8EFB7F0FF1D9B3172C57BC0C9759D4B8A538C6F493EEC02",
+  "helper_after_sha256": "093F3E11DEC0FAAA26CFD3C48C846ED88EEEF517C25B82DDA2A843B8FC6A3B82",
+  "single_fit_resource_string_change_only": true,
+  "all_older_action_branches_byte_identical": true,
+  "powershell_ast_errors": 0,
+  "offline_transport_cases": 18,
+  "rendered_shell_commands": 41,
+  "gpu_fit_stage_requests_checked": 9,
+  "cpu_analysis_stage_requests_checked": 3,
+  "all_fit_stages_select_tc2n01": true,
+  "all_analysis_stages_use_existing_scheduling": true,
+  "submission_cwd_and_chdir_preserved": true,
+  "real_helper_validate_only_exit_code": 0,
+  "local_package_directory": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_144521_22546814",
+  "local_package_files": 8,
+  "published_source_files_byte_identical": 7,
+  "source_hashes": {
+    "configs/experiments_tc2_gpu.json": "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75",
+    "scripts/experiments_tc2_gpu.py": "F4896D83DED9EAACB72ED7A75B63F76CC3538E61D2FB90A88CF1945D36D0CBDA",
+    "scripts/analyze_scores_tc2_gpu.py": "D1412F6743ECB6709EB82FF978DF4D8C37601371BE4E78C2329B9AAD1FF609F6",
+    "scripts/slurm/experiments_tc2_gpu.sh": "C4D12CFBC8D7B0F799AD51E06826318C8A17210526EC63ED04CD4FF3AB13080E",
+    "scripts/collect_experiments_tc2_gpu.py": "AC61772F65C9F2C4124761D2361E0A85E9F65DBCF4DF5BAB3E939B5111466010",
+    "tests/test_experiments_tc2_gpu.py": "371072914FD83F1E4A803501A86965977BA12C1797EE44C178D0A843F8A2FFE5",
+    "docs/TC2_GPU_EXPERIMENTS.md": "EBF7AD234A2346379CE5B7B80A76826A564F3ED7FF08DEB17CA362EC9E2FD47A"
+  },
+  "actual_tc2_connections": 0,
+  "actual_slurm_submissions": 0
+}

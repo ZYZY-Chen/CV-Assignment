@@ -1,0 +1,32 @@
+[
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065131_7cb9d616\\terminal.txt",
+    "record": "terminal.txt",
+    "sha256": "FAEBED8EA53E9461C61FAE8DEB4141405A9C500B4925C011BA944079C9148914"
+  },
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065131_7cb9d616\\remote\\run\\setup_v2\\job_43939_hardware\\hardware.json",
+    "record": "hardware.json",
+    "sha256": "CEB6004CA245CF68A36BAE01355248416C4C919A5FBA72B5921D29DC8F8BBD9E"
+  },
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065131_7cb9d616\\remote\\run\\setup_v2\\slurm-43939.out",
+    "record": "slurm-43939.out",
+    "sha256": "CEB6004CA245CF68A36BAE01355248416C4C919A5FBA72B5921D29DC8F8BBD9E"
+  },
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065131_7cb9d616\\remote\\run\\setup_v2\\slurm-43939.err",
+    "record": "slurm-43939.err",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065131_7cb9d616\\remote\\run\\setup_v2\\last_probe_job.txt",
+    "record": "last_probe_job.txt",
+    "sha256": "D54EABCE8085D2FE4380CA212B99DAE1CF1E94AD369ADFDD9E0473F3E64C5FBC"
+  },
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065131_7cb9d616\\remote\\configs\\tc2_setup.json",
+    "record": "remote_tc2_setup_snapshot.json",
+    "sha256": "DEDBEEF44CEB6C50475B3627A766CE10FB9C3F6C3AFF71DE382CD341F542B530"
+  }
+]

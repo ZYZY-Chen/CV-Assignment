@@ -1,0 +1,7 @@
+{
+    "status":  "passed",
+    "scripts_parsed":  9,
+    "parsing_only":  true,
+    "actual_tc2_connections":  0,
+    "actual_slurm_submissions":  0
+}

@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checks": [
+    "Frozen protocol, eight manifests and 4669 input paths; no Torch import",
+    "Bare/prefixed archive layouts; identical-file reuse",
+    "Traversal, absolute paths, links, devices and backslashes refused before writes",
+    "Conflicts, wrong frozen hashes and missing members preserve destination",
+    "Wrong weight not published; refused resume retains bytes; valid resume/reuse works",
+    "HTTP and local non-SLURM preparation rejected"
+  ],
+  "remote_commands": false,
+  "gpu_tested": false,
+  "data_downloaded": false,
+  "shared_environment_modified": false
+}

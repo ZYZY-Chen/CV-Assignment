@@ -1,0 +1,42 @@
+[
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065531_0283f854\\terminal.txt",
+    "record": "terminal.txt",
+    "sha256": "CEBBEA0B090DEA68C1638A5C65EBC62A8C766F88D09BD067706F4DEB471C6856"
+  },
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065531_0283f854\\remote\\run\\setup_v2\\job_43940_prepare_environment\\preflight.json",
+    "record": "preflight.json",
+    "sha256": "289183FF96994ED2DBD31B9B033BF99C0CD314C21D319BA065775FB863BE6C6C"
+  },
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065531_0283f854\\remote\\run\\setup_v2\\job_43940_prepare_environment\\conda-plan.json",
+    "record": "conda-plan.json",
+    "sha256": "FD2269C2BADCC79A681F1195324DCB63DC179D630045B3712776489FF2142AF7"
+  },
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065531_0283f854\\remote\\run\\setup_v2\\job_43940_prepare_environment\\remaining-requirements.txt",
+    "record": "remaining-requirements.txt",
+    "sha256": "859E0A6FBF4C9C9C8486BC2A47009736588F82B14F40AE7DA3606DB5DF97CFCF"
+  },
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065531_0283f854\\remote\\run\\setup_v2\\slurm-43940.out",
+    "record": "slurm-43940.out",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065531_0283f854\\remote\\run\\setup_v2\\slurm-43940.err",
+    "record": "slurm-43940.err",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065531_0283f854\\remote\\run\\setup_v2\\last_prepare_environment_job.txt",
+    "record": "last_prepare_environment_job.txt",
+    "sha256": "404F77418C9FC8609D49108E6A391EC25EEC3CD83011A18473B9E568BB486A8A"
+  },
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065531_0283f854\\remote\\configs\\tc2_setup.json",
+    "record": "remote_tc2_setup_snapshot.json",
+    "sha256": "DEDBEEF44CEB6C50475B3627A766CE10FB9C3F6C3AFF71DE382CD341F542B530"
+  }
+]

@@ -1,0 +1,9 @@
+TC2 GPU: CollectPilot
+Local output: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\step7_20261019\loco_collection_supplement_20261019\pilot_transport_da691d84\tc2_gpu_setup_20261019_203538_2dd72034
+A submitted or running job is not a passed check. Passwords are not stored.
+SIMULATED SSH ONLY: no network or job submission.
+PILOT_EXPORT_PATH=/tmp/untrusted.tar.gz
+PILOT_EXPORT_SHA256=ECF54C111696854312C3AA48FDD529C6DA69D8574B18045BDAEAEC99D270982F
+PILOT_EXPORT_BYTES=2934
+STOPPED: Unexpected pilot export path; no download attempted.
+Send this local output path back: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\step7_20261019\loco_collection_supplement_20261019\pilot_transport_da691d84\tc2_gpu_setup_20261019_203538_2dd72034\terminal.txt

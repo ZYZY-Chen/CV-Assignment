@@ -1,0 +1,11 @@
+{
+    "schema_version":  "1.0",
+    "stage_id":  "B0_LOCO",
+    "job_id":  "44235",
+    "base_collector":  "scripts/collect_experiments_tc2_gpu.py",
+    "base_collector_sha256":  "AC61772F65C9F2C4124761D2361E0A85E9F65DBCF4DF5BAB3E939B5111466010",
+    "collector":  "scripts/collect_experiments_loco_tc2_gpu.py",
+    "collector_sha256":  "09AC7432F8F6BCE36F95EAEFF15D44A19F7852781A19FE65E5E573239E445967",
+    "remote_collector":  "scripts/collect_experiments_loco_tc2_gpu_09ac7432f8f6bce3.py",
+    "scope":  "Collection only; existing experiment sources and saved results remain unchanged."
+}

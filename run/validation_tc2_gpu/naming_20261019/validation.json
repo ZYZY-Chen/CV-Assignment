@@ -1,0 +1,174 @@
+{
+  "status": "passed",
+  "naming_complete": true,
+  "verified_at_utc": "2026-10-19T01:17:48.512734+00:00",
+  "workflow_id": "tc2_gpu",
+  "display_name": "TC2 GPU Experiment Protocol",
+  "frozen_protocol_sha256": "3098B6A86DBA64EE439BFE61C7A4FCFFCD082371D5A80FFBC7940997ED6A1ED1",
+  "frozen_protocol_and_eight_manifests_preserved": true,
+  "baseline_files": 1023,
+  "unchanged_baseline_files": 1009,
+  "renames": {
+    "scripts/check_setup_v2.py": "scripts/check_tc2_gpu_setup.py",
+    "scripts/prepare_tc2_environment_v2.sh": "scripts/prepare_tc2_gpu_environment.sh",
+    "scripts/prepare_tc2_inputs_v2.py": "scripts/prepare_tc2_gpu_inputs.py",
+    "scripts/slurm/check_setup_v2.sh": "scripts/slurm/check_tc2_gpu_setup.sh",
+    "scripts/slurm/check_metrics_v2.sh": "scripts/slurm/check_tc2_gpu_metrics.sh",
+    "scripts/slurm/probe_hardware_v2.sh": "scripts/slurm/probe_tc2_gpu_hardware.sh",
+    "scripts/slurm/prepare_tc2_v2.sh": "scripts/slurm/prepare_tc2_gpu.sh",
+    "tests/test_metrics_v2.py": "tests/test_metrics_tc2_gpu.py",
+    "docs/TC2_SETUP_V2.md": "docs/TC2_GPU_SETUP.md",
+    "docs/METRICS_V2.md": "docs/TC2_GPU_METRICS.md"
+  },
+  "modified_existing_files": [
+    "group_XX_code/README.md",
+    "group_XX_code/docs/EXPERIMENT_PROTOCOL_V2.md",
+    "group_XX_code/src/evaluate.py",
+    "group_XX_code/src/metric_core.py"
+  ],
+  "added_files": [
+    "group_XX_code/configs/tc2_gpu.json",
+    "group_XX_code/docs/TC2_GPU_METRICS.md",
+    "group_XX_code/docs/TC2_GPU_NAMING.md",
+    "group_XX_code/docs/TC2_GPU_SETUP.md",
+    "group_XX_code/scripts/check_tc2_gpu_setup.py",
+    "group_XX_code/scripts/prepare_tc2_gpu_environment.sh",
+    "group_XX_code/scripts/prepare_tc2_gpu_inputs.py",
+    "group_XX_code/tests/test_metrics_tc2_gpu.py",
+    "group_XX_code/scripts/slurm/check_tc2_gpu_metrics.sh",
+    "group_XX_code/scripts/slurm/check_tc2_gpu_setup.sh",
+    "group_XX_code/scripts/slurm/prepare_tc2_gpu.sh",
+    "group_XX_code/scripts/slurm/probe_tc2_gpu_hardware.sh"
+  ],
+  "protected_external_logs_and_reference_helpers": 19,
+  "historical_local_archives_and_acceptance_records_unchanged": true,
+  "metric_numerical_AST_unchanged": true,
+  "pre_existing_chinese_preserved": true,
+  "git_staged_entries_unchanged": true,
+  "formal_output_activation": "pending_step_5; no formal output directory created",
+  "local_core_tests": 9,
+  "transport": {
+    "status": "PASS",
+    "validation_root": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\naming_20261019\\transport_validation_301fb4cb",
+    "rendered_shell_commands": 15,
+    "actual_ssh_calls": 0,
+    "actual_scp_calls": 0,
+    "archive_round_trip": "PASS",
+    "hash_mismatch_refusal": "PASS",
+    "unexpected_archive_path_refusal": "PASS"
+  },
+  "delivery": {
+    "status": "passed",
+    "rendered_commands_parsed": 15,
+    "shell_files_parsed": 5,
+    "publication_cases": [
+      "absent",
+      "identical",
+      "accepted_predecessors",
+      "unknown_shared",
+      "unknown_entry",
+      "bad_bundle"
+    ],
+    "accepted_source_backups_verified": true,
+    "unknown_source_conflicts_preserved": true,
+    "five_approved_payload_files": true,
+    "legacy_readiness_fallback_verified": true,
+    "new_readiness_precedence_verified": true,
+    "metric_job_gpus_requested": 0,
+    "result_root": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\naming_20261019\\delivery_ee15a98e",
+    "actual_ssh_calls": 0,
+    "actual_slurm_submissions": 0
+  },
+  "python_readiness": {
+    "status": "passed",
+    "legacy_fallback": true,
+    "new_record_precedence": true,
+    "invalid_paths_rejected": 6
+  },
+  "actual_entry_dry_runs": [
+    {
+      "output": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_091547_3d03d23d",
+      "payload_files": 18,
+      "current_source_hashes_match": true
+    },
+    {
+      "output": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_091548_5850edc5",
+      "payload_files": 5,
+      "current_source_hashes_match": true
+    }
+  ],
+  "actual_ssh_calls": 0,
+  "actual_slurm_submissions": 0,
+  "remote_deployment_performed": false,
+  "new_full_remote_acceptance_claimed": false,
+  "fingerprints": [
+    {
+      "path": "README.md",
+      "sha256": "38B166420DD0AB72F0691400211D1F9619895070D9AF4B44DBE01F8D83B614B2"
+    },
+    {
+      "path": "configs/tc2_gpu.json",
+      "sha256": "EB2899B2E6888233874C8FA97B1247ABD3E68B391538C86A36105410917A00F0"
+    },
+    {
+      "path": "docs/EXPERIMENT_PROTOCOL_V2.md",
+      "sha256": "25F5430D65A321F38D6FF373CFF07B3BB03BAC32AA5D8181B36E77DD12FB8DCF"
+    },
+    {
+      "path": "docs/TC2_GPU_METRICS.md",
+      "sha256": "4B2F38484804CB9E5D6D0548760A3271AF028649F0315CC4E2FC0643D151FC07"
+    },
+    {
+      "path": "docs/TC2_GPU_NAMING.md",
+      "sha256": "0C0FEE9A174B5B7C4B2ED83F227C1DA544C038BAB98554ACE409E5C9C449CBA6"
+    },
+    {
+      "path": "docs/TC2_GPU_SETUP.md",
+      "sha256": "B347FD57A76F466B1700617820B21F0B42ECED8A319BE6479417BDE066DA5EE2"
+    },
+    {
+      "path": "scripts/check_tc2_gpu_setup.py",
+      "sha256": "91248836A96F06415A71436EDE82531A0404C05CAFD8993E2755D8C30D6600DA"
+    },
+    {
+      "path": "scripts/prepare_tc2_gpu_environment.sh",
+      "sha256": "8524613F039E09E7865801C8E0A65B65A2484435EE41C4E50D8B5963F049F8F4"
+    },
+    {
+      "path": "scripts/prepare_tc2_gpu_inputs.py",
+      "sha256": "7DBC26ECAA58CAF3831E50F13CB7D02F8998044E422671D66FDB8B3654A3968E"
+    },
+    {
+      "path": "scripts/slurm/check_tc2_gpu_metrics.sh",
+      "sha256": "93E64309348082E1EBDEF2B1707BA5A1A58EF95C3E6E5395A8209191FB0D1519"
+    },
+    {
+      "path": "scripts/slurm/check_tc2_gpu_setup.sh",
+      "sha256": "672847A8F01D7090A2DD634FC46F829886A0A79D07658FD8DFC1F47F1EE548A5"
+    },
+    {
+      "path": "scripts/slurm/prepare_tc2_gpu.sh",
+      "sha256": "134349AEED1AC99774C9A5D25A484334AFAAC32018A7C2F44160DB051C3E9532"
+    },
+    {
+      "path": "scripts/slurm/probe_tc2_gpu_hardware.sh",
+      "sha256": "64BA3C98B08856883839951E27799F4B34AF6BF593CE7E7950984E19C0DB2E0B"
+    },
+    {
+      "path": "src/evaluate.py",
+      "sha256": "4DB2413CC6AAF4210B143285FE5FD7FC6A8C08E98C67073E9A92D31359E68BC6"
+    },
+    {
+      "path": "src/metric_core.py",
+      "sha256": "D218A438031DE6B0A83B14951354CD66A85ED65F97FFC2CFBAEFF1D4FB91DB78"
+    },
+    {
+      "path": "tests/test_metrics_tc2_gpu.py",
+      "sha256": "80B489B83990DE25C2BE4F055FA382247FD0B9091D194764EC3C02DD370313FD"
+    }
+  ],
+  "local_helper": {
+    "path": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup.ps1",
+    "sha256": "DBFB84B30B79ABF8EBC93E33B2D1B114347FE75868BDBC3EAF6D0A0656B6D88C"
+  }
+}

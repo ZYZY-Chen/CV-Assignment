@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "scripts_checked": 19,
+  "syntax_only": true,
+  "actual_script_executions": 0,
+  "actual_tc2_connections": 0,
+  "actual_slurm_submissions": 0
+}

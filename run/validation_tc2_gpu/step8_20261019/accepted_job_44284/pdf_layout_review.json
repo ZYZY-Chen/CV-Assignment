@@ -1,0 +1,1157 @@
+{
+  "status": "layout_corrections_required",
+  "scope": "Supplemental PDF geometry and font audit only. Statistical acceptance is independent.",
+  "standard_collision_cli_passed": false,
+  "standard_collision_dependency": "PyMuPDF/fitz unavailable; not installed",
+  "font_tool": "Unmodified audit_pdf_text.py::audit_pdf, direct PDF Tf scan",
+  "figures_checked": 15,
+  "font_floor_5pt_passed": true,
+  "font_floor_7pt_failed": [
+    "F5_resources.pdf"
+  ],
+  "font_7pt_failed_detail": {
+    "auditable": true,
+    "minimum_required_pt": 7,
+    "minimum_found_pt": 5.25,
+    "text_run_count": 29,
+    "below_minimum_count": 3,
+    "below_minimum": [
+      {
+        "stream": 1,
+        "font": "F1",
+        "size_pt": 5.25
+      },
+      {
+        "stream": 1,
+        "font": "F1",
+        "size_pt": 5.25
+      },
+      {
+        "stream": 1,
+        "font": "F1",
+        "size_pt": 5.25
+      }
+    ],
+    "warnings": []
+  },
+  "material_layout_findings": [
+    {
+      "figure": "baseline_comparison.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 6.1% of the smaller box",
+        "text": "1.00",
+        "text_bbox": [
+          227.4583578582,
+          212.47612499999997,
+          244.15335785820002,
+          219.97612499999997
+        ],
+        "other_text": "PaDiM",
+        "other_bbox": [
+          236.736375,
+          218.94812499999998,
+          259.86075,
+          226.44812499999998
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "baseline_comparison.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 8.4% of the smaller box",
+        "text": "0.1",
+        "text_bbox": [
+          326.5039273199,
+          212.47612499999997,
+          338.4289273199,
+          219.97612499999997
+        ],
+        "other_text": "PatchCore",
+        "other_bbox": [
+          295.8145,
+          218.94812499999998,
+          333.7901250000003,
+          226.44812499999998
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "F1_methods.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-stroke",
+        "page": 1,
+        "message": "Text is crossed by 2 stroked path(s)",
+        "text": "Frozen",
+        "text_bbox": [
+          176.70465,
+          143.617485,
+          206.2245249999999,
+          152.617485
+        ],
+        "other_text": null,
+        "other_bbox": [
+          178.156096,
+          120.15230399999999,
+          288.505152,
+          165.778416
+        ],
+        "object_count": 2,
+        "object_indexes": [
+          1,
+          6
+        ]
+      }
+    },
+    {
+      "figure": "F1_methods.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-stroke",
+        "page": 1,
+        "message": "Text is crossed by 2 stroked path(s)",
+        "text": "weights",
+        "text_bbox": [
+          255.93152499999988,
+          143.617485,
+          290.9685249999999,
+          152.617485
+        ],
+        "other_text": null,
+        "other_bbox": [
+          179.091648,
+          120.15230399999999,
+          324.877801,
+          165.778416
+        ],
+        "object_count": 2,
+        "object_indexes": [
+          1,
+          9
+        ]
+      }
+    },
+    {
+      "figure": "F4_improvement.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-stroke",
+        "page": 1,
+        "message": "Text is crossed by 1 stroked path(s)",
+        "text": "(percentage",
+        "text_bbox": [
+          159.30882733050004,
+          229.316125,
+          207.97695233050004,
+          237.316125
+        ],
+        "other_text": null,
+        "other_bbox": [
+          206.111375,
+          234.65312500000002,
+          221.111375,
+          234.65312500000002
+        ],
+        "object_count": 1,
+        "object_indexes": [
+          115
+        ]
+      }
+    },
+    {
+      "figure": "F4_improvement.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-stroke",
+        "page": 1,
+        "message": "Text is crossed by 4 stroked path(s)",
+        "text": "points)",
+        "text_bbox": [
+          210.52095233050005,
+          229.316125,
+          238.21695233050002,
+          237.316125
+        ],
+        "other_text": null,
+        "other_bbox": [
+          206.111375,
+          232.65312500000002,
+          221.111375,
+          236.65312500000002
+        ],
+        "object_count": 4,
+        "object_indexes": [
+          112,
+          114,
+          115,
+          168
+        ]
+      }
+    },
+    {
+      "figure": "F4_improvement.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 35.2% of the smaller box",
+        "text": "points)",
+        "text_bbox": [
+          210.52095233050005,
+          229.316125,
+          238.21695233050002,
+          237.316125
+        ],
+        "other_text": "Native",
+        "other_bbox": [
+          227.111375,
+          231.54812500000003,
+          251.39637500000003,
+          239.04812500000003
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "F4_improvement.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 72.1% of the smaller box",
+        "text": "Top",
+        "text_bbox": [
+          318.8211726695,
+          229.316125,
+          332.3257976695,
+          237.316125
+        ],
+        "other_text": "maximum",
+        "other_bbox": [
+          305.59450000000004,
+          231.54812500000003,
+          343.387,
+          239.04812500000003
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "F4_improvement.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 48.4% of the smaller box",
+        "text": "1%",
+        "text_bbox": [
+          334.86979766950003,
+          229.316125,
+          347.5577976695,
+          237.316125
+        ],
+        "other_text": "maximum",
+        "other_bbox": [
+          305.59450000000004,
+          231.54812500000003,
+          343.387,
+          239.04812500000003
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "F4_q_sensitivity.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-stroke",
+        "page": 1,
+        "message": "Text is crossed by 1 stroked path(s)",
+        "text": "pixels",
+        "text_bbox": [
+          158.4473273305,
+          197.420125,
+          181.56495233050003,
+          205.420125
+        ],
+        "other_text": null,
+        "other_bbox": [
+          166.205125,
+          203.15312500000002,
+          181.205125,
+          203.15312500000002
+        ],
+        "object_count": 1,
+        "object_indexes": [
+          102
+        ]
+      }
+    },
+    {
+      "figure": "F4_q_sensitivity.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 26.2% of the smaller box",
+        "text": "q",
+        "text_bbox": [
+          184.10895233050002,
+          197.420125,
+          189.18895233050003,
+          205.420125
+        ],
+        "other_text": "Native",
+        "other_bbox": [
+          187.205125,
+          200.04812500000003,
+          211.49012500000003,
+          207.54812500000003
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "F4_q_sensitivity.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 67.1% of the smaller box",
+        "text": "(%)",
+        "text_bbox": [
+          191.7329523305,
+          197.420125,
+          205.57295233050002,
+          205.420125
+        ],
+        "other_text": "Native",
+        "other_bbox": [
+          187.205125,
+          200.04812500000003,
+          211.49012500000003,
+          207.54812500000003
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "F4_q_sensitivity.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 28.3% of the smaller box",
+        "text": "Highest-scoring",
+        "text_bbox": [
+          351.6805476695,
+          197.420125,
+          414.3125476695,
+          205.420125
+        ],
+        "other_text": "Top-q",
+        "other_bbox": [
+          339.486375,
+          200.04812500000003,
+          359.62575,
+          207.54812500000003
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "F4_q_sensitivity.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 71.6% of the smaller box",
+        "text": "Highest-scoring",
+        "text_bbox": [
+          351.6805476695,
+          197.420125,
+          414.3125476695,
+          205.420125
+        ],
+        "other_text": "mean",
+        "other_bbox": [
+          362.01075000000003,
+          200.04812500000003,
+          383.28075,
+          207.54812500000003
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "F4_score_distributions.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 19.8% of the smaller box",
+        "text": "score",
+        "text_bbox": [
+          127.3127177419,
+          356.972125,
+          148.81284274189997,
+          364.972125
+        ],
+        "other_text": "Native",
+        "other_bbox": [
+          129.611375,
+          351.248125,
+          153.89637500000003,
+          358.748125
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "F4_score_distributions.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 24.7% of the smaller box",
+        "text": "1.5",
+        "text_bbox": [
+          224.8055384857,
+          345.604125,
+          236.7305384857,
+          353.104125
+        ],
+        "other_text": "maximum",
+        "other_bbox": [
+          208.0945,
+          351.248125,
+          245.88700000000003,
+          358.748125
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "F4_score_distributions.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 12.7% of the smaller box",
+        "text": "image",
+        "text_bbox": [
+          263.78575,
+          356.972125,
+          288.70575,
+          364.972125
+        ],
+        "other_text": "Top",
+        "other_bbox": [
+          281.892625,
+          351.248125,
+          294.562,
+          358.748125
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "F4_score_distributions.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 16.9% of the smaller box",
+        "text": "2.5",
+        "text_bbox": [
+          278.0973398405,
+          345.604125,
+          290.02233984049997,
+          353.104125
+        ],
+        "other_text": "Top",
+        "other_bbox": [
+          281.892625,
+          351.248125,
+          294.562,
+          358.748125
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "F4_score_distributions.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 6.2% of the smaller box",
+        "text": "score",
+        "text_bbox": [
+          291.24975,
+          356.972125,
+          312.74987500000003,
+          364.972125
+        ],
+        "other_text": "Top",
+        "other_bbox": [
+          281.892625,
+          351.248125,
+          294.562,
+          358.748125
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "F4_score_distributions.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 23.7% of the smaller box",
+        "text": "score",
+        "text_bbox": [
+          291.24975,
+          356.972125,
+          312.74987500000003,
+          364.972125
+        ],
+        "other_text": "1%",
+        "other_bbox": [
+          296.947,
+          351.248125,
+          308.842,
+          358.748125
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "F4_score_distributions.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 8.5% of the smaller box",
+        "text": "3.0",
+        "text_bbox": [
+          304.7432405178,
+          345.604125,
+          316.6682405178,
+          353.104125
+        ],
+        "other_text": "1%",
+        "other_bbox": [
+          296.947,
+          351.248125,
+          308.842,
+          358.748125
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "F4_score_distributions.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 22.2% of the smaller box",
+        "text": "Raw",
+        "text_bbox": [
+          408.3426572581,
+          356.972125,
+          425.1787822581,
+          364.972125
+        ],
+        "other_text": "Anomaly",
+        "other_bbox": [
+          408.002,
+          351.248125,
+          440.9045,
+          358.748125
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "F4_score_distributions.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 24.7% of the smaller box",
+        "text": "2",
+        "text_bbox": [
+          416.0643509756,
+          345.604125,
+          420.8343509756,
+          353.104125
+        ],
+        "other_text": "Anomaly",
+        "other_bbox": [
+          408.002,
+          351.248125,
+          440.9045,
+          358.748125
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "F4_score_distributions.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 11.7% of the smaller box",
+        "text": "image",
+        "text_bbox": [
+          427.72278225810004,
+          356.972125,
+          452.64278225810006,
+          364.972125
+        ],
+        "other_text": "Anomaly",
+        "other_bbox": [
+          408.002,
+          351.248125,
+          440.9045,
+          358.748125
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "loco_extension.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-stroke",
+        "page": 1,
+        "message": "Text is crossed by 2 stroked path(s)",
+        "text": "Structural",
+        "text_bbox": [
+          205.3425820958,
+          349.780125,
+          242.4675820958,
+          357.280125
+        ],
+        "other_text": null,
+        "other_bbox": [
+          215.736375,
+          352.35312500000003,
+          230.736375,
+          356.35312500000003
+        ],
+        "object_count": 2,
+        "object_indexes": [
+          88,
+          89
+        ]
+      }
+    },
+    {
+      "figure": "loco_extension.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 19.9% of the smaller box",
+        "text": "Structural",
+        "text_bbox": [
+          205.3425820958,
+          349.780125,
+          242.4675820958,
+          357.280125
+        ],
+        "other_text": "PaDiM",
+        "other_bbox": [
+          236.736375,
+          351.248125,
+          259.86075,
+          358.748125
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    },
+    {
+      "figure": "loco_extension.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 41.4% of the smaller box",
+        "text": "Logical",
+        "text_bbox": [
+          320.2499179042,
+          349.780125,
+          346.54741790419973,
+          357.280125
+        ],
+        "other_text": "PatchCore",
+        "other_bbox": [
+          295.8145,
+          351.248125,
+          333.7901250000003,
+          358.748125
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      }
+    }
+  ],
+  "extractor_artifacts_reviewed": [
+    {
+      "figure": "F3_components.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 5.2% of the smaller box",
+        "text": "r",
+        "text_bbox": [
+          12.679374999999999,
+          100.02687499999996,
+          20.679375,
+          103.31487499999997
+        ],
+        "other_text": "e",
+        "other_bbox": [
+          12.679374999999999,
+          95.27875,
+          20.679375,
+          100.19874999999999
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      },
+      "interpretation": "Adjacent glyph boxes from the same rotated y-axis label overlap slightly; this is an extraction/kerning artifact, not independently confirmed layout collision."
+    },
+    {
+      "figure": "F3_components.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 7.7% of the smaller box",
+        "text": "P",
+        "text_bbox": [
+          12.679374999999999,
+          150.252625,
+          20.679375,
+          155.07662499999998
+        ],
+        "other_text": "i",
+        "other_bbox": [
+          12.679374999999999,
+          148.20049999999998,
+          20.679375,
+          150.4245
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      },
+      "interpretation": "Adjacent glyph boxes from the same rotated y-axis label overlap slightly; this is an extraction/kerning artifact, not independently confirmed layout collision."
+    },
+    {
+      "figure": "F3_components.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 7.7% of the smaller box",
+        "text": "P",
+        "text_bbox": [
+          277.369845339,
+          128.8073125,
+          285.369845339,
+          133.63131249999998
+        ],
+        "other_text": "i",
+        "other_bbox": [
+          277.369845339,
+          126.7551875,
+          285.369845339,
+          128.9791875
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      },
+      "interpretation": "Adjacent glyph boxes from the same rotated y-axis label overlap slightly; this is an extraction/kerning artifact, not independently confirmed layout collision."
+    },
+    {
+      "figure": "F3_hyperparameters.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 7.7% of the smaller box",
+        "text": "P",
+        "text_bbox": [
+          18.960625,
+          122.25531250000002,
+          26.960625,
+          127.07931250000001
+        ],
+        "other_text": "i",
+        "other_bbox": [
+          18.960625,
+          120.20318750000001,
+          26.960625,
+          122.42718750000002
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      },
+      "interpretation": "Adjacent glyph boxes from the same rotated y-axis label overlap slightly; this is an extraction/kerning artifact, not independently confirmed layout collision."
+    },
+    {
+      "figure": "F3_hyperparameters.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 7.7% of the smaller box",
+        "text": "P",
+        "text_bbox": [
+          282.135470339,
+          122.25531250000002,
+          290.135470339,
+          127.07931250000001
+        ],
+        "other_text": "i",
+        "other_bbox": [
+          282.135470339,
+          120.20318750000001,
+          290.135470339,
+          122.42718750000002
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      },
+      "interpretation": "Adjacent glyph boxes from the same rotated y-axis label overlap slightly; this is an extraction/kerning artifact, not independently confirmed layout collision."
+    },
+    {
+      "figure": "F4_defect_size.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 5.2% of the smaller box",
+        "text": "r",
+        "text_bbox": [
+          23.72625,
+          67.820875,
+          31.72625,
+          71.10887500000001
+        ],
+        "other_text": "e",
+        "other_bbox": [
+          23.72625,
+          63.07275000000001,
+          31.72625,
+          67.99275
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      },
+      "interpretation": "Adjacent glyph boxes from the same rotated y-axis label overlap slightly; this is an extraction/kerning artifact, not independently confirmed layout collision."
+    },
+    {
+      "figure": "F4_defect_size.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 5.2% of the smaller box",
+        "text": "r",
+        "text_bbox": [
+          23.72625,
+          115.44899999999998,
+          31.72625,
+          118.737
+        ],
+        "other_text": "o",
+        "other_bbox": [
+          23.72625,
+          110.72487500000003,
+          31.72625,
+          115.62087500000001
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      },
+      "interpretation": "Adjacent glyph boxes from the same rotated y-axis label overlap slightly; this is an extraction/kerning artifact, not independently confirmed layout collision."
+    },
+    {
+      "figure": "F4_defect_size.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 5.2% of the smaller box",
+        "text": "r",
+        "text_bbox": [
+          282.135470339,
+          67.820875,
+          290.135470339,
+          71.10887500000001
+        ],
+        "other_text": "e",
+        "other_bbox": [
+          282.135470339,
+          63.07275000000001,
+          290.135470339,
+          67.99275
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      },
+      "interpretation": "Adjacent glyph boxes from the same rotated y-axis label overlap slightly; this is an extraction/kerning artifact, not independently confirmed layout collision."
+    },
+    {
+      "figure": "F4_defect_size.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 5.2% of the smaller box",
+        "text": "r",
+        "text_bbox": [
+          282.135470339,
+          115.44899999999998,
+          290.135470339,
+          118.737
+        ],
+        "other_text": "o",
+        "other_bbox": [
+          282.135470339,
+          110.72487500000003,
+          290.135470339,
+          115.62087500000001
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      },
+      "interpretation": "Adjacent glyph boxes from the same rotated y-axis label overlap slightly; this is an extraction/kerning artifact, not independently confirmed layout collision."
+    },
+    {
+      "figure": "loco_extension.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 7.7% of the smaller box",
+        "text": "P",
+        "text_bbox": [
+          23.72625,
+          297.7355705645,
+          31.72625,
+          302.5595705645
+        ],
+        "other_text": "i",
+        "other_bbox": [
+          23.72625,
+          295.6834455645,
+          31.72625,
+          297.9074455645
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      },
+      "interpretation": "Adjacent glyph boxes from the same rotated y-axis label overlap slightly; this is an extraction/kerning artifact, not independently confirmed layout collision."
+    },
+    {
+      "figure": "loco_extension.pdf",
+      "finding": {
+        "severity": "FAIL",
+        "kind": "text-text",
+        "page": 1,
+        "message": "Text boxes overlap by 7.7% of the smaller box",
+        "text": "P",
+        "text_bbox": [
+          277.369845339,
+          297.7355705645,
+          285.369845339,
+          302.5595705645
+        ],
+        "other_text": "i",
+        "other_bbox": [
+          277.369845339,
+          295.6834455645,
+          285.369845339,
+          297.9074455645
+        ],
+        "object_count": 1,
+        "object_indexes": []
+      },
+      "interpretation": "Adjacent glyph boxes from the same rotated y-axis label overlap slightly; this is an extraction/kerning artifact, not independently confirmed layout collision."
+    }
+  ],
+  "warnings_for_rendered_review": [
+    {
+      "figure": "F1_methods.pdf",
+      "finding": {
+        "severity": "WARN",
+        "kind": "text-fill-edge",
+        "page": 1,
+        "message": "Text partially overlaps the edge of 1 filled region(s)",
+        "text": "Frozen",
+        "text_bbox": [
+          176.70465,
+          143.617485,
+          206.2245249999999,
+          152.617485
+        ],
+        "other_text": null,
+        "other_bbox": [
+          179.091648,
+          120.15230399999999,
+          288.505152,
+          165.778416
+        ],
+        "object_count": 1,
+        "object_indexes": [
+          1
+        ]
+      }
+    },
+    {
+      "figure": "F1_methods.pdf",
+      "finding": {
+        "severity": "WARN",
+        "kind": "text-fill-edge",
+        "page": 1,
+        "message": "Text partially overlaps the edge of 1 filled region(s)",
+        "text": "weights",
+        "text_bbox": [
+          255.93152499999988,
+          143.617485,
+          290.9685249999999,
+          152.617485
+        ],
+        "other_text": null,
+        "other_bbox": [
+          179.091648,
+          120.15230399999999,
+          288.505152,
+          165.778416
+        ],
+        "object_count": 1,
+        "object_indexes": [
+          1
+        ]
+      }
+    },
+    {
+      "figure": "F4_improvement.pdf",
+      "finding": {
+        "severity": "WARN",
+        "kind": "text-fill-edge",
+        "page": 1,
+        "message": "Text partially overlaps the edge of 1 filled region(s)",
+        "text": "points)",
+        "text_bbox": [
+          210.52095233050005,
+          229.316125,
+          238.21695233050002,
+          237.316125
+        ],
+        "other_text": null,
+        "other_bbox": [
+          211.611375,
+          232.65312500000002,
+          215.611375,
+          236.65312500000002
+        ],
+        "object_count": 1,
+        "object_indexes": [
+          168
+        ]
+      }
+    },
+    {
+      "figure": "F5_resources.pdf",
+      "finding": {
+        "severity": "WARN",
+        "kind": "text-fill-edge",
+        "page": 1,
+        "message": "Text partially overlaps the edge of 1 filled region(s)",
+        "text": "image)",
+        "text_bbox": [
+          200.2363898305,
+          196.222125,
+          228.27638983050002,
+          204.222125
+        ],
+        "other_text": null,
+        "other_bbox": [
+          221.000307,
+          201.573307,
+          225.472443,
+          206.045443
+        ],
+        "object_count": 1,
+        "object_indexes": [
+          191
+        ]
+      }
+    },
+    {
+      "figure": "loco_extension.pdf",
+      "finding": {
+        "severity": "WARN",
+        "kind": "text-fill-edge",
+        "page": 1,
+        "message": "Text partially overlaps the edge of 1 filled region(s)",
+        "text": "Structural",
+        "text_bbox": [
+          205.3425820958,
+          349.780125,
+          242.4675820958,
+          357.280125
+        ],
+        "other_text": null,
+        "other_bbox": [
+          221.236375,
+          352.35312500000003,
+          225.236375,
+          356.35312500000003
+        ],
+        "object_count": 1,
+        "object_indexes": [
+          89
+        ]
+      }
+    }
+  ]
+}

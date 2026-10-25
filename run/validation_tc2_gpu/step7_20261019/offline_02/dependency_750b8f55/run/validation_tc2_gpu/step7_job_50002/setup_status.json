@@ -1,0 +1,40 @@
+{
+  "mode": "formal_experiment_stage",
+  "stage_id": "H2",
+  "job_id": "50002",
+  "status": "passed",
+  "stage_complete": true,
+  "step_7_complete": false,
+  "predecessor": {
+    "stage_id": "H1",
+    "job_id": "50001",
+    "status_sha256": "436D1E04A3A7BDA43C4277E94C330CF8AE8F258B22782DF0E64B2E46EFAEAF2D"
+  },
+  "design_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "experiment_sources": {
+    "offline": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+  },
+  "results": [
+    {
+      "run_key": "H2_mvtec_ad_cable_patchcore_s17_n100_A3F7BC278E27",
+      "verified": true,
+      "run_status": "completed"
+    },
+    {
+      "run_key": "H2_mvtec_ad_cable_patchcore_s17_n100_9881522E49D9",
+      "verified": true,
+      "run_status": "completed"
+    },
+    {
+      "run_key": "H2_mvtec_ad_screw_patchcore_s17_n100_E056497FC587",
+      "verified": true,
+      "run_status": "completed"
+    },
+    {
+      "run_key": "H2_mvtec_ad_screw_patchcore_s17_n100_A705880105D7",
+      "verified": true,
+      "run_status": "completed"
+    }
+  ],
+  "analyses": []
+}

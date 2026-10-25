@@ -1,0 +1,174 @@
+{
+  "actual_experiment_render_status": "running_at_snapshot",
+  "actual_network_or_scheduler_connections": false,
+  "all_payload_hashes_verified": true,
+  "archive_compressed_bytes": 48544,
+  "archive_decompressed_bytes": 174080,
+  "archive_regular_members": 16,
+  "archive_sha256": "62977EDA9C5071B309A8C94F461D9997640429E72267BF07F22E929F8060C8DE",
+  "created_utc": "2026-10-19T14:37:12.270520+00:00",
+  "errors": 0,
+  "failures": 0,
+  "formal_output_files_collected": 0,
+  "formal_render_completion_verified": false,
+  "full_synthetic_render_passed": true,
+  "independent_visual_review_performed": false,
+  "index_sha256": "961E5D627348FDEC43901F315359DFDD68F4ADD65338D1813E5314A2116F3328",
+  "input_terminal": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_223355_78991486\\terminal.txt",
+  "job_id": "44303",
+  "limitations": [
+    "The 15 synthetic PNG/PDF pairs are not included in the returned snapshot; full-render success is supported by the pinned executed test source, its receipt and 22 passing test log entries.",
+    "No formal revision publication or SUCCESS was collected; accepted-input rendering and visual review remain pending."
+  ],
+  "new_model_or_render_calls": 0,
+  "payload_file_count": 15,
+  "payload_files": {
+    "configs/figure_revision_tc2_gpu.json": {
+      "bytes": 1924,
+      "sha256": "6E9B646F7063AA6EF91C8C8B1318245AAE60A95A984E5CF333BB00A6884A07FA",
+      "status": "passed"
+    },
+    "docs/TC2_GPU_FIGURE_REVISION.md": {
+      "bytes": 6971,
+      "sha256": "40282E2BFA821F913F7B2BD4BAD735B41167DD60810FECD7CC4BA2E9ED195421",
+      "status": "passed"
+    },
+    "run/validation_tc2_gpu/slurm-44303.err": {
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "status": "passed"
+    },
+    "run/validation_tc2_gpu/slurm-44303.out": {
+      "bytes": 125,
+      "sha256": "F643A46D24EAD311271C207F727377DA916BDECEB87ACB59F39CF7148F07E69F",
+      "status": "passed"
+    },
+    "run/validation_tc2_gpu/step8_figure_revision_job_44303/plan.json": {
+      "bytes": 26081,
+      "sha256": "1B43D61C3A8F44C7A3B8DED4AF768A6BF89785CA0527C4ADE85E470F88853E71",
+      "status": "passed"
+    },
+    "run/validation_tc2_gpu/step8_figure_revision_job_44303/publication.json": {
+      "bytes": 1012,
+      "sha256": "1FE643A1B2286CC7A8CA8B1A15490B244A209077E449116E3DCC7089BF164704",
+      "status": "passed"
+    },
+    "run/validation_tc2_gpu/step8_figure_revision_job_44303/state.json": {
+      "bytes": 400,
+      "sha256": "F7327BC5FB41AA6EA93D341093F3418E2A5188C5F216BDEE7805217688CEA010",
+      "status": "passed"
+    },
+    "run/validation_tc2_gpu/step8_figure_revision_job_44303/tests.stderr.txt": {
+      "bytes": 2251,
+      "sha256": "A7D0266468F0BF5134DCE006EDFC84DAF075C9FBC7593BE7324AEE7684072735",
+      "status": "passed"
+    },
+    "run/validation_tc2_gpu/step8_figure_revision_job_44303/tests.stdout.txt": {
+      "bytes": 981,
+      "sha256": "92B11DE74FBCA864CBD51AC1D08273B7BB187E79DF0C5EE73585AB6C407C0F1A",
+      "status": "passed"
+    },
+    "run/validation_tc2_gpu/step8_figure_revision_job_44303/tests/test_report.json": {
+      "bytes": 981,
+      "sha256": "DD512C66DC09D7D4ECC480D0961E4881E4BBE69A56E1CEEE61DBCEEC8FBB261A",
+      "status": "passed"
+    },
+    "run/validation_tc2_gpu/step8_figure_revision_job_44303/tests/tests_summary.json": {
+      "bytes": 981,
+      "sha256": "DD512C66DC09D7D4ECC480D0961E4881E4BBE69A56E1CEEE61DBCEEC8FBB261A",
+      "status": "passed"
+    },
+    "scripts/collect_figure_revision_tc2_gpu.py": {
+      "bytes": 31581,
+      "sha256": "C01DBF89C7CFFEB9921F1DDD1BBE1C2BE35698FAF9AFCC4BD337D4F22C12A82B",
+      "status": "passed"
+    },
+    "scripts/revise_figures_tc2_gpu.py": {
+      "bytes": 39924,
+      "sha256": "D21C449E56FBA2D982537F7084458A1907023C9913C50D097E5F5E4E4D663C24",
+      "status": "passed"
+    },
+    "scripts/slurm/figure_revision_tc2_gpu.sh": {
+      "bytes": 4749,
+      "sha256": "0DA7BCC47E7193AB5CBDE71DD4BBC5C683B4D813F9E222A1BFCB25A78D290936",
+      "status": "passed"
+    },
+    "tests/test_figure_revision_tc2_gpu.py": {
+      "bytes": 33275,
+      "sha256": "6814B054A670DF15EBE010C5304FFD40ACE9F5CAD3F01D940FE0338D9269D2A5",
+      "status": "passed"
+    }
+  },
+  "preserved_source_count": 51,
+  "preserved_source_hashes": {
+    "configs/analysis_tc2_gpu.json": "9E6E20069F5E3C1F6ED5F739077D79D8556357C5C92501C822AD3E03BFB537B9",
+    "configs/experiments_tc2_gpu.json": "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75",
+    "configs/pilot_tc2_gpu.json": "0E1E251C1F03B76D4AF9E8BCD09A8720531E00ECE80173C517B85A16E9A88F9C",
+    "configs/protocol_v2.json": "3098B6A86DBA64EE439BFE61C7A4FCFFCD082371D5A80FFBC7940997ED6A1ED1",
+    "configs/runtime_tc2_gpu.json": "B057766AFDF473A89E74016B2F9DF6B311510BA8E444D42EE14C075BAF08AEAA",
+    "configs/tc2_gpu.json": "EB2899B2E6888233874C8FA97B1247ABD3E68B391538C86A36105410917A00F0",
+    "docs/TC2_GPU_ANALYSIS.md": "F897C75659CC31BF98BB89E95AA4E3AEA241AA40FAC59CEDE85518119CA5F57C",
+    "docs/TC2_GPU_EXPERIMENTS.md": "EBF7AD234A2346379CE5B7B80A76826A564F3ED7FF08DEB17CA362EC9E2FD47A",
+    "docs/TC2_GPU_PILOT.md": "9568CC38EF344CB7E2E3ADFAC8D13D69C08A23719738FD1B11AAFCA29750C917",
+    "environment-tc2.yml": "47F1DAA83A744743946C83E6DC1963B8FA7E835A4A0F7010A3B0501EF5A3DF38",
+    "manifests/manifest_mvtec_ad_bottle.json": "2922FA6E513F980CBDE53A303F86FE1160588DF7EFB0796F6888C95D2BAB6140",
+    "manifests/manifest_mvtec_ad_cable.json": "E188D05BD246C29503A35DBAF49DBCC326A35079ECC07973AE1A7BCCFD08FD95",
+    "manifests/manifest_mvtec_ad_capsule.json": "0E9F1BF5368DE03A2A6BE57CD8B13D8CE9D484DE3A05635206C7D8FC28D1E367",
+    "manifests/manifest_mvtec_ad_screw.json": "E209F4429C4056ECFA6F2DA82FAA9B5B3AE495EBFDBF94D5808C9676D8A99F9B",
+    "manifests/manifest_mvtec_ad_tile.json": "2B4274FE76BBCBCE3B968CCCAA0F3DAA6151FAF9AA6358445ACDA1B5DFBEE94C",
+    "manifests/manifest_mvtec_ad_wood.json": "57646007EBAFE8F015F976186197A7A08D338ECAEB6BF8B5D3764DE9A46888AE",
+    "manifests/manifest_mvtec_loco_juice_bottle.json": "E54AB3FA354E258D591F6C53B395ED9EED25518CF25F039FEB88040A2EC46C86",
+    "manifests/manifest_mvtec_loco_screw_bag.json": "7C02ED1CF33AFD35F8BEFB7342525F532213CC684ADC330414522DB51B1C66CA",
+    "requirements-tc2-lock.txt": "F7B848F10FFB3F3CCEB707450B2A5FE4DCD9A6C3B489963A8932094E016840B6",
+    "scripts/analyze_results_tc2_gpu.py": "CC6B3FDC5518BEA45E1F4E9571BC1D318EADEA6340D3D75DA9FC5E649B3A3552",
+    "scripts/analyze_scores_tc2_gpu.py": "D1412F6743ECB6709EB82FF978DF4D8C37601371BE4E78C2329B9AAD1FF609F6",
+    "scripts/collect_analysis_tc2_gpu.py": "23364A7E72E99AD6D02302A525523AD92B0A2300195BAF98861D88DDA2E8B98E",
+    "scripts/collect_experiments_tc2_gpu.py": "AC61772F65C9F2C4124761D2361E0A85E9F65DBCF4DF5BAB3E939B5111466010",
+    "scripts/collect_tc2_gpu_pilot.py": "D8D3B072A6B769D81023AC0BE0770A24C999C822B5A63869992BFF084848DAC4",
+    "scripts/experiments_tc2_gpu.py": "F4896D83DED9EAACB72ED7A75B63F76CC3538E61D2FB90A88CF1945D36D0CBDA",
+    "scripts/pilot_tc2_gpu.py": "9010C56A6F52745D21A550284D7807007FF78E8DA9C18E786EBAE310A8BE6274",
+    "scripts/plot_results_tc2_gpu.py": "C4AD7E9B6BB2D6D6428099EC255EBAE5BA624CD0B4F636D4CC7468C096F867B5",
+    "scripts/run_tc2_gpu.py": "5F9199D820CCAD80F0C6065F612776E3467BDE5F978AC240B360B42D6D36F921",
+    "scripts/slurm/analysis_tc2_gpu.sh": "8351E365AFE6FD996743E46DA13D6E7A9E40D6028B52C9612BDE5B0EFE4DC139",
+    "scripts/slurm/check_tc2_gpu_algorithms.sh": "32879BCA317B44DD7F196088F2718B3188889E47D34B23C8A24D6024720E8DCC",
+    "scripts/slurm/check_tc2_gpu_metrics.sh": "93E64309348082E1EBDEF2B1707BA5A1A58EF95C3E6E5395A8209191FB0D1519",
+    "scripts/slurm/check_tc2_gpu_workflow.sh": "8940612842B91FD3709FD643EB7204AB8BFF23249C139E0B441BED7202C8C16D",
+    "scripts/slurm/experiments_tc2_gpu.sh": "C4D12CFBC8D7B0F799AD51E06826318C8A17210526EC63ED04CD4FF3AB13080E",
+    "scripts/slurm/pilot_tc2_gpu.sh": "E2DCBECD470C209F74C352FA43B56A492E8B071C2B8A0E3B85D5E3388457C931",
+    "src/anomaly_postprocess.py": "4BD9E9BE3CAD7B90A24F7DBFAABDB55EB403C94BCF4B771FF9D73A0631B9D4BD",
+    "src/data.py": "9A82D585203B376F41C3200A32D6971288DD70B5C7E71210F3E21F8C5C1F1F89",
+    "src/evaluate.py": "4DB2413CC6AAF4210B143285FE5FD7FC6A8C08E98C67073E9A92D31359E68BC6",
+    "src/metric_core.py": "D218A438031DE6B0A83B14951354CD66A85ED65F97FFC2CFBAEFF1D4FB91DB78",
+    "src/padim_adapter.py": "803E30F1AD1F591BDD26C0D458D252D397578F8E5398486855DAC0257F443AB3",
+    "src/patchcore_adapter.py": "4877D66625180BB36258EA6B99DE9427E545764614AB0CB245F5FAFC44EC307F",
+    "src/sampling.py": "BEDB33057BC7E938108E4B9B177ECDE121418B24DC348CDF07AD04F3F0284B79",
+    "src/scoring.py": "E8348550F0A55CC8A1EDBB4B1310FBE985493F22DAE71B6B562F34720C3D4B0B",
+    "src/tc2_gpu_cache.py": "867C31DFD87E5BFC6EC4783183D927192ABBC2A1140610C79E5A8D8426742495",
+    "src/tc2_gpu_protocol.py": "DD646F26E61C89B622D0D2B1DE50462383CE22D2AEF5C7AA79F3AF5B99DE44B6",
+    "src/tc2_gpu_runner.py": "CEDC4ECD543DC25EFA6E4003F158954C775B842B98A2609BE943928AA900628D",
+    "tests/test_algorithms_tc2_gpu.py": "5200AAE240E64D22CAECCBD46615DDE11F51189C612938046DC2D4A009E16EDF",
+    "tests/test_analysis_tc2_gpu.py": "168104960F564D6622564527FBCE3753FB9EEACA0EB4AB4C41209A312331521A",
+    "tests/test_experiments_tc2_gpu.py": "371072914FD83F1E4A803501A86965977BA12C1797EE44C178D0A843F8A2FFE5",
+    "tests/test_metrics_tc2_gpu.py": "80B489B83990DE25C2BE4F055FA382247FD0B9091D194764EC3C02DD370313FD",
+    "tests/test_pilot_tc2_gpu.py": "073D76A82F74A123992702AC080FEC9D1CA021561C422C7E38AF8EF3024255F2",
+    "tests/test_workflow_tc2_gpu.py": "5130184D9BD76840AF1BD8CA217C1864618B228ED15B7A2F372F0B5E949734CC"
+  },
+  "revision_source_hashes": {
+    "configs/figure_revision_tc2_gpu.json": "6E9B646F7063AA6EF91C8C8B1318245AAE60A95A984E5CF333BB00A6884A07FA",
+    "docs/TC2_GPU_FIGURE_REVISION.md": "40282E2BFA821F913F7B2BD4BAD735B41167DD60810FECD7CC4BA2E9ED195421",
+    "scripts/collect_figure_revision_tc2_gpu.py": "C01DBF89C7CFFEB9921F1DDD1BBE1C2BE35698FAF9AFCC4BD337D4F22C12A82B",
+    "scripts/revise_figures_tc2_gpu.py": "D21C449E56FBA2D982537F7084458A1907023C9913C50D097E5F5E4E4D663C24",
+    "scripts/slurm/figure_revision_tc2_gpu.sh": "0DA7BCC47E7193AB5CBDE71DD4BBC5C683B4D813F9E222A1BFCB25A78D290936",
+    "tests/test_figure_revision_tc2_gpu.py": "6814B054A670DF15EBE010C5304FFD40ACE9F5CAD3F01D940FE0338D9269D2A5"
+  },
+  "six_revision_sources_match_local_plan_and_payload": true,
+  "skipped": 0,
+  "source_or_log_modifications": false,
+  "status": "passed_partial_snapshot_tests_verified",
+  "step_8_complete": false,
+  "synthetic_figure_groups": 15,
+  "synthetic_selected_cases": 16,
+  "test_count": 22,
+  "test_elapsed_seconds": 20.32,
+  "tests_receipt_sha256": "DD512C66DC09D7D4ECC480D0961E4881E4BBE69A56E1CEEE61DBCEEC8FBB261A"
+}

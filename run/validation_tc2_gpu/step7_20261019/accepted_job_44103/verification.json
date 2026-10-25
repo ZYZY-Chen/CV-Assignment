@@ -1,0 +1,252 @@
+{
+  "status": "passed",
+  "stage_id": "C1",
+  "job_id": "44103",
+  "stage_complete": true,
+  "step_7_complete": false,
+  "accepted_at_utc": "2026-10-19T08:50:03.610870+00:00",
+  "slurm_state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:04:50",
+  "node": "TC2N01",
+  "slurm_max_rss_kib": 5151984,
+  "source_directory": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_164545_67ec5487",
+  "index_sha256": "5565885339EC2C84F2669F5569EFAE63CE2219A300ACBF5E435AF1E031761722",
+  "index_verification": {
+    "status": "verified",
+    "job_id": "44103",
+    "stage_id": "C1",
+    "index_sha256": "5565885339EC2C84F2669F5569EFAE63CE2219A300ACBF5E435AF1E031761722",
+    "page_count": 2,
+    "pages": [
+      {
+        "analysis_ids": [],
+        "bytes": 43907883,
+        "name": "page_001.tar.gz",
+        "page_number": 1,
+        "result_ids": [
+          "C1_mvtec_ad_cable_patchcore_s17_n100_230A94347D46"
+        ],
+        "sha256": "46CC347AE67A31B7B6C6A28E8F21955063A6E763A69780A4778A076140919F68"
+      },
+      {
+        "analysis_ids": [],
+        "bytes": 50591578,
+        "name": "page_002.tar.gz",
+        "page_number": 2,
+        "result_ids": [
+          "C1_mvtec_ad_screw_patchcore_s17_n100_681E25673EEB"
+        ],
+        "sha256": "EA84B7A77CC51A3742CF2688E63A84A335E34296934FCF69FC0CDB83831211A7"
+      }
+    ],
+    "partial": false,
+    "stage_complete": false,
+    "step_7_complete": false,
+    "remote_stage_complete": true
+  },
+  "collection_verification": {
+    "status": "verified",
+    "job_id": "44103",
+    "stage_id": "C1",
+    "index_sha256": "5565885339EC2C84F2669F5569EFAE63CE2219A300ACBF5E435AF1E031761722",
+    "page_count": 2,
+    "result_count": 2,
+    "analysis_count": 0,
+    "partial": false,
+    "stage_complete": true,
+    "step_7_complete": false,
+    "completion_scope": "current_stage_and_remote_dependency_evidence",
+    "cache_array_bytes_downloaded": false,
+    "prediction_arrays_loaded_locally": false
+  },
+  "pages_verified": 2,
+  "total_page_payload_entries": 80,
+  "unique_payload_files_verified": 48,
+  "results_verified": 2,
+  "new_fits_verified": 2,
+  "cumulative_formal_fits": 22,
+  "phases_passed": 6,
+  "predecessor": {
+    "stage_id": "H2",
+    "job_id": "44086",
+    "status_sha256": "FC526A5065FFC72CF59ACE3C681A6C387CA8C4B80CDCC27B5E5ABD2C7D7001C8"
+  },
+  "design_sha256": "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75",
+  "experiment_sources": {
+    "configs/experiments_tc2_gpu.json": "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75",
+    "scripts/experiments_tc2_gpu.py": "F4896D83DED9EAACB72ED7A75B63F76CC3538E61D2FB90A88CF1945D36D0CBDA",
+    "scripts/analyze_scores_tc2_gpu.py": "D1412F6743ECB6709EB82FF978DF4D8C37601371BE4E78C2329B9AAD1FF609F6",
+    "scripts/slurm/experiments_tc2_gpu.sh": "C4D12CFBC8D7B0F799AD51E06826318C8A17210526EC63ED04CD4FF3AB13080E",
+    "scripts/collect_experiments_tc2_gpu.py": "AC61772F65C9F2C4124761D2361E0A85E9F65DBCF4DF5BAB3E939B5111466010",
+    "tests/test_experiments_tc2_gpu.py": "371072914FD83F1E4A803501A86965977BA12C1797EE44C178D0A843F8A2FFE5",
+    "docs/TC2_GPU_EXPERIMENTS.md": "EBF7AD234A2346379CE5B7B80A76826A564F3ED7FF08DEB17CA362EC9E2FD47A"
+  },
+  "protected_sources_checked": 44,
+  "runtime": {
+    "device": "cuda",
+    "gpu": "NVIDIA A40",
+    "driver": "570.148.08",
+    "cuda_build": "12.8",
+    "software": {
+      "python": "3.10.22",
+      "numpy": "1.26.4",
+      "torch": "2.11.0+cu128",
+      "torchvision": "0.26.0+cu128",
+      "pillow": "12.3.0",
+      "scikit-learn": "1.7.2",
+      "pyyaml": "6.0.3"
+    },
+    "acceptance_jobs": {
+      "metrics": "43968",
+      "algorithms": "43970",
+      "setup": "43950"
+    },
+    "compatibility_configuration_sha256": "EDF3D1D0380E0105A5173607CE360221FD43B059478915EEC0EC04ED9110F913",
+    "slurm_job_id": "44103",
+    "tf32": false,
+    "autocast": false
+  },
+  "resources": {
+    "requested": {
+      "partition": "MGPU-TC2",
+      "qos": "normal",
+      "nodes": 1,
+      "tasks": 1,
+      "gpus": 1,
+      "cpus_per_task": 2,
+      "memory_gib": 24,
+      "time_limit": "02:00:00"
+    },
+    "runtime": {
+      "device": "cuda",
+      "gpu": "NVIDIA A40",
+      "driver": "570.148.08",
+      "cuda_build": "12.8",
+      "software": {
+        "python": "3.10.22",
+        "numpy": "1.26.4",
+        "torch": "2.11.0+cu128",
+        "torchvision": "0.26.0+cu128",
+        "pillow": "12.3.0",
+        "scikit-learn": "1.7.2",
+        "pyyaml": "6.0.3"
+      },
+      "acceptance_jobs": {
+        "metrics": "43968",
+        "algorithms": "43970",
+        "setup": "43950"
+      },
+      "compatibility_configuration_sha256": "EDF3D1D0380E0105A5173607CE360221FD43B059478915EEC0EC04ED9110F913",
+      "slurm_job_id": "44103",
+      "tf32": false,
+      "autocast": false
+    },
+    "slurm_environment": {
+      "SLURM_JOB_ID": "44103",
+      "SLURM_JOB_PARTITION": "MGPU-TC2",
+      "SLURM_JOB_NODELIST": "TC2N01",
+      "SLURM_CPUS_PER_TASK": "2",
+      "SLURM_MEM_PER_NODE": "24576",
+      "SLURM_JOB_QOS": "normal"
+    },
+    "child_peak_rss_kib": 4606340,
+    "free_bytes_after": 9668442718208
+  },
+  "caches": [
+    {
+      "category": "cable",
+      "images": 374,
+      "metadata_sha256": "646DF39171F6682E394975B2242D8449B82BA7CB3777F1474453D2067CD87E87"
+    },
+    {
+      "category": "screw",
+      "images": 480,
+      "metadata_sha256": "B131F425A2D9D0C4583DA65874E306267DDA853D133B155F8355638CFCC4453F"
+    }
+  ],
+  "independent_saved_maps_checked": 419,
+  "independent_score_vectors_checked": 20,
+  "independent_image_rule_evaluations": 10,
+  "maximum_independent_image_metric_absolute_error": 3.3306690738754696e-16,
+  "remote_full_result_verification": "Both original-resolution pixel-metric and full-cache saved-result verifications passed on TC2.",
+  "local_pixel_metrics_recomputed": false,
+  "cache_npy_arrays_downloaded": false,
+  "weighted_native_score_limitation": "Four weighted PatchCore native vectors were checked for FP32 dtype, finite values and shape; maps alone do not reconstruct nearest-neighbor support weights.",
+  "reports": {
+    "saved_arrays_verification.json": "97C4E0E3AB0014677ECF477587C894C1E71C0A88879CEB6EFCBA29961265358A",
+    "independent_image_metrics.json": "9944D7CBD40A8C021F3622B24F51D9B17A3F2C811DC12332D3769B114C0F8150",
+    "archive_file_hashes.json": "7EC22735B570D8CDCB50A5874D2F828EB77613E4395C73767F5D8618A153B7A7",
+    "check_saved_arrays.py": "60F73ED3B7EA50905179C048A0D1FB1C78F8E96DD00C3113335044B759D702C2",
+    "independent_image_metrics_check.py": "DEFD3CC4ED0FA6059FD685D44D06E004B091222EB9CC87D40DB2ACB35E6B2393"
+  },
+  "remote_status_sha256": "49EBF855C45F81792FEEFD5A65C91AD337CEDFF76D85FD9352268758144F7F0A",
+  "result_page_locations": {
+    "C1_mvtec_ad_cable_patchcore_s17_n100_230A94347D46": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_164545_67ec5487\\remote\\page_001",
+    "C1_mvtec_ad_screw_patchcore_s17_n100_681E25673EEB": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_164545_67ec5487\\remote\\page_002"
+  },
+  "results": [
+    {
+      "run_key": "C1_mvtec_ad_cable_patchcore_s17_n100_230A94347D46",
+      "path": "run/tc2_gpu/results/6FBF6BE772B2C12A315DB00EB43842C6AAEE6BD7D90A57187F1FA6CC0AD11DD5",
+      "identity_sha256": "6FBF6BE772B2C12A315DB00EB43842C6AAEE6BD7D90A57187F1FA6CC0AD11DD5",
+      "method": "patchcore",
+      "dataset": "mvtec_ad",
+      "category": "cable",
+      "run_seed": 17,
+      "normal_train_n": 100,
+      "run_status": "completed",
+      "verified": true,
+      "accepted_pilot_reuse": false,
+      "timings": {
+        "input_and_cache_verification_seconds": 3.976479871198535,
+        "fit_feature_read_transfer_seconds": 0.2741467198356986,
+        "fit_seconds": 0.07352830562740564,
+        "prediction_warmup_seconds": 0.7447523484006524,
+        "prediction_feature_io_seconds": 0.1316062668338418,
+        "predict_seconds": 3.9559633415192366,
+        "prediction_readback_seconds": 0.04074429254978895,
+        "evaluate_cpu_seconds": 32.046979239210486,
+        "save_seconds": 3.1522217243909836,
+        "saved_metric_validation_cpu_seconds": 41.018722905777395
+      },
+      "gpu_peak_allocated_bytes": 669515776,
+      "gpu_peak_reserved_bytes": 786432000
+    },
+    {
+      "run_key": "C1_mvtec_ad_screw_patchcore_s17_n100_681E25673EEB",
+      "path": "run/tc2_gpu/results/1AA7C0C9F0F51C0DD379D2243DBDC27C27E554C2974F2DFA16F7A094AE9C4BD6",
+      "identity_sha256": "1AA7C0C9F0F51C0DD379D2243DBDC27C27E554C2974F2DFA16F7A094AE9C4BD6",
+      "method": "patchcore",
+      "dataset": "mvtec_ad",
+      "category": "screw",
+      "run_seed": 17,
+      "normal_train_n": 100,
+      "run_status": "completed",
+      "verified": true,
+      "accepted_pilot_reuse": false,
+      "timings": {
+        "input_and_cache_verification_seconds": 3.924267740920186,
+        "fit_feature_read_transfer_seconds": 0.2857070183381438,
+        "fit_seconds": 0.07226944994181395,
+        "prediction_warmup_seconds": 0.7494798609986901,
+        "prediction_feature_io_seconds": 0.15139801427721977,
+        "predict_seconds": 4.314811830408871,
+        "prediction_readback_seconds": 0.04735489934682846,
+        "evaluate_cpu_seconds": 33.178584257140756,
+        "save_seconds": 3.6181525215506554,
+        "saved_metric_validation_cpu_seconds": 33.07481266744435
+      },
+      "gpu_peak_allocated_bytes": 669515776,
+      "gpu_peak_reserved_bytes": 786432000
+    }
+  ],
+  "next_stage": "I1_seed17",
+  "next_stage_fits": 0,
+  "next_stage_analysis_rows": 18,
+  "core_checkpoint_complete": false,
+  "next_user_terminal_command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup.ps1\" -Action RunExperiments -Stage I1_seed17",
+  "actual_agent_tc2_connections": 0,
+  "actual_agent_slurm_submissions": 0,
+  "implementation_files_modified": 0
+}

@@ -1,0 +1,3383 @@
+{
+  "identity": {
+    "format": "tc2_gpu_fp32_npy_1",
+    "namespace": "formal",
+    "protocol_sha256": "3098B6A86DBA64EE439BFE61C7A4FCFFCD082371D5A80FFBC7940997ED6A1ED1",
+    "manifest_sha256": "2922FA6E513F980CBDE53A303F86FE1160588DF7EFB0796F6888C95D2BAB6140",
+    "split_hash": "128F88F7EFA3B5F8D06B27CC80E67FF4D8E2163B4ABD24ECF90801FA828E4B71",
+    "dataset": "mvtec_ad",
+    "category": "bottle",
+    "images": [
+      {
+        "path": "mvtec_ad/bottle/train/good/004.png",
+        "sha256": "E322AB1CE2714BE77610B25209D5CE91DF9EF3F434403CF3DC5041F469D2ADE3"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/005.png",
+        "sha256": "CE025F228AF389707430C4FF417BB0A4CCF4324B9CEF4F60E4AD87ED75C735B6"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/008.png",
+        "sha256": "FBDCA6B40932E967780BA859BB752EEED1996E874581C47D29DA7D23F33048BE"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/010.png",
+        "sha256": "AD500D6C2C625ECC17F8B276A597F76CE5CABFECE6326FD39682B5D6B9192DB0"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/016.png",
+        "sha256": "92A6D4B311360BCD5C96AE630A377EA2EBCB29D9B9A39E2F0C1C3AD1F1B88A9A"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/017.png",
+        "sha256": "7D546AA84DBFE0C37B19346FA88E579D6B45B3075073E0BA3F1E2E8657E6CEFB"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/023.png",
+        "sha256": "5BEBCD96862CA137CF0A1BE85230CFFB0098BD06636747C98DD3109C223DD3A0"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/024.png",
+        "sha256": "0E59918793E8AD42CAA415776B381F5366AFBD11A9FFF2511970DBC1389B8DDF"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/026.png",
+        "sha256": "8C9AE9DA77C9A3ADD73DAE83D25ABBD444EE9445D4E4C6F1D27D946421FA6542"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/030.png",
+        "sha256": "2AE6E2E8CA1E90F4E0804E28FAEB9BB51CD3C130BDA50ED0BAFE05FB4533CFD0"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/033.png",
+        "sha256": "16E52B8B32FCAA6295840300340287FED67ABCAF1D4EE9D8EDD5E674E46B17CA"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/036.png",
+        "sha256": "9302580815770C06ED9FCCAD8512B25D3E80053C35DFEB35D743DD5C907761EE"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/051.png",
+        "sha256": "0E3EEB97862EAA2125829F6F6336036B3CE72AB6E8BCF8795BCE2C28D8EA425F"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/053.png",
+        "sha256": "60B6CC8478B5638A07677159DDB2D9310EAFB8EC86458661AD9163693A0DBAB8"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/072.png",
+        "sha256": "E5F4084F3A58EA10D75F9BAA674E830AB07658920D10DCD90F25D332FDC650C8"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/091.png",
+        "sha256": "F12A6E2CC58C98B93B6ABA11E6BDA12AF38B75216F876709E6544733072DFB68"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/094.png",
+        "sha256": "60D532F4ED02D61A11B1F27F729ADADA0F39B793CCA317F5D39A8DEB794A3B16"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/111.png",
+        "sha256": "141E42F26599992FEA73FA005382AD25BB75518AEABBFD8D705AC83BFCA1ECAE"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/114.png",
+        "sha256": "36D4E92D88EF92C638B5DBF17667A001B98BEB6213ACD7EEAF411BE54C930BCA"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/119.png",
+        "sha256": "CF1CDB1DE9963E0ACB7D97D8F26D7B78902026D65408B5D43B2E851AAFFB81D4"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/121.png",
+        "sha256": "E776EEF773529B358C1C300EABB3840115B8D30BF9E4C0E349D7C84FE0360433"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/123.png",
+        "sha256": "3B43B81D89C9E3BA46C91BA2EEF5C86C932626D91E8ED1ECF53B2A657075F0CD"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/128.png",
+        "sha256": "80DE6AE7A48146EB91E9E8CC51D107F6FA1D2114598156E625B7BA1AB2D894BC"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/132.png",
+        "sha256": "FB22CBB08C73151C8AA89C415D88B23688DCCF394444243F04E9C192F2DE83B1"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/138.png",
+        "sha256": "BE3E7DF715FD4D0072670F7058C70C7374475700272B8AF7C95846D0EED75766"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/148.png",
+        "sha256": "23B47753E2BADEE3FA340475D4896B2A17677C3D11D276A9A251C10E155BD36C"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/156.png",
+        "sha256": "8C49D86DEE53B3CE63E8269C8C2EE2C83258EC34528B082E5CCB4B7E1FB61FB6"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/158.png",
+        "sha256": "395472854E57A8A7209202E88BBF76247A3CE2A434B015EE47EF53CDE574DA77"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/164.png",
+        "sha256": "27EDA00FE8BD67FE8FB723AD5BD6074782D618F099C8831D3B365DC12C45F756"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/167.png",
+        "sha256": "17655246A2A4E78F10854FFB65786DE5B9CA49BBE1A38E1E0149C6235B6942AD"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/168.png",
+        "sha256": "79CC0A25256A33F2091C6E28C0092B6747105F7498CEDEA841F500C12E7EB0E7"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/171.png",
+        "sha256": "B16C0230EE604E6DD068CE3A43E21C81C6DB9686E291CFA12C5848DD8D69B335"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/172.png",
+        "sha256": "7B045F9D28F363AB8A73A86B06DEB41F80533A46EBC07C5C803A36FE92C72B71"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/173.png",
+        "sha256": "E5B4469783DBA8533F176214F2CC98F888C7A500F0246DDFC3C3EDD88F00F87B"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/175.png",
+        "sha256": "99C43C84A67EE65A17A25D324FEF1853DC04459EAF6D0E03FA7EBC20962918CA"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/178.png",
+        "sha256": "2F0BB978B83CF3BD2FF5F991A2978343D9604090D7255FF27557AB3888E49692"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/179.png",
+        "sha256": "E54B7F1F22C1ED5795B3A09A426C15EAC516FD712DF3744223A0CD6440321C48"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/180.png",
+        "sha256": "4ABBC0205890A0501807FFEDCD2525D554EC057C8F57BC9DBB906144B4D5563B"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/191.png",
+        "sha256": "AA2BE01B4B501F33FA2B9C69B150774255302F39C29ED517326B9FCE7FE4ECE8"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/195.png",
+        "sha256": "9FA40DE41750F9E07991F2B81E157B0A24778CC3A0F891A4A4A3B66A6DAC5F47"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/198.png",
+        "sha256": "4646F9FBDEC0168C37F122A338968AD7B97DB18CCAA35C4281A997E0D2F4CB67"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/202.png",
+        "sha256": "B8B4C42700A70431F50627B0F2D92BA6D2BA5505A4F17D2C8E54A07323E91CD2"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/000.png",
+        "sha256": "8A25EB07475A5102F4823FEFD82662DD65F8F2A0A333BF958124CEEEE38F0E38"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/001.png",
+        "sha256": "BA13B82FC8C732A02277816521FE93A0FEE00C524F2742BBB3FEED0A31CDA8DF"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/002.png",
+        "sha256": "7DE0414F1744AAF5CEC488928EE3B761509E4BAD4F607DC4F6D41AD7862DAB69"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/003.png",
+        "sha256": "83A8754D0215C4512CDBA27CAA15D478F21E4314AC85EFA639D4D31D1A82122D"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/006.png",
+        "sha256": "037ACB142EC7494E749DA9A46DE367DF92DF345EA3C9C4D0E0E5FE24F8B93461"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/007.png",
+        "sha256": "070D4CBE696071AABC660F9362273D79F0CF36B2B60084F6D545902FA455C254"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/009.png",
+        "sha256": "935DD12766CF96BBDEB48BA5801A896CBD7047212F601077D1ADEF0DB9A6AE57"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/011.png",
+        "sha256": "8493F6EB590418997FF950E1A2CFBE5F31EBBF49A8D075B838A98ABFE851AE26"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/012.png",
+        "sha256": "0C45F021E169DC8B27120C4C70EA09C0A4E3391482ED4DDA4A04BAF7B2098B85"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/013.png",
+        "sha256": "13D287CD1CC8B7E7E09ECB74594F7A30D94C35FD5E95B9421B2081D9EAD6AA36"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/014.png",
+        "sha256": "A8826579631C43C66B2E0D33F00CF6D5BEAC3DCAB0CADF50BEC3C8837A329288"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/015.png",
+        "sha256": "8CE929A477E23B50C37913300541F324EAF6073155E4ABEA524A3FDD9D7C49B2"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/018.png",
+        "sha256": "83B1D0683D6C9DBF41AB72464838991BBB931DFF24D644CD8E4BF7582EF784CE"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/019.png",
+        "sha256": "A12A98CFA582797AFCE9DD170F5F6795747DF8672DEAED80D03C7E26406C1AA0"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/020.png",
+        "sha256": "96A7E24EC9CA27A9FF389CCBA0260D6D78D6762968803260804AEF65F26FE077"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/021.png",
+        "sha256": "92FE0A4A396DF3BC95852130A063C241486DCCB21AC54017145265A1A5DD72F2"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/022.png",
+        "sha256": "F8E1ECE1086CC7E75DCACFFDB7AC5485F767A7A53CB2F92033FC29F58E2708BA"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/025.png",
+        "sha256": "311F88B86169B4516486999726E702EBCA6C8F12C2500CC0449158FFBE0F929B"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/027.png",
+        "sha256": "C3D7AE38BA8602D8EFFC716068BB71A4E67D4C0ACDDD9CAF5EC761D3F2853372"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/028.png",
+        "sha256": "20AD78AEFE7AF62B170A569A2C96B95F12621AF240E259BB1B32BA142D87638E"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/029.png",
+        "sha256": "B8253D5C07AAF8C58F8D0D4A1884EA4E7E7F26B8529B27E6B55E9392DB97F67F"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/031.png",
+        "sha256": "47980FFC9411C7EF921B750051640587D829F34B2326E08144B0AC3A5E28C106"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/032.png",
+        "sha256": "22EA2F7D08C0A5BA4F1494737BDC198375760CE42EED8FE29B68436ACF2CEB7C"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/034.png",
+        "sha256": "4A44F447A81D1A9C18577B667E5DD3131B10205D2A739DEEDF45490F277A402B"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/035.png",
+        "sha256": "1EE9369E10C7F3D73B6A03E2BF3E648CCF29B52E47DE99141CBD74603FBD76F0"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/037.png",
+        "sha256": "3575E4F0785D679737E5D870D4AB308BE47EA1565C0B4B6C8D76AF502F9A080B"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/038.png",
+        "sha256": "905E9E23F2C982DE65F7687AD31D35C750F4812CF681B7263B6CD072548D474D"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/039.png",
+        "sha256": "663B485F3C271B3C7FD83C3312339C09010E7BC81DCB95D5A4F5646BB776AAAF"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/040.png",
+        "sha256": "0981EE2EFCD397B9881F46D2BF9A568B94F31B5905E8CD787116E9E4CEA47603"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/041.png",
+        "sha256": "52C84BAB48A67573F1BF589366AD7A882B1C7C866C09E3F4FFFA3693BF4A69C3"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/042.png",
+        "sha256": "034E70851F06468C7C48FEE1845A890074F96887BEAA08C0D72B86B10AA4343C"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/043.png",
+        "sha256": "6174EF1513643D78FF3228E0E117208B55FEBCD10B2B86E16C65C26AD9DF3C0C"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/044.png",
+        "sha256": "4EC7F7015C79583007984F83A57DF369C6F81551D095386D3C3E9A4554BE3AEE"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/045.png",
+        "sha256": "E49F59E90918E7D94CD5439EB595E019722A3B254E12EA6CCF901BAB2A25112A"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/046.png",
+        "sha256": "1ADBA5092BA0706B293E0CE283629A1AF776E46D8C809ACB2CD084CF9D49D127"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/047.png",
+        "sha256": "87038A5973815117EC24B5CCA8CD798DC31D738A0CB6F2EFD5803D62F6EF9F1C"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/048.png",
+        "sha256": "15FA6566A8C01BFCD546F0CF2B34F7E351C9F10126B77EA3AD6DDB9200E21398"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/049.png",
+        "sha256": "59233798220711BC931BBB9F4C88A7A42E933E831749DF316F949B7572F3F5A1"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/050.png",
+        "sha256": "FE999421DF95604555B3C253F524E4A6328F16DC8DFE24DE6EB66A34FDA43D97"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/052.png",
+        "sha256": "AF57768856D61B24BFDD780989CC5A6623A14C3FD66BE2D755AF16560FE0E8DB"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/054.png",
+        "sha256": "7ED6A41A7D4B684BFBFB89FBE3989CE90C7EA1179BBF4ABEC4964D15A91F28EC"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/055.png",
+        "sha256": "7E2044CF73CB8DF6B2D728553AB2A5D0366E93374BEABE22A3E412DDD9D9907E"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/056.png",
+        "sha256": "CCD542B186751026009FC32ECBD8F9F48FEE61CF6274ECD0B4C8CA2B4E53F1F4"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/057.png",
+        "sha256": "FF41FA6ADF5452D5F2D3ABF0939AACAC53779B4F70DE4DB2A816843A3179A171"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/058.png",
+        "sha256": "AF31FAE36D103E0142BA02F91359E963A50277D8AF341D738E8463560DAFDF86"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/059.png",
+        "sha256": "1BA282C78F37753D7036A8D36C79A37707F46108346E88051D84E18D924CEE2E"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/060.png",
+        "sha256": "D325B1ADA72A37BAE2B950F5E5077637144F30AB4C91CE31768F0EDFDDD76DAB"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/061.png",
+        "sha256": "F40106F40A441D24B6EF04228CAB8572B81EF0DAAAD134B65BFE07AEFA622322"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/062.png",
+        "sha256": "BFAFE9B9838A8668983DA26610405EA0E5F31C3564A4746E80A79722085F56A2"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/063.png",
+        "sha256": "28CE3E5C3CBC27ECD934BF1EB3117122BAA2FD4C37A036B128771B910920B3B9"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/064.png",
+        "sha256": "7D8468608A182806104633419BB09162DBC314247E1040226199F594EE6B6E8E"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/065.png",
+        "sha256": "E3E3F61E8377655BEF0A6F54C775F128D37160DDB78BC53DA0A360AAC572A21A"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/066.png",
+        "sha256": "534A0841762A1BC90995A3E59AB7DE332B127DAED8208644819E9D28DE706450"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/067.png",
+        "sha256": "0DFF6A5F0DBC1CFF776A090AA6FAC8943497081470E6C454D38239B625BC8DAA"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/068.png",
+        "sha256": "93ADE48246691FC145A13D531819652B915EEB5DA738ADD2615C40F5590BCC5F"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/069.png",
+        "sha256": "40802ACB289937AB895AA716810049C5FA1A6D3F7129820EB55DC48BA63C4324"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/070.png",
+        "sha256": "3689F72FAEBEF73B1697DD8CF5E62614D06C305C84BEFE0655EEFD0E6A4F7D45"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/071.png",
+        "sha256": "AE1E456FAAA780BE0379F6AE80207D27BE94369DEEF26E26D4CC9A62FC0DC872"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/073.png",
+        "sha256": "AFDBF14A9E365688685B3BF1ECE84AE649927FA96A14CBF8FA546B481AA6AF78"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/074.png",
+        "sha256": "0DB6035AC38A14A842CA2FB4D9F761DCF0B633437B73B1E1DE89D53CFB859B76"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/075.png",
+        "sha256": "1F87CFA2CC3E2152EE3593E2092CC48E23132C4AAEA23DE20EF4547A2BB612A9"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/076.png",
+        "sha256": "446FA2757B9850ABE43F25A02C97FEE4E187F7BA093E4684ADFB227A4F70AE94"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/077.png",
+        "sha256": "F37AB3E128C33F16326FC701A53A91AFD2A7787E8686CA6EFDBE78EFE22FDCD5"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/078.png",
+        "sha256": "FB3190CDDBC2DE31AE046C672FE9959C02DCCE3B7942795BBD3A1B294418ED5D"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/079.png",
+        "sha256": "408802EE90D3DADD130284D54BD702D2D3E79BD1FFBF4C3C6668731229E5CF06"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/080.png",
+        "sha256": "8C9594232EB77990D314C9CCCC953BC375917F677B9ABF283417F2E26C1D0BD8"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/081.png",
+        "sha256": "7CB0735F9914BAA21CEDA3699215A8E15665639B181703F3CEC94B8F27E1B1A6"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/082.png",
+        "sha256": "EA1E99464A55DFFD111A3DE3A415E8A2E0191E045CFC8A8FD8F52408F5680CB0"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/083.png",
+        "sha256": "2AD85B709CD69E57A816F46EF33DA97056A47ED4311A4C6B1D81878BF169FE4E"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/084.png",
+        "sha256": "BB3C89C1D05C96C49283F1143B56695E0374741D18E40902B7D5CB857A778E0C"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/085.png",
+        "sha256": "8D93DA99228A622B5BE23BBD3EDC5E434648BCD86B7B803C67FEE86160C587DC"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/086.png",
+        "sha256": "B440FD1C2DC1B8621DAE3697A59B75BE7046675045C8BC91715F755962435738"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/087.png",
+        "sha256": "D90D26B8CF6AE5684CC3D15A7F1648A2BC7BAC59AF7646D933A8B8F0924A2999"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/088.png",
+        "sha256": "53C201C39528E848F3B046EB2C29FF7F02C6BD4933C330A5394AB3A1AF5B1879"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/089.png",
+        "sha256": "E9861F73ABB873306DB658AE65A7C240974C4EE5453D22ECBE6DD460C7762979"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/090.png",
+        "sha256": "3237E873613706A97F28C8279F1B78188A51318C39B1D1CE019AB01CF170CEAB"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/092.png",
+        "sha256": "AEF55A3C7A99C440EC4B449236BE122888DAB71EC5BED8D1B8BCD97B92A8591B"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/093.png",
+        "sha256": "6E3C4A472FCA99A3E843FA141A0FDF5190B63E492CC58EC711437701F899BF80"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/095.png",
+        "sha256": "3C7A20D8570806E20856FC9ABDE069A46CFDF9A51C7176BF9C1F49246A3DE6F8"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/096.png",
+        "sha256": "4FB0A3C26DC80D417473F52C3D6D5C7C410BAC411B8E86391B0E23A5B0EEC5CB"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/097.png",
+        "sha256": "C56961852E48D230EDF7EDB841F5CA8644CF0C37C6669AC9E604FB674B6E4ADA"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/098.png",
+        "sha256": "D11CED0126FF870D2A31C52F0884D1F7FDC8DB3C6A6D7EBBEF00B3EAECD1CDEF"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/099.png",
+        "sha256": "E1A4C992C162158CED8B193BA0A9F6633FA2ED317F345946DB4D46733DE9EDDB"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/100.png",
+        "sha256": "F3B65510A1F6480B73B7072CCD05D154CD66DDA782DE1628EA68045A50C129D0"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/101.png",
+        "sha256": "2D7C15F07DB47803D9F631772B08B32D33DF095DF5D51C32A2ACE9C1C7883568"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/102.png",
+        "sha256": "5386D806E16CE5D9D015CD90FE1B191C335B6B6E64026F41FA7BF14E603DC65E"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/103.png",
+        "sha256": "46CA5E6AD7E75E3289A64EB6E8AC045253C9B6FE730DC1A0C913EC3A89C54803"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/104.png",
+        "sha256": "E5647AC4F4F8BD8B2A717EFABFA810E88760718A3E9E402E130DB44B2F0BC58A"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/105.png",
+        "sha256": "C4DE3BA2C7D63BE43DB74B68FA16188F3E00CB4A2C7D51A8E37B84AB02C1B4D2"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/106.png",
+        "sha256": "3A2700EF2B72514E52B11AF74A2B1E9A8BC22155391E6DD2A45540B91C682E53"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/107.png",
+        "sha256": "A5A5DB9A4C258216DFDFEF27343B7B51BB866556927F08C2AA475BE9AFD00AB9"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/108.png",
+        "sha256": "C2AF50F74C6D58638E645A9FB055AB56439D0E67A4DA8DAA63D00E61220C47B0"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/109.png",
+        "sha256": "21762B7DE09DCABC7934DC0C493575036CF26830EBF23492ECD6F6CE15C056C9"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/110.png",
+        "sha256": "319D8FECCA8A1C0F16A3E809598C8FEAD6716184B74D29A43A8DE4DD0D4D6408"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/112.png",
+        "sha256": "54F1CBAC4964908EEA641C2C61A283C98055B5330A7AE85596ABB75B883041EC"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/113.png",
+        "sha256": "8799B98307E89010A0266EACCDACC20C72048B5866D2E9C01119375CD94C8D03"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/115.png",
+        "sha256": "458A7E5623885F31EC175D1BD517E3E60B21F1E06DE113573C00F6C917F8BD69"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/116.png",
+        "sha256": "4DDFAAEEC9EDB8483CD037577E3F78A1642737F2894189B128327C3BF19FA485"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/117.png",
+        "sha256": "94CE4A1AE16CEA15EC2CD49DEB1FDE4461AD3B17956019C428904D1480FAC2C2"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/118.png",
+        "sha256": "786CBE4AA69CDBA4B0F1DCC1AECB37B47CD6F8E0558C2FD73B9A8C811EFDDAE1"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/120.png",
+        "sha256": "B569D619E8E419448FF8EA6E708A3F999E348EFED72D19895CD947A25C398315"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/122.png",
+        "sha256": "31D47D2F89CE2D347E5BF13A30263E57845A2AFA1CE942B8B7C09A5D5D3B0828"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/124.png",
+        "sha256": "6A58EC43B155B45B76D076437925E4F167F04091748A508048D5FF96C1104136"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/125.png",
+        "sha256": "8D3909FA8BF034D1CDB026BCB216A498DEBC272C20D5F78F2AD6A0A788BE7EB3"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/126.png",
+        "sha256": "944059E23461E9720CCF90348E03AE5D401BC470D96E5F2FF6F2609A851C5AFB"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/127.png",
+        "sha256": "F21003DD0ED9F30ED6DEE799023E198C5ACD034C96C0B902ACB6F71CA978CD2D"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/129.png",
+        "sha256": "0C4C543D0D3F770119334E438B619B649FA84316225EE323BD3C2A558CE35C4F"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/130.png",
+        "sha256": "DD2B011340BA2B28F471E25C24CD70E86CF5501F6A7D4F413C568503A15721FE"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/131.png",
+        "sha256": "0C3BD83326C85B3ECEC654964A8FEC78E16010777146AC5709028FF3C430DB76"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/133.png",
+        "sha256": "7406EEB9D09EACDCF9EA6C54637E5586D188A0BE44615CBA24723BAFBD547029"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/134.png",
+        "sha256": "CE3D2D784E15987C508213C87EA538E4DD82639856CE1FFD5701B175143249D4"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/135.png",
+        "sha256": "0340069A42FFF669CC7B902D001CAD76C636A65CBD47E521DFE21172FCC244FB"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/136.png",
+        "sha256": "DEE19A0C68BA61C18615ED8516ECE0B6F072427E77BA57B93ACA4798CFB1B979"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/137.png",
+        "sha256": "73AF601ED1D53E3EF2D320BF9E9D37F66190B372EE12A183A0E163D4B7301E4B"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/139.png",
+        "sha256": "1072C0C297215735147490BDC7CF954A3D2703A897D7455B67E8684F353E4ED9"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/140.png",
+        "sha256": "F2719C759AEFC178D546217DC97640FB0F641B3DBBA5735F3CE5629249CB3C47"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/141.png",
+        "sha256": "3AE2B333497D25FB2BC7833A9CF99591C85C0CE8B857EB13C84FE6FF8FA99886"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/142.png",
+        "sha256": "A814867244980BCB110736F1DDE7DCCA3EB17E710F0A7BAE4D2B1F5EFE06F005"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/143.png",
+        "sha256": "EC15D8A9A4D1A476B96E03FFBAF3607362F6F80F42C6F968A17D7984C63D3794"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/144.png",
+        "sha256": "73891507BCB540604D8BF4269EC73BB8121CD088813B70857F386330C07CE1ED"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/145.png",
+        "sha256": "964F0BA0B2BD34352267B72B4D8D4AA5BC447B7ACCDB3AC30C30B3F59D73C5FA"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/146.png",
+        "sha256": "227C97ECA0417A674392776FD7656D30A52AF454835B84FDFB021DCBCDAE5EC4"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/147.png",
+        "sha256": "EFFBFA26216C3804C353ABF7FA8A15B802612706FC929D6176BEF6CE17882652"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/149.png",
+        "sha256": "444A2D7BE71E2CC32928CBDBE379C3F3C9E219362E4C6189AC188E5029E404D4"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/150.png",
+        "sha256": "7933DA0E3FE172474FE04C5E7FC75F5121275C5D04D539A9AF8D212A89E8034B"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/151.png",
+        "sha256": "9963BF9EF414A7E822B51A61DC817C113C309C661D4D619A24771DA1A25E52B3"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/152.png",
+        "sha256": "BA7D31E40F6A3EED3DFB2D38DDC14785BBE81AD579B16368E3208A748D8DA84C"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/153.png",
+        "sha256": "4EFC403AD8589117D6707151DA82BEB4A0F2D50BA96C35BEABBD4A88FC4798D8"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/154.png",
+        "sha256": "240F78D67C686ABBBD1E96066A1E4D2D128778431E9088A26AB20807247DD75F"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/155.png",
+        "sha256": "C931F3C7A8335FA857F2B0573BD5E261EC27EE1292F76F085132A2B4B03181DE"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/157.png",
+        "sha256": "E4A5C2F8DDB99CB6836996835134CE3A112DBC6EA7E124607263A7A6E310EE16"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/159.png",
+        "sha256": "1D01990504BC24EFB343097F16C83FF63563CD71A9257E35D1226774B1C84D50"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/160.png",
+        "sha256": "041466AEF5F025BEF0F0F39A73CAAE2BA4BC78FBFC1158391BB45FDD98DEAA62"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/161.png",
+        "sha256": "C701921F9544BF7E6025FAF7947357CDAACDB469CEE2DD8757F33107C3370E63"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/162.png",
+        "sha256": "867F712355BB3B48DEBFF36AE7AA6959A04C2886CE1FEE7DBDE8966302AC8B61"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/163.png",
+        "sha256": "88821DC57A174F12252872F3BFD03DDE2ACC0C941BC9425035911CE969523249"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/165.png",
+        "sha256": "A8D92B29BAD7077DB7EDED58BED35B8FE1E49FAF3BC3D0886F01144D03D551AE"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/166.png",
+        "sha256": "E182AAAADA3D6B701FA542289BB70854036B7183A9B8749342F50F51A75E3590"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/169.png",
+        "sha256": "1BF3AD96B67849C864E3EFAC2E90CDA2D2CC51A9299C2EA3AF4C39CD03366A4D"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/170.png",
+        "sha256": "F5656D35F7BCFFFD99C88B525D62964E60950143FCE0C7FEE7A76BE09448E656"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/174.png",
+        "sha256": "2FC95A18E00634FD3CCB286CF04CE92F945D817368CAF7865462434103F820B8"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/176.png",
+        "sha256": "342F28D113515DCB2BD68A71E33112377C95B9FE78BDE3612DB290F58E96E971"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/177.png",
+        "sha256": "6701C975A0815A9CDA6B56967A252C50A88EA03FDD95F945849611F836D45DB0"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/181.png",
+        "sha256": "066C05B681CA052FBE526ED2A60E6F21009E2858AFE3066AD4D9F1809E9A093A"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/182.png",
+        "sha256": "74D3E9C93703CE8D8E75CC27BACD72A7CB6AE3B02C3EF24594DC557A22AF335E"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/183.png",
+        "sha256": "DFA04EFA0B98CE6A73981B1BC971EE1E3EDE3B43741CF6366E785454513DD5C4"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/184.png",
+        "sha256": "E6A95FE96793A6EB825151968F468AEA0D6BBC243F415CF53E70A487E74901C1"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/185.png",
+        "sha256": "0769D698118A46BCAB667178818940FFC7984F7CC0F2D356C539AE810BBD510E"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/186.png",
+        "sha256": "16E4EF828AF6867AC5592A1C70CF0412518316D9D5BA90DB98D9B3222DB46B20"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/187.png",
+        "sha256": "E10ABF9D218AEAC81D3CCED1FD6367E7728C3ABFB7072E003C8DE3EA1A71EB34"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/188.png",
+        "sha256": "E8B29EC37DAE399F398C4792AA8BF9821023A512BA49EB8936198CE8789F8353"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/189.png",
+        "sha256": "3DA89D6594BE3EC58B05F9135B08DC7CBDDF4326597C4F204FA4B61EFB45F24C"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/190.png",
+        "sha256": "817FBC9E317C1F5072FB3B39AF398E951A6432B01DDD049DAA3AF264D1B56095"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/192.png",
+        "sha256": "465BA527BDF40E00325285ABE7B6028813661A7420A59E3DADD287C0290C8F87"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/193.png",
+        "sha256": "1C1A127FF79F2DE3391A8CB1BF93E87A4BD396B73FDACEE8990B297E97C0601B"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/194.png",
+        "sha256": "BF8A182C3A5396D584AABC9C46E8F1BC422536EABB462306439D616770958FD8"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/196.png",
+        "sha256": "5B2178C5D9C14F180FAA21A3ED4F1F5210B8B9B539EEB31DF44DF5BB71B181ED"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/197.png",
+        "sha256": "852D1CF77861A48BFD88EBC23A0667FC062786E527ECBD385CFA5692213C96DC"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/199.png",
+        "sha256": "B2F9680E1C915DAF3D8F705834F32382E0DDD2BF1196D228993E9644ADEB7A00"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/200.png",
+        "sha256": "62FF9C208BD7F59F04A1EFE090F78AEB94507DE20F6A71B80F31706677048338"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/201.png",
+        "sha256": "0E17E4C4825B1A2B44D605DCD5DEE4D6CD0030C48D6CD407892E5FFC7AF8E774"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/203.png",
+        "sha256": "D67173E677DC3934521819B986D131F158E776E6C22935B516A97D821F82385A"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/204.png",
+        "sha256": "503DFD1395D4AE17446C55BF77D9B611D2923AC4D44F80167FE7D4424C15614D"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/205.png",
+        "sha256": "EBF6D056A9534420D51D13516EE3B46468B5D1C2A5198823B577F8E00BACE25A"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/206.png",
+        "sha256": "D8C79BC8793403AD4A731BFDA783B34126396F27DED0268392C2EEA6BA6D3280"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/207.png",
+        "sha256": "8D3A37405AF7D2713754DB40C487A6F7D6ABCC5968CABB36870DDAFDFD682303"
+      },
+      {
+        "path": "mvtec_ad/bottle/train/good/208.png",
+        "sha256": "87BD5EFA31F4D982B18104060C2A105C3981FA91F47B28B6BE8FAC2170B1B80D"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/000.png",
+        "sha256": "9E7BFE658EFE9B6DB2607A96405B4AC6880936EAF93B89C85BCD311122CEB57B"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/001.png",
+        "sha256": "A45ABA86EF3E1EF8DBD95CA56ABEB63F576FCD2BBD040BA748A1410BB70D6D78"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/002.png",
+        "sha256": "281E0B0DADA22EFFEC4FEE5B09BEF9A54FEAEF9D8D717AEB7947AA499AB9A1F8"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/003.png",
+        "sha256": "08C6A6CBEECB25F84C1A8A6FBC1437228980076075058550EEDD2F7E1D172978"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/004.png",
+        "sha256": "22E8A84B84435AA6E67266529D6A2F3B7A29F89E4701FD0A969031E517A12DEA"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/005.png",
+        "sha256": "FA1FB2FA7DBDEBE55FA61B1AEC5563C769D10CEAA96E8A822FD544A748429807"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/006.png",
+        "sha256": "CB8B1201FA027FADA3209CDE87514B778231E5D0923C5517D40E78B2E0423E35"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/007.png",
+        "sha256": "7D3036445DCCE53D746E8E1804ECA5E2ACAA2646C85EB574782C74A940A72921"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/008.png",
+        "sha256": "C87EBA626D55A28BCF5D046F8C1F5ABF543D9EB9DD6C647181A26A29A58582B7"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/009.png",
+        "sha256": "B093FAF3767345A4A75ED355D62E8461590FE94778DF733E6ACBEFF2353F9F6B"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/010.png",
+        "sha256": "B31DDD1A297E85AD505F8D8B1B2DF94452AB22A5D5482F500DB920635356F963"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/011.png",
+        "sha256": "17033F7FB5F93EEE444224D7DD9482A6444C526E0F68591A21B12B4D356CBB8A"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/012.png",
+        "sha256": "12B90FBBB65590D8B1F48D1A5FFFF440C45AF785B26F23CEBD20AD0B86D4AD50"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/013.png",
+        "sha256": "F1B83B016BD73E9490A17F052DA9EAE96797D6DFB11C328B6DDEA5EB9AF7BA73"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/014.png",
+        "sha256": "A71581C613032A4DB9AC7FC3E5F1B73CF0015015EE6F5A08B2F92495E4C3E3E8"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/015.png",
+        "sha256": "179AECACA86A1964BDC3075782BB36DCD1C7B25266077711A157D2DD565CFFFC"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/016.png",
+        "sha256": "5FF7596E9A7FEC2B34166DBA196022C09282D9B45DF671AAC6759BBC2995E561"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/017.png",
+        "sha256": "AC516A2650E86145083C3A5C5B6C13B44062B4EC8DAEC52EE7FC81FE2FEC6D4D"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/018.png",
+        "sha256": "4F0C476B10508C8F163CBA4A93F6272126E4B55B59DF9D7ACE36247AB72709DF"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/good/019.png",
+        "sha256": "44EF90EC530671E4C8125BF67B05B5F6B25A7BF24EE0D4D29DFFC9AF06F162DD"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/000.png",
+        "sha256": "11A691A06A33DD78C5FCAB6A822CAA48C0D72F27F660E19F5ABD9B5AA392B0EB"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/001.png",
+        "sha256": "B5E6FD5F3F9AC5310F4FECC37F64D42EAA3326D3D3B327369D2D789752189A0F"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/002.png",
+        "sha256": "249813C6BCCB58B9DE711A6B7248F4FD8BA4136364CFAD2E0577769DB91353C2"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/003.png",
+        "sha256": "B4797CE35DD407629E29DD199CD6E497F0A706A1DDD72ACE226F30858D3199C4"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/004.png",
+        "sha256": "EDE2360DDFABA9C13112B6159F5FD3342226203719BA9F067C2FF16E3D4690E0"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/005.png",
+        "sha256": "CB4DFA6E11F536AA8746834D41E27F86FACF51FB8C92E421AF7C6DC342A32553"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/006.png",
+        "sha256": "7E1590D94352B6A5D9463D4B378721AC80335F512D78095C7126D3EAE1799FAE"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/007.png",
+        "sha256": "944292B41ADBDCBC22C19027F3E0B02EAE1CD9DEFA93BB41E4F4ACB84047A3F2"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/008.png",
+        "sha256": "0DED17A988DD56D1027D90402E0EFF6030727B541C7C263BD77287A62A49B334"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/009.png",
+        "sha256": "EB6B625A6B86299DBF335512CB3FEE553F337892023560C7A5652FCBBB63D1E0"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/010.png",
+        "sha256": "CAC8B9CC86DE2513A673453689E927A2C70A86B2F4961DF2E70D795AAD9FC0C6"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/011.png",
+        "sha256": "D1819A2167952638C4826A78D3D081FDF26E5A923F3868713AF122F5B1D8EDDB"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/012.png",
+        "sha256": "D531152578B689D196411359C7E8DB8F06BA865916E62D0BD7D4F9A81869B6DB"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/013.png",
+        "sha256": "CDB49DEE73C2B02E2E062FE890AD5B6BABC6AA5D95C84BA35486631A105F8373"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/014.png",
+        "sha256": "E32C92DA6A4689DFB9AA8E627DA233B154D3F141C171AA6ABFD32BE4AC0589F8"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/015.png",
+        "sha256": "3237744B81D8C38E32188BD5B0AE5CABEDF37560F721466BD4A8DB9851FB10CC"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/016.png",
+        "sha256": "8B5B47F25EBEC3E88C3A09B8F20E14E2413252C82737009FF6F8F20D61A2B779"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/017.png",
+        "sha256": "32A2C9CF43301567CCBB7C2E9A4ECCFF5A8E464DE8A9C545885D6BFB28AB0315"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/018.png",
+        "sha256": "CED7C9391ABB29B26E126885A1DDE2310F3FD1E2CFDF997CD463221E7664E57E"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_large/019.png",
+        "sha256": "6807074BEF09E3257C3BB516167264A9003CA666E1DDB65D7E306025A9CEE695"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/000.png",
+        "sha256": "05B96E1102FBA8CC19BF60E17D33A0830247DF2BBBA56CAE3DF100336392941E"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/001.png",
+        "sha256": "BC60260AF053F2F84F71550DDA6F2D88C9C8E427109A56249F0DC60E30BC9759"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/002.png",
+        "sha256": "E605EFDBF20478F09084F3026EAA96B91D9D1E7BC113CBE8FB700F2BBCC2763E"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/003.png",
+        "sha256": "C97B387CDAFD8DF6D1834DCD4BB284CB784969A5416DC067F6F2476592C1EE57"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/004.png",
+        "sha256": "6F57501C4AE23AAC51F06C7EA4916D8977CF84664832CC7C542447624BD9C142"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/005.png",
+        "sha256": "1DCAF0EE6666DF4B793DE50D2371B400E468F5C3B39456F8AF66E6A9593F7950"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/006.png",
+        "sha256": "3663A963886304BB1FC308BB63BDD63EDB58904980662D034136F53AF3124D54"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/007.png",
+        "sha256": "648A8CB8BABFA35F2574AE0DBFF581DB740CC6FF6ECB14806DE29D5E4FACB4A6"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/008.png",
+        "sha256": "26AF850D4EEE499C803F372E17AC9297EBE8EDC04695DEA8D288AC93711325E3"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/009.png",
+        "sha256": "D83AFC9847C680E6B9F5C36F49CA19E1B1F275FC0358E4864EC1809D42DF32C7"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/010.png",
+        "sha256": "21CD62DAD2AF2A7841C2ED469AB0909385805FA67D4EE7BA4B8DD6417C6EA95C"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/011.png",
+        "sha256": "0B864BFC835768C65992B235C435E397480CFADEED57EA3884E234A2B473A9C9"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/012.png",
+        "sha256": "945CF8614874E85E7D81EBF0EA69340600EEC2DF6B3D8CDBE0019B27F0A006DC"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/013.png",
+        "sha256": "B32208859B9262FA19AD2F01043ED13AAC2CEBAA4C85936AD489D68C719A2EA1"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/014.png",
+        "sha256": "C74FB6A0CFC32692175C6F97F337FA49A0146A2CCB66FFA308E90B8B95CE50D8"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/015.png",
+        "sha256": "EF423951E8F0BED66AB053C28AD709E68EF24AF62B4650254C3D39AAA2BB48DA"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/016.png",
+        "sha256": "72E0DFB0DA261EE3B349DC34235F65C23BF6B2CBB8928A055348980C1F428BBA"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/017.png",
+        "sha256": "437B1C2B5F0C055EE250BA1C4266725EAE7C4E21293B0B13141E672F42A2D55B"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/018.png",
+        "sha256": "B145D2C83EF34456539118E18BA0A197277A9625320ED7248492B308856170AF"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/019.png",
+        "sha256": "A6E0B07C9402EB7CE810955032A54D5B05CC60F30579B397E83EBA6957390C34"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/020.png",
+        "sha256": "266ED29AEADA42B0FF5160B41A754887301CEF8A5AEEC278AF64E68A736B105A"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/broken_small/021.png",
+        "sha256": "8FD65FC5519CF685764D5F87F3AD1CFE088E7C54E3A54AD68B5AB3DF120A084D"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/000.png",
+        "sha256": "FE2E96A8CBA624ACE02985481197EE8AB112D2A2FAA4B79F137ACE2C452EB4EA"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/001.png",
+        "sha256": "2DDF5D0D53B2DC3D13286AF69D668E9B572A360A87309BB91A4682DDE8F2311A"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/002.png",
+        "sha256": "905880D6F1F7C33CCE414116BEAE1BDA241EFFF97BA78647E7C2B5D25A94DD05"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/003.png",
+        "sha256": "023C4E62FBE0B7F408245E85B8FC60259D826DEDEE67FDC5A41655B7FA494E4A"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/004.png",
+        "sha256": "8DEF2401278EB433C1A2FA0A78C79ABFEEA7A4D0B363E637E51C39CEF34C073C"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/005.png",
+        "sha256": "606D939E295C39BE7097829E33F82B1FEA32006379817B5DE2A0E0548A10B50E"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/006.png",
+        "sha256": "D458DB2DA3744FD2FC797BD7568ED8282FE1583E05D427FFA8E41D67F7E14B03"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/007.png",
+        "sha256": "A3918B94553A8922B3C16D064EF73E9062710B35639A949C56D926037E4C0D0A"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/008.png",
+        "sha256": "35B9AF10EAA1FE5525D6FB54ED3DDB069391D7DFF93E8C6A6140272431115B00"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/009.png",
+        "sha256": "EE3E214406DAC4A5334C37423F86495F6F4440569A8B9C4B4D778F7C015E35FC"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/010.png",
+        "sha256": "9CABEE2946258E61422D092ACDF82BDC9946D7B881DD8BFA4ED032B674BE49FE"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/011.png",
+        "sha256": "29B03BE4B7FF17A2E32446C60EA7D7C6DBFFC2FFE091F17455FDC528FB337317"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/012.png",
+        "sha256": "E3FBAAB9071BB10BA574E33BD244F3FF61C5F7F8C50A6F13C714B1BDE5A32E2C"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/013.png",
+        "sha256": "A8A05F265D400831973AE361C2773D5719F9469CC798BAB1EC883274723D3165"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/014.png",
+        "sha256": "503A4011F035F9A703BD435917D14118CB47ED4C4712B8F77F1F2DBB119C0D0A"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/015.png",
+        "sha256": "1E8BA471A607DE42E71890F010C0E7A620522F5C55ABC8F64D52B290438C31BE"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/016.png",
+        "sha256": "9693BC441D758CA05DB5602C66243681697A4D273A9468508F4A9A9B3205C0C1"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/017.png",
+        "sha256": "39353CD83649E95260E53E0EC2AC3985CC5D42732F721CC26F7027DB616695C8"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/018.png",
+        "sha256": "71C18397DEF5E402077A127A882DC3C871053B2796CF158AAD1FF1A149A465DC"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/019.png",
+        "sha256": "883DE514D58337D56397CD06CCCF12E3954BDF3E2293833726C255D8F9071A3C"
+      },
+      {
+        "path": "mvtec_ad/bottle/test/contamination/020.png",
+        "sha256": "19DD90EB49A90512B56E9174DA1FDD6E8A2EF40E590BFB8D76B1CA854C82F16B"
+      }
+    ],
+    "weights_sha256": "F37072FD47E89C5E827621C5BAFFA7500819F7896BBACEC160B1A16C560E07EC",
+    "preprocessing": {
+      "color_mode": "RGB",
+      "image_size_hw": [
+        256,
+        256
+      ],
+      "image_resize": {
+        "backend": "Pillow",
+        "interpolation": "bilinear",
+        "scope": "full_image"
+      },
+      "normalization_mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "normalization_std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "center_crop": false,
+      "random_augmentation": false,
+      "mask_policy": "Use original binary masks; if mask resizing is necessary, use nearest interpolation and binarize. Union all masks belonging to one anomalous image. Normal images have zero masks."
+    },
+    "backbone": {
+      "name": "resnet18",
+      "weights": "torchvision.ResNet18_Weights.IMAGENET1K_V1",
+      "frozen": true,
+      "mode": "eval",
+      "extracted_layers": [
+        "layer1",
+        "layer2",
+        "layer3"
+      ],
+      "expected_feature_shapes_chw": {
+        "layer1": [
+          64,
+          64,
+          64
+        ],
+        "layer2": [
+          128,
+          32,
+          32
+        ],
+        "layer3": [
+          256,
+          16,
+          16
+        ]
+      },
+      "weights_sha256_record": "Determine and record the actual weight file hash in step 2 and in V2 cache metadata; do not invent it."
+    },
+    "dtype": "float32",
+    "extraction_sources": {
+      "src/tc2_gpu_protocol.py": "DD646F26E61C89B622D0D2B1DE50462383CE22D2AEF5C7AA79F3AF5B99DE44B6",
+      "src/tc2_gpu_cache.py": "867C31DFD87E5BFC6EC4783183D927192ABBC2A1140610C79E5A8D8426742495",
+      "src/data.py": "9A82D585203B376F41C3200A32D6971288DD70B5C7E71210F3E21F8C5C1F1F89",
+      "configs/runtime_tc2_gpu.json": "B057766AFDF473A89E74016B2F9DF6B311510BA8E444D42EE14C075BAF08AEAA"
+    },
+    "software": {
+      "python": "3.10.22",
+      "numpy": "1.26.4",
+      "torch": "2.11.0+cu128",
+      "torchvision": "0.26.0+cu128",
+      "pillow": "12.3.0",
+      "scikit-learn": "1.7.2",
+      "pyyaml": "6.0.3"
+    },
+    "execution": {
+      "schema_version": "1.0",
+      "workflow_id": "tc2_gpu",
+      "extraction_batch_size": 1,
+      "prediction_batch_size": 1,
+      "workers": 0,
+      "cpu_threads": 2,
+      "warmup_iterations": 20,
+      "padim_position_chunk_size": 256,
+      "patchcore_query_chunk_size": 1024,
+      "patchcore_bank_chunk_size": 4096,
+      "patchcore_sampling_chunk_size": 16384
+    },
+    "hardware": {
+      "gpu": "NVIDIA A40",
+      "driver": "570.148.08",
+      "cuda_build": "12.8"
+    }
+  },
+  "cache_id": "8EB0773AEB92056B9D15D8DCEA1F54DC15F3C21058F128B0EC95E57EC0A00B1B",
+  "index": [
+    {
+      "path": "mvtec_ad/bottle/train/good/004.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/005.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/008.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/010.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/016.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/017.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/023.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/024.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/026.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/030.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/033.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/036.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/051.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/053.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/072.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/091.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/094.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/111.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/114.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/119.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/121.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/123.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/128.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/132.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/138.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/148.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/156.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/158.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/164.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/167.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/168.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/171.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/172.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/173.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/175.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/178.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/179.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/180.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/191.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/195.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/198.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/202.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/000.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/001.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/002.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/003.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/006.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/007.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/009.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/011.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/012.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/013.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/014.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/015.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/018.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/019.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/020.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/021.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/022.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/025.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/027.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/028.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/029.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/031.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/032.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/034.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/035.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/037.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/038.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/039.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/040.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/041.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/042.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/043.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/044.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/045.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/046.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/047.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/048.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/049.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/050.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/052.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/054.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/055.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/056.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/057.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/058.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/059.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/060.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/061.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/062.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/063.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/064.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/065.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/066.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/067.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/068.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/069.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/070.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/071.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/073.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/074.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/075.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/076.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/077.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/078.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/079.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/080.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/081.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/082.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/083.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/084.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/085.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/086.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/087.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/088.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/089.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/090.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/092.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/093.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/095.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/096.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/097.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/098.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/099.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/100.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/101.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/102.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/103.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/104.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/105.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/106.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/107.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/108.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/109.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/110.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/112.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/113.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/115.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/116.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/117.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/118.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/120.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/122.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/124.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/125.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/126.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/127.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/129.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/130.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/131.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/133.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/134.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/135.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/136.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/137.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/139.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/140.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/141.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/142.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/143.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/144.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/145.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/146.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/147.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/149.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/150.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/151.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/152.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/153.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/154.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/155.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/157.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/159.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/160.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/161.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/162.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/163.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/165.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/166.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/169.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/170.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/174.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/176.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/177.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/181.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/182.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/183.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/184.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/185.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/186.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/187.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/188.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/189.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/190.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/192.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/193.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/194.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/196.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/197.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/199.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/200.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/201.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/203.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/204.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/205.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/206.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/207.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/train/good/208.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/000.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/001.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/002.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/003.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/004.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/005.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/006.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/007.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/008.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/009.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/010.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/011.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/012.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/013.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/014.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/015.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/016.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/017.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/018.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/good/019.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/000.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/001.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/002.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/003.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/004.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/005.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/006.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/007.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/008.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/009.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/010.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/011.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/012.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/013.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/014.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/015.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/016.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/017.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/018.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_large/019.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/000.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/001.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/002.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/003.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/004.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/005.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/006.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/007.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/008.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/009.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/010.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/011.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/012.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/013.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/014.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/015.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/016.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/017.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/018.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/019.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/020.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/broken_small/021.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/000.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/001.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/002.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/003.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/004.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/005.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/006.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/007.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/008.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/009.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/010.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/011.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/012.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/013.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/014.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/015.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/016.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/017.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/018.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/019.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    },
+    {
+      "path": "mvtec_ad/bottle/test/contamination/020.png",
+      "orig_hw": [
+        900,
+        900
+      ]
+    }
+  ],
+  "extraction": {
+    "runtime": {
+      "device": "cuda",
+      "gpu": "NVIDIA A40",
+      "driver": "570.148.08",
+      "cuda_build": "12.8",
+      "software": {
+        "python": "3.10.22",
+        "numpy": "1.26.4",
+        "torch": "2.11.0+cu128",
+        "torchvision": "0.26.0+cu128",
+        "pillow": "12.3.0",
+        "scikit-learn": "1.7.2",
+        "pyyaml": "6.0.3"
+      },
+      "acceptance_jobs": {
+        "metrics": "43968",
+        "algorithms": "43970",
+        "setup": "43950"
+      },
+      "compatibility_configuration_sha256": "EDF3D1D0380E0105A5173607CE360221FD43B059478915EEC0EC04ED9110F913",
+      "slurm_job_id": "44024",
+      "tf32": false,
+      "autocast": false
+    },
+    "input_verification_seconds": 2.194493162445724,
+    "preprocess_transfer_seconds": 8.94811927061528,
+    "feature_gpu_seconds": 0.598081199452281,
+    "feature_readback_seconds": 0.1598813496530056,
+    "warmup_seconds": 0.22592420503497124,
+    "batch_size": 1,
+    "warmup_iterations": 20
+  },
+  "write_pipeline_seconds": 11.472005465999246,
+  "layers": {
+    "layer1": {
+      "shape": [
+        292,
+        64,
+        64,
+        64
+      ],
+      "dtype": "float32",
+      "sha256": "C9DC9DB5F595297ECA54C260B48006FA1FE51DD94DA9A25D6CECB29E1776B126"
+    },
+    "layer2": {
+      "shape": [
+        292,
+        128,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "sha256": "5395F8D490C005A72BE2B0B66B6B8A836E9E52D67A81A84C4C2572E4E241028F"
+    },
+    "layer3": {
+      "shape": [
+        292,
+        256,
+        16,
+        16
+      ],
+      "dtype": "float32",
+      "sha256": "7FC5BAA1566961B5C245221D70E04386C75051D3EACE21C1B10251B3B26DBE7A"
+    }
+  }
+}

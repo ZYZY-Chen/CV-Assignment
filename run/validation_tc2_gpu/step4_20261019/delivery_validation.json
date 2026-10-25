@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "rendered_shell_commands_parsed": 17,
+  "algorithm_wrapper_parsed": true,
+  "payload_files": 11,
+  "all_payload_hashes_match_current_sources": true,
+  "publication_cases": [
+    "absent_algorithms",
+    "identical",
+    "unknown_existing",
+    "missing_metric",
+    "failed_metric",
+    "changed_dependency_hash",
+    "bad_bundle"
+  ],
+  "metric_regression_gate_verified": true,
+  "readonly_dependency_hash_gate_verified": true,
+  "unknown_sources_and_existing_bytes_preserved": true,
+  "resources": {
+    "gpus": 1,
+    "cpus": 2,
+    "memory_gib": 8,
+    "time_limit": "00:15:00"
+  },
+  "result_root": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step4_20261019\\delivery_091eef54",
+  "actual_ssh_calls": 0,
+  "actual_slurm_submissions": 0
+}

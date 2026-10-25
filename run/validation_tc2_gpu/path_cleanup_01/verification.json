@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "record_id": "tc2_gpu_cleanup_20261025_154510_33c37e36",
+  "deleted_directories": 18,
+  "deleted_files": 1383,
+  "deleted_bytes": 68235216,
+  "deleted_set_matches_whitelist": true,
+  "protected_original_files_unchanged": 6416,
+  "parent_directories_preserved": true,
+  "cleanup_manifest_verified": true,
+  "approved_document_changes": [
+    {
+      "path": "README.md",
+      "old_sha256": "704DBD6FAF955BC1BBFD68BF12F612742A82DF56764E805C52309A50D3F969D3",
+      "new_sha256": "C2346AED10284D3FB98E5DF80D1EBCC77C02E988E1B4E44FD269E2ACFCA205DD"
+    },
+    {
+      "path": "docs/REPOSITORY_LAYOUT_MIGRATION.md",
+      "old_sha256": "8001E7388FCEE17BB90812BA5DB70C03A7E82EC63150BB7CD3D63CACEF961F66",
+      "new_sha256": "51E6DD9D9BFB1D0C0CC8FE8C6B4A59BEFE72572F6B875FB364B359D26D8534DC"
+    }
+  ],
+  "new_project_files": [
+    "docs/TEST_ARTIFACT_CLEANUP.md",
+    "run/validation_tc2_gpu/path_cleanup_01/cleanup_manifest.json",
+    "run/validation_tc2_gpu/path_cleanup_01/verification.json"
+  ],
+  "remaining_original_files": 6418,
+  "project_file_count_after_receipt": 6421,
+  "maximum_absolute_path_length": 239,
+  "remaining_paths_ge240": [],
+  "path_scope": "Repository worktree excluding .git and .idea; external historical backups are unchanged",
+  "full_zip_backup_verified": true,
+  "backup_archive_sha256": "BAE0018EEC589EBC715C296F5AD2AD1C508A37F65F34AE7DD3B6FE3AC48F926C",
+  "frozen_plan_identical": true,
+  "fit_count": 66,
+  "pinned_source_check_count": 70,
+  "prior_core_reports": {
+    "metrics": {
+      "status": "passed",
+      "tests_run": 9,
+      "sha256": "3708F4C630E0F2B07FB260D05B4DD8DE2B79D9ABBB43C6705A7BC09BE3713892",
+      "executed_again": false
+    },
+    "workflow": {
+      "status": "passed",
+      "tests_run": 16,
+      "sha256": "01EE93A62C329BE9F97DF35280C2A5AB743B3312A3ED7B75CFCEDEA810E0BFE1",
+      "executed_again": false
+    }
+  },
+  "new_test_runs": 0,
+  "new_synthetic_fixtures": 0,
+  "git_head_unchanged": true,
+  "git_index_unchanged": true,
+  "external_helper_unchanged": true,
+  "independent_scope_review": "passed",
+  "remote_connections": 0,
+  "slurm_submissions": 0,
+  "model_fits": 0,
+  "failures": []
+}

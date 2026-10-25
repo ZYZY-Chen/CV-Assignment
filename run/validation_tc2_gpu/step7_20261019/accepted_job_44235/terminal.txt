@@ -1,0 +1,307 @@
+TC2 GPU: CollectExperiments
+Local output: C:\Users\mhjv_\Desktop\CharGPT projects\CA6129 COMPUTER VISION & APPLICATIONS\output\tc2_gpu_setup_20261019_205219_dee60b36
+A submitted or running job is not a passed check. Passwords are not stored.
+LOCO_COLLECTION_BASE_SHA256=AC61772F65C9F2C4124761D2361E0A85E9F65DBCF4DF5BAB3E939B5111466010
+LOCO_COLLECTION_COLLECTOR_SHA256=09AC7432F8F6BCE36F95EAEFF15D44A19F7852781A19FE65E5E573239E445967
+SSH: enter the password in this terminal when requested.
+/------------------------------------------------------------------------\
+               **IMPORTANT NOTICE for Users of TC2**                                                                                                         
+System.Management.Automation.RemoteException
+ 1. System Administrators claim the right to remove the accounts of
+    users and the folders assigned to users without prior notice.
+System.Management.Automation.RemoteException
+ 2. NO backups will be provided for data stored in folders assigned to
+    users.  Users are responsible for protecting and maintaining their
+    own data.
+System.Management.Automation.RemoteException
+ 3. Additional user folders and additional QoS assigned to users will
+    be removed after the usage expiry date, without prior notice.
+System.Management.Automation.RemoteException
+ 4. Resources are to be used for academic purposes only. Use of
+    resources for purposes other than that for which they were granted
+    will result in the termination of the account.
+System.Management.Automation.RemoteException
+ 5. Your computation is being monitored. For jobs submitted with
+    unauthorised QoS (NOT assigned for your use) and operations, will
+    be terminated with no prior notification. Severe offenders may be
+    barred from the service.
+System.Management.Automation.RemoteException
+ 6. DO NOT access directories other than your Home Directory or
+    Shared Folder. Unauthorised access to other directories or files,
+    even for the purpose of "browsing", shall be deemed as a security
+    breach.  Serious action will be taken against users committing
+    any breach to the CCDS GPU Cluster.
+System.Management.Automation.RemoteException
+ 7. The user guide (PDF format) for this GPU Cluster is available
+    for download from the share folder: /tc2share.
+System.Management.Automation.RemoteException
+ 8. You may execute the command "mytcinfo" to view your user
+    information.
+System.Management.Automation.RemoteException
+ 9. For technical issues, please email to ccdsgpu-tc@ntu.edu.sg
+                                                                         <#
+\------------------------------------------------------------------------/
+Loading gcc/14.2.0
+  Loading requirement: gmp/6.3.0 mpfr/4.2.1 mpc/1.3.1
+SSH exit code: 0
+/------------------------------------------------------------------------\
+               **IMPORTANT NOTICE for Users of TC2**                                                                                                         
+System.Management.Automation.RemoteException
+ 1. System Administrators claim the right to remove the accounts of
+    users and the folders assigned to users without prior notice.
+System.Management.Automation.RemoteException
+ 2. NO backups will be provided for data stored in folders assigned to
+    users.  Users are responsible for protecting and maintaining their
+    own data.
+System.Management.Automation.RemoteException
+ 3. Additional user folders and additional QoS assigned to users will
+    be removed after the usage expiry date, without prior notice.
+System.Management.Automation.RemoteException
+ 4. Resources are to be used for academic purposes only. Use of
+    resources for purposes other than that for which they were granted
+    will result in the termination of the account.
+System.Management.Automation.RemoteException
+ 5. Your computation is being monitored. For jobs submitted with
+    unauthorised QoS (NOT assigned for your use) and operations, will
+    be terminated with no prior notification. Severe offenders may be
+    barred from the service.
+System.Management.Automation.RemoteException
+ 6. DO NOT access directories other than your Home Directory or
+    Shared Folder. Unauthorised access to other directories or files,
+    even for the purpose of "browsing", shall be deemed as a security
+    breach.  Serious action will be taken against users committing
+    any breach to the CCDS GPU Cluster.
+System.Management.Automation.RemoteException
+ 7. The user guide (PDF format) for this GPU Cluster is available
+    for download from the share folder: /tc2share.
+System.Management.Automation.RemoteException
+ 8. You may execute the command "mytcinfo" to view your user
+    information.
+System.Management.Automation.RemoteException
+ 9. For technical issues, please email to ccdsgpu-tc@ntu.edu.sg
+                                                                         <#
+\------------------------------------------------------------------------/
+SSH: enter the password in this terminal when requested.
+/------------------------------------------------------------------------\
+               **IMPORTANT NOTICE for Users of TC2**                                                                                                         
+System.Management.Automation.RemoteException
+ 1. System Administrators claim the right to remove the accounts of
+    users and the folders assigned to users without prior notice.
+System.Management.Automation.RemoteException
+ 2. NO backups will be provided for data stored in folders assigned to
+    users.  Users are responsible for protecting and maintaining their
+    own data.
+System.Management.Automation.RemoteException
+ 3. Additional user folders and additional QoS assigned to users will
+    be removed after the usage expiry date, without prior notice.
+System.Management.Automation.RemoteException
+ 4. Resources are to be used for academic purposes only. Use of
+    resources for purposes other than that for which they were granted
+    will result in the termination of the account.
+System.Management.Automation.RemoteException
+ 5. Your computation is being monitored. For jobs submitted with
+    unauthorised QoS (NOT assigned for your use) and operations, will
+    be terminated with no prior notification. Severe offenders may be
+    barred from the service.
+System.Management.Automation.RemoteException
+ 6. DO NOT access directories other than your Home Directory or
+    Shared Folder. Unauthorised access to other directories or files,
+    even for the purpose of "browsing", shall be deemed as a security
+    breach.  Serious action will be taken against users committing
+    any breach to the CCDS GPU Cluster.
+System.Management.Automation.RemoteException
+ 7. The user guide (PDF format) for this GPU Cluster is available
+    for download from the share folder: /tc2share.
+System.Management.Automation.RemoteException
+ 8. You may execute the command "mytcinfo" to view your user
+    information.
+System.Management.Automation.RemoteException
+ 9. For technical issues, please email to ccdsgpu-tc@ntu.edu.sg
+                                                                         <#
+\------------------------------------------------------------------------/
+Loading gcc/14.2.0
+  Loading requirement: gmp/6.3.0 mpfr/4.2.1 mpc/1.3.1
+LOCO_COLLECTION_REMOTE_COLLECTOR_SHA256=09AC7432F8F6BCE36F95EAEFF15D44A19F7852781A19FE65E5E573239E445967
+[Personal queue]
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+TC2_JOB_ID=44235
+JobID           JobName      State ExitCode    Elapsed        NodeList  AllocCPUS     ReqMem     MaxRSS   TotalCPU 
+------------ ---------- ---------- -------- ---------- --------------- ---------- ---------- ---------- ---------- 
+44235        ca6129_ex+  COMPLETED      0:0   00:45:10          TC2N01          2        24G             45:42.459 
+44235.batch       batch  COMPLETED      0:0   00:45:10          TC2N01          2             12778560K  45:42.459 
+[Tail: /home/mcaai/huajie001/ca6129_v2_setup/run/validation_tc2_gpu/slurm-44235.out]
+          "dataset": "mvtec_loco",
+          "category": "screw_bag",
+          "run_seed": 17,
+          "normal_train_n": 100,
+          "run_status": "completed",
+          "verified": true,
+          "accepted_pilot_reuse": false,
+          "timings": {
+            "input_and_cache_verification_seconds": 8.17775048688054,
+            "fit_feature_read_transfer_seconds": 0.20312002673745155,
+            "fit_seconds": 10.806466293521225,
+            "prediction_warmup_seconds": 0.6390607915818691,
+            "prediction_feature_io_seconds": 0.2771420907229185,
+            "predict_seconds": 7.700278173200786,
+            "prediction_readback_seconds": 0.0852564163506031,
+            "evaluate_cpu_seconds": 215.30069186538458,
+            "save_seconds": 6.293560188263655,
+            "saved_metric_validation_cpu_seconds": 212.01446137856692
+          },
+          "gpu_peak_allocated_bytes": 669515776,
+          "gpu_peak_reserved_bytes": 786432000
+        }
+      ],
+      "analyses": [],
+      "status": "passed",
+      "stage_complete": true
+    }
+  ],
+  "cumulative_fits": 66,
+  "checkpoints": [
+    {
+      "checkpoint_id": "core",
+      "after_stage": "I1_seed17",
+      "expected_fits": 22,
+      "complete": true
+    },
+    {
+      "checkpoint_id": "standard",
+      "after_stage": "I2",
+      "expected_fits": 62,
+      "complete": true
+    },
+    {
+      "checkpoint_id": "full",
+      "after_stage": "B0_LOCO",
+      "expected_fits": 66,
+      "complete": true
+    }
+  ]
+}
+[Tail: /home/mcaai/huajie001/ca6129_v2_setup/run/validation_tc2_gpu/slurm-44235.err]
+EXPERIMENTS_INDEX_PATH=/home/mcaai/huajie001/ca6129_v2_setup/tmp/experiments-44235-20261019_205219_dee60b36/index.json
+EXPERIMENTS_INDEX_SHA256=DA890F4A554ED43009D7AA903A81A809FC5A009DB277234B800A342CA3B9D857
+EXPERIMENTS_PAGE_COUNT=2
+EXPERIMENTS_PARTIAL=False
+SSH exit code: 0
+/------------------------------------------------------------------------\
+               **IMPORTANT NOTICE for Users of TC2**                                                                                                         
+System.Management.Automation.RemoteException
+ 1. System Administrators claim the right to remove the accounts of
+    users and the folders assigned to users without prior notice.
+System.Management.Automation.RemoteException
+ 2. NO backups will be provided for data stored in folders assigned to
+    users.  Users are responsible for protecting and maintaining their
+    own data.
+System.Management.Automation.RemoteException
+ 3. Additional user folders and additional QoS assigned to users will
+    be removed after the usage expiry date, without prior notice.
+System.Management.Automation.RemoteException
+ 4. Resources are to be used for academic purposes only. Use of
+    resources for purposes other than that for which they were granted
+    will result in the termination of the account.
+System.Management.Automation.RemoteException
+ 5. Your computation is being monitored. For jobs submitted with
+    unauthorised QoS (NOT assigned for your use) and operations, will
+    be terminated with no prior notification. Severe offenders may be
+    barred from the service.
+System.Management.Automation.RemoteException
+ 6. DO NOT access directories other than your Home Directory or
+    Shared Folder. Unauthorised access to other directories or files,
+    even for the purpose of "browsing", shall be deemed as a security
+    breach.  Serious action will be taken against users committing
+    any breach to the CCDS GPU Cluster.
+System.Management.Automation.RemoteException
+ 7. The user guide (PDF format) for this GPU Cluster is available
+    for download from the share folder: /tc2share.
+System.Management.Automation.RemoteException
+ 8. You may execute the command "mytcinfo" to view your user
+    information.
+System.Management.Automation.RemoteException
+ 9. For technical issues, please email to ccdsgpu-tc@ntu.edu.sg
+                                                                         <#
+\------------------------------------------------------------------------/
+{"collector_provenance": {"base_collector_path": "scripts/collect_experiments_tc2_gpu.py", "base_collector_sha256": "AC61772F65C9F2C4124761D2361E0A85E9F65DBCF4DF5BAB3E939B5111466010", "collector_path": "scripts/collect_experiments_loco_tc2_gpu.py", "collector_sha256": "09AC7432F8F6BCE36F95EAEFF15D44A19F7852781A19FE65E5E573239E445967", "metric_schema": "strict_dataset_conditioned_LOCO_groups", "purpose": "B0_LOCO_collection_only", "schema_version": "1.0"}, "index_sha256": "DA890F4A554ED43009D7AA903A81A809FC5A009DB277234B800A342CA3B9D857", "job_id": "44235", "page_count": 2, "pages": [{"analysis_ids": [], "bytes": 173113790, "name": "page_001.tar.gz", "page_number": 1, "result_ids": ["B0_LOCO_mvtec_loco_juice_bottle_padim_s17_n100_B8766FFB4CD0", "B0_LOCO_mvtec_loco_juice_bottle_patchcore_s17_n100_F914F6B6532D"], "sha256": "55B979C66E6EEC3DA66134F7CC25B460DBA07C207801130AB87FB581FF8EB5B3"}, {"analysis_ids": [], "bytes": 181454160, "name": "page_002.tar.gz", "page_number": 2, "result_ids": ["B0_LOCO_mvtec_loco_screw_bag_padim_s17_n100_8D20C5E59478", "B0_LOCO_mvtec_loco_screw_bag_patchcore_s17_n100_DC6E31A70CE5"], "sha256": "0F404B666ABAA27423B3D22C164F96D2BF8572B10DBC90E10124D918425E5964"}], "partial": false, "remote_stage_complete": true, "stage_complete": false, "stage_id": "B0_LOCO", "status": "verified", "step_7_complete": false}
+/------------------------------------------------------------------------\
+               **IMPORTANT NOTICE for Users of TC2**                                                                                                         
+System.Management.Automation.RemoteException
+ 1. System Administrators claim the right to remove the accounts of
+    users and the folders assigned to users without prior notice.
+System.Management.Automation.RemoteException
+ 2. NO backups will be provided for data stored in folders assigned to
+    users.  Users are responsible for protecting and maintaining their
+    own data.
+System.Management.Automation.RemoteException
+ 3. Additional user folders and additional QoS assigned to users will
+    be removed after the usage expiry date, without prior notice.
+System.Management.Automation.RemoteException
+ 4. Resources are to be used for academic purposes only. Use of
+    resources for purposes other than that for which they were granted
+    will result in the termination of the account.
+System.Management.Automation.RemoteException
+ 5. Your computation is being monitored. For jobs submitted with
+    unauthorised QoS (NOT assigned for your use) and operations, will
+    be terminated with no prior notification. Severe offenders may be
+    barred from the service.
+System.Management.Automation.RemoteException
+ 6. DO NOT access directories other than your Home Directory or
+    Shared Folder. Unauthorised access to other directories or files,
+    even for the purpose of "browsing", shall be deemed as a security
+    breach.  Serious action will be taken against users committing
+    any breach to the CCDS GPU Cluster.
+System.Management.Automation.RemoteException
+ 7. The user guide (PDF format) for this GPU Cluster is available
+    for download from the share folder: /tc2share.
+System.Management.Automation.RemoteException
+ 8. You may execute the command "mytcinfo" to view your user
+    information.
+System.Management.Automation.RemoteException
+ 9. For technical issues, please email to ccdsgpu-tc@ntu.edu.sg
+                                                                         <#
+\------------------------------------------------------------------------/
+{"archive_sha256": "55B979C66E6EEC3DA66134F7CC25B460DBA07C207801130AB87FB581FF8EB5B3", "cache_array_bytes_downloaded": false, "collector_provenance": {"base_collector_path": "scripts/collect_experiments_tc2_gpu.py", "base_collector_sha256": "AC61772F65C9F2C4124761D2361E0A85E9F65DBCF4DF5BAB3E939B5111466010", "collector_path": "scripts/collect_experiments_loco_tc2_gpu.py", "collector_sha256": "09AC7432F8F6BCE36F95EAEFF15D44A19F7852781A19FE65E5E573239E445967", "metric_schema": "strict_dataset_conditioned_LOCO_groups", "purpose": "B0_LOCO_collection_only", "schema_version": "1.0"}, "destination": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_205219_dee60b36\\remote\\page_001", "export_id": "5DD294DED5B74F1D941DC8DFF8CC4FF2", "file_count": 56, "index_sha256": "DA890F4A554ED43009D7AA903A81A809FC5A009DB277234B800A342CA3B9D857", "job_id": "44235", "manifest_sha256": "A1F982A4834BAF0C073FC3A9BFD67535D9F0CB5B8EC731CA2C957A5ABFDA4070", "page_number": 1, "partial": false, "prediction_arrays_loaded_locally": false, "remote_stage_complete": true, "stage_complete": false, "stage_id": "B0_LOCO", "status": "verified", "step_7_complete": false}
+/------------------------------------------------------------------------\
+               **IMPORTANT NOTICE for Users of TC2**                                                                                                         
+System.Management.Automation.RemoteException
+ 1. System Administrators claim the right to remove the accounts of
+    users and the folders assigned to users without prior notice.
+System.Management.Automation.RemoteException
+ 2. NO backups will be provided for data stored in folders assigned to
+    users.  Users are responsible for protecting and maintaining their
+    own data.
+System.Management.Automation.RemoteException
+ 3. Additional user folders and additional QoS assigned to users will
+    be removed after the usage expiry date, without prior notice.
+System.Management.Automation.RemoteException
+ 4. Resources are to be used for academic purposes only. Use of
+    resources for purposes other than that for which they were granted
+    will result in the termination of the account.
+System.Management.Automation.RemoteException
+ 5. Your computation is being monitored. For jobs submitted with
+    unauthorised QoS (NOT assigned for your use) and operations, will
+    be terminated with no prior notification. Severe offenders may be
+    barred from the service.
+System.Management.Automation.RemoteException
+ 6. DO NOT access directories other than your Home Directory or
+    Shared Folder. Unauthorised access to other directories or files,
+    even for the purpose of "browsing", shall be deemed as a security
+    breach.  Serious action will be taken against users committing
+    any breach to the CCDS GPU Cluster.
+System.Management.Automation.RemoteException
+ 7. The user guide (PDF format) for this GPU Cluster is available
+    for download from the share folder: /tc2share.
+System.Management.Automation.RemoteException
+ 8. You may execute the command "mytcinfo" to view your user
+    information.
+System.Management.Automation.RemoteException
+ 9. For technical issues, please email to ccdsgpu-tc@ntu.edu.sg
+                                                                         <#
+\------------------------------------------------------------------------/
+{"archive_sha256": "0F404B666ABAA27423B3D22C164F96D2BF8572B10DBC90E10124D918425E5964", "cache_array_bytes_downloaded": false, "collector_provenance": {"base_collector_path": "scripts/collect_experiments_tc2_gpu.py", "base_collector_sha256": "AC61772F65C9F2C4124761D2361E0A85E9F65DBCF4DF5BAB3E939B5111466010", "collector_path": "scripts/collect_experiments_loco_tc2_gpu.py", "collector_sha256": "09AC7432F8F6BCE36F95EAEFF15D44A19F7852781A19FE65E5E573239E445967", "metric_schema": "strict_dataset_conditioned_LOCO_groups", "purpose": "B0_LOCO_collection_only", "schema_version": "1.0"}, "destination": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_205219_dee60b36\\remote\\page_002", "export_id": "5DD294DED5B74F1D941DC8DFF8CC4FF2", "file_count": 56, "index_sha256": "DA890F4A554ED43009D7AA903A81A809FC5A009DB277234B800A342CA3B9D857", "job_id": "44235", "manifest_sha256": "24E9460FF89990226DDB0791088EF166C756692283A97EC04B62BC53023A1DCE", "page_number": 2, "partial": false, "prediction_arrays_loaded_locally": false, "remote_stage_complete": true, "stage_complete": false, "stage_id": "B0_LOCO", "status": "verified", "step_7_complete": false}
+{"analysis_count": 0, "cache_array_bytes_downloaded": false, "collector_provenance": {"base_collector_path": "scripts/collect_experiments_tc2_gpu.py", "base_collector_sha256": "AC61772F65C9F2C4124761D2361E0A85E9F65DBCF4DF5BAB3E939B5111466010", "collector_path": "scripts/collect_experiments_loco_tc2_gpu.py", "collector_sha256": "09AC7432F8F6BCE36F95EAEFF15D44A19F7852781A19FE65E5E573239E445967", "metric_schema": "strict_dataset_conditioned_LOCO_groups", "purpose": "B0_LOCO_collection_only", "schema_version": "1.0"}, "completion_scope": "current_stage_and_remote_dependency_evidence", "index_sha256": "DA890F4A554ED43009D7AA903A81A809FC5A009DB277234B800A342CA3B9D857", "job_id": "44235", "page_count": 2, "partial": false, "prediction_arrays_loaded_locally": false, "result_count": 4, "stage_complete": true, "stage_id": "B0_LOCO", "status": "verified", "step_7_complete": true}
+All 2 experiment pages downloaded and independently verified. Index SHA256=DA890F4A554ED43009D7AA903A81A809FC5A009DB277234B800A342CA3B9D857
+A queued, running or partial snapshot is not acceptance. Verify the completed stage and all collection pages before the next stage.
+Action finished. Read the relevant status JSON: step 2 requires all-mode step_2_complete=true; metrics require full-mode step_3_complete=true; algorithms require full-mode step_4_complete=true.
+Send this local output path back: C:\Users\mhjv_\Desktop\CharGPT projects\CA6129 COMPUTER VISION & APPLICATIONS\output\tc2_gpu_setup_20261019_205219_dee60b36\terminal.txt

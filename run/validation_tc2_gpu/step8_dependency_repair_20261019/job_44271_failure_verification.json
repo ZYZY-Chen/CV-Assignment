@@ -1,0 +1,22 @@
+{
+  "status": "verified_failed_job",
+  "job_id": "44271",
+  "slurm_state": "FAILED",
+  "exit_code": "1:0",
+  "elapsed": "00:00:23",
+  "node": "TC2N01",
+  "cpus": 2,
+  "requested_memory": "8G",
+  "index_sha256": "237F94263B68FBE8E4F648D1712C2FF17BCE6261175D1CCF757C3CE758C67DFE",
+  "pages_verified": 1,
+  "payload_files_verified": 23,
+  "remote_full_tests_passed": 29,
+  "synthetic_plot_render_passed": true,
+  "step_8_complete": false,
+  "error": "FileNotFoundError: [Errno 2] No such file or directory: '/home/mcaai/huajie001/ca6129_v2_setup/scripts/collect_experiments_loco_tc2_gpu.py'",
+  "source_directory": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_214652_c9d1a0af",
+  "scientific_results_created": false,
+  "actual_agent_tc2_connections": 0,
+  "actual_agent_slurm_submissions": 0,
+  "actual_agent_model_calls": 0
+}

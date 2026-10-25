@@ -1,0 +1,1081 @@
+{
+  "status": "passed",
+  "stage_id": "B0_LOCO",
+  "job_id": "44235",
+  "snapshot_path": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_204442_691c27e1\\remote",
+  "index_sha256": "C89F4E77B61756F7F397613A0CBD614AC99BB562BC45FE0745EB85BC79186DE9",
+  "design_sha256": "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75",
+  "experiment_sources": {
+    "configs/experiments_tc2_gpu.json": "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75",
+    "docs/TC2_GPU_EXPERIMENTS.md": "EBF7AD234A2346379CE5B7B80A76826A564F3ED7FF08DEB17CA362EC9E2FD47A",
+    "scripts/analyze_scores_tc2_gpu.py": "D1412F6743ECB6709EB82FF978DF4D8C37601371BE4E78C2329B9AAD1FF609F6",
+    "scripts/collect_experiments_tc2_gpu.py": "AC61772F65C9F2C4124761D2361E0A85E9F65DBCF4DF5BAB3E939B5111466010",
+    "scripts/experiments_tc2_gpu.py": "F4896D83DED9EAACB72ED7A75B63F76CC3538E61D2FB90A88CF1945D36D0CBDA",
+    "scripts/slurm/experiments_tc2_gpu.sh": "C4D12CFBC8D7B0F799AD51E06826318C8A17210526EC63ED04CD4FF3AB13080E",
+    "tests/test_experiments_tc2_gpu.py": "371072914FD83F1E4A803501A86965977BA12C1797EE44C178D0A843F8A2FFE5"
+  },
+  "collector_provenance": {
+    "base_collector_path": "scripts/collect_experiments_tc2_gpu.py",
+    "base_collector_sha256": "AC61772F65C9F2C4124761D2361E0A85E9F65DBCF4DF5BAB3E939B5111466010",
+    "collector_path": "scripts/collect_experiments_loco_tc2_gpu.py",
+    "collector_sha256": "09AC7432F8F6BCE36F95EAEFF15D44A19F7852781A19FE65E5E573239E445967",
+    "metric_schema": "strict_dataset_conditioned_LOCO_groups",
+    "purpose": "B0_LOCO_collection_only",
+    "schema_version": "1.0"
+  },
+  "audit_script_sha256": "075B816AB6A10AC9AC7D6686228AFEE01A68CC46575A809C3A14B151C484A86A",
+  "result_count": 3,
+  "scoring_rule_evaluations": 15,
+  "scope_rule_evaluations": 45,
+  "prior_recomputation_reused_after_exact_hash_match": 0,
+  "newly_recomputed_from_snapshot": 3,
+  "maximum_absolute_error": 5.551115123125783e-16,
+  "tolerance": 1e-12,
+  "auroc_reference": "Positive-negative pairwise comparisons with half credit for ties",
+  "ap_reference": "Unique descending score thresholds, precision weighted by recall increments",
+  "threshold_reference": "NumPy 1.26 linear percentile arithmetic with FP32 adjacent difference and explicit FP64 interpolation",
+  "prediction_maps_loaded": false,
+  "feature_arrays_loaded": false,
+  "torch_imported": false,
+  "pixel_metrics_recomputed": false,
+  "remote_stage_complete": false,
+  "stage_acceptance_granted_by_this_audit": false,
+  "completion_scope": "Image metrics only; complete paged collection and stage/dependency acceptance are separate",
+  "results": [
+    {
+      "identity_sha256": "750606098934F3B43A0A6880ED6EDCB1B1650FF60FAD7054B9581126989950F0",
+      "run_key_fields": {
+        "stage": "B0_LOCO",
+        "dataset": "mvtec_loco",
+        "category": "juice_bottle",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 17
+        }
+      },
+      "page": "page_001",
+      "relative_path": "run/tc2_gpu/results/750606098934F3B43A0A6880ED6EDCB1B1650FF60FAD7054B9581126989950F0",
+      "artifact_hashes": {
+        "predictions.npz": "412FB1820C75C6BB73980895328DC76D35F5D8C82F8041279369B898467A8093",
+        "samples.json": "855652C3D2207E9BBCE84F3F72230702F8A8AFD1B0638DD4EB551FA653B10123",
+        "metrics.json": "75336D24A65A85DA981110FFCADDDC0795D9AC2B2B7E86995220D8EA7FBA1EEE",
+        "artifacts.sha256": "7DCF4C1A4473E558E4B73946A90B54E9B3AB210EC994E77D79A88BC5BA99D5FD"
+      },
+      "scoring_rule_count": 5,
+      "scope_rule_evaluations": 15,
+      "scopes": [
+        "pooled",
+        "logical_anomalies",
+        "structural_anomalies"
+      ],
+      "max_abs_error": 5.551115123125783e-16,
+      "field_abs_errors": {
+        "pooled.native.image_auroc": 0.0,
+        "pooled.native.image_ap": 2.220446049250313e-16,
+        "pooled.native.threshold_95pct": 0.0,
+        "pooled.native.normal_fpr": 0.0,
+        "pooled.native.anomaly_recall": 0.0,
+        "pooled.native.per_defect_recall.logical_anomalies": 0.0,
+        "pooled.native.per_defect_recall.structural_anomalies": 0.0,
+        "logical_anomalies.native.image_auroc": 0.0,
+        "logical_anomalies.native.image_ap": 3.3306690738754696e-16,
+        "logical_anomalies.native.threshold_95pct": 0.0,
+        "logical_anomalies.native.normal_fpr": 0.0,
+        "logical_anomalies.native.anomaly_recall": 0.0,
+        "logical_anomalies.native.per_defect_recall.logical_anomalies": 0.0,
+        "structural_anomalies.native.image_auroc": 0.0,
+        "structural_anomalies.native.image_ap": 2.220446049250313e-16,
+        "structural_anomalies.native.threshold_95pct": 0.0,
+        "structural_anomalies.native.normal_fpr": 0.0,
+        "structural_anomalies.native.anomaly_recall": 0.0,
+        "structural_anomalies.native.per_defect_recall.structural_anomalies": 0.0,
+        "pooled.max.image_auroc": 0.0,
+        "pooled.max.image_ap": 3.3306690738754696e-16,
+        "pooled.max.threshold_95pct": 0.0,
+        "pooled.max.normal_fpr": 0.0,
+        "pooled.max.anomaly_recall": 0.0,
+        "pooled.max.per_defect_recall.logical_anomalies": 0.0,
+        "pooled.max.per_defect_recall.structural_anomalies": 0.0,
+        "logical_anomalies.max.image_auroc": 0.0,
+        "logical_anomalies.max.image_ap": 2.220446049250313e-16,
+        "logical_anomalies.max.threshold_95pct": 0.0,
+        "logical_anomalies.max.normal_fpr": 0.0,
+        "logical_anomalies.max.anomaly_recall": 0.0,
+        "logical_anomalies.max.per_defect_recall.logical_anomalies": 0.0,
+        "structural_anomalies.max.image_auroc": 0.0,
+        "structural_anomalies.max.image_ap": 3.3306690738754696e-16,
+        "structural_anomalies.max.threshold_95pct": 0.0,
+        "structural_anomalies.max.normal_fpr": 0.0,
+        "structural_anomalies.max.anomaly_recall": 0.0,
+        "structural_anomalies.max.per_defect_recall.structural_anomalies": 0.0,
+        "pooled.top_0.001.image_auroc": 0.0,
+        "pooled.top_0.001.image_ap": 2.220446049250313e-16,
+        "pooled.top_0.001.threshold_95pct": 0.0,
+        "pooled.top_0.001.normal_fpr": 0.0,
+        "pooled.top_0.001.anomaly_recall": 0.0,
+        "pooled.top_0.001.per_defect_recall.logical_anomalies": 0.0,
+        "pooled.top_0.001.per_defect_recall.structural_anomalies": 0.0,
+        "logical_anomalies.top_0.001.image_auroc": 0.0,
+        "logical_anomalies.top_0.001.image_ap": 2.220446049250313e-16,
+        "logical_anomalies.top_0.001.threshold_95pct": 0.0,
+        "logical_anomalies.top_0.001.normal_fpr": 0.0,
+        "logical_anomalies.top_0.001.anomaly_recall": 0.0,
+        "logical_anomalies.top_0.001.per_defect_recall.logical_anomalies": 0.0,
+        "structural_anomalies.top_0.001.image_auroc": 0.0,
+        "structural_anomalies.top_0.001.image_ap": 3.3306690738754696e-16,
+        "structural_anomalies.top_0.001.threshold_95pct": 0.0,
+        "structural_anomalies.top_0.001.normal_fpr": 0.0,
+        "structural_anomalies.top_0.001.anomaly_recall": 0.0,
+        "structural_anomalies.top_0.001.per_defect_recall.structural_anomalies": 0.0,
+        "pooled.top_0.01.image_auroc": 0.0,
+        "pooled.top_0.01.image_ap": 2.220446049250313e-16,
+        "pooled.top_0.01.threshold_95pct": 0.0,
+        "pooled.top_0.01.normal_fpr": 0.0,
+        "pooled.top_0.01.anomaly_recall": 0.0,
+        "pooled.top_0.01.per_defect_recall.logical_anomalies": 0.0,
+        "pooled.top_0.01.per_defect_recall.structural_anomalies": 0.0,
+        "logical_anomalies.top_0.01.image_auroc": 0.0,
+        "logical_anomalies.top_0.01.image_ap": 3.3306690738754696e-16,
+        "logical_anomalies.top_0.01.threshold_95pct": 0.0,
+        "logical_anomalies.top_0.01.normal_fpr": 0.0,
+        "logical_anomalies.top_0.01.anomaly_recall": 0.0,
+        "logical_anomalies.top_0.01.per_defect_recall.logical_anomalies": 0.0,
+        "structural_anomalies.top_0.01.image_auroc": 0.0,
+        "structural_anomalies.top_0.01.image_ap": 5.551115123125783e-16,
+        "structural_anomalies.top_0.01.threshold_95pct": 0.0,
+        "structural_anomalies.top_0.01.normal_fpr": 0.0,
+        "structural_anomalies.top_0.01.anomaly_recall": 0.0,
+        "structural_anomalies.top_0.01.per_defect_recall.structural_anomalies": 0.0,
+        "pooled.top_0.05.image_auroc": 0.0,
+        "pooled.top_0.05.image_ap": 3.3306690738754696e-16,
+        "pooled.top_0.05.threshold_95pct": 0.0,
+        "pooled.top_0.05.normal_fpr": 0.0,
+        "pooled.top_0.05.anomaly_recall": 0.0,
+        "pooled.top_0.05.per_defect_recall.logical_anomalies": 0.0,
+        "pooled.top_0.05.per_defect_recall.structural_anomalies": 0.0,
+        "logical_anomalies.top_0.05.image_auroc": 0.0,
+        "logical_anomalies.top_0.05.image_ap": 5.551115123125783e-16,
+        "logical_anomalies.top_0.05.threshold_95pct": 0.0,
+        "logical_anomalies.top_0.05.normal_fpr": 0.0,
+        "logical_anomalies.top_0.05.anomaly_recall": 0.0,
+        "logical_anomalies.top_0.05.per_defect_recall.logical_anomalies": 0.0,
+        "structural_anomalies.top_0.05.image_auroc": 0.0,
+        "structural_anomalies.top_0.05.image_ap": 5.551115123125783e-16,
+        "structural_anomalies.top_0.05.threshold_95pct": 0.0,
+        "structural_anomalies.top_0.05.normal_fpr": 0.0,
+        "structural_anomalies.top_0.05.anomaly_recall": 0.0,
+        "structural_anomalies.top_0.05.per_defect_recall.structural_anomalies": 0.0
+      },
+      "recomputed_image_metrics": {
+        "pooled": {
+          "native": {
+            "image_auroc": 0.9445546339704292,
+            "image_ap": 0.9794526059477612,
+            "threshold_95pct": 1.5998509168624877,
+            "normal_fpr": 0.0851063829787234,
+            "anomaly_recall": 0.8686440677966102,
+            "per_defect_recall": {
+              "logical_anomalies": 0.8380281690140845,
+              "structural_anomalies": 0.9148936170212766
+            }
+          },
+          "max": {
+            "image_auroc": 0.9498287053732419,
+            "image_ap": 0.9818010572704012,
+            "threshold_95pct": 1.6548240840435027,
+            "normal_fpr": 0.05319148936170213,
+            "anomaly_recall": 0.8516949152542372,
+            "per_defect_recall": {
+              "logical_anomalies": 0.8169014084507042,
+              "structural_anomalies": 0.9042553191489362
+            }
+          },
+          "top_0.001": {
+            "image_auroc": 0.9508654886404616,
+            "image_ap": 0.9821888232389844,
+            "threshold_95pct": 1.638691359758377,
+            "normal_fpr": 0.05319148936170213,
+            "anomaly_recall": 0.8559322033898306,
+            "per_defect_recall": {
+              "logical_anomalies": 0.823943661971831,
+              "structural_anomalies": 0.9042553191489362
+            }
+          },
+          "top_0.01": {
+            "image_auroc": 0.9560043274432023,
+            "image_ap": 0.9842650997951734,
+            "threshold_95pct": 1.5430520832538603,
+            "normal_fpr": 0.07446808510638298,
+            "anomaly_recall": 0.9110169491525424,
+            "per_defect_recall": {
+              "logical_anomalies": 0.8873239436619719,
+              "structural_anomalies": 0.9468085106382979
+            }
+          },
+          "top_0.05": {
+            "image_auroc": 0.9645239812477461,
+            "image_ap": 0.9873593393415734,
+            "threshold_95pct": 1.438182783126831,
+            "normal_fpr": 0.031914893617021274,
+            "anomaly_recall": 0.8983050847457628,
+            "per_defect_recall": {
+              "logical_anomalies": 0.9154929577464789,
+              "structural_anomalies": 0.8723404255319149
+            }
+          }
+        },
+        "logical_anomalies": {
+          "native": {
+            "image_auroc": 0.9318249925082409,
+            "image_ap": 0.9626244365413749,
+            "threshold_95pct": 1.5998509168624877,
+            "normal_fpr": 0.0851063829787234,
+            "anomaly_recall": 0.8380281690140845,
+            "per_defect_recall": {
+              "logical_anomalies": 0.8380281690140845
+            }
+          },
+          "max": {
+            "image_auroc": 0.9372939766257117,
+            "image_ap": 0.966676810706784,
+            "threshold_95pct": 1.6548240840435027,
+            "normal_fpr": 0.05319148936170213,
+            "anomaly_recall": 0.8169014084507042,
+            "per_defect_recall": {
+              "logical_anomalies": 0.8169014084507042
+            }
+          },
+          "top_0.001": {
+            "image_auroc": 0.938942163620018,
+            "image_ap": 0.9674734675490568,
+            "threshold_95pct": 1.638691359758377,
+            "normal_fpr": 0.05319148936170213,
+            "anomaly_recall": 0.823943661971831,
+            "per_defect_recall": {
+              "logical_anomalies": 0.823943661971831
+            }
+          },
+          "top_0.01": {
+            "image_auroc": 0.9474078513635001,
+            "image_ap": 0.9725206287377266,
+            "threshold_95pct": 1.5430520832538603,
+            "normal_fpr": 0.07446808510638298,
+            "anomaly_recall": 0.8873239436619719,
+            "per_defect_recall": {
+              "logical_anomalies": 0.8873239436619719
+            }
+          },
+          "top_0.05": {
+            "image_auroc": 0.9625412046748577,
+            "image_ap": 0.9807608987284605,
+            "threshold_95pct": 1.438182783126831,
+            "normal_fpr": 0.031914893617021274,
+            "anomaly_recall": 0.9154929577464789,
+            "per_defect_recall": {
+              "logical_anomalies": 0.9154929577464789
+            }
+          }
+        },
+        "structural_anomalies": {
+          "native": {
+            "image_auroc": 0.9637845178813943,
+            "image_ap": 0.9677060061563879,
+            "threshold_95pct": 1.5998509168624877,
+            "normal_fpr": 0.0851063829787234,
+            "anomaly_recall": 0.9148936170212766,
+            "per_defect_recall": {
+              "structural_anomalies": 0.9148936170212766
+            }
+          },
+          "max": {
+            "image_auroc": 0.9687641466727026,
+            "image_ap": 0.9723405240963371,
+            "threshold_95pct": 1.6548240840435027,
+            "normal_fpr": 0.05319148936170213,
+            "anomaly_recall": 0.9042553191489362,
+            "per_defect_recall": {
+              "structural_anomalies": 0.9042553191489362
+            }
+          },
+          "top_0.001": {
+            "image_auroc": 0.9688773200543233,
+            "image_ap": 0.9727415933859496,
+            "threshold_95pct": 1.638691359758377,
+            "normal_fpr": 0.05319148936170213,
+            "anomaly_recall": 0.9042553191489362,
+            "per_defect_recall": {
+              "structural_anomalies": 0.9042553191489362
+            }
+          },
+          "top_0.01": {
+            "image_auroc": 0.9689904934359439,
+            "image_ap": 0.9733719214987595,
+            "threshold_95pct": 1.5430520832538603,
+            "normal_fpr": 0.07446808510638298,
+            "anomaly_recall": 0.9468085106382979,
+            "per_defect_recall": {
+              "structural_anomalies": 0.9468085106382979
+            }
+          },
+          "top_0.05": {
+            "image_auroc": 0.9675192394748755,
+            "image_ap": 0.9727171689480985,
+            "threshold_95pct": 1.438182783126831,
+            "normal_fpr": 0.031914893617021274,
+            "anomaly_recall": 0.8723404255319149,
+            "per_defect_recall": {
+              "structural_anomalies": 0.8723404255319149
+            }
+          }
+        }
+      },
+      "prediction_fields_loaded": [
+        "dev_paths",
+        "dev_labels",
+        "dev_defect_types",
+        "test_paths",
+        "test_labels",
+        "test_defect_types",
+        "test_score_native",
+        "dev_score_native",
+        "test_score_max",
+        "dev_score_max",
+        "test_score_top_0.001",
+        "dev_score_top_0.001",
+        "test_score_top_0.01",
+        "dev_score_top_0.01",
+        "test_score_top_0.05",
+        "dev_score_top_0.05"
+      ],
+      "dev_image_count": 54,
+      "scope_counts": {
+        "pooled": {
+          "n_good": 94,
+          "n_anomaly": 236
+        },
+        "logical_anomalies": {
+          "n_good": 94,
+          "n_anomaly": 142
+        },
+        "structural_anomalies": {
+          "n_good": 94,
+          "n_anomaly": 94
+        }
+      },
+      "test_image_count": 330,
+      "validation_mode": "Independent CPU recomputation from saved score vectors"
+    },
+    {
+      "identity_sha256": "DF9CA709E9592160A7F10916724F6D62B1FEE339CDC115482EF0DDFA4137C53B",
+      "run_key_fields": {
+        "stage": "B0_LOCO",
+        "dataset": "mvtec_loco",
+        "category": "juice_bottle",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      },
+      "page": "page_001",
+      "relative_path": "run/tc2_gpu/results/DF9CA709E9592160A7F10916724F6D62B1FEE339CDC115482EF0DDFA4137C53B",
+      "artifact_hashes": {
+        "predictions.npz": "DB929532A2D37CEBA873B56CAE59F2841086BF8AB66F77FBA9BB40C608EAB289",
+        "samples.json": "855652C3D2207E9BBCE84F3F72230702F8A8AFD1B0638DD4EB551FA653B10123",
+        "metrics.json": "031286435310BD38BD86F40A131F97C7C92D20ABE40EBE829BF6856D414C4C85",
+        "artifacts.sha256": "27423A0E7981A470C6DFDE75A4A8ED1D1F9E7DEAC42566D886158B9E2B578084"
+      },
+      "scoring_rule_count": 5,
+      "scope_rule_evaluations": 15,
+      "scopes": [
+        "pooled",
+        "logical_anomalies",
+        "structural_anomalies"
+      ],
+      "max_abs_error": 5.551115123125783e-16,
+      "field_abs_errors": {
+        "pooled.native.image_auroc": 0.0,
+        "pooled.native.image_ap": 3.3306690738754696e-16,
+        "pooled.native.threshold_95pct": 0.0,
+        "pooled.native.normal_fpr": 0.0,
+        "pooled.native.anomaly_recall": 0.0,
+        "pooled.native.per_defect_recall.logical_anomalies": 0.0,
+        "pooled.native.per_defect_recall.structural_anomalies": 0.0,
+        "logical_anomalies.native.image_auroc": 0.0,
+        "logical_anomalies.native.image_ap": 3.3306690738754696e-16,
+        "logical_anomalies.native.threshold_95pct": 0.0,
+        "logical_anomalies.native.normal_fpr": 0.0,
+        "logical_anomalies.native.anomaly_recall": 0.0,
+        "logical_anomalies.native.per_defect_recall.logical_anomalies": 0.0,
+        "structural_anomalies.native.image_auroc": 0.0,
+        "structural_anomalies.native.image_ap": 0.0,
+        "structural_anomalies.native.threshold_95pct": 0.0,
+        "structural_anomalies.native.normal_fpr": 0.0,
+        "structural_anomalies.native.anomaly_recall": 0.0,
+        "structural_anomalies.native.per_defect_recall.structural_anomalies": 0.0,
+        "pooled.max.image_auroc": 0.0,
+        "pooled.max.image_ap": 3.3306690738754696e-16,
+        "pooled.max.threshold_95pct": 0.0,
+        "pooled.max.normal_fpr": 0.0,
+        "pooled.max.anomaly_recall": 0.0,
+        "pooled.max.per_defect_recall.logical_anomalies": 0.0,
+        "pooled.max.per_defect_recall.structural_anomalies": 0.0,
+        "logical_anomalies.max.image_auroc": 0.0,
+        "logical_anomalies.max.image_ap": 3.3306690738754696e-16,
+        "logical_anomalies.max.threshold_95pct": 0.0,
+        "logical_anomalies.max.normal_fpr": 0.0,
+        "logical_anomalies.max.anomaly_recall": 0.0,
+        "logical_anomalies.max.per_defect_recall.logical_anomalies": 0.0,
+        "structural_anomalies.max.image_auroc": 0.0,
+        "structural_anomalies.max.image_ap": 0.0,
+        "structural_anomalies.max.threshold_95pct": 0.0,
+        "structural_anomalies.max.normal_fpr": 0.0,
+        "structural_anomalies.max.anomaly_recall": 0.0,
+        "structural_anomalies.max.per_defect_recall.structural_anomalies": 0.0,
+        "pooled.top_0.001.image_auroc": 0.0,
+        "pooled.top_0.001.image_ap": 2.220446049250313e-16,
+        "pooled.top_0.001.threshold_95pct": 0.0,
+        "pooled.top_0.001.normal_fpr": 0.0,
+        "pooled.top_0.001.anomaly_recall": 0.0,
+        "pooled.top_0.001.per_defect_recall.logical_anomalies": 0.0,
+        "pooled.top_0.001.per_defect_recall.structural_anomalies": 0.0,
+        "logical_anomalies.top_0.001.image_auroc": 0.0,
+        "logical_anomalies.top_0.001.image_ap": 1.1102230246251565e-16,
+        "logical_anomalies.top_0.001.threshold_95pct": 0.0,
+        "logical_anomalies.top_0.001.normal_fpr": 0.0,
+        "logical_anomalies.top_0.001.anomaly_recall": 0.0,
+        "logical_anomalies.top_0.001.per_defect_recall.logical_anomalies": 0.0,
+        "structural_anomalies.top_0.001.image_auroc": 0.0,
+        "structural_anomalies.top_0.001.image_ap": 2.220446049250313e-16,
+        "structural_anomalies.top_0.001.threshold_95pct": 0.0,
+        "structural_anomalies.top_0.001.normal_fpr": 0.0,
+        "structural_anomalies.top_0.001.anomaly_recall": 0.0,
+        "structural_anomalies.top_0.001.per_defect_recall.structural_anomalies": 0.0,
+        "pooled.top_0.01.image_auroc": 0.0,
+        "pooled.top_0.01.image_ap": 1.1102230246251565e-16,
+        "pooled.top_0.01.threshold_95pct": 0.0,
+        "pooled.top_0.01.normal_fpr": 0.0,
+        "pooled.top_0.01.anomaly_recall": 0.0,
+        "pooled.top_0.01.per_defect_recall.logical_anomalies": 0.0,
+        "pooled.top_0.01.per_defect_recall.structural_anomalies": 0.0,
+        "logical_anomalies.top_0.01.image_auroc": 0.0,
+        "logical_anomalies.top_0.01.image_ap": 2.220446049250313e-16,
+        "logical_anomalies.top_0.01.threshold_95pct": 0.0,
+        "logical_anomalies.top_0.01.normal_fpr": 0.0,
+        "logical_anomalies.top_0.01.anomaly_recall": 0.0,
+        "logical_anomalies.top_0.01.per_defect_recall.logical_anomalies": 0.0,
+        "structural_anomalies.top_0.01.image_auroc": 0.0,
+        "structural_anomalies.top_0.01.image_ap": 3.3306690738754696e-16,
+        "structural_anomalies.top_0.01.threshold_95pct": 0.0,
+        "structural_anomalies.top_0.01.normal_fpr": 0.0,
+        "structural_anomalies.top_0.01.anomaly_recall": 0.0,
+        "structural_anomalies.top_0.01.per_defect_recall.structural_anomalies": 0.0,
+        "pooled.top_0.05.image_auroc": 0.0,
+        "pooled.top_0.05.image_ap": 5.551115123125783e-16,
+        "pooled.top_0.05.threshold_95pct": 0.0,
+        "pooled.top_0.05.normal_fpr": 0.0,
+        "pooled.top_0.05.anomaly_recall": 0.0,
+        "pooled.top_0.05.per_defect_recall.logical_anomalies": 0.0,
+        "pooled.top_0.05.per_defect_recall.structural_anomalies": 0.0,
+        "logical_anomalies.top_0.05.image_auroc": 0.0,
+        "logical_anomalies.top_0.05.image_ap": 2.220446049250313e-16,
+        "logical_anomalies.top_0.05.threshold_95pct": 0.0,
+        "logical_anomalies.top_0.05.normal_fpr": 0.0,
+        "logical_anomalies.top_0.05.anomaly_recall": 0.0,
+        "logical_anomalies.top_0.05.per_defect_recall.logical_anomalies": 0.0,
+        "structural_anomalies.top_0.05.image_auroc": 0.0,
+        "structural_anomalies.top_0.05.image_ap": 0.0,
+        "structural_anomalies.top_0.05.threshold_95pct": 0.0,
+        "structural_anomalies.top_0.05.normal_fpr": 0.0,
+        "structural_anomalies.top_0.05.anomaly_recall": 0.0,
+        "structural_anomalies.top_0.05.per_defect_recall.structural_anomalies": 0.0
+      },
+      "recomputed_image_metrics": {
+        "pooled": {
+          "native": {
+            "image_auroc": 0.850928597187162,
+            "image_ap": 0.934084463783054,
+            "threshold_95pct": 18.866614723205565,
+            "normal_fpr": 0.06382978723404255,
+            "anomaly_recall": 0.5805084745762712,
+            "per_defect_recall": {
+              "logical_anomalies": 0.5985915492957746,
+              "structural_anomalies": 0.5531914893617021
+            }
+          },
+          "max": {
+            "image_auroc": 0.850928597187162,
+            "image_ap": 0.934084463783054,
+            "threshold_95pct": 18.866614723205565,
+            "normal_fpr": 0.06382978723404255,
+            "anomaly_recall": 0.5805084745762712,
+            "per_defect_recall": {
+              "logical_anomalies": 0.5985915492957746,
+              "structural_anomalies": 0.5531914893617021
+            }
+          },
+          "top_0.001": {
+            "image_auroc": 0.8552109628561125,
+            "image_ap": 0.9369405129845416,
+            "threshold_95pct": 18.392928028106688,
+            "normal_fpr": 0.0425531914893617,
+            "anomaly_recall": 0.597457627118644,
+            "per_defect_recall": {
+              "logical_anomalies": 0.6126760563380281,
+              "structural_anomalies": 0.574468085106383
+            }
+          },
+          "top_0.01": {
+            "image_auroc": 0.8752253876667869,
+            "image_ap": 0.9509042679758586,
+            "threshold_95pct": 15.914783287048339,
+            "normal_fpr": 0.0425531914893617,
+            "anomaly_recall": 0.6610169491525424,
+            "per_defect_recall": {
+              "logical_anomalies": 0.7253521126760564,
+              "structural_anomalies": 0.5638297872340425
+            }
+          },
+          "top_0.05": {
+            "image_auroc": 0.8801388388027407,
+            "image_ap": 0.9541808174776748,
+            "threshold_95pct": 12.855953168869018,
+            "normal_fpr": 0.031914893617021274,
+            "anomaly_recall": 0.6059322033898306,
+            "per_defect_recall": {
+              "logical_anomalies": 0.7253521126760564,
+              "structural_anomalies": 0.425531914893617
+            }
+          }
+        },
+        "logical_anomalies": {
+          "native": {
+            "image_auroc": 0.8578813305364099,
+            "image_ap": 0.9062354883514588,
+            "threshold_95pct": 18.866614723205565,
+            "normal_fpr": 0.06382978723404255,
+            "anomaly_recall": 0.5985915492957746,
+            "per_defect_recall": {
+              "logical_anomalies": 0.5985915492957746
+            }
+          },
+          "max": {
+            "image_auroc": 0.8578813305364099,
+            "image_ap": 0.9062354883514588,
+            "threshold_95pct": 18.866614723205565,
+            "normal_fpr": 0.06382978723404255,
+            "anomaly_recall": 0.5985915492957746,
+            "per_defect_recall": {
+              "logical_anomalies": 0.5985915492957746
+            }
+          },
+          "top_0.001": {
+            "image_auroc": 0.8661222655079412,
+            "image_ap": 0.9123502727661325,
+            "threshold_95pct": 18.392928028106688,
+            "normal_fpr": 0.0425531914893617,
+            "anomaly_recall": 0.6126760563380281,
+            "per_defect_recall": {
+              "logical_anomalies": 0.6126760563380281
+            }
+          },
+          "top_0.01": {
+            "image_auroc": 0.8897962241534312,
+            "image_ap": 0.937953383247204,
+            "threshold_95pct": 15.914783287048339,
+            "normal_fpr": 0.0425531914893617,
+            "anomaly_recall": 0.7253521126760564,
+            "per_defect_recall": {
+              "logical_anomalies": 0.7253521126760564
+            }
+          },
+          "top_0.05": {
+            "image_auroc": 0.9041804015582859,
+            "image_ap": 0.9492996456413336,
+            "threshold_95pct": 12.855953168869018,
+            "normal_fpr": 0.031914893617021274,
+            "anomaly_recall": 0.7253521126760564,
+            "per_defect_recall": {
+              "logical_anomalies": 0.7253521126760564
+            }
+          }
+        },
+        "structural_anomalies": {
+          "native": {
+            "image_auroc": 0.8404255319148937,
+            "image_ap": 0.8470844930184578,
+            "threshold_95pct": 18.866614723205565,
+            "normal_fpr": 0.06382978723404255,
+            "anomaly_recall": 0.5531914893617021,
+            "per_defect_recall": {
+              "structural_anomalies": 0.5531914893617021
+            }
+          },
+          "max": {
+            "image_auroc": 0.8404255319148937,
+            "image_ap": 0.8470844930184578,
+            "threshold_95pct": 18.866614723205565,
+            "normal_fpr": 0.06382978723404255,
+            "anomaly_recall": 0.5531914893617021,
+            "per_defect_recall": {
+              "structural_anomalies": 0.5531914893617021
+            }
+          },
+          "top_0.001": {
+            "image_auroc": 0.838727931190584,
+            "image_ap": 0.8501551137950029,
+            "threshold_95pct": 18.392928028106688,
+            "normal_fpr": 0.0425531914893617,
+            "anomaly_recall": 0.574468085106383,
+            "per_defect_recall": {
+              "structural_anomalies": 0.574468085106383
+            }
+          },
+          "top_0.01": {
+            "image_auroc": 0.8532141240380262,
+            "image_ap": 0.871897729307039,
+            "threshold_95pct": 15.914783287048339,
+            "normal_fpr": 0.0425531914893617,
+            "anomaly_recall": 0.5638297872340425,
+            "per_defect_recall": {
+              "structural_anomalies": 0.5638297872340425
+            }
+          },
+          "top_0.05": {
+            "image_auroc": 0.8438207333635129,
+            "image_ap": 0.858094448153866,
+            "threshold_95pct": 12.855953168869018,
+            "normal_fpr": 0.031914893617021274,
+            "anomaly_recall": 0.425531914893617,
+            "per_defect_recall": {
+              "structural_anomalies": 0.425531914893617
+            }
+          }
+        }
+      },
+      "prediction_fields_loaded": [
+        "dev_paths",
+        "dev_labels",
+        "dev_defect_types",
+        "test_paths",
+        "test_labels",
+        "test_defect_types",
+        "test_score_native",
+        "dev_score_native",
+        "test_score_max",
+        "dev_score_max",
+        "test_score_top_0.001",
+        "dev_score_top_0.001",
+        "test_score_top_0.01",
+        "dev_score_top_0.01",
+        "test_score_top_0.05",
+        "dev_score_top_0.05"
+      ],
+      "dev_image_count": 54,
+      "scope_counts": {
+        "pooled": {
+          "n_good": 94,
+          "n_anomaly": 236
+        },
+        "logical_anomalies": {
+          "n_good": 94,
+          "n_anomaly": 142
+        },
+        "structural_anomalies": {
+          "n_good": 94,
+          "n_anomaly": 94
+        }
+      },
+      "test_image_count": 330,
+      "validation_mode": "Independent CPU recomputation from saved score vectors"
+    },
+    {
+      "identity_sha256": "429624EAB9CC777EA276CCAB681C1CBC2ACF53FFC6CC3FF3D0318298DFA84EE5",
+      "run_key_fields": {
+        "stage": "B0_LOCO",
+        "dataset": "mvtec_loco",
+        "category": "screw_bag",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      },
+      "page": "page_002",
+      "relative_path": "run/tc2_gpu/results/429624EAB9CC777EA276CCAB681C1CBC2ACF53FFC6CC3FF3D0318298DFA84EE5",
+      "artifact_hashes": {
+        "predictions.npz": "1AD738DB24935CAAA8473E2EC4E3AC0E848B0DD7FC110B3352277ECC335C03C4",
+        "samples.json": "ACFC51069C52A1F5B7D31F4EE242E75C314A0DCCFE203B7BC46B76882C507281",
+        "metrics.json": "DADCCB11414C22CBDAD88142CD5EA0FD14CD37C3E1C0E1291FEEDD36A911FC2B",
+        "artifacts.sha256": "EABF7A3834FABB3C2C8220325018AE3B7353BEC86AEBF61A47E810A43B40805B"
+      },
+      "scoring_rule_count": 5,
+      "scope_rule_evaluations": 15,
+      "scopes": [
+        "pooled",
+        "logical_anomalies",
+        "structural_anomalies"
+      ],
+      "max_abs_error": 3.3306690738754696e-16,
+      "field_abs_errors": {
+        "pooled.native.image_auroc": 0.0,
+        "pooled.native.image_ap": 3.3306690738754696e-16,
+        "pooled.native.threshold_95pct": 0.0,
+        "pooled.native.normal_fpr": 0.0,
+        "pooled.native.anomaly_recall": 0.0,
+        "pooled.native.per_defect_recall.logical_anomalies": 0.0,
+        "pooled.native.per_defect_recall.structural_anomalies": 0.0,
+        "logical_anomalies.native.image_auroc": 0.0,
+        "logical_anomalies.native.image_ap": 3.3306690738754696e-16,
+        "logical_anomalies.native.threshold_95pct": 0.0,
+        "logical_anomalies.native.normal_fpr": 0.0,
+        "logical_anomalies.native.anomaly_recall": 0.0,
+        "logical_anomalies.native.per_defect_recall.logical_anomalies": 0.0,
+        "structural_anomalies.native.image_auroc": 0.0,
+        "structural_anomalies.native.image_ap": 0.0,
+        "structural_anomalies.native.threshold_95pct": 0.0,
+        "structural_anomalies.native.normal_fpr": 0.0,
+        "structural_anomalies.native.anomaly_recall": 0.0,
+        "structural_anomalies.native.per_defect_recall.structural_anomalies": 0.0,
+        "pooled.max.image_auroc": 0.0,
+        "pooled.max.image_ap": 3.3306690738754696e-16,
+        "pooled.max.threshold_95pct": 0.0,
+        "pooled.max.normal_fpr": 0.0,
+        "pooled.max.anomaly_recall": 0.0,
+        "pooled.max.per_defect_recall.logical_anomalies": 0.0,
+        "pooled.max.per_defect_recall.structural_anomalies": 0.0,
+        "logical_anomalies.max.image_auroc": 0.0,
+        "logical_anomalies.max.image_ap": 3.3306690738754696e-16,
+        "logical_anomalies.max.threshold_95pct": 0.0,
+        "logical_anomalies.max.normal_fpr": 0.0,
+        "logical_anomalies.max.anomaly_recall": 0.0,
+        "logical_anomalies.max.per_defect_recall.logical_anomalies": 0.0,
+        "structural_anomalies.max.image_auroc": 0.0,
+        "structural_anomalies.max.image_ap": 0.0,
+        "structural_anomalies.max.threshold_95pct": 0.0,
+        "structural_anomalies.max.normal_fpr": 0.0,
+        "structural_anomalies.max.anomaly_recall": 0.0,
+        "structural_anomalies.max.per_defect_recall.structural_anomalies": 0.0,
+        "pooled.top_0.001.image_auroc": 0.0,
+        "pooled.top_0.001.image_ap": 2.220446049250313e-16,
+        "pooled.top_0.001.threshold_95pct": 0.0,
+        "pooled.top_0.001.normal_fpr": 0.0,
+        "pooled.top_0.001.anomaly_recall": 0.0,
+        "pooled.top_0.001.per_defect_recall.logical_anomalies": 0.0,
+        "pooled.top_0.001.per_defect_recall.structural_anomalies": 0.0,
+        "logical_anomalies.top_0.001.image_auroc": 0.0,
+        "logical_anomalies.top_0.001.image_ap": 2.220446049250313e-16,
+        "logical_anomalies.top_0.001.threshold_95pct": 0.0,
+        "logical_anomalies.top_0.001.normal_fpr": 0.0,
+        "logical_anomalies.top_0.001.anomaly_recall": 0.0,
+        "logical_anomalies.top_0.001.per_defect_recall.logical_anomalies": 0.0,
+        "structural_anomalies.top_0.001.image_auroc": 0.0,
+        "structural_anomalies.top_0.001.image_ap": 2.220446049250313e-16,
+        "structural_anomalies.top_0.001.threshold_95pct": 0.0,
+        "structural_anomalies.top_0.001.normal_fpr": 0.0,
+        "structural_anomalies.top_0.001.anomaly_recall": 0.0,
+        "structural_anomalies.top_0.001.per_defect_recall.structural_anomalies": 0.0,
+        "pooled.top_0.01.image_auroc": 0.0,
+        "pooled.top_0.01.image_ap": 2.220446049250313e-16,
+        "pooled.top_0.01.threshold_95pct": 0.0,
+        "pooled.top_0.01.normal_fpr": 0.0,
+        "pooled.top_0.01.anomaly_recall": 0.0,
+        "pooled.top_0.01.per_defect_recall.logical_anomalies": 0.0,
+        "pooled.top_0.01.per_defect_recall.structural_anomalies": 0.0,
+        "logical_anomalies.top_0.01.image_auroc": 0.0,
+        "logical_anomalies.top_0.01.image_ap": 0.0,
+        "logical_anomalies.top_0.01.threshold_95pct": 0.0,
+        "logical_anomalies.top_0.01.normal_fpr": 0.0,
+        "logical_anomalies.top_0.01.anomaly_recall": 0.0,
+        "logical_anomalies.top_0.01.per_defect_recall.logical_anomalies": 0.0,
+        "structural_anomalies.top_0.01.image_auroc": 0.0,
+        "structural_anomalies.top_0.01.image_ap": 2.220446049250313e-16,
+        "structural_anomalies.top_0.01.threshold_95pct": 0.0,
+        "structural_anomalies.top_0.01.normal_fpr": 0.0,
+        "structural_anomalies.top_0.01.anomaly_recall": 0.0,
+        "structural_anomalies.top_0.01.per_defect_recall.structural_anomalies": 0.0,
+        "pooled.top_0.05.image_auroc": 0.0,
+        "pooled.top_0.05.image_ap": 1.1102230246251565e-16,
+        "pooled.top_0.05.threshold_95pct": 0.0,
+        "pooled.top_0.05.normal_fpr": 0.0,
+        "pooled.top_0.05.anomaly_recall": 0.0,
+        "pooled.top_0.05.per_defect_recall.logical_anomalies": 0.0,
+        "pooled.top_0.05.per_defect_recall.structural_anomalies": 0.0,
+        "logical_anomalies.top_0.05.image_auroc": 0.0,
+        "logical_anomalies.top_0.05.image_ap": 0.0,
+        "logical_anomalies.top_0.05.threshold_95pct": 0.0,
+        "logical_anomalies.top_0.05.normal_fpr": 0.0,
+        "logical_anomalies.top_0.05.anomaly_recall": 0.0,
+        "logical_anomalies.top_0.05.per_defect_recall.logical_anomalies": 0.0,
+        "structural_anomalies.top_0.05.image_auroc": 0.0,
+        "structural_anomalies.top_0.05.image_ap": 2.220446049250313e-16,
+        "structural_anomalies.top_0.05.threshold_95pct": 0.0,
+        "structural_anomalies.top_0.05.normal_fpr": 0.0,
+        "structural_anomalies.top_0.05.anomaly_recall": 0.0,
+        "structural_anomalies.top_0.05.per_defect_recall.structural_anomalies": 0.0
+      },
+      "recomputed_image_metrics": {
+        "pooled": {
+          "native": {
+            "image_auroc": 0.5528108391346658,
+            "image_ap": 0.660132573967214,
+            "threshold_95pct": 24.007058525085448,
+            "normal_fpr": 0.09016393442622951,
+            "anomaly_recall": 0.0821917808219178,
+            "per_defect_recall": {
+              "logical_anomalies": 0.051094890510948905,
+              "structural_anomalies": 0.13414634146341464
+            }
+          },
+          "max": {
+            "image_auroc": 0.5528108391346658,
+            "image_ap": 0.660132573967214,
+            "threshold_95pct": 24.007058525085448,
+            "normal_fpr": 0.09016393442622951,
+            "anomaly_recall": 0.0821917808219178,
+            "per_defect_recall": {
+              "logical_anomalies": 0.051094890510948905,
+              "structural_anomalies": 0.13414634146341464
+            }
+          },
+          "top_0.001": {
+            "image_auroc": 0.5546073807919755,
+            "image_ap": 0.6602898778455895,
+            "threshold_95pct": 23.366333007812496,
+            "normal_fpr": 0.08196721311475409,
+            "anomaly_recall": 0.0684931506849315,
+            "per_defect_recall": {
+              "logical_anomalies": 0.0364963503649635,
+              "structural_anomalies": 0.12195121951219512
+            }
+          },
+          "top_0.01": {
+            "image_auroc": 0.5784489857025227,
+            "image_ap": 0.6838600891174111,
+            "threshold_95pct": 19.943128490447997,
+            "normal_fpr": 0.08196721311475409,
+            "anomaly_recall": 0.0821917808219178,
+            "per_defect_recall": {
+              "logical_anomalies": 0.029197080291970802,
+              "structural_anomalies": 0.17073170731707318
+            }
+          },
+          "top_0.05": {
+            "image_auroc": 0.6018788831499364,
+            "image_ap": 0.7199976180716,
+            "threshold_95pct": 16.435189247131348,
+            "normal_fpr": 0.04918032786885246,
+            "anomaly_recall": 0.1278538812785388,
+            "per_defect_recall": {
+              "logical_anomalies": 0.051094890510948905,
+              "structural_anomalies": 0.25609756097560976
+            }
+          }
+        },
+        "logical_anomalies": {
+          "native": {
+            "image_auroc": 0.5168122532009094,
+            "image_ap": 0.5187840434928269,
+            "threshold_95pct": 24.007058525085448,
+            "normal_fpr": 0.09016393442622951,
+            "anomaly_recall": 0.051094890510948905,
+            "per_defect_recall": {
+              "logical_anomalies": 0.051094890510948905
+            }
+          },
+          "max": {
+            "image_auroc": 0.5168122532009094,
+            "image_ap": 0.5187840434928269,
+            "threshold_95pct": 24.007058525085448,
+            "normal_fpr": 0.09016393442622951,
+            "anomaly_recall": 0.051094890510948905,
+            "per_defect_recall": {
+              "logical_anomalies": 0.051094890510948905
+            }
+          },
+          "top_0.001": {
+            "image_auroc": 0.5126839775038889,
+            "image_ap": 0.5149452272789712,
+            "threshold_95pct": 23.366333007812496,
+            "normal_fpr": 0.08196721311475409,
+            "anomaly_recall": 0.0364963503649635,
+            "per_defect_recall": {
+              "logical_anomalies": 0.0364963503649635
+            }
+          },
+          "top_0.01": {
+            "image_auroc": 0.5306330022735432,
+            "image_ap": 0.5264883418759851,
+            "threshold_95pct": 19.943128490447997,
+            "normal_fpr": 0.08196721311475409,
+            "anomaly_recall": 0.029197080291970802,
+            "per_defect_recall": {
+              "logical_anomalies": 0.029197080291970802
+            }
+          },
+          "top_0.05": {
+            "image_auroc": 0.5409237764748115,
+            "image_ap": 0.5450944817996476,
+            "threshold_95pct": 16.435189247131348,
+            "normal_fpr": 0.04918032786885246,
+            "anomaly_recall": 0.051094890510948905,
+            "per_defect_recall": {
+              "logical_anomalies": 0.051094890510948905
+            }
+          }
+        },
+        "structural_anomalies": {
+          "native": {
+            "image_auroc": 0.6129548180727709,
+            "image_ap": 0.48143679206131684,
+            "threshold_95pct": 24.007058525085448,
+            "normal_fpr": 0.09016393442622951,
+            "anomaly_recall": 0.13414634146341464,
+            "per_defect_recall": {
+              "structural_anomalies": 0.13414634146341464
+            }
+          },
+          "max": {
+            "image_auroc": 0.6129548180727709,
+            "image_ap": 0.48143679206131684,
+            "threshold_95pct": 24.007058525085448,
+            "normal_fpr": 0.09016393442622951,
+            "anomaly_recall": 0.13414634146341464,
+            "per_defect_recall": {
+              "structural_anomalies": 0.13414634146341464
+            }
+          },
+          "top_0.001": {
+            "image_auroc": 0.6246501399440224,
+            "image_ap": 0.48887153001782924,
+            "threshold_95pct": 23.366333007812496,
+            "normal_fpr": 0.08196721311475409,
+            "anomaly_recall": 0.12195121951219512,
+            "per_defect_recall": {
+              "structural_anomalies": 0.12195121951219512
+            }
+          },
+          "top_0.01": {
+            "image_auroc": 0.6583366653338665,
+            "image_ap": 0.5382756278651853,
+            "threshold_95pct": 19.943128490447997,
+            "normal_fpr": 0.08196721311475409,
+            "anomaly_recall": 0.17073170731707318,
+            "per_defect_recall": {
+              "structural_anomalies": 0.17073170731707318
+            }
+          },
+          "top_0.05": {
+            "image_auroc": 0.703718512594962,
+            "image_ap": 0.6219985897288254,
+            "threshold_95pct": 16.435189247131348,
+            "normal_fpr": 0.04918032786885246,
+            "anomaly_recall": 0.25609756097560976,
+            "per_defect_recall": {
+              "structural_anomalies": 0.25609756097560976
+            }
+          }
+        }
+      },
+      "prediction_fields_loaded": [
+        "dev_paths",
+        "dev_labels",
+        "dev_defect_types",
+        "test_paths",
+        "test_labels",
+        "test_defect_types",
+        "test_score_native",
+        "dev_score_native",
+        "test_score_max",
+        "dev_score_max",
+        "test_score_top_0.001",
+        "dev_score_top_0.001",
+        "test_score_top_0.01",
+        "dev_score_top_0.01",
+        "test_score_top_0.05",
+        "dev_score_top_0.05"
+      ],
+      "dev_image_count": 60,
+      "scope_counts": {
+        "pooled": {
+          "n_good": 122,
+          "n_anomaly": 219
+        },
+        "logical_anomalies": {
+          "n_good": 122,
+          "n_anomaly": 137
+        },
+        "structural_anomalies": {
+          "n_good": 122,
+          "n_anomaly": 82
+        }
+      },
+      "test_image_count": 341,
+      "validation_mode": "Independent CPU recomputation from saved score vectors"
+    }
+  ]
+}

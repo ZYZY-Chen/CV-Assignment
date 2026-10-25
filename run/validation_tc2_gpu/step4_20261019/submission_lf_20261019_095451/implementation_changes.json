@@ -1,0 +1,18 @@
+{
+  "status": "implemented",
+  "changes": [
+    {
+      "action": "CheckMetrics",
+      "old": "job_id=$(sbatch --parsable --partition=MGPU-TC2 --qos=normal --output=\"$root/run/validation_tc2_gpu/slurm-%j.out\" --error=\"$root/run/validation_tc2_gpu/slurm-%j.err\" scripts/slurm/check_tc2_gpu_metrics.sh)",
+      "new": "# Preserve the verified source; submit a separately recorded LF-only copy.\nsubmission_source=\"$root/scripts/slurm/check_tc2_gpu_metrics.sh\"\nsubmission_script=\"$stage_record/submission_lf.sh\"\nsubmission_hashes=\"$stage_record/submission.sha256\"\n[[ -f \"$submission_source\" && ! -L \"$submission_source\" ]] || exit 2\n[[ ! -e \"$submission_script\" && ! -L \"$submission_script\" && ! -e \"$submission_hashes\" && ! -L \"$submission_hashes\" ]] || exit 2\n( set -o noclobber; sed 's/\\r$//' \"$submission_source\" > \"$submission_script\" )\n[[ -s \"$submission_script\" ]] || exit 2\nif LC_ALL=C grep -q $'\\r' \"$submission_script\"; then\n    echo 'Submission script contains an unsupported carriage return.' >&2\n    exit 2\nfi\nbash -n \"$submission_script\"\n( set -o noclobber; sha256sum -- \"$submission_source\" \"$submission_script\" > \"$submission_hashes\" )\necho \"LF submission script: $submission_script\"\ncat -- \"$submission_hashes\"\njob_id=$(sbatch --parsable --partition=MGPU-TC2 --qos=normal --output=\"$root/run/validation_tc2_gpu/slurm-%j.out\" --error=\"$root/run/validation_tc2_gpu/slurm-%j.err\" \"$submission_script\")"
+    },
+    {
+      "action": "CheckAlgorithms",
+      "old": "job_id=$(sbatch --parsable --partition=MGPU-TC2 --qos=normal --output=\"$root/run/validation_tc2_gpu/slurm-%j.out\" --error=\"$root/run/validation_tc2_gpu/slurm-%j.err\" scripts/slurm/check_tc2_gpu_algorithms.sh)",
+      "new": "# Preserve the verified source; submit a separately recorded LF-only copy.\nsubmission_source=\"$root/scripts/slurm/check_tc2_gpu_algorithms.sh\"\nsubmission_script=\"$stage_record/submission_lf.sh\"\nsubmission_hashes=\"$stage_record/submission.sha256\"\n[[ -f \"$submission_source\" && ! -L \"$submission_source\" ]] || exit 2\n[[ ! -e \"$submission_script\" && ! -L \"$submission_script\" && ! -e \"$submission_hashes\" && ! -L \"$submission_hashes\" ]] || exit 2\n( set -o noclobber; sed 's/\\r$//' \"$submission_source\" > \"$submission_script\" )\n[[ -s \"$submission_script\" ]] || exit 2\nif LC_ALL=C grep -q $'\\r' \"$submission_script\"; then\n    echo 'Submission script contains an unsupported carriage return.' >&2\n    exit 2\nfi\nbash -n \"$submission_script\"\n( set -o noclobber; sha256sum -- \"$submission_source\" \"$submission_script\" > \"$submission_hashes\" )\necho \"LF submission script: $submission_script\"\ncat -- \"$submission_hashes\"\njob_id=$(sbatch --parsable --partition=MGPU-TC2 --qos=normal --output=\"$root/run/validation_tc2_gpu/slurm-%j.out\" --error=\"$root/run/validation_tc2_gpu/slurm-%j.err\" \"$submission_script\")"
+    }
+  ],
+  "all_other_helper_bytes_unchanged": true,
+  "before_sha256": "CE5E66AE2AC35483B2A8086B32E61613C182545C29C6DF85C18DBB31C46889F0",
+  "after_sha256": "8189A421F8BC0C2FBB8DD589E9CAEE008CAA082FBE78B41EE2BC6606FD67742B"
+}

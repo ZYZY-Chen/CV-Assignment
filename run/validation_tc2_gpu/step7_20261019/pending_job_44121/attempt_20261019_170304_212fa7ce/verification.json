@@ -1,0 +1,296 @@
+{
+  "verification_status": "passed",
+  "stage_accepted": false,
+  "step_7_complete": false,
+  "job_id": "44121",
+  "requested_stage": "R0",
+  "checked_at_utc": "2026-10-19T09:06:12.926047+00:00",
+  "source_directory": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_170304_212fa7ce",
+  "index_sha256": "F181D293FDA92F06E1E04CAEBDFFD75021D4565BF50C41C7E92DF5C8D5A6F8ED",
+  "index_verification": {
+    "status": "verified",
+    "job_id": "44121",
+    "stage_id": "R0",
+    "index_sha256": "F181D293FDA92F06E1E04CAEBDFFD75021D4565BF50C41C7E92DF5C8D5A6F8ED",
+    "page_count": 1,
+    "pages": [
+      {
+        "analysis_ids": [],
+        "bytes": 114840444,
+        "name": "page_001.tar.gz",
+        "page_number": 1,
+        "result_ids": [
+          "R0_mvtec_ad_bottle_padim_s29_n100_6F691F7CBABB",
+          "R0_mvtec_ad_bottle_padim_s43_n100_E46054BE6CDC",
+          "R0_mvtec_ad_bottle_patchcore_s29_n100_D49528C13187",
+          "R0_mvtec_ad_bottle_patchcore_s43_n100_8026690C6BED"
+        ],
+        "sha256": "7C7C4EECFFD787D4585D913626676F3E0E2716C6B91DF585A10CB88F3540FA88"
+      }
+    ],
+    "partial": true,
+    "stage_complete": false,
+    "step_7_complete": false,
+    "remote_stage_complete": false
+  },
+  "collection_verification": {
+    "status": "verified",
+    "job_id": "44121",
+    "stage_id": "R0",
+    "index_sha256": "F181D293FDA92F06E1E04CAEBDFFD75021D4565BF50C41C7E92DF5C8D5A6F8ED",
+    "page_count": 1,
+    "result_count": 4,
+    "analysis_count": 0,
+    "partial": true,
+    "stage_complete": false,
+    "step_7_complete": false,
+    "completion_scope": "current_stage_and_remote_dependency_evidence",
+    "cache_array_bytes_downloaded": false,
+    "prediction_arrays_loaded_locally": false
+  },
+  "slurm_state_at_snapshot": "RUNNING",
+  "slurm_elapsed_at_snapshot": "00:05:01",
+  "node_at_snapshot": "TC2N01",
+  "current_remote_state": "unknown",
+  "phase_at_snapshot": "phase_015_run",
+  "completed_phases": 14,
+  "verified_stage_results": 4,
+  "expected_stage_results": 24,
+  "results": [
+    {
+      "run_key": "R0_mvtec_ad_bottle_padim_s29_n100_6F691F7CBABB",
+      "path": "run/tc2_gpu/results/0C08CD3B3FA89B81F0026BEC8D53B45208994FAAACB3EA4BFF1725EC43F73E2C",
+      "identity_sha256": "0C08CD3B3FA89B81F0026BEC8D53B45208994FAAACB3EA4BFF1725EC43F73E2C",
+      "method": "padim",
+      "dataset": "mvtec_ad",
+      "category": "bottle",
+      "run_seed": 29,
+      "normal_train_n": 100,
+      "run_status": "completed",
+      "verified": true,
+      "accepted_pilot_reuse": false,
+      "timings": {
+        "input_and_cache_verification_seconds": 2.3278751391917467,
+        "fit_feature_read_transfer_seconds": 0.320762325078249,
+        "fit_seconds": 0.2650585360825062,
+        "prediction_warmup_seconds": 0.37615550495684147,
+        "prediction_feature_io_seconds": 0.13470249436795712,
+        "predict_seconds": 0.910096051171422,
+        "prediction_readback_seconds": 0.024523313157260418,
+        "evaluate_cpu_seconds": 10.104094734415412,
+        "save_seconds": 1.8383664265275002,
+        "saved_metric_validation_cpu_seconds": 9.11574678774923
+      },
+      "gpu_peak_allocated_bytes": 1547698176,
+      "gpu_peak_reserved_bytes": 1740636160
+    },
+    {
+      "run_key": "R0_mvtec_ad_bottle_padim_s43_n100_E46054BE6CDC",
+      "path": "run/tc2_gpu/results/E0A38069C2924C55D39EA21CF1EBA67EA9E5162AE88F21FC827B79779C2F809F",
+      "identity_sha256": "E0A38069C2924C55D39EA21CF1EBA67EA9E5162AE88F21FC827B79779C2F809F",
+      "method": "padim",
+      "dataset": "mvtec_ad",
+      "category": "bottle",
+      "run_seed": 43,
+      "normal_train_n": 100,
+      "run_status": "completed",
+      "verified": true,
+      "accepted_pilot_reuse": false,
+      "timings": {
+        "input_and_cache_verification_seconds": 2.3135349163785577,
+        "fit_feature_read_transfer_seconds": 0.3121892726048827,
+        "fit_seconds": 0.26445326395332813,
+        "prediction_warmup_seconds": 0.3821568200364709,
+        "prediction_feature_io_seconds": 0.136673079803586,
+        "predict_seconds": 0.9222762091085315,
+        "prediction_readback_seconds": 0.024736405350267887,
+        "evaluate_cpu_seconds": 10.127913349308074,
+        "save_seconds": 1.8291783910244703,
+        "saved_metric_validation_cpu_seconds": 9.071042004041374
+      },
+      "gpu_peak_allocated_bytes": 1547698176,
+      "gpu_peak_reserved_bytes": 1740636160
+    },
+    {
+      "run_key": "R0_mvtec_ad_bottle_patchcore_s29_n100_D49528C13187",
+      "path": "run/tc2_gpu/results/01FB51B130793C454D94E89353050A402D8DD0AB52A886DA660754343D7D3812",
+      "identity_sha256": "01FB51B130793C454D94E89353050A402D8DD0AB52A886DA660754343D7D3812",
+      "method": "patchcore",
+      "dataset": "mvtec_ad",
+      "category": "bottle",
+      "run_seed": 29,
+      "normal_train_n": 100,
+      "run_status": "completed",
+      "verified": true,
+      "accepted_pilot_reuse": false,
+      "timings": {
+        "input_and_cache_verification_seconds": 2.3744695400819182,
+        "fit_feature_read_transfer_seconds": 0.26919400971382856,
+        "fit_seconds": 10.855041978880763,
+        "prediction_warmup_seconds": 0.640684493817389,
+        "prediction_feature_io_seconds": 0.07853974588215351,
+        "predict_seconds": 2.3027145322412252,
+        "prediction_readback_seconds": 0.02572781592607498,
+        "evaluate_cpu_seconds": 10.020886491052806,
+        "save_seconds": 2.0077952472493052,
+        "saved_metric_validation_cpu_seconds": 8.852472820319235
+      },
+      "gpu_peak_allocated_bytes": 669515776,
+      "gpu_peak_reserved_bytes": 786432000
+    },
+    {
+      "run_key": "R0_mvtec_ad_bottle_patchcore_s43_n100_8026690C6BED",
+      "path": "run/tc2_gpu/results/F3E4490C3C95E9711A2F7A6F83F0C7CB87801130F63EBD39E737E26B1551DBAD",
+      "identity_sha256": "F3E4490C3C95E9711A2F7A6F83F0C7CB87801130F63EBD39E737E26B1551DBAD",
+      "method": "patchcore",
+      "dataset": "mvtec_ad",
+      "category": "bottle",
+      "run_seed": 43,
+      "normal_train_n": 100,
+      "run_status": "completed",
+      "verified": true,
+      "accepted_pilot_reuse": false,
+      "timings": {
+        "input_and_cache_verification_seconds": 2.325614801608026,
+        "fit_feature_read_transfer_seconds": 0.25971126183867455,
+        "fit_seconds": 10.819104263558984,
+        "prediction_warmup_seconds": 0.6823394494131207,
+        "prediction_feature_io_seconds": 0.08137047104537487,
+        "predict_seconds": 2.4079754799604416,
+        "prediction_readback_seconds": 0.027612476609647274,
+        "evaluate_cpu_seconds": 9.84092783369124,
+        "save_seconds": 1.9722210811451077,
+        "saved_metric_validation_cpu_seconds": 8.990464455448091
+      },
+      "gpu_peak_allocated_bytes": 669515776,
+      "gpu_peak_reserved_bytes": 786432000
+    }
+  ],
+  "previously_accepted_formal_fits": 22,
+  "core_checkpoint_complete": true,
+  "predecessor": {
+    "stage_id": "I1_seed17",
+    "job_id": "44116",
+    "status_sha256": "C31178CF1B49933F383F763B2B2AC034D04C625EE52B813E3B10840B00F69CC3"
+  },
+  "previous_stage_chain_matches_accepted_records": true,
+  "protected_sources_checked": 44,
+  "design_sha256": "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75",
+  "runtime": {
+    "device": "cuda",
+    "gpu": "NVIDIA A40",
+    "driver": "570.148.08",
+    "cuda_build": "12.8",
+    "software": {
+      "python": "3.10.22",
+      "numpy": "1.26.4",
+      "torch": "2.11.0+cu128",
+      "torchvision": "0.26.0+cu128",
+      "pillow": "12.3.0",
+      "scikit-learn": "1.7.2",
+      "pyyaml": "6.0.3"
+    },
+    "acceptance_jobs": {
+      "metrics": "43968",
+      "algorithms": "43970",
+      "setup": "43950"
+    },
+    "compatibility_configuration_sha256": "EDF3D1D0380E0105A5173607CE360221FD43B059478915EEC0EC04ED9110F913",
+    "slurm_job_id": "44121",
+    "tf32": false,
+    "autocast": false
+  },
+  "resources": {
+    "requested": {
+      "partition": "MGPU-TC2",
+      "qos": "normal",
+      "nodes": 1,
+      "tasks": 1,
+      "gpus": 1,
+      "cpus_per_task": 2,
+      "memory_gib": 24,
+      "time_limit": "02:00:00"
+    },
+    "runtime": {
+      "device": "cuda",
+      "gpu": "NVIDIA A40",
+      "driver": "570.148.08",
+      "cuda_build": "12.8",
+      "software": {
+        "python": "3.10.22",
+        "numpy": "1.26.4",
+        "torch": "2.11.0+cu128",
+        "torchvision": "0.26.0+cu128",
+        "pillow": "12.3.0",
+        "scikit-learn": "1.7.2",
+        "pyyaml": "6.0.3"
+      },
+      "acceptance_jobs": {
+        "metrics": "43968",
+        "algorithms": "43970",
+        "setup": "43950"
+      },
+      "compatibility_configuration_sha256": "EDF3D1D0380E0105A5173607CE360221FD43B059478915EEC0EC04ED9110F913",
+      "slurm_job_id": "44121",
+      "tf32": false,
+      "autocast": false
+    },
+    "slurm_environment": {
+      "SLURM_JOB_ID": "44121",
+      "SLURM_JOB_PARTITION": "MGPU-TC2",
+      "SLURM_JOB_NODELIST": "TC2N01",
+      "SLURM_CPUS_PER_TASK": "2",
+      "SLURM_MEM_PER_NODE": "24576",
+      "SLURM_JOB_QOS": "normal"
+    }
+  },
+  "cache_metadata_and_identity_checks": [
+    {
+      "category": "bottle",
+      "images": 292,
+      "metadata_sha256": "AE5FA58247840AE65B0BAE7C7EB6E89FFE195581C77B1366259F06009831E7D8"
+    },
+    {
+      "category": "cable",
+      "images": 374,
+      "metadata_sha256": "646DF39171F6682E394975B2242D8449B82BA7CB3777F1474453D2067CD87E87"
+    },
+    {
+      "category": "capsule",
+      "images": 351,
+      "metadata_sha256": "FD7DE0F1A2F2B8E21D0A8E2A46DB77E4D7698FC1AAD9B30B14BBDBDBA549BD1C"
+    },
+    {
+      "category": "screw",
+      "images": 480,
+      "metadata_sha256": "B131F425A2D9D0C4583DA65874E306267DDA853D133B155F8355638CFCC4453F"
+    },
+    {
+      "category": "tile",
+      "images": 347,
+      "metadata_sha256": "09FC362CFE246D63908E5E13FDAC3807E0B29FF2B7343C0D30F8C699EE4D8FC9"
+    },
+    {
+      "category": "wood",
+      "images": 326,
+      "metadata_sha256": "A7B95A7CDC62C5FAAACDAA904007D8E95C5C944914CC92E253414DB477B0AB7D"
+    }
+  ],
+  "independent_saved_maps_checked": 500,
+  "independent_score_vectors_checked": 40,
+  "independent_image_rule_evaluations": 20,
+  "maximum_independent_image_metric_absolute_error": 2.220446049250313e-16,
+  "reports": {
+    "saved_arrays_verification.json": "2F3F2413A73BEFD78AA3833A07D8CD1C9482BD6F137B6325418DA781189E37AF",
+    "independent_image_metrics.json": "2DB31AEBB89C6134BCE462F88CB6D035F1E59F6F2913E25AC3AA8141D87A500B",
+    "archive_file_hashes.json": "40AE1738BB5BFE1D2468683D968335B8E8C6665C116A3D460BE36E99082347BB"
+  },
+  "remote_status_sha256": "3835549219D70600AFE1EBBE515905629E4176778DCE9D4360B869C77C70C96C",
+  "partial_evidence_reuse_policy": "Reuse a result audit only after all referenced input hashes exactly match a later verified snapshot; the R0 stage remains unaccepted.",
+  "local_pixel_metrics_recomputed": false,
+  "cache_npy_arrays_downloaded": false,
+  "next_user_terminal_command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup.ps1\" -Action CollectExperiments -JobId 44121",
+  "actual_agent_tc2_connections": 0,
+  "actual_agent_slurm_submissions": 0,
+  "implementation_files_modified": 0
+}

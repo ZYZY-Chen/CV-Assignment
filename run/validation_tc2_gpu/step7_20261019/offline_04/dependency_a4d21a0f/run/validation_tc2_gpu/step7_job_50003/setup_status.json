@@ -1,0 +1,30 @@
+{
+  "mode": "formal_experiment_stage",
+  "stage_id": "C1",
+  "job_id": "50003",
+  "status": "passed",
+  "stage_complete": true,
+  "step_7_complete": false,
+  "predecessor": {
+    "stage_id": "H2",
+    "job_id": "50002",
+    "status_sha256": "DE19DEEE77C09B36706D03AAE9B9FE8EAC25FAECCAB5C0BC33FB429D6CD620EB"
+  },
+  "design_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "experiment_sources": {
+    "offline": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+  },
+  "results": [
+    {
+      "run_key": "C1_mvtec_ad_cable_patchcore_s17_n100_230A94347D46",
+      "verified": true,
+      "run_status": "completed"
+    },
+    {
+      "run_key": "C1_mvtec_ad_screw_patchcore_s17_n100_681E25673EEB",
+      "verified": true,
+      "run_status": "completed"
+    }
+  ],
+  "analyses": []
+}

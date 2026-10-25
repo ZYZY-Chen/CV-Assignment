@@ -1,0 +1,33 @@
+{
+  "mode": "local_scheduling_supplement",
+  "status": "passed",
+  "step_7_complete": false,
+  "remote_acceptance": "B0_retry_pending",
+  "recorded_at_utc": "2026-10-19T06:47:14.125920+00:00",
+  "approved_change": "Request TC2N01 only for formal GPU fitting stages and update README to the final correct usage.",
+  "modified_implementation_files": [
+    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup.ps1",
+    "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\README.md"
+  ],
+  "helper_sha256": "093F3E11DEC0FAAA26CFD3C48C846ED88EEEF517C25B82DDA2A843B8FC6A3B82",
+  "readme_sha256": "58872B230EE34B6711A424BB6120DEFDE41859C9AF6059E86D42081614FC32C3",
+  "published_experiment_sources_unchanged": 7,
+  "accepted_scientific_and_pilot_sources_unchanged": 37,
+  "gpu_fit_stages_checked": 9,
+  "cpu_analysis_stages_checked": 3,
+  "offline_cases": 18,
+  "rendered_commands_checked": 41,
+  "powershell_ast_errors": 0,
+  "actual_tc2_connections": 0,
+  "actual_model_calls": 0,
+  "actual_slurm_submissions": 0,
+  "existing_logs_and_archives_preserved": true,
+  "report_hashes": {
+    "experiments_transport_validation.json": "198D79111BDA48B05850B0E1BF1CD90AC20A409177B7DD5E3F3BCBD88872ABA3",
+    "package_and_compatibility_validation.json": "8BD8171F09D9B54805633013F357B58B736FE5AE59B83DA9F2071D94F2EED66B",
+    "independent_scope_review.json": "47C493773E529C335E00DDF1F49D53A0631E5EAFED029315A423BCD947E6612B"
+  },
+  "next_stage": "B0",
+  "next_user_terminal_command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup.ps1\" -Action RunExperiments -Stage B0",
+  "next_acceptance": "Check that the retry runs on TC2N01, finishes COMPLETED/0:0, verifies all B0 results including two pilot reuses, and passes every collection page before H1."
+}

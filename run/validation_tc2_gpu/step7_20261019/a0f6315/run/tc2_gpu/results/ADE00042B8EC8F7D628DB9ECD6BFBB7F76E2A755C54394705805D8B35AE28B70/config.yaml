@@ -1,0 +1,31 @@
+{
+  "stage": "B0",
+  "dataset": "mvtec_ad",
+  "category": "bottle",
+  "method": "patchcore",
+  "run_seed": 17,
+  "normal_train_n": 100,
+  "execution": {
+    "schema_version": "1.0",
+    "workflow_id": "tc2_gpu",
+    "extraction_batch_size": 1,
+    "prediction_batch_size": 1,
+    "workers": 0,
+    "cpu_threads": 2,
+    "warmup_iterations": 20,
+    "padim_position_chunk_size": 256,
+    "patchcore_query_chunk_size": 1024,
+    "patchcore_bank_chunk_size": 4096,
+    "patchcore_sampling_chunk_size": 16384
+  },
+  "layers": [
+    "layer2",
+    "layer3"
+  ],
+  "patchcore": {
+    "coreset_ratio": 0.05,
+    "num_neighbors": 9,
+    "sampling": "coreset",
+    "sampling_seed": 17
+  }
+}

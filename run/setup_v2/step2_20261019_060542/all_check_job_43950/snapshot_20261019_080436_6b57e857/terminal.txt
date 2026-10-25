@@ -1,0 +1,87 @@
+TC2 step 2: CheckAll
+Local output: C:\Users\mhjv_\Desktop\CharGPT projects\CA6129 COMPUTER VISION & APPLICATIONS\output\tc2_setup_v2_20261019_080436_6b57e857
+A submitted or running job is not a passed check. Passwords are not stored.
+SSH: enter the password in this terminal when requested.
+/------------------------------------------------------------------------\
+               **IMPORTANT NOTICE for Users of TC2**                                                                                                         
+System.Management.Automation.RemoteException
+ 1. System Administrators claim the right to remove the accounts of
+    users and the folders assigned to users without prior notice.
+System.Management.Automation.RemoteException
+ 2. NO backups will be provided for data stored in folders assigned to
+    users.  Users are responsible for protecting and maintaining their
+    own data.
+System.Management.Automation.RemoteException
+ 3. Additional user folders and additional QoS assigned to users will
+    be removed after the usage expiry date, without prior notice.
+System.Management.Automation.RemoteException
+ 4. Resources are to be used for academic purposes only. Use of
+    resources for purposes other than that for which they were granted
+    will result in the termination of the account.
+System.Management.Automation.RemoteException
+ 5. Your computation is being monitored. For jobs submitted with
+    unauthorised QoS (NOT assigned for your use) and operations, will
+    be terminated with no prior notification. Severe offenders may be
+    barred from the service.
+System.Management.Automation.RemoteException
+ 6. DO NOT access directories other than your Home Directory or
+    Shared Folder. Unauthorised access to other directories or files,
+    even for the purpose of "browsing", shall be deemed as a security
+    breach.  Serious action will be taken against users committing
+    any breach to the CCDS GPU Cluster.
+System.Management.Automation.RemoteException
+ 7. The user guide (PDF format) for this GPU Cluster is available
+    for download from the share folder: /tc2share.
+System.Management.Automation.RemoteException
+ 8. You may execute the command "mytcinfo" to view your user
+    information.
+System.Management.Automation.RemoteException
+ 9. For technical issues, please email to ccdsgpu-tc@ntu.edu.sg
+                                                                         <#
+\------------------------------------------------------------------------/
+Loading gcc/14.2.0
+  Loading requirement: gmp/6.3.0 mpfr/4.2.1 mpc/1.3.1
+TC2_JOB_ID=43950
+[Personal queue]
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+TC2_JOB_ID=43950
+JobID           JobName      State ExitCode    Elapsed        NodeList 
+------------ ---------- ---------- -------- ---------- --------------- 
+43950        ca6129_se+  COMPLETED      0:0   00:00:32          TC2N01 
+43950.batch       batch  COMPLETED      0:0   00:00:32          TC2N01 
+[Tail: /home/mcaai/huajie001/ca6129_v2_setup/run/setup_v2/slurm-43950.out]
+{
+  "checked_at_utc": "2026-10-19T00:04:52+00:00",
+  "mode": "all",
+  "step_2_complete": true,
+  "protocol_sha256": "3098B6A86DBA64EE439BFE61C7A4FCFFCD082371D5A80FFBC7940997ED6A1ED1",
+  "modifications": "Audit records and verified environment exports only; no repairs or experiments",
+  "inputs_ready": true,
+  "input_counts": {
+    "match": 4669
+  },
+  "environment_ready": true,
+  "environment_export": {
+    "ready": true,
+    "files": [
+      {
+        "path": "/home/mcaai/huajie001/ca6129_v2_setup/environment-tc2.yml",
+        "sha256": "47F1DAA83A744743946C83E6DC1963B8FA7E835A4A0F7010A3B0501EF5A3DF38"
+      },
+      {
+        "path": "/home/mcaai/huajie001/ca6129_v2_setup/requirements-tc2-lock.txt",
+        "sha256": "F7B848F10FFB3F3CCEB707450B2A5FE4DCD9A6C3B489963A8932094E016840B6"
+      }
+    ]
+  },
+  "backbone_ready": true,
+  "weights_ready": true,
+  "status": "ready"
+}
+[Tail: /home/mcaai/huajie001/ca6129_v2_setup/run/setup_v2/slurm-43950.err]
+TC2_ARTIFACT_SHA256=00646cdd5fc11334a28d8c52ee39d986fe3e73c77ddeb9b5052cbfdcd4913561
+SSH exit code: 0
+Downloaded 55 output files. SHA256=00646CDD5FC11334A28D8C52EE39D986FE3E73C77DDEB9B5052CBFDCD4913561
+Remote records: C:\Users\mhjv_\Desktop\CharGPT projects\CA6129 COMPUTER VISION & APPLICATIONS\output\tc2_setup_v2_20261019_080436_6b57e857\remote
+Action finished. Review the downloaded records; step 2 is complete only if the all-mode setup_status.json says step_2_complete=true.
+Send this local output path back: C:\Users\mhjv_\Desktop\CharGPT projects\CA6129 COMPUTER VISION & APPLICATIONS\output\tc2_setup_v2_20261019_080436_6b57e857\terminal.txt

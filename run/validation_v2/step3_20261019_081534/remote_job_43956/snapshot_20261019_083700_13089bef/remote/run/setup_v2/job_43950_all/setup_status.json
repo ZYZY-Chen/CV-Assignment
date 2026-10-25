@@ -1,0 +1,28 @@
+{
+  "checked_at_utc": "2026-10-19T00:04:52+00:00",
+  "mode": "all",
+  "step_2_complete": true,
+  "protocol_sha256": "3098B6A86DBA64EE439BFE61C7A4FCFFCD082371D5A80FFBC7940997ED6A1ED1",
+  "modifications": "Audit records and verified environment exports only; no repairs or experiments",
+  "inputs_ready": true,
+  "input_counts": {
+    "match": 4669
+  },
+  "environment_ready": true,
+  "environment_export": {
+    "ready": true,
+    "files": [
+      {
+        "path": "/home/mcaai/huajie001/ca6129_v2_setup/environment-tc2.yml",
+        "sha256": "47F1DAA83A744743946C83E6DC1963B8FA7E835A4A0F7010A3B0501EF5A3DF38"
+      },
+      {
+        "path": "/home/mcaai/huajie001/ca6129_v2_setup/requirements-tc2-lock.txt",
+        "sha256": "F7B848F10FFB3F3CCEB707450B2A5FE4DCD9A6C3B489963A8932094E016840B6"
+      }
+    ]
+  },
+  "backbone_ready": true,
+  "weights_ready": true,
+  "status": "ready"
+}

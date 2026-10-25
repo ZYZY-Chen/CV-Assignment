@@ -1,0 +1,222 @@
+{
+  "status": "passed",
+  "stage_id": "I1_seed17",
+  "job_id": "44116",
+  "stage_complete": true,
+  "step_7_complete": false,
+  "accepted_at_utc": "2026-10-19T08:57:06.006596+00:00",
+  "slurm_state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:00:20",
+  "node": "TC2N02",
+  "source_directory": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_165134_fdee4ac2",
+  "index_sha256": "1181927A6ACFB91D2006683B28360D2428EBDCFEECDAC88863D108188DFEDA64",
+  "index_verification": {
+    "status": "verified",
+    "job_id": "44116",
+    "stage_id": "I1_seed17",
+    "index_sha256": "1181927A6ACFB91D2006683B28360D2428EBDCFEECDAC88863D108188DFEDA64",
+    "page_count": 1,
+    "pages": [
+      {
+        "analysis_ids": [
+          "I1_seed17"
+        ],
+        "bytes": 830357,
+        "name": "page_001.tar.gz",
+        "page_number": 1,
+        "result_ids": [],
+        "sha256": "CE271B6E101CB423B92465D5EB56391679298F6D8BE139E4A33610188FFBCE65"
+      }
+    ],
+    "partial": false,
+    "stage_complete": false,
+    "step_7_complete": false,
+    "remote_stage_complete": true
+  },
+  "collection_verification": {
+    "status": "verified",
+    "job_id": "44116",
+    "stage_id": "I1_seed17",
+    "index_sha256": "1181927A6ACFB91D2006683B28360D2428EBDCFEECDAC88863D108188DFEDA64",
+    "page_count": 1,
+    "result_count": 0,
+    "analysis_count": 1,
+    "partial": false,
+    "stage_complete": true,
+    "step_7_complete": false,
+    "completion_scope": "current_stage_and_remote_dependency_evidence",
+    "cache_array_bytes_downloaded": false,
+    "prediction_arrays_loaded_locally": false
+  },
+  "pages_verified": 1,
+  "unique_payload_files_verified": 36,
+  "results_verified": 0,
+  "new_fits_verified": 0,
+  "analyses_verified": 1,
+  "analysis_rows_verified": 18,
+  "analysis_source_results_verified": 6,
+  "cumulative_formal_fits": 22,
+  "phases_passed": 1,
+  "predecessor": {
+    "stage_id": "C1",
+    "job_id": "44103",
+    "status_sha256": "49EBF855C45F81792FEEFD5A65C91AD337CEDFF76D85FD9352268758144F7F0A"
+  },
+  "design_sha256": "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75",
+  "experiment_sources": {
+    "configs/experiments_tc2_gpu.json": "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75",
+    "scripts/experiments_tc2_gpu.py": "F4896D83DED9EAACB72ED7A75B63F76CC3538E61D2FB90A88CF1945D36D0CBDA",
+    "scripts/analyze_scores_tc2_gpu.py": "D1412F6743ECB6709EB82FF978DF4D8C37601371BE4E78C2329B9AAD1FF609F6",
+    "scripts/slurm/experiments_tc2_gpu.sh": "C4D12CFBC8D7B0F799AD51E06826318C8A17210526EC63ED04CD4FF3AB13080E",
+    "scripts/collect_experiments_tc2_gpu.py": "AC61772F65C9F2C4124761D2361E0A85E9F65DBCF4DF5BAB3E939B5111466010",
+    "tests/test_experiments_tc2_gpu.py": "371072914FD83F1E4A803501A86965977BA12C1797EE44C178D0A843F8A2FFE5",
+    "docs/TC2_GPU_EXPERIMENTS.md": "EBF7AD234A2346379CE5B7B80A76826A564F3ED7FF08DEB17CA362EC9E2FD47A"
+  },
+  "protected_sources_checked": 44,
+  "runtime": {
+    "device": "cpu",
+    "software": {
+      "python": "3.10.22",
+      "numpy": "1.26.4",
+      "torch": "2.11.0+cu128",
+      "torchvision": "0.26.0+cu128",
+      "pillow": "12.3.0",
+      "scikit-learn": "1.7.2",
+      "pyyaml": "6.0.3"
+    },
+    "slurm_job_id": "44116",
+    "torch_imported": false
+  },
+  "resources": {
+    "requested": {
+      "partition": "MGPU-TC2",
+      "qos": "normal",
+      "nodes": 1,
+      "tasks": 1,
+      "gpus": 0,
+      "cpus_per_task": 2,
+      "memory_gib": 8,
+      "time_limit": "00:15:00"
+    },
+    "runtime": {
+      "device": "cpu",
+      "software": {
+        "python": "3.10.22",
+        "numpy": "1.26.4",
+        "torch": "2.11.0+cu128",
+        "torchvision": "0.26.0+cu128",
+        "pillow": "12.3.0",
+        "scikit-learn": "1.7.2",
+        "pyyaml": "6.0.3"
+      },
+      "slurm_job_id": "44116",
+      "torch_imported": false
+    },
+    "slurm_environment": {
+      "SLURM_JOB_ID": "44116",
+      "SLURM_JOB_PARTITION": "MGPU-TC2",
+      "SLURM_JOB_NODELIST": "TC2N02",
+      "SLURM_CPUS_PER_TASK": "2",
+      "SLURM_MEM_PER_NODE": "8192",
+      "SLURM_JOB_QOS": "normal"
+    },
+    "child_peak_rss_kib": 43204,
+    "free_bytes_after": 9668344938496
+  },
+  "caches": [
+    {
+      "category": "bottle",
+      "images": 292,
+      "metadata_sha256": "AE5FA58247840AE65B0BAE7C7EB6E89FFE195581C77B1366259F06009831E7D8"
+    },
+    {
+      "category": "cable",
+      "images": 374,
+      "metadata_sha256": "646DF39171F6682E394975B2242D8449B82BA7CB3777F1474453D2067CD87E87"
+    },
+    {
+      "category": "capsule",
+      "images": 351,
+      "metadata_sha256": "FD7DE0F1A2F2B8E21D0A8E2A46DB77E4D7698FC1AAD9B30B14BBDBDBA549BD1C"
+    },
+    {
+      "category": "screw",
+      "images": 480,
+      "metadata_sha256": "B131F425A2D9D0C4583DA65874E306267DDA853D133B155F8355638CFCC4453F"
+    },
+    {
+      "category": "tile",
+      "images": 347,
+      "metadata_sha256": "09FC362CFE246D63908E5E13FDAC3807E0B29FF2B7343C0D30F8C699EE4D8FC9"
+    },
+    {
+      "category": "wood",
+      "images": 326,
+      "metadata_sha256": "A7B95A7CDC62C5FAAACDAA904007D8E95C5C944914CC92E253414DB477B0AB7D"
+    }
+  ],
+  "analysis": {
+    "status": "passed",
+    "stage": "I1_seed17",
+    "path": "run/tc2_gpu/summaries/I1_seed17/39AADC79FE93187DBAFEB66113D08085B10B72D4A940165C83A804123349CCDC",
+    "identity_sha256": "39AADC79FE93187DBAFEB66113D08085B10B72D4A940165C83A804123349CCDC",
+    "rows": 18,
+    "source_run_keys": [
+      "B0_mvtec_ad_bottle_patchcore_s17_n100_BBC2B85C2FA8",
+      "B0_mvtec_ad_cable_patchcore_s17_n100_AE108605F492",
+      "B0_mvtec_ad_capsule_patchcore_s17_n100_55DB51B64838",
+      "B0_mvtec_ad_screw_patchcore_s17_n100_D657B3B6C4C1",
+      "B0_mvtec_ad_tile_patchcore_s17_n100_71576E39ABDF",
+      "B0_mvtec_ad_wood_patchcore_s17_n100_468C39576EED"
+    ],
+    "reuse": "created",
+    "stage_id": "I1_seed17"
+  },
+  "analysis_artifact_hashes": {
+    "analysis.json": "22002EB0F92791289D51EE4033058A1CA6141E0E7430A7D060C20D243A265140",
+    "analysis.csv": "8DD820C4F292FA8DD9D6ED7CCED9D9B156D8E863D74F26347C62C90B56FDEA1F",
+    "evidence.json": "A7396427D2C313BB69A4EAFE0E2AD37A13222928A228836CE1BFBEAD1C5DCEC5",
+    "analysis.sha256": "664B965531D4CA02B424C3890A5F52CD633206332DC0B8E919957055C1706CEE",
+    "SUCCESS": "3EFAD68FCF5F878A5AB74499F4E658BB7DDA22DFA040292C8019649E3D99E370"
+  },
+  "maximum_independent_analysis_metric_absolute_error": 5.551115123125783e-16,
+  "reports": {
+    "analysis_provenance_verification.json": "0F1960238A8DFE0EB00267A5806E7BCED5D9A37624CD76B145AE9D21FD9B1447",
+    "independent_analysis_metrics.json": "FBE041A29942B54500BC6791F1194D36DB63C14BD7BB5CAA06BC5E2528658FE2",
+    "archive_file_hashes.json": "BD07B5E94E54001D7D58A55CEBA4957407D3FB17BFE7916CA6DF24CCD8056D47",
+    "check_analysis_provenance.py": "717F9AA7332E2835C628C1A98FCFB35F2EFC9C136E9478A56AEEE479570224F1",
+    "independent_analysis_check.py": "0DF9D58764A7BA8D12611DE824A5A577F4F7E0E18A1073923FD451FB9647CD3F"
+  },
+  "remote_status_sha256": "C31178CF1B49933F383F763B2B2AC034D04C625EE52B813E3B10840B00F69CC3",
+  "checkpoints": [
+    {
+      "checkpoint_id": "core",
+      "after_stage": "I1_seed17",
+      "expected_fits": 22,
+      "complete": true
+    },
+    {
+      "checkpoint_id": "standard",
+      "after_stage": "I2",
+      "expected_fits": 62,
+      "complete": false
+    },
+    {
+      "checkpoint_id": "full",
+      "after_stage": "B0_LOCO",
+      "expected_fits": 66,
+      "complete": false
+    }
+  ],
+  "core_checkpoint_complete": true,
+  "cache_npy_arrays_downloaded": false,
+  "new_prediction_arrays_downloaded": false,
+  "local_pixel_metrics_recomputed": false,
+  "next_stage": "R0",
+  "next_stage_fits": 24,
+  "next_user_terminal_command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup.ps1\" -Action RunExperiments -Stage R0",
+  "actual_agent_tc2_connections": 0,
+  "actual_agent_slurm_submissions": 0,
+  "implementation_files_modified": 0
+}

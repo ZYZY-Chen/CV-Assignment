@@ -1,0 +1,40 @@
+{
+  "mode": "full",
+  "step_3_complete": true,
+  "status": "passed",
+  "checked_at_utc": "2026-10-19T01:58:59+00:00",
+  "runtime": {
+    "protocol_sha256": "3098B6A86DBA64EE439BFE61C7A4FCFFCD082371D5A80FFBC7940997ED6A1ED1",
+    "frozen_manifests_verified": 8,
+    "python": "3.10.22 | packaged by conda-forge | (main, Oct  6 2026, 23:02:24) [GCC 14.4.0]",
+    "numpy": "1.26.4",
+    "device": "cpu",
+    "gpu_requested": false,
+    "slurm_job_id": "43968",
+    "packages": {
+      "numpy": "1.26.4",
+      "scikit-learn": "1.7.2",
+      "torch": "2.11.0+cu128",
+      "torchvision": "0.26.0+cu128",
+      "pillow": "12.3.0"
+    },
+    "step_2_job_id": "43950"
+  },
+  "tests_run": 24,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "reference": {
+    "cases": 81,
+    "max_auroc_abs_error": 1.1102230246251565e-16,
+    "max_ap_abs_error": 2.220446049250313e-16
+  },
+  "failure_details": [],
+  "source_hashes": {
+    "src/metric_core.py": "D218A438031DE6B0A83B14951354CD66A85ED65F97FFC2CFBAEFF1D4FB91DB78",
+    "src/evaluate.py": "4DB2413CC6AAF4210B143285FE5FD7FC6A8C08E98C67073E9A92D31359E68BC6",
+    "src/data.py": "9A82D585203B376F41C3200A32D6971288DD70B5C7E71210F3E21F8C5C1F1F89",
+    "tests/test_metrics_tc2_gpu.py": "80B489B83990DE25C2BE4F055FA382247FD0B9091D194764EC3C02DD370313FD",
+    "scripts/slurm/check_tc2_gpu_metrics.sh": "93E64309348082E1EBDEF2B1707BA5A1A58EF95C3E6E5395A8209191FB0D1519"
+  }
+}

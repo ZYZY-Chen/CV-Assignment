@@ -1,0 +1,14 @@
+{
+  "mode": "full",
+  "step_3_complete": false,
+  "status": "failed",
+  "checked_at_utc": "2026-10-19T00:28:27+00:00",
+  "error": "RuntimeError: Full acceptance must run in a Linux SLURM compute job",
+  "source_hashes": {
+    "src/metric_core.py": "E3A444608FF1D5B3D489CECA981D9B480E48D7FA53DB41EA6C46D9888ACB5CCD",
+    "src/evaluate.py": "99852A3E9E7C99FBD872ED37EAF7C1527FFED970D99BBD08A1911310C93CA3C1",
+    "src/data.py": "9A82D585203B376F41C3200A32D6971288DD70B5C7E71210F3E21F8C5C1F1F89",
+    "tests/test_metrics_v2.py": "14EB404650C61442DEC97FA34C3B0BC06AB8C62D7310A6F7A6D5EE7F6466C224",
+    "scripts/slurm/check_metrics_v2.sh": "8E0509C24BA8DA91250CA7C33B0212B2B0A2F150BF1C9A6DDA1C614812CA7ACF"
+  }
+}

@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\scripts\collect_experiments_tc2_gpu.py", line 868, in <module>
+    main()
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\scripts\collect_experiments_tc2_gpu.py", line 857, in main
+    result = export_pages(args.root, args.job_id, args.directory, args.stage)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\scripts\collect_experiments_tc2_gpu.py", line 566, in export_pages
+    raise ValueError("Export directory must be a fresh job-specific directory below root/tmp")
+ValueError: Export directory must be a fresh job-specific directory below root/tmp
+Cannot prepare a bounded local collection fixture.
+At C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\step7_20261019\loco_collection_s
+upplement_20261019\validate_loco_helper.ps1:22 char:26
++ ... EXITCODE) { throw 'Cannot prepare a bounded local collection fixture. ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Cannot prepare ...ection fixture.:String) [], RuntimeException
+    + FullyQualifiedErrorId : Cannot prepare a bounded local collection fixture.
+ 

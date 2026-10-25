@@ -1,0 +1,61 @@
+{
+  "verification_status": "passed",
+  "stage_accepted": false,
+  "step_7_complete": false,
+  "job_id": "44086",
+  "requested_stage": "H2",
+  "stage_binding_evidence": "The same terminal records publication stage_id H2 followed by submission marker TC2_JOB_ID=44086.",
+  "export_stage_id": null,
+  "checked_at_utc": "2026-10-19T07:41:57.629564+00:00",
+  "source_directory": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_153833_ae4305ac",
+  "index_sha256": "6050C56AD716DB20ACCEBCA44EA6140EC61B1754D38466678C2E74EE8B5D2CDB",
+  "index_verification": {
+    "status": "verified",
+    "job_id": "44086",
+    "stage_id": null,
+    "index_sha256": "6050C56AD716DB20ACCEBCA44EA6140EC61B1754D38466678C2E74EE8B5D2CDB",
+    "page_count": 1,
+    "pages": [
+      {
+        "analysis_ids": [],
+        "bytes": 6720,
+        "name": "page_001.tar.gz",
+        "page_number": 1,
+        "result_ids": [],
+        "sha256": "1260997DB57D218B9FFD0642376F6DD2C3075A04440CE44074C1EBC85F2B48AA"
+      }
+    ],
+    "partial": true,
+    "stage_complete": false,
+    "step_7_complete": false,
+    "remote_stage_complete": false
+  },
+  "collection_verification": {
+    "status": "verified",
+    "job_id": "44086",
+    "stage_id": null,
+    "index_sha256": "6050C56AD716DB20ACCEBCA44EA6140EC61B1754D38466678C2E74EE8B5D2CDB",
+    "page_count": 1,
+    "result_count": 0,
+    "analysis_count": 0,
+    "partial": true,
+    "stage_complete": false,
+    "step_7_complete": false,
+    "completion_scope": "current_stage_and_remote_dependency_evidence",
+    "cache_array_bytes_downloaded": false,
+    "prediction_arrays_loaded_locally": false
+  },
+  "payload_files_checked": 1,
+  "slurm_state_at_snapshot": "PENDING",
+  "queue_reason_at_snapshot": "Resources",
+  "node_assigned_at_snapshot": false,
+  "job_runtime_record_present": false,
+  "current_remote_state": "unknown",
+  "published_sources_unchanged": 7,
+  "verified_stage_results": 0,
+  "previously_accepted_formal_fits": 16,
+  "next_user_terminal_command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup.ps1\" -Action CollectExperiments -JobId 44086",
+  "actual_agent_tc2_connections": 0,
+  "actual_agent_slurm_submissions": 0,
+  "implementation_files_modified": 0
+}

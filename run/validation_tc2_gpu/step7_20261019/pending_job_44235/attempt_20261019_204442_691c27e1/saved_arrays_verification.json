@@ -1,0 +1,711 @@
+{
+  "status": "passed",
+  "job_id": "44235",
+  "stage_id": "B0_LOCO",
+  "snapshot_partial": true,
+  "stage_accepted": false,
+  "stage_complete": false,
+  "created_utc": "2026-10-19T12:48:05.437251+00:00",
+  "audit_script_sha256": "139100AD8D0D536374EAA8AEDB7EE27202CC9B73B57CE7AF5273D7D7A8CE86F4",
+  "design_sha256": "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75",
+  "index_sha256": "C89F4E77B61756F7F397613A0CBD614AC99BB562BC45FE0745EB85BC79186DE9",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "results_checked": 3,
+  "maps_checked": 1169,
+  "map_derived_score_vectors_checked": 28,
+  "cache_scopes": {
+    "0350E7FA0547D3C8D1C9578AB87E2C38758C59354C074ADC2ECD8C1490405341": {
+      "dataset": "mvtec_loco",
+      "category": "juice_bottle",
+      "image_positions_checked": 719,
+      "metadata_sha256": "8704C037BD51DA5784399FB24B371304B91A10A64180EE195EA048144C28B46A",
+      "complete_sha256": "20960ED3753950008D51B07921110CDD7E11466AF87236363AFDF6A8E7575264",
+      "layer_hashes": {
+        "layer1": "A97256DD8241ECCFB3F94220E57D472159D249BFC71DFC5BFC621E8C0CAB4581",
+        "layer2": "64DE6BC0335B2435EAEF810AB21BAC0D9D1C117C22E9D69A849E656E0528C78B",
+        "layer3": "BF8024F9BC7765F4248ABABCFD69CD663F9606EBA9AA3B5A0782C7DFE33DB6D4"
+      }
+    },
+    "D592697EB5A56C5B46DB33A63C6C70FC953BFBB619987CB560F755114F25D4C0": {
+      "dataset": "mvtec_loco",
+      "category": "screw_bag",
+      "image_positions_checked": 761,
+      "metadata_sha256": "06CEAC21A4AAFC1FA343291C320539B4111090347EBAACD89ADA69AD1F3D2332",
+      "complete_sha256": "6758570A27D737C499ADAD541D6851421D82A14AF523A4375C30886F9FB9025B",
+      "layer_hashes": {
+        "layer1": "6F176DAE79E8F0423160E7065318E7536823D2F2D6C0C5B286E8ADC2B7CE92BA",
+        "layer2": "1A53A4DAE003DD103EF85E8857A28F1D15AFBDC0309AEBC7149049373382A211",
+        "layer3": "375208D95001F742FE5FC52A0B1244A6E1A4E328F9215FE5CF28CF54BC6D5AAA"
+      }
+    }
+  },
+  "cache_image_positions_checked": 1480,
+  "collection_derivative_sha256": "09AC7432F8F6BCE36F95EAEFF15D44A19F7852781A19FE65E5E573239E445967",
+  "weighted_patchcore_native_vectors_checked_for_finite_dtype_shape_only": 2,
+  "comparison_tolerance": {
+    "absolute": 1e-05,
+    "relative": 0.0001,
+    "source": "Accepted validate_predictions contract"
+  },
+  "limitations": [
+    "Raw image/mask bytes and cache NPY layers were not downloaded; original sizes match hash-bound cache metadata.",
+    "Pixel metrics are covered by remote full verification and were not locally recomputed.",
+    "PatchCore weighted native scores cannot be reconstructed from saved maps alone; dtype, shape and finiteness were checked."
+  ],
+  "results": [
+    {
+      "run_key": "B0_LOCO_mvtec_loco_juice_bottle_patchcore_s17_n100_F914F6B6532D",
+      "result_identity_sha256": "750606098934F3B43A0A6880ED6EDCB1B1650FF60FAD7054B9581126989950F0",
+      "predictions_sha256": "412FB1820C75C6BB73980895328DC76D35F5D8C82F8041279369B898467A8093",
+      "samples_sha256": "855652C3D2207E9BBCE84F3F72230702F8A8AFD1B0638DD4EB551FA653B10123",
+      "configuration_file_sha256": "9BD7B2728C76A0871543A026F685F240F22044BA3C7F16486765C10386B51794",
+      "evidence_sha256": "5C8BA6D333F20C881BEEF189CE49B4A328549163EBBB8415B15766ECCC6E5C72",
+      "artifact_manifest_sha256": "7DCF4C1A4473E558E4B73946A90B54E9B3AB210EC994E77D79A88BC5BA99D5FD",
+      "frozen_manifest_sha256": "E54AB3FA354E258D591F6C53B395ED9EED25518CF25F039FEB88040A2EC46C86",
+      "cache_metadata_sha256": "8704C037BD51DA5784399FB24B371304B91A10A64180EE195EA048144C28B46A",
+      "configuration_matches_frozen_fit": true,
+      "frozen_configuration": {
+        "stage": "B0_LOCO",
+        "dataset": "mvtec_loco",
+        "category": "juice_bottle",
+        "method": "patchcore",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer2",
+          "layer3"
+        ],
+        "patchcore": {
+          "coreset_ratio": 0.05,
+          "num_neighbors": 9,
+          "sampling": "coreset",
+          "sampling_seed": 17
+        }
+      },
+      "loco_scope": {
+        "n_dev": 54,
+        "n_test": 330,
+        "n_good": 94,
+        "pooled_original_pixels": 422400000,
+        "groups": {
+          "logical_anomalies": {
+            "n_good": 94,
+            "n_anomaly": 142,
+            "original_pixels": 302080000
+          },
+          "structural_anomalies": {
+            "n_good": 94,
+            "n_anomaly": 94,
+            "original_pixels": 240640000
+          }
+        }
+      },
+      "roles": {
+        "dev": {
+          "maps_dtype": "float32",
+          "maps_shape": [
+            54,
+            256,
+            256
+          ],
+          "maps_finite": true,
+          "maps_minimum": 0.20803388953208923,
+          "maps_maximum": 1.7234303951263428,
+          "maps_negative_values": 0,
+          "sample_metadata_matches": true,
+          "scores": {
+            "native": {
+              "dtype": "float32",
+              "shape": [
+                54
+              ],
+              "finite": true,
+              "minimum": 1.2682275772094727,
+              "maximum": 1.6636933088302612,
+              "map_rederivation": "Not applicable: weighted native score also depends on nearest-neighbor support."
+            },
+            "max": {
+              "dtype": "float32",
+              "shape": [
+                54
+              ],
+              "finite": true,
+              "minimum": 1.2748076915740967,
+              "maximum": 1.7234303951263428,
+              "map_rederivation": "passed",
+              "max_absolute_error": 0.0,
+              "max_tolerance_fraction": 0.0
+            },
+            "top_0.001": {
+              "dtype": "float32",
+              "shape": [
+                54
+              ],
+              "finite": true,
+              "minimum": 1.2632858753204346,
+              "maximum": 1.7119214534759521,
+              "top_pixel_count": 66,
+              "map_rederivation": "passed",
+              "max_absolute_error": 2.0229455199860524e-07,
+              "max_tolerance_fraction": 0.0013649902644680733
+            },
+            "top_0.01": {
+              "dtype": "float32",
+              "shape": [
+                54
+              ],
+              "finite": true,
+              "minimum": 1.2387226819992065,
+              "maximum": 1.627199649810791,
+              "top_pixel_count": 656,
+              "map_rederivation": "passed",
+              "max_absolute_error": 1.4828472605366017e-07,
+              "max_tolerance_fraction": 0.0010535286488903028
+            },
+            "top_0.05": {
+              "dtype": "float32",
+              "shape": [
+                54
+              ],
+              "finite": true,
+              "minimum": 1.2096818685531616,
+              "maximum": 1.4814437627792358,
+              "top_pixel_count": 3277,
+              "map_rederivation": "passed",
+              "max_absolute_error": 1.93237639889432e-07,
+              "max_tolerance_fraction": 0.00134869555100276
+            }
+          }
+        },
+        "test": {
+          "maps_dtype": "float32",
+          "maps_shape": [
+            330,
+            256,
+            256
+          ],
+          "maps_finite": true,
+          "maps_minimum": 0.2093142718076706,
+          "maps_maximum": 3.4675230979919434,
+          "maps_negative_values": 0,
+          "sample_metadata_matches": true,
+          "scores": {
+            "native": {
+              "dtype": "float32",
+              "shape": [
+                330
+              ],
+              "finite": true,
+              "minimum": 1.3083853721618652,
+              "maximum": 3.330690622329712,
+              "map_rederivation": "Not applicable: weighted native score also depends on nearest-neighbor support."
+            },
+            "max": {
+              "dtype": "float32",
+              "shape": [
+                330
+              ],
+              "finite": true,
+              "minimum": 1.293483018875122,
+              "maximum": 3.4675230979919434,
+              "map_rederivation": "passed",
+              "max_absolute_error": 0.0,
+              "max_tolerance_fraction": 0.0
+            },
+            "top_0.001": {
+              "dtype": "float32",
+              "shape": [
+                330
+              ],
+              "finite": true,
+              "minimum": 1.279119610786438,
+              "maximum": 3.415839910507202,
+              "top_pixel_count": 66,
+              "map_rederivation": "passed",
+              "max_absolute_error": 3.5762786865234375e-07,
+              "max_tolerance_fraction": 0.0016041561075318882
+            },
+            "top_0.01": {
+              "dtype": "float32",
+              "shape": [
+                330
+              ],
+              "finite": true,
+              "minimum": 1.2460089921951294,
+              "maximum": 3.074871778488159,
+              "top_pixel_count": 656,
+              "map_rederivation": "passed",
+              "max_absolute_error": 3.8779363409346956e-07,
+              "max_tolerance_fraction": 0.001550940240639566
+            },
+            "top_0.05": {
+              "dtype": "float32",
+              "shape": [
+                330
+              ],
+              "finite": true,
+              "minimum": 1.2190520763397217,
+              "maximum": 2.7027108669281006,
+              "top_pixel_count": 3277,
+              "map_rederivation": "passed",
+              "max_absolute_error": 3.4100332024777913e-07,
+              "max_tolerance_fraction": 0.001346541050448427
+            }
+          }
+        }
+      }
+    },
+    {
+      "run_key": "B0_LOCO_mvtec_loco_juice_bottle_padim_s17_n100_B8766FFB4CD0",
+      "result_identity_sha256": "DF9CA709E9592160A7F10916724F6D62B1FEE339CDC115482EF0DDFA4137C53B",
+      "predictions_sha256": "DB929532A2D37CEBA873B56CAE59F2841086BF8AB66F77FBA9BB40C608EAB289",
+      "samples_sha256": "855652C3D2207E9BBCE84F3F72230702F8A8AFD1B0638DD4EB551FA653B10123",
+      "configuration_file_sha256": "038CE94749FE1784A0A432C5758F6B7B7BE7A3CF8DDB2DBBA8C0FFB016AE939D",
+      "evidence_sha256": "16DAB5D3D01D5EE984D696007E063CCA48F8FD090FC72736ADB98EB0741E2216",
+      "artifact_manifest_sha256": "27423A0E7981A470C6DFDE75A4A8ED1D1F9E7DEAC42566D886158B9E2B578084",
+      "frozen_manifest_sha256": "E54AB3FA354E258D591F6C53B395ED9EED25518CF25F039FEB88040A2EC46C86",
+      "cache_metadata_sha256": "8704C037BD51DA5784399FB24B371304B91A10A64180EE195EA048144C28B46A",
+      "configuration_matches_frozen_fit": true,
+      "frozen_configuration": {
+        "stage": "B0_LOCO",
+        "dataset": "mvtec_loco",
+        "category": "juice_bottle",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      },
+      "loco_scope": {
+        "n_dev": 54,
+        "n_test": 330,
+        "n_good": 94,
+        "pooled_original_pixels": 422400000,
+        "groups": {
+          "logical_anomalies": {
+            "n_good": 94,
+            "n_anomaly": 142,
+            "original_pixels": 302080000
+          },
+          "structural_anomalies": {
+            "n_good": 94,
+            "n_anomaly": 94,
+            "original_pixels": 240640000
+          }
+        }
+      },
+      "roles": {
+        "dev": {
+          "maps_dtype": "float32",
+          "maps_shape": [
+            54,
+            256,
+            256
+          ],
+          "maps_finite": true,
+          "maps_minimum": 1.4249433279037476,
+          "maps_maximum": 23.32482147216797,
+          "maps_negative_values": 0,
+          "sample_metadata_matches": true,
+          "scores": {
+            "native": {
+              "dtype": "float32",
+              "shape": [
+                54
+              ],
+              "finite": true,
+              "minimum": 9.710652351379395,
+              "maximum": 23.32482147216797,
+              "map_rederivation": "passed",
+              "max_absolute_error": 0.0,
+              "max_tolerance_fraction": 0.0
+            },
+            "max": {
+              "dtype": "float32",
+              "shape": [
+                54
+              ],
+              "finite": true,
+              "minimum": 9.710652351379395,
+              "maximum": 23.32482147216797,
+              "map_rederivation": "passed",
+              "max_absolute_error": 0.0,
+              "max_tolerance_fraction": 0.0
+            },
+            "top_0.001": {
+              "dtype": "float32",
+              "shape": [
+                54
+              ],
+              "finite": true,
+              "minimum": 9.36801815032959,
+              "maximum": 22.58642578125,
+              "top_pixel_count": 66,
+              "map_rederivation": "passed",
+              "max_absolute_error": 2.67317800961564e-06,
+              "max_tolerance_fraction": 0.0016243677899700215
+            },
+            "top_0.01": {
+              "dtype": "float32",
+              "shape": [
+                54
+              ],
+              "finite": true,
+              "minimum": 8.765795707702637,
+              "maximum": 18.271825790405273,
+              "top_pixel_count": 656,
+              "map_rederivation": "passed",
+              "max_absolute_error": 1.8579203899804497e-06,
+              "max_tolerance_fraction": 0.0013448639817958386
+            },
+            "top_0.05": {
+              "dtype": "float32",
+              "shape": [
+                54
+              ],
+              "finite": true,
+              "minimum": 8.022139549255371,
+              "maximum": 14.13595962524414,
+              "top_pixel_count": 3277,
+              "map_rederivation": "passed",
+              "max_absolute_error": 8.916869411734751e-07,
+              "max_tolerance_fraction": 0.0009300717875596366
+            }
+          }
+        },
+        "test": {
+          "maps_dtype": "float32",
+          "maps_shape": [
+            330,
+            256,
+            256
+          ],
+          "maps_finite": true,
+          "maps_minimum": 1.2463549375534058,
+          "maps_maximum": 44.4545783996582,
+          "maps_negative_values": 0,
+          "sample_metadata_matches": true,
+          "scores": {
+            "native": {
+              "dtype": "float32",
+              "shape": [
+                330
+              ],
+              "finite": true,
+              "minimum": 9.885812759399414,
+              "maximum": 44.4545783996582,
+              "map_rederivation": "passed",
+              "max_absolute_error": 0.0,
+              "max_tolerance_fraction": 0.0
+            },
+            "max": {
+              "dtype": "float32",
+              "shape": [
+                330
+              ],
+              "finite": true,
+              "minimum": 9.885812759399414,
+              "maximum": 44.4545783996582,
+              "map_rederivation": "passed",
+              "max_absolute_error": 0.0,
+              "max_tolerance_fraction": 0.0
+            },
+            "top_0.001": {
+              "dtype": "float32",
+              "shape": [
+                330
+              ],
+              "finite": true,
+              "minimum": 9.563919067382812,
+              "maximum": 43.0577507019043,
+              "top_pixel_count": 66,
+              "map_rederivation": "passed",
+              "max_absolute_error": 3.814697265625e-06,
+              "max_tolerance_fraction": 0.001878062149319786
+            },
+            "top_0.01": {
+              "dtype": "float32",
+              "shape": [
+                330
+              ],
+              "finite": true,
+              "minimum": 8.675148010253906,
+              "maximum": 35.5464973449707,
+              "top_pixel_count": 656,
+              "map_rederivation": "passed",
+              "max_absolute_error": 4.294441964702855e-06,
+              "max_tolerance_fraction": 0.0014535631479660627
+            },
+            "top_0.05": {
+              "dtype": "float32",
+              "shape": [
+                330
+              ],
+              "finite": true,
+              "minimum": 7.921061038970947,
+              "maximum": 29.960126876831055,
+              "top_pixel_count": 3277,
+              "map_rederivation": "passed",
+              "max_absolute_error": 2.1256140385617073e-06,
+              "max_tolerance_fraction": 0.0014880061223149117
+            }
+          }
+        }
+      }
+    },
+    {
+      "run_key": "B0_LOCO_mvtec_loco_screw_bag_padim_s17_n100_8D20C5E59478",
+      "result_identity_sha256": "429624EAB9CC777EA276CCAB681C1CBC2ACF53FFC6CC3FF3D0318298DFA84EE5",
+      "predictions_sha256": "1AD738DB24935CAAA8473E2EC4E3AC0E848B0DD7FC110B3352277ECC335C03C4",
+      "samples_sha256": "ACFC51069C52A1F5B7D31F4EE242E75C314A0DCCFE203B7BC46B76882C507281",
+      "configuration_file_sha256": "771C2E88140BABC577FAD96A4BD82F245E96874B53D0AC268F3D10E2875222F2",
+      "evidence_sha256": "AEB5E6B13C537DB3248F41CEFA699FB654A410035FE06EC7879E3422C8D399B6",
+      "artifact_manifest_sha256": "EABF7A3834FABB3C2C8220325018AE3B7353BEC86AEBF61A47E810A43B40805B",
+      "frozen_manifest_sha256": "7C02ED1CF33AFD35F8BEFB7342525F532213CC684ADC330414522DB51B1C66CA",
+      "cache_metadata_sha256": "06CEAC21A4AAFC1FA343291C320539B4111090347EBAACD89ADA69AD1F3D2332",
+      "configuration_matches_frozen_fit": true,
+      "frozen_configuration": {
+        "stage": "B0_LOCO",
+        "dataset": "mvtec_loco",
+        "category": "screw_bag",
+        "method": "padim",
+        "run_seed": 17,
+        "normal_train_n": 100,
+        "execution": {
+          "schema_version": "1.0",
+          "workflow_id": "tc2_gpu",
+          "extraction_batch_size": 1,
+          "prediction_batch_size": 1,
+          "workers": 0,
+          "cpu_threads": 2,
+          "warmup_iterations": 20,
+          "padim_position_chunk_size": 256,
+          "patchcore_query_chunk_size": 1024,
+          "patchcore_bank_chunk_size": 4096,
+          "patchcore_sampling_chunk_size": 16384
+        },
+        "layers": [
+          "layer1",
+          "layer2",
+          "layer3"
+        ],
+        "padim": {
+          "n_dims": 100,
+          "eps": 0.01,
+          "dims_seed": 17
+        }
+      },
+      "loco_scope": {
+        "n_dev": 60,
+        "n_test": 341,
+        "n_good": 122,
+        "pooled_original_pixels": 600160000,
+        "groups": {
+          "logical_anomalies": {
+            "n_good": 122,
+            "n_anomaly": 137,
+            "original_pixels": 455840000
+          },
+          "structural_anomalies": {
+            "n_good": 122,
+            "n_anomaly": 82,
+            "original_pixels": 359040000
+          }
+        }
+      },
+      "roles": {
+        "dev": {
+          "maps_dtype": "float32",
+          "maps_shape": [
+            60,
+            256,
+            256
+          ],
+          "maps_finite": true,
+          "maps_minimum": 2.1793949604034424,
+          "maps_maximum": 26.248416900634766,
+          "maps_negative_values": 0,
+          "sample_metadata_matches": true,
+          "scores": {
+            "native": {
+              "dtype": "float32",
+              "shape": [
+                60
+              ],
+              "finite": true,
+              "minimum": 14.996556282043457,
+              "maximum": 26.248416900634766,
+              "map_rederivation": "passed",
+              "max_absolute_error": 0.0,
+              "max_tolerance_fraction": 0.0
+            },
+            "max": {
+              "dtype": "float32",
+              "shape": [
+                60
+              ],
+              "finite": true,
+              "minimum": 14.996556282043457,
+              "maximum": 26.248416900634766,
+              "map_rederivation": "passed",
+              "max_absolute_error": 0.0,
+              "max_tolerance_fraction": 0.0
+            },
+            "top_0.001": {
+              "dtype": "float32",
+              "shape": [
+                60
+              ],
+              "finite": true,
+              "minimum": 14.566771507263184,
+              "maximum": 25.290725708007812,
+              "top_pixel_count": 66,
+              "map_rederivation": "passed",
+              "max_absolute_error": 2.1385424062714264e-06,
+              "max_tolerance_fraction": 0.0011461110846777652
+            },
+            "top_0.01": {
+              "dtype": "float32",
+              "shape": [
+                60
+              ],
+              "finite": true,
+              "minimum": 13.89299488067627,
+              "maximum": 21.778005599975586,
+              "top_pixel_count": 656,
+              "map_rederivation": "passed",
+              "max_absolute_error": 2.1515823007689505e-06,
+              "max_tolerance_fraction": 0.001340263637004634
+            },
+            "top_0.05": {
+              "dtype": "float32",
+              "shape": [
+                60
+              ],
+              "finite": true,
+              "minimum": 13.041418075561523,
+              "maximum": 17.147092819213867,
+              "top_pixel_count": 3277,
+              "map_rederivation": "passed",
+              "max_absolute_error": 1.8986180165825317e-06,
+              "max_tolerance_fraction": 0.0013219072566674464
+            }
+          }
+        },
+        "test": {
+          "maps_dtype": "float32",
+          "maps_shape": [
+            341,
+            256,
+            256
+          ],
+          "maps_finite": true,
+          "maps_minimum": 1.9474267959594727,
+          "maps_maximum": 30.351247787475586,
+          "maps_negative_values": 0,
+          "sample_metadata_matches": true,
+          "scores": {
+            "native": {
+              "dtype": "float32",
+              "shape": [
+                341
+              ],
+              "finite": true,
+              "minimum": 15.042323112487793,
+              "maximum": 30.351247787475586,
+              "map_rederivation": "passed",
+              "max_absolute_error": 0.0,
+              "max_tolerance_fraction": 0.0
+            },
+            "max": {
+              "dtype": "float32",
+              "shape": [
+                341
+              ],
+              "finite": true,
+              "minimum": 15.042323112487793,
+              "maximum": 30.351247787475586,
+              "map_rederivation": "passed",
+              "max_absolute_error": 0.0,
+              "max_tolerance_fraction": 0.0
+            },
+            "top_0.001": {
+              "dtype": "float32",
+              "shape": [
+                341
+              ],
+              "finite": true,
+              "minimum": 14.776676177978516,
+              "maximum": 29.395694732666016,
+              "top_pixel_count": 66,
+              "map_rederivation": "passed",
+              "max_absolute_error": 3.323410496136603e-06,
+              "max_tolerance_fraction": 0.0016658171339944043
+            },
+            "top_0.01": {
+              "dtype": "float32",
+              "shape": [
+                341
+              ],
+              "finite": true,
+              "minimum": 13.989694595336914,
+              "maximum": 23.588590621948242,
+              "top_pixel_count": 656,
+              "map_rederivation": "passed",
+              "max_absolute_error": 2.8145022525905006e-06,
+              "max_tolerance_fraction": 0.001654660581297297
+            },
+            "top_0.05": {
+              "dtype": "float32",
+              "shape": [
+                341
+              ],
+              "finite": true,
+              "minimum": 12.813469886779785,
+              "maximum": 19.007375717163086,
+              "top_pixel_count": 3277,
+              "map_rederivation": "passed",
+              "max_absolute_error": 1.9614784534383034e-06,
+              "max_tolerance_fraction": 0.0013210249907392557
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+TC2 step 2: Collect
+Local output: C:\Users\mhjv_\Desktop\CharGPT projects\CA6129 COMPUTER VISION & APPLICATIONS\output\tc2_setup_v2_20261019_070538_5b0fa3c0
+A submitted or running job is not a passed check. Passwords are not stored.
+SSH: enter the password in this terminal when requested.
+/------------------------------------------------------------------------\
+               **IMPORTANT NOTICE for Users of TC2**                                                                                                         
+System.Management.Automation.RemoteException
+ 1. System Administrators claim the right to remove the accounts of
+    users and the folders assigned to users without prior notice.
+System.Management.Automation.RemoteException
+ 2. NO backups will be provided for data stored in folders assigned to
+    users.  Users are responsible for protecting and maintaining their
+    own data.
+System.Management.Automation.RemoteException
+ 3. Additional user folders and additional QoS assigned to users will
+    be removed after the usage expiry date, without prior notice.
+System.Management.Automation.RemoteException
+ 4. Resources are to be used for academic purposes only. Use of
+    resources for purposes other than that for which they were granted
+    will result in the termination of the account.
+System.Management.Automation.RemoteException
+ 5. Your computation is being monitored. For jobs submitted with
+    unauthorised QoS (NOT assigned for your use) and operations, will
+    be terminated with no prior notification. Severe offenders may be
+    barred from the service.
+System.Management.Automation.RemoteException
+ 6. DO NOT access directories other than your Home Directory or
+    Shared Folder. Unauthorised access to other directories or files,
+    even for the purpose of "browsing", shall be deemed as a security
+    breach.  Serious action will be taken against users committing
+    any breach to the CCDS GPU Cluster.
+System.Management.Automation.RemoteException
+ 7. The user guide (PDF format) for this GPU Cluster is available
+    for download from the share folder: /tc2share.
+System.Management.Automation.RemoteException
+ 8. You may execute the command "mytcinfo" to view your user
+    information.
+System.Management.Automation.RemoteException
+ 9. For technical issues, please email to ccdsgpu-tc@ntu.edu.sg
+                                                                         <#
+\------------------------------------------------------------------------/
+Loading gcc/14.2.0
+  Loading requirement: gmp/6.3.0 mpfr/4.2.1 mpc/1.3.1
+[Personal queue]
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+TC2_JOB_ID=43940
+JobID           JobName      State ExitCode    Elapsed        NodeList 
+------------ ---------- ---------- -------- ---------- --------------- 
+43940        ca6129_pr+  COMPLETED      0:0   00:05:56          TC2N01 
+43940.batch       batch  COMPLETED      0:0   00:05:56          TC2N01 
+[Tail: /home/mcaai/huajie001/ca6129_v2_setup/run/setup_v2/slurm-43940.out]
+Collecting contourpy>=1.0.1 (from matplotlib==3.10.9->-r /home/mcaai/huajie001/ca6129_v2_setup/run/setup_v2/job_43940_prepare_environment/remaining-requirements.txt (line 6))
+  Using cached contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib==3.10.9->-r /home/mcaai/huajie001/ca6129_v2_setup/run/setup_v2/job_43940_prepare_environment/remaining-requirements.txt (line 6))
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib==3.10.9->-r /home/mcaai/huajie001/ca6129_v2_setup/run/setup_v2/job_43940_prepare_environment/remaining-requirements.txt (line 6))
+  Using cached fonttools-4.65.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (125 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib==3.10.9->-r /home/mcaai/huajie001/ca6129_v2_setup/run/setup_v2/job_43940_prepare_environment/remaining-requirements.txt (line 6))
+  Using cached kiwisolver-1.5.1-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (5.2 kB)
+Requirement already satisfied: packaging>=20.0 in ./envs/ca6129-ad-v2/lib/python3.10/site-packages (from matplotlib==3.10.9->-r /home/mcaai/huajie001/ca6129_v2_setup/run/setup_v2/job_43940_prepare_environment/remaining-requirements.txt (line 6)) (26.3)
+Collecting pyparsing>=3 (from matplotlib==3.10.9->-r /home/mcaai/huajie001/ca6129_v2_setup/run/setup_v2/job_43940_prepare_environment/remaining-requirements.txt (line 6))
+  Using cached pyparsing-3.3.3-py3-none-any.whl.metadata (5.9 kB)
+Collecting cloudpickle>=3.0 (from joblib>=1.2.0->scikit-learn==1.7.2->-r /home/mcaai/huajie001/ca6129_v2_setup/run/setup_v2/job_43940_prepare_environment/remaining-requirements.txt (line 3))
+  Using cached cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas==2.2.3->-r /home/mcaai/huajie001/ca6129_v2_setup/run/setup_v2/job_43940_prepare_environment/remaining-requirements.txt (line 5))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Downloading numpy-1.26.4-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.2 MB)
+   鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣 18.2/18.2 MB 9.6 MB/s  0:00:01
+Downloading scipy-1.12.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (38.4 MB)
+   鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣 38.4/38.4 MB 9.8 MB/s  0:00:03
+Downloading scikit_learn-1.7.2-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+   鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣 9.7/9.7 MB 11.1 MB/s  0:00:00
+Downloading pandas-2.2.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.1 MB)
+   鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣 13.1/13.1 MB 9.5 MB/s  0:00:01
+Downloading matplotlib-3.10.9-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.8 MB)
+   鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣 8.8/8.8 MB 9.9 MB/s  0:00:00
+Downloading pyyaml-6.0.3-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (770 kB)
+   鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣 770.3/770.3 kB 10.1 MB/s  0:00:00
+Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+Downloading contourpy-1.3.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (325 kB)
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.65.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.3 MB)
+   鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣 5.3/5.3 MB 10.5 MB/s  0:00:00
+Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+Downloading kiwisolver-1.5.1-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+   鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣 1.6/1.6 MB 15.1 MB/s  0:00:00
+Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading pytz-2026.5-py2.py3-none-any.whl (506 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading threadpoolctl-3.7.0-py3-none-any.whl (26 kB)
+Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+Installing collected packages: pytz, tzdata, tqdm, threadpoolctl, six, PyYAML, pyparsing, numpy, kiwisolver, fonttools, cycler, cloudpickle, scipy, python-dateutil, joblib, contourpy, scikit-learn, pandas, matplotlib
+  Attempting uninstall: numpy
+    Found existing installation: numpy 2.2.6
+    Uninstalling numpy-2.2.6:
+      Successfully uninstalled numpy-2.2.6
+
+Successfully installed PyYAML-6.0.3 cloudpickle-3.1.2 contourpy-1.3.2 cycler-0.12.1 fonttools-4.65.0 joblib-1.6.0 kiwisolver-1.5.1 matplotlib-3.10.9 numpy-1.26.4 pandas-2.2.3 pyparsing-3.3.3 python-dateutil-2.9.0.post0 pytz-2026.5 scikit-learn-1.7.2 scipy-1.12.0 six-1.17.0 threadpoolctl-3.7.0 tqdm-4.70.1 tzdata-2026.5
+No broken requirements found.
+[Tail: /home/mcaai/huajie001/ca6129_v2_setup/run/setup_v2/slurm-43940.err]
+TC2_ARTIFACT_SHA256=9b38b44d0d9e4e12e63fe7546cd232f60fd8dc4ed05a8d9abd8dbe59259ade72
+SSH exit code: 0
+Downloaded 14 output files. SHA256=9B38B44D0D9E4E12E63FE7546CD232F60FD8DC4ED05A8D9ABD8DBE59259ADE72
+Remote records: C:\Users\mhjv_\Desktop\CharGPT projects\CA6129 COMPUTER VISION & APPLICATIONS\output\tc2_setup_v2_20261019_070538_5b0fa3c0\remote
+Action finished. Review the downloaded records; step 2 is complete only if the all-mode setup_status.json says step_2_complete=true.
+Send this local output path back: C:\Users\mhjv_\Desktop\CharGPT projects\CA6129 COMPUTER VISION & APPLICATIONS\output\tc2_setup_v2_20261019_070538_5b0fa3c0\terminal.txt

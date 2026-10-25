@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "preexisting_files_checked": 1873,
+  "preexisting_files_unchanged": 1871,
+  "changed_existing_files": [
+    ".gitignore",
+    "group_XX_code/README.md"
+  ],
+  "new_source_files": [
+    "group_XX_code/configs/runtime_tc2_gpu.json",
+    "group_XX_code/docs/TC2_GPU_WORKFLOW.md",
+    "group_XX_code/scripts/run_tc2_gpu.py",
+    "group_XX_code/scripts/slurm/check_tc2_gpu_workflow.sh",
+    "group_XX_code/src/tc2_gpu_cache.py",
+    "group_XX_code/src/tc2_gpu_protocol.py",
+    "group_XX_code/src/tc2_gpu_runner.py",
+    "group_XX_code/tests/test_workflow_tc2_gpu.py"
+  ],
+  "new_audit_files_before_finalization": 992,
+  "readme_existing_chinese_and_other_content_preserved": true,
+  "readme_changes": "Step-5 section and existing English overview status only.",
+  "gitignore_append_only": true,
+  "external_helper_unchanged_since_offline_verification": true,
+  "frozen_inputs_locks_historical_records_and_accepted_algorithms_unchanged": true,
+  "accepted_scientific_source_hashes_unchanged": true,
+  "documentation_finalization_only_after_acceptance": true,
+  "git_index_unchanged": true,
+  "git_diff_check_passed": true,
+  "document_links_valid": true,
+  "formal_output_directory_absent": true
+}

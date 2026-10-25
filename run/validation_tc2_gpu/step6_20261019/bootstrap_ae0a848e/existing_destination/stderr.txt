@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<stdin>", line 30, in <module>
+  File "C:\Users\mhjv_\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1311, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [WinError 183] 当文件已存在时，无法创建该文件。: 'C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step6_20261019\\bootstrap_ae0a848e\\existing_destination\\incoming'

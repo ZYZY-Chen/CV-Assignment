@@ -1,0 +1,99 @@
+test_existing_complete_cache_and_initial_results_are_reusable (__main__.PilotTests.test_existing_complete_cache_and_initial_results_are_reusable) ... ok
+test_frozen_design_selects_only_two_real_bottle_B0_fits (__main__.PilotTests.test_frozen_design_selects_only_two_real_bottle_B0_fits) ... ERROR
+test_gate_accepts_complete_unchanged_workflow (__main__.PilotTests.test_gate_accepts_complete_unchanged_workflow) ... ok
+test_gate_rejects_changed_current_source_bytes (__main__.PilotTests.test_gate_rejects_changed_current_source_bytes) ... ok
+test_gate_rejects_different_accepted_source_fingerprint (__main__.PilotTests.test_gate_rejects_different_accepted_source_fingerprint) ... ok
+test_gate_rejects_failed_partial_or_core_only_acceptance (__main__.PilotTests.test_gate_rejects_failed_partial_or_core_only_acceptance) ... ok
+test_gate_rejects_failed_skipped_or_missing_regression_tests (__main__.PilotTests.test_gate_rejects_failed_skipped_or_missing_regression_tests) ... ok
+test_gate_rejects_missing_or_different_workflow_pointer (__main__.PilotTests.test_gate_rejects_missing_or_different_workflow_pointer) ... ok
+test_incomplete_or_validation_cache_cannot_start_fit (__main__.PilotTests.test_incomplete_or_validation_cache_cannot_start_fit) ... ok
+test_nonformal_or_failed_fit_cannot_proceed_to_saved_verification (__main__.PilotTests.test_nonformal_or_failed_fit_cannot_proceed_to_saved_verification) ... ok
+test_reuse_must_skip_same_result_without_a_new_fit (__main__.PilotTests.test_reuse_must_skip_same_result_without_a_new_fit) ... ok
+test_sequence_fits_each_method_then_verifies_saved_outputs_before_reuse (__main__.PilotTests.test_sequence_fits_each_method_then_verifies_saved_outputs_before_reuse) ... ok
+test_subprocess_failure_stops_without_starting_next_stage (__main__.PilotTests.test_subprocess_failure_stops_without_starting_next_stage) ... ok
+test_verification_requires_passed_formal_matching_path_and_identity (__main__.PilotTests.test_verification_requires_passed_formal_matching_path_and_identity) ... ok
+test_archive_hash_mismatch_is_refused_without_extraction (__main__.CollectorTests.test_archive_hash_mismatch_is_refused_without_extraction) ... ok
+test_archive_symbolic_and_hard_links_are_refused (__main__.CollectorTests.test_archive_symbolic_and_hard_links_are_refused) ... ok
+test_archive_traversal_absolute_and_windows_paths_are_refused (__main__.CollectorTests.test_archive_traversal_absolute_and_windows_paths_are_refused) ... ok
+test_bounded_snapshot_limits_apply_before_extraction (__main__.CollectorTests.test_bounded_snapshot_limits_apply_before_extraction) ... ERROR
+test_content_tamper_is_refused_even_with_correct_new_archive_hash (__main__.CollectorTests.test_content_tamper_is_refused_even_with_correct_new_archive_hash) ... ERROR
+test_duplicate_member_names_are_refused (__main__.CollectorTests.test_duplicate_member_names_are_refused) ... ok
+test_incomplete_record_cannot_claim_completed_without_cache_and_results (__main__.CollectorTests.test_incomplete_record_cannot_claim_completed_without_cache_and_results) ... ok
+test_matching_new_content_manifest_cannot_authorize_unlisted_payload (__main__.CollectorTests.test_matching_new_content_manifest_cannot_authorize_unlisted_payload) ... ERROR
+test_missing_status_snapshot_is_partial_and_does_not_invent_success (__main__.CollectorTests.test_missing_status_snapshot_is_partial_and_does_not_invent_success) ... ERROR
+test_pending_roundtrip_preserves_bytes_and_cannot_qualify_step_six (__main__.CollectorTests.test_pending_roundtrip_preserves_bytes_and_cannot_qualify_step_six) ... ERROR
+
+======================================================================
+ERROR: test_frozen_design_selects_only_two_real_bottle_B0_fits (__main__.PilotTests.test_frozen_design_selects_only_two_real_bottle_B0_fits)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\tests\test_pilot_tc2_gpu.py", line 115, in test_frozen_design_selects_only_two_real_bottle_B0_fits
+    plan = pilot.p.build_plan(ROOT)
+           ^^^^^^^
+AttributeError: module 'pilot_tc2_gpu_offline' has no attribute 'p'
+
+======================================================================
+ERROR: test_bounded_snapshot_limits_apply_before_extraction (__main__.CollectorTests.test_bounded_snapshot_limits_apply_before_extraction)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\tests\test_pilot_tc2_gpu.py", line 347, in test_bounded_snapshot_limits_apply_before_extraction
+    collector.export_archive(self.root, "12345", archive)
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\scripts\collect_tc2_gpu_pilot.py", line 420, in export_archive
+    _atomic_publish(temporary, archive)
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\scripts\collect_tc2_gpu_pilot.py", line 335, in _atomic_publish
+    os.link(source, target)
+PermissionError: [WinError 5] 拒绝访问。: '\\\\?\\C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step6_20261019\\offline_tests_01\\archive_ec25921e74\\.bounded.tar.gz.partial.2c510408bee248caa78f5a0ededd5747' -> '\\\\?\\C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step6_20261019\\offline_tests_01\\archive_ec25921e74\\bounded.tar.gz'
+
+======================================================================
+ERROR: test_content_tamper_is_refused_even_with_correct_new_archive_hash (__main__.CollectorTests.test_content_tamper_is_refused_even_with_correct_new_archive_hash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\tests\test_pilot_tc2_gpu.py", line 310, in test_content_tamper_is_refused_even_with_correct_new_archive_hash
+    collector.export_archive(self.root, "12345", archive)
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\scripts\collect_tc2_gpu_pilot.py", line 420, in export_archive
+    _atomic_publish(temporary, archive)
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\scripts\collect_tc2_gpu_pilot.py", line 335, in _atomic_publish
+    os.link(source, target)
+PermissionError: [WinError 5] 拒绝访问。: '\\\\?\\C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step6_20261019\\offline_tests_01\\archive_f10ac5ce6f\\.before_tamper.tar.gz.partial.803e05c268084fd0b24d2475fe9f9635' -> '\\\\?\\C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step6_20261019\\offline_tests_01\\archive_f10ac5ce6f\\before_tamper.tar.gz'
+
+======================================================================
+ERROR: test_matching_new_content_manifest_cannot_authorize_unlisted_payload (__main__.CollectorTests.test_matching_new_content_manifest_cannot_authorize_unlisted_payload)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\tests\test_pilot_tc2_gpu.py", line 324, in test_matching_new_content_manifest_cannot_authorize_unlisted_payload
+    collector.export_archive(self.root, "12345", archive)
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\scripts\collect_tc2_gpu_pilot.py", line 420, in export_archive
+    _atomic_publish(temporary, archive)
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\scripts\collect_tc2_gpu_pilot.py", line 335, in _atomic_publish
+    os.link(source, target)
+PermissionError: [WinError 5] 拒绝访问。: '\\\\?\\C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step6_20261019\\offline_tests_01\\archive_41ea3d0e5f\\.before_reseal.tar.gz.partial.8680fa828ec641b4855727bfc4cfcd2b' -> '\\\\?\\C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step6_20261019\\offline_tests_01\\archive_41ea3d0e5f\\before_reseal.tar.gz'
+
+======================================================================
+ERROR: test_missing_status_snapshot_is_partial_and_does_not_invent_success (__main__.CollectorTests.test_missing_status_snapshot_is_partial_and_does_not_invent_success)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\tests\test_pilot_tc2_gpu.py", line 292, in test_missing_status_snapshot_is_partial_and_does_not_invent_success
+    collector.export_archive(self.root, "12345", archive)
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\scripts\collect_tc2_gpu_pilot.py", line 420, in export_archive
+    _atomic_publish(temporary, archive)
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\scripts\collect_tc2_gpu_pilot.py", line 335, in _atomic_publish
+    os.link(source, target)
+PermissionError: [WinError 5] 拒绝访问。: '\\\\?\\C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step6_20261019\\offline_tests_01\\archive_1132c66021\\.missing_status.tar.gz.partial.4aa90c7f640f4fa38a54c1c78d2a9414' -> '\\\\?\\C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step6_20261019\\offline_tests_01\\archive_1132c66021\\missing_status.tar.gz'
+
+======================================================================
+ERROR: test_pending_roundtrip_preserves_bytes_and_cannot_qualify_step_six (__main__.CollectorTests.test_pending_roundtrip_preserves_bytes_and_cannot_qualify_step_six)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\tests\test_pilot_tc2_gpu.py", line 280, in test_pending_roundtrip_preserves_bytes_and_cannot_qualify_step_six
+    exported = collector.export_archive(self.root, "12345", archive)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\scripts\collect_tc2_gpu_pilot.py", line 420, in export_archive
+    _atomic_publish(temporary, archive)
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\scripts\collect_tc2_gpu_pilot.py", line 335, in _atomic_publish
+    os.link(source, target)
+PermissionError: [WinError 5] 拒绝访问。: '\\\\?\\C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step6_20261019\\offline_tests_01\\archive_50ca339dc6\\.pending.tar.gz.partial.e28ec858233d419e88560ebad155aeb9' -> '\\\\?\\C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step6_20261019\\offline_tests_01\\archive_50ca339dc6\\pending.tar.gz'
+
+----------------------------------------------------------------------
+Ran 24 tests in 6.296s
+
+FAILED (errors=6)

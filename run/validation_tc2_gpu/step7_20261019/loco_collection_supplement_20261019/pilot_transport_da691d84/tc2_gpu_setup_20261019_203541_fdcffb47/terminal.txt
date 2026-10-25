@@ -1,0 +1,4 @@
+TC2 GPU: RunPilot
+Local output: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\step7_20261019\loco_collection_supplement_20261019\pilot_transport_da691d84\tc2_gpu_setup_20261019_203541_fdcffb47
+A submitted or running job is not a passed check. Passwords are not stored.
+LOCAL VALIDATION ONLY. Six-file pilot bundle built; no connection or submission.

@@ -1,0 +1,250 @@
+{
+  "status": "local_implementation_verified_awaiting_tc2_real_data_pilot",
+  "step_6_complete": false,
+  "checked_at_utc": "2026-10-19T05:43:09.133670+00:00",
+  "authorization": "User explicitly confirmed the step-6 design in this conversation.",
+  "approved_design": "docs/TC2_GPU_PILOT.md",
+  "scope": {
+    "status": "passed",
+    "preexisting_files_checked": 2875,
+    "preexisting_files_unchanged": 2874,
+    "changed_existing_files": [
+      "group_XX_code/README.md"
+    ],
+    "new_source_files": [
+      "group_XX_code/configs/pilot_tc2_gpu.json",
+      "group_XX_code/docs/TC2_GPU_PILOT.md",
+      "group_XX_code/scripts/collect_tc2_gpu_pilot.py",
+      "group_XX_code/scripts/pilot_tc2_gpu.py",
+      "group_XX_code/scripts/slurm/pilot_tc2_gpu.sh",
+      "group_XX_code/tests/test_pilot_tc2_gpu.py"
+    ],
+    "new_audit_files_before_closeout": 1359,
+    "readme_existing_bytes_and_chinese_preserved": true,
+    "other_helper_bytes_preserved": true,
+    "accepted_scientific_sources_frozen_inputs_locks_and_historical_records_unchanged": true,
+    "git_index_unchanged": true,
+    "git_diff_check_passed": true,
+    "formal_output_directory_absent_locally": true,
+    "document_links_valid": true
+  },
+  "offline_tests": {
+    "mode": "offline",
+    "status": "passed",
+    "step_6_complete": false,
+    "checked_at_utc": "2026-10-19T05:39:03.170656+00:00",
+    "tests_run": 28,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "actual_model_calls": 0,
+    "actual_tc2_connections": 0,
+    "actual_slurm_submissions": 0,
+    "failure_details": [],
+    "source_hashes": {
+      "scripts/pilot_tc2_gpu.py": "9010C56A6F52745D21A550284D7807007FF78E8DA9C18E786EBAE310A8BE6274",
+      "scripts/collect_tc2_gpu_pilot.py": "D8D3B072A6B769D81023AC0BE0770A24C999C822B5A63869992BFF084848DAC4",
+      "configs/pilot_tc2_gpu.json": "0E1E251C1F03B76D4AF9E8BCD09A8720531E00ECE80173C517B85A16E9A88F9C",
+      "tests/test_pilot_tc2_gpu.py": "073D76A82F74A123992702AC080FEC9D1CA021561C422C7E38AF8EF3024255F2"
+    }
+  },
+  "new_transport": {
+    "status": "passed",
+    "validation_root": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step6_20261019\\pilot_transport_5be5f106",
+    "rendered_shell_commands": 8,
+    "cases": [
+      {
+        "name": "RunPilot",
+        "exit_code": 0,
+        "status": "passed"
+      },
+      {
+        "name": "CollectPilot",
+        "exit_code": 0,
+        "status": "passed"
+      },
+      {
+        "name": "bad_path",
+        "exit_code": 2,
+        "status": "passed"
+      },
+      {
+        "name": "bad_hash",
+        "exit_code": 2,
+        "status": "passed"
+      },
+      {
+        "name": "oversize",
+        "exit_code": 2,
+        "status": "passed"
+      },
+      {
+        "name": "duplicate",
+        "exit_code": 2,
+        "status": "passed"
+      }
+    ],
+    "validate_only": "passed",
+    "actual_tc2_connections": 0,
+    "actual_slurm_submissions": 0
+  },
+  "legacy_transport": {
+    "status": "PASS",
+    "validation_root": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step6_20261019\\transport_validation_f5315ca0",
+    "rendered_shell_commands": 19,
+    "actual_ssh_calls": 0,
+    "actual_scp_calls": 0,
+    "archive_round_trip": "PASS",
+    "hash_mismatch_refusal": "PASS",
+    "unexpected_archive_path_refusal": "PASS"
+  },
+  "bootstrap": {
+    "status": "passed",
+    "exact_rendered_bootstrap_executed": true,
+    "fixture": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step6_20261019\\bootstrap_ae0a848e",
+    "cases": [
+      {
+        "case": "valid",
+        "status": "passed",
+        "returncode": 0
+      },
+      {
+        "case": "bad_archive_sha256",
+        "status": "passed",
+        "returncode": 1
+      },
+      {
+        "case": "unexpected_member",
+        "status": "passed",
+        "returncode": 1
+      },
+      {
+        "case": "duplicate_member",
+        "status": "passed",
+        "returncode": 1
+      },
+      {
+        "case": "symlink_member",
+        "status": "passed",
+        "returncode": 1
+      },
+      {
+        "case": "bad_payload_sha256",
+        "status": "passed",
+        "returncode": 1
+      },
+      {
+        "case": "missing_member",
+        "status": "passed",
+        "returncode": 1
+      },
+      {
+        "case": "unknown_manifest",
+        "status": "passed",
+        "returncode": 1
+      },
+      {
+        "case": "existing_destination",
+        "status": "passed",
+        "returncode": 1
+      }
+    ],
+    "embedded_python_scripts_compiled": 2,
+    "pilot_payload_files": 6,
+    "actual_tc2_connections": 0,
+    "actual_slurm_submissions": 0,
+    "readiness_note": "Real TC2 readiness was not claimed or simulated; only delivery bootstrap was executed locally."
+  },
+  "bash_syntax": {
+    "status": "passed",
+    "scripts_parsed": 9,
+    "parsing_only": true,
+    "actual_tc2_connections": 0,
+    "actual_slurm_submissions": 0
+  },
+  "local_compute_guard": {
+    "status": "expected_refusal",
+    "exit_code": 1,
+    "torch_imported": false
+  },
+  "packaging_only": {
+    "status": "passed",
+    "files": 6,
+    "terminal": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_134135_dcc0c587\\terminal.txt",
+    "bundle_sha256": "43F443C4140B8C30DA42380E82E393E0C7D7B689944697CAF8ED2A4044FEA6A4"
+  },
+  "source_hashes": {
+    "configs/pilot_tc2_gpu.json": "0E1E251C1F03B76D4AF9E8BCD09A8720531E00ECE80173C517B85A16E9A88F9C",
+    "scripts/pilot_tc2_gpu.py": "9010C56A6F52745D21A550284D7807007FF78E8DA9C18E786EBAE310A8BE6274",
+    "scripts/slurm/pilot_tc2_gpu.sh": "E2DCBECD470C209F74C352FA43B56A492E8B071C2B8A0E3B85D5E3388457C931",
+    "scripts/collect_tc2_gpu_pilot.py": "D8D3B072A6B769D81023AC0BE0770A24C999C822B5A63869992BFF084848DAC4",
+    "tests/test_pilot_tc2_gpu.py": "073D76A82F74A123992702AC080FEC9D1CA021561C422C7E38AF8EF3024255F2",
+    "docs/TC2_GPU_PILOT.md": "9568CC38EF344CB7E2E3ADFAC8D13D69C08A23719738FD1B11AAFCA29750C917"
+  },
+  "accepted_workflow_source_hashes": {
+    "src/tc2_gpu_protocol.py": "DD646F26E61C89B622D0D2B1DE50462383CE22D2AEF5C7AA79F3AF5B99DE44B6",
+    "src/tc2_gpu_cache.py": "867C31DFD87E5BFC6EC4783183D927192ABBC2A1140610C79E5A8D8426742495",
+    "src/tc2_gpu_runner.py": "CEDC4ECD543DC25EFA6E4003F158954C775B842B98A2609BE943928AA900628D",
+    "scripts/run_tc2_gpu.py": "5F9199D820CCAD80F0C6065F612776E3467BDE5F978AC240B360B42D6D36F921",
+    "configs/runtime_tc2_gpu.json": "B057766AFDF473A89E74016B2F9DF6B311510BA8E444D42EE14C075BAF08AEAA",
+    "tests/test_workflow_tc2_gpu.py": "5130184D9BD76840AF1BD8CA217C1864618B228ED15B7A2F372F0B5E949734CC",
+    "scripts/slurm/check_tc2_gpu_workflow.sh": "8940612842B91FD3709FD643EB7204AB8BFF23249C139E0B441BED7202C8C16D",
+    "src/padim_adapter.py": "803E30F1AD1F591BDD26C0D458D252D397578F8E5398486855DAC0257F443AB3",
+    "src/patchcore_adapter.py": "4877D66625180BB36258EA6B99DE9427E545764614AB0CB245F5FAFC44EC307F",
+    "src/sampling.py": "BEDB33057BC7E938108E4B9B177ECDE121418B24DC348CDF07AD04F3F0284B79",
+    "src/scoring.py": "E8348550F0A55CC8A1EDBB4B1310FBE985493F22DAE71B6B562F34720C3D4B0B",
+    "src/anomaly_postprocess.py": "4BD9E9BE3CAD7B90A24F7DBFAABDB55EB403C94BCF4B771FF9D73A0631B9D4BD",
+    "tests/test_algorithms_tc2_gpu.py": "5200AAE240E64D22CAECCBD46615DDE11F51189C612938046DC2D4A009E16EDF",
+    "scripts/slurm/check_tc2_gpu_algorithms.sh": "32879BCA317B44DD7F196088F2718B3188889E47D34B23C8A24D6024720E8DCC",
+    "src/metric_core.py": "D218A438031DE6B0A83B14951354CD66A85ED65F97FFC2CFBAEFF1D4FB91DB78",
+    "src/evaluate.py": "4DB2413CC6AAF4210B143285FE5FD7FC6A8C08E98C67073E9A92D31359E68BC6",
+    "src/data.py": "9A82D585203B376F41C3200A32D6971288DD70B5C7E71210F3E21F8C5C1F1F89",
+    "configs/tc2_gpu.json": "EB2899B2E6888233874C8FA97B1247ABD3E68B391538C86A36105410917A00F0",
+    "tests/test_metrics_tc2_gpu.py": "80B489B83990DE25C2BE4F055FA382247FD0B9091D194764EC3C02DD370313FD",
+    "scripts/slurm/check_tc2_gpu_metrics.sh": "93E64309348082E1EBDEF2B1707BA5A1A58EF95C3E6E5395A8209191FB0D1519",
+    "configs/protocol_v2.json": "3098B6A86DBA64EE439BFE61C7A4FCFFCD082371D5A80FFBC7940997ED6A1ED1",
+    "environment-tc2.yml": "47F1DAA83A744743946C83E6DC1963B8FA7E835A4A0F7010A3B0501EF5A3DF38",
+    "requirements-tc2-lock.txt": "F7B848F10FFB3F3CCEB707450B2A5FE4DCD9A6C3B489963A8932094E016840B6",
+    "manifests/manifest_mvtec_ad_bottle.json": "2922FA6E513F980CBDE53A303F86FE1160588DF7EFB0796F6888C95D2BAB6140",
+    "manifests/manifest_mvtec_ad_cable.json": "E188D05BD246C29503A35DBAF49DBCC326A35079ECC07973AE1A7BCCFD08FD95",
+    "manifests/manifest_mvtec_ad_capsule.json": "0E9F1BF5368DE03A2A6BE57CD8B13D8CE9D484DE3A05635206C7D8FC28D1E367",
+    "manifests/manifest_mvtec_ad_screw.json": "E209F4429C4056ECFA6F2DA82FAA9B5B3AE495EBFDBF94D5808C9676D8A99F9B",
+    "manifests/manifest_mvtec_ad_tile.json": "2B4274FE76BBCBCE3B968CCCAA0F3DAA6151FAF9AA6358445ACDA1B5DFBEE94C",
+    "manifests/manifest_mvtec_ad_wood.json": "57646007EBAFE8F015F976186197A7A08D338ECAEB6BF8B5D3764DE9A46888AE",
+    "manifests/manifest_mvtec_loco_juice_bottle.json": "E54AB3FA354E258D591F6C53B395ED9EED25518CF25F039FEB88040A2EC46C86",
+    "manifests/manifest_mvtec_loco_screw_bag.json": "7C02ED1CF33AFD35F8BEFB7342525F532213CC684ADC330414522DB51B1C66CA"
+  },
+  "external_helper": {
+    "path": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup.ps1",
+    "sha256": "4389FAA10B4260585F32205E70ADDBE96A0CAFC67D9D2B8B6ADA8FF86E0B3B3B"
+  },
+  "required_pilot": {
+    "dataset": "mvtec_ad",
+    "category": "bottle",
+    "run_keys": [
+      "B0_mvtec_ad_bottle_padim_s17_n100_B7B86DBB2043",
+      "B0_mvtec_ad_bottle_patchcore_s17_n100_BBC2B85C2FA8"
+    ],
+    "expected_counts": {
+      "images": 292,
+      "fit_pool": 167,
+      "dev": 42,
+      "test": 83
+    },
+    "resources": {
+      "partition": "MGPU-TC2",
+      "qos": "normal",
+      "nodes": 1,
+      "tasks": 1,
+      "gpus": 1,
+      "cpus_per_task": 2,
+      "memory_gib": 24,
+      "time_limit": "02:00:00"
+    }
+  },
+  "remote_acceptance_received": false,
+  "actual_model_calls": 0,
+  "actual_tc2_connections": 0,
+  "actual_slurm_submissions": 0,
+  "required_next_action": "The user runs RunPilot in the local terminal and returns terminal.txt. Use CollectPilot for the same job when queued/running; do not resubmit."
+}

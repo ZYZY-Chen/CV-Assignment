@@ -1,0 +1,954 @@
+{
+  "identity": {
+    "schema_version": "1.0",
+    "namespace": "formal",
+    "workflow_id": "tc2_gpu",
+    "protocol_sha256": "3098B6A86DBA64EE439BFE61C7A4FCFFCD082371D5A80FFBC7940997ED6A1ED1",
+    "stage": "I2",
+    "score_rules": [
+      "top_0.001",
+      "top_0.05"
+    ],
+    "sources": [
+      {
+        "run_key": "B0_mvtec_ad_bottle_patchcore_s17_n100_BBC2B85C2FA8",
+        "path": "run/tc2_gpu/results/5ABFDD822051AD701621F31532AA35D373C4F52C4FE96B6619BEF7C8A696BE0B",
+        "identity_sha256": "5ABFDD822051AD701621F31532AA35D373C4F52C4FE96B6619BEF7C8A696BE0B",
+        "configuration": {
+          "stage": "B0",
+          "dataset": "mvtec_ad",
+          "category": "bottle",
+          "method": "patchcore",
+          "run_seed": 17,
+          "normal_train_n": 100,
+          "execution": {
+            "schema_version": "1.0",
+            "workflow_id": "tc2_gpu",
+            "extraction_batch_size": 1,
+            "prediction_batch_size": 1,
+            "workers": 0,
+            "cpu_threads": 2,
+            "warmup_iterations": 20,
+            "padim_position_chunk_size": 256,
+            "patchcore_query_chunk_size": 1024,
+            "patchcore_bank_chunk_size": 4096,
+            "patchcore_sampling_chunk_size": 16384
+          },
+          "layers": [
+            "layer2",
+            "layer3"
+          ],
+          "patchcore": {
+            "coreset_ratio": 0.05,
+            "num_neighbors": 9,
+            "sampling": "coreset",
+            "sampling_seed": 17
+          }
+        },
+        "artifacts_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "artifact_hashes": {
+          "config.yaml": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "samples.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "predictions.npz": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "metrics.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "evidence.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "validation.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "cache_metadata": {
+          "path": "run/tc2_gpu/feature_cache/mvtec_ad/bottle/CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+          "metadata_sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+          "complete_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+        }
+      },
+      {
+        "run_key": "B0_mvtec_ad_cable_patchcore_s17_n100_AE108605F492",
+        "path": "run/tc2_gpu/results/074CF202721D3DBE20E296D7F780F7E5F0CB5F8670C06D2F334247D42F1AC10D",
+        "identity_sha256": "074CF202721D3DBE20E296D7F780F7E5F0CB5F8670C06D2F334247D42F1AC10D",
+        "configuration": {
+          "stage": "B0",
+          "dataset": "mvtec_ad",
+          "category": "cable",
+          "method": "patchcore",
+          "run_seed": 17,
+          "normal_train_n": 100,
+          "execution": {
+            "schema_version": "1.0",
+            "workflow_id": "tc2_gpu",
+            "extraction_batch_size": 1,
+            "prediction_batch_size": 1,
+            "workers": 0,
+            "cpu_threads": 2,
+            "warmup_iterations": 20,
+            "padim_position_chunk_size": 256,
+            "patchcore_query_chunk_size": 1024,
+            "patchcore_bank_chunk_size": 4096,
+            "patchcore_sampling_chunk_size": 16384
+          },
+          "layers": [
+            "layer2",
+            "layer3"
+          ],
+          "patchcore": {
+            "coreset_ratio": 0.05,
+            "num_neighbors": 9,
+            "sampling": "coreset",
+            "sampling_seed": 17
+          }
+        },
+        "artifacts_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "artifact_hashes": {
+          "config.yaml": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "samples.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "predictions.npz": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "metrics.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "evidence.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "validation.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "cache_metadata": {
+          "path": "run/tc2_gpu/feature_cache/mvtec_ad/cable/CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+          "metadata_sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+          "complete_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+        }
+      },
+      {
+        "run_key": "B0_mvtec_ad_capsule_patchcore_s17_n100_55DB51B64838",
+        "path": "run/tc2_gpu/results/F182ED0AE2B04EBE0D2B8ECA5EC22AF33DAB0AE7CFA651059E8EC1068B6A34DD",
+        "identity_sha256": "F182ED0AE2B04EBE0D2B8ECA5EC22AF33DAB0AE7CFA651059E8EC1068B6A34DD",
+        "configuration": {
+          "stage": "B0",
+          "dataset": "mvtec_ad",
+          "category": "capsule",
+          "method": "patchcore",
+          "run_seed": 17,
+          "normal_train_n": 100,
+          "execution": {
+            "schema_version": "1.0",
+            "workflow_id": "tc2_gpu",
+            "extraction_batch_size": 1,
+            "prediction_batch_size": 1,
+            "workers": 0,
+            "cpu_threads": 2,
+            "warmup_iterations": 20,
+            "padim_position_chunk_size": 256,
+            "patchcore_query_chunk_size": 1024,
+            "patchcore_bank_chunk_size": 4096,
+            "patchcore_sampling_chunk_size": 16384
+          },
+          "layers": [
+            "layer2",
+            "layer3"
+          ],
+          "patchcore": {
+            "coreset_ratio": 0.05,
+            "num_neighbors": 9,
+            "sampling": "coreset",
+            "sampling_seed": 17
+          }
+        },
+        "artifacts_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "artifact_hashes": {
+          "config.yaml": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "samples.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "predictions.npz": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "metrics.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "evidence.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "validation.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "cache_metadata": {
+          "path": "run/tc2_gpu/feature_cache/mvtec_ad/capsule/CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+          "metadata_sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+          "complete_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+        }
+      },
+      {
+        "run_key": "B0_mvtec_ad_screw_patchcore_s17_n100_D657B3B6C4C1",
+        "path": "run/tc2_gpu/results/2B887727D5829DEA580BBDE69A33492787431C38CD4169BA583F9D98E0C583A8",
+        "identity_sha256": "2B887727D5829DEA580BBDE69A33492787431C38CD4169BA583F9D98E0C583A8",
+        "configuration": {
+          "stage": "B0",
+          "dataset": "mvtec_ad",
+          "category": "screw",
+          "method": "patchcore",
+          "run_seed": 17,
+          "normal_train_n": 100,
+          "execution": {
+            "schema_version": "1.0",
+            "workflow_id": "tc2_gpu",
+            "extraction_batch_size": 1,
+            "prediction_batch_size": 1,
+            "workers": 0,
+            "cpu_threads": 2,
+            "warmup_iterations": 20,
+            "padim_position_chunk_size": 256,
+            "patchcore_query_chunk_size": 1024,
+            "patchcore_bank_chunk_size": 4096,
+            "patchcore_sampling_chunk_size": 16384
+          },
+          "layers": [
+            "layer2",
+            "layer3"
+          ],
+          "patchcore": {
+            "coreset_ratio": 0.05,
+            "num_neighbors": 9,
+            "sampling": "coreset",
+            "sampling_seed": 17
+          }
+        },
+        "artifacts_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "artifact_hashes": {
+          "config.yaml": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "samples.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "predictions.npz": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "metrics.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "evidence.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "validation.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "cache_metadata": {
+          "path": "run/tc2_gpu/feature_cache/mvtec_ad/screw/CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+          "metadata_sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+          "complete_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+        }
+      },
+      {
+        "run_key": "B0_mvtec_ad_tile_patchcore_s17_n100_71576E39ABDF",
+        "path": "run/tc2_gpu/results/A950F30EEEFDA41C4874874EE09B8EB58FA5CF69F391A1E8D854197B18311E30",
+        "identity_sha256": "A950F30EEEFDA41C4874874EE09B8EB58FA5CF69F391A1E8D854197B18311E30",
+        "configuration": {
+          "stage": "B0",
+          "dataset": "mvtec_ad",
+          "category": "tile",
+          "method": "patchcore",
+          "run_seed": 17,
+          "normal_train_n": 100,
+          "execution": {
+            "schema_version": "1.0",
+            "workflow_id": "tc2_gpu",
+            "extraction_batch_size": 1,
+            "prediction_batch_size": 1,
+            "workers": 0,
+            "cpu_threads": 2,
+            "warmup_iterations": 20,
+            "padim_position_chunk_size": 256,
+            "patchcore_query_chunk_size": 1024,
+            "patchcore_bank_chunk_size": 4096,
+            "patchcore_sampling_chunk_size": 16384
+          },
+          "layers": [
+            "layer2",
+            "layer3"
+          ],
+          "patchcore": {
+            "coreset_ratio": 0.05,
+            "num_neighbors": 9,
+            "sampling": "coreset",
+            "sampling_seed": 17
+          }
+        },
+        "artifacts_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "artifact_hashes": {
+          "config.yaml": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "samples.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "predictions.npz": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "metrics.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "evidence.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "validation.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "cache_metadata": {
+          "path": "run/tc2_gpu/feature_cache/mvtec_ad/tile/CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+          "metadata_sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+          "complete_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+        }
+      },
+      {
+        "run_key": "B0_mvtec_ad_wood_patchcore_s17_n100_468C39576EED",
+        "path": "run/tc2_gpu/results/71D755E6E124A831B5A74F90355319F0B9088C4BC5563D361F898093B141DCFF",
+        "identity_sha256": "71D755E6E124A831B5A74F90355319F0B9088C4BC5563D361F898093B141DCFF",
+        "configuration": {
+          "stage": "B0",
+          "dataset": "mvtec_ad",
+          "category": "wood",
+          "method": "patchcore",
+          "run_seed": 17,
+          "normal_train_n": 100,
+          "execution": {
+            "schema_version": "1.0",
+            "workflow_id": "tc2_gpu",
+            "extraction_batch_size": 1,
+            "prediction_batch_size": 1,
+            "workers": 0,
+            "cpu_threads": 2,
+            "warmup_iterations": 20,
+            "padim_position_chunk_size": 256,
+            "patchcore_query_chunk_size": 1024,
+            "patchcore_bank_chunk_size": 4096,
+            "patchcore_sampling_chunk_size": 16384
+          },
+          "layers": [
+            "layer2",
+            "layer3"
+          ],
+          "patchcore": {
+            "coreset_ratio": 0.05,
+            "num_neighbors": 9,
+            "sampling": "coreset",
+            "sampling_seed": 17
+          }
+        },
+        "artifacts_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "artifact_hashes": {
+          "config.yaml": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "samples.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "predictions.npz": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "metrics.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "evidence.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "validation.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "cache_metadata": {
+          "path": "run/tc2_gpu/feature_cache/mvtec_ad/wood/CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+          "metadata_sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+          "complete_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+        }
+      },
+      {
+        "run_key": "R0_mvtec_ad_bottle_patchcore_s29_n100_D49528C13187",
+        "path": "run/tc2_gpu/results/CBC7D06FD83412DC895BC9FB62549AEE07704A8870EB7290280F2275E3A4F10F",
+        "identity_sha256": "CBC7D06FD83412DC895BC9FB62549AEE07704A8870EB7290280F2275E3A4F10F",
+        "configuration": {
+          "stage": "R0",
+          "dataset": "mvtec_ad",
+          "category": "bottle",
+          "method": "patchcore",
+          "run_seed": 29,
+          "normal_train_n": 100,
+          "execution": {
+            "schema_version": "1.0",
+            "workflow_id": "tc2_gpu",
+            "extraction_batch_size": 1,
+            "prediction_batch_size": 1,
+            "workers": 0,
+            "cpu_threads": 2,
+            "warmup_iterations": 20,
+            "padim_position_chunk_size": 256,
+            "patchcore_query_chunk_size": 1024,
+            "patchcore_bank_chunk_size": 4096,
+            "patchcore_sampling_chunk_size": 16384
+          },
+          "layers": [
+            "layer2",
+            "layer3"
+          ],
+          "patchcore": {
+            "coreset_ratio": 0.05,
+            "num_neighbors": 9,
+            "sampling": "coreset",
+            "sampling_seed": 29
+          }
+        },
+        "artifacts_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "artifact_hashes": {
+          "config.yaml": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "samples.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "predictions.npz": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "metrics.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "evidence.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "validation.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "cache_metadata": {
+          "path": "run/tc2_gpu/feature_cache/mvtec_ad/bottle/CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+          "metadata_sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+          "complete_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+        }
+      },
+      {
+        "run_key": "R0_mvtec_ad_bottle_patchcore_s43_n100_8026690C6BED",
+        "path": "run/tc2_gpu/results/EB20C4F5D572950164F89E3132D90F0AEF93667133879072C7838F3160FFAD98",
+        "identity_sha256": "EB20C4F5D572950164F89E3132D90F0AEF93667133879072C7838F3160FFAD98",
+        "configuration": {
+          "stage": "R0",
+          "dataset": "mvtec_ad",
+          "category": "bottle",
+          "method": "patchcore",
+          "run_seed": 43,
+          "normal_train_n": 100,
+          "execution": {
+            "schema_version": "1.0",
+            "workflow_id": "tc2_gpu",
+            "extraction_batch_size": 1,
+            "prediction_batch_size": 1,
+            "workers": 0,
+            "cpu_threads": 2,
+            "warmup_iterations": 20,
+            "padim_position_chunk_size": 256,
+            "patchcore_query_chunk_size": 1024,
+            "patchcore_bank_chunk_size": 4096,
+            "patchcore_sampling_chunk_size": 16384
+          },
+          "layers": [
+            "layer2",
+            "layer3"
+          ],
+          "patchcore": {
+            "coreset_ratio": 0.05,
+            "num_neighbors": 9,
+            "sampling": "coreset",
+            "sampling_seed": 43
+          }
+        },
+        "artifacts_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "artifact_hashes": {
+          "config.yaml": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "samples.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "predictions.npz": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "metrics.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "evidence.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "validation.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "cache_metadata": {
+          "path": "run/tc2_gpu/feature_cache/mvtec_ad/bottle/CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+          "metadata_sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+          "complete_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+        }
+      },
+      {
+        "run_key": "R0_mvtec_ad_cable_patchcore_s29_n100_F081468F2C49",
+        "path": "run/tc2_gpu/results/11B2DCD69E5602379FD56228BD2C44045F903A26318E0B5642C66B6732FDC22F",
+        "identity_sha256": "11B2DCD69E5602379FD56228BD2C44045F903A26318E0B5642C66B6732FDC22F",
+        "configuration": {
+          "stage": "R0",
+          "dataset": "mvtec_ad",
+          "category": "cable",
+          "method": "patchcore",
+          "run_seed": 29,
+          "normal_train_n": 100,
+          "execution": {
+            "schema_version": "1.0",
+            "workflow_id": "tc2_gpu",
+            "extraction_batch_size": 1,
+            "prediction_batch_size": 1,
+            "workers": 0,
+            "cpu_threads": 2,
+            "warmup_iterations": 20,
+            "padim_position_chunk_size": 256,
+            "patchcore_query_chunk_size": 1024,
+            "patchcore_bank_chunk_size": 4096,
+            "patchcore_sampling_chunk_size": 16384
+          },
+          "layers": [
+            "layer2",
+            "layer3"
+          ],
+          "patchcore": {
+            "coreset_ratio": 0.05,
+            "num_neighbors": 9,
+            "sampling": "coreset",
+            "sampling_seed": 29
+          }
+        },
+        "artifacts_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "artifact_hashes": {
+          "config.yaml": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "samples.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "predictions.npz": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "metrics.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "evidence.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "validation.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "cache_metadata": {
+          "path": "run/tc2_gpu/feature_cache/mvtec_ad/cable/CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+          "metadata_sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+          "complete_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+        }
+      },
+      {
+        "run_key": "R0_mvtec_ad_cable_patchcore_s43_n100_4CEC5409E8CD",
+        "path": "run/tc2_gpu/results/F8D5C9ACFFB761CDD855FE5092AB0E7156CD09C20A7EB25421A71475F41A0E45",
+        "identity_sha256": "F8D5C9ACFFB761CDD855FE5092AB0E7156CD09C20A7EB25421A71475F41A0E45",
+        "configuration": {
+          "stage": "R0",
+          "dataset": "mvtec_ad",
+          "category": "cable",
+          "method": "patchcore",
+          "run_seed": 43,
+          "normal_train_n": 100,
+          "execution": {
+            "schema_version": "1.0",
+            "workflow_id": "tc2_gpu",
+            "extraction_batch_size": 1,
+            "prediction_batch_size": 1,
+            "workers": 0,
+            "cpu_threads": 2,
+            "warmup_iterations": 20,
+            "padim_position_chunk_size": 256,
+            "patchcore_query_chunk_size": 1024,
+            "patchcore_bank_chunk_size": 4096,
+            "patchcore_sampling_chunk_size": 16384
+          },
+          "layers": [
+            "layer2",
+            "layer3"
+          ],
+          "patchcore": {
+            "coreset_ratio": 0.05,
+            "num_neighbors": 9,
+            "sampling": "coreset",
+            "sampling_seed": 43
+          }
+        },
+        "artifacts_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "artifact_hashes": {
+          "config.yaml": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "samples.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "predictions.npz": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "metrics.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "evidence.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "validation.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "cache_metadata": {
+          "path": "run/tc2_gpu/feature_cache/mvtec_ad/cable/CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+          "metadata_sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+          "complete_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+        }
+      },
+      {
+        "run_key": "R0_mvtec_ad_capsule_patchcore_s29_n100_99227661E967",
+        "path": "run/tc2_gpu/results/A90910A22EB6EFA70E2D945B542D771C58BF0F2418C31C316A9ECCE2B9708CC8",
+        "identity_sha256": "A90910A22EB6EFA70E2D945B542D771C58BF0F2418C31C316A9ECCE2B9708CC8",
+        "configuration": {
+          "stage": "R0",
+          "dataset": "mvtec_ad",
+          "category": "capsule",
+          "method": "patchcore",
+          "run_seed": 29,
+          "normal_train_n": 100,
+          "execution": {
+            "schema_version": "1.0",
+            "workflow_id": "tc2_gpu",
+            "extraction_batch_size": 1,
+            "prediction_batch_size": 1,
+            "workers": 0,
+            "cpu_threads": 2,
+            "warmup_iterations": 20,
+            "padim_position_chunk_size": 256,
+            "patchcore_query_chunk_size": 1024,
+            "patchcore_bank_chunk_size": 4096,
+            "patchcore_sampling_chunk_size": 16384
+          },
+          "layers": [
+            "layer2",
+            "layer3"
+          ],
+          "patchcore": {
+            "coreset_ratio": 0.05,
+            "num_neighbors": 9,
+            "sampling": "coreset",
+            "sampling_seed": 29
+          }
+        },
+        "artifacts_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "artifact_hashes": {
+          "config.yaml": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "samples.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "predictions.npz": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "metrics.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "evidence.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "validation.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "cache_metadata": {
+          "path": "run/tc2_gpu/feature_cache/mvtec_ad/capsule/CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+          "metadata_sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+          "complete_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+        }
+      },
+      {
+        "run_key": "R0_mvtec_ad_capsule_patchcore_s43_n100_9A3A68E2D4FC",
+        "path": "run/tc2_gpu/results/34C3453320ACFDD3EC5ECA52999EDB0E171319F12CF3C965A4567586D644BD65",
+        "identity_sha256": "34C3453320ACFDD3EC5ECA52999EDB0E171319F12CF3C965A4567586D644BD65",
+        "configuration": {
+          "stage": "R0",
+          "dataset": "mvtec_ad",
+          "category": "capsule",
+          "method": "patchcore",
+          "run_seed": 43,
+          "normal_train_n": 100,
+          "execution": {
+            "schema_version": "1.0",
+            "workflow_id": "tc2_gpu",
+            "extraction_batch_size": 1,
+            "prediction_batch_size": 1,
+            "workers": 0,
+            "cpu_threads": 2,
+            "warmup_iterations": 20,
+            "padim_position_chunk_size": 256,
+            "patchcore_query_chunk_size": 1024,
+            "patchcore_bank_chunk_size": 4096,
+            "patchcore_sampling_chunk_size": 16384
+          },
+          "layers": [
+            "layer2",
+            "layer3"
+          ],
+          "patchcore": {
+            "coreset_ratio": 0.05,
+            "num_neighbors": 9,
+            "sampling": "coreset",
+            "sampling_seed": 43
+          }
+        },
+        "artifacts_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "artifact_hashes": {
+          "config.yaml": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "samples.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "predictions.npz": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "metrics.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "evidence.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "validation.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "cache_metadata": {
+          "path": "run/tc2_gpu/feature_cache/mvtec_ad/capsule/CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+          "metadata_sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+          "complete_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+        }
+      },
+      {
+        "run_key": "R0_mvtec_ad_screw_patchcore_s29_n100_BAEC4291BE93",
+        "path": "run/tc2_gpu/results/C8DA1E0E2BF104F8D982D92C2A518FF2DA860C5D034AF283512435E18495537A",
+        "identity_sha256": "C8DA1E0E2BF104F8D982D92C2A518FF2DA860C5D034AF283512435E18495537A",
+        "configuration": {
+          "stage": "R0",
+          "dataset": "mvtec_ad",
+          "category": "screw",
+          "method": "patchcore",
+          "run_seed": 29,
+          "normal_train_n": 100,
+          "execution": {
+            "schema_version": "1.0",
+            "workflow_id": "tc2_gpu",
+            "extraction_batch_size": 1,
+            "prediction_batch_size": 1,
+            "workers": 0,
+            "cpu_threads": 2,
+            "warmup_iterations": 20,
+            "padim_position_chunk_size": 256,
+            "patchcore_query_chunk_size": 1024,
+            "patchcore_bank_chunk_size": 4096,
+            "patchcore_sampling_chunk_size": 16384
+          },
+          "layers": [
+            "layer2",
+            "layer3"
+          ],
+          "patchcore": {
+            "coreset_ratio": 0.05,
+            "num_neighbors": 9,
+            "sampling": "coreset",
+            "sampling_seed": 29
+          }
+        },
+        "artifacts_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "artifact_hashes": {
+          "config.yaml": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "samples.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "predictions.npz": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "metrics.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "evidence.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "validation.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "cache_metadata": {
+          "path": "run/tc2_gpu/feature_cache/mvtec_ad/screw/CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+          "metadata_sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+          "complete_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+        }
+      },
+      {
+        "run_key": "R0_mvtec_ad_screw_patchcore_s43_n100_8C620CBF229D",
+        "path": "run/tc2_gpu/results/8110850AE73FDD1312A7BB7AAA530DD6D1D7D0BD9D5DD02A497870D3D9D3D012",
+        "identity_sha256": "8110850AE73FDD1312A7BB7AAA530DD6D1D7D0BD9D5DD02A497870D3D9D3D012",
+        "configuration": {
+          "stage": "R0",
+          "dataset": "mvtec_ad",
+          "category": "screw",
+          "method": "patchcore",
+          "run_seed": 43,
+          "normal_train_n": 100,
+          "execution": {
+            "schema_version": "1.0",
+            "workflow_id": "tc2_gpu",
+            "extraction_batch_size": 1,
+            "prediction_batch_size": 1,
+            "workers": 0,
+            "cpu_threads": 2,
+            "warmup_iterations": 20,
+            "padim_position_chunk_size": 256,
+            "patchcore_query_chunk_size": 1024,
+            "patchcore_bank_chunk_size": 4096,
+            "patchcore_sampling_chunk_size": 16384
+          },
+          "layers": [
+            "layer2",
+            "layer3"
+          ],
+          "patchcore": {
+            "coreset_ratio": 0.05,
+            "num_neighbors": 9,
+            "sampling": "coreset",
+            "sampling_seed": 43
+          }
+        },
+        "artifacts_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "artifact_hashes": {
+          "config.yaml": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "samples.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "predictions.npz": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "metrics.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "evidence.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "validation.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "cache_metadata": {
+          "path": "run/tc2_gpu/feature_cache/mvtec_ad/screw/CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+          "metadata_sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+          "complete_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+        }
+      },
+      {
+        "run_key": "R0_mvtec_ad_tile_patchcore_s29_n100_5B04C7470E20",
+        "path": "run/tc2_gpu/results/241155954DA74617A0528BA4BBEF0C3B9A31FEE57D2DDF60C6E37D3FDC984AA5",
+        "identity_sha256": "241155954DA74617A0528BA4BBEF0C3B9A31FEE57D2DDF60C6E37D3FDC984AA5",
+        "configuration": {
+          "stage": "R0",
+          "dataset": "mvtec_ad",
+          "category": "tile",
+          "method": "patchcore",
+          "run_seed": 29,
+          "normal_train_n": 100,
+          "execution": {
+            "schema_version": "1.0",
+            "workflow_id": "tc2_gpu",
+            "extraction_batch_size": 1,
+            "prediction_batch_size": 1,
+            "workers": 0,
+            "cpu_threads": 2,
+            "warmup_iterations": 20,
+            "padim_position_chunk_size": 256,
+            "patchcore_query_chunk_size": 1024,
+            "patchcore_bank_chunk_size": 4096,
+            "patchcore_sampling_chunk_size": 16384
+          },
+          "layers": [
+            "layer2",
+            "layer3"
+          ],
+          "patchcore": {
+            "coreset_ratio": 0.05,
+            "num_neighbors": 9,
+            "sampling": "coreset",
+            "sampling_seed": 29
+          }
+        },
+        "artifacts_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "artifact_hashes": {
+          "config.yaml": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "samples.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "predictions.npz": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "metrics.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "evidence.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "validation.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "cache_metadata": {
+          "path": "run/tc2_gpu/feature_cache/mvtec_ad/tile/CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+          "metadata_sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+          "complete_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+        }
+      },
+      {
+        "run_key": "R0_mvtec_ad_tile_patchcore_s43_n100_A2497C55E1CA",
+        "path": "run/tc2_gpu/results/59A502739A969CB8B3812627244CAAEBD5E26313AF06DF1D4024E5294D3E611A",
+        "identity_sha256": "59A502739A969CB8B3812627244CAAEBD5E26313AF06DF1D4024E5294D3E611A",
+        "configuration": {
+          "stage": "R0",
+          "dataset": "mvtec_ad",
+          "category": "tile",
+          "method": "patchcore",
+          "run_seed": 43,
+          "normal_train_n": 100,
+          "execution": {
+            "schema_version": "1.0",
+            "workflow_id": "tc2_gpu",
+            "extraction_batch_size": 1,
+            "prediction_batch_size": 1,
+            "workers": 0,
+            "cpu_threads": 2,
+            "warmup_iterations": 20,
+            "padim_position_chunk_size": 256,
+            "patchcore_query_chunk_size": 1024,
+            "patchcore_bank_chunk_size": 4096,
+            "patchcore_sampling_chunk_size": 16384
+          },
+          "layers": [
+            "layer2",
+            "layer3"
+          ],
+          "patchcore": {
+            "coreset_ratio": 0.05,
+            "num_neighbors": 9,
+            "sampling": "coreset",
+            "sampling_seed": 43
+          }
+        },
+        "artifacts_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "artifact_hashes": {
+          "config.yaml": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "samples.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "predictions.npz": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "metrics.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "evidence.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "validation.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "cache_metadata": {
+          "path": "run/tc2_gpu/feature_cache/mvtec_ad/tile/CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+          "metadata_sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+          "complete_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+        }
+      },
+      {
+        "run_key": "R0_mvtec_ad_wood_patchcore_s29_n100_43A82BC3ABBB",
+        "path": "run/tc2_gpu/results/6928F68257F6DD30B6D7D7B7CD00F9E32CE49CC758AC7DB6C2F4806ADE7668A1",
+        "identity_sha256": "6928F68257F6DD30B6D7D7B7CD00F9E32CE49CC758AC7DB6C2F4806ADE7668A1",
+        "configuration": {
+          "stage": "R0",
+          "dataset": "mvtec_ad",
+          "category": "wood",
+          "method": "patchcore",
+          "run_seed": 29,
+          "normal_train_n": 100,
+          "execution": {
+            "schema_version": "1.0",
+            "workflow_id": "tc2_gpu",
+            "extraction_batch_size": 1,
+            "prediction_batch_size": 1,
+            "workers": 0,
+            "cpu_threads": 2,
+            "warmup_iterations": 20,
+            "padim_position_chunk_size": 256,
+            "patchcore_query_chunk_size": 1024,
+            "patchcore_bank_chunk_size": 4096,
+            "patchcore_sampling_chunk_size": 16384
+          },
+          "layers": [
+            "layer2",
+            "layer3"
+          ],
+          "patchcore": {
+            "coreset_ratio": 0.05,
+            "num_neighbors": 9,
+            "sampling": "coreset",
+            "sampling_seed": 29
+          }
+        },
+        "artifacts_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "artifact_hashes": {
+          "config.yaml": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "samples.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "predictions.npz": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "metrics.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "evidence.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "validation.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "cache_metadata": {
+          "path": "run/tc2_gpu/feature_cache/mvtec_ad/wood/CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+          "metadata_sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+          "complete_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+        }
+      },
+      {
+        "run_key": "R0_mvtec_ad_wood_patchcore_s43_n100_9F7E9EF07BC6",
+        "path": "run/tc2_gpu/results/ECC97D791C645E3E573E4BDED41A61C67EB26A9E813A3E2E653BD76327A4033E",
+        "identity_sha256": "ECC97D791C645E3E573E4BDED41A61C67EB26A9E813A3E2E653BD76327A4033E",
+        "configuration": {
+          "stage": "R0",
+          "dataset": "mvtec_ad",
+          "category": "wood",
+          "method": "patchcore",
+          "run_seed": 43,
+          "normal_train_n": 100,
+          "execution": {
+            "schema_version": "1.0",
+            "workflow_id": "tc2_gpu",
+            "extraction_batch_size": 1,
+            "prediction_batch_size": 1,
+            "workers": 0,
+            "cpu_threads": 2,
+            "warmup_iterations": 20,
+            "padim_position_chunk_size": 256,
+            "patchcore_query_chunk_size": 1024,
+            "patchcore_bank_chunk_size": 4096,
+            "patchcore_sampling_chunk_size": 16384
+          },
+          "layers": [
+            "layer2",
+            "layer3"
+          ],
+          "patchcore": {
+            "coreset_ratio": 0.05,
+            "num_neighbors": 9,
+            "sampling": "coreset",
+            "sampling_seed": 43
+          }
+        },
+        "artifacts_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "artifact_hashes": {
+          "config.yaml": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "samples.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "predictions.npz": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "metrics.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "evidence.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+          "validation.json": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+        },
+        "cache_metadata": {
+          "path": "run/tc2_gpu/feature_cache/mvtec_ad/wood/CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+          "metadata_sha256": "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD",
+          "complete_sha256": "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+        }
+      }
+    ],
+    "analysis_sources": {
+      "scripts/analyze_scores_tc2_gpu.py": "D1412F6743ECB6709EB82FF978DF4D8C37601371BE4E78C2329B9AAD1FF609F6",
+      "configs/experiments_tc2_gpu.json": "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75",
+      "src/metric_core.py": "D218A438031DE6B0A83B14951354CD66A85ED65F97FFC2CFBAEFF1D4FB91DB78",
+      "src/tc2_gpu_protocol.py": "DD646F26E61C89B622D0D2B1DE50462383CE22D2AEF5C7AA79F3AF5B99DE44B6"
+    },
+    "metric_policy": {
+      "version": "tc2_gpu_tie_grouped",
+      "ties": "equal-score threshold groups",
+      "threshold_percentile": 95.0,
+      "percentile_method": "linear",
+      "decision": "score > threshold",
+      "pixel_scope": "all pixels at original resolution"
+    },
+    "image_metric_abs_tolerance": 1e-12,
+    "pixel_policy": "Reference immutable, previously validated pixel metrics without recomputation",
+    "rows_sha256": "101300A65C8DBB20EF67F9F4F5C3C0530B9D8D0F49BD277F258421C65ABC10D8"
+  },
+  "runtime": {
+    "device": "cpu",
+    "software": {
+      "python": "3.12.14",
+      "numpy": "2.3.5"
+    },
+    "platform": "Windows-11-10.0.26200-SP0",
+    "slurm_job_id": null,
+    "cpu_threads": null,
+    "finished_at_utc": "2026-10-19T06:32:27.521455+00:00",
+    "torch_imported_by_analysis": false,
+    "map_arrays_loaded": false,
+    "feature_arrays_loaded": false,
+    "pixel_metrics_recomputed": false
+  },
+  "validation": {
+    "source_artifacts_verified": true,
+    "image_metrics_recomputed": true,
+    "image_metric_abs_tolerance": 1e-12,
+    "pixel_metrics_recomputed": false,
+    "feature_arrays_loaded": false
+  }
+}

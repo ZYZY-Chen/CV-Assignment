@@ -1,0 +1,30 @@
+{
+  "config_sha256": "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75",
+  "created_utc": "2026-10-19T10:33:38.257432+00:00",
+  "export_id": "B9586DAF7AF94FE880E91A7E01D57A78",
+  "job_id": "44183",
+  "page_count": 1,
+  "pages": [
+    {
+      "analysis_ids": [],
+      "bytes": 6723,
+      "name": "page_001.tar.gz",
+      "page_number": 1,
+      "result_ids": [],
+      "sha256": "8BC160DFB8368CA109A2656A6672BD2A8901DCC6B53AE229876CA271B6E337CD"
+    }
+  ],
+  "partial": true,
+  "schema_version": "1.0",
+  "snapshot_sha256": "8797C45E556AF47AAB5F9D71964D199745F1DB929BDCBA5240F9D604AA297684",
+  "snapshot_status": {
+    "job_id": "44183",
+    "stage_complete": false,
+    "stage_id": null,
+    "status": "missing",
+    "step_7_complete": false
+  },
+  "stage_id": null,
+  "whole_analysis_ids": [],
+  "whole_result_ids": []
+}

@@ -1,0 +1,6 @@
+{
+  "expected_enum": "torchvision.ResNet18_Weights.IMAGENET1K_V1",
+  "official_url": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+  "ready": false,
+  "status": "path_not_configured"
+}

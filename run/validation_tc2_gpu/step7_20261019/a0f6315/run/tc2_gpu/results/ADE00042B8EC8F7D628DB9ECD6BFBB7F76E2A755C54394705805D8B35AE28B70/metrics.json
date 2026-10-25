@@ -1,0 +1,78 @@
+{
+  "image": {
+    "native": {
+      "image_auroc": 1.0,
+      "image_ap": 0.9999999999999998,
+      "threshold_95pct": 1.3883387386798858,
+      "normal_fpr": 0.1,
+      "anomaly_recall": 1.0,
+      "per_defect_recall": {
+        "broken_large": 1.0,
+        "broken_small": 1.0,
+        "contamination": 1.0
+      }
+    },
+    "max": {
+      "image_auroc": 1.0,
+      "image_ap": 0.9999999999999998,
+      "threshold_95pct": 1.4182761073112486,
+      "normal_fpr": 0.2,
+      "anomaly_recall": 1.0,
+      "per_defect_recall": {
+        "broken_large": 1.0,
+        "broken_small": 1.0,
+        "contamination": 1.0
+      }
+    },
+    "top_0.001": {
+      "image_auroc": 1.0,
+      "image_ap": 0.9999999999999998,
+      "threshold_95pct": 1.402002817392349,
+      "normal_fpr": 0.2,
+      "anomaly_recall": 1.0,
+      "per_defect_recall": {
+        "broken_large": 1.0,
+        "broken_small": 1.0,
+        "contamination": 1.0
+      }
+    },
+    "top_0.01": {
+      "image_auroc": 1.0,
+      "image_ap": 0.9999999999999998,
+      "threshold_95pct": 1.299599426984787,
+      "normal_fpr": 0.25,
+      "anomaly_recall": 1.0,
+      "per_defect_recall": {
+        "broken_large": 1.0,
+        "broken_small": 1.0,
+        "contamination": 1.0
+      }
+    },
+    "top_0.05": {
+      "image_auroc": 1.0,
+      "image_ap": 0.9999999999999998,
+      "threshold_95pct": 1.195281571149826,
+      "normal_fpr": 0.1,
+      "anomaly_recall": 1.0,
+      "per_defect_recall": {
+        "broken_large": 1.0,
+        "broken_small": 1.0,
+        "contamination": 1.0
+      }
+    }
+  },
+  "pixel": {
+    "pixel_auroc": 0.9827987310928717,
+    "pixel_ap": 0.7285970416204068,
+    "n_pixels": 67230000,
+    "n_positive_pixels": 3886731
+  },
+  "metric_policy": {
+    "version": "tc2_gpu_tie_grouped",
+    "ties": "equal-score threshold groups",
+    "threshold_percentile": 95.0,
+    "percentile_method": "linear",
+    "decision": "score > threshold",
+    "pixel_scope": "all pixels at original resolution"
+  }
+}

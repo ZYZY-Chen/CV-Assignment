@@ -1,0 +1,33 @@
+[
+  {
+    "source": "https://huggingface.co/datasets/micguida1/mvtech_anomaly_detection/resolve/eb692b36147a3b3f12c561b879a062104c1f20b8/mvtec_anomaly_detection.tar.xz",
+    "path": "/home/mcaai/huajie001/ca6129_v2_setup/_downloads/mvtec_anomaly_detection.tar.xz",
+    "reused": false,
+    "size_bytes": 5264982680,
+    "sha256": "CF4313B13603BEC67ABB49CA959488F7EEDCE2A9F7795EC54446C649AC98CD3D",
+    "dataset": "mvtec_ad",
+    "categories": [
+      "bottle",
+      "cable",
+      "capsule",
+      "screw",
+      "tile",
+      "wood"
+    ],
+    "status": "restored",
+    "source_kind": "third_party_mirror",
+    "repository": "micguida1/mvtech_anomaly_detection",
+    "revision": "eb692b36147a3b3f12c561b879a062104c1f20b8",
+    "original_publisher": "MVTec Software GmbH"
+  },
+  {
+    "source": "https://www.mydrive.ch/shares/48239/3ad28d48636eada48f0caded666a804a/download/430647100-1646843074/juice_bottle.tar.xz",
+    "path": "/home/mcaai/huajie001/ca6129_v2_setup/_downloads/juice_bottle.tar.xz",
+    "reused": false,
+    "size_bytes": 655555080,
+    "sha256": "72B36B16AE9E5308AB4257F655EDE22173B98FC8E0CE44DB8007B588753747F2",
+    "category": "mvtec_loco/juice_bottle",
+    "status": "restored",
+    "source_kind": "official"
+  }
+]

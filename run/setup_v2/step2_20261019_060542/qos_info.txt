@@ -1,0 +1,18 @@
+TC2 account resource verification
+Observed at (SGT): 2026-10-19 06:22:42 +08:00
+Account: huajie001
+Cluster: slurm
+Partition: MGPU-TC2
+Assigned QoS: normal
+MaxTRESPU: cpu=10,gres/gpu=1,mem=30G
+MaxJobsPU: 2
+MaxWall: 06:00:00
+Initial approved check: 1 node, 1 task, 1 GPU, 2 CPUs, 4 GiB, 00:15:00
+Initial resource request is within the reported account limits.
+Only one GPU verification job will be run at a time.
+Partition TIMELIMIT=infinite does not override QoS MaxWall=06:00:00.
+Personal storage quota: not verified.
+Reported 8.9T free space applies to the shared filesystem, not a personal quota.
+GPU model, driver and CUDA operation: not tested.
+Evidence file: C:\Users\mhjv_\Desktop\CharGPT projects\CA6129 COMPUTER VISION & APPLICATIONS\output\tc2_check_20261019_062242_da2233.txt
+Evidence SHA256: BCAF81AB25F0063D35E3EA9ABB6E67E9320FC0E233AC49839A7F022585A968E1

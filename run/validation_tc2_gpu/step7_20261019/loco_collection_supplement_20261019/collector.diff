@@ -1,0 +1,326 @@
+--- collect_experiments_tc2_gpu.py
++++ collect_experiments_loco_tc2_gpu.py
+@@ -1,4 +1,9 @@
+-"""Bounded paged experiment snapshots with standard-library verification."""
++"""Strict B0_LOCO collection derivative of the frozen experiment collector.
++
++The original seven experiment sources and scientific outputs remain unchanged.
++Only the accepted dataset-specific metric schema and collection provenance are
++extended; path, dependency, archive, hashing and paging protections are retained.
++"""
+ from __future__ import annotations
+ 
+ import argparse
+@@ -7,6 +12,7 @@
+ import gzip
+ import io
+ import json
++import math
+ import os
+ from pathlib import Path
+ import re
+@@ -51,6 +57,165 @@
+ MANIFESTS = {"manifests/manifest_" + dataset + "_" + category + ".json"
+              for dataset, categories in CATEGORIES.items() for category in categories}
+ PAGE = re.compile(r"page_([0-9]{3})\.tar\.gz\Z")
++
++
++BASE_COLLECTOR_SHA256 = "AC61772F65C9F2C4124761D2361E0A85E9F65DBCF4DF5BAB3E939B5111466010"
++LOCO_STAGE = "B0_LOCO"
++LOCO_GROUPS = ("logical_anomalies", "structural_anomalies")
++LOCO_PIXEL_NOTE = "pixel is pooled auxiliary output; formal LOCO metrics are separate logical/structural groups"
++IMAGE_METRIC_FIELDS = {"image_auroc", "image_ap", "threshold_95pct", "normal_fpr", "anomaly_recall", "per_defect_recall"}
++PIXEL_METRIC_FIELDS = {"pixel_auroc", "pixel_ap", "n_pixels", "n_positive_pixels"}
++
++
++def _collection_provenance():
++    """Pin the preserved source and the separately published collection derivative."""
++    collector = _extended(Path(__file__).absolute())
++    base = collector.with_name("collect_experiments_tc2_gpu.py")
++    _no_links(collector); _no_links(base)
++    if not base.is_file() or _sha(base) != BASE_COLLECTOR_SHA256:
++        raise ValueError("Preserved experiment collector fingerprint differs")
++    fingerprint = _sha(collector)
++    allowed_names = {"collect_experiments_loco_tc2_gpu.py",
++                     "collect_experiments_loco_tc2_gpu_" + fingerprint[:16].lower() + ".py"}
++    if collector.name not in allowed_names or not collector.is_file():
++        raise ValueError("LOCO collection derivative has an unexpected source path")
++    return {"schema_version": "1.0", "purpose": "B0_LOCO_collection_only",
++            "base_collector_path": "scripts/collect_experiments_tc2_gpu.py",
++            "base_collector_sha256": BASE_COLLECTOR_SHA256,
++            "collector_path": "scripts/collect_experiments_loco_tc2_gpu.py",
++            "collector_sha256": fingerprint,
++            "metric_schema": "strict_dataset_conditioned_LOCO_groups"}
++
++
++def _require_loco_stage(stage_id):
++    if stage_id != LOCO_STAGE:
++        raise ValueError("The supplemental public collector is restricted to B0_LOCO")
++    return stage_id
++
++
++def _finite_number(value, field, *, probability=False, metric_roundoff=False):
++    if isinstance(value, bool) or not isinstance(value, (int, float)):
++        raise ValueError("Saved metric must be a finite non-boolean number: " + field)
++    try:
++        finite = math.isfinite(value)
++    except OverflowError:
++        finite = False
++    if not finite:
++        raise ValueError("Saved metric must be a finite non-boolean number: " + field)
++    # The frozen metric implementation can exceed a boundary by FP64 roundoff.
++    # Preserve those recorded AUROC/AP values within its accepted tolerance.
++    tolerance = 1e-12 if metric_roundoff else 0.0
++    if probability and not -tolerance <= value <= 1 + tolerance:
++        raise ValueError("Saved metric probability is outside [0,1]: " + field)
++    return value
++
++
++def _metric_equal(left, right, field):
++    if abs(left - right) > 1e-12:
++        raise ValueError("Saved pooled and subgroup metrics disagree: " + field)
++
++
++def _sample_counts(items):
++    if not isinstance(items, list) or not items:
++        raise ValueError("Metric validation requires nonempty test samples")
++    counts = {}
++    for item in items:
++        if not isinstance(item, dict) or type(item.get("label")) is not int or item["label"] not in (0, 1):
++            raise ValueError("Metric sample labels must be integer binary labels")
++        defect, size = item.get("defect_type"), item.get("orig_hw")
++        if not isinstance(defect, str) or not defect or (item["label"] == 0) != (defect == "good"):
++            raise ValueError("Metric defect types disagree with sample labels")
++        if not isinstance(size, list) or len(size) != 2 or any(type(value) is not int or value < 1 for value in size):
++            raise ValueError("Metric sample original dimensions are invalid")
++        counts[defect] = counts.get(defect, 0) + 1
++    if not counts.get("good") or not any(defect != "good" for defect in counts):
++        raise ValueError("Metric samples require both normal and anomalous images")
++    return counts
++
++
++def _validate_image_metrics(image, items):
++    counts = _sample_counts(items)
++    if not isinstance(image, dict) or set(image) != RULES:
++        raise ValueError("Saved image metrics must contain exactly the five scoring rules")
++    defects = set(counts) - {"good"}
++    anomalies = sum(counts[defect] for defect in defects)
++    for rule, values in image.items():
++        if not isinstance(values, dict) or set(values) != IMAGE_METRIC_FIELDS:
++            raise ValueError("Saved image metric fields differ")
++        for name in IMAGE_METRIC_FIELDS - {"per_defect_recall"}:
++            _finite_number(values[name], rule + "." + name, probability=name != "threshold_95pct",
++                           metric_roundoff=name in ("image_auroc", "image_ap"))
++        per_defect = values["per_defect_recall"]
++        if not isinstance(per_defect, dict) or set(per_defect) != defects:
++            raise ValueError("Saved per-defect recall groups differ from samples")
++        for defect, value in per_defect.items():
++            _finite_number(value, rule + ".per_defect_recall." + defect, probability=True)
++            if abs(value * counts[defect] - round(value * counts[defect])) > 1e-9:
++                raise ValueError("Saved defect recall is inconsistent with an integer image count")
++        for field, count in (("normal_fpr", counts["good"]), ("anomaly_recall", anomalies)):
++            value = values[field] * count
++            if abs(value - round(value)) > 1e-9:
++                raise ValueError("Saved image rate is inconsistent with an integer image count")
++        weighted = sum(per_defect[defect] * counts[defect] for defect in defects) / anomalies
++        _metric_equal(values["anomaly_recall"], weighted, rule + ".anomaly_recall")
++    return counts
++
++
++def _validate_pixel_metrics(pixel, items):
++    if not isinstance(pixel, dict) or set(pixel) != PIXEL_METRIC_FIELDS:
++        raise ValueError("Saved pixel metric fields differ")
++    for name in ("pixel_auroc", "pixel_ap"):
++        _finite_number(pixel[name], name, probability=True, metric_roundoff=True)
++    total = sum(item["orig_hw"][0] * item["orig_hw"][1] for item in items)
++    anomaly_pixels = sum(item["orig_hw"][0] * item["orig_hw"][1] for item in items if item["label"] == 1)
++    if type(pixel["n_pixels"]) is not int or pixel["n_pixels"] != total:
++        raise ValueError("Saved pixel count differs from original test dimensions")
++    positive = pixel["n_positive_pixels"]
++    if type(positive) is not int or not 0 < positive < total or positive > anomaly_pixels:
++        raise ValueError("Saved positive pixel count differs from the sample scope")
++
++
++def _validate_result_metrics(metrics, cfg, samples):
++    """Validate recorded LOCO group semantics without reading prediction arrays."""
++    if not isinstance(cfg, dict) or cfg.get("dataset") not in CATEGORIES:
++        raise ValueError("Metric dataset is outside the frozen protocol")
++    if not isinstance(samples, dict):
++        raise ValueError("Metric sample record must be a dictionary")
++    items = samples.get("test")
++    counts = _sample_counts(items)
++    loco = cfg["dataset"] == "mvtec_loco"
++    expected = {"image", "pixel", "metric_policy", "groups", "pixel_note"} if loco else {"image", "pixel", "metric_policy"}
++    if not isinstance(metrics, dict) or set(metrics) != expected or metrics.get("metric_policy") != METRIC_POLICY:
++        raise ValueError("Saved result dataset-conditioned metric schema or policy differs")
++    _validate_image_metrics(metrics["image"], items)
++    _validate_pixel_metrics(metrics["pixel"], items)
++    if not loco:
++        return
++    if set(counts) != {"good", *LOCO_GROUPS} or metrics["pixel_note"] != LOCO_PIXEL_NOTE:
++        raise ValueError("LOCO sample groups or pooled-pixel note differ")
++    groups = metrics["groups"]
++    if not isinstance(groups, dict) or set(groups) != set(LOCO_GROUPS):
++        raise ValueError("LOCO requires exactly logical and structural metric groups")
++    total_anomalies = sum(counts[group] for group in LOCO_GROUPS)
++    for group in LOCO_GROUPS:
++        values = groups[group]
++        selected = [item for item in items if item["defect_type"] in ("good", group)]
++        if not isinstance(values, dict) or set(values) != {"n_good", "n_anomaly", "image", "pixel"}:
++            raise ValueError("LOCO group metric fields differ")
++        if type(values["n_good"]) is not int or type(values["n_anomaly"]) is not int or values["n_good"] != counts["good"] or values["n_anomaly"] != counts[group]:
++            raise ValueError("LOCO metric counts differ from the normal and subgroup sample scope")
++        _validate_image_metrics(values["image"], selected)
++        _validate_pixel_metrics(values["pixel"], selected)
++        for rule in RULES:
++            pooled, subset = metrics["image"][rule], values["image"][rule]
++            for name in ("threshold_95pct", "normal_fpr"):
++                _metric_equal(subset[name], pooled[name], group + "." + rule + "." + name)
++            _metric_equal(subset["anomaly_recall"], pooled["per_defect_recall"][group], group + "." + rule + ".anomaly_recall")
++    for rule in RULES:
++        weighted = sum(groups[group]["image"][rule]["image_auroc"] * counts[group] for group in LOCO_GROUPS) / total_anomalies
++        _metric_equal(metrics["image"][rule]["image_auroc"], weighted, rule + ".weighted_group_auroc")
++    if metrics["pixel"]["n_positive_pixels"] != sum(groups[group]["pixel"]["n_positive_pixels"] for group in LOCO_GROUPS):
++        raise ValueError("LOCO pooled positive pixels disagree with the two disjoint anomaly groups")
+ 
+ 
+ def _hex(value):
+@@ -452,10 +617,7 @@
+                 if item["orig_hw"] != original_sizes[item["path"]]:
+                     raise ValueError("Result original dimensions differ from its cache index")
+         metrics = _json(files[prefix + "metrics.json"])
+-        if set(metrics) != {"image", "pixel", "metric_policy"} or set(metrics["image"]) != RULES or metrics["metric_policy"] != METRIC_POLICY:
+-            raise ValueError("Saved result metric policy or five image rules differ")
+-        if set(metrics["pixel"]) != {"pixel_auroc", "pixel_ap", "n_pixels", "n_positive_pixels"} or metrics["pixel"]["n_pixels"] != sum(item["orig_hw"][0] * item["orig_hw"][1] for item in samples["test"]):
+-            raise ValueError("Saved result pixel scope differs from original test dimensions")
++        _validate_result_metrics(metrics, cfg, samples)
+     analysis_records = {row.get("stage_id", row.get("stage")): row for row in status.get("analyses", [])}
+     if any(key not in analysis_records for key in analyses_selected):
+         raise ValueError("Page references an analysis absent from its snapshot")
+@@ -552,9 +714,10 @@
+ 
+ 
+ def export_pages(root, job_id, directory, stage_id=None):
++    provenance = _collection_provenance()
+     job_id = _job(job_id)
+     if stage_id is not None:
+-        _stage_id(stage_id)
++        _require_loco_stage(stage_id)
+     if not Path(directory).is_absolute():
+         raise ValueError("Export directory must be absolute")
+     root, directory = _extended(root), _extended(directory)
+@@ -575,6 +738,7 @@
+             raise ValueError("Requested stage differs from the job snapshot")
+         stage_id = status["stage_id"]
+         _verify_remote_dependencies(root, status, design, design_bytes)
++    _require_loco_stage(stage_id)
+     snapshot = status or {"job_id": job_id, "status": "missing", "stage_id": stage_id, "stage_complete": False, "step_7_complete": False}
+     common = {CONFIG}
+     for suffix in (".out", ".err"):
+@@ -641,7 +805,8 @@
+             raise ValueError("Page contains too many source files")
+         rows = [{"path": name, "size": len(data), "sha256": _bytes_sha(data), "role": _role(name, job_id)} for name, data in sorted(files.items())]
+         manifest = {"schema_version": "1.0", "export_id": export_id, "job_id": job_id,
+-                    "stage_id": stage_id, "page_number": number, "page_count": len(groups),
++                    "stage_id": stage_id, "collector_provenance": provenance,
++                    "page_number": number, "page_count": len(groups),
+                     "result_ids": [row["run_key"] for row in group], "analysis_ids": whole_analyses,
+                     "whole_result_ids": whole_results, "whole_analysis_ids": whole_analyses,
+                     "snapshot_status": snapshot, "snapshot_sha256": _digest(snapshot),
+@@ -654,6 +819,7 @@
+         pages.append({"name": name, "sha256": digest, "bytes": path.stat().st_size,
+                       "page_number": number, "result_ids": manifest["result_ids"], "analysis_ids": whole_analyses})
+     index = {"schema_version": "1.0", "export_id": export_id, "job_id": job_id, "stage_id": stage_id,
++             "collector_provenance": provenance,
+              "page_count": len(pages), "pages": pages, "whole_result_ids": whole_results,
+              "whole_analysis_ids": whole_analyses, "snapshot_status": snapshot,
+              "snapshot_sha256": _digest(snapshot), "config_sha256": _bytes_sha(design_bytes),
+@@ -664,15 +830,16 @@
+         stream.write(_encode(index)); stream.flush(); os.fsync(stream.fileno())
+     return {"job_id": job_id, "directory": _plain(directory), "index_path": _plain(index_path),
+             "index_sha256": _sha(index_path), "pages": pages, "page_count": len(pages),
+-            "partial": index["partial"], "stage_id": stage_id,
++            "partial": index["partial"], "stage_id": stage_id, "collector_provenance": provenance,
+             "stage_complete": snapshot["stage_complete"], "step_7_complete": snapshot["step_7_complete"]}
+ 
+ 
+ def _validate_index(index, job_id):
+     if not isinstance(index, dict) or index.get("schema_version") != "1.0" or index.get("job_id") != job_id or not re.fullmatch(r"[0-9A-F]{32}", index.get("export_id", "")):
+         raise ValueError("Collection index job, format or export identity differs")
+-    if index.get("stage_id") is not None:
+-        _stage_id(index["stage_id"])
++    _require_loco_stage(index.get("stage_id"))
++    if index.get("collector_provenance") != _collection_provenance():
++        raise ValueError("Collection derivative or preserved base fingerprint differs")
+     snapshot = index.get("snapshot_status")
+     if not isinstance(snapshot, dict) or snapshot.get("job_id") != job_id or snapshot.get("stage_id") != index.get("stage_id") or snapshot.get("status") not in ("running", "passed", "failed", "missing"):
+         raise ValueError("Collection snapshot is invalid")
+@@ -709,17 +876,19 @@
+ 
+ 
+ def verify_index(path, expected_sha, job_id):
++    _collection_provenance()
+     if not re.fullmatch(r"[0-9A-Fa-f]{64}", str(expected_sha)) or _sha(path) != expected_sha.upper():
+         raise ValueError("Collection index SHA256 differs")
+     index = _index(path, job_id)
+     return {"status": "verified", "job_id": job_id, "stage_id": index["stage_id"],
+             "index_sha256": _sha(path), "page_count": index["page_count"], "pages": index["pages"],
++            "collector_provenance": index["collector_provenance"],
+             "partial": index["partial"], "stage_complete": False, "step_7_complete": False,
+             "remote_stage_complete": index["snapshot_status"]["stage_complete"]}
+ 
+ 
+ def _check_page(files, manifest, index, page, job_id):
+-    fields = ("schema_version", "export_id", "job_id", "stage_id", "page_count", "whole_result_ids",
++    fields = ("schema_version", "export_id", "job_id", "stage_id", "collector_provenance", "page_count", "whole_result_ids",
+               "whole_analysis_ids", "snapshot_status", "snapshot_sha256", "config_sha256", "partial", "created_utc")
+     if any(manifest.get(key) != index.get(key) for key in fields) or any(manifest.get(key) != page[key] for key in ("page_number", "result_ids", "analysis_ids")):
+         raise ValueError("Page belongs to another snapshot, index or selection")
+@@ -740,6 +909,7 @@
+ 
+ 
+ def verify_archive(archive, expected_sha, job_id, destination, index_path):
++    _collection_provenance()
+     job_id = _job(job_id); archive, destination = _extended(archive), _extended(destination)
+     _no_links(archive); _no_links(destination)
+     index = _index(index_path, job_id)
+@@ -793,6 +963,7 @@
+         if _sha(path) != _bytes_sha(data):
+             raise ValueError("Extracted bytes differ from verified source")
+     receipt = {"status": "verified", "job_id": job_id, "export_id": index["export_id"],
++               "collector_provenance": index["collector_provenance"],
+                "index_sha256": _sha(index_path), "archive_sha256": page["sha256"],
+                "page_number": page["page_number"], "file_count": len(files),
+                "manifest_sha256": _bytes_sha(manifest_bytes), "stage_complete": False, "step_7_complete": False}
+@@ -804,13 +975,14 @@
+ 
+ 
+ def verify_collection(index_path, directory, job_id):
++    _collection_provenance()
+     job_id = _job(job_id); index = _index(index_path, job_id); directory = _extended(directory)
+     _no_links(directory)
+     for page in index["pages"]:
+         page_directory = _inside(directory, "page_" + f"{page['page_number']:03d}")
+         manifest_path = _inside(page_directory, MANIFEST); receipt_path = _inside(page_directory, RECEIPT)
+         receipt = _json(_read_bounded(receipt_path, MAX_INDEX))
+-        if receipt.get("status") != "verified" or receipt.get("job_id") != job_id or receipt.get("export_id") != index["export_id"] or receipt.get("index_sha256") != _sha(index_path) or receipt.get("archive_sha256") != page["sha256"] or receipt.get("page_number") != page["page_number"]:
++        if receipt.get("collector_provenance") != index["collector_provenance"] or receipt.get("status") != "verified" or receipt.get("job_id") != job_id or receipt.get("export_id") != index["export_id"] or receipt.get("index_sha256") != _sha(index_path) or receipt.get("archive_sha256") != page["sha256"] or receipt.get("page_number") != page["page_number"]:
+             raise ValueError("Collection page has no matching verification receipt")
+         manifest_bytes = _read_bounded(manifest_path, MAX_INDEX)
+         if receipt.get("manifest_sha256") != _bytes_sha(manifest_bytes):
+@@ -830,6 +1002,7 @@
+             raise ValueError("Completed collection does not contain every published stage result")
+     return {"status": "verified", "job_id": job_id, "stage_id": index["stage_id"],
+             "index_sha256": _sha(index_path), "page_count": index["page_count"],
++            "collector_provenance": index["collector_provenance"],
+             "result_count": len(index["whole_result_ids"]), "analysis_count": len(index["whole_analysis_ids"]),
+             "partial": index["partial"], "stage_complete": snapshot["stage_complete"],
+             "step_7_complete": snapshot["step_7_complete"],
+@@ -838,6 +1011,7 @@
+ 
+ 
+ def main():
++    _collection_provenance()
+     parser = argparse.ArgumentParser(description=__doc__)
+     commands = parser.add_subparsers(dest="action", required=True)
+     export = commands.add_parser("export")

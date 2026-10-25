@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "identity_sha256": "ADE00042B8EC8F7D628DB9ECD6BFBB7F76E2A755C54394705805D8B35AE28B70",
+  "metric_abs_tolerance": 1e-12,
+  "prediction_dtype": "float32",
+  "saved_metric_reproduction": true
+}

@@ -1,0 +1,85 @@
+test_autocast_disabled_and_input_preservation (__main__.AlgorithmCPU) ... ok
+test_coreset_against_independent_greedy (__main__.AlgorithmCPU) ... ok
+test_coreset_all_duplicates_and_exact_ties (__main__.AlgorithmCPU) ... ok
+test_evaluation_bridge_with_five_scores (__main__.AlgorithmCPU) ... ok
+test_feature_validation (__main__.AlgorithmCPU) ... ok
+test_five_scoring_rules_and_legacy_default (__main__.AlgorithmCPU) ... ok
+test_invalid_patchcore_state_and_execution (__main__.AlgorithmCPU) ... ok
+test_native_formula_small_banks_and_support_ties (__main__.AlgorithmCPU) ... ok
+test_neighbors_against_full_matrix_and_chunk_changes (__main__.AlgorithmCPU) ... ok
+test_padim_alignment_and_dimension_seeds (__main__.AlgorithmCPU) ... ok
+test_padim_bad_configuration_and_state (__main__.AlgorithmCPU) ... ok
+test_padim_numpy_covariance_and_distances (__main__.AlgorithmCPU) ... ok
+test_padim_square_root_and_chunks (__main__.AlgorithmCPU) ... ok
+test_patchcore_both_pooling_and_alignment (__main__.AlgorithmCPU) ... ok
+test_patchcore_final_map_and_native_are_separate (__main__.AlgorithmCPU) ... ok
+test_patchcore_nonconstant_reference (__main__.AlgorithmCPU) ... ok
+test_postprocessing_constants_impulses_and_boundaries (__main__.AlgorithmCPU) ... ok
+test_random_sampling_and_fit_evidence (__main__.AlgorithmCPU) ... ok
+test_sampling_counts_and_invalid_inputs (__main__.AlgorithmCPU) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 3.121s
+
+OK
+
+test_cpu_gpu_numerical_agreement (__main__.AlgorithmGPU) ... ok
+test_real_feature_shapes_and_frozen_variants (__main__.AlgorithmGPU) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 7.870s
+
+OK
+
+{
+  "mode": "full",
+  "status": "passed",
+  "step_4_complete": true,
+  "checked_at_utc": "2026-10-19T05:12:47.514322+00:00",
+  "runtime": {
+    "python": "3.10.22 | packaged by conda-forge | (main, Oct  6 2026, 23:02:24) [GCC 14.4.0]",
+    "numpy": "1.26.4",
+    "torch": "2.11.0+cu128",
+    "protocol_sha256": "3098B6A86DBA64EE439BFE61C7A4FCFFCD082371D5A80FFBC7940997ED6A1ED1",
+    "frozen_manifests_verified": 8,
+    "gpu_requested": true,
+    "device": "cuda",
+    "slurm_job_id": "44012",
+    "metric_regression_job_id": "43968",
+    "step_2_job_id": "43950",
+    "gpu": "NVIDIA A40",
+    "cuda_build": "12.8",
+    "matmul_tf32": false,
+    "cudnn_tf32": false,
+    "autocast_enabled": false
+  },
+  "cpu": {
+    "tests_run": 19,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "failure_details": []
+  },
+  "gpu": {
+    "tests_run": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": true,
+    "failure_details": []
+  },
+  "source_hashes": {
+    "src/padim_adapter.py": "803E30F1AD1F591BDD26C0D458D252D397578F8E5398486855DAC0257F443AB3",
+    "src/patchcore_adapter.py": "4877D66625180BB36258EA6B99DE9427E545764614AB0CB245F5FAFC44EC307F",
+    "src/sampling.py": "BEDB33057BC7E938108E4B9B177ECDE121418B24DC348CDF07AD04F3F0284B79",
+    "src/scoring.py": "E8348550F0A55CC8A1EDBB4B1310FBE985493F22DAE71B6B562F34720C3D4B0B",
+    "src/anomaly_postprocess.py": "4BD9E9BE3CAD7B90A24F7DBFAABDB55EB403C94BCF4B771FF9D73A0631B9D4BD",
+    "tests/test_algorithms_tc2_gpu.py": "5200AAE240E64D22CAECCBD46615DDE11F51189C612938046DC2D4A009E16EDF",
+    "scripts/slurm/check_tc2_gpu_algorithms.sh": "32879BCA317B44DD7F196088F2718B3188889E47D34B23C8A24D6024720E8DCC",
+    "src/metric_core.py": "D218A438031DE6B0A83B14951354CD66A85ED65F97FFC2CFBAEFF1D4FB91DB78",
+    "src/evaluate.py": "4DB2413CC6AAF4210B143285FE5FD7FC6A8C08E98C67073E9A92D31359E68BC6",
+    "src/data.py": "9A82D585203B376F41C3200A32D6971288DD70B5C7E71210F3E21F8C5C1F1F89",
+    "configs/tc2_gpu.json": "EB2899B2E6888233874C8FA97B1247ABD3E68B391538C86A36105410917A00F0"
+  }
+}

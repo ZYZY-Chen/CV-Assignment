@@ -1,0 +1,13 @@
+{
+  "checked_at_utc": "2026-10-18T22:13:09+00:00",
+  "mode": "inputs",
+  "step_2_complete": false,
+  "protocol_sha256": "3098B6A86DBA64EE439BFE61C7A4FCFFCD082371D5A80FFBC7940997ED6A1ED1",
+  "modifications": "Audit records and verified environment exports only; no repairs or experiments",
+  "inputs_ready": false,
+  "input_counts": {
+    "missing": 4669
+  },
+  "weights_ready": false,
+  "status": "incomplete"
+}

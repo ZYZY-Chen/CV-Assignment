@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0",
+  "status": "completed",
+  "updated_at_utc": "2026-10-19T00:54:33.975556+00:00",
+  "step_3_complete": true,
+  "approved_design": "docs/METRICS_V2.md",
+  "user_confirmation": "User explicitly confirmed execution of step-3 changes.",
+  "local_core": {
+    "status": "passed",
+    "tests_run": 9,
+    "evidence": "../step3_local_core_final_20261019/setup_status.json",
+    "runtime": {
+      "protocol_sha256": "3098B6A86DBA64EE439BFE61C7A4FCFFCD082371D5A80FFBC7940997ED6A1ED1",
+      "frozen_manifests_verified": 8,
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "numpy": "2.3.5",
+      "device": "cpu",
+      "gpu_requested": false,
+      "slurm_job_id": null
+    }
+  },
+  "local_full_guard": {
+    "expected_rejection_verified": true,
+    "evidence": "../step3_local_full_guard_20261019/setup_status.json"
+  },
+  "transport_validation": {
+    "status": "PASS",
+    "validation_root": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_v2\\step3_20261019_081534\\transport_validation_ff50724d",
+    "rendered_shell_commands": 15,
+    "actual_ssh_calls": 0,
+    "actual_scp_calls": 0,
+    "archive_round_trip": "PASS",
+    "hash_mismatch_refusal": "PASS",
+    "unexpected_archive_path_refusal": "PASS"
+  },
+  "delivery_validation": {
+    "status": "PASS",
+    "rendered_commands_parsed": 15,
+    "cpu_wrapper_parsed": true,
+    "only_five_approved_files": true,
+    "unchanged_data_dependency_hash_verified": true,
+    "cpu_request_verified": {
+      "cpus": 2,
+      "memory_gib": 4,
+      "time_limit": "00:15:00",
+      "gpus": 0
+    },
+    "publication_cases": [
+      "absent",
+      "identical",
+      "conflict",
+      "bad_bundle"
+    ],
+    "result_directory": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_v2\\step3_20261019_081534\\delivery_validation_d93bfef7",
+    "actual_ssh_calls": 0,
+    "actual_slurm_submissions": 0
+  },
+  "actual_validate_only_output": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_083039_a084e5ce",
+  "actual_validate_only_payload_files": 5,
+  "planned_full_tests_by_class": {
+    "CoreTests": 9,
+    "ReferenceTests": 2,
+    "EvaluationTests": 13
+  },
+  "remote_full_acceptance": {
+    "status": "passed",
+    "executed_by": "User ran the approved local PowerShell CheckMetrics helper with terminal SSH authentication.",
+    "job_id": "43956",
+    "state": "COMPLETED",
+    "exit_code": "0:0",
+    "elapsed": "00:00:19",
+    "node": "TC2N01",
+    "resources": {
+      "cpus": 2,
+      "memory_gib": 4,
+      "time_limit": "00:15:00",
+      "gpus": 0
+    },
+    "tests_run": 24,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "reference": {
+      "cases": 81,
+      "max_auroc_abs_error": 1.1102230246251565e-16,
+      "max_ap_abs_error": 2.220446049250313e-16
+    },
+    "source_output": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_083700_13089bef",
+    "verification": "remote_job_43956/verification.json",
+    "evidence": "remote_job_43956/snapshot_20261019_083700_13089bef/remote/run/validation_v2/step3_job_43956/setup_status.json",
+    "archive": {
+      "sha256": "E4D4112A233B39754EB10BC35E877F820379B00588BC525C3A8DBFCDF041515A",
+      "regular_files": 100,
+      "all_downloaded_bytes_match": true,
+      "paths_and_member_types_verified": true
+    },
+    "local_payload_remote_source_hashes_match": true
+  },
+  "reference_sklearn_checks_completed": true,
+  "remote_commands_executed_by_assistant": false,
+  "scope_verification": {
+    "baseline_files_verified": 750,
+    "modified_existing_files": [
+      "group_XX_code/README.md",
+      "group_XX_code/src/evaluate.py"
+    ],
+    "added_source_files": [
+      "group_XX_code/docs/METRICS_V2.md",
+      "group_XX_code/scripts/slurm/check_metrics_v2.sh",
+      "group_XX_code/src/metric_core.py",
+      "group_XX_code/tests/test_metrics_v2.py"
+    ],
+    "external_helper": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2.ps1",
+    "frozen_protocol_and_manifests_preserved": true,
+    "legacy_results_preserved": 346,
+    "environment_and_locks_preserved": true,
+    "formal_run_v2_not_created": true,
+    "user_gitignore_preserved": true,
+    "final_verification": "remote_job_43956/verification.json"
+  },
+  "implementation_fingerprints": [
+    {
+      "path": "src/metric_core.py",
+      "sha256": "E3A444608FF1D5B3D489CECA981D9B480E48D7FA53DB41EA6C46D9888ACB5CCD"
+    },
+    {
+      "path": "src/evaluate.py",
+      "sha256": "99852A3E9E7C99FBD872ED37EAF7C1527FFED970D99BBD08A1911310C93CA3C1"
+    },
+    {
+      "path": "src/data.py",
+      "sha256": "9A82D585203B376F41C3200A32D6971288DD70B5C7E71210F3E21F8C5C1F1F89"
+    },
+    {
+      "path": "tests/test_metrics_v2.py",
+      "sha256": "14EB404650C61442DEC97FA34C3B0BC06AB8C62D7310A6F7A6D5EE7F6466C224"
+    },
+    {
+      "path": "scripts/slurm/check_metrics_v2.sh",
+      "sha256": "8E0509C24BA8DA91250CA7C33B0212B2B0A2F150BF1C9A6DDA1C614812CA7ACF"
+    },
+    {
+      "path": "docs/METRICS_V2.md",
+      "sha256": "A537FB730D9178AC270859419B7A497CAFBE13772551E25D3D4A8C1F211B37AE"
+    },
+    {
+      "path": "README.md",
+      "sha256": "BD55F10684BAA35E7A0192BF5031FCF675994331360E80F018759D122CB1E556"
+    },
+    {
+      "path": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2.ps1",
+      "sha256": "D0D7D317CFF56C7C7EAF620B08690C9949F393A1ACAD00339A843CFE279DF039"
+    }
+  ],
+  "required_user_action": {
+    "action": null,
+    "step_3_requires_further_execution": false,
+    "next_stage": "Wait for the user to request the start of step 4; present its design before any implementation."
+  },
+  "completion_date_sgt": "2026-10-19",
+  "completion_summary": "Tie-grouped AUROC/AP and strict evaluation checks implemented. Local core, offline delivery, full TC2 synthetic/reference acceptance, and returned evidence/scope verification passed. No model fitting or formal V2 runs started.",
+  "documentation_translation": {
+    "scope": "English translation of step-1-3 authored documentation and the next-stage prompt only. Pre-existing Chinese, raw logs, frozen inputs, executable source, and acceptance results are preserved.",
+    "audit": "run/validation_v2/english_translation_20261019/validation.json",
+    "acceptance_source_hashes_unchanged": true,
+    "historical_evidence_policy": "Historical acceptance fingerprints describe the files at acceptance time; current documentation fingerprints are recorded in the translation audit."
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "verification_status": "passed",
+  "stage_accepted": false,
+  "step_7_complete": false,
+  "job_id": "44075",
+  "stage_id": "H1",
+  "checked_at_utc": "2026-10-19T07:24:11.983350+00:00",
+  "source_directory": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_152105_aee6c530",
+  "index_sha256": "7A7DFF8E4348FF1514942D8BB233D64F9376C28CB498BEE8D085A87105FF2655",
+  "index_verification": {
+    "status": "verified",
+    "job_id": "44075",
+    "stage_id": "H1",
+    "index_sha256": "7A7DFF8E4348FF1514942D8BB233D64F9376C28CB498BEE8D085A87105FF2655",
+    "page_count": 1,
+    "pages": [
+      {
+        "analysis_ids": [],
+        "bytes": 320380,
+        "name": "page_001.tar.gz",
+        "page_number": 1,
+        "result_ids": [],
+        "sha256": "5C913A96ECA6C867F821037200AC13AD82D791C2532706AE520378B29255CBAF"
+      }
+    ],
+    "partial": true,
+    "stage_complete": false,
+    "step_7_complete": false,
+    "remote_stage_complete": false
+  },
+  "collection_verification": {
+    "status": "verified",
+    "job_id": "44075",
+    "stage_id": "H1",
+    "index_sha256": "7A7DFF8E4348FF1514942D8BB233D64F9376C28CB498BEE8D085A87105FF2655",
+    "page_count": 1,
+    "result_count": 0,
+    "analysis_count": 0,
+    "partial": true,
+    "stage_complete": false,
+    "step_7_complete": false,
+    "completion_scope": "current_stage_and_remote_dependency_evidence",
+    "cache_array_bytes_downloaded": false,
+    "prediction_arrays_loaded_locally": false
+  },
+  "payload_files_checked": 21,
+  "snapshot_status": "running",
+  "elapsed_at_snapshot": "00:00:50",
+  "node_at_snapshot": "TC2N01",
+  "current_remote_state": "unknown",
+  "predecessor": {
+    "stage_id": "B0",
+    "job_id": "44053",
+    "status_sha256": "FF5D76FC28711E90CF728A054B030164A051D46EA7D271A0FA2F45825E2A2E6D"
+  },
+  "published_sources_unchanged": 7,
+  "cache_validations_completed": 1,
+  "current_phase_at_snapshot": "phase_002_extract",
+  "verified_H1_results": 0,
+  "expected_H1_results": 4,
+  "previously_accepted_formal_fits": 12,
+  "runtime": {
+    "device": "cuda",
+    "gpu": "NVIDIA A40",
+    "driver": "570.148.08",
+    "cuda_build": "12.8",
+    "software": {
+      "python": "3.10.22",
+      "numpy": "1.26.4",
+      "torch": "2.11.0+cu128",
+      "torchvision": "0.26.0+cu128",
+      "pillow": "12.3.0",
+      "scikit-learn": "1.7.2",
+      "pyyaml": "6.0.3"
+    },
+    "acceptance_jobs": {
+      "metrics": "43968",
+      "algorithms": "43970",
+      "setup": "43950"
+    },
+    "compatibility_configuration_sha256": "EDF3D1D0380E0105A5173607CE360221FD43B059478915EEC0EC04ED9110F913",
+    "slurm_job_id": "44075",
+    "tf32": false,
+    "autocast": false
+  },
+  "next_user_terminal_command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup.ps1\" -Action CollectExperiments -JobId 44075",
+  "actual_agent_tc2_connections": 0,
+  "actual_agent_slurm_submissions": 0,
+  "implementation_files_modified": 0
+}

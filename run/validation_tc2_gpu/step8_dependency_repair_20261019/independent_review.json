@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "reviewer": "review_step8_dependency_repair",
+  "reviewed_at_utc": "2026-10-19T13:54:22.139459+00:00",
+  "status": "no_blocking_findings",
+  "helper_sha256": "7FA610568A20F45073849F7D7965A720F4429FD0098D9C897DC46FD82584C7EF",
+  "readme_sha256": "387DDD6B995908FBFE0F625C597EAFB6DB63D89524E5F6DFE7A882F3BAA771D8",
+  "seven_analysis_sources_independently_match": true,
+  "analysis_sources": {
+    "configs/analysis_tc2_gpu.json": "9E6E20069F5E3C1F6ED5F739077D79D8556357C5C92501C822AD3E03BFB537B9",
+    "scripts/analyze_results_tc2_gpu.py": "CC6B3FDC5518BEA45E1F4E9571BC1D318EADEA6340D3D75DA9FC5E649B3A3552",
+    "scripts/plot_results_tc2_gpu.py": "C4AD7E9B6BB2D6D6428099EC255EBAE5BA624CD0B4F636D4CC7468C096F867B5",
+    "scripts/collect_analysis_tc2_gpu.py": "23364A7E72E99AD6D02302A525523AD92B0A2300195BAF98861D88DDA2E8B98E",
+    "scripts/slurm/analysis_tc2_gpu.sh": "8351E365AFE6FD996743E46DA13D6E7A9E40D6028B52C9612BDE5B0EFE4DC139",
+    "tests/test_analysis_tc2_gpu.py": "168104960F564D6622564527FBCE3753FB9EEACA0EB4AB4C41209A312331521A",
+    "docs/TC2_GPU_ANALYSIS.md": "F897C75659CC31BF98BB89E95AA4E3AEA241AA40FAC59CEDE85518119CA5F57C"
+  },
+  "powershell_ast_parse_errors": 0,
+  "reviewed_behaviour": [
+    "Pinned hashed LOCO source and base collector fingerprints",
+    "Reject symbolic links, reparse paths, hardlinks, nonregular files and oversized files",
+    "Exclusive canonical target creation with no overwrite; exact target accepted idempotently",
+    "SHA-bound local and remote repair receipt with typed false/zero fields",
+    "Read-only dependency check in both RunAnalysis remote phases before submission",
+    "Repair path contains no SCP, sbatch or model execution; existing job records and deployment retained"
+  ],
+  "blocking_findings": [],
+  "review_method": "Independent source inspection, local PowerShell parsing and source fingerprint comparison only",
+  "remote_action_performed": false,
+  "remote_repair_acceptance": "pending_user_execution",
+  "step_8_complete": false
+}

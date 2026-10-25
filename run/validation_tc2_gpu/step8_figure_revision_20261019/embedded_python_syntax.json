@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "executed": false,
+  "sources": [
+    {
+      "path": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\fr_transport_20261019_b\\client_53154386\\captured_1.sh",
+      "embedded_python_snippets": [],
+      "status": "passed",
+      "sha256": "170EBB7F1E99471EA078DC4606E1DFD77D90021C0D4C548BCC5F4DAEF1A8413C"
+    },
+    {
+      "path": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\fr_transport_20261019_b\\client_53154386\\captured_2.sh",
+      "embedded_python_snippets": [
+        "FIGURE_BOOTSTRAP_PY",
+        "FIGURE_CLAIM_PY"
+      ],
+      "status": "passed",
+      "sha256": "15BD7529CE5A1F89F93C19265444D1A1ED79787F7D6BCC7CB454D6C30F89EFCA"
+    },
+    {
+      "path": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\fr_transport_20261019_b\\client_53154386\\captured_3.sh",
+      "embedded_python_snippets": [],
+      "status": "passed",
+      "sha256": "84B98328F5B257FD4AA61F776AB08385B255C6F2240B94C1DCCFB2F4FC01AA5A"
+    },
+    {
+      "path": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\scripts\\slurm\\figure_revision_tc2_gpu.sh",
+      "embedded_python_snippets": [
+        "FIGURE_FAILED_PY",
+        "FIGURE_INITIAL_PY"
+      ],
+      "status": "passed",
+      "sha256": "0DA7BCC47E7193AB5CBDE71DD4BBC5C683B4D813F9E222A1BFCB25A78D290936"
+    }
+  ],
+  "combined_shell_syntax_only": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\fr_transport_20261019_b\\client_53154386\\combined_syntax_only.sh"
+}

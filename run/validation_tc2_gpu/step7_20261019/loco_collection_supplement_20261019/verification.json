@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "scope": "Approved step-7 LOCO collection-only supplement",
+  "checked_at_utc": "2026-10-19T12:44:10.713406+00:00",
+  "step_7_complete": false,
+  "implementation_files": {
+    "scripts/collect_experiments_loco_tc2_gpu.py": "09AC7432F8F6BCE36F95EAEFF15D44A19F7852781A19FE65E5E573239E445967",
+    "tests/test_collect_experiments_loco_tc2_gpu.py": "7FC31998DC2901B96F5C0420B41E6C12937EAB695FD932766DF37A7C21B9F222",
+    "README.md": "6D490FC081ACE686D3AB6A19D07F525FC12BCDF34C56D6F70138B2F57C942C49"
+  },
+  "external_helper_sha256": "DD9C3CE34D5B3EA1E7393DEBC36E77C7DD19CA2620F31950D83495E9C51A8CFC",
+  "previous_external_helper_sha256": "093F3E11DEC0FAAA26CFD3C48C846ED88EEEF517C25B82DDA2A843B8FC6A3B82",
+  "collector_provenance": {
+    "schema_version": "1.0",
+    "purpose": "B0_LOCO_collection_only",
+    "base_collector_path": "scripts/collect_experiments_tc2_gpu.py",
+    "base_collector_sha256": "AC61772F65C9F2C4124761D2361E0A85E9F65DBCF4DF5BAB3E939B5111466010",
+    "collector_path": "scripts/collect_experiments_loco_tc2_gpu.py",
+    "collector_sha256": "09AC7432F8F6BCE36F95EAEFF15D44A19F7852781A19FE65E5E573239E445967",
+    "metric_schema": "strict_dataset_conditioned_LOCO_groups"
+  },
+  "new_collector_tests": {
+    "tests_run": 43,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "source_sha256": "7FC31998DC2901B96F5C0420B41E6C12937EAB695FD932766DF37A7C21B9F222",
+    "console_sha256": "16C281F115B39B93934E88F7C6E7C134F3CAD501B246BDD6A5CBFD70B7961B68"
+  },
+  "checks": {
+    "local_transport_validation.json": {
+      "sha256": "9DD08C6A289AD5AE73CEB6E045435C803F718C0A105C1E8CD967F17ABF28F4E7",
+      "status": "passed"
+    },
+    "pilot_transport_validation.json": {
+      "sha256": "40D0471636818659E71B27E332190208C9BC0025165FF9567942CF01619C432B",
+      "status": "passed"
+    },
+    "experiments_transport_validation.json": {
+      "sha256": "C559C03C94AE53DAF357895F04C55823D6996063B6E0130216AAB75B3D544692",
+      "status": "passed"
+    },
+    "loco_transport_validation.json": {
+      "sha256": "19338902A25293A3F3E1B5A9C331861EF118192966F0404B1D3AA7CB4761B110",
+      "status": "passed"
+    },
+    "publish_guard_validation.json": {
+      "sha256": "C270AB2E38683499A534231D710CDDA22B1296B1E96D08604498D06D8764B42D",
+      "status": "passed"
+    },
+    "loco_bash_syntax_validation.json": {
+      "sha256": "3D302DCDC3D36ED62937BA8B63E477D7D25B3429423BECF33E4E3F6895424694",
+      "status": "passed"
+    }
+  },
+  "existing_AD_results_compatible": 62,
+  "existing_AD_compatibility_sha256": "A7E11EE2528CAEFCF3CD9675744E3D6F9DD0E9B4762A3A0A88FA4A8234613024",
+  "protected_scientific_pilot_experiment_files_unchanged": 44,
+  "frozen_seven_experiment_sources_unchanged": true,
+  "historical_run_files_metadata_unchanged": 7115,
+  "accepted_stage_record_and_remote_status_hashes_unchanged": 11,
+  "existing_Chinese_README_lines_unchanged": true,
+  "accepted_formal_fits": 62,
+  "accepted_analysis_rows": 108,
+  "remaining_formal_fits": 4,
+  "runtime_observation": "The latest remote snapshot showed job 44235 RUNNING at 00:20:44; current remote state is unknown.",
+  "next_user_terminal_command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup.ps1\" -Action CollectExperiments -JobId 44235 -LocoCollection",
+  "next_acceptance": "Collect the existing job with the independent LOCO collector, verify all returned pages, saved arrays and pooled/group image metrics. Original-mask pixel metric reproduction remains remote evidence. All twelve local stage collections are required for step-7 completion.",
+  "actual_agent_tc2_connections": 0,
+  "actual_agent_slurm_submissions": 0,
+  "actual_agent_model_calls": 0,
+  "report_writing_started": false
+}

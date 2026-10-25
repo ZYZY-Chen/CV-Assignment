@@ -1,0 +1,6 @@
+Restoring mvtec_ad/bottle from official source; no third-party fallback.
+{
+  "ready": false,
+  "step_2_complete": false,
+  "error": "HTTPError: HTTP Error 404: Not Found"
+}

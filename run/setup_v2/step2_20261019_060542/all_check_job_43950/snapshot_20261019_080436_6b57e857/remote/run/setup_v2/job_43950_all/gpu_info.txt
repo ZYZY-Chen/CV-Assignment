@@ -1,0 +1,36 @@
+{
+  "ready": true,
+  "gpu_operation": "pass",
+  "backbone": {
+    "status": "pass",
+    "feature_shapes_chw": {
+      "layer1": [
+        64,
+        64,
+        64
+      ],
+      "layer2": [
+        128,
+        32,
+        32
+      ],
+      "layer3": [
+        256,
+        16,
+        16
+      ]
+    },
+    "dtype": "float32",
+    "input": "synthetic_zero_tensor",
+    "weights_sha256": "F37072FD47E89C5E827621C5BAFFA7500819F7896BBACEC160B1A16C560E07EC"
+  },
+  "torch_version": "2.11.0+cu128",
+  "torchvision_version": "0.26.0+cu128",
+  "torch_cuda_build": "12.8",
+  "gpu_name": "NVIDIA A40",
+  "visible_devices": "0",
+  "device_memory_bytes": 47709159424,
+  "autocast_enabled": false,
+  "matmul_tf32": false,
+  "cudnn_tf32": false
+}

@@ -1,0 +1,830 @@
+{
+  "schema_version": "1.0",
+  "status": "passed",
+  "job_id": "44284",
+  "checked_at_utc": "2026-10-19T14:09:48.598004+00:00",
+  "analysis_directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_220347_4dc4d911\\remote\\page_001\\run\\tc2_gpu\\summaries\\analysis\\6077F6D3F5244ECB28EF67BECBE454E989C99246F285CD63C85DBEC8A6239B5C",
+  "cases_sha256": "83DBAE5C4C5B78AC27BC61A6208C3CA7DE3A0710DC7FE68E1C1E348201B01B27",
+  "tables_sha256": "E92DDEB9DEF288C34664E0D91CC9F66AD1902FCA7FF96378F8935CEBB498C0F0",
+  "frozen_manifests_verified": 8,
+  "complete_candidate_count": 1392,
+  "candidate_counts": [
+    {
+      "dataset": "mvtec_ad",
+      "category": "bottle",
+      "count": 83
+    },
+    {
+      "dataset": "mvtec_ad",
+      "category": "cable",
+      "count": 150
+    },
+    {
+      "dataset": "mvtec_ad",
+      "category": "capsule",
+      "count": 132
+    },
+    {
+      "dataset": "mvtec_ad",
+      "category": "screw",
+      "count": 160
+    },
+    {
+      "dataset": "mvtec_ad",
+      "category": "tile",
+      "count": 117
+    },
+    {
+      "dataset": "mvtec_ad",
+      "category": "wood",
+      "count": 79
+    },
+    {
+      "dataset": "mvtec_loco",
+      "category": "juice_bottle",
+      "count": 330
+    },
+    {
+      "dataset": "mvtec_loco",
+      "category": "screw_bag",
+      "count": 341
+    }
+  ],
+  "mask_area_register_count": 982,
+  "mask_area_register_quartiles": [
+    {
+      "dataset": "mvtec_ad",
+      "category": "bottle",
+      "anomaly_count": 63,
+      "small_count": 16,
+      "large_count": 16
+    },
+    {
+      "dataset": "mvtec_ad",
+      "category": "cable",
+      "anomaly_count": 92,
+      "small_count": 23,
+      "large_count": 23
+    },
+    {
+      "dataset": "mvtec_ad",
+      "category": "capsule",
+      "anomaly_count": 109,
+      "small_count": 28,
+      "large_count": 28
+    },
+    {
+      "dataset": "mvtec_ad",
+      "category": "screw",
+      "anomaly_count": 119,
+      "small_count": 30,
+      "large_count": 30
+    },
+    {
+      "dataset": "mvtec_ad",
+      "category": "tile",
+      "anomaly_count": 84,
+      "small_count": 21,
+      "large_count": 21
+    },
+    {
+      "dataset": "mvtec_ad",
+      "category": "wood",
+      "anomaly_count": 60,
+      "small_count": 15,
+      "large_count": 15
+    },
+    {
+      "dataset": "mvtec_loco",
+      "category": "juice_bottle",
+      "anomaly_count": 236,
+      "small_count": 59,
+      "large_count": 59
+    },
+    {
+      "dataset": "mvtec_loco",
+      "category": "screw_bag",
+      "anomaly_count": 219,
+      "small_count": 55,
+      "large_count": 55
+    }
+  ],
+  "selected_count": 16,
+  "selected_real_failures": 15,
+  "eligible_real_failures": 644,
+  "selected_normal_false_positives": 6,
+  "selected_small_mask_real_failures": 9,
+  "selected_original_images_sha_verified": 16,
+  "selected_raw_gt_masks_sha_verified": 10,
+  "original_resolution_unions_verified": 16,
+  "selected_saved_maps_exactly_verified": 32,
+  "fixed_normal_dev_percentile_calibrations_verified": 16,
+  "display_percentile_independent_precision": "float64 interpolation, matching accepted TC2 NumPy 1.26 behavior for saved FP32 maps",
+  "score_points_checked": 10665,
+  "independent_accepted_source_records_checked": 28,
+  "size_recall_rows_independently_recomputed": 144,
+  "case_plate_source_data_rows_verified": 16,
+  "descriptive_cdf_source_points_verified": 6489,
+  "size_macro_summaries_verified": 6,
+  "case_assets": [
+    {
+      "case_id": "001",
+      "category": "bottle",
+      "group": "good",
+      "image_sha256": "A45ABA86EF3E1EF8DBD95CA56ABEB63F576FCD2BBD040BA748A1410BB70D6D78",
+      "original_hw": [
+        900,
+        900
+      ],
+      "raw_mask_count": 0,
+      "union_positive_pixels": 0,
+      "selection_reason": "normal_false_positive",
+      "real_failure": true
+    },
+    {
+      "case_id": "002",
+      "category": "bottle",
+      "group": "broken_small",
+      "image_sha256": "05B96E1102FBA8CC19BF60E17D33A0830247DF2BBBA56CAE3DF100336392941E",
+      "original_hw": [
+        900,
+        900
+      ],
+      "raw_mask_count": 1,
+      "union_positive_pixels": 7166,
+      "selection_reason": "small_mask_control",
+      "real_failure": false
+    },
+    {
+      "case_id": "003",
+      "category": "cable",
+      "group": "good",
+      "image_sha256": "58520808633F344223ADFA4CA238DA7E4DBA708029302FC56B7DA9C619EAFBD7",
+      "original_hw": [
+        1024,
+        1024
+      ],
+      "raw_mask_count": 0,
+      "union_positive_pixels": 0,
+      "selection_reason": "normal_false_positive",
+      "real_failure": true
+    },
+    {
+      "case_id": "004",
+      "category": "cable",
+      "group": "bent_wire",
+      "image_sha256": "4AA2490BD1227DCE17DCCCBA7DCD21C1297A9A858D295F114CB72C2C0F98AA06",
+      "original_hw": [
+        1024,
+        1024
+      ],
+      "raw_mask_count": 1,
+      "union_positive_pixels": 23162,
+      "selection_reason": "small_mask_failure",
+      "real_failure": true
+    },
+    {
+      "case_id": "005",
+      "category": "capsule",
+      "group": "good",
+      "image_sha256": "0FABDFB2DABCCF3B013229260E9EBDDF945449879D1D802B315B17465628B145",
+      "original_hw": [
+        1000,
+        1000
+      ],
+      "raw_mask_count": 0,
+      "union_positive_pixels": 0,
+      "selection_reason": "normal_false_positive",
+      "real_failure": true
+    },
+    {
+      "case_id": "006",
+      "category": "capsule",
+      "group": "crack",
+      "image_sha256": "D7FF9E57C30E59FB1D5EC8885DE04B14E6EBB20321E7A68398389DC7E28F2E2E",
+      "original_hw": [
+        1000,
+        1000
+      ],
+      "raw_mask_count": 1,
+      "union_positive_pixels": 2118,
+      "selection_reason": "small_mask_failure",
+      "real_failure": true
+    },
+    {
+      "case_id": "007",
+      "category": "screw",
+      "group": "good",
+      "image_sha256": "582847A0ADC79AD58D83F03D325407041F045A7044AF944F5A1C5431351C3C8B",
+      "original_hw": [
+        1024,
+        1024
+      ],
+      "raw_mask_count": 0,
+      "union_positive_pixels": 0,
+      "selection_reason": "normal_false_positive",
+      "real_failure": true
+    },
+    {
+      "case_id": "008",
+      "category": "screw",
+      "group": "manipulated_front",
+      "image_sha256": "11868607A9AC96EAA6D7D024A4784B60ED63DE4E977D9ADA75A488D51A8ED86B",
+      "original_hw": [
+        1024,
+        1024
+      ],
+      "raw_mask_count": 1,
+      "union_positive_pixels": 2245,
+      "selection_reason": "small_mask_failure",
+      "real_failure": true
+    },
+    {
+      "case_id": "009",
+      "category": "tile",
+      "group": "good",
+      "image_sha256": "5E0B3E6003E8500C6162B059FDEC8B8E4F1D9D0C5D5C1B982BD5C3458BCCC03A",
+      "original_hw": [
+        840,
+        840
+      ],
+      "raw_mask_count": 0,
+      "union_positive_pixels": 0,
+      "selection_reason": "normal_false_positive",
+      "real_failure": true
+    },
+    {
+      "case_id": "010",
+      "category": "tile",
+      "group": "gray_stroke",
+      "image_sha256": "687EE96B4B356DFA87E49B78A807DCDF026F80705801D6E670578648C5D3BBA2",
+      "original_hw": [
+        840,
+        840
+      ],
+      "raw_mask_count": 1,
+      "union_positive_pixels": 12829,
+      "selection_reason": "small_mask_failure",
+      "real_failure": true
+    },
+    {
+      "case_id": "011",
+      "category": "wood",
+      "group": "good",
+      "image_sha256": "375FA7DE6FA9984996A1A2D8B4BDC7C7B797F4D59A4ED2763A69BB1464690D43",
+      "original_hw": [
+        1024,
+        1024
+      ],
+      "raw_mask_count": 0,
+      "union_positive_pixels": 0,
+      "selection_reason": "normal_false_positive",
+      "real_failure": true
+    },
+    {
+      "case_id": "012",
+      "category": "wood",
+      "group": "scratch",
+      "image_sha256": "5E8356101B534E279D3A7A5CE68CCD2C4392AF28CA2E1337AFCD4639E3DDFE17",
+      "original_hw": [
+        1024,
+        1024
+      ],
+      "raw_mask_count": 1,
+      "union_positive_pixels": 9229,
+      "selection_reason": "small_mask_failure",
+      "real_failure": true
+    },
+    {
+      "case_id": "013",
+      "category": "juice_bottle",
+      "group": "logical_anomalies",
+      "image_sha256": "8B33D338A259BBA39AAC360605CB26127BE465718C6F4E7318510C70B31E5B07",
+      "original_hw": [
+        1600,
+        800
+      ],
+      "raw_mask_count": 1,
+      "union_positive_pixels": 7246,
+      "selection_reason": "small_mask_failure",
+      "real_failure": true
+    },
+    {
+      "case_id": "014",
+      "category": "juice_bottle",
+      "group": "structural_anomalies",
+      "image_sha256": "1BE5A6E7F74DA5D39A7CD4845EE62AB72C622BED773751331451862A7A7F2E4C",
+      "original_hw": [
+        1600,
+        800
+      ],
+      "raw_mask_count": 1,
+      "union_positive_pixels": 4474,
+      "selection_reason": "small_mask_failure",
+      "real_failure": true
+    },
+    {
+      "case_id": "015",
+      "category": "screw_bag",
+      "group": "logical_anomalies",
+      "image_sha256": "1BD870251EC32958C449D45ACD965942918E2076208C8199CB1370EE2324A23C",
+      "original_hw": [
+        1100,
+        1600
+      ],
+      "raw_mask_count": 1,
+      "union_positive_pixels": 4943,
+      "selection_reason": "small_mask_failure",
+      "real_failure": true
+    },
+    {
+      "case_id": "016",
+      "category": "screw_bag",
+      "group": "structural_anomalies",
+      "image_sha256": "B8666BE7A36F69029414CC3CEE1C11ABE4ABD00663CD1F8E94456E69D47BD1DC",
+      "original_hw": [
+        1100,
+        1600
+      ],
+      "raw_mask_count": 1,
+      "union_positive_pixels": 6229,
+      "selection_reason": "small_mask_failure",
+      "real_failure": true
+    }
+  ],
+  "selected_map_checks": [
+    {
+      "case_id": "001",
+      "method": "padim",
+      "source_identity": "7D66E2384BB9D41F6A0B33E629A359B08B01FC1275B7BBDC5A6FBD225CDA54E2",
+      "sha256": "46A5505A4E0AECF26756A7A7829F5F26B47E636DC7A16D1346E9AF249C9EEC3F",
+      "normal_dev_percentile_99_5": 9.855188364982574,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "002",
+      "method": "padim",
+      "source_identity": "7D66E2384BB9D41F6A0B33E629A359B08B01FC1275B7BBDC5A6FBD225CDA54E2",
+      "sha256": "A04171F0A50680FC09BC0EF3E343679965253378D0E72F41F3243616FA5658C5",
+      "normal_dev_percentile_99_5": 9.855188364982574,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "001",
+      "method": "patchcore",
+      "source_identity": "ADE00042B8EC8F7D628DB9ECD6BFBB7F76E2A755C54394705805D8B35AE28B70",
+      "sha256": "7D15616CDAC7E92678AD31A6B824A21496CB58E2FE210DA015AC01359B197D8A",
+      "normal_dev_percentile_99_5": 1.194619604945182,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "002",
+      "method": "patchcore",
+      "source_identity": "ADE00042B8EC8F7D628DB9ECD6BFBB7F76E2A755C54394705805D8B35AE28B70",
+      "sha256": "3464343BF77BD9E5B2B1D3ACA2E12B0BECF44DB811A65F210FBF505D02320279",
+      "normal_dev_percentile_99_5": 1.194619604945182,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "003",
+      "method": "padim",
+      "source_identity": "CB42114031E6A8E48F46DB4C08D89B06AEBD2422507FFC5EB755DC2EC6AC315B",
+      "sha256": "BBAB4D576390FAB12457F0EB54CDCE0A7CA80C59DA7A282C8C6B9810CEFE9AF9",
+      "normal_dev_percentile_99_5": 14.905039796829175,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "004",
+      "method": "padim",
+      "source_identity": "CB42114031E6A8E48F46DB4C08D89B06AEBD2422507FFC5EB755DC2EC6AC315B",
+      "sha256": "69FC3154D71CE95464884EA83E16AA8C54FE1829EB48128B361332B887C9C481",
+      "normal_dev_percentile_99_5": 14.905039796829175,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "003",
+      "method": "patchcore",
+      "source_identity": "16C4BA8F1585440D786AC105B67886155230608AC10C57F49589C192A91BA1F9",
+      "sha256": "7DBFD715E81AC9146BB00B30978DCD5B07F84BA4CA14929BC2406C4896FEE972",
+      "normal_dev_percentile_99_5": 2.141545189619063,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "004",
+      "method": "patchcore",
+      "source_identity": "16C4BA8F1585440D786AC105B67886155230608AC10C57F49589C192A91BA1F9",
+      "sha256": "0F263FEDEAB84A113FF19610DA11B36AB05252AA4573140B622803F363476629",
+      "normal_dev_percentile_99_5": 2.141545189619063,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "005",
+      "method": "padim",
+      "source_identity": "3E8ED3B16690ABD54DDC02DA1E20AF3B8035672C96CD259875A5DC79AE97C802",
+      "sha256": "896975C404D1573913CECEE95C5B4C8045D1460A810FCB355384F0767CA7C3EB",
+      "normal_dev_percentile_99_5": 12.575869727134691,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "006",
+      "method": "padim",
+      "source_identity": "3E8ED3B16690ABD54DDC02DA1E20AF3B8035672C96CD259875A5DC79AE97C802",
+      "sha256": "A5821F55FF12FFCED62E6D69FEE9895B0B1ED674CE87B31F435BCE9BB0B484C1",
+      "normal_dev_percentile_99_5": 12.575869727134691,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "005",
+      "method": "patchcore",
+      "source_identity": "9A2CE527556D6C1752EF9C10D1CC48FDFC38A53B07F7E31F6849224BA81890E9",
+      "sha256": "FB07AA175751C21F66267DFF29FED22B730496BC02B4B312252998B7AB6AD62A",
+      "normal_dev_percentile_99_5": 1.200952144265175,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "006",
+      "method": "patchcore",
+      "source_identity": "9A2CE527556D6C1752EF9C10D1CC48FDFC38A53B07F7E31F6849224BA81890E9",
+      "sha256": "85F0315B48D59DBDBF13FE8CE73BA661623C00BC6C02F9636539333AD63D8ECF",
+      "normal_dev_percentile_99_5": 1.200952144265175,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "007",
+      "method": "padim",
+      "source_identity": "4A5EA82C401E3E62FD81A65DBE8E9991E53D005D73B7B728F35B944AAE07D9FF",
+      "sha256": "15FC5AD53DBB8DBC72FE2EF0EFAE8BA1C5560D4695E0CFCB0968A77C45DCCE00",
+      "normal_dev_percentile_99_5": 18.282886447906442,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "008",
+      "method": "padim",
+      "source_identity": "4A5EA82C401E3E62FD81A65DBE8E9991E53D005D73B7B728F35B944AAE07D9FF",
+      "sha256": "5D6BFEC347CA1DA3CAE79E9DECE022580CBD29B6F001413ADB36A69B25221534",
+      "normal_dev_percentile_99_5": 18.282886447906442,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "007",
+      "method": "patchcore",
+      "source_identity": "401C674A86B46820422DC2B711869DCC0E26C86F9129B564EB61E68ED8F64AA6",
+      "sha256": "FF4BBECC35B7D1628E607DB5E87EE4C2866DFF7B896CE5A8BDF892E9922E4B6C",
+      "normal_dev_percentile_99_5": 1.738172123432159,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "008",
+      "method": "patchcore",
+      "source_identity": "401C674A86B46820422DC2B711869DCC0E26C86F9129B564EB61E68ED8F64AA6",
+      "sha256": "EC12687B0937661BCDC54F404D54C49DD6CA1692C752A23C7711D3245AFDEA59",
+      "normal_dev_percentile_99_5": 1.738172123432159,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "009",
+      "method": "padim",
+      "source_identity": "8B47DED8DAD55C60870EA8BF7A382CE35EC680EA0777893D18344AE6666D95F1",
+      "sha256": "36FB668BBCF8B158AFA8C213368771221128E49EFAC5129E1DE264DF83571517",
+      "normal_dev_percentile_99_5": 11.463076877594021,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "010",
+      "method": "padim",
+      "source_identity": "8B47DED8DAD55C60870EA8BF7A382CE35EC680EA0777893D18344AE6666D95F1",
+      "sha256": "91377CE0BDC2EB521C07B6C22DF57C7F1727880A83AA6646230505A4024A5A75",
+      "normal_dev_percentile_99_5": 11.463076877594021,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "009",
+      "method": "patchcore",
+      "source_identity": "977BB800ADCACF1CEA1688C8A954941626AD1B56C60694E6AFB63A0C87AD9163",
+      "sha256": "74BC98B79B34376C0254BF73F349E2466BD27822FD064727F3B9A70D4254A343",
+      "normal_dev_percentile_99_5": 1.5496317893266678,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "010",
+      "method": "patchcore",
+      "source_identity": "977BB800ADCACF1CEA1688C8A954941626AD1B56C60694E6AFB63A0C87AD9163",
+      "sha256": "64D21AD56F1690127F94133C7A20D306B0C4274072C64F6D10A01B5E736700C8",
+      "normal_dev_percentile_99_5": 1.5496317893266678,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "011",
+      "method": "padim",
+      "source_identity": "CC2F26ACAB3FA73BC68F42B15FA4FBEEDC511EB37605B97E2E94F4A494D4713B",
+      "sha256": "BCD9903FDE7229064AFB147E3C0E54ACE170DDA1C06A8F0AEE906AB6A3C1FF64",
+      "normal_dev_percentile_99_5": 10.315991888046266,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "012",
+      "method": "padim",
+      "source_identity": "CC2F26ACAB3FA73BC68F42B15FA4FBEEDC511EB37605B97E2E94F4A494D4713B",
+      "sha256": "C3364ED0BCB0DF971472AD5AED890BBC22ACC61D0E04F050A1633803F9163183",
+      "normal_dev_percentile_99_5": 10.315991888046266,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "011",
+      "method": "patchcore",
+      "source_identity": "BCD4D96DEC9ABC3802D6995CD6C3B5DD2854FE7B5C863C73A583C89DFFC9D50D",
+      "sha256": "280B26470BBFD247735207F9068D5B58E11D500236AC7ED9B016E092AECF459A",
+      "normal_dev_percentile_99_5": 1.4056958812475207,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "012",
+      "method": "patchcore",
+      "source_identity": "BCD4D96DEC9ABC3802D6995CD6C3B5DD2854FE7B5C863C73A583C89DFFC9D50D",
+      "sha256": "6697A85B0F5083A432A702746817EF277114F3DEFC1C1BCED6F57B44FCFFD846",
+      "normal_dev_percentile_99_5": 1.4056958812475207,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "013",
+      "method": "padim",
+      "source_identity": "DF9CA709E9592160A7F10916724F6D62B1FEE339CDC115482EF0DDFA4137C53B",
+      "sha256": "6F7E76D089C345625767ED4C893202B52B85FDBD9885E3E78E306F0E426B4E2B",
+      "normal_dev_percentile_99_5": 12.452923765182497,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "014",
+      "method": "padim",
+      "source_identity": "DF9CA709E9592160A7F10916724F6D62B1FEE339CDC115482EF0DDFA4137C53B",
+      "sha256": "80E9D0FF5C89AE862AE67F9CFF274537253A1151FB730F424664A6527936DA80",
+      "normal_dev_percentile_99_5": 12.452923765182497,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "013",
+      "method": "patchcore",
+      "source_identity": "750606098934F3B43A0A6880ED6EDCB1B1650FF60FAD7054B9581126989950F0",
+      "sha256": "B5CE764479283497DE04AC48DF5AA0A4EBB7534F331EBBAE3EC83D019FEB529D",
+      "normal_dev_percentile_99_5": 1.4371768403053284,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "014",
+      "method": "patchcore",
+      "source_identity": "750606098934F3B43A0A6880ED6EDCB1B1650FF60FAD7054B9581126989950F0",
+      "sha256": "0BCFCA8CC4C395E1ABD2C9959EF0CFBD7B8D76DBFCF159A2B8BF9F35FB4E6AC0",
+      "normal_dev_percentile_99_5": 1.4371768403053284,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "015",
+      "method": "padim",
+      "source_identity": "429624EAB9CC777EA276CCAB681C1CBC2ACF53FFC6CC3FF3D0318298DFA84EE5",
+      "sha256": "0E0373DEBDA9E1C51646038108C51DC68F47C7912A5CAFA4AC618DCCF4B1A41D",
+      "normal_dev_percentile_99_5": 17.103745088577273,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "016",
+      "method": "padim",
+      "source_identity": "429624EAB9CC777EA276CCAB681C1CBC2ACF53FFC6CC3FF3D0318298DFA84EE5",
+      "sha256": "A5AD526251B099696D80191777C001FBB29455DEBBC93CE937ED163232B31814",
+      "normal_dev_percentile_99_5": 17.103745088577273,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "015",
+      "method": "patchcore",
+      "source_identity": "730104C64A1BBD9925CD28059985C862B11CFA22418BDF971743A5125BB0E7E7",
+      "sha256": "D033190CFEBD87F03ED8432A1BF367FA9D4793C79B954EB97AEB9DBCC420BF8C",
+      "normal_dev_percentile_99_5": 2.389983152151108,
+      "exact_saved_map_match": true
+    },
+    {
+      "case_id": "016",
+      "method": "patchcore",
+      "source_identity": "730104C64A1BBD9925CD28059985C862B11CFA22418BDF971743A5125BB0E7E7",
+      "sha256": "3147AC1DB88B5E1A7CC9021A8FFD886B8AFFFA84B06DDC0041C9C331902D4DA2",
+      "normal_dev_percentile_99_5": 2.389983152151108,
+      "exact_saved_map_match": true
+    }
+  ],
+  "accepted_source_evidence": [
+    {
+      "run_key": "B0_mvtec_ad_bottle_padim_s17_n100_B7B86DBB2043",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_151040_d90ef21c\\remote\\page_001\\run\\tc2_gpu\\results\\7D66E2384BB9D41F6A0B33E629A359B08B01FC1275B7BBDC5A6FBD225CDA54E2",
+      "predictions_sha256": "4B546062D0CC2325074489E8E9600A1C75908FC4369DFAE6D7C7563A3138C28A",
+      "samples_sha256": "9612DA5F2C3A09177127F9F0215881EF05FE50C734146AC6D7C831CFEED40651",
+      "metrics_sha256": "1AACD174D459DEBF022ED713B94256C154A12191153CFE23BC143798ABEAF297"
+    },
+    {
+      "run_key": "B0_mvtec_ad_bottle_patchcore_s17_n100_BBC2B85C2FA8",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_151040_d90ef21c\\remote\\page_001\\run\\tc2_gpu\\results\\ADE00042B8EC8F7D628DB9ECD6BFBB7F76E2A755C54394705805D8B35AE28B70",
+      "predictions_sha256": "B6C37A8AA53AE22FE7D2D0027B4EADA49163010CBE7E5CC33145EFC90949DB5D",
+      "samples_sha256": "9612DA5F2C3A09177127F9F0215881EF05FE50C734146AC6D7C831CFEED40651",
+      "metrics_sha256": "2FB61746ED6144B9E6459F2AF277CC75C75E7D9DF600678F97B86A6B1ABD2E2B"
+    },
+    {
+      "run_key": "B0_mvtec_ad_cable_padim_s17_n100_1272F0F1504D",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_151040_d90ef21c\\remote\\page_002\\run\\tc2_gpu\\results\\CB42114031E6A8E48F46DB4C08D89B06AEBD2422507FFC5EB755DC2EC6AC315B",
+      "predictions_sha256": "7BCC8F31CB747864642318CACD6204AAA89F685FEB5A9335B33471C7B93B67DE",
+      "samples_sha256": "879F70726C4ABFF1E73A8B0A76C8A6C93444D718B47E355CAC0E5C9119D56215",
+      "metrics_sha256": "44AD2FBEB0827731B9B4F8745D38DAA273F91000009DBAF2DDD9FC19792FF27F"
+    },
+    {
+      "run_key": "B0_mvtec_ad_cable_patchcore_s17_n100_AE108605F492",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_151040_d90ef21c\\remote\\page_002\\run\\tc2_gpu\\results\\16C4BA8F1585440D786AC105B67886155230608AC10C57F49589C192A91BA1F9",
+      "predictions_sha256": "7C53E97D5128F65E5FD20CEE701926E00FEC3C1C2094CD74CCC2CE7DCE98C46D",
+      "samples_sha256": "879F70726C4ABFF1E73A8B0A76C8A6C93444D718B47E355CAC0E5C9119D56215",
+      "metrics_sha256": "C956337A09803079B630F005589351C722BD4ECE332BCB057DE865EA0105D6CF"
+    },
+    {
+      "run_key": "B0_mvtec_ad_capsule_padim_s17_n100_5F1B72017297",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_151040_d90ef21c\\remote\\page_003\\run\\tc2_gpu\\results\\3E8ED3B16690ABD54DDC02DA1E20AF3B8035672C96CD259875A5DC79AE97C802",
+      "predictions_sha256": "DD0A5B34CEC51166242C1B5A30A4E2F3FFD50DB99215F2BDA21E638AFD8FE836",
+      "samples_sha256": "77B14C0054F21D786B49C27FF9271A5A35AB7AE0BC60922A26A77183CF82216C",
+      "metrics_sha256": "3F3C6EA43AC150AB157A6E3F09B6CE753AABDE22FFE7F3F227259286E61BCAB2"
+    },
+    {
+      "run_key": "B0_mvtec_ad_capsule_patchcore_s17_n100_55DB51B64838",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_151040_d90ef21c\\remote\\page_003\\run\\tc2_gpu\\results\\9A2CE527556D6C1752EF9C10D1CC48FDFC38A53B07F7E31F6849224BA81890E9",
+      "predictions_sha256": "D1556EB55E6EBBAD69800056C99C6A14884E734587C1D30653B549C571E23B8C",
+      "samples_sha256": "77B14C0054F21D786B49C27FF9271A5A35AB7AE0BC60922A26A77183CF82216C",
+      "metrics_sha256": "6588DAE024166FB7098CC4ACEB2511EB8322D09FE306F42C09D554D39F44E71F"
+    },
+    {
+      "run_key": "B0_mvtec_ad_screw_padim_s17_n100_287B561ACFB1",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_151040_d90ef21c\\remote\\page_004\\run\\tc2_gpu\\results\\4A5EA82C401E3E62FD81A65DBE8E9991E53D005D73B7B728F35B944AAE07D9FF",
+      "predictions_sha256": "835465E75062B1617CE942D6BEDEACA15D90E051B0EFBE19AE2309A549D859CA",
+      "samples_sha256": "BFB34A26AC8650BDD07AC25C7D391B78DA47B537936214DEEA69E69C20E7301E",
+      "metrics_sha256": "D99DA134E48F791BAD5C2737D7CC1B4E48826D9C0EBC6BD74FE825B49DE84823"
+    },
+    {
+      "run_key": "B0_mvtec_ad_screw_patchcore_s17_n100_D657B3B6C4C1",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_151040_d90ef21c\\remote\\page_004\\run\\tc2_gpu\\results\\401C674A86B46820422DC2B711869DCC0E26C86F9129B564EB61E68ED8F64AA6",
+      "predictions_sha256": "E48BD2B45ABCA91056DEEC133B7BB6C92282471A9B7F99AEA1B9E14CB9BA2133",
+      "samples_sha256": "BFB34A26AC8650BDD07AC25C7D391B78DA47B537936214DEEA69E69C20E7301E",
+      "metrics_sha256": "1099239E1FDFEEFAA1BF90CD609A220FB889CBA3B9FD53AE7EA5E2EA28FB46ED"
+    },
+    {
+      "run_key": "B0_mvtec_ad_tile_padim_s17_n100_988C8D661753",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_151040_d90ef21c\\remote\\page_005\\run\\tc2_gpu\\results\\8B47DED8DAD55C60870EA8BF7A382CE35EC680EA0777893D18344AE6666D95F1",
+      "predictions_sha256": "FFF4E7DFE9AE7B9A41B9855DB1703490C17D70F0A71E96AB5ECEE83577DDAD72",
+      "samples_sha256": "03FA1D6A1518B5F5A96EF58A38FE8B48F4D126B7D911379251A5DDE3DF270E30",
+      "metrics_sha256": "4DCE912FF0F34FD85D0933F34140798697516CBFF2729B4BF8BF2050C4DC9C65"
+    },
+    {
+      "run_key": "B0_mvtec_ad_tile_patchcore_s17_n100_71576E39ABDF",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_151040_d90ef21c\\remote\\page_005\\run\\tc2_gpu\\results\\977BB800ADCACF1CEA1688C8A954941626AD1B56C60694E6AFB63A0C87AD9163",
+      "predictions_sha256": "974D3F23ED104F8A08C85F7FED463D08C32F49D275E092D5DCF4B1840D6BF7D4",
+      "samples_sha256": "03FA1D6A1518B5F5A96EF58A38FE8B48F4D126B7D911379251A5DDE3DF270E30",
+      "metrics_sha256": "23326AB233AC3502ECEC0591AD1CD767BD8D0908267CCF20E1F5A254E74D75C6"
+    },
+    {
+      "run_key": "B0_mvtec_ad_wood_padim_s17_n100_4A80A8A14AE8",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_151040_d90ef21c\\remote\\page_006\\run\\tc2_gpu\\results\\CC2F26ACAB3FA73BC68F42B15FA4FBEEDC511EB37605B97E2E94F4A494D4713B",
+      "predictions_sha256": "D8F3E6172FCE016ECEF249F6999FDE11F558F1E42BA6C867A3DE2BB1E9B2FB75",
+      "samples_sha256": "A43137CE68AE541E060F3D61FE1775FE2B1EC342A96947209EDD0867A5AC20CF",
+      "metrics_sha256": "01A0ACA848AD42B48DADF0E0B15EA0EB09F66A5F94BF53B15D36118EB6F61E7D"
+    },
+    {
+      "run_key": "B0_mvtec_ad_wood_patchcore_s17_n100_468C39576EED",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_151040_d90ef21c\\remote\\page_006\\run\\tc2_gpu\\results\\BCD4D96DEC9ABC3802D6995CD6C3B5DD2854FE7B5C863C73A583C89DFFC9D50D",
+      "predictions_sha256": "768CE976BC21FD8C5993ACDCD68CD09BC190C31280C3FF4ADF0CE994E41F5411",
+      "samples_sha256": "A43137CE68AE541E060F3D61FE1775FE2B1EC342A96947209EDD0867A5AC20CF",
+      "metrics_sha256": "93979CE4F05A06EAF2269B9A96619ECD87968AD6EB2F01736289FAD5848559C6"
+    },
+    {
+      "run_key": "R0_mvtec_ad_bottle_patchcore_s29_n100_D49528C13187",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_181750_bde0104b\\remote\\page_001\\run\\tc2_gpu\\results\\01FB51B130793C454D94E89353050A402D8DD0AB52A886DA660754343D7D3812",
+      "predictions_sha256": "A95D4D46DD38C73325C6FF61250AA3ABC1F740902F4CF5FA598D2BB6A8E5969F",
+      "samples_sha256": "FC3B28179770256BAB94BFA1F50036040B80C0A976404FB3CEF05BB211DA9D1C",
+      "metrics_sha256": "CA43044DD0D472F054764263C0BECF9BAA1D36A6DC3CF34EA6A7CE74A5502A1A"
+    },
+    {
+      "run_key": "R0_mvtec_ad_bottle_patchcore_s43_n100_8026690C6BED",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_181750_bde0104b\\remote\\page_001\\run\\tc2_gpu\\results\\F3E4490C3C95E9711A2F7A6F83F0C7CB87801130F63EBD39E737E26B1551DBAD",
+      "predictions_sha256": "25FF50DD691EDFD3FE9E10DC36765EC6821A4499BA9F65BAD7FA60D306836E0A",
+      "samples_sha256": "9FB536777475FFA3B105DDD8B2B003D15ACAED80932A9BE893B1E0C4F9BAA733",
+      "metrics_sha256": "04068A891587EFBB5F7B539AF93521BDF2A6B8CA2B74473790A3ECC2D3F955B6"
+    },
+    {
+      "run_key": "R0_mvtec_ad_cable_patchcore_s29_n100_F081468F2C49",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_181750_bde0104b\\remote\\page_002\\run\\tc2_gpu\\results\\0DF892A1EE2F1159B38A15FA7D3F62F7EC4BB2A361641C5CB8E2F46BD71F689C",
+      "predictions_sha256": "F7DFEF7BB85117AB39B23178B34F452FCC512980EF5258C1863163C7EE848C08",
+      "samples_sha256": "39C1C51DCF76D56314DFB79BDBF1F8A1A2F918A72C2C33A4454DFE4F3F4E3753",
+      "metrics_sha256": "67C30A130B9A815955B1E09EF1B775375422C7902E75B5B523C7761096516025"
+    },
+    {
+      "run_key": "R0_mvtec_ad_cable_patchcore_s43_n100_4CEC5409E8CD",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_181750_bde0104b\\remote\\page_002\\run\\tc2_gpu\\results\\6C2810BECCE86F638CF7AED51527E6F64EE0CA05BA196373D0BFCC8C2A04D6A6",
+      "predictions_sha256": "410F30227CA1FCD0624239AC5BCA6E7C32ABFE05A3617BC042F3EBFBAEDC4B7C",
+      "samples_sha256": "09B5B0BBF70869C0864C3272644AE158F2CB5FCBC19A42106ABC82E933DBB0C3",
+      "metrics_sha256": "988998402B7A15F9220A2C2B62592139C9152D3FB15991E31919D61E6912B847"
+    },
+    {
+      "run_key": "R0_mvtec_ad_capsule_patchcore_s29_n100_99227661E967",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_181750_bde0104b\\remote\\page_003\\run\\tc2_gpu\\results\\084651833BF242B8B5D86FCC6C199321760812E5C0500C227D27A3A8705ACE93",
+      "predictions_sha256": "E74F160B511F47A94D6CEFE153F96BA20964E7657C116ADF9E830AB8F67826E0",
+      "samples_sha256": "6977B55C12457D5D0506507CA9A1BEF786F8802F1F9F00A3BD3AC86B2A6935BB",
+      "metrics_sha256": "66B19A0AE13AFA21FA5D2F72A9179FFB1F3F41F4F6028D8234AFFEBFFDFBD480"
+    },
+    {
+      "run_key": "R0_mvtec_ad_capsule_patchcore_s43_n100_9A3A68E2D4FC",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_181750_bde0104b\\remote\\page_003\\run\\tc2_gpu\\results\\149F4616F7019E1D03A93A844F4E0FF49690F36770D7D271C4B68E357A141AD5",
+      "predictions_sha256": "9430A200FBBCF9145252E2C698B63181369BE10E0E5C5CD9139F248E0449974D",
+      "samples_sha256": "C9F83AFA6A6F9FB851BC962FABA41B3CBFDBDA663BB88C406103CEE3BC6631A9",
+      "metrics_sha256": "7C2BCCFE69849554A0E1CE6F62CBAED2F771F0996A875215816E78818E3CE3C9"
+    },
+    {
+      "run_key": "R0_mvtec_ad_screw_patchcore_s29_n100_BAEC4291BE93",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_181750_bde0104b\\remote\\page_004\\run\\tc2_gpu\\results\\3AEC35FB2C9F3842CED823280520F442210EF9D88659148D1311A68F5105F028",
+      "predictions_sha256": "CF8868A2C47C8401EB91ACF4A6689741C9F0E1929C6BF23273D381EE697DBFDA",
+      "samples_sha256": "6E94E4B046F43C62C14AA620A355F46C2FBCE397F6DE414CB177E46EF89843A2",
+      "metrics_sha256": "3EA79F566BDA38FAF7FB5C410122B94DA6B7202FB7C7FD67AF021954DA453154"
+    },
+    {
+      "run_key": "R0_mvtec_ad_screw_patchcore_s43_n100_8C620CBF229D",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_181750_bde0104b\\remote\\page_004\\run\\tc2_gpu\\results\\1D106DDD21BFEA232FA0A6106066EE762DDBDDC18FFC28DC1ADD0F2DA63D9154",
+      "predictions_sha256": "B186F8AEEC755E0FE897751DD652E25B32F4A568F1575989FDEC05A3EE1F1013",
+      "samples_sha256": "B77FE04EC4877E65E6E25BE4F9BA362A394A4E6B5C7989CC0D4A9E2E30DD68EF",
+      "metrics_sha256": "D6B826557BE953655C8AC484B3BEAA09D8BC564AC1992A218CB3E2A8B4A5900F"
+    },
+    {
+      "run_key": "R0_mvtec_ad_tile_patchcore_s29_n100_5B04C7470E20",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_181750_bde0104b\\remote\\page_005\\run\\tc2_gpu\\results\\A822479C6A1AC9EA52DF96F845791569ECA2F60140219BFA3B04ECB770268E7A",
+      "predictions_sha256": "0D90200ECB557060A86018B4282469FCEE61FB9FBC182B9675EFD3F8516D0788",
+      "samples_sha256": "A908FF41456F5700E66EA9E96EC27E0B1D2687FD56018C3E7F908B394C5E0D5B",
+      "metrics_sha256": "92E402F5952E43C0FA06054E800C5B4E3954F0A07D90D4DC985C33AC0971E3B6"
+    },
+    {
+      "run_key": "R0_mvtec_ad_tile_patchcore_s43_n100_A2497C55E1CA",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_181750_bde0104b\\remote\\page_005\\run\\tc2_gpu\\results\\D6CA934C0B06A05FDE89337CE29948B1B6B5181D32AA6764EE1A47B3E8583DB7",
+      "predictions_sha256": "B9E1F38BC7FC59B0A93DF1F4F2FDF368432A8E03B01B62F1DB5F0A48327120CF",
+      "samples_sha256": "E71BAFC8D8BC4727AC715D688F27B8997AED8803D8B32C56927336ABB23A1A06",
+      "metrics_sha256": "8A10ADAAF2393E3BE5C9437FEAD52FB6FD3568CA38B85A6A75341BC600C3B074"
+    },
+    {
+      "run_key": "R0_mvtec_ad_wood_patchcore_s29_n100_43A82BC3ABBB",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_181750_bde0104b\\remote\\page_006\\run\\tc2_gpu\\results\\AD55EE2E36BE5BE967912DD6FC859E99E4C4F650AA378066DDE27D3B910F21C2",
+      "predictions_sha256": "86B098DA169FA40DB21C46B3F5C1600073A3FD0062DA916979F1E0CED07A7B6B",
+      "samples_sha256": "478A165F94D350A0CF1F87186F5F21800FAFA3DE154C40D307F77F3B5701427A",
+      "metrics_sha256": "182F22D376AB8939775E80F164B7A31A29DF047ABFE25A5A3849ADD8C62ED021"
+    },
+    {
+      "run_key": "R0_mvtec_ad_wood_patchcore_s43_n100_9F7E9EF07BC6",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_181750_bde0104b\\remote\\page_006\\run\\tc2_gpu\\results\\D0A5715778C02EBE06D2B343B3D19BE35C00174E2BAEE5617601B94B022D93E2",
+      "predictions_sha256": "527BD64940012BBEAE269E474A90DD636BCF63548EB3A33407453921A38DD6B2",
+      "samples_sha256": "66C4521A98BEA6FCAC4B729F9E9969B331AFD60E8E4368F66289494510804752",
+      "metrics_sha256": "A808AD671AB258146E52D01F492D5A346D1C8ECBE4989A6673800732F5A615F5"
+    },
+    {
+      "run_key": "B0_LOCO_mvtec_loco_juice_bottle_padim_s17_n100_B8766FFB4CD0",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_205219_dee60b36\\remote\\page_001\\run\\tc2_gpu\\results\\DF9CA709E9592160A7F10916724F6D62B1FEE339CDC115482EF0DDFA4137C53B",
+      "predictions_sha256": "DB929532A2D37CEBA873B56CAE59F2841086BF8AB66F77FBA9BB40C608EAB289",
+      "samples_sha256": "855652C3D2207E9BBCE84F3F72230702F8A8AFD1B0638DD4EB551FA653B10123",
+      "metrics_sha256": "031286435310BD38BD86F40A131F97C7C92D20ABE40EBE829BF6856D414C4C85"
+    },
+    {
+      "run_key": "B0_LOCO_mvtec_loco_juice_bottle_patchcore_s17_n100_F914F6B6532D",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_205219_dee60b36\\remote\\page_001\\run\\tc2_gpu\\results\\750606098934F3B43A0A6880ED6EDCB1B1650FF60FAD7054B9581126989950F0",
+      "predictions_sha256": "412FB1820C75C6BB73980895328DC76D35F5D8C82F8041279369B898467A8093",
+      "samples_sha256": "855652C3D2207E9BBCE84F3F72230702F8A8AFD1B0638DD4EB551FA653B10123",
+      "metrics_sha256": "75336D24A65A85DA981110FFCADDDC0795D9AC2B2B7E86995220D8EA7FBA1EEE"
+    },
+    {
+      "run_key": "B0_LOCO_mvtec_loco_screw_bag_padim_s17_n100_8D20C5E59478",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_205219_dee60b36\\remote\\page_002\\run\\tc2_gpu\\results\\429624EAB9CC777EA276CCAB681C1CBC2ACF53FFC6CC3FF3D0318298DFA84EE5",
+      "predictions_sha256": "1AD738DB24935CAAA8473E2EC4E3AC0E848B0DD7FC110B3352277ECC335C03C4",
+      "samples_sha256": "ACFC51069C52A1F5B7D31F4EE242E75C314A0DCCFE203B7BC46B76882C507281",
+      "metrics_sha256": "DADCCB11414C22CBDAD88142CD5EA0FD14CD37C3E1C0E1291FEEDD36A911FC2B"
+    },
+    {
+      "run_key": "B0_LOCO_mvtec_loco_screw_bag_patchcore_s17_n100_DC6E31A70CE5",
+      "directory": "\\\\?\\C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_205219_dee60b36\\remote\\page_002\\run\\tc2_gpu\\results\\730104C64A1BBD9925CD28059985C862B11CFA22418BDF971743A5125BB0E7E7",
+      "predictions_sha256": "2D957D8200280B80880EC3345D44F118DAFF2E6E6571ECF3A2C574F74D8B23C3",
+      "samples_sha256": "ACFC51069C52A1F5B7D31F4EE242E75C314A0DCCFE203B7BC46B76882C507281",
+      "metrics_sha256": "7B47566D1F688BC72731239B57FEF35908C20BBAE77E1132F13ED3C0F040AB1B"
+    }
+  ],
+  "visual_review": {
+    "F2_cases_01": "passed",
+    "F2_cases_02": "passed",
+    "F2_cases_03": "passed",
+    "F2_cases_04": "passed",
+    "method": "Original 2160x3330 PNGs inspected at original detail; all titles, four columns, row score/threshold annotations and footnotes visible without collision or clipping.",
+    "display_rounding_note": "Case 011 rounds its distinct PatchCore native score and threshold to 1.49; the actual saved score is higher. Figure footnote explicitly identifies display rounding and full-precision source data."
+  },
+  "limitations": [
+    "Original raw images/masks for nonselected anomalies are not present locally. All 982 area entries were checked for frozen anomaly membership, accepted original dimensions, integer fraction consistency, and deterministic category-local quartiles; actual mask-pixel areas were independently recomputed only for the 10 selected anomalous images.",
+    "The selected 10 anomalous examples each have one listed GT mask. All listed masks were verified and unioned, but this selection does not independently exercise a multiple-mask LOCO example.",
+    "Native PatchCore image scores were verified against accepted saved score vectors, not recomputed from original feature-bank neighborhoods.",
+    "No pixel AUROC/AP metrics were recomputed. No feature cache, model fitting, prediction, SSH, or scheduler operation was performed.",
+    "This audit covers F2 actual visual review and F4 case/score/size lineage. Root audit independently covers other plots and PDF typography; overall step-8 acceptance is separate."
+  ],
+  "pixel_metrics_recomputed": false,
+  "actual_tc2_connections": 0,
+  "actual_model_calls": 0,
+  "source_files_modified": []
+}

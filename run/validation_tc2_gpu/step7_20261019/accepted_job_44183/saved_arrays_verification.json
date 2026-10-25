@@ -1,0 +1,714 @@
+{
+  "status": "passed",
+  "job_id": "44183",
+  "stage_id": "C1R",
+  "snapshot_partial": false,
+  "stage_accepted": false,
+  "stage_acceptance": "pending_root_acceptance",
+  "stage_complete": true,
+  "created_utc": "2026-10-19T10:45:52.733640+00:00",
+  "audit_script_sha256": "AF7CFF581AD63E174284C292A572D012B722FCF8A5E10C62C0EAA46505454656",
+  "design_sha256": "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75",
+  "index_sha256": "C0FAF08B622D6751572746F5C46AB4B7747AF579EC3ED82DA88290205AC45BD9",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "results_checked": 4,
+  "maps_checked": 838,
+  "map_derived_score_vectors_checked": 32,
+  "results_array_values_rechecked": 2,
+  "map_arrays_rechecked": 448,
+  "results_previous_array_audit_reused": 2,
+  "reused_run_keys": [
+    "C1R_mvtec_ad_cable_patchcore_s43_n100_92ED23FC2EE2",
+    "C1R_mvtec_ad_cable_patchcore_s29_n100_9814BB7B44E1"
+  ],
+  "prior_report_sha256": "5377BF465475A7D743ABB83CDAC4B0C7CC928C3C377C400042B03AB8CC085D53",
+  "reuse_policy": "Reuse only after all NPZ/sample/config/evidence/artifact-manifest/frozen-manifest/cache-metadata hashes and result identity match exactly.",
+  "weighted_patchcore_native_vectors_checked_for_finite_dtype_shape_only": 8,
+  "comparison_tolerance": {
+    "absolute": 1e-05,
+    "relative": 0.0001,
+    "source": "Accepted validate_predictions contract"
+  },
+  "limitations": [
+    "Raw image/mask bytes and cache NPY layers were not downloaded; original sizes match hash-bound cache metadata.",
+    "Pixel metrics are covered by remote full verification and were not locally recomputed.",
+    "PatchCore weighted native scores cannot be reconstructed from saved maps alone; dtype, shape and finiteness were checked."
+  ],
+  "results": [
+    {
+      "run_key": "C1R_mvtec_ad_cable_patchcore_s43_n100_92ED23FC2EE2",
+      "result_identity_sha256": "BEF3B620FF4321001042C697AB2C205C549949EBA3408B0A24BAE07457F8FF91",
+      "predictions_sha256": "9B238DFE0A33E5831832FE4098B282A4B0FF11B4DA408CAA0469FEF43593FA9B",
+      "samples_sha256": "09B5B0BBF70869C0864C3272644AE158F2CB5FCBC19A42106ABC82E933DBB0C3",
+      "configuration_file_sha256": "C177EA4B5BEFE88D42F87DEE6F74C8587835D131ABABA50B4687D39948811198",
+      "evidence_sha256": "09DA087B77B4DB18DF231AB23AACEB04D8DE09BC745FBD43C579BBAC1DCBF5BE",
+      "artifact_manifest_sha256": "19CE8470560669545C0CD3C2127C3A3836BF47C7F83DFCE52247C40829A363C3",
+      "frozen_manifest_sha256": "E188D05BD246C29503A35DBAF49DBCC326A35079ECC07973AE1A7BCCFD08FD95",
+      "cache_metadata_sha256": "646DF39171F6682E394975B2242D8449B82BA7CB3777F1474453D2067CD87E87",
+      "configuration_matches_frozen_fit": true,
+      "roles": {
+        "dev": {
+          "maps_dtype": "float32",
+          "maps_shape": [
+            45,
+            256,
+            256
+          ],
+          "maps_finite": true,
+          "maps_minimum": 0.7627365589141846,
+          "maps_maximum": 2.704751491546631,
+          "maps_negative_values": 0,
+          "sample_metadata_matches": true,
+          "scores": {
+            "native": {
+              "dtype": "float32",
+              "shape": [
+                45
+              ],
+              "finite": true,
+              "minimum": 2.226155996322632,
+              "maximum": 2.6260273456573486,
+              "map_rederivation": "Not applicable: weighted native score also depends on nearest-neighbor support."
+            },
+            "max": {
+              "dtype": "float32",
+              "shape": [
+                45
+              ],
+              "finite": true,
+              "minimum": 2.2597005367279053,
+              "maximum": 2.704751491546631,
+              "map_rederivation": "passed",
+              "max_absolute_error": 0.0,
+              "max_tolerance_fraction": 0.0
+            },
+            "top_0.001": {
+              "dtype": "float32",
+              "shape": [
+                45
+              ],
+              "finite": true,
+              "minimum": 2.2466421127319336,
+              "maximum": 2.6726982593536377,
+              "top_pixel_count": 66,
+              "map_rederivation": "passed",
+              "max_absolute_error": 3.251162441486599e-07,
+              "max_tolerance_fraction": 0.001320621088403949
+            },
+            "top_0.01": {
+              "dtype": "float32",
+              "shape": [
+                45
+              ],
+              "finite": true,
+              "minimum": 2.1802170276641846,
+              "maximum": 2.4811058044433594,
+              "top_pixel_count": 656,
+              "map_rederivation": "passed",
+              "max_absolute_error": 3.1946635825619296e-07,
+              "max_tolerance_fraction": 0.0013110031218883866
+            },
+            "top_0.05": {
+              "dtype": "float32",
+              "shape": [
+                45
+              ],
+              "finite": true,
+              "minimum": 2.061962127685547,
+              "maximum": 2.2869720458984375,
+              "top_pixel_count": 3277,
+              "map_rederivation": "passed",
+              "max_absolute_error": 2.2983347314209368e-07,
+              "max_tolerance_fraction": 0.0009891631489623008
+            }
+          }
+        },
+        "test": {
+          "maps_dtype": "float32",
+          "maps_shape": [
+            150,
+            256,
+            256
+          ],
+          "maps_finite": true,
+          "maps_minimum": 0.8415740132331848,
+          "maps_maximum": 4.158514022827148,
+          "maps_negative_values": 0,
+          "sample_metadata_matches": true,
+          "scores": {
+            "native": {
+              "dtype": "float32",
+              "shape": [
+                150
+              ],
+              "finite": true,
+              "minimum": 2.180619478225708,
+              "maximum": 3.9434447288513184,
+              "map_rederivation": "Not applicable: weighted native score also depends on nearest-neighbor support."
+            },
+            "max": {
+              "dtype": "float32",
+              "shape": [
+                150
+              ],
+              "finite": true,
+              "minimum": 2.232358455657959,
+              "maximum": 4.158514022827148,
+              "map_rederivation": "passed",
+              "max_absolute_error": 0.0,
+              "max_tolerance_fraction": 0.0
+            },
+            "top_0.001": {
+              "dtype": "float32",
+              "shape": [
+                150
+              ],
+              "finite": true,
+              "minimum": 2.2174108028411865,
+              "maximum": 4.133251667022705,
+              "top_pixel_count": 66,
+              "map_rederivation": "passed",
+              "max_absolute_error": 4.0097670117589246e-07,
+              "max_tolerance_fraction": 0.0012890964092966213
+            },
+            "top_0.01": {
+              "dtype": "float32",
+              "shape": [
+                150
+              ],
+              "finite": true,
+              "minimum": 2.163700580596924,
+              "maximum": 3.945183515548706,
+              "top_pixel_count": 656,
+              "map_rederivation": "passed",
+              "max_absolute_error": 4.3067990285194924e-07,
+              "max_tolerance_fraction": 0.0015383482555885748
+            },
+            "top_0.05": {
+              "dtype": "float32",
+              "shape": [
+                150
+              ],
+              "finite": true,
+              "minimum": 2.065483808517456,
+              "maximum": 3.553521156311035,
+              "top_pixel_count": 3277,
+              "map_rederivation": "passed",
+              "max_absolute_error": 3.464599553915093e-07,
+              "max_tolerance_fraction": 0.001320218908973661
+            }
+          }
+        }
+      },
+      "array_validation_reused": {
+        "prior_report_sha256": "5377BF465475A7D743ABB83CDAC4B0C7CC928C3C377C400042B03AB8CC085D53",
+        "all_input_bindings_match": true,
+        "prior_report": "\\\\?\\C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step7_20261019\\pending_job_44183\\attempt_20261019_183855_114d8ec2\\saved_arrays_verification.json"
+      }
+    },
+    {
+      "run_key": "C1R_mvtec_ad_cable_patchcore_s29_n100_9814BB7B44E1",
+      "result_identity_sha256": "DA0068FF02325F0BDB12999E87D9CC13A0B8DA0D8B1B85FE4400EC6ADBD20D56",
+      "predictions_sha256": "93FEC79D49ABDEF511B3482EB572D9B0B42501D33A17B84D5827F6FABAD075F6",
+      "samples_sha256": "39C1C51DCF76D56314DFB79BDBF1F8A1A2F918A72C2C33A4454DFE4F3F4E3753",
+      "configuration_file_sha256": "A401F8DD68180F797C19E7543F11847B7994C4A4821ECF7585E9744968D8B0BC",
+      "evidence_sha256": "F33CCF64B254868FC89CAD44ECD886FF34E9DFF1D6A95A027F3CA1F0BDF24ED7",
+      "artifact_manifest_sha256": "949D5EA939EB26C3ECA81BE1A6E706133893E15E1B311EC5026B84CAAA53E5AC",
+      "frozen_manifest_sha256": "E188D05BD246C29503A35DBAF49DBCC326A35079ECC07973AE1A7BCCFD08FD95",
+      "cache_metadata_sha256": "646DF39171F6682E394975B2242D8449B82BA7CB3777F1474453D2067CD87E87",
+      "configuration_matches_frozen_fit": true,
+      "roles": {
+        "dev": {
+          "maps_dtype": "float32",
+          "maps_shape": [
+            45,
+            256,
+            256
+          ],
+          "maps_finite": true,
+          "maps_minimum": 0.8191668391227722,
+          "maps_maximum": 2.809936046600342,
+          "maps_negative_values": 0,
+          "sample_metadata_matches": true,
+          "scores": {
+            "native": {
+              "dtype": "float32",
+              "shape": [
+                45
+              ],
+              "finite": true,
+              "minimum": 2.2515296936035156,
+              "maximum": 2.7209866046905518,
+              "map_rederivation": "Not applicable: weighted native score also depends on nearest-neighbor support."
+            },
+            "max": {
+              "dtype": "float32",
+              "shape": [
+                45
+              ],
+              "finite": true,
+              "minimum": 2.251333713531494,
+              "maximum": 2.809936046600342,
+              "map_rederivation": "passed",
+              "max_absolute_error": 0.0,
+              "max_tolerance_fraction": 0.0
+            },
+            "top_0.001": {
+              "dtype": "float32",
+              "shape": [
+                45
+              ],
+              "finite": true,
+              "minimum": 2.2424674034118652,
+              "maximum": 2.7887139320373535,
+              "top_pixel_count": 66,
+              "map_rederivation": "passed",
+              "max_absolute_error": 2.7454260642656436e-07,
+              "max_tolerance_fraction": 0.0010906254928208573
+            },
+            "top_0.01": {
+              "dtype": "float32",
+              "shape": [
+                45
+              ],
+              "finite": true,
+              "minimum": 2.1747446060180664,
+              "maximum": 2.6184732913970947,
+              "top_pixel_count": 656,
+              "map_rederivation": "passed",
+              "max_absolute_error": 3.2128357307925626e-07,
+              "max_tolerance_fraction": 0.0012958666834376588
+            },
+            "top_0.05": {
+              "dtype": "float32",
+              "shape": [
+                45
+              ],
+              "finite": true,
+              "minimum": 2.0580432415008545,
+              "maximum": 2.315016746520996,
+              "top_pixel_count": 3277,
+              "map_rederivation": "passed",
+              "max_absolute_error": 2.486406756041504e-07,
+              "max_tolerance_fraction": 0.0011521578538152809
+            }
+          }
+        },
+        "test": {
+          "maps_dtype": "float32",
+          "maps_shape": [
+            150,
+            256,
+            256
+          ],
+          "maps_finite": true,
+          "maps_minimum": 0.7576520442962646,
+          "maps_maximum": 4.1777424812316895,
+          "maps_negative_values": 0,
+          "sample_metadata_matches": true,
+          "scores": {
+            "native": {
+              "dtype": "float32",
+              "shape": [
+                150
+              ],
+              "finite": true,
+              "minimum": 2.168860912322998,
+              "maximum": 3.975442409515381,
+              "map_rederivation": "Not applicable: weighted native score also depends on nearest-neighbor support."
+            },
+            "max": {
+              "dtype": "float32",
+              "shape": [
+                150
+              ],
+              "finite": true,
+              "minimum": 2.2724647521972656,
+              "maximum": 4.1777424812316895,
+              "map_rederivation": "passed",
+              "max_absolute_error": 0.0,
+              "max_tolerance_fraction": 0.0
+            },
+            "top_0.001": {
+              "dtype": "float32",
+              "shape": [
+                150
+              ],
+              "finite": true,
+              "minimum": 2.2537896633148193,
+              "maximum": 4.15076208114624,
+              "top_pixel_count": 66,
+              "map_rederivation": "passed",
+              "max_absolute_error": 4.226511176597114e-07,
+              "max_tolerance_fraction": 0.0016063838735925838
+            },
+            "top_0.01": {
+              "dtype": "float32",
+              "shape": [
+                150
+              ],
+              "finite": true,
+              "minimum": 2.189363956451416,
+              "maximum": 3.9555368423461914,
+              "top_pixel_count": 656,
+              "map_rederivation": "passed",
+              "max_absolute_error": 4.390390908604047e-07,
+              "max_tolerance_fraction": 0.0013435020176361585
+            },
+            "top_0.05": {
+              "dtype": "float32",
+              "shape": [
+                150
+              ],
+              "finite": true,
+              "minimum": 2.0484209060668945,
+              "maximum": 3.557088851928711,
+              "top_pixel_count": 3277,
+              "map_rederivation": "passed",
+              "max_absolute_error": 4.0000773493531483e-07,
+              "max_tolerance_fraction": 0.0013545558381989442
+            }
+          }
+        }
+      },
+      "array_validation_reused": {
+        "prior_report_sha256": "5377BF465475A7D743ABB83CDAC4B0C7CC928C3C377C400042B03AB8CC085D53",
+        "all_input_bindings_match": true,
+        "prior_report": "\\\\?\\C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step7_20261019\\pending_job_44183\\attempt_20261019_183855_114d8ec2\\saved_arrays_verification.json"
+      }
+    },
+    {
+      "run_key": "C1R_mvtec_ad_screw_patchcore_s43_n100_DDCD9BC45E32",
+      "result_identity_sha256": "97E2260986D2A6453A55E962418ADA8F1E86917CF7D63B5227C2F8DD8E6464A2",
+      "predictions_sha256": "8241971A45A72C3B62A0B36666BD60179E57C68A9719F67B2FDA4EBAD86ACB45",
+      "samples_sha256": "B77FE04EC4877E65E6E25BE4F9BA362A394A4E6B5C7989CC0D4A9E2E30DD68EF",
+      "configuration_file_sha256": "0E3E0FF30A7CE75C50FD2674E92E5F7AC4D1F77CACF0D682461C9C46ED583714",
+      "evidence_sha256": "B4DF2778AB798872C9A415EC88427972F1DFE257634E140311E7A76C8D8ACDFF",
+      "artifact_manifest_sha256": "5C743CFC71546276043B4510FEE10E66D11C88916A242BE17028AA8849DD0B69",
+      "frozen_manifest_sha256": "E209F4429C4056ECFA6F2DA82FAA9B5B3AE495EBFDBF94D5808C9676D8A99F9B",
+      "cache_metadata_sha256": "B131F425A2D9D0C4583DA65874E306267DDA853D133B155F8355638CFCC4453F",
+      "configuration_matches_frozen_fit": true,
+      "roles": {
+        "dev": {
+          "maps_dtype": "float32",
+          "maps_shape": [
+            64,
+            256,
+            256
+          ],
+          "maps_finite": true,
+          "maps_minimum": 0.3122466504573822,
+          "maps_maximum": 2.4498491287231445,
+          "maps_negative_values": 0,
+          "sample_metadata_matches": true,
+          "scores": {
+            "native": {
+              "dtype": "float32",
+              "shape": [
+                64
+              ],
+              "finite": true,
+              "minimum": 1.70462965965271,
+              "maximum": 2.4691884517669678,
+              "map_rederivation": "Not applicable: weighted native score also depends on nearest-neighbor support."
+            },
+            "max": {
+              "dtype": "float32",
+              "shape": [
+                64
+              ],
+              "finite": true,
+              "minimum": 1.568730354309082,
+              "maximum": 2.4498491287231445,
+              "map_rederivation": "passed",
+              "max_absolute_error": 0.0,
+              "max_tolerance_fraction": 0.0
+            },
+            "top_0.001": {
+              "dtype": "float32",
+              "shape": [
+                64
+              ],
+              "finite": true,
+              "minimum": 1.5490761995315552,
+              "maximum": 2.4204373359680176,
+              "top_pixel_count": 66,
+              "map_rederivation": "passed",
+              "max_absolute_error": 3.395658549898428e-07,
+              "max_tolerance_fraction": 0.0015098380131661447
+            },
+            "top_0.01": {
+              "dtype": "float32",
+              "shape": [
+                64
+              ],
+              "finite": true,
+              "minimum": 1.5032602548599243,
+              "maximum": 2.278827428817749,
+              "top_pixel_count": 656,
+              "map_rederivation": "passed",
+              "max_absolute_error": 2.891188715103965e-07,
+              "max_tolerance_fraction": 0.0015318595542763993
+            },
+            "top_0.05": {
+              "dtype": "float32",
+              "shape": [
+                64
+              ],
+              "finite": true,
+              "minimum": 1.402001976966858,
+              "maximum": 2.0056982040405273,
+              "top_pixel_count": 3277,
+              "map_rederivation": "passed",
+              "max_absolute_error": 1.8523457501196106e-07,
+              "max_tolerance_fraction": 0.0009783290090597393
+            }
+          }
+        },
+        "test": {
+          "maps_dtype": "float32",
+          "maps_shape": [
+            160,
+            256,
+            256
+          ],
+          "maps_finite": true,
+          "maps_minimum": 0.27149659395217896,
+          "maps_maximum": 2.6413204669952393,
+          "maps_negative_values": 0,
+          "sample_metadata_matches": true,
+          "scores": {
+            "native": {
+              "dtype": "float32",
+              "shape": [
+                160
+              ],
+              "finite": true,
+              "minimum": 1.7915149927139282,
+              "maximum": 2.586038112640381,
+              "map_rederivation": "Not applicable: weighted native score also depends on nearest-neighbor support."
+            },
+            "max": {
+              "dtype": "float32",
+              "shape": [
+                160
+              ],
+              "finite": true,
+              "minimum": 1.7600972652435303,
+              "maximum": 2.6413204669952393,
+              "map_rederivation": "passed",
+              "max_absolute_error": 0.0,
+              "max_tolerance_fraction": 0.0
+            },
+            "top_0.001": {
+              "dtype": "float32",
+              "shape": [
+                160
+              ],
+              "finite": true,
+              "minimum": 1.7428795099258423,
+              "maximum": 2.609537124633789,
+              "top_pixel_count": 66,
+              "map_rederivation": "passed",
+              "max_absolute_error": 3.215038415493865e-07,
+              "max_tolerance_fraction": 0.0015529234018123049
+            },
+            "top_0.01": {
+              "dtype": "float32",
+              "shape": [
+                160
+              ],
+              "finite": true,
+              "minimum": 1.6907027959823608,
+              "maximum": 2.43464732170105,
+              "top_pixel_count": 656,
+              "map_rederivation": "passed",
+              "max_absolute_error": 2.891188715103965e-07,
+              "max_tolerance_fraction": 0.0014453016978222023
+            },
+            "top_0.05": {
+              "dtype": "float32",
+              "shape": [
+                160
+              ],
+              "finite": true,
+              "minimum": 1.5584079027175903,
+              "maximum": 2.1459686756134033,
+              "top_pixel_count": 3277,
+              "map_rederivation": "passed",
+              "max_absolute_error": 1.8035998117227336e-07,
+              "max_tolerance_fraction": 0.0009501257987697867
+            }
+          }
+        }
+      }
+    },
+    {
+      "run_key": "C1R_mvtec_ad_screw_patchcore_s29_n100_0638518CE2D4",
+      "result_identity_sha256": "D9F4872D71D3335A186CF7D250FC10C2F8927EA7803E14319551AFFFACD2F6A4",
+      "predictions_sha256": "5C0FC975EE32E642B27E0E19AA7D04FEF01FF021FB4BBAF685F11C0E4274974E",
+      "samples_sha256": "6E94E4B046F43C62C14AA620A355F46C2FBCE397F6DE414CB177E46EF89843A2",
+      "configuration_file_sha256": "0005A5FB0E717814D686688F23FF6E6A32697C67E3BD45F087FBE3F93780DE7D",
+      "evidence_sha256": "8CD76A207B8ADC12F9E49B902F9A53E9F2E3D3541DC4B8A7B9D2C5CF5967E72E",
+      "artifact_manifest_sha256": "685D0AC0BC408DF11EAC01AD83FC4D66A331C989FFFCC515A2B2FD63EC0E862F",
+      "frozen_manifest_sha256": "E209F4429C4056ECFA6F2DA82FAA9B5B3AE495EBFDBF94D5808C9676D8A99F9B",
+      "cache_metadata_sha256": "B131F425A2D9D0C4583DA65874E306267DDA853D133B155F8355638CFCC4453F",
+      "configuration_matches_frozen_fit": true,
+      "roles": {
+        "dev": {
+          "maps_dtype": "float32",
+          "maps_shape": [
+            64,
+            256,
+            256
+          ],
+          "maps_finite": true,
+          "maps_minimum": 0.27804815769195557,
+          "maps_maximum": 2.4339306354522705,
+          "maps_negative_values": 0,
+          "sample_metadata_matches": true,
+          "scores": {
+            "native": {
+              "dtype": "float32",
+              "shape": [
+                64
+              ],
+              "finite": true,
+              "minimum": 1.7690865993499756,
+              "maximum": 2.427722930908203,
+              "map_rederivation": "Not applicable: weighted native score also depends on nearest-neighbor support."
+            },
+            "max": {
+              "dtype": "float32",
+              "shape": [
+                64
+              ],
+              "finite": true,
+              "minimum": 1.7786813974380493,
+              "maximum": 2.4339306354522705,
+              "map_rederivation": "passed",
+              "max_absolute_error": 0.0,
+              "max_tolerance_fraction": 0.0
+            },
+            "top_0.001": {
+              "dtype": "float32",
+              "shape": [
+                64
+              ],
+              "finite": true,
+              "minimum": 1.7574865818023682,
+              "maximum": 2.419712543487549,
+              "top_pixel_count": 66,
+              "map_rederivation": "passed",
+              "max_absolute_error": 3.3234104979129597e-07,
+              "max_tolerance_fraction": 0.0015103923014627525
+            },
+            "top_0.01": {
+              "dtype": "float32",
+              "shape": [
+                64
+              ],
+              "finite": true,
+              "minimum": 1.6351007223129272,
+              "maximum": 2.3524391651153564,
+              "top_pixel_count": 656,
+              "map_rederivation": "passed",
+              "max_absolute_error": 2.8493927750616876e-07,
+              "max_tolerance_fraction": 0.0013342933370784726
+            },
+            "top_0.05": {
+              "dtype": "float32",
+              "shape": [
+                64
+              ],
+              "finite": true,
+              "minimum": 1.479121446609497,
+              "maximum": 2.2038800716400146,
+              "top_pixel_count": 3277,
+              "map_rederivation": "passed",
+              "max_absolute_error": 2.5613445453487316e-07,
+              "max_tolerance_fraction": 0.0011518917252824658
+            }
+          }
+        },
+        "test": {
+          "maps_dtype": "float32",
+          "maps_shape": [
+            160,
+            256,
+            256
+          ],
+          "maps_finite": true,
+          "maps_minimum": 0.25449228286743164,
+          "maps_maximum": 2.8423027992248535,
+          "maps_negative_values": 0,
+          "sample_metadata_matches": true,
+          "scores": {
+            "native": {
+              "dtype": "float32",
+              "shape": [
+                160
+              ],
+              "finite": true,
+              "minimum": 1.8296180963516235,
+              "maximum": 2.7435965538024902,
+              "map_rederivation": "Not applicable: weighted native score also depends on nearest-neighbor support."
+            },
+            "max": {
+              "dtype": "float32",
+              "shape": [
+                160
+              ],
+              "finite": true,
+              "minimum": 1.777793288230896,
+              "maximum": 2.8423027992248535,
+              "map_rederivation": "passed",
+              "max_absolute_error": 0.0,
+              "max_tolerance_fraction": 0.0
+            },
+            "top_0.001": {
+              "dtype": "float32",
+              "shape": [
+                160
+              ],
+              "finite": true,
+              "minimum": 1.75662100315094,
+              "maximum": 2.8105340003967285,
+              "top_pixel_count": 66,
+              "map_rederivation": "passed",
+              "max_absolute_error": 3.756898823148447e-07,
+              "max_tolerance_fraction": 0.0015881339096249858
+            },
+            "top_0.01": {
+              "dtype": "float32",
+              "shape": [
+                160
+              ],
+              "finite": true,
+              "minimum": 1.6768712997436523,
+              "maximum": 2.577799081802368,
+              "top_pixel_count": 656,
+              "map_rederivation": "passed",
+              "max_absolute_error": 3.5399343900621716e-07,
+              "max_tolerance_fraction": 0.0015511905018889577
+            },
+            "top_0.05": {
+              "dtype": "float32",
+              "shape": [
+                160
+              ],
+              "finite": true,
+              "minimum": 1.530465006828308,
+              "maximum": 2.281215190887451,
+              "top_pixel_count": 3277,
+              "map_rederivation": "passed",
+              "max_absolute_error": 1.9502014070305052e-07,
+              "max_tolerance_fraction": 0.0010118124036802363
+            }
+          }
+        }
+      }
+    }
+  ]
+}

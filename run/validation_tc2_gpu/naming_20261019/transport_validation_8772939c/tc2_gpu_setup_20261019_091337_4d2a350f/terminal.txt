@@ -1,0 +1,9 @@
+TC2 GPU: Probe
+Local output: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\naming_20261019\transport_validation_8772939c\tc2_gpu_setup_20261019_091337_4d2a350f
+A submitted or running job is not a passed check. Passwords are not stored.
+Prepared 18 approved files; bundle SHA256=d60289a0c02c0bfcb2cf84f77d8592cde789f13b87c850e7db849df675adb472
+SIMULATED SSH ONLY: rendered commands saved; no remote action.
+SIMULATED TRANSFER/DOWNLOAD ONLY: no network.
+SIMULATED SSH ONLY: rendered commands saved; no remote action.
+Action finished. Read the relevant status JSON: step 2 requires all-mode step_2_complete=true; metrics require full-mode step_3_complete=true.
+Send this local output path back: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\naming_20261019\transport_validation_8772939c\tc2_gpu_setup_20261019_091337_4d2a350f\terminal.txt

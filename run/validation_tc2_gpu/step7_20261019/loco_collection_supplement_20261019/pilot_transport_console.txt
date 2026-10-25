@@ -1,0 +1,40 @@
+{
+    "status":  "passed",
+    "validation_root":  "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step7_20261019\\loco_collection_supplement_20261019\\pilot_transport_da691d84",
+    "rendered_shell_commands":  8,
+    "cases":  [
+                  {
+                      "name":  "RunPilot",
+                      "exit_code":  0,
+                      "status":  "passed"
+                  },
+                  {
+                      "name":  "CollectPilot",
+                      "exit_code":  0,
+                      "status":  "passed"
+                  },
+                  {
+                      "name":  "bad_path",
+                      "exit_code":  2,
+                      "status":  "passed"
+                  },
+                  {
+                      "name":  "bad_hash",
+                      "exit_code":  2,
+                      "status":  "passed"
+                  },
+                  {
+                      "name":  "oversize",
+                      "exit_code":  2,
+                      "status":  "passed"
+                  },
+                  {
+                      "name":  "duplicate",
+                      "exit_code":  2,
+                      "status":  "passed"
+                  }
+              ],
+    "validate_only":  "passed",
+    "actual_tc2_connections":  0,
+    "actual_slurm_submissions":  0
+}

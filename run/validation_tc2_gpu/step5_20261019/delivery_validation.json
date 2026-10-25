@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "rendered_shell_commands_parsed": 19,
+  "payload_files": 32,
+  "payload_hashes_match_current_sources": true,
+  "cases": [
+    {
+      "case": "absent",
+      "status": "passed",
+      "stub_submissions": 1,
+      "exit_code": 0
+    },
+    {
+      "case": "identical",
+      "status": "passed",
+      "stub_submissions": 1,
+      "exit_code": 0
+    },
+    {
+      "case": "unknown_source",
+      "status": "passed",
+      "stub_submissions": 0,
+      "exit_code": 2
+    },
+    {
+      "case": "missing_metric",
+      "status": "passed",
+      "stub_submissions": 0,
+      "exit_code": 1
+    },
+    {
+      "case": "failed_metric",
+      "status": "passed",
+      "stub_submissions": 0,
+      "exit_code": 2
+    },
+    {
+      "case": "failed_algorithm",
+      "status": "passed",
+      "stub_submissions": 0,
+      "exit_code": 2
+    },
+    {
+      "case": "changed_accepted_hash",
+      "status": "passed",
+      "stub_submissions": 0,
+      "exit_code": 2
+    },
+    {
+      "case": "compatibility_changed",
+      "status": "passed",
+      "stub_submissions": 0,
+      "exit_code": 2
+    },
+    {
+      "case": "bad_weight_hash",
+      "status": "passed",
+      "stub_submissions": 0,
+      "exit_code": 2
+    },
+    {
+      "case": "bad_bundle",
+      "status": "passed",
+      "stub_submissions": 0,
+      "exit_code": 2
+    },
+    {
+      "case": "submission_failure",
+      "status": "passed",
+      "stub_submissions": 1,
+      "exit_code": 17
+    }
+  ],
+  "readonly_compatibility_configuration_preserved": true,
+  "existing_bytes_and_mtimes_preserved": true,
+  "actual_weight_file_not_available_locally": true,
+  "weight_hash_gate_tested_with_stub": true,
+  "actual_tc2_connections": 0,
+  "actual_slurm_submissions": 0,
+  "result_root": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step5_20261019\\delivery_5ded67ab"
+}

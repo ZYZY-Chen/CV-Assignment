@@ -1,0 +1,366 @@
+{
+    "status":  "passed",
+    "validation_root":  "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2",
+    "rendered_shell_commands":  [
+                                    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2\\tc2_gpu_setup_20261019_215712_1cc6ed91\\command_346a9a12dab84efcac0aae4046312151.sh",
+                                    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2\\tc2_gpu_setup_20261019_215713_b4237571\\command_fbfa56c0bf7640b79c27ac18e80bf474.sh",
+                                    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2\\tc2_gpu_setup_20261019_215714_1758bc9b\\command_e6d03533db7641179ab0412c1d4ae4a2.sh",
+                                    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2\\tc2_gpu_setup_20261019_215715_168e815c\\command_0638e4583ac844ccafe7d5d01c7b1529.sh",
+                                    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2\\tc2_gpu_setup_20261019_215716_3f3dffd7\\command_8ae4f518a7c84295a902653d5465586d.sh",
+                                    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2\\tc2_gpu_setup_20261019_215717_96a4535f\\command_00d60447f3934190a602f72a70ffc575.sh",
+                                    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2\\tc2_gpu_setup_20261019_215718_ea17f6e6\\command_2be3f3c216e24aee9f4e4238a666fbf2.sh",
+                                    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2\\tc2_gpu_setup_20261019_215719_d4533447\\command_adde19bbe3cd462fb154ffb0afbcbb04.sh",
+                                    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2\\tc2_gpu_setup_20261019_215720_99502355\\command_6da663b300244a3ca70b1e1905077811.sh",
+                                    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2\\tc2_gpu_setup_20261019_215721_c7216471\\command_d4d517c416034df0b96aad72e6b618c1.sh",
+                                    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2\\tc2_gpu_setup_20261019_215722_8947822a\\command_d7c15c56fb6242eabe950dbae2d25b53.sh",
+                                    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2\\tc2_gpu_setup_20261019_215723_da0ad125\\command_1957a4c38485461e8866bae303f01c98.sh",
+                                    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2\\tc2_gpu_setup_20261019_215727_ecf13256\\command_690c2bb18d2c4f36a276a9bc643b21fe.sh",
+                                    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2\\tc2_gpu_setup_20261019_215728_e29beeb8\\command_79fbe7f714724c789458954753c83114.sh",
+                                    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2\\tc2_gpu_setup_20261019_215728_e29beeb8\\command_b44ea91a85bc4998a2cc25c03b0e604b.sh",
+                                    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2\\tc2_gpu_setup_20261019_215729_c72749fa\\command_01ce75654798411cb4325b8314d2aa0e.sh",
+                                    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2\\tc2_gpu_setup_20261019_215729_c72749fa\\command_3c9b84c7cb404c889a349e3e3d444293.sh",
+                                    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2\\tc2_gpu_setup_20261019_215729_c72749fa\\command_57150985810649f585c73236bf9c209a.sh",
+                                    "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION \u0026 APPLICATIONS\\output\\s8_dep_transport_3a9fe2f2\\tc2_gpu_setup_20261019_215732_185c87a2\\command_0f80c2224dec4b7ea5b2a2455809f3eb.sh"
+                                ],
+    "helper_sha256":  "7FA610568A20F45073849F7D7965A720F4429FD0098D9C897DC46FD82584C7EF",
+    "cases":  [
+                  {
+                      "name":  "repair_created",
+                      "exit_code":  0,
+                      "status":  "passed",
+                      "calls":  [
+                                    {
+                                        "kind":  "ssh"
+                                    },
+                                    {
+                                        "kind":  "dependency",
+                                        "mode":  "repair"
+                                    }
+                                ]
+                  },
+                  {
+                      "name":  "repair_already",
+                      "exit_code":  0,
+                      "status":  "passed",
+                      "calls":  [
+                                    {
+                                        "kind":  "ssh"
+                                    },
+                                    {
+                                        "kind":  "dependency",
+                                        "mode":  "repair"
+                                    }
+                                ]
+                  },
+                  {
+                      "name":  "receipt_hash",
+                      "exit_code":  2,
+                      "status":  "passed",
+                      "calls":  [
+                                    {
+                                        "kind":  "ssh"
+                                    },
+                                    {
+                                        "kind":  "dependency",
+                                        "mode":  "repair"
+                                    }
+                                ]
+                  },
+                  {
+                      "name":  "receipt_path",
+                      "exit_code":  2,
+                      "status":  "passed",
+                      "calls":  [
+                                    {
+                                        "kind":  "ssh"
+                                    },
+                                    {
+                                        "kind":  "dependency",
+                                        "mode":  "repair"
+                                    }
+                                ]
+                  },
+                  {
+                      "name":  "receipt_source",
+                      "exit_code":  2,
+                      "status":  "passed",
+                      "calls":  [
+                                    {
+                                        "kind":  "ssh"
+                                    },
+                                    {
+                                        "kind":  "dependency",
+                                        "mode":  "repair"
+                                    }
+                                ]
+                  },
+                  {
+                      "name":  "receipt_submitted",
+                      "exit_code":  2,
+                      "status":  "passed",
+                      "calls":  [
+                                    {
+                                        "kind":  "ssh"
+                                    },
+                                    {
+                                        "kind":  "dependency",
+                                        "mode":  "repair"
+                                    }
+                                ]
+                  },
+                  {
+                      "name":  "receipt_complete",
+                      "exit_code":  2,
+                      "status":  "passed",
+                      "calls":  [
+                                    {
+                                        "kind":  "ssh"
+                                    },
+                                    {
+                                        "kind":  "dependency",
+                                        "mode":  "repair"
+                                    }
+                                ]
+                  },
+                  {
+                      "name":  "receipt_bool_string",
+                      "exit_code":  2,
+                      "status":  "passed",
+                      "calls":  [
+                                    {
+                                        "kind":  "ssh"
+                                    },
+                                    {
+                                        "kind":  "dependency",
+                                        "mode":  "repair"
+                                    }
+                                ]
+                  },
+                  {
+                      "name":  "receipt_int_string",
+                      "exit_code":  2,
+                      "status":  "passed",
+                      "calls":  [
+                                    {
+                                        "kind":  "ssh"
+                                    },
+                                    {
+                                        "kind":  "dependency",
+                                        "mode":  "repair"
+                                    }
+                                ]
+                  },
+                  {
+                      "name":  "receipt_int_float",
+                      "exit_code":  2,
+                      "status":  "passed",
+                      "calls":  [
+                                    {
+                                        "kind":  "ssh"
+                                    },
+                                    {
+                                        "kind":  "dependency",
+                                        "mode":  "repair"
+                                    }
+                                ]
+                  },
+                  {
+                      "name":  "receipt_missing",
+                      "exit_code":  2,
+                      "status":  "passed",
+                      "calls":  [
+                                    {
+                                        "kind":  "ssh"
+                                    },
+                                    {
+                                        "kind":  "dependency",
+                                        "mode":  "repair"
+                                    }
+                                ]
+                  },
+                  {
+                      "name":  "receipt_duplicate",
+                      "exit_code":  2,
+                      "status":  "passed",
+                      "calls":  [
+                                    {
+                                        "kind":  "ssh"
+                                    },
+                                    {
+                                        "kind":  "dependency",
+                                        "mode":  "repair"
+                                    }
+                                ]
+                  },
+                  {
+                      "name":  "repair_job",
+                      "exit_code":  2,
+                      "status":  "passed",
+                      "calls":  [
+
+                                ]
+                  },
+                  {
+                      "name":  "repair_stage",
+                      "exit_code":  2,
+                      "status":  "passed",
+                      "calls":  [
+
+                                ]
+                  },
+                  {
+                      "name":  "repair_input",
+                      "exit_code":  2,
+                      "status":  "passed",
+                      "calls":  [
+
+                                ]
+                  },
+                  {
+                      "name":  "repair_gpu",
+                      "exit_code":  2,
+                      "status":  "passed",
+                      "calls":  [
+
+                                ]
+                  },
+                  {
+                      "name":  "repair_validate",
+                      "exit_code":  2,
+                      "status":  "passed",
+                      "calls":  [
+
+                                ]
+                  },
+                  {
+                      "name":  "repair_loco",
+                      "exit_code":  2,
+                      "status":  "passed",
+                      "calls":  [
+
+                                ]
+                  },
+                  {
+                      "name":  "dependency_before_upload",
+                      "exit_code":  2,
+                      "status":  "passed",
+                      "calls":  [
+                                    {
+                                        "kind":  "ssh"
+                                    },
+                                    {
+                                        "kind":  "dependency",
+                                        "mode":  "check"
+                                    }
+                                ]
+                  },
+                  {
+                      "name":  "dependency_before_publish",
+                      "exit_code":  2,
+                      "status":  "passed",
+                      "calls":  [
+                                    {
+                                        "kind":  "ssh"
+                                    },
+                                    {
+                                        "kind":  "dependency",
+                                        "mode":  "check"
+                                    },
+                                    {
+                                        "kind":  "upload"
+                                    },
+                                    {
+                                        "kind":  "ssh"
+                                    },
+                                    {
+                                        "kind":  "dependency",
+                                        "mode":  "check"
+                                    }
+                                ]
+                  },
+                  {
+                      "name":  "run",
+                      "exit_code":  0,
+                      "status":  "passed",
+                      "calls":  [
+                                    {
+                                        "kind":  "ssh"
+                                    },
+                                    {
+                                        "kind":  "dependency",
+                                        "mode":  "check"
+                                    },
+                                    {
+                                        "kind":  "upload"
+                                    },
+                                    {
+                                        "kind":  "ssh"
+                                    },
+                                    {
+                                        "kind":  "dependency",
+                                        "mode":  "check"
+                                    },
+                                    {
+                                        "kind":  "ssh"
+                                    },
+                                    {
+                                        "kind":  "download"
+                                    },
+                                    {
+                                        "kind":  "verify",
+                                        "action":  "verify-index"
+                                    },
+                                    {
+                                        "kind":  "download"
+                                    },
+                                    {
+                                        "kind":  "verify",
+                                        "action":  "verify"
+                                    },
+                                    {
+                                        "kind":  "verify",
+                                        "action":  "verify-collection"
+                                    }
+                                ]
+                  },
+                  {
+                      "name":  "validate_only",
+                      "exit_code":  0,
+                      "status":  "passed",
+                      "calls":  [
+
+                                ]
+                  },
+                  {
+                      "name":  "collect",
+                      "exit_code":  0,
+                      "status":  "passed",
+                      "calls":  [
+                                    {
+                                        "kind":  "ssh"
+                                    },
+                                    {
+                                        "kind":  "download"
+                                    },
+                                    {
+                                        "kind":  "verify",
+                                        "action":  "verify-index"
+                                    },
+                                    {
+                                        "kind":  "download"
+                                    },
+                                    {
+                                        "kind":  "verify",
+                                        "action":  "verify"
+                                    },
+                                    {
+                                        "kind":  "verify",
+                                        "action":  "verify-collection"
+                                    }
+                                ]
+                  }
+              ],
+    "actual_tc2_connections":  0,
+    "actual_slurm_submissions":  0,
+    "all_collection_verification_uses_analysis_collector":  true
+}

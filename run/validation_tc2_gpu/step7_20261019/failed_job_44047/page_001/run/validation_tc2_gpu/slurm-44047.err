@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/mcaai/huajie001/ca6129_v2_setup/scripts/experiments_tc2_gpu.py", line 475, in <module>
+    main()
+  File "/home/mcaai/huajie001/ca6129_v2_setup/scripts/experiments_tc2_gpu.py", line 470, in main
+    result = run_stage(args.root, args.stage)
+  File "/home/mcaai/huajie001/ca6129_v2_setup/scripts/experiments_tc2_gpu.py", line 334, in run_stage
+    raise RuntimeError("Allocated GPU, driver or CUDA build differs from accepted experiments")
+RuntimeError: Allocated GPU, driver or CUDA build differs from accepted experiments

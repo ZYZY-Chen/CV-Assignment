@@ -1,0 +1,45 @@
+{
+  "mode": "offline",
+  "status": "failed",
+  "step_6_complete": false,
+  "checked_at_utc": "2026-10-19T05:34:43.840104+00:00",
+  "tests_run": 24,
+  "failures": 0,
+  "errors": 6,
+  "skipped": 0,
+  "actual_model_calls": 0,
+  "actual_tc2_connections": 0,
+  "actual_slurm_submissions": 0,
+  "failure_details": [
+    {
+      "test": "__main__.PilotTests.test_frozen_design_selects_only_two_real_bottle_B0_fits",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\tests\\test_pilot_tc2_gpu.py\", line 115, in test_frozen_design_selects_only_two_real_bottle_B0_fits\n    plan = pilot.p.build_plan(ROOT)\n           ^^^^^^^\nAttributeError: module 'pilot_tc2_gpu_offline' has no attribute 'p'\n"
+    },
+    {
+      "test": "__main__.CollectorTests.test_bounded_snapshot_limits_apply_before_extraction",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\tests\\test_pilot_tc2_gpu.py\", line 347, in test_bounded_snapshot_limits_apply_before_extraction\n    collector.export_archive(self.root, \"12345\", archive)\n  File \"C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\scripts\\collect_tc2_gpu_pilot.py\", line 420, in export_archive\n    _atomic_publish(temporary, archive)\n  File \"C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\scripts\\collect_tc2_gpu_pilot.py\", line 335, in _atomic_publish\n    os.link(source, target)\nPermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: '\\\\\\\\?\\\\C:\\\\Users\\\\mhjv_\\\\PycharmProjects\\\\6129_assignment\\\\group_XX_code\\\\run\\\\validation_tc2_gpu\\\\step6_20261019\\\\offline_tests_01\\\\archive_ec25921e74\\\\.bounded.tar.gz.partial.2c510408bee248caa78f5a0ededd5747' -> '\\\\\\\\?\\\\C:\\\\Users\\\\mhjv_\\\\PycharmProjects\\\\6129_assignment\\\\group_XX_code\\\\run\\\\validation_tc2_gpu\\\\step6_20261019\\\\offline_tests_01\\\\archive_ec25921e74\\\\bounded.tar.gz'\n"
+    },
+    {
+      "test": "__main__.CollectorTests.test_content_tamper_is_refused_even_with_correct_new_archive_hash",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\tests\\test_pilot_tc2_gpu.py\", line 310, in test_content_tamper_is_refused_even_with_correct_new_archive_hash\n    collector.export_archive(self.root, \"12345\", archive)\n  File \"C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\scripts\\collect_tc2_gpu_pilot.py\", line 420, in export_archive\n    _atomic_publish(temporary, archive)\n  File \"C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\scripts\\collect_tc2_gpu_pilot.py\", line 335, in _atomic_publish\n    os.link(source, target)\nPermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: '\\\\\\\\?\\\\C:\\\\Users\\\\mhjv_\\\\PycharmProjects\\\\6129_assignment\\\\group_XX_code\\\\run\\\\validation_tc2_gpu\\\\step6_20261019\\\\offline_tests_01\\\\archive_f10ac5ce6f\\\\.before_tamper.tar.gz.partial.803e05c268084fd0b24d2475fe9f9635' -> '\\\\\\\\?\\\\C:\\\\Users\\\\mhjv_\\\\PycharmProjects\\\\6129_assignment\\\\group_XX_code\\\\run\\\\validation_tc2_gpu\\\\step6_20261019\\\\offline_tests_01\\\\archive_f10ac5ce6f\\\\before_tamper.tar.gz'\n"
+    },
+    {
+      "test": "__main__.CollectorTests.test_matching_new_content_manifest_cannot_authorize_unlisted_payload",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\tests\\test_pilot_tc2_gpu.py\", line 324, in test_matching_new_content_manifest_cannot_authorize_unlisted_payload\n    collector.export_archive(self.root, \"12345\", archive)\n  File \"C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\scripts\\collect_tc2_gpu_pilot.py\", line 420, in export_archive\n    _atomic_publish(temporary, archive)\n  File \"C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\scripts\\collect_tc2_gpu_pilot.py\", line 335, in _atomic_publish\n    os.link(source, target)\nPermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: '\\\\\\\\?\\\\C:\\\\Users\\\\mhjv_\\\\PycharmProjects\\\\6129_assignment\\\\group_XX_code\\\\run\\\\validation_tc2_gpu\\\\step6_20261019\\\\offline_tests_01\\\\archive_41ea3d0e5f\\\\.before_reseal.tar.gz.partial.8680fa828ec641b4855727bfc4cfcd2b' -> '\\\\\\\\?\\\\C:\\\\Users\\\\mhjv_\\\\PycharmProjects\\\\6129_assignment\\\\group_XX_code\\\\run\\\\validation_tc2_gpu\\\\step6_20261019\\\\offline_tests_01\\\\archive_41ea3d0e5f\\\\before_reseal.tar.gz'\n"
+    },
+    {
+      "test": "__main__.CollectorTests.test_missing_status_snapshot_is_partial_and_does_not_invent_success",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\tests\\test_pilot_tc2_gpu.py\", line 292, in test_missing_status_snapshot_is_partial_and_does_not_invent_success\n    collector.export_archive(self.root, \"12345\", archive)\n  File \"C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\scripts\\collect_tc2_gpu_pilot.py\", line 420, in export_archive\n    _atomic_publish(temporary, archive)\n  File \"C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\scripts\\collect_tc2_gpu_pilot.py\", line 335, in _atomic_publish\n    os.link(source, target)\nPermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: '\\\\\\\\?\\\\C:\\\\Users\\\\mhjv_\\\\PycharmProjects\\\\6129_assignment\\\\group_XX_code\\\\run\\\\validation_tc2_gpu\\\\step6_20261019\\\\offline_tests_01\\\\archive_1132c66021\\\\.missing_status.tar.gz.partial.4aa90c7f640f4fa38a54c1c78d2a9414' -> '\\\\\\\\?\\\\C:\\\\Users\\\\mhjv_\\\\PycharmProjects\\\\6129_assignment\\\\group_XX_code\\\\run\\\\validation_tc2_gpu\\\\step6_20261019\\\\offline_tests_01\\\\archive_1132c66021\\\\missing_status.tar.gz'\n"
+    },
+    {
+      "test": "__main__.CollectorTests.test_pending_roundtrip_preserves_bytes_and_cannot_qualify_step_six",
+      "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\tests\\test_pilot_tc2_gpu.py\", line 280, in test_pending_roundtrip_preserves_bytes_and_cannot_qualify_step_six\n    exported = collector.export_archive(self.root, \"12345\", archive)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\scripts\\collect_tc2_gpu_pilot.py\", line 420, in export_archive\n    _atomic_publish(temporary, archive)\n  File \"C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\scripts\\collect_tc2_gpu_pilot.py\", line 335, in _atomic_publish\n    os.link(source, target)\nPermissionError: [WinError 5] \u62d2\u7edd\u8bbf\u95ee\u3002: '\\\\\\\\?\\\\C:\\\\Users\\\\mhjv_\\\\PycharmProjects\\\\6129_assignment\\\\group_XX_code\\\\run\\\\validation_tc2_gpu\\\\step6_20261019\\\\offline_tests_01\\\\archive_50ca339dc6\\\\.pending.tar.gz.partial.e28ec858233d419e88560ebad155aeb9' -> '\\\\\\\\?\\\\C:\\\\Users\\\\mhjv_\\\\PycharmProjects\\\\6129_assignment\\\\group_XX_code\\\\run\\\\validation_tc2_gpu\\\\step6_20261019\\\\offline_tests_01\\\\archive_50ca339dc6\\\\pending.tar.gz'\n"
+    }
+  ],
+  "source_hashes": {
+    "scripts/pilot_tc2_gpu.py": "DC0478E594CBA54E824AD3E16CA65CB753ECC1E03667DE7720A34FC7EEC3E6ED",
+    "scripts/collect_tc2_gpu_pilot.py": "257D84943BE56F933566DDD804EA78DA12C72252730877B2CDDA83ED294C487B",
+    "configs/pilot_tc2_gpu.json": "0E1E251C1F03B76D4AF9E8BCD09A8720531E00ECE80173C517B85A16E9A88F9C",
+    "tests/test_pilot_tc2_gpu.py": "5078D444F2480790C5FCCF07A562FE835FF1792E1DF20E3E3D3D5D077B0009ED"
+  }
+}

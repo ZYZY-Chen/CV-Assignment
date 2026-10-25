@@ -1,0 +1,285 @@
+[CmdletBinding()]
+param(
+    [ValidateSet('Probe','PrepareEnvironment','PrepareInputs','CheckEnvironment','CheckAll','Collect','UploadInputs')]
+    [string]$Action = 'Probe',
+    [ValidatePattern('^[0-9]*$')][string]$JobId = '',
+    [ValidateSet(0,1)][int]$PreparationGpu = 0,
+    [string]$InputDirectory = '',
+    [string]$CodeRoot = 'C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code',
+    [switch]$ValidateOnly
+)
+# Passwords are read only by OpenSSH in this terminal, never by this script.
+# Default action: stage the approved files and submit a hardware-only SLURM job.
+$ErrorActionPreference = 'Stop'
+$server = 'huajie001@10.96.189.12'
+$remoteRoot = '/home/mcaai/huajie001/ca6129_v2_setup'
+$ssh = Join-Path $env:WINDIR 'System32\OpenSSH\ssh.exe'
+$scp = Join-Path $env:WINDIR 'System32\OpenSSH\scp.exe'
+$tar = Join-Path $env:WINDIR 'System32\tar.exe'
+foreach ($program in @($ssh,$scp,$tar)) { if (-not (Test-Path -LiteralPath $program -PathType Leaf)) { throw ('Missing executable: ' + $program) } }
+$CodeRoot = (Resolve-Path -LiteralPath $CodeRoot).Path
+$runId = [DateTimeOffset]::UtcNow.ToOffset([TimeSpan]::FromHours(8)).ToString('yyyyMMdd_HHmmss') + '_' + [Guid]::NewGuid().ToString('N').Substring(0,8)
+$localRoot = Join-Path $PSScriptRoot ('tc2_setup_v2_' + $runId)
+$null = New-Item -ItemType Directory -Path $localRoot
+$logPath = Join-Path $localRoot 'terminal.txt'
+$utf8 = New-Object System.Text.UTF8Encoding($false)
+$script:artifactText = $null
+$script:artifactHash = ''
+function Log([string]$value) {
+    [IO.File]::AppendAllText($logPath, $value + [Environment]::NewLine, $utf8)
+    Write-Host $value
+}
+function OriginalNative([string]$program, [string[]]$nativeArguments) {
+    $oldPreference = $ErrorActionPreference
+    $ErrorActionPreference = 'Continue'
+    & $program @nativeArguments 2>&1 | ForEach-Object { Log ([string]$_) }
+    $code = $LASTEXITCODE
+    $ErrorActionPreference = $oldPreference
+    if ($code -ne 0) { throw ('Command failed with exit code ' + $code) }
+}
+function Native([string]$program, [string[]]$nativeArguments) {
+    if ($program -eq $scp) { Log 'SIMULATED SCP ONLY: no transfer.'; return }
+    OriginalNative $program $nativeArguments
+}
+function Receive-Archive {
+    if ($null -eq $script:artifactText) { return }
+    $archivePath = Join-Path $localRoot 'remote-output.tar.gz'
+    [IO.File]::WriteAllBytes($archivePath, [Convert]::FromBase64String($script:artifactText.ToString()))
+    if ((Get-FileHash -LiteralPath $archivePath -Algorithm SHA256).Hash -ne $script:artifactHash) { throw 'Downloaded output archive hash mismatch.' }
+    $members = @(& $tar -tzf $archivePath)
+    if ($LASTEXITCODE -ne 0) { throw 'Cannot read output archive.' }
+    foreach ($member in $members) {
+        if ($member -match '(^/|\\|:|(^|/)\.\.(/|$))' -or $member -notmatch '^(run/setup_v2/|configs/tc2_setup\.json$|environment-tc2\.yml$|requirements-tc2-lock\.txt$)') {
+            throw ('Unexpected output archive member: ' + $member)
+        }
+    }
+    $destination = Join-Path $localRoot 'remote'
+    $null = New-Item -ItemType Directory -Path $destination
+    Native $tar @('-xzf',$archivePath,'-C',$destination)
+    Log ('Downloaded ' + $members.Count + ' output files. SHA256=' + $script:artifactHash)
+    Log ('Remote records: ' + $destination)
+    $script:artifactText = $null
+}
+function Ssh([string]$remoteScript) {
+    $name = 'command_' + [Guid]::NewGuid().ToString('N') + '.sh'
+    [IO.File]::WriteAllText((Join-Path $localRoot $name), $remoteScript.Replace("`r",'') + "`n", $utf8)
+    Log 'SIMULATED SSH ONLY: rendered commands saved; no remote action.'
+}
+
+$guard = @'
+set -euo pipefail
+[[ "$(id -un)" == huajie001 && "$HOME" == /home/mcaai/huajie001 ]] || { echo 'Unexpected remote identity or HOME.' >&2; exit 2; }
+root=/home/mcaai/huajie001/ca6129_v2_setup
+[[ ! -L "$root" && "$(readlink -m -- "$root")" == "$root" ]] || { echo 'Unexpected root or symbolic link.' >&2; exit 2; }
+for relative in run run/setup_v2 configs scripts tmp _downloads _package_cache envs; do
+    candidate="$root/$relative"
+    [[ ! -L "$candidate" && "$(readlink -m -- "$candidate")" == "$candidate" ]] || { echo "Unsafe staging path: $relative" >&2; exit 2; }
+done
+'@
+$noOtherJobs = @'
+if [[ -n "$(squeue --noheader --user=huajie001 --format=%i)" ]]; then
+    echo 'A personal job is already queued or running. Collect it before submitting another setup job.' >&2
+    exit 2
+fi
+'@
+$collect = @'
+echo '[Personal queue]'
+squeue --user=huajie001
+if [[ -n "${job_id:-}" ]]; then
+    echo "TC2_JOB_ID=$job_id"
+    sacct --jobs="$job_id" --user=huajie001 --format=JobID,JobName,State,ExitCode,Elapsed,NodeList || true
+    for log in "$root/run/setup_v2/slurm-$job_id.out" "$root/run/setup_v2/slurm-$job_id.err"; do
+        if [[ -f "$log" && ! -L "$log" ]]; then echo "[Tail: $log]"; tail -n 50 -- "$log"; fi
+    done
+fi
+cd -- "$root"
+archive="$root/tmp/collect___RUNID__.tar.gz"
+list="$root/tmp/collect___RUNID__.list"
+[[ ! -e "$archive" && ! -e "$list" ]] || exit 2
+find run/setup_v2 -type f -print0 > "$list"
+for extra in configs/tc2_setup.json environment-tc2.yml requirements-tc2-lock.txt; do
+    if [[ -f "$extra" && ! -L "$extra" ]]; then printf '%s\0' "$extra" >> "$list"; fi
+done
+set +e
+tar --null --verbatim-files-from --hard-dereference -czf "$archive" -T "$list"
+tar_code=$?
+set -e
+[[ "$tar_code" -le 1 ]] || exit "$tar_code"
+[[ "$(stat -c %s -- "$archive")" -le 67108864 ]] || { echo 'Output archive exceeds 64 MiB.' >&2; exit 2; }
+echo "TC2_ARTIFACT_SHA256=$(sha256sum "$archive" | cut -d' ' -f1)"
+echo __TC2_ARTIFACT_BEGIN__
+base64 -w 76 -- "$archive"
+echo __TC2_ARTIFACT_END__
+'@
+$collect = $collect.Replace('__RUNID__',$runId)
+$wait = @'
+echo "TC2_JOB_ID=$job_id"
+for attempt in 1 2 3 4; do
+    [[ -n "$(squeue --noheader --jobs="$job_id" --format=%i)" ]] || break
+    sleep 10
+done
+'@
+Log ('TC2 step 2: ' + $Action)
+Log ('Local output: ' + $localRoot)
+Log 'A submitted or running job is not a passed check. Passwords are not stored.'
+try {
+    if ($Action -eq 'Probe') {
+        $files = @('configs/protocol_v2.json','configs/tc2_setup.json','requirements-lock.txt','scripts/check_setup_v2.py','scripts/prepare_tc2_environment_v2.sh','scripts/prepare_tc2_inputs_v2.py','scripts/slurm/check_setup_v2.sh','scripts/slurm/probe_hardware_v2.sh','scripts/slurm/prepare_tc2_v2.sh')
+        $protocol = Get-Content -LiteralPath (Join-Path $CodeRoot 'configs/protocol_v2.json') -Raw | ConvertFrom-Json
+        $config = Get-Content -LiteralPath (Join-Path $CodeRoot 'configs/tc2_setup.json') -Raw | ConvertFrom-Json
+        if (-not $config.preparation.approved -or -not $config.scope.permit_package_install_or_upgrade -or -not $config.scope.permit_dataset_or_weights_download) { throw 'Supplementary approval is missing.' }
+        if ((Get-FileHash -LiteralPath (Join-Path $CodeRoot 'configs/protocol_v2.json') -Algorithm SHA256).Hash -ne $config.protocol_sha256) { throw 'Frozen protocol hash mismatch.' }
+        if ((Get-FileHash -LiteralPath (Join-Path $CodeRoot 'requirements-lock.txt') -Algorithm SHA256).Hash -ne $config.preparation.requirements_lock_sha256) { throw 'Existing dependency lock hash mismatch.' }
+        foreach ($manifest in $protocol.data.frozen_manifests) {
+            if ((Get-FileHash -LiteralPath (Join-Path $CodeRoot $manifest.path) -Algorithm SHA256).Hash -ne $manifest.file_sha256) { throw ('Frozen manifest mismatch: ' + $manifest.path) }
+            $files += $manifest.path
+        }
+        $payload = Join-Path $localRoot 'payload'
+        $null = New-Item -ItemType Directory -Path $payload
+        $hashLines = @()
+        foreach ($relative in $files) {
+            $source = Join-Path $CodeRoot $relative
+            $destination = Join-Path $payload $relative
+            $null = New-Item -ItemType Directory -Path (Split-Path -Parent $destination) -Force
+            Copy-Item -LiteralPath $source -Destination $destination
+            $hashLines += (Get-FileHash -LiteralPath $destination -Algorithm SHA256).Hash.ToLowerInvariant() + '  ' + $relative
+        }
+        [IO.File]::WriteAllText((Join-Path $payload 'payload.sha256'), ($hashLines -join "`n") + "`n", $utf8)
+        $bundle = Join-Path $localRoot 'setup-files.tar'
+        Native $tar (@('-cf',$bundle,'-C',$payload,'--','payload.sha256') + $files)
+        $bundleHash = (Get-FileHash -LiteralPath $bundle -Algorithm SHA256).Hash.ToLowerInvariant()
+        Log ('Prepared ' + $files.Count + ' approved files; bundle SHA256=' + $bundleHash)
+        if ($ValidateOnly) { Log 'LOCAL VALIDATION ONLY. No network connection or remote action.'; exit 0 }
+        $preflight = @'
+if [[ -e "$root" ]]; then
+    [[ -d "$root" && "$(stat -c %u -- "$root")" == "$(id -u)" ]] || exit 2
+    echo '[Existing staging entries]'
+    find "$root" -mindepth 1 -maxdepth 2 -print
+fi
+echo '[Quota and shared filesystem]'
+if command -v quota >/dev/null 2>&1; then quota -s || true; else echo 'Personal quota command unavailable; quota remains unknown.'; fi
+df -h "$HOME"
+for directory in "$root" "$root/run" "$root/run/setup_v2" "$root/_downloads" "$root/tmp"; do
+    [[ ! -L "$directory" ]] || exit 2
+    mkdir -p -- "$directory"
+done
+'@
+        Ssh ($guard + "`n" + $noOtherJobs + "`n" + $preflight)
+        $remoteBundle = $remoteRoot + '/_downloads/setup-files-' + $runId + '.tar'
+        Native $scp @('-o','StrictHostKeyChecking=yes','-o','NumberOfPasswordPrompts=1','-P','22',$bundle,($server + ':' + $remoteBundle))
+        $stage = @'
+cd -- "$root"
+archive="$root/_downloads/setup-files-__RUNID__.tar"
+[[ "$(sha256sum "$archive" | cut -d' ' -f1)" == __BUNDLEHASH__ ]] || { echo 'Upload hash mismatch.' >&2; exit 2; }
+incoming="$root/tmp/stage-__RUNID__"
+mkdir -- "$incoming"
+tar -xf "$archive" -C "$incoming" --no-same-owner --no-same-permissions
+( cd "$incoming"; sha256sum --check payload.sha256 )
+while read -r hash relative; do
+    [[ "$relative" != /* && "$relative" != *..* && "$relative" != *\\* ]] || exit 2
+    target="$root/$relative"
+    [[ "$(readlink -m -- "$target")" == "$target" && ! -L "$target" ]] || exit 2
+    if [[ -e "$target" && "$(sha256sum "$target" | cut -d' ' -f1)" != "$hash" ]]; then
+        echo "Existing staging file differs; no overwrite: $relative" >&2
+        exit 2
+    fi
+done < "$incoming/payload.sha256"
+while read -r hash relative; do
+    target="$root/$relative"
+    mkdir -p -- "$(dirname -- "$target")"
+    if [[ ! -e "$target" ]]; then cp --no-clobber -- "$incoming/$relative" "$target"; fi
+    [[ "$(sha256sum "$target" | cut -d' ' -f1)" == "$hash" ]] || exit 2
+done < "$incoming/payload.sha256"
+job_id=$(sbatch --parsable --partition=MGPU-TC2 --qos=normal --output="$root/run/setup_v2/slurm-%j.out" --error="$root/run/setup_v2/slurm-%j.err" scripts/slurm/probe_hardware_v2.sh)
+job_id=${job_id%%;*}
+[[ "$job_id" =~ ^[0-9]+$ ]] || exit 2
+printf '%s\n' "$job_id" > run/setup_v2/last_probe_job.txt
+'@
+        $stage = $stage.Replace('__RUNID__',$runId).Replace('__BUNDLEHASH__',$bundleHash)
+        Ssh ($guard + "`n" + $noOtherJobs + "`n" + $stage + "`n" + $wait + "`n" + $collect)
+    } elseif ($Action -eq 'UploadInputs') {
+        if ($ValidateOnly) { throw 'ValidateOnly is supported with Probe only.' }
+        if (-not $InputDirectory) { throw 'Supply -InputDirectory with official input archives.' }
+        $allowed = @('bottle.tar.xz','cable.tar.xz','capsule.tar.xz','screw.tar.xz','tile.tar.xz','wood.tar.xz','juice_bottle.tar.xz','screw_bag.tar.xz','resnet18-f37072fd.pth')
+        $inputs = @(Get-ChildItem -LiteralPath $InputDirectory -File | Where-Object { $allowed -contains $_.Name })
+        if ($inputs.Count -eq 0) { throw 'No allowed archive or weight filename found.' }
+        $hashLines = @($inputs | ForEach-Object { (Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash.ToLowerInvariant() + '  ' + $_.Name })
+        $uploadPreflight = @'
+[[ -d "$root" && -d "$root/_downloads" && ! -L "$root/_downloads" ]] || exit 2
+probe_id=$(cat "$root/run/setup_v2/last_probe_job.txt")
+[[ "$probe_id" =~ ^[0-9]+$ ]] || exit 2
+grep -Eq '"ready": true' "$root/run/setup_v2/job_${probe_id}_hardware/hardware.json" || { echo 'Hardware gate not passed.' >&2; exit 2; }
+mkdir -- "$root/_downloads/upload-__RUNID__"
+'@
+        Ssh ($guard + "`n" + $noOtherJobs + "`n" + $uploadPreflight.Replace('__RUNID__',$runId))
+        Native $scp (@('-o','StrictHostKeyChecking=yes','-o','NumberOfPasswordPrompts=1','-P','22') + @($inputs.FullName) + @($server + ':' + $remoteRoot + '/_downloads/upload-' + $runId + '/'))
+        $encodedHashes = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes(($hashLines -join "`n") + "`n"))
+        $publish = @'
+cd -- "$root/_downloads/upload-__RUNID__"
+printf '%s' '__HASHES__' | base64 -d > upload.sha256
+sha256sum --check upload.sha256
+while read -r hash name; do
+    target="$root/_downloads/$name"
+    [[ ! -L "$target" ]] || exit 2
+    if [[ -e "$target" ]]; then
+        [[ "$(sha256sum "$target" | cut -d' ' -f1)" == "$hash" ]] || { echo "Existing archive differs: $name" >&2; exit 2; }
+    fi
+done < upload.sha256
+while read -r hash name; do
+    target="$root/_downloads/$name"
+    if [[ ! -e "$target" ]]; then ln -- "$PWD/$name" "$target"; fi
+done < upload.sha256
+echo 'Uploaded inputs published without overwriting. No preparation job submitted.'
+'@
+        Ssh ($guard + "`n" + $publish.Replace('__RUNID__',$runId).Replace('__HASHES__',$encodedHashes) + "`n" + $collect)
+    } else {
+        if ($ValidateOnly) { throw 'ValidateOnly is supported with Probe only.' }
+        $stage = '[[ -d "$root" && -d "$root/run/setup_v2" && ! -L "$root/run/setup_v2" && ! -L "$root/tmp" ]] || exit 2' + "`n" + 'cd -- "$root"' + "`n"
+        if ($Action -eq 'Collect') {
+            if (-not $JobId) { throw 'Collect requires -JobId from the submission output.' }
+            $stage += 'job_id=' + $JobId + "`n"
+        } else {
+            $stage += $noOtherJobs + "`n"
+            $stage += @'
+probe_id=$(cat run/setup_v2/last_probe_job.txt)
+[[ "$probe_id" =~ ^[0-9]+$ ]] || exit 2
+grep -Eq '"ready": true' "run/setup_v2/job_${probe_id}_hardware/hardware.json" || { echo 'Hardware gate not passed.' >&2; exit 2; }
+'@ + "`n"
+            if ($Action -ne 'PrepareEnvironment') {
+                $stage += @'
+environment_job=$(cat run/setup_v2/last_prepare_environment_job.txt)
+[[ "$environment_job" =~ ^[0-9]+$ && -x "$root/envs/ca6129-ad-v2/bin/python" ]] || exit 2
+grep -Eq '"ready": true' "run/setup_v2/job_${environment_job}_prepare_environment/preparation_status.json" || { echo 'Dedicated package environment not ready.' >&2; exit 2; }
+'@ + "`n"
+            }
+            if ($Action -eq 'CheckAll') {
+                $stage += @'
+inputs_job=$(cat run/setup_v2/last_prepare_inputs_job.txt)
+environment_check_job=$(cat run/setup_v2/last_check_environment_job.txt)
+[[ "$inputs_job" =~ ^[0-9]+$ && "$environment_check_job" =~ ^[0-9]+$ ]] || exit 2
+grep -Eq '"ready": true' "run/setup_v2/job_${inputs_job}_prepare_inputs/preparation_status.json" || { echo 'Input restoration not ready.' >&2; exit 2; }
+grep -Eq '"environment_ready": true' "run/setup_v2/job_${environment_check_job}_environment/setup_status.json" || { echo 'GPU environment check not ready.' >&2; exit 2; }
+'@ + "`n"
+            }
+            if ($Action -eq 'PrepareEnvironment' -or $Action -eq 'PrepareInputs') {
+                $mode = if ($Action -eq 'PrepareEnvironment') { 'environment' } else { 'inputs' }
+                $gpuArgument = if ($PreparationGpu -eq 1) { ' --gres=gpu:1' } else { '' }
+                $stage += 'job_id=$(sbatch --parsable --partition=MGPU-TC2 --qos=normal' + $gpuArgument + ' --output="$root/run/setup_v2/slurm-%j.out" --error="$root/run/setup_v2/slurm-%j.err" scripts/slurm/prepare_tc2_v2.sh ' + $mode + ')' + "`n"
+                $phase = 'prepare_' + $mode
+            } else {
+                $mode = if ($Action -eq 'CheckEnvironment') { 'environment' } else { 'all' }
+                $stage += 'job_id=$(sbatch --parsable --partition=MGPU-TC2 --qos=normal --export=ALL,TC2_ANACONDA_MODULE=anaconda/25.5.1 --output="$root/run/setup_v2/slurm-%j.out" --error="$root/run/setup_v2/slurm-%j.err" scripts/slurm/check_setup_v2.sh "$root/envs/ca6129-ad-v2" ' + $mode + ')' + "`n"
+                $phase = 'check_' + $mode
+            }
+            $stage += 'job_id=${job_id%%;*}' + "`n" + '[[ "$job_id" =~ ^[0-9]+$ ]] || exit 2' + "`n"
+            $stage += 'printf ''%s\n'' "$job_id" > run/setup_v2/last_' + $phase + '_job.txt' + "`n" + $wait + "`n"
+        }
+        Ssh ($guard + "`n" + $stage + "`n" + $collect)
+    }
+    Log 'Action finished. Review the downloaded records; step 2 is complete only if the all-mode setup_status.json says step_2_complete=true.'
+    Log ('Send this local output path back: ' + $logPath)
+} catch {
+    Log ('STOPPED: ' + $_.Exception.Message)
+    Log ('Send this local output path back: ' + $logPath)
+    exit 2
+}

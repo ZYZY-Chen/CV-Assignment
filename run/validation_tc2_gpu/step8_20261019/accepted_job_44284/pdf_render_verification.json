@@ -1,0 +1,130 @@
+{
+  "status": "rendered_for_visual_review",
+  "renderer": "bundled Poppler pdftoppm",
+  "dpi": 120,
+  "figure_count": 15,
+  "qa_directory": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347",
+  "original_files_modified": false,
+  "figures": [
+    {
+      "pdf": "baseline_comparison.pdf",
+      "source_sha256": "CC37A89869C508126492711DCC1E035E0CE2F40DFD974FA4F0AE0471895BDE67",
+      "qa_copy": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\baseline_comparison.pdf",
+      "rendered_png": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\baseline_comparison.png",
+      "rendered_png_sha256": "669F18E5BA547AF1E69DC68F6BE60C83CCE85F37659441E96C689348363BCEC6",
+      "stderr": ""
+    },
+    {
+      "pdf": "F1_methods.pdf",
+      "source_sha256": "EB5912699C109CD19111FF12DC142A7AFA9298C6FAD291B24371AB59748995EF",
+      "qa_copy": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F1_methods.pdf",
+      "rendered_png": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F1_methods.png",
+      "rendered_png_sha256": "D893B320278D9034756D370201C39F62F1E8FFE1540F39B200489864BC775E0D",
+      "stderr": ""
+    },
+    {
+      "pdf": "F2_cases_01.pdf",
+      "source_sha256": "E6BE70BD2AFF7D4E68A3D41EE0E64F6C7CD83759A14CDE0C90FC946FB75EC8F4",
+      "qa_copy": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F2_cases_01.pdf",
+      "rendered_png": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F2_cases_01.png",
+      "rendered_png_sha256": "1CBFF7810ED28FB8D0E50F5740285A6775126797777F68516CF26A50B89FD324",
+      "stderr": ""
+    },
+    {
+      "pdf": "F2_cases_02.pdf",
+      "source_sha256": "039E284333814C058EE6E07B20A6573A48CC4741F71EEFF5E8C58DD1CD0F052D",
+      "qa_copy": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F2_cases_02.pdf",
+      "rendered_png": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F2_cases_02.png",
+      "rendered_png_sha256": "E9F0FCEDC38A1BA9D022CE54E9FBD104B2A4584B39A9CDA2A4E00D317C308CAE",
+      "stderr": ""
+    },
+    {
+      "pdf": "F2_cases_03.pdf",
+      "source_sha256": "947DC2C79D7D4EA0833B649BDB456324C9EB1F9CFA842948B4ED4DF524E07AE7",
+      "qa_copy": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F2_cases_03.pdf",
+      "rendered_png": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F2_cases_03.png",
+      "rendered_png_sha256": "F1EF424BE2375F011DE6C0098A52AC69D6FDF0E99CFF037D2845577B38D6E614",
+      "stderr": ""
+    },
+    {
+      "pdf": "F2_cases_04.pdf",
+      "source_sha256": "A1D430D127C6BE1C38E951EC1806A3396D6531F9B0F1EBC13914B17D9A64AA90",
+      "qa_copy": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F2_cases_04.pdf",
+      "rendered_png": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F2_cases_04.png",
+      "rendered_png_sha256": "84A5B3886AE3C5D51E150BD09B2EC397C74C44A42784F0D8DBE583795254E286",
+      "stderr": ""
+    },
+    {
+      "pdf": "F3_components.pdf",
+      "source_sha256": "33252ED2E0AE717F970EA7FEF68F185BCE213A6C77D12441799201A7B8BFD5AD",
+      "qa_copy": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F3_components.pdf",
+      "rendered_png": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F3_components.png",
+      "rendered_png_sha256": "8C43CAE6FBDF87895AD26A4A2AA07EFAA8361B0A27608AAD78C28A53A4A6E3E2",
+      "stderr": ""
+    },
+    {
+      "pdf": "F3_fewshot.pdf",
+      "source_sha256": "9618B504C5197A29275D6E8479707479AAA7F2912B15FB4E9003036DC83EEC37",
+      "qa_copy": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F3_fewshot.pdf",
+      "rendered_png": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F3_fewshot.png",
+      "rendered_png_sha256": "AF876139F9013EE202BBC47283C67DC794B72891AEC593337CF48469567E3ACE",
+      "stderr": ""
+    },
+    {
+      "pdf": "F3_hyperparameters.pdf",
+      "source_sha256": "CE113F7B24914315344C4B3D1C71BAB6805D2DC935C4DDFB6F6D489D08F6BE86",
+      "qa_copy": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F3_hyperparameters.pdf",
+      "rendered_png": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F3_hyperparameters.png",
+      "rendered_png_sha256": "F1D8CB201620F0E2A3ED5629EE2536A2B34133DD013EB25991153A728910B778",
+      "stderr": ""
+    },
+    {
+      "pdf": "F4_defect_size.pdf",
+      "source_sha256": "E19DBF49E8EEB647D71BF11BA8CDFF3AB7803D6D762455AD6FCAF52F787CB5DB",
+      "qa_copy": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F4_defect_size.pdf",
+      "rendered_png": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F4_defect_size.png",
+      "rendered_png_sha256": "D6E0685A6CD01D22436C825622F0BA3196132A6081951E0275E31FFDACDD31D5",
+      "stderr": ""
+    },
+    {
+      "pdf": "F4_improvement.pdf",
+      "source_sha256": "DAC1257117D516D2AE71127DE8E0D973BBD62A8FEE56C5FAD5A42B89DEA18EE8",
+      "qa_copy": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F4_improvement.pdf",
+      "rendered_png": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F4_improvement.png",
+      "rendered_png_sha256": "3061188C6F763CF643D3B97D9B7BB5DFD7A39BC0A0E3F414FD39D8C0F0B3B49F",
+      "stderr": ""
+    },
+    {
+      "pdf": "F4_q_sensitivity.pdf",
+      "source_sha256": "BE5360C5CE5A1BEA9AB154B5AE03D8F32144663AEE995F61F63A2389ADA320F5",
+      "qa_copy": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F4_q_sensitivity.pdf",
+      "rendered_png": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F4_q_sensitivity.png",
+      "rendered_png_sha256": "097D97D5EE228CFA24CFD42918E5B76BAE3E6240BF2A71635B3C819821663EDC",
+      "stderr": ""
+    },
+    {
+      "pdf": "F4_score_distributions.pdf",
+      "source_sha256": "35AE9005413E9988823FBB230EA7BDF67F5B3B3BC50DDB0B6BF3D803A500E8CE",
+      "qa_copy": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F4_score_distributions.pdf",
+      "rendered_png": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F4_score_distributions.png",
+      "rendered_png_sha256": "CC61211C36FF47FFC135CD90271F944E3F60AC943B55D34C5EC1F7D7160C3DFC",
+      "stderr": ""
+    },
+    {
+      "pdf": "F5_resources.pdf",
+      "source_sha256": "694E89424F0EA88323E909B8CB931BC431ACB8BEEFDB4214B00CC43B41172280",
+      "qa_copy": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F5_resources.pdf",
+      "rendered_png": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\F5_resources.png",
+      "rendered_png_sha256": "F6D44EC7D4ACA54FF04AAB9FFF06D22A1857D2F82AA47EF7D66215ABD10B4053",
+      "stderr": ""
+    },
+    {
+      "pdf": "loco_extension.pdf",
+      "source_sha256": "279D675E62ECD5F24AE273F71847E76F692715E66AA32D31C0F9DB095DFB2FB6",
+      "qa_copy": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\loco_extension.pdf",
+      "rendered_png": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_figures_qa_44284_220347\\loco_extension.png",
+      "rendered_png_sha256": "519E0A277895AAB63BD4467318856D80100BA281643952FB1302C9C07A979C3A",
+      "stderr": ""
+    }
+  ]
+}

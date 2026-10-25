@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "archive_sha256": "AE9DBCF619378F3F85F84BEA434DF786324B3CE6B4EE46F1D9247A4BC3B3FABB",
+  "packaging_directory": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_143219_5a4644e0",
+  "exact_members": 8,
+  "payload_sha256": {
+    "configs/experiments_tc2_gpu.json": "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75",
+    "scripts/experiments_tc2_gpu.py": "F4896D83DED9EAACB72ED7A75B63F76CC3538E61D2FB90A88CF1945D36D0CBDA",
+    "scripts/analyze_scores_tc2_gpu.py": "D1412F6743ECB6709EB82FF978DF4D8C37601371BE4E78C2329B9AAD1FF609F6",
+    "scripts/slurm/experiments_tc2_gpu.sh": "C4D12CFBC8D7B0F799AD51E06826318C8A17210526EC63ED04CD4FF3AB13080E",
+    "scripts/collect_experiments_tc2_gpu.py": "AC61772F65C9F2C4124761D2361E0A85E9F65DBCF4DF5BAB3E939B5111466010",
+    "tests/test_experiments_tc2_gpu.py": "371072914FD83F1E4A803501A86965977BA12C1797EE44C178D0A843F8A2FFE5",
+    "docs/TC2_GPU_EXPERIMENTS.md": "EBF7AD234A2346379CE5B7B80A76826A564F3ED7FF08DEB17CA362EC9E2FD47A"
+  },
+  "actual_bootstrap_positive": true,
+  "isolated_publication_absent_then_identical": [
+    {
+      "files": 7,
+      "record": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step7_20261019\\bootstrap_951f98ab\\good\\run\\validation_tc2_gpu\\experiments_stage_offline_0",
+      "stage_id": "B0",
+      "status": "published"
+    },
+    {
+      "files": 7,
+      "record": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step7_20261019\\bootstrap_951f98ab\\good\\run\\validation_tc2_gpu\\experiments_stage_offline_1",
+      "stage_id": "B0",
+      "status": "published"
+    }
+  ],
+  "lowercase_manifest_normalized": true,
+  "host_preflight_stubbed_explicitly": true,
+  "negative_cases": [
+    {
+      "name": "bad_archive_sha",
+      "status": "passed",
+      "rejection": "Experiment source archive SHA256 differs"
+    },
+    {
+      "name": "bad_source_sha",
+      "status": "passed",
+      "rejection": "Experiment source bytes do not match the verified manifest"
+    },
+    {
+      "name": "bad_member",
+      "status": "passed",
+      "rejection": "Experiment source archive member set differs"
+    },
+    {
+      "name": "symbolic_member",
+      "status": "passed",
+      "rejection": "Experiment archive permits only regular files"
+    }
+  ],
+  "actual_tc2_connections": 0,
+  "actual_slurm_submissions": 0,
+  "actual_model_calls": 0
+}

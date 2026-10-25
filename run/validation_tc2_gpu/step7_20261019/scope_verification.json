@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-19T06:35:02.763636+00:00",
+  "protected_files_checked": 4251,
+  "changed_existing_files": [
+    "group_XX_code/README.md"
+  ],
+  "unexpected_existing_changes": [],
+  "unexpected_new_files": [],
+  "new_sources": {
+    "configs/experiments_tc2_gpu.json": "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75",
+    "scripts/experiments_tc2_gpu.py": "F4896D83DED9EAACB72ED7A75B63F76CC3538E61D2FB90A88CF1945D36D0CBDA",
+    "scripts/analyze_scores_tc2_gpu.py": "D1412F6743ECB6709EB82FF978DF4D8C37601371BE4E78C2329B9AAD1FF609F6",
+    "scripts/slurm/experiments_tc2_gpu.sh": "C4D12CFBC8D7B0F799AD51E06826318C8A17210526EC63ED04CD4FF3AB13080E",
+    "scripts/collect_experiments_tc2_gpu.py": "AC61772F65C9F2C4124761D2361E0A85E9F65DBCF4DF5BAB3E939B5111466010",
+    "tests/test_experiments_tc2_gpu.py": "371072914FD83F1E4A803501A86965977BA12C1797EE44C178D0A843F8A2FFE5",
+    "docs/TC2_GPU_EXPERIMENTS.md": "EBF7AD234A2346379CE5B7B80A76826A564F3ED7FF08DEB17CA362EC9E2FD47A"
+  },
+  "git_index_bytes_unchanged": false,
+  "git_staged_entries_match_head": true,
+  "git_staged_paths_checked": 421,
+  "git_index_note": "The index fingerprint differs from baseline; all staged path, mode and blob entries still match HEAD. No staging or commits were performed.",
+  "existing_helper_bytes_preserved": true,
+  "existing_chinese_preserved": true,
+  "new_sources_english": true,
+  "slurm_wrapper_lf": true,
+  "external_helper_sha256": "1C181ED883F347E5C8EFB7F0FF1D9B3172C57BC0C9759D4B8A538C6F493EEC02",
+  "formal_local_outputs_absent": true,
+  "offline_tests": {
+    "tests_run": 33,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "torch_imported": false
+  },
+  "reports": {
+    "collector_validation.json": {
+      "status": "passed",
+      "sha256": "4C0E1F6EA24084A0AED0A5B662BC43CBBA6E7C2F882F2932E6B3A33411447068"
+    },
+    "collector_additional_validation.json": {
+      "status": "passed",
+      "sha256": "53D72B35910A751053EF5FDB097BE9A9762AA9234E4E5C78B3AA4D74380C3552"
+    },
+    "helper_static_validation.json": {
+      "status": "passed",
+      "sha256": "4DC6686C1A8713B87A4912301052D822DBE3FA2982FAB22CCE455019A404954D"
+    },
+    "local_transport_validation.json": {
+      "status": "PASS",
+      "sha256": "08D02E59D575BC4727895789FF454B54D48DAA4088D1CE3AE599D1C52DCA8993"
+    },
+    "pilot_transport_validation.json": {
+      "status": "passed",
+      "sha256": "93477F2EACD44A8937DBAFC6DB245ADE557D68DA63C3D415AF7FDD8E5D1BDADD"
+    },
+    "experiments_transport_validation.json": {
+      "status": "passed",
+      "sha256": "0C39DF9AEF9317855C0C73DED00C2C58FB06A90E771F1DF4ABD1D5811B5B938D"
+    },
+    "experiments_bootstrap_validation.json": {
+      "status": "passed",
+      "sha256": "4158DC5996259F12249C95534910582885E243B32DE5BC583F3521D826965010"
+    },
+    "helper_final_validation.json": {
+      "status": "passed",
+      "sha256": "6C2494C7956F6BE0290A98BECDDF0D79B5EB3D2F019E618FE8F4449265C5CA35"
+    }
+  },
+  "actual_tc2_connections": 0,
+  "actual_slurm_submissions": 0,
+  "step_7_complete": false
+}

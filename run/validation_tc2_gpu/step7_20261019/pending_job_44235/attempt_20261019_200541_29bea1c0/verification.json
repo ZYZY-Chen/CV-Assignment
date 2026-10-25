@@ -1,0 +1,155 @@
+{
+  "verification_status": "passed",
+  "stage_accepted": false,
+  "step_7_complete": false,
+  "job_id": "44235",
+  "requested_stage": "B0_LOCO",
+  "checked_at_utc": "2026-10-19T12:12:58.987628+00:00",
+  "source_directory": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_200541_29bea1c0",
+  "index_sha256": "45070E3D122A796CDF2C7D0C06590C10EFDEB0190D007D630F2A95FA02FD0C8C",
+  "index_verification": {
+    "status": "verified",
+    "job_id": "44235",
+    "stage_id": "B0_LOCO",
+    "index_sha256": "45070E3D122A796CDF2C7D0C06590C10EFDEB0190D007D630F2A95FA02FD0C8C",
+    "page_count": 1,
+    "pages": [
+      {
+        "analysis_ids": [],
+        "bytes": 266476,
+        "name": "page_001.tar.gz",
+        "page_number": 1,
+        "result_ids": [],
+        "sha256": "6020A3274EF1AF42662C063B8B4626E86365A2D0B5C89684F1E50BAE5814ECCD"
+      }
+    ],
+    "partial": true,
+    "stage_complete": false,
+    "step_7_complete": false,
+    "remote_stage_complete": false
+  },
+  "collection_verification": {
+    "status": "verified",
+    "job_id": "44235",
+    "stage_id": "B0_LOCO",
+    "index_sha256": "45070E3D122A796CDF2C7D0C06590C10EFDEB0190D007D630F2A95FA02FD0C8C",
+    "page_count": 1,
+    "result_count": 0,
+    "analysis_count": 0,
+    "partial": true,
+    "stage_complete": false,
+    "step_7_complete": false,
+    "completion_scope": "current_stage_and_remote_dependency_evidence",
+    "cache_array_bytes_downloaded": false,
+    "prediction_arrays_loaded_locally": false
+  },
+  "archive_hash_and_size_checks": [
+    {
+      "analysis_ids": [],
+      "bytes": 266476,
+      "name": "page_001.tar.gz",
+      "page_number": 1,
+      "result_ids": [],
+      "sha256": "6020A3274EF1AF42662C063B8B4626E86365A2D0B5C89684F1E50BAE5814ECCD"
+    }
+  ],
+  "slurm_state_at_snapshot": "RUNNING",
+  "slurm_elapsed_at_snapshot": "00:00:45",
+  "node_at_snapshot": "TC2N01",
+  "phase_at_snapshot": "phase_001_extract",
+  "current_remote_state": "unknown",
+  "completed_phases": [],
+  "verified_stage_results": 0,
+  "expected_stage_results": 4,
+  "runtime_and_resources_match_accepted_environment": true,
+  "runtime": {
+    "device": "cuda",
+    "gpu": "NVIDIA A40",
+    "driver": "570.148.08",
+    "cuda_build": "12.8",
+    "software": {
+      "python": "3.10.22",
+      "numpy": "1.26.4",
+      "torch": "2.11.0+cu128",
+      "torchvision": "0.26.0+cu128",
+      "pillow": "12.3.0",
+      "scikit-learn": "1.7.2",
+      "pyyaml": "6.0.3"
+    },
+    "acceptance_jobs": {
+      "metrics": "43968",
+      "algorithms": "43970",
+      "setup": "43950"
+    },
+    "compatibility_configuration_sha256": "EDF3D1D0380E0105A5173607CE360221FD43B059478915EEC0EC04ED9110F913",
+    "slurm_job_id": "44235",
+    "tf32": false,
+    "autocast": false
+  },
+  "resources": {
+    "partition": "MGPU-TC2",
+    "qos": "normal",
+    "nodes": 1,
+    "tasks": 1,
+    "gpus": 1,
+    "cpus_per_task": 2,
+    "memory_gib": 24,
+    "time_limit": "02:00:00"
+  },
+  "protected_sources_checked": 44,
+  "published_payload_sources_checked": 7,
+  "predecessor": {
+    "stage_id": "I2",
+    "job_id": "44230",
+    "status_sha256": "182B296E675F557C5592A4BFE30CF20D83744A14CB4EF949E0B809DF05880B30"
+  },
+  "previous_stage_chain_matches_accepted_records": true,
+  "loco_resource_guard_checks": [
+    {
+      "dataset": "mvtec_loco",
+      "category": "juice_bottle",
+      "images": 719,
+      "original_pixels": 920320000,
+      "unique_original_hw": [
+        [
+          1600,
+          800
+        ]
+      ],
+      "test_original_pixels": 422400000,
+      "conservative_host_bytes": 12742967296,
+      "estimated_host_gib": 11.867813110351562,
+      "below_fixed_memory_budget": true,
+      "frozen_manifest_sha256": "E54AB3FA354E258D591F6C53B395ED9EED25518CF25F039FEB88040A2EC46C86",
+      "original_dimensions_evidence": "Reported by the frozen remote input index; local raw images were not downloaded."
+    },
+    {
+      "dataset": "mvtec_loco",
+      "category": "screw_bag",
+      "images": 761,
+      "original_pixels": 1339360000,
+      "unique_original_hw": [
+        [
+          1100,
+          1600
+        ]
+      ],
+      "test_original_pixels": 600160000,
+      "conservative_host_bytes": 16298167296,
+      "estimated_host_gib": 15.178851127624512,
+      "below_fixed_memory_budget": true,
+      "frozen_manifest_sha256": "7C02ED1CF33AFD35F8BEFB7342525F532213CC684ADC330414522DB51B1C66CA",
+      "original_dimensions_evidence": "Reported by the frozen remote input index; local raw images were not downloaded."
+    }
+  ],
+  "remote_status_sha256": "837BBFE67DAC0D640710DDD7A445704292CB1AD030DBBAE024973C7029E8056E",
+  "previously_accepted_formal_fits": 62,
+  "verified_analysis_rows": 108,
+  "core_checkpoint_complete": true,
+  "standard_checkpoint_complete": true,
+  "next_user_terminal_command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup.ps1\" -Action CollectExperiments -JobId 44235",
+  "actual_agent_tc2_connections": 0,
+  "actual_agent_slurm_submissions": 0,
+  "implementation_files_modified": 0,
+  "audit_script_sha256": "CCEA88A26B4E132C40D05F4CC144FAD7B7D9EA2229E47000F78AF40E65887F47"
+}

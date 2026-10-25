@@ -1,0 +1,4 @@
+TC2 GPU: RunExperiments
+Local output: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\step7_20261019\experiments_transport_b770bf7e\tc2_gpu_setup_20261019_143000_84826e23
+A submitted or running job is not a passed check. Passwords are not stored.
+LOCAL VALIDATION ONLY. Seven-file experiment bundle built for stage B0; no connection or submission.

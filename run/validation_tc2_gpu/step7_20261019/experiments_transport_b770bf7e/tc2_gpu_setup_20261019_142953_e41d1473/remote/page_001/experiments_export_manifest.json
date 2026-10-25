@@ -1,0 +1,35 @@
+{
+  "analysis_ids": [],
+  "config_sha256": "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75",
+  "created_utc": "2026-10-19T06:29:47.701290+00:00",
+  "export_id": "7C79468D16204D4AA7F93428318343CB",
+  "files": [
+    {
+      "path": "configs/experiments_tc2_gpu.json",
+      "role": "experiment_configuration",
+      "sha256": "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75",
+      "size": 82070
+    }
+  ],
+  "job_id": "12345",
+  "page_count": 1,
+  "page_number": 1,
+  "partial": true,
+  "result_ids": [],
+  "schema_version": "1.0",
+  "snapshot_sha256": "8AA76B3045099795CB36C7E106ECD726332430ACE4FC72D7FB8C390C4342DA76",
+  "snapshot_status": {
+    "job_id": "12345",
+    "stage_complete": false,
+    "stage_id": "B0",
+    "status": "missing",
+    "step_7_complete": false
+  },
+  "stage_id": "B0",
+  "validation_scope": {
+    "cache_array_bytes_downloaded": false,
+    "prediction_arrays_loaded_locally": false
+  },
+  "whole_analysis_ids": [],
+  "whole_result_ids": []
+}

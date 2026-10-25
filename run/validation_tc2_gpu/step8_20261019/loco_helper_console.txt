@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "validation_root": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\s8_loco_transport_ce74bf4c",
+  "rendered_shell_commands": 13,
+  "cases": [
+    {
+      "name": "default",
+      "exit_code": 0,
+      "status": "passed"
+    },
+    {
+      "name": "loco",
+      "exit_code": 0,
+      "status": "passed"
+    },
+    {
+      "name": "wrong_action",
+      "exit_code": 2,
+      "status": "passed"
+    },
+    {
+      "name": "missing_job",
+      "exit_code": 2,
+      "status": "passed"
+    },
+    {
+      "name": "validate_only",
+      "exit_code": 2,
+      "status": "passed"
+    },
+    {
+      "name": "wrong_base",
+      "exit_code": 2,
+      "status": "passed"
+    },
+    {
+      "name": "missing_collector",
+      "exit_code": 2,
+      "status": "passed"
+    },
+    {
+      "name": "publish_failure",
+      "exit_code": 2,
+      "status": "passed"
+    },
+    {
+      "name": "bad_path",
+      "exit_code": 2,
+      "status": "passed"
+    },
+    {
+      "name": "bad_hash",
+      "exit_code": 2,
+      "status": "passed"
+    },
+    {
+      "name": "oversize",
+      "exit_code": 2,
+      "status": "passed"
+    },
+    {
+      "name": "duplicate",
+      "exit_code": 2,
+      "status": "passed"
+    }
+  ],
+  "all_four_collection_operations_use_selected_collector": true,
+  "all_rendered_bash_syntax": "checked_separately",
+  "actual_tc2_connections": 0,
+  "actual_slurm_submissions": 0
+}

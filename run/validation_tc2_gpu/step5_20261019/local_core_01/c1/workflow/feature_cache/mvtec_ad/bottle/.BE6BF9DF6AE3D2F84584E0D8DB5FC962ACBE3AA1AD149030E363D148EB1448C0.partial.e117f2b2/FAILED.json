@@ -1,0 +1,3 @@
+{
+  "error": "ValueError: Extraction must produce finite FP32 features at the frozen shape"
+}

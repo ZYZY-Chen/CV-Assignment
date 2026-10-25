@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\scripts\pilot_tc2_gpu.py", line 309, in <module>
+    main()
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\scripts\pilot_tc2_gpu.py", line 304, in main
+    result = preflight(args.root) if args.action == "preflight" else publish(args.root, args.incoming, args.stage) if args.action == "publish" else run_pilot(args.root)
+                                                                                                                                                    ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\scripts\pilot_tc2_gpu.py", line 197, in run_pilot
+    raise RuntimeError("Real-data pilots require a Linux SLURM compute job")
+RuntimeError: Real-data pilots require a Linux SLURM compute job

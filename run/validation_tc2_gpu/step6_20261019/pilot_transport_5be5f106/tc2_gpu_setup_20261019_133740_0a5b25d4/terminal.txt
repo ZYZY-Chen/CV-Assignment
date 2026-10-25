@@ -1,0 +1,10 @@
+TC2 GPU: CollectPilot
+Local output: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\step6_20261019\pilot_transport_5be5f106\tc2_gpu_setup_20261019_133740_0a5b25d4
+A submitted or running job is not a passed check. Passwords are not stored.
+SIMULATED SSH ONLY: no network or job submission.
+PILOT_EXPORT_PATH=/home/mcaai/huajie001/ca6129_v2_setup/tmp/pilot-12345-20261019_133740_0a5b25d4.tar.gz
+PILOT_EXPORT_SHA256=0FFAAC9E1567F33D7E368E00EE72006834E2FEF546115D7EF1746DC2617F76AC
+PILOT_EXPORT_BYTES=2934
+PILOT_EXPORT_PATH=/home/mcaai/huajie001/ca6129_v2_setup/tmp/pilot-12345-20261019_133740_0a5b25d4.tar.gz
+STOPPED: Pilot export metadata is missing or ambiguous; no download attempted.
+Send this local output path back: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\step6_20261019\pilot_transport_5be5f106\tc2_gpu_setup_20261019_133740_0a5b25d4\terminal.txt

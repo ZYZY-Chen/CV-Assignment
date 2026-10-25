@@ -1,0 +1,16 @@
+TC2 GPU: CollectExperiments
+Local output: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\step7_20261019\experiments_transport_924ef332\tc2_gpu_setup_20261019_142605_ebe27e1f
+A submitted or running job is not a passed check. Passwords are not stored.
+SIMULATED SSH ONLY: no network or job submission.
+EXPERIMENTS_INDEX_PATH=/home/mcaai/huajie001/ca6129_v2_setup/tmp/experiments-12345-20261019_142605_ebe27e1f/index.json
+EXPERIMENTS_INDEX_SHA256=8E76B0A439029C533C5A42A97865FBFC62B322EC8379E17EE3ED74B76C090766
+EXPERIMENTS_PAGE_COUNT=1
+SIMULATED SCP ONLY: local fixture transfer.
+{"index_sha256": "8E76B0A439029C533C5A42A97865FBFC62B322EC8379E17EE3ED74B76C090766", "job_id": "12345", "page_count": 1, "pages": [{"analysis_ids": [], "bytes": 6720, "name": "page_001.tar.gz", "page_number": 1, "result_ids": [], "sha256": "659B33D5897F4936B0A345B200062D4BD2D6B1CBDAFFDF823005E33CFD7F8D58"}], "partial": true, "remote_stage_complete": false, "stage_complete": false, "stage_id": "B0", "status": "verified", "step_7_complete": false}
+SIMULATED SCP ONLY: local fixture transfer.
+{"archive_sha256": "659B33D5897F4936B0A345B200062D4BD2D6B1CBDAFFDF823005E33CFD7F8D58", "cache_array_bytes_downloaded": false, "destination": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\step7_20261019\\experiments_transport_924ef332\\tc2_gpu_setup_20261019_142605_ebe27e1f\\remote\\page_001", "export_id": "C0759A0AC3C541138D9D19DC065B1403", "file_count": 1, "index_sha256": "8E76B0A439029C533C5A42A97865FBFC62B322EC8379E17EE3ED74B76C090766", "job_id": "12345", "manifest_sha256": "74C0D2ACF328DD4AEB09075099903A8D62596AE77CA18B4E7E952BAC182D270E", "page_number": 1, "partial": true, "prediction_arrays_loaded_locally": false, "remote_stage_complete": false, "stage_complete": false, "stage_id": "B0", "status": "verified", "step_7_complete": false}
+{"analysis_count": 0, "cache_array_bytes_downloaded": false, "completion_scope": "current_stage_and_remote_dependency_evidence", "index_sha256": "8E76B0A439029C533C5A42A97865FBFC62B322EC8379E17EE3ED74B76C090766", "job_id": "12345", "page_count": 1, "partial": true, "prediction_arrays_loaded_locally": false, "result_count": 0, "stage_complete": false, "stage_id": "B0", "status": "verified", "step_7_complete": false}
+All 1 experiment pages downloaded and independently verified. Index SHA256=8E76B0A439029C533C5A42A97865FBFC62B322EC8379E17EE3ED74B76C090766
+A queued, running or partial snapshot is not acceptance. Verify the completed stage and all collection pages before the next stage.
+Action finished. Read the relevant status JSON: step 2 requires all-mode step_2_complete=true; metrics require full-mode step_3_complete=true; algorithms require full-mode step_4_complete=true.
+Send this local output path back: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\step7_20261019\experiments_transport_924ef332\tc2_gpu_setup_20261019_142605_ebe27e1f\terminal.txt

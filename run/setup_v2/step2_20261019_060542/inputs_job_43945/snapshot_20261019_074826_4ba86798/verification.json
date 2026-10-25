@@ -1,0 +1,15 @@
+{
+  "archive_sha256": "403729988D0CDFD913C2E63A784EAE418FA5A70B125DAC38D2A6C94D672816F6",
+  "verified_record_count": 33,
+  "same_artifact_as_previous_snapshot": true,
+  "reported_state": "RUNNING",
+  "reported_elapsed": "00:15:28",
+  "node": "TC2N01",
+  "stderr_size_bytes": 0,
+  "restored_categories": 7,
+  "current_phase": "Official screw_bag restoration; finer progress not logged",
+  "final_input_audit_present": false,
+  "weight_restoration_record_present": false,
+  "step_2_complete": false,
+  "source_output_directory": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_074826_4ba86798"
+}

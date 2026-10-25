@@ -1,0 +1,66 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "name": "valid",
+      "status": "passed",
+      "expected_refusal": null
+    },
+    {
+      "name": "wrong_bundle_hash",
+      "status": "passed",
+      "expected_refusal": "RuntimeError: Analysis bundle size or hash differs"
+    },
+    {
+      "name": "unsafe_path",
+      "status": "passed",
+      "expected_refusal": "RuntimeError: Unsafe analysis publication path"
+    },
+    {
+      "name": "extra_file",
+      "status": "passed",
+      "expected_refusal": "RuntimeError: Unexpected analysis bundle member"
+    },
+    {
+      "name": "duplicate_member",
+      "status": "passed",
+      "expected_refusal": "RuntimeError: Unexpected analysis bundle member"
+    },
+    {
+      "name": "pax_headers",
+      "status": "passed",
+      "expected_refusal": "RuntimeError: Unexpected analysis bundle member"
+    },
+    {
+      "name": "changed_source",
+      "status": "passed",
+      "expected_refusal": "RuntimeError: Analysis input registry binds other source files"
+    },
+    {
+      "name": "protected_change",
+      "status": "passed",
+      "expected_refusal": "RuntimeError: Protected source changed: src/tc2_gpu_protocol.py"
+    },
+    {
+      "name": "target_conflict",
+      "status": "passed",
+      "expected_refusal": "RuntimeError: Conflicting analysis source; no overwrite: scripts/plot_results_tc2_gpu.py"
+    },
+    {
+      "name": "step7_incomplete",
+      "status": "passed",
+      "expected_refusal": "RuntimeError: The full frozen experiment matrix is not complete"
+    },
+    {
+      "name": "existing_publication",
+      "status": "passed",
+      "expected_refusal": "RuntimeError: Analysis publication record already exists"
+    }
+  ],
+  "wrapper_initial_and_failure_state": "passed",
+  "identical_source_reuse": "passed",
+  "protected_source_count": 44,
+  "actual_tc2_connections": 0,
+  "actual_slurm_submissions": 0,
+  "fixture_root": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\s8_publish_dc24f3f6"
+}

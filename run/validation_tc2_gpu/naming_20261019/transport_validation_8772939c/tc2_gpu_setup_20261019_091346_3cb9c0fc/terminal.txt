@@ -1,0 +1,8 @@
+TC2 GPU: DownloadInputs
+Local output: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\naming_20261019\transport_validation_8772939c\tc2_gpu_setup_20261019_091346_3cb9c0fc
+A submitted or running job is not a passed check. Passwords are not stored.
+Local package directory: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\setup_tc2_gpu\input_transfer_20261019_091346_3cb9c0fc\transfer
+SIMULATED TRANSFER/DOWNLOAD ONLY: no network.
+Packages downloaded locally only. Frozen input acceptance and GPU checks remain pending.
+Action finished. Read the relevant status JSON: step 2 requires all-mode step_2_complete=true; metrics require full-mode step_3_complete=true.
+Send this local output path back: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\validation_tc2_gpu\naming_20261019\transport_validation_8772939c\tc2_gpu_setup_20261019_091346_3cb9c0fc\terminal.txt

@@ -1,0 +1,272 @@
+{
+  "mode": "local_implementation",
+  "status": "awaiting_F1_submission",
+  "local_validation_status": "passed",
+  "step_7_complete": false,
+  "remote_acceptance": "B0_H1_H2_C1_I1_seed17_R0_C1R_C2_accepted_remaining_stages_pending",
+  "recorded_at_utc": "2026-10-19T11:27:46.964329+00:00",
+  "protocol_display_name": "TC2 GPU Experiment Protocol",
+  "accepted_workflow_job_id": "44012",
+  "accepted_pilot_job_id": "44024",
+  "planned_total_fits": 66,
+  "accepted_pilot_fits_reused": 2,
+  "planned_new_fits": 64,
+  "design_sha256": "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75",
+  "experiment_sources": {
+    "configs/experiments_tc2_gpu.json": "669AE05044C9441FACC6571F4E5AB5176BB08276DF58CA2B0D941B514A55FB75",
+    "scripts/experiments_tc2_gpu.py": "F4896D83DED9EAACB72ED7A75B63F76CC3538E61D2FB90A88CF1945D36D0CBDA",
+    "scripts/analyze_scores_tc2_gpu.py": "D1412F6743ECB6709EB82FF978DF4D8C37601371BE4E78C2329B9AAD1FF609F6",
+    "scripts/slurm/experiments_tc2_gpu.sh": "C4D12CFBC8D7B0F799AD51E06826318C8A17210526EC63ED04CD4FF3AB13080E",
+    "scripts/collect_experiments_tc2_gpu.py": "AC61772F65C9F2C4124761D2361E0A85E9F65DBCF4DF5BAB3E939B5111466010",
+    "tests/test_experiments_tc2_gpu.py": "371072914FD83F1E4A803501A86965977BA12C1797EE44C178D0A843F8A2FFE5",
+    "docs/TC2_GPU_EXPERIMENTS.md": "EBF7AD234A2346379CE5B7B80A76826A564F3ED7FF08DEB17CA362EC9E2FD47A"
+  },
+  "external_helper_sha256": "093F3E11DEC0FAAA26CFD3C48C846ED88EEEF517C25B82DDA2A843B8FC6A3B82",
+  "stages": [
+    "B0",
+    "H1",
+    "H2",
+    "C1",
+    "I1_seed17",
+    "R0",
+    "C1R",
+    "C2",
+    "F1",
+    "I1_all_seeds",
+    "I2",
+    "B0_LOCO"
+  ],
+  "accepted_step_7_stages": [
+    {
+      "stage_id": "B0",
+      "job_id": "44053",
+      "stage_complete": true,
+      "verified_fits": 12,
+      "record": "run/validation_tc2_gpu/step7_20261019/accepted_job_44053/verification.json",
+      "record_sha256": "1D3027FAA7C70404D6F9AEB94CD23375180D83611C0EE557EA3FB25F79B74CE2",
+      "remote_status_sha256": "FF5D76FC28711E90CF728A054B030164A051D46EA7D271A0FA2F45825E2A2E6D",
+      "index_sha256": "8EDF2AE1F1483545C8B61DC86550859F1171B3C1B660F9551B49CF676E4642BF"
+    },
+    {
+      "stage_id": "H1",
+      "job_id": "44075",
+      "stage_complete": true,
+      "verified_fits": 4,
+      "record": "run/validation_tc2_gpu/step7_20261019/accepted_job_44075/verification.json",
+      "record_sha256": "5697EE7F1A63E48A9ECB315D1F9102D20093FF40551576F863468F31D02E78D9",
+      "remote_status_sha256": "5A71C9B53DAA32B42B72F07DB0048BD2BB6F3B93722E3D688ED4ED188D42EC2E",
+      "index_sha256": "84AC23F7F62AA274A15F226A1A2FAD8E6F5100A3FC0DF242E98F5FDCC16EE756"
+    },
+    {
+      "stage_id": "H2",
+      "job_id": "44086",
+      "stage_complete": true,
+      "verified_fits": 4,
+      "record": "run/validation_tc2_gpu/step7_20261019/accepted_job_44086/verification.json",
+      "record_sha256": "DE1321B52C43A6225D3856802E3428FF67FE30C2B2E269AF00010B29D8AD4A25",
+      "remote_status_sha256": "FC526A5065FFC72CF59ACE3C681A6C387CA8C4B80CDCC27B5E5ABD2C7D7001C8",
+      "index_sha256": "294759842B70011859B5C9C9CF771CB5AFB708DE695A766735882C737737F59D"
+    },
+    {
+      "stage_id": "C1",
+      "job_id": "44103",
+      "stage_complete": true,
+      "verified_fits": 2,
+      "record": "run/validation_tc2_gpu/step7_20261019/accepted_job_44103/verification.json",
+      "record_sha256": "9D673329DA5FF2A8034A351C7314F99D6B17AB28F0257C10F1F65D16490597F4",
+      "remote_status_sha256": "49EBF855C45F81792FEEFD5A65C91AD337CEDFF76D85FD9352268758144F7F0A",
+      "index_sha256": "5565885339EC2C84F2669F5569EFAE63CE2219A300ACBF5E435AF1E031761722"
+    },
+    {
+      "stage_id": "I1_seed17",
+      "job_id": "44116",
+      "stage_complete": true,
+      "verified_fits": 0,
+      "verified_analysis_rows": 18,
+      "record": "run/validation_tc2_gpu/step7_20261019/accepted_job_44116/verification.json",
+      "record_sha256": "EAD6F26F4A3A60718ED20D6D15CE73F8B12BCDDAAB3C09C35D25408CD03C49F9",
+      "remote_status_sha256": "C31178CF1B49933F383F763B2B2AC034D04C625EE52B813E3B10840B00F69CC3",
+      "index_sha256": "1181927A6ACFB91D2006683B28360D2428EBDCFEECDAC88863D108188DFEDA64"
+    },
+    {
+      "stage_id": "R0",
+      "job_id": "44121",
+      "stage_complete": true,
+      "verified_fits": 24,
+      "record": "run/validation_tc2_gpu/step7_20261019/accepted_job_44121/verification.json",
+      "record_sha256": "2232250A910D52D96433CC201AEF720B0E746BDEE9E26C9F4AB1578935C5ADAB",
+      "remote_status_sha256": "3D6CAAAFCC741F90CA0CD905DBF802EC07B1647879C1BCD32C3D5205C4522FD9",
+      "index_sha256": "DFE2E6ACFE9B44EEB463A883A88FCDFD079650AF4B0AE0A445C17C8028DDA0AA"
+    },
+    {
+      "stage_id": "C1R",
+      "job_id": "44183",
+      "stage_complete": true,
+      "verified_fits": 4,
+      "record": "run/validation_tc2_gpu/step7_20261019/accepted_job_44183/verification.json",
+      "record_sha256": "660EF032CE90D70C6E1CFC2419E250469C7B7D78B59014184152D6B2BCF5E3F4",
+      "remote_status_sha256": "9B33688CF07B62ACBCAC2B521B677DF7AFA64F3235A97B2C32B1FB14D589E012",
+      "index_sha256": "C0FAF08B622D6751572746F5C46AB4B7747AF579EC3ED82DA88290205AC45BD9"
+    },
+    {
+      "stage_id": "C2",
+      "job_id": "44198",
+      "stage_complete": true,
+      "verified_fits": 4,
+      "record": "run/validation_tc2_gpu/step7_20261019/accepted_job_44198/verification.json",
+      "record_sha256": "5B224FBBB072C6711D7370E10A0F7E6BFFE10FA98AB41B3F54C8039436E45102",
+      "remote_status_sha256": "751A2943479F91B89D1C29E6F1CDB61068AA39AE2523B1BA015DA19147DCE3D1",
+      "index_sha256": "1F6B8DE183BC79D70224FAE6CE40F58BCCEB368A58B7F5B9CE4B5F952E6DC942"
+    }
+  ],
+  "offline_tests": {
+    "tests_run": 33,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "torch_imported": false
+  },
+  "collector_offline_checks": 32,
+  "protected_files_checked": 4251,
+  "scope_verification_sha256": "4CB2E75AF45D19567F6EC6A09920285B1C3BF3605A25411BA64849A9C93A5E27",
+  "checks": {
+    "syntax_python": "passed",
+    "syntax_slurm_bash": "passed",
+    "syntax_powershell": "passed",
+    "legacy_helper_compatibility": "passed",
+    "pilot_helper_compatibility": "passed",
+    "new_helper_fit_cpu_collection_transport": "passed",
+    "isolated_bootstrap_and_publication": "passed",
+    "final_local_seven_file_bundle": "passed",
+    "approved_change_scope": "passed",
+    "scheduling_tc2n01_supplement": "passed"
+  },
+  "actual_tc2_connections": 0,
+  "actual_model_calls": 0,
+  "actual_slurm_submissions": 0,
+  "next_stage": "F1",
+  "next_stage_new_fits": 8,
+  "next_stage_pilot_verifications": 0,
+  "next_user_terminal_command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup.ps1\" -Action RunExperiments -Stage F1",
+  "next_acceptance": "Verify the completed F1 job, all eight result identities and every returned collection page before I1_all_seeds.",
+  "completion_boundary": "All twelve returned stage collections must pass before local step-7 completion. The final remote status covers its current stage and remote dependency evidence; earlier local collections remain required.",
+  "latest_attempt": {
+    "job_id": "44198",
+    "stage_id": "C2",
+    "node": "TC2N01",
+    "slurm_state": "COMPLETED",
+    "exit_code": "0:0",
+    "stage_complete": true,
+    "verified_result_count": 4,
+    "verification": "run/validation_tc2_gpu/step7_20261019/accepted_job_44198/verification.json"
+  },
+  "next_action": "Submit the approved F1 stage from the user terminal and return its output for review.",
+  "scheduling_supplement": {
+    "status": "passed",
+    "fit_node": "TC2N01",
+    "analysis_scheduling": "existing_partition_scheduling",
+    "record": "run/validation_tc2_gpu/step7_20261019/scheduling_tc2n01_20261019/setup_status.json",
+    "helper_sha256": "093F3E11DEC0FAAA26CFD3C48C846ED88EEEF517C25B82DDA2A843B8FC6A3B82",
+    "protected_experiment_sources_unchanged": true
+  },
+  "previous_attempts": [
+    {
+      "job_id": "44047",
+      "stage_id": "B0",
+      "node": "TC2N03",
+      "slurm_state": "FAILED",
+      "exit_code": "1:0",
+      "new_results": 0,
+      "stage_complete": false,
+      "verification": "run/validation_tc2_gpu/step7_20261019/failed_job_44047/verification.json"
+    },
+    {
+      "job_id": "44053",
+      "stage_id": "B0",
+      "node": "TC2N01",
+      "slurm_state": "COMPLETED",
+      "exit_code": "0:0",
+      "stage_complete": true,
+      "verified_result_count": 12,
+      "verified_new_result_count": 10,
+      "verification": "run/validation_tc2_gpu/step7_20261019/accepted_job_44053/verification.json"
+    },
+    {
+      "job_id": "44075",
+      "stage_id": "H1",
+      "node": "TC2N01",
+      "slurm_state": "COMPLETED",
+      "exit_code": "0:0",
+      "stage_complete": true,
+      "verified_result_count": 4,
+      "verification": "run/validation_tc2_gpu/step7_20261019/accepted_job_44075/verification.json"
+    },
+    {
+      "job_id": "44086",
+      "stage_id": "H2",
+      "node": "TC2N01",
+      "slurm_state": "COMPLETED",
+      "exit_code": "0:0",
+      "stage_complete": true,
+      "verified_result_count": 4,
+      "verification": "run/validation_tc2_gpu/step7_20261019/accepted_job_44086/verification.json"
+    },
+    {
+      "job_id": "44116",
+      "stage_id": "I1_seed17",
+      "node": "TC2N02",
+      "slurm_state": "COMPLETED",
+      "exit_code": "0:0",
+      "stage_complete": true,
+      "verified_result_count": 0,
+      "verified_analysis_rows": 18,
+      "verification": "run/validation_tc2_gpu/step7_20261019/accepted_job_44116/verification.json"
+    },
+    {
+      "job_id": "44121",
+      "stage_id": "R0",
+      "node": "TC2N01",
+      "slurm_state": "COMPLETED",
+      "exit_code": "0:0",
+      "stage_complete": true,
+      "verified_result_count": 24,
+      "verification": "run/validation_tc2_gpu/step7_20261019/accepted_job_44121/verification.json"
+    },
+    {
+      "job_id": "44183",
+      "stage_id": "C1R",
+      "node": "TC2N01",
+      "slurm_state": "COMPLETED",
+      "exit_code": "0:0",
+      "stage_complete": true,
+      "verified_result_count": 4,
+      "verification": "run/validation_tc2_gpu/step7_20261019/accepted_job_44183/verification.json"
+    }
+  ],
+  "verified_formal_fits": 54,
+  "verified_new_fits": 52,
+  "remaining_formal_fits": 12,
+  "next_stage_analysis_rows": 0,
+  "verified_analysis_rows": 18,
+  "core_checkpoint_complete": true,
+  "checkpoints": [
+    {
+      "checkpoint_id": "core",
+      "after_stage": "I1_seed17",
+      "expected_fits": 22,
+      "complete": true
+    },
+    {
+      "checkpoint_id": "standard",
+      "after_stage": "I2",
+      "expected_fits": 62,
+      "complete": false
+    },
+    {
+      "checkpoint_id": "full",
+      "after_stage": "B0_LOCO",
+      "expected_fits": 66,
+      "complete": false
+    }
+  ]
+}

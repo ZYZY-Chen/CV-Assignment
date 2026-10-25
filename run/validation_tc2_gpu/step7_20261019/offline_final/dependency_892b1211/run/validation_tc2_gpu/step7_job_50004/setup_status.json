@@ -1,0 +1,19 @@
+{
+  "mode": "formal_experiment_stage",
+  "stage_id": "I1_seed17",
+  "job_id": "50004",
+  "status": "passed",
+  "stage_complete": true,
+  "step_7_complete": false,
+  "predecessor": {
+    "stage_id": "C1",
+    "job_id": "50003",
+    "status_sha256": "3D43F4F06A35A5902E7C6ED5B8A9185F4BC74F1E918C4373742EB460ABFA76A2"
+  },
+  "design_sha256": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "experiment_sources": {
+    "offline": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"
+  },
+  "results": [],
+  "analyses": []
+}

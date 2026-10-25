@@ -1,0 +1,10 @@
+{
+  "expected_enum": "torchvision.ResNet18_Weights.IMAGENET1K_V1",
+  "official_url": "https://download.pytorch.org/models/resnet18-f37072fd.pth",
+  "ready": true,
+  "status": "official_hash_prefix_match",
+  "path": "/home/mcaai/huajie001/ca6129_v2_setup/weights/resnet18-f37072fd.pth",
+  "size_bytes": 46830571,
+  "sha256": "F37072FD47E89C5E827621C5BAFFA7500819F7896BBACEC160B1A16C560E07EC",
+  "note": "Full SHA-256 recorded; model compatibility is checked separately on GPU."
+}

@@ -1,0 +1,147 @@
+{
+  "verification_status": "passed",
+  "stage_accepted": false,
+  "step_7_complete": false,
+  "job_id": "44103",
+  "requested_stage": "C1",
+  "checked_at_utc": "2026-10-19T08:37:49.139767+00:00",
+  "source_directory": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_163434_5490a734",
+  "index_sha256": "58F788538212D7C948F33019E9F461BE091A17DE4FFF8FC6BDD993F54C01136D",
+  "index_verification": {
+    "status": "verified",
+    "job_id": "44103",
+    "stage_id": "C1",
+    "index_sha256": "58F788538212D7C948F33019E9F461BE091A17DE4FFF8FC6BDD993F54C01136D",
+    "page_count": 1,
+    "pages": [
+      {
+        "analysis_ids": [],
+        "bytes": 419556,
+        "name": "page_001.tar.gz",
+        "page_number": 1,
+        "result_ids": [],
+        "sha256": "3F478C1A18CFBCA710657B4FA6ADEC4E440022A672A0C56A41C8FC9ECE1F9C67"
+      }
+    ],
+    "partial": true,
+    "stage_complete": false,
+    "step_7_complete": false,
+    "remote_stage_complete": false
+  },
+  "collection_verification": {
+    "status": "verified",
+    "job_id": "44103",
+    "stage_id": "C1",
+    "index_sha256": "58F788538212D7C948F33019E9F461BE091A17DE4FFF8FC6BDD993F54C01136D",
+    "page_count": 1,
+    "result_count": 0,
+    "analysis_count": 0,
+    "partial": true,
+    "stage_complete": false,
+    "step_7_complete": false,
+    "completion_scope": "current_stage_and_remote_dependency_evidence",
+    "cache_array_bytes_downloaded": false,
+    "prediction_arrays_loaded_locally": false
+  },
+  "archive_hash_and_size_checks": [
+    {
+      "name": "page_001.tar.gz",
+      "bytes": 419556,
+      "sha256": "3F478C1A18CFBCA710657B4FA6ADEC4E440022A672A0C56A41C8FC9ECE1F9C67"
+    }
+  ],
+  "slurm_state_at_snapshot": "RUNNING",
+  "slurm_elapsed_at_snapshot": "00:00:35",
+  "node_at_snapshot": "TC2N01",
+  "phase_at_snapshot": "phase_003_run",
+  "current_remote_state": "unknown",
+  "completed_phases": [
+    {
+      "phase": "phase_001_extract",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-19T08:34:25.964480+00:00"
+    },
+    {
+      "phase": "phase_002_extract",
+      "exit_code": 0,
+      "finished_at_utc": "2026-10-19T08:34:33.807437+00:00"
+    }
+  ],
+  "verified_stage_results": 0,
+  "expected_stage_results": 2,
+  "runtime_and_resources_match_accepted_environment": true,
+  "runtime": {
+    "device": "cuda",
+    "gpu": "NVIDIA A40",
+    "driver": "570.148.08",
+    "cuda_build": "12.8",
+    "software": {
+      "python": "3.10.22",
+      "numpy": "1.26.4",
+      "torch": "2.11.0+cu128",
+      "torchvision": "0.26.0+cu128",
+      "pillow": "12.3.0",
+      "scikit-learn": "1.7.2",
+      "pyyaml": "6.0.3"
+    },
+    "acceptance_jobs": {
+      "metrics": "43968",
+      "algorithms": "43970",
+      "setup": "43950"
+    },
+    "compatibility_configuration_sha256": "EDF3D1D0380E0105A5173607CE360221FD43B059478915EEC0EC04ED9110F913",
+    "slurm_job_id": "44103",
+    "tf32": false,
+    "autocast": false
+  },
+  "resources": {
+    "partition": "MGPU-TC2",
+    "qos": "normal",
+    "nodes": 1,
+    "tasks": 1,
+    "gpus": 1,
+    "cpus_per_task": 2,
+    "memory_gib": 24,
+    "time_limit": "02:00:00"
+  },
+  "protected_sources_checked": 44,
+  "predecessor": {
+    "stage_id": "H2",
+    "job_id": "44086",
+    "status_sha256": "FC526A5065FFC72CF59ACE3C681A6C387CA8C4B80CDCC27B5E5ABD2C7D7001C8"
+  },
+  "previous_stage_chain_matches_accepted_records": true,
+  "cache_metadata_and_identity_checks": [
+    {
+      "category": "cable",
+      "images": 374,
+      "metadata_sha256": "646DF39171F6682E394975B2242D8449B82BA7CB3777F1474453D2067CD87E87",
+      "layer_hashes": {
+        "layer1": "F78317C718D7A83EEF207AA7FFD9ACD31AEC52A6F6AD7E308A396D4626C559C2",
+        "layer2": "BE7A9A47056C0B1759393AB03F192489ECB98BDA116542AE2C4A9B83FE24444B",
+        "layer3": "A92468B237BA0F2DB3A32223ED842F87403C1FC653A6E970157B6613BE4B7DFA"
+      },
+      "matches_accepted_H2": true
+    },
+    {
+      "category": "screw",
+      "images": 480,
+      "metadata_sha256": "B131F425A2D9D0C4583DA65874E306267DDA853D133B155F8355638CFCC4453F",
+      "layer_hashes": {
+        "layer1": "D3F32356E80342A4CE9989FBA5BD769CBADAF1CC18FD9B34D6FA85FD868EC3D9",
+        "layer2": "F2F1E97B7B7481299C4E4831219513E80FD76650519BA1069EAC4B1C88FE8E8B",
+        "layer3": "11174D5598540BE8291668CEBD6C971CC55C85235F14902364E1BDD2A9064F84"
+      },
+      "matches_accepted_H2": true
+    }
+  ],
+  "cache_array_bytes_downloaded": false,
+  "prediction_arrays_loaded_locally": false,
+  "remote_status_sha256": "FD1144D458C9C9710396E38C5E68F84354938A447A707C2E894152CB07AB02EB",
+  "previously_accepted_formal_fits": 20,
+  "independent_second_reader": "Source hashes, predecessor and accepted chain, runtime/resources, and two verified cache phases independently cross-checked; no inconsistency found.",
+  "next_user_terminal_command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup.ps1\" -Action CollectExperiments -JobId 44103",
+  "actual_agent_tc2_connections": 0,
+  "actual_agent_slurm_submissions": 0,
+  "implementation_files_modified": 0
+}

@@ -1,0 +1,112 @@
+{
+  "status": "proposed_awaiting_user_confirmation",
+  "scope": "Step 8 figures-only supplement; source scientific computation is already accepted independently. No implementation of this supplement has begun.",
+  "input_analysis": {
+    "job_id": "44284",
+    "identity_sha256": "6077F6D3F5244ECB28EF67BECBE454E989C99246F285CD63C85DBEC8A6239B5C",
+    "path": "run/tc2_gpu/summaries/analysis/6077F6D3F5244ECB28EF67BECBE454E989C99246F285CD63C85DBEC8A6239B5C",
+    "index_sha256": "3450A62EDD4BEAAF026DD1EA5326CC827020219F6424FC0F744958FFE8D11079",
+    "required_inputs": [
+      "Verified tables.json",
+      "Verified selected cases and their existing PNG/mask/FP32 map assets",
+      "Existing descriptive CDF source data",
+      "Frozen original plotting module"
+    ]
+  },
+  "changes": [
+    {
+      "target": "Shared figure layout",
+      "design": "Reserve separate bands for axes, legends and notes using final rendered bounds; prevent legend-label/tick collisions in all 15 figures."
+    },
+    {
+      "target": "F1 diagram",
+      "design": "Fit text inside measured boxes and keep arrows clear; explicitly connect both method routes to their anomaly-map/image-score outputs."
+    },
+    {
+      "target": "F5 and typography",
+      "design": "Maintain at least 7 pt actual PDF glyph sizes, including log labels; use plain numeric log ticks or an equivalent readable formatter without changing plotted values."
+    }
+  ],
+  "new_files": [
+    {
+      "path": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\configs\\figure_revision_tc2_gpu.json",
+      "purpose": "Pinned input analysis identity and figure layout/export/QA policy"
+    },
+    {
+      "path": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\scripts\\revise_figures_tc2_gpu.py",
+      "purpose": "CPU-only revision driver using frozen original plot functions with explicit layout/export and method-diagram overrides only"
+    },
+    {
+      "path": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\scripts\\collect_figure_revision_tc2_gpu.py",
+      "purpose": "Bounded dedicated export and verification for the new revision namespace"
+    },
+    {
+      "path": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\scripts\\slurm\\figure_revision_tc2_gpu.sh",
+      "purpose": "CPU wrapper, no Torch or model entry points"
+    },
+    {
+      "path": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\tests\\test_figure_revision_tc2_gpu.py",
+      "purpose": "Layout, font, data invariance, source preservation and archive safety checks"
+    },
+    {
+      "path": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\docs\\TC2_GPU_FIGURE_REVISION.md",
+      "purpose": "Exact operation, input/output and acceptance contract"
+    }
+  ],
+  "existing_files_to_modify": [
+    {
+      "path": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup.ps1",
+      "change": "Add RunFigureRevision and CollectFigureRevision; publish only the six new pinned files and collect the new namespace."
+    },
+    {
+      "path": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\README.md",
+      "change": "English instructions and truthful revision/acceptance status only; existing Chinese content unchanged."
+    }
+  ],
+  "source_preservation": "The original seven analysis sources, 44 scientific/pilot/experiment sources, all job44284 outputs and all historical logs remain unchanged.",
+  "rendering_implementation": "Import the frozen original plotting module. Override only its shared layout/export routine and method-diagram routine in the new revision process, recording the new driver/config fingerprints. Do not alter numerical plotting routines, scores, thresholds, metrics, seed aggregation or case selection.",
+  "data_invariance": "Compare every plotted numerical series with the accepted original source data; copy only already-selected case assets unchanged when needed for the revision output. Do not access full datasets, feature caches or models.",
+  "resources": {
+    "jobs": 1,
+    "partition": "MGPU-TC2",
+    "qos": "normal",
+    "nodes": 1,
+    "tasks": 1,
+    "cpus": 2,
+    "memory_mib": 8192,
+    "time_limit": "00:15:00",
+    "gpus": 0,
+    "node_pin": null,
+    "new_fits": 0,
+    "model_predict_calls": 0,
+    "new_statistics": 0
+  },
+  "new_output_namespace": "run/tc2_gpu/summaries/figure_revision/<identity>/",
+  "new_job_records": "run/validation_tc2_gpu/step8_figure_revision_job_<job>/",
+  "collection_bounds": {
+    "compressed_archive_bytes": 536870912,
+    "decompressed_archive_bytes": 536870912,
+    "members": 512,
+    "index_fingerprint_required": true,
+    "reject_links_duplicates_traversal_mixed_snapshots": true
+  },
+  "acceptance": [
+    "Independent source/data invariance checks",
+    "Actual 15-figure PNG/PDF render in the existing locked TC2 environment",
+    "Final axes alignment, legend/label/tick clearance and diagram text containment gates",
+    "Actual PDF font-size scan with 7 pt floor",
+    "Reopen and review every revised PDF/PNG",
+    "All collection fingerprints and original-source preservation pass"
+  ],
+  "execution_order": [
+    "Implement only after explicit approval",
+    "Offline checks and immutable-source audit",
+    "User terminal submits exactly one CPU figure-revision job",
+    "User returns terminal.txt; collect the same job as needed",
+    "Independent visual/data acceptance; then mark step8 complete"
+  ],
+  "report_writing": false,
+  "automatic_next_step": false,
+  "environment_installations": false,
+  "confirmation_phrase": "\u786e\u8ba4\u6267\u884c\u7b2c8\u9879\u56fe\u8868\u4fee\u8ba2\u4fee\u6539"
+}

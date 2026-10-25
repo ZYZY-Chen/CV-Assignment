@@ -1,0 +1,7 @@
+test_cpu_gpu_numerical_agreement (__main__.AlgorithmGPU) ... ok
+test_real_feature_shapes_and_frozen_variants (__main__.AlgorithmGPU) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 4.966s
+
+OK

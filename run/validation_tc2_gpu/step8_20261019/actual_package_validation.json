@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "actual_windows_tar_members": 9,
+  "bundle_sha256": "11342379967DACFE072EB8953B0B43FF953BBB97F634FA901F40CB946B83F987",
+  "inputs_sha256": "59F8F62DA7E14B2F1710F8EBE43ABF2A64D42B3B2A878B5677607D7FE4C06454",
+  "all_source_and_input_bytes_bound": true,
+  "pax_headers": false,
+  "actual_tc2_connections": 0,
+  "actual_slurm_submissions": 0,
+  "package_directory": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_gpu_setup_20261019_214404_f4c39c2a"
+}

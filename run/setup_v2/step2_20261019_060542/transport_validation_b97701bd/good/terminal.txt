@@ -1,0 +1,6 @@
+SSH: enter the password in this terminal when requested.
+OFFLINE SSH FIXTURE
+TC2_ARTIFACT_SHA256=2EEBEAC20263441A85D15C8637D71F046BC7F67C16FB02E88A2741EC2B72E5E8
+SSH exit code: 0
+Downloaded 1 output files. SHA256=2EEBEAC20263441A85D15C8637D71F046BC7F67C16FB02E88A2741EC2B72E5E8
+Remote records: C:\Users\mhjv_\PycharmProjects\6129_assignment\group_XX_code\run\setup_v2\step2_20261019_060542\transport_validation_b97701bd\good\remote

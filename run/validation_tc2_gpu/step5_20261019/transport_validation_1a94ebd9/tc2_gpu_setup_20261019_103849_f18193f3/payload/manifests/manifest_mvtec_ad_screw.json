@@ -1,0 +1,3500 @@
+{
+  "manifest_version": "1.0",
+  "dataset": "mvtec_ad",
+  "category": "screw",
+  "generated_at_utc": "2026-10-17T14:36:02+00:00",
+  "config": {
+    "split_seed": 20261017,
+    "dev_ratio": 0.2,
+    "dev_mode": "split_train",
+    "dev_note": "train/good 的 20%（split seed=20261017）",
+    "run_seeds": [
+      17,
+      29,
+      43
+    ],
+    "fit_sizes": [
+      100,
+      50,
+      20
+    ],
+    "main_fit_n": 100,
+    "image_size": 256,
+    "backbone": "ResNet18 (ImageNet pretrain)"
+  },
+  "split_hash": "9A49E85293C36F31B2E097B588783661FAF037D4FDAED21FA5C8BC4420E4D0C7",
+  "counts": {
+    "train_good_total": 320,
+    "dev_normal": 64,
+    "fit_pool": 256,
+    "test_good": 41,
+    "test_anomaly": 119,
+    "defect_types": 5,
+    "masks": 119
+  },
+  "dev": [
+    {
+      "path": "mvtec_ad/screw/train/good/000.png",
+      "sha256": "44B81B1B5779D5BC1695E8FDB1CA361EEDA32B771CE91B0CC5468CC1F8AA735B"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/008.png",
+      "sha256": "2CF134054F4FE8411876B14536AC436E6C1425254AFF8020CEF0A44B8DBBABFE"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/013.png",
+      "sha256": "AB1A29335B9259AB7590790C387E1FB0F746072D9C50E84ABAB2E417F766E3F1"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/016.png",
+      "sha256": "84874F01C5DF84C0097BF894629E39B6E723C3739072CC7282EEF552437AB4F8"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/021.png",
+      "sha256": "3D0AB9ADD989DBF23635224CE0787B42B27E3967BC2070BCC4B81101DC01ACC0"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/030.png",
+      "sha256": "5E3BBDAB2FC882878E647E8860A5E2B1827214451C4B0AEFC2D29AEE5F7D82DA"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/035.png",
+      "sha256": "6267D6F33F02B1E46C7689DD940EC600F3EDE6DBD5CA914B46CB00E7424442F0"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/040.png",
+      "sha256": "BB5E6873BEAE314AF10C37E46D13AA44EAEC0BF06D4FCC652B2E301DBCD29E3E"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/041.png",
+      "sha256": "4310431111D2A26FB7247F1D5F1133D01FF473A0851B4456136073EA0BF5F95E"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/052.png",
+      "sha256": "4179150F03DF55571BAB8C6A3FF32337CCE10FE88152AB7A5C9D5A2E2D655D08"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/053.png",
+      "sha256": "2FA2660910907BB105726DB12A002FEB639CCE3B98510E498F0E67250146EEC6"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/060.png",
+      "sha256": "A03C57526327443354DBDAAF96B01D1BA222CC672572450E5E3F3843EC90CC07"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/064.png",
+      "sha256": "1EBDBFF6BAF8319C4E36157AE39E7DCB59024C59CB78CC284296D4235461A5DB"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/071.png",
+      "sha256": "FCF80CE5E7DD0CD07A445DDBC2C13FF4B3ED2EFBBCD0C4CA8EBCEACDA5167F6D"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/077.png",
+      "sha256": "072A7A6B574E43E20B04429290DFA33B62E2E4AF7328692B2217CD65F5779B1A"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/078.png",
+      "sha256": "2B05EA2C5F7AA6CBDEBE968FC99C68E55E41CDDA4E7218025C2E66FBC7E1A0F3"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/080.png",
+      "sha256": "CD5BB3D12E66122091FD8F9F45189494257973D8245FFB08D997FAF74ED5FF5F"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/086.png",
+      "sha256": "DB516BFAEC21C2386C9C1855CDFBA8D79CE3365D127C35AA44BBDCEDBA49EA7F"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/095.png",
+      "sha256": "E3E3469034E7C246EEB0E382E339445E0E5443D5845E0A99BB53367530CE29FD"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/099.png",
+      "sha256": "00FF25448B60D4E49BE2A5EE191A38E2A632FA9FB4088D46FA506866DFBBE0CC"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/103.png",
+      "sha256": "49003FD23DAE2753C1DD5BD84637991EB5DA4EDBD0B9FB215639EE7743DDA5DF"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/104.png",
+      "sha256": "D1604D5218FB7294F852836714B19BCE3FD2ECC3AD618B8EF553616C345EB214"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/106.png",
+      "sha256": "5F7772ABDA413ABD7A68552570E7DF7E8ED3B95D9CC3891FE5FF1D85E18F19E3"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/108.png",
+      "sha256": "206D1A2B4AECF787BE83970C6E1E7EE7B17E4EECC4F0C7D23288B202BE4BB5B5"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/110.png",
+      "sha256": "2E63F612365DFA0A0CD4605837E4F044B51DA8F122D2A0C7A848B8805BA319AB"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/116.png",
+      "sha256": "F6B059D966348C16BCFDDB66FBE021A490B50AE0ABF257CAD9D1E98C0DF76FFB"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/119.png",
+      "sha256": "ECB22E7FE6960F585E526B609C654985FD0ADBBC759A0C94ECEB8404E3A28880"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/131.png",
+      "sha256": "D684DDC0B45464B8C2B988DBC1633995972C4DCD7D96B5303287C590F6FCACA6"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/144.png",
+      "sha256": "2B479B3826DEF03374ED60ACD7A9DC1DD91A93ABAA9E71DB4E30E50176D39AB7"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/153.png",
+      "sha256": "E4404CF67543FD86775E25F074FA9E1FFC15FB3394E15B77F942814499CB2EB1"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/159.png",
+      "sha256": "B86106B279A91BA461EBCD24F4DBC6E376119D2DE24FD328860C1DBBDAB8F5AB"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/162.png",
+      "sha256": "556EC8207F0573DD769220728C4DDEDB6A7D838CF1180B1FAD5324CC83A49D59"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/163.png",
+      "sha256": "A32C34FFE7A00AB7EE242A1E5D873C5109B71E4CD62A6EAE1E6FBE40E6D29624"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/172.png",
+      "sha256": "F7ADD8B756608D2235EFA0FF77929D9A31781E0F2450EE7F432866B664D79593"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/178.png",
+      "sha256": "4EEF1317760F1B9B90387571AA728851ADD0F83C9CBEA99502EDF825E4C71C1E"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/181.png",
+      "sha256": "4F76E32C35D6EC1E9DDF7C73E03939DC9A01E8754573FC8848F9831B230703BB"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/186.png",
+      "sha256": "99F97B932D864FBEAA5A630BF53F492B6950F66C85D374B515C1383185AAE2E4"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/189.png",
+      "sha256": "CEAD043C6332CF93848264DA1D1C29B50709B11FF0F3EBC1AE34EC586E03068D"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/190.png",
+      "sha256": "44611BFF6504DCC4A2A59FDCB906A82030B94548C1390490841622A207D10CA1"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/191.png",
+      "sha256": "F20C0A1531491F0E53C2A350874019D2FE2A877D420675A0937EDF849F705770"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/200.png",
+      "sha256": "D4FD5BEBFFDFC30FC525E37FA43E84B4A984435D19EC63CE1F6B70B6B3988253"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/202.png",
+      "sha256": "17A948896466BDEB79755212BE44389BB603F4AB6E4F4E8FA2F324B5C1BACC58"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/208.png",
+      "sha256": "E24070C054FE47E9FF64D612DAF7161E9E195E3B08F51B5DEDEF0B9036B8A189"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/210.png",
+      "sha256": "91467A63C45BFDC3CD65EFDC376E66181505340A9EC5D5C48AFF48A9E709165A"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/214.png",
+      "sha256": "7650653745B36EB0681D316AEA13A663AA2278905C8D940B6701ACFD50E8CE6B"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/217.png",
+      "sha256": "502C754D92A3A1B405A7019F03A051AE5A1A750D14549E01732B4E3714F86413"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/223.png",
+      "sha256": "A11188861EA4E5182168A5C1DD57EA76379F103DBB42BE8FFFD8B256FC3CAC3A"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/228.png",
+      "sha256": "F64D7E942D8871ACD07F14BBF605895B67F4A7580BC151755443A765B1386BA2"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/231.png",
+      "sha256": "C1B88F3F6C83AD369FDF64BEE216ED83ACBA504F100A2388ADC92AE566DAA7B7"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/235.png",
+      "sha256": "302F78C22FC42D848FF9FE3E7B8396803FD5AB35AC6309BB3D2962771AB27668"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/236.png",
+      "sha256": "D90AF19134F1FA356266D8D997537A496A4031BEA46B6E03583D9E17FA8B37F9"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/246.png",
+      "sha256": "AAFFD974FFFBA6711A34068ADCBA06850F640A03684E0392171513706C70456E"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/254.png",
+      "sha256": "9A71DE3DEA0B299B2483292B9CC5F17A0B383309B45AEC02E8B0553D79CD9B90"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/258.png",
+      "sha256": "6973079741A0DA5D8D6547BF657F1D4428DB1245768D38CCDF01425CFD0F3861"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/269.png",
+      "sha256": "123941B6162BA30199FFCA57D451AD9AFB8782BD6245A572CE2B8624CCE7125E"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/272.png",
+      "sha256": "BDDE3316467E70E5F67C6ACB3FA80FD7F0FF652337871AB23A6C6CC659B4A885"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/273.png",
+      "sha256": "3753D8BBD3B8EB882DE749850D85CB7AFDE619B400ECDCAE64EA1FE7D34C9C55"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/278.png",
+      "sha256": "886D31BCAAFE8DAEF7C7ED11E7D9CBCC3F97CB0FC47D1D5BF7CE36BD418AA028"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/295.png",
+      "sha256": "F84D07F663A804FF9FD34606E8D82EEFFB49308EC9F42724A2C5C41BAF3825CA"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/297.png",
+      "sha256": "D46674AA52208C865C525E248C17C989789A478303EB5A4A8B31EFF37B7B71E3"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/302.png",
+      "sha256": "62078ED244992140BAB53B097E997D48D0158D1E5538CCF9A02AFD437211A018"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/307.png",
+      "sha256": "6A58584B69924A6374057627EA70560B6C84702F939FCDD51DC36805F4495764"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/309.png",
+      "sha256": "D90A75A1607FED199FECF18F1E4614E1AE200AF08AEF9766EC94B2B8BD077D19"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/315.png",
+      "sha256": "64B251126C2AAACB8614A146B6908232EBD648360D6171D4862190D04324D7ED"
+    }
+  ],
+  "fit_pool": [
+    {
+      "path": "mvtec_ad/screw/train/good/001.png",
+      "sha256": "CE993D2C0B761F710EF845A92FCBFB49ADB7AF9570964CEF6B7247B48A72A5EF"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/002.png",
+      "sha256": "B51B65C5AA7FF9B21EF8EE7104DC19289525CF9E0B62FEC2E591CEE1D04619BC"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/003.png",
+      "sha256": "32F2EAE73E255B25383CCC2461B0AFF46A51640CF402958439AA9A8858F4172C"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/004.png",
+      "sha256": "B31784BB582BDE50E7325E7B3F87EAFE722A46D5ECE9C7D5C10BF0B34B358067"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/005.png",
+      "sha256": "4AD127ED46407575159594937FB2BC5F9D987B719A55FDD8F5169E07F00F8DB6"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/006.png",
+      "sha256": "17ED86E8648A474B19EA6B975B6CF82412A1246E39CF7521DB1744C74D905904"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/007.png",
+      "sha256": "B4848C17685FA349DFBF0336F2C2E881E9E9C39429C785858FF45C80FC4F748C"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/009.png",
+      "sha256": "64668C0593AD84F5ECF788B22063BA4FE308693A5F56BAF5B071EE24E1B4CA5E"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/010.png",
+      "sha256": "82B415761ACE4E6FB53730F1C90DD2869C3CCFC64050DCC73BA43B42E6D991D7"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/011.png",
+      "sha256": "D355FB04F5A33C7EAC416F6B26E53C70B927BF4F6FD68B9C643F7E63F9B7B658"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/012.png",
+      "sha256": "9F8AC3DBA1E96FC1AF74E138C70B0487B32B3AA5B8D94C56C9F0B286AAA74D9D"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/014.png",
+      "sha256": "4DFC9E701309752D15218A70AAC0CE9D839398DEF382362C5BDB5D593E05FC52"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/015.png",
+      "sha256": "BF09F98ACA29BF7854A6DA46890A45302D871FB40DF47E24926619899D197EA8"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/017.png",
+      "sha256": "718D5F021E3F1BBFCDF787F4D45E81A1FF7393D48674EAD90978BDD66CDCA2E0"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/018.png",
+      "sha256": "20B69F1CBB1C0D99691C668C60AD60E07086C3CB8ED630FB294E7257E9F974A9"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/019.png",
+      "sha256": "363E3FD56FA41ED12874C34007D2EE06BE0D124160755A314BC66E3D823B2398"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/020.png",
+      "sha256": "881D225059B75E76DD49A0F152CA2C3DB2E289A19352F627F6DF1560E05D8A80"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/022.png",
+      "sha256": "0BD44A2E4E92624905B6D19EDADE88124ACCA5F96419A53EFA5AFE99259D012B"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/023.png",
+      "sha256": "EAA25E656FEE5BE80A89D04602F2714112A59724BC70AFC9CD060B726D8F4ACF"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/024.png",
+      "sha256": "9CA1D91544664EA5192B178CBD121698954654BA01B84D1A788F878645E3DB6B"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/025.png",
+      "sha256": "652A070E574189F9E75056204FECC220E4FCFCCC82E5A9B46EC47334F6D0F00D"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/026.png",
+      "sha256": "F6E7317DA8D658ECFA10F1D5C4CCDC62BC01869AD14AD5537DB658DDEB31ACD1"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/027.png",
+      "sha256": "E8D0C6D1E7A40183167254D300B8B85356CA72987695B37F6DFA03E572181F68"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/028.png",
+      "sha256": "5EE7F4262FE2394321553AF1B6EE446CCAFF8D5DE1DF2F90D110C1A688C18F21"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/029.png",
+      "sha256": "5C5EB556EE8603B488342CF45A5D1F1044FBAC3334D09CF74026436C57F5A13F"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/031.png",
+      "sha256": "80E016AAAAAA5AE69D6D5B9C3E5FAEE5823EDE69309630F666392B3BDC5B6A7C"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/032.png",
+      "sha256": "A3EFEB7C65F9909C1DCAE5E322E2988600455A284A50E4C96FE4C58001EBAEFE"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/033.png",
+      "sha256": "482A2304ECB5A8C31E3F91B12F7C86CD1122C06ADE72AC78C33138DAD4574728"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/034.png",
+      "sha256": "15C0632B3B209DB73FE1004A26D1DB9E120814D4BA9E5DBC0FBD750F06DFDA6E"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/036.png",
+      "sha256": "6AB100B4652F2FDB8C69C61CA0CD73899F1773CA0885E18EA64876854BFB7BFF"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/037.png",
+      "sha256": "EF6F8F957467015B34F4D8ED1495DD2FDC9879F2004F985960094CBD63D077C1"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/038.png",
+      "sha256": "CCDE498171A1A5E5C651A4D1FE5409CE5984D9ADEA3CAE690E8BEAD63777AAE1"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/039.png",
+      "sha256": "1C62867CFDC4FCC3AF33DEDB9B5225D412EB4145A996143E7A805F2AE2271961"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/042.png",
+      "sha256": "3611D3884D44AD090BC05FAAD72F3E2C8572058F1E29E16C39C47D8276E4FC7C"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/043.png",
+      "sha256": "1CFBED6087C6A1897C6D2EE71AF3BD3D49559E1BC236AF01C0FC3A21454B23F6"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/044.png",
+      "sha256": "E39396F31519DE9055344E372DC5774D6A6C88FBC71F5C8EB402195A3042A46D"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/045.png",
+      "sha256": "9A038A35FBF4E8A492CD4EF54544F6C09CDFC72C09DDAFC896154876369CBB6F"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/046.png",
+      "sha256": "78A8DAED6B8961E1315FAAB75969B91C7DD5D0CF4C93D85E18657229DB988EA9"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/047.png",
+      "sha256": "3DE80012246D13B48C426CE7227F390A8D29DC7BA3649632293BB76F1E76DFD2"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/048.png",
+      "sha256": "398D3DDEDCC53DB718F8E243439D83FDD29003E646F3DFE59B81B98A6CB35838"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/049.png",
+      "sha256": "4E1C1087231C832AA79E60B88BCD5D183BFE80975366E1193CE46DF9881C63B1"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/050.png",
+      "sha256": "7A82F8F4A19A0DE1ED573D8EF7764812DC8CBC3330D9C957A369F9CC2518CA46"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/051.png",
+      "sha256": "83F287F259A02250436609633E318E3757193438812AF4E56B9F7871F58BFB9B"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/054.png",
+      "sha256": "71746DA4723D4AAF1DF98624E3848DDC32780E23F84EACF9B3533B0D1260ECF9"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/055.png",
+      "sha256": "F318650B3F2A5AE4E115A815104A36AEDDDB026A92E14D2D72691DAAE42E5EE5"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/056.png",
+      "sha256": "8510674DCC6B128C3C8644AE24AD214BF479D2ACB30DE95495E84D7224675E8C"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/057.png",
+      "sha256": "75DB0E56A2B9C973D75DAD3A57E2484B8A3E677A774E480F49F8079D93D1D38B"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/058.png",
+      "sha256": "5B3ACB861A72760ABC59B4E1F61BED1EF2AFBCA55DE1F5C1AA4519D18EA6F9D9"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/059.png",
+      "sha256": "B5C600BAA6C44FB1D7B93643A6385442414A9371E9E4EB97760A2695D2AFA310"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/061.png",
+      "sha256": "F9A50EA918B49811879F9C6A8512B056514308C1131AE0A12E6A169B47832C08"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/062.png",
+      "sha256": "68FC632C89D24603F0EF958B960297E2D552F76F2FD3AC2DF028372817698395"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/063.png",
+      "sha256": "C384D5B3FAC46D10CC0176239D8178E588E77F44AF19B0C92CBCA0F2B4554176"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/065.png",
+      "sha256": "7B6D49132809B7BF71A2F23092584BD024BEA71CBC2B38ABB544DF0B7733E06B"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/066.png",
+      "sha256": "FC8066698E0BAFE8D53634B38491047CA1990622F973F11C6B8CFF48248850C8"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/067.png",
+      "sha256": "94F20D59F10FC486255AF14B5BC1252A7DA9E4930D7DCC88994E77000C59227C"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/068.png",
+      "sha256": "9D3DDB53C05B4361E88110F5F55C72965985E47D7BE9CB2BB643ABA89F87F49C"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/069.png",
+      "sha256": "9D086BC66CF2A29BC66BCA304D6EC9FAC4D3D3E6F88E3F9E63A9203BC1FD33E2"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/070.png",
+      "sha256": "8B7161ED71CDB27A1EBE71488497FBA81C7CC7E9B6CBB103D53868DF91F3B920"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/072.png",
+      "sha256": "F1F7C1DE399949B502E408F3C19A2365FF3C92B65955B163BB5C69D713D20AC1"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/073.png",
+      "sha256": "AD65F6F81761544B01B220EBC02CEEFFAA16CF08180F1DBA77051828840A3F93"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/074.png",
+      "sha256": "FAE7717CEC77B1A01645F3948BE34E9060F996DAE7257C0F0641867FEB2140D1"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/075.png",
+      "sha256": "FFC3A6492CE03B567BCBDAADBDD9DC2AF3F1682D3BDEDCAB49844CE88AEEF32F"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/076.png",
+      "sha256": "0971AA58E654D977A5CBED5AA05BBBBDF6CE4FE73F559E0480D0D5DE654CF292"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/079.png",
+      "sha256": "74931FF5DF6C97FEBFA7B9183A477F285F64E9057B5A7B5BD03BDD21033B595C"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/081.png",
+      "sha256": "A27DAF2F4759D97E5FDC8ABF021F868D0DBC5D0589D58A9D16D85E04B9E65598"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/082.png",
+      "sha256": "EBDB4C8FEBD5BA41C8F8EE2A4D93AACA04D52390C9EA36CF400D71462F02CE31"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/083.png",
+      "sha256": "D788FA0B9B13B958EF573D01584AAA87D0BB9D90A3E5AC12AFC8E36038B685F9"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/084.png",
+      "sha256": "49089DE2C31A1FA09A3D0DDA8F9B2E565048C06A1707D25FFE6BAF2842A27EEA"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/085.png",
+      "sha256": "F377ACD8A752E9A23CC4353517C3FA6BCFC0BE5468A5290ED94F820B7D32A513"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/087.png",
+      "sha256": "F1A87559727B982463E169E715D3A77A31733F5946C198E2267DF3643702640D"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/088.png",
+      "sha256": "BE862191AF07D9C83277A64385F6A703531498A9D09D15990D7477910946CAA9"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/089.png",
+      "sha256": "7EB5746DC968005FB744F6F96BA494662F25601F6481A801CF56A81935B5C53D"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/090.png",
+      "sha256": "E3F1AAB012649737E1E4DFBAFEEB70B558EE979E2A4E55AB93E3CC837F6E3B02"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/091.png",
+      "sha256": "CDFE7F73CB4D0A7C96E53770EE9A15E57AE166A806BD5DD33606DE6E50B03193"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/092.png",
+      "sha256": "077A8D6867205797E6B8AA71248A612A7E2BDCCA988CDC05484379596002BFA6"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/093.png",
+      "sha256": "2ECE26D8016A2E58AD29FA58530326E1BF996D1C73B85BF6E3298F062FCFEE54"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/094.png",
+      "sha256": "427939DCBFDC7903F9B9552F79B2578CCFCCC4579E66A5481856A36440707269"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/096.png",
+      "sha256": "18DC3583E56080A50FF85926289B894969FA66CE2165704D5A0481A87F57799C"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/097.png",
+      "sha256": "A8C32000ED9957F3BDCB593938063FD06C3483EA0E56B6422FAFED7A4984B970"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/098.png",
+      "sha256": "7F797BD21C3C8223FC531E6EB273B62B1F355256A577562FCD5F2ACF33E31F26"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/100.png",
+      "sha256": "7640650F418520FE930A349E7369ACFD9DB18B930CFC36104E609AABAB026DAF"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/101.png",
+      "sha256": "07BA3D79222BA9BA15CD3FF47F753D9765231C0D1D34D2FD9B65117F1803F6E0"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/102.png",
+      "sha256": "D5A3AE4F59559F2CE748AB8C2FAEB64C0D782BA1A3EA3BCEF93E6AA7405BF062"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/105.png",
+      "sha256": "88E849A29D89563DF6980AF846EA53DB0EE5E2B4E711492F963F5BF497E0DE3C"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/107.png",
+      "sha256": "2649905728AA39AC1A8E0104AD7712D9BB2A46B4DB8B3B79485311A70842D1BE"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/109.png",
+      "sha256": "8476E1A34606D2FF473D561518C61C162FF0D239A64AC970D32CA3179D6A6C4E"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/111.png",
+      "sha256": "464B6A374FF494D42352B59229DF7130A7380B05CD51D49324499F1B8C314318"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/112.png",
+      "sha256": "20B7268CD3156EC750591C766D4CCAFB957121574501CF46FCCDE32BB153CD77"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/113.png",
+      "sha256": "6BD280D43302C763CCC3EB504B1163443959F0DA2DA6AE2302B7F08D62620DED"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/114.png",
+      "sha256": "511CF9A2819E5C1389AD501D430267AA73ADD3253C41087142AA602DAFAEB828"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/115.png",
+      "sha256": "F18A2E3F923172179F55DE1E15E8B2CA807E19DB0162F96EA60CD1BC939D5124"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/117.png",
+      "sha256": "526E9EA31EEBFA91762BF29FA689287FB092F00BA37F46D54FEEB6E390891A50"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/118.png",
+      "sha256": "A88135D45880542173C287B04FDEDBA0BEFBF2A82EBB6B01B2D0D3C71A759325"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/120.png",
+      "sha256": "DD237DFD7124108DF461A56F22CAF73C8A72927986627BF491753AD3A717F4E8"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/121.png",
+      "sha256": "F1820BEE8EA22F6A04F509C767D17B0DC6C5E05EE3BF1C450DEB3837660D0F5A"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/122.png",
+      "sha256": "6DB3710BAF91156622ECF2925DF2A19486C4BE767EDF05369EED5982337F2FE5"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/123.png",
+      "sha256": "D8DA4CA6F97FD5E50467C0A0906D42604A335BE71C389B6A6B64442D52DC0C5F"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/124.png",
+      "sha256": "0F9DD668483182D2D8680FFD4BA15023ECBF4D93863E1DA7747A61E4CDAA0B2E"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/125.png",
+      "sha256": "8228A593650A1C7E619AC2AC3B66F4A0439143E72D2CF5AEA4E31B2BBD3552B0"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/126.png",
+      "sha256": "0585BD0491E3E0494C2A2A503F13049D93C4DFB89D3BD2FB13F76E90D211F4F4"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/127.png",
+      "sha256": "BDF912258E680865DE9C19DBE1C2C0CC582B1237817F97087D8846EE4148C7F9"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/128.png",
+      "sha256": "AF5E57347A22950326019D4A75870160DCE03A55F8036128A685B7CD708DCE7B"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/129.png",
+      "sha256": "71D17348AC28EEB5D68BC8E41CEEB6AF2DC1088EEFCC21EC1F900FF42CA03175"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/130.png",
+      "sha256": "96A7DCC28FF50A4DC82CBE92CC55D1F83ACB2858D47B4B08244EF57A52266658"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/132.png",
+      "sha256": "F2DE239BA5F534DAA1C063CC773EFA60102575E8250E5EBA6F23DF0A8566A1E5"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/133.png",
+      "sha256": "3B6C6F15B636CF4492EE7879911241CAFE68623F05E8975BC3F8F265A0613DC8"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/134.png",
+      "sha256": "2B2903B89665334CE42B405AC2AD99BAABE337DFE64A69E30A73A62AFC377E00"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/135.png",
+      "sha256": "6B6E00676D41DC48E2B1705EB218015A1C381C22F5E8E0DC7F9AAF525F403E77"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/136.png",
+      "sha256": "BF560E4C6E8D1B23E2E0249FFDA254290E891150468165CD78D93C813C2BE4C4"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/137.png",
+      "sha256": "7BA5F1D6AC376D984E24EFA30B9A3E970D51A7933D063ED0DF6570445556A48B"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/138.png",
+      "sha256": "71D1E981A1A3167FFBBD5497549247E874408142F0ACBA5A5165D77E74CE68D0"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/139.png",
+      "sha256": "7764B7BBE739BC4E97074E8501CB872F5707533CEAAB5B7911ACDDC2A5A4BF49"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/140.png",
+      "sha256": "BCDC94477BE67C3D8D6F377AE544F24572FA6C92DDB8197C103BF771C334FC0D"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/141.png",
+      "sha256": "FC800BC1C87CBC4685EEE64075BFDA6BB5D10406F87A70D5D1F2E6B241CB0251"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/142.png",
+      "sha256": "3F72DAE917F9EE7C8E280425F31A49AD4CAA5989696117E8BEAB4546F4B3AA78"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/143.png",
+      "sha256": "4882F8A6AD171D304B3642120EC646B0ABE6098EE2E005589497CDC35D753C26"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/145.png",
+      "sha256": "7B27660DB74C39AC745EA51545B7944DD6C23024CF1C52031A442426505471CD"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/146.png",
+      "sha256": "63A238C9E744E0B16C1EB64AA1314A6C1AF8E34A8F146BD75F1656056DA9FB96"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/147.png",
+      "sha256": "964D7607F7C43E604AD4E61FF12937B526ED3C4BE39FD6AF6A956B9860213071"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/148.png",
+      "sha256": "8CACE71EDFD1C622FB8102D6E54B30485FF5E5B866C90177B853A0EDE64F87E3"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/149.png",
+      "sha256": "19D32A5CF9400BA137A60FF970C12A82D325297A407C70AD2127D4996A2B51A3"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/150.png",
+      "sha256": "5267E9BF775CD2BFB5B5436659BA36B681CC06E20395C0A629A3071D54191F22"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/151.png",
+      "sha256": "A243899047605C325C7D57C7B39E02C19E5D074942394095CA91FD5437B1C89A"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/152.png",
+      "sha256": "0DB05F9140EF0000BB2E6C3D74F2E2E594A1C9B3153CCB0C8DE762DFC4AB1AC2"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/154.png",
+      "sha256": "5FFE9ED3BDF592B839EDAB21D3438339B674E3586D8BBC97FE859B92373A59D6"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/155.png",
+      "sha256": "984921638DE34CB2357D2DFFAFD88B1F94A23105AF22B11CEF4BE370F55AC5AD"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/156.png",
+      "sha256": "177085E2C626F2D6D0933B9A2D664C888B25C959DE7BBB74DCD18D00DADB716D"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/157.png",
+      "sha256": "B5E05DADBD297160A404522876CE57068647DA46A6EA13A4DFB92877C8E8661D"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/158.png",
+      "sha256": "741D65D8B7521A4F01BACB2243D832861E9A00F68C3B519EC5DCA69B32BBF293"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/160.png",
+      "sha256": "BC2F211DB01476DF74F09ACBDE0D4EF516AE51BE87D2B266AF86EB9E63C559AB"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/161.png",
+      "sha256": "D9C1EA085EC64793EFB7146B9CCA67EE8E94D7C6F0A52A504546BF7C3F7C4950"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/164.png",
+      "sha256": "9FA37630D4735D8866DEC5490EF9FE1716869ED06A37FEAE1E411D1B2CEC5C86"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/165.png",
+      "sha256": "10318DF896863374292A783C540AE917DFE2EB3D58A3005569DBDE5E6DD8B62E"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/166.png",
+      "sha256": "C2364BFE9AF97BE9AF08A02D3B20DDFD98207B0F132F0AAA0B46DA63C08C6E72"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/167.png",
+      "sha256": "C9E34E79C3A44BD8F34C7757EF4787CD4EFE4F7C7CF4122337266D4E71146F31"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/168.png",
+      "sha256": "A92BF877F6C22E0EE09261362B5420790BDAAC2C4899794AA551CDC09687D637"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/169.png",
+      "sha256": "4E04ABD37D82D3DAC6FDA76776DF67594731AA2F1DE58915D7D284CFE119F2E9"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/170.png",
+      "sha256": "547DA6CB98F7424C5688C0940CDF3E98FE4EA673D8B1F300F719D576F55B095F"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/171.png",
+      "sha256": "88D664B85AD5B47F1DB85687A53C444C67054234326C57250BF3365ECA09BC14"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/173.png",
+      "sha256": "A5FA543CC944D62F1CCB437A4CB6A9FB8C0A39B1553C6A7C57F8210BCC3112AD"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/174.png",
+      "sha256": "4E3EAE046DACEBD8ED51F6CEB20A78FE858D25EE014DD38B2542007324699325"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/175.png",
+      "sha256": "3924E123ECD3FE9052CFCF6F1E8DF077A5579C6BC295251EB3527FDF9B2B9847"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/176.png",
+      "sha256": "62F8DA3BFDFEC5108FE201B5A4889CDA2E605290C4DE61C66E43D85393F766D2"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/177.png",
+      "sha256": "825527A74322BDA306B1E040C2FDE4C5C82D6939CF23A1701481C2B1706D07D8"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/179.png",
+      "sha256": "F11FFB88DAF68B29C278FC25D440E567C47CD45BFFBC28FC81D3381B832B8B15"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/180.png",
+      "sha256": "67749CC35C69B59F5A7314E7705D880AAD05C7594A52215EC189640CDCDEB7B9"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/182.png",
+      "sha256": "4EE5505D8270795BB52D0FD1EEE4E4354CCBF42C77D7B88CFCE8BF5D01580D90"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/183.png",
+      "sha256": "0C8D67177DE4D7539FCEA4629301708CE1B1883AE643A226C8965AE1882AEAFE"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/184.png",
+      "sha256": "88C9CBCD41F4FE10607229436716CE4903B139AC2CB53983B1ED8E01F1924EBF"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/185.png",
+      "sha256": "C34DB1B449CCAE05E4B01145A9D78B824D082DA0F1F3BBF78EACD5A3F2CE5639"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/187.png",
+      "sha256": "79677769B4E3A5B432941401B7DC1879C629E1EC80A19178FB8F92CDC69CC524"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/188.png",
+      "sha256": "ECB2C7A43CC6D3C848912382238D8FFB4A53016ECF0181C2038F3DE9E8646693"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/192.png",
+      "sha256": "BFCEAD31B645383F927BDD2EA5A270244D8724E54B715A7BB4FE29C4D584D80B"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/193.png",
+      "sha256": "C8857ED2DCDFAFB6EDBEBFC21540D351E67ECEB594DE90ABE4FB69F967F94E7B"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/194.png",
+      "sha256": "A6C209731E64DB6E1CB26BA20D278AA16B6AEA222F7321CC650735406061E774"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/195.png",
+      "sha256": "846E3FBC84FD20B7BBA9C514A50FFC2BE07BB5C3EC2E51C87B1BC0E852A87BC7"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/196.png",
+      "sha256": "5A3D4DB3EB5303624B399F69B8CC5E5C4B0476B4DC8DE6A5369F99EEECBACCC7"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/197.png",
+      "sha256": "591C929931EDE9B97A8E1A1551B3B75792E07341D757FF74BD704AE11ADC6AD2"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/198.png",
+      "sha256": "74537D1BC1AB605A26BD4C5A2F1742EEFDBA435F85D4C85C6E821D075EFD017A"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/199.png",
+      "sha256": "6A01C146EE339F95392CF79F8F6C1604AD7130018A4C5FD0880A2CC3D60C42D9"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/201.png",
+      "sha256": "CBEC3DC4D79EEF48FCFFDB92D152C6BDADBBDE75DC7758350A5BA66D2BE054E8"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/203.png",
+      "sha256": "EDEB9F24850A645E70412C295406E2272D6EDCF2703E3B5FBDE84B283673CF14"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/204.png",
+      "sha256": "471BAD47D544BB8A23C17589D3EB426E651E7252799D492B54DA256E938040F7"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/205.png",
+      "sha256": "E6D0B211010071F28C7D0950489AAE51C910E725777F9505E67C1D38F314D727"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/206.png",
+      "sha256": "BBD1826DD6108DE51BB3D78B8C3CB442559B552BABE2F8048AC45B02A28CE8D4"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/207.png",
+      "sha256": "53659E56062EC01135931A13AF966DDD0556B20BCF861CE78AF05E1A9142DE74"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/209.png",
+      "sha256": "7A335B25904526AE72B7B73D7B7B3994EA5F2FBAF97EE01A77A60104509E053F"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/211.png",
+      "sha256": "FD015F59CF7F980888F7B170C2D3DCA1093C41FB29A28A277C6C73E744504FFB"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/212.png",
+      "sha256": "0B092F41E6ED6B08927695BB31E61370364636DA10BA0F82E123ED06E82B64FC"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/213.png",
+      "sha256": "39D510C3DBB395E813C84AB02D163AAF4B50C9FDF8D79214EB86435C8B015761"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/215.png",
+      "sha256": "3E9FCFD836C19E59931AE3519FF514B34F51D94A356AA0F648A5A4EE087F7D66"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/216.png",
+      "sha256": "9088390BB6CC235306F7AFDFB045AED2ABC7B28C74AD8DA1DEA1927B86D30203"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/218.png",
+      "sha256": "17E28B64729DAE672608B65E55244EA469A95585CEE585D15FEFFD4C70613982"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/219.png",
+      "sha256": "8078BE853A764A5704DD72E39C13894D1FE11E02C136F0F820A53C0DEB0609D9"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/220.png",
+      "sha256": "9A98239649ECCFEDA1A09E40F9969356817921C5F735B79CF287F5064E3C7E8B"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/221.png",
+      "sha256": "51E29A5149753723062680718959B67ED84132EDEBDFD46C10F4D0CB8584F9FC"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/222.png",
+      "sha256": "B21A64AE3D82AEF6B85A53BB5885F6B3547666CA059147D4BC485AF65516C69B"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/224.png",
+      "sha256": "F7CD8153D95048F7EE512BF0C5E87EC35C2F459AE496E0FCA010400173D19799"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/225.png",
+      "sha256": "840CFF2A873E3A16C2DF715F29789D45AB0883D3C98DBCA97258C475B43D7BDF"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/226.png",
+      "sha256": "ABE2584D1BF87CC6A29B8435F56FA1C3C09685BC66E74C257C1E00CA8C5BCADA"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/227.png",
+      "sha256": "9559256B678C469A26EF899B516D526D5D13300AED22F5A207EE648F62C2F8C1"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/229.png",
+      "sha256": "12A7F8D9423265474EF45568261F5D61C65313FCCFD13B5CF3FCDFFDC07D2E65"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/230.png",
+      "sha256": "307BAE2D4C243409054509D05F28CAC9473068A0E03D7DCFA94A19A27B627749"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/232.png",
+      "sha256": "8F52A3FA3D4983AFB7B4FF80050F95468DB7AEB212FD8FBCE7764F7985D368BC"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/233.png",
+      "sha256": "181E748E830DFE857DC53CDBE362D75CC57136C10B029F884A4B34E090A29862"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/234.png",
+      "sha256": "A291496A37C10EBD9E848F10C3A90CF34742405D899AA80BE4CB6864FBA3EF91"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/237.png",
+      "sha256": "B52F7AFF42C65658392D63785B879793E955CAE36B1E299E16AD97C8025B2310"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/238.png",
+      "sha256": "D35120EA2E964F154FC1203DFA8FADD6CA80AB573514E9DDA47E118C16787006"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/239.png",
+      "sha256": "397EE200C8D47B1526694F46C12A739F50E64599082E152469F092B4E6CAD24F"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/240.png",
+      "sha256": "EE33EB8265FB9EACEDEE3E9B9DB53483FEC212487ECD0A0A6F15B4A80972B785"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/241.png",
+      "sha256": "9A1B0B1A999E82DB3841C90D017D13C5E3D88C4FA1D60A5F49C402CEBD6949BE"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/242.png",
+      "sha256": "FC835C6A35BD1B0DC248B0EAE6E1AFFB05CFCF123E3634F73D05CB00F40D605F"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/243.png",
+      "sha256": "3FB5D64A78011C6229DBE566EF2470ABDCC95D658B9F838D978E8915FF93B6FF"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/244.png",
+      "sha256": "7BA4BF2E538DDAA41690FEA31E018975CE01DF83E6F982A0ED4C16D2DFE29E68"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/245.png",
+      "sha256": "BC289B9CB13C6A5C90F63F1E741BEBCA0C040A3669D6173DAE4B961A6A526B90"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/247.png",
+      "sha256": "4C05D83D3BBE20CE05F7769B2069B52FDD44B182A756046B4981489824279512"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/248.png",
+      "sha256": "A6B7111DAC6D91D9B20F82492DC282AF922350376A76495DC23EFB3892039F85"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/249.png",
+      "sha256": "8A6535250624085C498C02AE003116AC4A86B84D61C75F8B075829E94E783573"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/250.png",
+      "sha256": "FEF1989E18B66DCC0B556400D1CC4A30069F45AA1CEE0E492D5891BD2D7E7A57"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/251.png",
+      "sha256": "8C70FDF208C9CA112DE2A0FE3F529E363F2614FC696249D673BE7AA7C0C0497A"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/252.png",
+      "sha256": "5DCE74E88C31F0703F1D81BD30014FF8C5BD7D76A23272CDF2C627EC52A39E98"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/253.png",
+      "sha256": "CBC91816F9BD53C7F65D4823F6FBE43D18C5037C46BF942829794033C25E7740"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/255.png",
+      "sha256": "503DA305F23B27BAB09B40C90B15B8B14E1C495B074B777CE4FC797DD45DF6A7"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/256.png",
+      "sha256": "2CFE5C06E7CF1869CC78BBA47A703976087EEBC3D86F15C5E1BE217B98194E92"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/257.png",
+      "sha256": "9CBFA3CC3C4CC545A5077B040C7E25BBE087E295CD343E1C19DC56746E722577"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/259.png",
+      "sha256": "1FFC9E346667A202600F4DD6AD94C2BC654EF79B15AFBB1039AF41BB59F3FFD5"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/260.png",
+      "sha256": "FCE4B319D0ED7F14B651384DCFDF23B4C57490A21098D5BF3541912FC2B034F9"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/261.png",
+      "sha256": "E3B3B3E9A7743DA8397634A5F134D564E8436D84829FA556271688D783EDA7E5"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/262.png",
+      "sha256": "E5E56543DB90A601E341645B7D6F97CFE334DA504953AA41967771609EE79964"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/263.png",
+      "sha256": "25DB81F509D15EE1CD94C7C6E860E10281D938A1201520BA9E544D3E667C59B7"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/264.png",
+      "sha256": "B0FCAC83C8DE9695004BEB390B0679F4AB5720C2C8D13E29B1BDF8AFCE09C9AD"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/265.png",
+      "sha256": "8934B020B34EB685419FEC3A4B4A3F0A075A84D1D6ED6EF191EB144F294E15A2"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/266.png",
+      "sha256": "10B3780C556DFD62E36EFCACE234BF1C059F25EEC6169C72789A994BDB20A0FE"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/267.png",
+      "sha256": "0E6491F449BA1106B457331A32E92B4B4A6E851E564049A72B5F8AEF37488829"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/268.png",
+      "sha256": "D47BCD3FD0553A75FC44A0AA111D56471A3289B40CB0C26364A561A10D986F01"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/270.png",
+      "sha256": "F701453EE7A33B159B3740912DC875316158241B600C9FC8A442EDBAC161F0C0"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/271.png",
+      "sha256": "33FCECCE6F6589A4AD28187888DE081C86C6B7190A12A2790B41525F75349393"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/274.png",
+      "sha256": "7B2877F1897DA0488EEA8739F7EA3CCAD40062B06E495840C58D6A02DAF90056"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/275.png",
+      "sha256": "7CA47D8353C164F7E1D6AD3447BE484FB99F164E55BB310322EC4CDEB32AB8EA"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/276.png",
+      "sha256": "050B0A0A76AB2E73E285F4A08D36087C30D8D1313944AFC33E9BFA461B8F34D8"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/277.png",
+      "sha256": "E5E4E90D308C6325045BEF19DFD81A6C3B1816C10FA29D3EC68D6F11DD7635E8"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/279.png",
+      "sha256": "1F6F30AE89F468B3B5612F15207765C1718A931E8B5727B59B1AB7A12D6C8B2D"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/280.png",
+      "sha256": "D45919C2745502F5F57091B4CD4CCC01CB286FED5EA811C2B6BC72F2FA5F90C2"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/281.png",
+      "sha256": "82BB6DDB2FEEBE935769E8316EAAC960D02FDD4381ADAC899F37319293905731"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/282.png",
+      "sha256": "831F0DF838E4C2EC29A53C7AFE7DC4BA92343C9EEC0E065A083EA0A89FEF51C9"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/283.png",
+      "sha256": "2EF7A8ADEDBBC5AD2D01FFBAE4A421F9A3FD53EB98475DB53D39112AE51DB04E"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/284.png",
+      "sha256": "EAD994DAB31B255E0CEACDA7E71A9FB34738C6343CC3B78461B9627D618F5DDE"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/285.png",
+      "sha256": "9F2ACC2A92CF0B7B14CCD18275C240E8573AB2D2217ED80EC6CECEBD89897803"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/286.png",
+      "sha256": "AD5163E23519FA705EB4073F363A9943D247D01B50CE03AF47CA10E49F6D5DDC"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/287.png",
+      "sha256": "0645498DEBD1B994224A3B496EB561A4DFCB0601FB756A43281EF037BA4EFDE0"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/288.png",
+      "sha256": "BCB3086FC6114843F41E56EF9CE5C48C88785D68B0F0D67CF03F465DD0C06F89"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/289.png",
+      "sha256": "F2621C135519657DD2BCC3CBFC3F5A111EE0C5463D14F0A4AB510338FCFB94B8"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/290.png",
+      "sha256": "20FB1CB925C190F6443D43E95FD5E78D97E6DD64899387A770BD9E7BFD4C192B"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/291.png",
+      "sha256": "9328A8F3714C79A22D20C042D527EEABD8118CDA3EBDD3BE5BFEC36850883205"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/292.png",
+      "sha256": "447904B913DC053CE149BE0EE7BFA6769CDDCF85DEC6D3A46DF2385D0F509D64"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/293.png",
+      "sha256": "2E49E5567DD5818A75489F8177AA9070CCD787B42FCAE6A7146008FAAAE7F159"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/294.png",
+      "sha256": "A2061FA937E02FC592408F1EB70EB1E5A5D4F81387447B88F4847AF54A063FA2"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/296.png",
+      "sha256": "BE8298220EB00C4FE46C0E61D2F0F358DBC1FD0E85EF957D07DB1B1FCE121223"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/298.png",
+      "sha256": "55C818B1BD7A5618CEE4F19AD0D7DCD3934281802D78EE28CE26A782CF9B9984"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/299.png",
+      "sha256": "3854D15B99F620D59C16585E3134DAEBBB1AC70E01B04C71C9947B5C1A65036B"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/300.png",
+      "sha256": "834979144713493B882C21EA8BF364FEE79F3DB741A823C2ADE9B2163964014A"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/301.png",
+      "sha256": "2339C60A0C877D6C5DE4C97A928905C66B932A428560A244105BDD08474FA1F1"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/303.png",
+      "sha256": "01227E903E605D3D492EB0283AD3948AF16D2F780709BD9818A7A84A843F781A"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/304.png",
+      "sha256": "CFC3F3144EB975FBB64D82B701BB28F40C917ABFE20C2F1CB5B99A257E547AF1"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/305.png",
+      "sha256": "DEFD7259A49525D56F1933E0D44C6B93103A3B29B2CCEF1AB5E2640799341B78"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/306.png",
+      "sha256": "E2EEE10E9066E5F0AF14B0607A0AC15806800061A91311328B0E2C422DBAB718"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/308.png",
+      "sha256": "D71AAA4FE40166573459E9E1D41DFB35673C7501D0F8395907874E8BB5B627D2"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/310.png",
+      "sha256": "7F0FCB86ACB3FFA34F867547D29AB91CA9544B9E5806DC0427EC2E38AB152BF1"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/311.png",
+      "sha256": "2366A020C495FBF5010C65342B84E0509C0D0E07F9CB891D8FB072D819EA3F4C"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/312.png",
+      "sha256": "20B88B45F7B0C1BDFA288D39FCD80C1DA05B1A1DE0F6597CBB990DAC7E72DE65"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/313.png",
+      "sha256": "2F7CF8007C06539EFD3B7E6183C5F950D3ACFA4D4EACDCB8CE44468B159E3B4A"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/314.png",
+      "sha256": "287AC4A2BA3A464610CEB03C64A33EF5B7D7B7C815114142C25D17E639BE6D41"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/316.png",
+      "sha256": "2E7874DAA7266A54F6B269747DE61DC966D861C1A9E177631BF08AF2C35695BA"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/317.png",
+      "sha256": "C4D31FF901FCEB22512D5EABF74715EED96F0F611A857B1965EAE86A94667918"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/318.png",
+      "sha256": "6F08718A956CF5D1FD1B345E09229A4BB3E50531D615C7D6E96CA5D64096D889"
+    },
+    {
+      "path": "mvtec_ad/screw/train/good/319.png",
+      "sha256": "011EFB6805EDB5233564EDC340193520F60CE9A5BD84AEB928A8DC40B65A84DE"
+    }
+  ],
+  "test": {
+    "good": [
+      {
+        "path": "mvtec_ad/screw/test/good/000.png",
+        "sha256": "805BE6DC5DC41DFC85869AEC67B4A9E4141BD88B85B352C978355BC807E93159",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/001.png",
+        "sha256": "983A27FCEA10CE8EAFEEBAC3DB0899E5FB6AD84338A6CABC5746EE96D2865DAA",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/002.png",
+        "sha256": "DCBCD38D1F65300C7EF8ED853A9797F93D0A3755E8FF07EA74F8A914F71FFAEE",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/003.png",
+        "sha256": "6EA07E395B483198287671C4E331FA71ADB9CF2934E3E553D7268423D15B95A2",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/004.png",
+        "sha256": "C39B031943FC27099A686A2AFA7761E02ACE514076BBF8589BD18C5C96F9E048",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/005.png",
+        "sha256": "347F5BF444081ABD57A97B8A30D4DCC6E065C587D6B1509F15C7BB5F943449D6",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/006.png",
+        "sha256": "21D5BBEC37F7E04F5916DBF3F5FA87C3F812E703C8AB8C51578134267174F05C",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/007.png",
+        "sha256": "9D94E6AC96B25FEDF858C5DE85441A63969AB1631F8488BE49727A279D1F095D",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/008.png",
+        "sha256": "A166934AD92B1AF3FEBA0B81CD20FC74E0B34BA138EDFB36C8B9ACA3A48A7411",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/009.png",
+        "sha256": "EB5C871E3916F4C6CB8427FFA428716CC6BEDCF6932E2A115619C5D33CA40A6C",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/010.png",
+        "sha256": "582847A0ADC79AD58D83F03D325407041F045A7044AF944F5A1C5431351C3C8B",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/011.png",
+        "sha256": "C2571C716C661AB4DFAA40511F80A2BA4D58346CB7638ACAF9859EAE4B790555",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/012.png",
+        "sha256": "A47E3767DFB84F1CD30FB50F1BCC5842DBDAABEF8157AE0984B9ADFF414022D3",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/013.png",
+        "sha256": "31771B503AD777DE0E12E87F4B31873FF772D038D0FE8974B2C448633D3DFB86",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/014.png",
+        "sha256": "15A2FD28029061590CB5B7D694FF96B25EF38C18D25905AA3BA08E1425A2C357",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/015.png",
+        "sha256": "5F54892104B4ECE29CCE389A2C98DC336D04DE92FF8DFB3D186AD555FC946F45",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/016.png",
+        "sha256": "243CDDBD853356B0EB9164587119E7077E8F69B44758C42DB62A6B6A25415170",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/017.png",
+        "sha256": "EAF6C4FC17D6B68EB1426E325997FD339BCB81DE3BFCDC0C03F21629021474C6",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/018.png",
+        "sha256": "99746672D6D91764037CDB62185E899EF457D47ED65E192C7970DD4016895D5B",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/019.png",
+        "sha256": "4BC78CE5F58CB48E832916E7214EAA7B03F54DAF5E1AEFF7AA890871F424AE22",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/020.png",
+        "sha256": "86F42EE33E72EF6E4AF25E1E6C9AFD3289AE528B37F3DE9B3323DA388C7A5DB4",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/021.png",
+        "sha256": "612B73C6C49B28A3EADF012D05CA2B194838C4730476E08B531C029E805D50FC",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/022.png",
+        "sha256": "1DD487DAA97DC5103264AB014ADF6E270FF32111E04F8C7EBBC5B27A8B498CBC",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/023.png",
+        "sha256": "5992BFB983DE17ED39702EE0E03F99F84B918E0A730140F974774AD042CA083D",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/024.png",
+        "sha256": "A672201B63D2CDE96276E469671EBBD10448D21E9875C3C7AD5DA6885B013F81",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/025.png",
+        "sha256": "EE98EBD680016E5ED74A1F81890C5B3D271ACDEE6619DAABD6E8DED3BD3AEF04",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/026.png",
+        "sha256": "F3F15F4FA047FE167D0054FECD5F1F6645968F926FF00F2E1C0E0497D4EC4327",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/027.png",
+        "sha256": "84889366D181DFE92BDF6A45B678A9E7704C2845D8130A49ED7FC364D1D09071",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/028.png",
+        "sha256": "32E9EC1FCFE963C01D67E85FFEA6BE1CF54E8E97528683F0937502338D33236A",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/029.png",
+        "sha256": "13371FD3BF047BEC3CEE6B1F0E7AE980956074BD6660A2F819468B37D512908D",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/030.png",
+        "sha256": "042181B65BC23BF1DD6C6ADEF1A9FBD3E8648DD632977BC1F6E315C429D1F224",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/031.png",
+        "sha256": "BBB766E20F3660502DFD73CB31348B7BB0A87EEEBD1BD2961C1DC7A8B6692C5E",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/032.png",
+        "sha256": "66FC89262FF30A51D676D53397E283746DD73D752DF2280B8143DDD097294CD9",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/033.png",
+        "sha256": "2A53A5E14B3B8B2743D8C05B2615048EB164C2A81B732CF5F94235F632896B15",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/034.png",
+        "sha256": "D79B4314B763E01CA26A587CC9971EBCF694A9610C35477FA7E969C2027D948E",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/035.png",
+        "sha256": "B83C5288F65E2FA62017A5B0D2339D1DE9E644B983BDDC0ACE2CDAC67696F50F",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/036.png",
+        "sha256": "95A3F951802312ED9594A98D1E1BCD507FFCEEC26355D04AB917F714A4B069ED",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/037.png",
+        "sha256": "9B8F785665BA96EDAD0FE7710E3E09FC5DB8E563872796CF204385314A565D75",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/038.png",
+        "sha256": "5DBA6A738C329A9B838C9D5F787D5118579221D812E68D82DBFEF1613F870A2A",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/039.png",
+        "sha256": "CB1C80690F90EDD01FCEF0C2528260E80B731B5FF1CB4DF235CFA3B734B45AE4",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/screw/test/good/040.png",
+        "sha256": "C1CAD20517FA3A4C3CA5E0A542706CA2AAA224E35E5749992F427D7B53632A41",
+        "label": 0
+      }
+    ],
+    "anomalies": [
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/000.png",
+        "sha256": "E9BDCDD0EF90D82B13A97A0B6B2AB0E0BF0C894408A9BC4DBB8C4B6503186EAB",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/000_mask.png",
+            "sha256": "46DB61F53968C876A733697FDAA33F7EF8F8A2913C09A38DF93EF2089A6BCC0E"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/001.png",
+        "sha256": "91D89F66C4DB3EC0104682F37E580F6C11FBD1BFE14F249346DC74760BF4EEF8",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/001_mask.png",
+            "sha256": "A9A326A2C450361E780E36A0CC27A8BD04F883A51C0AFCD21C2785E2A6E72217"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/002.png",
+        "sha256": "401108D47F072EE48D97441F3B53819E128873216C1647C8D3D91C7332B7DBC7",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/002_mask.png",
+            "sha256": "F8EEC2AD5E3DCAF85D31FFF0C55E962F48A784DB9859658811922257F6D21007"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/003.png",
+        "sha256": "5E79071BF4E3D9914BECDCE9F6C106FD1C3C3029F07A2937A46B3B6B4F3F8561",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/003_mask.png",
+            "sha256": "955209EA990B7659C1A6BE803A2871A4449D5F570D4A4C021505C0C81A522B14"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/004.png",
+        "sha256": "11868607A9AC96EAA6D7D024A4784B60ED63DE4E977D9ADA75A488D51A8ED86B",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/004_mask.png",
+            "sha256": "FF73D6E597ACA98F512C18725FEB9F01239BE723595944780B7B68178F1E437F"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/005.png",
+        "sha256": "FBCEE2E29E97E54FEB3F222E0DD17ADF58776872D721350A1A8C52E9615EE30D",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/005_mask.png",
+            "sha256": "8AEE6893D32BA6A69A1B58B9DE4C8C36EC9F9850C751D65DAC12BCE1B50E8289"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/006.png",
+        "sha256": "56727AB021E5F981CA69E8F0FA40F675BE1EE41BCF1F8E854A9D8A5D56210DC9",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/006_mask.png",
+            "sha256": "DD566AD218E56DBE1F127EAD96CF0C9B362D83B68750DF80D442A0B89C1A0BE2"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/007.png",
+        "sha256": "C43884F30CF2C9A00D65FC97FD7EB4E9EE95315C763CEE9AF0CF1A0E77E51229",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/007_mask.png",
+            "sha256": "CDA3464CA5CE7AB73A1D745EE96C92E455583F72F0461846EB512F676AEFD823"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/008.png",
+        "sha256": "E8135830C380E60C1D0C2300150C50AE3EF2C9E9104423DBD60E03AACF1B4E1E",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/008_mask.png",
+            "sha256": "2DE9B6C79AF2AA2E2A5EA71A08F6081B5E50CC0CE5FF6CB6BEE9EAB3B783F054"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/009.png",
+        "sha256": "253E8413C476CEB69EDC2B4735B2A395A70B5699CB2E527BF7A193741F22A081",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/009_mask.png",
+            "sha256": "A3D4B9206BF2B2C2E701DBE9882385153020205F9B31373F9615540F295E544B"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/010.png",
+        "sha256": "A95858537E4E4D611882E6102AC4A79D3E44F367690FC0489335A0EC27442A15",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/010_mask.png",
+            "sha256": "4F1289B7D6C719D4024A8D28C9313BF8B792FBD8A15838602FDD4CDC8ED958D1"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/011.png",
+        "sha256": "360764E7E1C23611ED46A26DC4AD970A7F6963BB788FC7B5C79510183EAA5E07",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/011_mask.png",
+            "sha256": "14C1E94AFEE6029F4AAB615A57F69CE29BF89EF35B61D918165C740D9312B35D"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/012.png",
+        "sha256": "A7CF576939C22E42D90D579E293AD597F8B4C04318DD7052E30FA3509F1850E9",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/012_mask.png",
+            "sha256": "AB170CA1699B7C7FC7622F05268D80880088CB72FAB9BA128A60C6ED4569FE60"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/013.png",
+        "sha256": "CBAB23EBCAF22C243271471AF502216B9EC4A1BA9FDE21B37419E826341D2EFF",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/013_mask.png",
+            "sha256": "0F20463BA13FC289A1989145932EB2E901135D9B3FADAD61343AABE292693930"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/014.png",
+        "sha256": "01A8B39956552D1DF72996F424CF23315A3C8C6572A4067D576DB1DC85CAA586",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/014_mask.png",
+            "sha256": "E67D699F82979536FED5E5148D6D22B7B94756815ECD9B1F6EBAC328F82B49E8"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/015.png",
+        "sha256": "20D96E5FC835594B831373775AAF5B04287A8E0B4A16C79534A03DCD155C5B93",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/015_mask.png",
+            "sha256": "0B9187715AF5814FC5747F2D2576665EB280E2305EB8A5B352D0C1A6BF632938"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/016.png",
+        "sha256": "009FC237EC9BE42A173FA9EE7BD78A01D90579CB66756E59F5E1910318876D4D",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/016_mask.png",
+            "sha256": "3811B148D9F361863D02652E4992911003F67DD0E74F7E21586C797085ABFC3C"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/017.png",
+        "sha256": "90D548EE9009F9C1C1F829121A92B690CB394124C8BDCF9E18AE574D9C2FAAE5",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/017_mask.png",
+            "sha256": "CCCC5987D746544E971C9DDF7D7C66919D172721F4E94354FE8A1B531D5EF023"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/018.png",
+        "sha256": "FE472852C8A3314CA44938D3ADDEDEEB0A8FE106107B082027F941694E247F72",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/018_mask.png",
+            "sha256": "8D514F359EA54B6E00F91C5B811F83B6CE83D806AE7E7E39F0FBF8D0319DB273"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/019.png",
+        "sha256": "FEA70A1E12BFC7F4C67865992754AAFCFA889B7CB97C6C94437360386B1B7C83",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/019_mask.png",
+            "sha256": "7E3C82E928241756D6DF2BD03EA7DE201AB57CD6048BBE1A901EF524D01B2F25"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/020.png",
+        "sha256": "5AA6ACB6F916D1F9191092A7A0B7350CBDB0283CAAAE6122F6EE5E4E63377F7B",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/020_mask.png",
+            "sha256": "D8E89F43021D053655CAC4964741E166377AB57C121AC5E23AE9D27135EA33A1"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/021.png",
+        "sha256": "C25D433D9347A6172220165BE4BF93663D941040E6DDC8BDB1F2475B25A7E408",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/021_mask.png",
+            "sha256": "330BC4C3CEDF8C6285CB52D67AC6E0DE25D0716A4D2CA32F9483B8D21F21440F"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/022.png",
+        "sha256": "FFAF5000A2DCBD5666FD087B58E76D12BB8E27D1C0C4EEC9EC7395B068BC513E",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/022_mask.png",
+            "sha256": "D6BAA27B4C5421C9DABDCC4DBD6F29B14B7F4B9E460307ACEE189CE12498471E"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/manipulated_front/023.png",
+        "sha256": "A7425BACF1E2291A73023F3D148DE66714B56D6650DCF46966C9C4D623037D0C",
+        "label": 1,
+        "defect_type": "manipulated_front",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/manipulated_front/023_mask.png",
+            "sha256": "6FC94696DB034E88047ACF8998410591901A2EC88E65E64683D0B8B88E3A42CB"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/000.png",
+        "sha256": "712BCBFCE3D682AA27ECC0513C0D00FDE8FBA5B235A8DAA990B9F1A4CC4D8352",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/000_mask.png",
+            "sha256": "DEA09F372BEE319F877C770BD81689CC46A5C4F4A8B9FF996E52587281D034D1"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/001.png",
+        "sha256": "F4B405666FFEFF9093D1D9775F5DB4F549E90DD6BC808964BDE860C96216CE31",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/001_mask.png",
+            "sha256": "8C5A4C7CF9763FE01641D007859FD2C1337DAA20EEEC7EBAF780FA26EE9A0B05"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/002.png",
+        "sha256": "6B302C41816BA33EFB31B4D725C1EE4D558519CFC8489F790DF5BB0CF41A0AEE",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/002_mask.png",
+            "sha256": "3944A64F7FF847E41828888CD98BE3191D62D6E118D83B2A166425EF3BEF29A2"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/003.png",
+        "sha256": "58A97E687C7980C0CDDBD736D1650D4C0979ED14788F366CC01455FCDF0F6CC2",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/003_mask.png",
+            "sha256": "D972585F8DC043171224B44C50E7D3954F4E427C0AEAA81CDA1E15B136C15F59"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/004.png",
+        "sha256": "A92D1FE9A84FFA0A2183CFCE6AC80148AF16E68B83EDE881D8B41E5F1F1BC740",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/004_mask.png",
+            "sha256": "19688FC756CBE9A3B4C391AF88CFCB1D9C3BBAE5B98F568F37916B4E0634E5A6"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/005.png",
+        "sha256": "38FB18F05FCEE7B245AB39E4490D560963C804B91E1E287C76A8B682BEFE0790",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/005_mask.png",
+            "sha256": "1A2583B686010005889557FADD2F37044544A2193C179A0D51946D03A9E90497"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/006.png",
+        "sha256": "7D83201BBDF9C091EDCF311AC6E78A3C9D539C4E2BF9DD030B4140BB6E305418",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/006_mask.png",
+            "sha256": "A61952BFABE5397505FC6160B3FC996BF1C7038992DC00647DD67C611FBC04BE"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/007.png",
+        "sha256": "E1B37D07F8A3F14AD9DBD583B5FB2DBFBD149D2A294B3C42BDE5AB08C791D54E",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/007_mask.png",
+            "sha256": "75C3C27EB34DA1D21592581B7DF34A24A1BB344F5805821ACD6B0CDFD547788C"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/008.png",
+        "sha256": "C7EEDCB5DEED82BE8C59D560CF1A3E2E022C7E9E7E6FAAB3D9E234B0996D84D7",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/008_mask.png",
+            "sha256": "1A32AECDAF4E6235DBA8184F54F876BF7926174551F536D8D9BE6DE651A09A9F"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/009.png",
+        "sha256": "EE49C8EFAACE5C4FF3F64A696C327498C8B27FB4DC2E53DF963961F9F622DAFF",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/009_mask.png",
+            "sha256": "6AB9B88EEDD93507DCC5BA350C89CB3CD814EFAC5164B847C39F8EAE6C718C55"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/010.png",
+        "sha256": "5C364A035829211026A8A4820B418BF4D868BEC2AF191F1D79E92F63140889A3",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/010_mask.png",
+            "sha256": "ABAA144D08D816F0BAA324EE14E8C8D4CA9EEE6C883A42C107362CD6B5EEF69D"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/011.png",
+        "sha256": "CA55223A608BC63B8687040BDCE6B5205E291B04769E7435C7534078DA197E3D",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/011_mask.png",
+            "sha256": "2FDD0D094639082A6A8F3B103B66317E15272CC0AA2D23EC8EB9EFE0A9E581D5"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/012.png",
+        "sha256": "199A211BBE529F1304F8D8E6182B00A0D584C0CA170ECCBDAB2E463156E044E8",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/012_mask.png",
+            "sha256": "3CE57A8CF790CC380B688E317241E854920AB778D593DFC529F5D71CCCC392B9"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/013.png",
+        "sha256": "625CAFB85F11C104C101BF181F20502F9E82AD1B42EB7F232DB0ECE9461E9C50",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/013_mask.png",
+            "sha256": "083E0F637539BF84F4A49341BD463470EF9563F092D3B5D2A38ED7F7392C9411"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/014.png",
+        "sha256": "36A262D9F6506F292DDFBF0D2FF2DCA1D5C363101563C1460E5CF3D3CBDC824A",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/014_mask.png",
+            "sha256": "293B01B4EF68B95D2FB006D17AF1058D27446297F52F8BE4ABA95953B4AB66CF"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/015.png",
+        "sha256": "DE11F80380AE6E1A2DFFB9BCDFF47D65E8133CCEFAB5304216E1B98BD4EA9CA0",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/015_mask.png",
+            "sha256": "53093D51B1FBE7C2EB2E7BEA655B0C904F2B4177BF990994BFD8A9F1DA274D93"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/016.png",
+        "sha256": "740B608B7950D2D043ED30004DE03068994D2E1B388BE381287746EBE7549600",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/016_mask.png",
+            "sha256": "6979D4CCD427B3AE609F0221488B212F84043F2A9002B28CC2085B681CAF9C47"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/017.png",
+        "sha256": "71AF3338F394B7EA8807AAE88F5729C2DA7EB8A22596A04DC12E07084BF1667E",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/017_mask.png",
+            "sha256": "B48FFA1F70D317729E5F3FF887DB06548C3FD428A4BEB2921485199EF8309F4D"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/018.png",
+        "sha256": "D1FB36B1F8B2544149631C68F86B5448F1422A939792F85D35C12360596959BB",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/018_mask.png",
+            "sha256": "1C71157CCC6D0F7D4AF91B868170B8149792FF10D9927D6D8A9AB216526C6710"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/019.png",
+        "sha256": "2E3CF82BD4D5E8D0AB694113C900498D7CD571577CB2E26BFB67EBE9024817B9",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/019_mask.png",
+            "sha256": "AD08121BD73D802605172CB7FBEDC35D2C790EFD2FE5D8BD8DC50CB3CFF7C8A0"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/020.png",
+        "sha256": "1EAD0E5610D5FC9483DD2429AF21A3309E5494C9281AE5FDA8284A75418ABDCA",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/020_mask.png",
+            "sha256": "EE97798A75AD790EE6BDE215E516D3D5AEC8EAC8A0362CD16E448519F6F33C1E"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/021.png",
+        "sha256": "9222A45524E5EF3506E989942F837DA5A2C9082A5CAA1A4B1A11D819D8FD400B",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/021_mask.png",
+            "sha256": "5213E667C40EA94D14A4B149DECA9895F4F1661B647C715F099C179F458AA29C"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/022.png",
+        "sha256": "153D6DCB2FF157260AC12654A8395FC0C29689E08352BBCEEAA90BB59EDDD13D",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/022_mask.png",
+            "sha256": "8405CC7158D06C781269247BC67387CE151CE008AAD60A2BC978B6B0B9F98AA7"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_head/023.png",
+        "sha256": "22ACED520A5C8F20321085BC6346F39CB4705215F90D75967305CF0F4B9963B3",
+        "label": 1,
+        "defect_type": "scratch_head",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_head/023_mask.png",
+            "sha256": "6008BAFBC468E93EAB46A64BF9951C8E4E77F73CA5898CB47396436AC2322AAA"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/000.png",
+        "sha256": "608A17E6067B8B990F44169BAB76DE407BDDECE19D0A396ACAA4D00F71EB19BA",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/000_mask.png",
+            "sha256": "6EA0B573AD9F101A5F09308182EBABF10469C97FC6F82E39CA3FC0077DBA0E49"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/001.png",
+        "sha256": "157B0FF4C96D000B740A1A66C91ACD8EB8005401E571ED1B9738F5322400A885",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/001_mask.png",
+            "sha256": "C8EE7B4EED9DB9F6E8312A5476B48ABE860B0C81AE350F9C8D1B085ADCD8DF17"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/002.png",
+        "sha256": "02016D1999BFC0E6CB201E08C297CC6E73D56C6D098B4DF47073AD0A3833087D",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/002_mask.png",
+            "sha256": "F38AA74303BE97F92DD354A5705726D293F45DF35AAB92AA9F3BC321F3287DDD"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/003.png",
+        "sha256": "1B390F88BD5B5572501100E20D29A757F873FF882FE5307DBAFE961680930244",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/003_mask.png",
+            "sha256": "272E613E937E9BA79B78F0D2BFDCBD2B1689544394915FC007F6F6801AD58624"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/004.png",
+        "sha256": "B3209843D937411E7898A9BFB4784C7ECCB99D6565D0C503FA7D8FC9016FB3A8",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/004_mask.png",
+            "sha256": "94FFC879F72D1B3FF4934E2CA08EC138B0BF9F53B14E0DC0DFE383E7563150EA"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/005.png",
+        "sha256": "94CDC70E8CBA36F00B40A8FBE71B09CFF919E5314326F6D5B495D180F809B973",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/005_mask.png",
+            "sha256": "B2D6414E32F68A88A9160F72069726D1D98DAF5CB670C1FCA0DFA1CCF850A893"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/006.png",
+        "sha256": "50AD4C4C2E52DB187255A1EAEE44E99DA9C3D727E6120A3938117258A7E8D1A5",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/006_mask.png",
+            "sha256": "0A65899ABAD715F23EA23B2351E66CB673DFF350DC3552207F0427AD5A0BF6C5"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/007.png",
+        "sha256": "A1DD88767F9497ABBD55B53E8D14D01B64EDDAD383B055A0189D66E1E10183A1",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/007_mask.png",
+            "sha256": "965B6B7B786982D7808669B21336A8AC966E236640972DA1A7B470F3C68F6CFF"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/008.png",
+        "sha256": "7EA4B2C03130A708080D794863E562C9B24304C20216EEFEAEAEC47C96D38C34",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/008_mask.png",
+            "sha256": "DCD2E04DBC213A9CCDF3A5E279A94465F5583EFEF7F94CACB77A0D4ED19D7176"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/009.png",
+        "sha256": "832329F1AD04DA4818E6F5B01FAE68E58E3AC9D4560C2A59AD11F3D34A2788AB",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/009_mask.png",
+            "sha256": "2EB9620715C59B77396221C5C45C8DC22F88695A72AEF4588E111A300F98A1DA"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/010.png",
+        "sha256": "7981F05E6FC92E485D09B8A87833EDACBB1ED94674AA0376DFDA81A7464A1000",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/010_mask.png",
+            "sha256": "07391A434EA751F0BE956B06FFF6F4D8658A9571ECFB6F4E9EFF1672ECFC996B"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/011.png",
+        "sha256": "E8A5AA925741F7E5C67DD39EB158983CADD0113F6D5176502EE802A656BFB21D",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/011_mask.png",
+            "sha256": "3F6831D5DD346CEFDA1652F7613768637B168C2EEB165CEEDCA082002C83C8D1"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/012.png",
+        "sha256": "9B205199A31A660EED2197D29E9E1CA9E9A83B98CFF14D556BCE158B0B2C2D3F",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/012_mask.png",
+            "sha256": "483DFB2D40629BECB09869B816B47D57BFF9A564BDC3AE20159C4B9F178CDA61"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/013.png",
+        "sha256": "C82E64AF304FC0A49A35B47A120019671F10B113608A9799D078913F3FFE26F4",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/013_mask.png",
+            "sha256": "5A93639D50863935095BD6C4C8E22E99B42253C98252C4023AEA3BF755C709CC"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/014.png",
+        "sha256": "501819A0DEF16B5ACFE2E5072702808CFD65EF41199F9CEFD73111AEC3C760E0",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/014_mask.png",
+            "sha256": "2E826DDAA7AD2A67E72A8C0B4AC9B507314E68328E873DCADB47CA7A4B71A3F7"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/015.png",
+        "sha256": "4D9AFE467087E5A99E886BD3F2978A6F02717DB1EF8A420B06176D860762A219",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/015_mask.png",
+            "sha256": "B02DF3389DE7D6ACE187466F386E56098665E5416E7AB6D862CAB0BC0DD4C6EA"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/016.png",
+        "sha256": "9ACAC26B1FB3860060B213BC220CDC359209FB834C6530776D7B622AC596503F",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/016_mask.png",
+            "sha256": "9EEFE4DD44F69A6920054ECDF457F6D9B866D88880F61097C289A1E113D87293"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/017.png",
+        "sha256": "A6AE52CBBB54F79DC56EB28C6CA888C4AAFD9A945A43D2C79426D40B328B8ED8",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/017_mask.png",
+            "sha256": "777A02F93158DEEB0A42E08970D9FD882C2CD4B58BC96035B09380B12691D73A"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/018.png",
+        "sha256": "856875E0CB812BBC40929B498B7B5ACD66D489E3D9ABDC1C49D6A5A3AA4C5CFD",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/018_mask.png",
+            "sha256": "9D4EFEC5393DD57A49C35ED36000BBEFFD943391CDD926E218E5203EE5DBFE4D"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/019.png",
+        "sha256": "449E0C6260177E10D8EC099215B7BDFD69086F3B799825C6DF16207187662BE1",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/019_mask.png",
+            "sha256": "D7023CFDBB83ACACA9DD898849666ACCB2FB2036B54EFE88431EB1F05A66C635"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/020.png",
+        "sha256": "903BBD2BEAFDE5DBC2EEB920FB6D5F1BA9F6B58697CAB013B19B64928FCCDF2D",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/020_mask.png",
+            "sha256": "40BA423E2A19F3372EACD94A4AC30C9D42254055BAC8180759CE1F28F9BAA216"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/021.png",
+        "sha256": "5038F6584A48F5CF9ECEA05C4B41E93273A36AAC684D495EA3C5617C1945AAC1",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/021_mask.png",
+            "sha256": "CF4F8D591315F08C6132E4A56B98528AC1BF09FDBD785C74BA3A9A1EAEBB3AFC"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/022.png",
+        "sha256": "1CC4D5C11C00D251F4A24E6DEF04555E7DCD4837C90F55B305908166659DD5C3",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/022_mask.png",
+            "sha256": "18EC4986D6F7108C922537A390E8258AC3C53AC6F3A19F6F5B1AC6991963903C"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/023.png",
+        "sha256": "F6EDB7C130A03DA3C2FB738DC0EF46D43DAF9E990494A020CB447577E53F7EF9",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/023_mask.png",
+            "sha256": "65918DD249095276F133CF41BE250FF71E4EE3540331AC858F5AE5004336BEA3"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/scratch_neck/024.png",
+        "sha256": "E497C107D3049C6AAC0EDFC44070AD2A49B93F789BA5DEA9B112FE0C2BC3A23E",
+        "label": 1,
+        "defect_type": "scratch_neck",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/scratch_neck/024_mask.png",
+            "sha256": "71F682F0267C828923AC39A163C3AC987CD73F35B37F949EDAD0B3B6707F4CBF"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/000.png",
+        "sha256": "5C647F0782864E6A95A3345B4B5094C6C7F0F442FD340267155A5F2794A2EE61",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/000_mask.png",
+            "sha256": "3B8FF48BE93B534703735BCB0D12760BC79D773EAEBD344DFCDED026185479F2"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/001.png",
+        "sha256": "D62AFD02F682DB2B0F8DB4C728354C5A259D3D0F6197F1EDE655806E93289011",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/001_mask.png",
+            "sha256": "6772510C1154F57BE1E0F1296FC494C5FBC6DC2D5E64DA1E4B92B4E56B13CC55"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/002.png",
+        "sha256": "BD1BFF0E6BEF321E8EEA8AE09B697442C436F2A4CD439C8C6A2965123C521651",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/002_mask.png",
+            "sha256": "E30CAA49F0F5B1EA63D1045C9A1F6C40A0AA915A5C632589FB7CBD7C9234C377"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/003.png",
+        "sha256": "D280670B38EB475A4CC781876A108B2EF7B5569E78B54C4F8DBF6C46713EC506",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/003_mask.png",
+            "sha256": "398DA14B1AD687A8A696FEA7855DBEAF3C58681FCBD8D8EEDB81C94A89C39F64"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/004.png",
+        "sha256": "C7989F4EF74471327E48C2E13C6445D5681C2D798CE9555DA80669CA9B36C6A0",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/004_mask.png",
+            "sha256": "E84642C30B15EAAFC4AF2FA51EF6709EA38BA6CD81E56DB1AF0AE9849DC0D7F8"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/005.png",
+        "sha256": "05200C7C5C1972F8039658E3E13BFCC7540CAD525BBB8A30702C2BD8FF526FED",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/005_mask.png",
+            "sha256": "885398C319E595FEAFCEB2A6FE263FDDFC0C96FB874682159D7690C7C2B5BF97"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/006.png",
+        "sha256": "B133E68F194F085872B0D11FAAF2C39072076477E5BF69C33ED2581B5EFF2A5E",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/006_mask.png",
+            "sha256": "5E53DA6B3F975AB8CD61539B9E691901C8EF6301B6909EBC811A3ECB1F48A51B"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/007.png",
+        "sha256": "54A5B5CDF53EE5E43F240EFE5925DB4821CE8B5BC47F65185CA17E24EB6B4B97",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/007_mask.png",
+            "sha256": "AC80B2FD25B2F2200489F2F03FA9E760FD19E160AD9A3E67D0626BAAE25AA4AB"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/008.png",
+        "sha256": "556B5342F95F8EBA8AC389C4DDDA00AFA8FE08695E7F62117E306C850D019F99",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/008_mask.png",
+            "sha256": "25FC439A032DC060822BE89DE182CF6C04586ED2D92D1EC6654BACD0BEB19B18"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/009.png",
+        "sha256": "8BB12074385C862E2B68472A27F582A0911FA5AF2F47D47D8020EC567D24643E",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/009_mask.png",
+            "sha256": "427C039CBFAFFDC3714AC477E0D69DECAE916CA8DE27A652B7218A123F3D3A66"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/010.png",
+        "sha256": "1DBEDD27B93EC6B895C9AE5DC72A12DCA8E4482DCE238CFC927D1565E694C16A",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/010_mask.png",
+            "sha256": "7B959FC15AE6F7F5B46648AAE882E27CCA795D2ED1CED3B5379E88776553F37B"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/011.png",
+        "sha256": "AD7738AA343DB9D0F4AA73D6DD26634CE6D836C97026532C89D65A3B58D79B93",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/011_mask.png",
+            "sha256": "7BCD5999F68B710C0C0F2C4D09FB578B3FB594D90118849B74C8770FFF3DBF5F"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/012.png",
+        "sha256": "558EF5E5A43172AB90851596FAB74123AC92D1787204BB6FD5A5A4924764CA13",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/012_mask.png",
+            "sha256": "5DD37CE13F8B1142699841D45165FA0AEA0ECAA6A91ADEC0BED4B9B8567FBFFE"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/013.png",
+        "sha256": "93CD19B069F6451D8871B379AD84568001073203A189D6A7ADD77F46FF1752AC",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/013_mask.png",
+            "sha256": "11F0474EA048EBFA4E5B33B4FA4343C071A37121FF87BA895F0F4058BDC399A2"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/014.png",
+        "sha256": "9697BE55D1F7D26A6DDA0EFAF7D184455799EA34A46056ACEA064872BEEF8691",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/014_mask.png",
+            "sha256": "E99A4BFE399CF6C06533DF000F795AF080A252EFB538303B7DD4E6CE68E79921"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/015.png",
+        "sha256": "29D813E3632959EC80E119D82E98CCDFF8388BA7FB90D14C7A7A925867C527F8",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/015_mask.png",
+            "sha256": "34C71CFDFD05A37BD9D45D122182FAB036BDF8DDE7487C93F366F9BA1669FD1C"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/016.png",
+        "sha256": "2C6923F7723F3D0BBC14A808E5D63854EFA8F004B8BA34FB69749358929B1793",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/016_mask.png",
+            "sha256": "77C43FC75F46BECC63D92359DB688DDE9C3BEDB283B7C1411E6197B7633EB05A"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/017.png",
+        "sha256": "02D37D313219B768FCF228D98FE0CE6E783655C7415E2BFC0CFEDFE9B866979A",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/017_mask.png",
+            "sha256": "E469B162EA37DA7B46E2DF665067D96CBA0B78A58C133FF6397B0E4636316637"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/018.png",
+        "sha256": "0E38BFB9DC72B800BF9FDD511EA4F50F776400FADDA0729390AFC38150738A63",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/018_mask.png",
+            "sha256": "244AF2BFA633E9DA07F29AB02A7B4C896D789257F40B4C5DB7132F23AD16FC17"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/019.png",
+        "sha256": "D0E07398D6E32A96B0B365CCE04482A82911D19B8D2ED6A2F5FB66B09A0D5939",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/019_mask.png",
+            "sha256": "67A0CF87407C05A3924F6AFAB57831D55E5AE041ADCA9EE11B905EC06E82A547"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/020.png",
+        "sha256": "DF59BD27F83130BDF757D4E0FB7AABB84E930508BC2B12DAB516683C3DC231DD",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/020_mask.png",
+            "sha256": "6FB054D36A71329E2C2910820CB3ABC0C8CA4A3BCADB1C2C18D220179F81A655"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/021.png",
+        "sha256": "C138A8979DBB2AFEAECCFE587203D710729D77AB0EA335FDF41723D0F22717F7",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/021_mask.png",
+            "sha256": "1FE03A5E10B9A9DF2983CC43E20AC3746EE00FD80FC2A01F62A6AE75D1BE297F"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_side/022.png",
+        "sha256": "AAC85A5F71EE56A49F1D345814AE6918E7B00597CA187B0A77FB770BF96C32A9",
+        "label": 1,
+        "defect_type": "thread_side",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_side/022_mask.png",
+            "sha256": "23C267878F4A72DBD50324D1047C0F833CD682AF38E40099859A4249D506F0BE"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/000.png",
+        "sha256": "DD7BB501371A66958E36379BAAB1A77D3B39E52BCD0C2772EC2E779588EC845F",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/000_mask.png",
+            "sha256": "3005F15C2F61ED4E3861C4E97BCFBB922C647E5A2BAA8B359DD95F47E8EBDFBE"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/001.png",
+        "sha256": "DA2C2970E65E08971A94C4D38904844D45BB6BCE3E90D715D3E47AA8E1D3EFA9",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/001_mask.png",
+            "sha256": "75B683D3FEF4504B15F4BE7DD51F5886143DAE625BD76262B0EDE43B7C6E957A"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/002.png",
+        "sha256": "341487B8042DE429865119EC73AEC235E602B90B97EE444C94336DA205FCCD7C",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/002_mask.png",
+            "sha256": "D59BB0FE1D5B9FC599BCCD9E53D9BE6DE66732DB8B96D2067D2BE469400184C9"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/003.png",
+        "sha256": "2BD07F4BB4ED5370B0C0B9AE5E0038102326342B2D36BF4375714F8A6628B8AA",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/003_mask.png",
+            "sha256": "8DB3CF8C93AC378258D03C9E224979E9C150F3A242C99CAC1DA54A840F9E7020"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/004.png",
+        "sha256": "00990D7647B5C3A0A4A87AE32C7B45335F7C750E0CFBEACB62ED96109130CA4F",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/004_mask.png",
+            "sha256": "35649C81CFC31868D9A4C7CCD3F17685CD49166E264324C3B536A5A75A805CB9"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/005.png",
+        "sha256": "C3C3BADEADB667D6A46CB74A3336B03DCA85772671ECF8B4EBBC6D2DFC21A4E7",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/005_mask.png",
+            "sha256": "4B706621F5862E6EC631FA826F5028235EF5B33F854AE9BE6CE5A9D6E8A81E90"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/006.png",
+        "sha256": "907F58A841FC630868D1D6D25F6573F0B5FEFF087158630FFCE29B306EEBE051",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/006_mask.png",
+            "sha256": "E7368E555F544A19E8329204F0FEDC74F97924F97184B640C0B8D9BA24EF1202"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/007.png",
+        "sha256": "38ABB4DC3B28EFB1F6D87C54F685897A21965D5F9BE592086ED93C1D169E86F6",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/007_mask.png",
+            "sha256": "9A8877513682139F0099289C06F1F22DF7B044EFFF84952E79E7341893BEE478"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/008.png",
+        "sha256": "EEC1CA1712605C8A8D31160D3D05378FAF0EAA48FE6AE645D588514EE466B6F1",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/008_mask.png",
+            "sha256": "AE12CCBD3F9E8116FDCD4CAC8708C9229B928E00A308406E190D4A11EFB0E6BA"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/009.png",
+        "sha256": "25EB73349B115F1A4A904C8938817F3E89678894B5BBC4AE04A84C62E8BAEC5D",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/009_mask.png",
+            "sha256": "474994EA74514AF2D23FE0EBE46946BB9B01B26CC9F5F9C60C75A6C6B5D53955"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/010.png",
+        "sha256": "48D10F071C5510F24E15C892E638A91127F95AD9867D615B4625586ABC288D81",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/010_mask.png",
+            "sha256": "A15D6548174284F8775CDAC732C3E6166ADBA5A7142444C7C4D12C3F38CAF3FB"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/011.png",
+        "sha256": "42B0E6EF71F0C6A6A06150B413EB365C05297F679E3CDA2164154CAB2AFE16FD",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/011_mask.png",
+            "sha256": "BF65BEC9805C9C041B0D3A89B96E7C0023C89C5D5261CA229A045933C437904C"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/012.png",
+        "sha256": "8FA8998F99C47D393CBF92B947655784E61FB86FDD70599F079394FEC60C9C93",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/012_mask.png",
+            "sha256": "A05378C12C65241C9B407DA4A460DC4C01B9D28ABDC4C9F5AC2B2E1673D8D62A"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/013.png",
+        "sha256": "E5952B8F2C2738B5D0D6910F65201432F7DD382EBC006604C1A0EA332209C5AB",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/013_mask.png",
+            "sha256": "8C4A2FE0772D576C8FF79E97C1905685072B0FEBA59F28F0ADA376F66F28DAE7"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/014.png",
+        "sha256": "B1F8B447BBA83C949AC2B73A760D582BB163273425597B5EF9F02EDFC2BA3F6F",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/014_mask.png",
+            "sha256": "E03E317F76C79F7225785DEAB2B56134306C7F3BFB411C76F56AF8595CA21AC2"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/015.png",
+        "sha256": "C197E7E13A05D213C87C1CA295C29D4DC7F931F5D97A1725501EE21A3674D65A",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/015_mask.png",
+            "sha256": "FFE50EFA062C268236F093DA8B024D228BF302128F8097247F8856197C8947EF"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/016.png",
+        "sha256": "13A379FE2ABB7DCAD2F0BFED209362B13B6385385711778802F03D5791590D2E",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/016_mask.png",
+            "sha256": "5ADC9F7840017E8FF78A5D3FB2B0A088DAE77160EBE25B4649E24EF6CC705A12"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/017.png",
+        "sha256": "AC7A132822530D5C6B1D0B8CDD92F16A0EC91B93BD13F6AC0B47BFAB4A3F8EC9",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/017_mask.png",
+            "sha256": "6EF23A506CE02DFEF918016D2AEDAA49338B492B9AB0FE982C2F6CBFCDFA0FEF"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/018.png",
+        "sha256": "E19D74D81AEF0465536CC1C2C7742AD860E4A9A215E0B33A641AC5538A2C6644",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/018_mask.png",
+            "sha256": "B1CA4A0578E929C73EBF262568ECCB662D1D1BB5DD31632A6D138C59EA5D58A1"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/019.png",
+        "sha256": "16C6CC44A0A9BD5AA9D4A95E02FD6121670C2CC52ED837A511C72765BA971D38",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/019_mask.png",
+            "sha256": "90A492D1B59BD72DFFF69FB58134D5113DDC6DAF57FDB0D4AD93A6258579E1B2"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/020.png",
+        "sha256": "53D4FAD9FB22783C777EBBE3166EB53916485184538D307395F481EA68B8A14C",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/020_mask.png",
+            "sha256": "9940195A6DACE07F6F3FA3070B9F2D8A1DB08D771782C39ADB5CE4BC84B4055B"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/021.png",
+        "sha256": "7E138B95EA8C8C0036E58574974CF91158379639AB1A75D785865D8503FC90CB",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/021_mask.png",
+            "sha256": "F8B9E33A5D40324A1E06A6946461C5F687BF9D3D5F30C3C33220B97E3D85961A"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/screw/test/thread_top/022.png",
+        "sha256": "82994A7E17B15B8705EAB7B53D5EADB6278F0E647CEFD94EC5F0E7670A3B9F36",
+        "label": 1,
+        "defect_type": "thread_top",
+        "masks": [
+          {
+            "path": "mvtec_ad/screw/ground_truth/thread_top/022_mask.png",
+            "sha256": "551C5CA8E8AC896F4975610AFE21481531583ACFA5BD94309A04E5387982FCBD"
+          }
+        ]
+      }
+    ]
+  },
+  "runs": {
+    "17": {
+      "100": [
+        "mvtec_ad/screw/train/good/192.png",
+        "mvtec_ad/screw/train/good/050.png",
+        "mvtec_ad/screw/train/good/185.png",
+        "mvtec_ad/screw/train/good/199.png",
+        "mvtec_ad/screw/train/good/031.png",
+        "mvtec_ad/screw/train/good/244.png",
+        "mvtec_ad/screw/train/good/068.png",
+        "mvtec_ad/screw/train/good/074.png",
+        "mvtec_ad/screw/train/good/070.png",
+        "mvtec_ad/screw/train/good/009.png",
+        "mvtec_ad/screw/train/good/294.png",
+        "mvtec_ad/screw/train/good/028.png",
+        "mvtec_ad/screw/train/good/305.png",
+        "mvtec_ad/screw/train/good/267.png",
+        "mvtec_ad/screw/train/good/121.png",
+        "mvtec_ad/screw/train/good/263.png",
+        "mvtec_ad/screw/train/good/280.png",
+        "mvtec_ad/screw/train/good/084.png",
+        "mvtec_ad/screw/train/good/073.png",
+        "mvtec_ad/screw/train/good/291.png",
+        "mvtec_ad/screw/train/good/134.png",
+        "mvtec_ad/screw/train/good/233.png",
+        "mvtec_ad/screw/train/good/082.png",
+        "mvtec_ad/screw/train/good/230.png",
+        "mvtec_ad/screw/train/good/250.png",
+        "mvtec_ad/screw/train/good/105.png",
+        "mvtec_ad/screw/train/good/238.png",
+        "mvtec_ad/screw/train/good/283.png",
+        "mvtec_ad/screw/train/good/219.png",
+        "mvtec_ad/screw/train/good/317.png",
+        "mvtec_ad/screw/train/good/032.png",
+        "mvtec_ad/screw/train/good/161.png",
+        "mvtec_ad/screw/train/good/164.png",
+        "mvtec_ad/screw/train/good/216.png",
+        "mvtec_ad/screw/train/good/023.png",
+        "mvtec_ad/screw/train/good/187.png",
+        "mvtec_ad/screw/train/good/124.png",
+        "mvtec_ad/screw/train/good/126.png",
+        "mvtec_ad/screw/train/good/313.png",
+        "mvtec_ad/screw/train/good/043.png",
+        "mvtec_ad/screw/train/good/010.png",
+        "mvtec_ad/screw/train/good/136.png",
+        "mvtec_ad/screw/train/good/312.png",
+        "mvtec_ad/screw/train/good/304.png",
+        "mvtec_ad/screw/train/good/102.png",
+        "mvtec_ad/screw/train/good/240.png",
+        "mvtec_ad/screw/train/good/170.png",
+        "mvtec_ad/screw/train/good/056.png",
+        "mvtec_ad/screw/train/good/249.png",
+        "mvtec_ad/screw/train/good/157.png",
+        "mvtec_ad/screw/train/good/001.png",
+        "mvtec_ad/screw/train/good/142.png",
+        "mvtec_ad/screw/train/good/128.png",
+        "mvtec_ad/screw/train/good/123.png",
+        "mvtec_ad/screw/train/good/173.png",
+        "mvtec_ad/screw/train/good/314.png",
+        "mvtec_ad/screw/train/good/112.png",
+        "mvtec_ad/screw/train/good/222.png",
+        "mvtec_ad/screw/train/good/268.png",
+        "mvtec_ad/screw/train/good/207.png",
+        "mvtec_ad/screw/train/good/180.png",
+        "mvtec_ad/screw/train/good/059.png",
+        "mvtec_ad/screw/train/good/140.png",
+        "mvtec_ad/screw/train/good/027.png",
+        "mvtec_ad/screw/train/good/058.png",
+        "mvtec_ad/screw/train/good/094.png",
+        "mvtec_ad/screw/train/good/204.png",
+        "mvtec_ad/screw/train/good/026.png",
+        "mvtec_ad/screw/train/good/051.png",
+        "mvtec_ad/screw/train/good/311.png",
+        "mvtec_ad/screw/train/good/290.png",
+        "mvtec_ad/screw/train/good/137.png",
+        "mvtec_ad/screw/train/good/090.png",
+        "mvtec_ad/screw/train/good/004.png",
+        "mvtec_ad/screw/train/good/166.png",
+        "mvtec_ad/screw/train/good/197.png",
+        "mvtec_ad/screw/train/good/149.png",
+        "mvtec_ad/screw/train/good/133.png",
+        "mvtec_ad/screw/train/good/226.png",
+        "mvtec_ad/screw/train/good/033.png",
+        "mvtec_ad/screw/train/good/072.png",
+        "mvtec_ad/screw/train/good/247.png",
+        "mvtec_ad/screw/train/good/069.png",
+        "mvtec_ad/screw/train/good/100.png",
+        "mvtec_ad/screw/train/good/211.png",
+        "mvtec_ad/screw/train/good/065.png",
+        "mvtec_ad/screw/train/good/215.png",
+        "mvtec_ad/screw/train/good/139.png",
+        "mvtec_ad/screw/train/good/117.png",
+        "mvtec_ad/screw/train/good/165.png",
+        "mvtec_ad/screw/train/good/093.png",
+        "mvtec_ad/screw/train/good/076.png",
+        "mvtec_ad/screw/train/good/145.png",
+        "mvtec_ad/screw/train/good/046.png",
+        "mvtec_ad/screw/train/good/143.png",
+        "mvtec_ad/screw/train/good/091.png",
+        "mvtec_ad/screw/train/good/206.png",
+        "mvtec_ad/screw/train/good/155.png",
+        "mvtec_ad/screw/train/good/245.png",
+        "mvtec_ad/screw/train/good/037.png"
+      ],
+      "50": [
+        "mvtec_ad/screw/train/good/192.png",
+        "mvtec_ad/screw/train/good/050.png",
+        "mvtec_ad/screw/train/good/185.png",
+        "mvtec_ad/screw/train/good/199.png",
+        "mvtec_ad/screw/train/good/031.png",
+        "mvtec_ad/screw/train/good/244.png",
+        "mvtec_ad/screw/train/good/068.png",
+        "mvtec_ad/screw/train/good/074.png",
+        "mvtec_ad/screw/train/good/070.png",
+        "mvtec_ad/screw/train/good/009.png",
+        "mvtec_ad/screw/train/good/294.png",
+        "mvtec_ad/screw/train/good/028.png",
+        "mvtec_ad/screw/train/good/305.png",
+        "mvtec_ad/screw/train/good/267.png",
+        "mvtec_ad/screw/train/good/121.png",
+        "mvtec_ad/screw/train/good/263.png",
+        "mvtec_ad/screw/train/good/280.png",
+        "mvtec_ad/screw/train/good/084.png",
+        "mvtec_ad/screw/train/good/073.png",
+        "mvtec_ad/screw/train/good/291.png",
+        "mvtec_ad/screw/train/good/134.png",
+        "mvtec_ad/screw/train/good/233.png",
+        "mvtec_ad/screw/train/good/082.png",
+        "mvtec_ad/screw/train/good/230.png",
+        "mvtec_ad/screw/train/good/250.png",
+        "mvtec_ad/screw/train/good/105.png",
+        "mvtec_ad/screw/train/good/238.png",
+        "mvtec_ad/screw/train/good/283.png",
+        "mvtec_ad/screw/train/good/219.png",
+        "mvtec_ad/screw/train/good/317.png",
+        "mvtec_ad/screw/train/good/032.png",
+        "mvtec_ad/screw/train/good/161.png",
+        "mvtec_ad/screw/train/good/164.png",
+        "mvtec_ad/screw/train/good/216.png",
+        "mvtec_ad/screw/train/good/023.png",
+        "mvtec_ad/screw/train/good/187.png",
+        "mvtec_ad/screw/train/good/124.png",
+        "mvtec_ad/screw/train/good/126.png",
+        "mvtec_ad/screw/train/good/313.png",
+        "mvtec_ad/screw/train/good/043.png",
+        "mvtec_ad/screw/train/good/010.png",
+        "mvtec_ad/screw/train/good/136.png",
+        "mvtec_ad/screw/train/good/312.png",
+        "mvtec_ad/screw/train/good/304.png",
+        "mvtec_ad/screw/train/good/102.png",
+        "mvtec_ad/screw/train/good/240.png",
+        "mvtec_ad/screw/train/good/170.png",
+        "mvtec_ad/screw/train/good/056.png",
+        "mvtec_ad/screw/train/good/249.png",
+        "mvtec_ad/screw/train/good/157.png"
+      ],
+      "20": [
+        "mvtec_ad/screw/train/good/192.png",
+        "mvtec_ad/screw/train/good/050.png",
+        "mvtec_ad/screw/train/good/185.png",
+        "mvtec_ad/screw/train/good/199.png",
+        "mvtec_ad/screw/train/good/031.png",
+        "mvtec_ad/screw/train/good/244.png",
+        "mvtec_ad/screw/train/good/068.png",
+        "mvtec_ad/screw/train/good/074.png",
+        "mvtec_ad/screw/train/good/070.png",
+        "mvtec_ad/screw/train/good/009.png",
+        "mvtec_ad/screw/train/good/294.png",
+        "mvtec_ad/screw/train/good/028.png",
+        "mvtec_ad/screw/train/good/305.png",
+        "mvtec_ad/screw/train/good/267.png",
+        "mvtec_ad/screw/train/good/121.png",
+        "mvtec_ad/screw/train/good/263.png",
+        "mvtec_ad/screw/train/good/280.png",
+        "mvtec_ad/screw/train/good/084.png",
+        "mvtec_ad/screw/train/good/073.png",
+        "mvtec_ad/screw/train/good/291.png"
+      ]
+    },
+    "29": {
+      "100": [
+        "mvtec_ad/screw/train/good/304.png",
+        "mvtec_ad/screw/train/good/087.png",
+        "mvtec_ad/screw/train/good/076.png",
+        "mvtec_ad/screw/train/good/277.png",
+        "mvtec_ad/screw/train/good/125.png",
+        "mvtec_ad/screw/train/good/138.png",
+        "mvtec_ad/screw/train/good/019.png",
+        "mvtec_ad/screw/train/good/118.png",
+        "mvtec_ad/screw/train/good/220.png",
+        "mvtec_ad/screw/train/good/042.png",
+        "mvtec_ad/screw/train/good/023.png",
+        "mvtec_ad/screw/train/good/308.png",
+        "mvtec_ad/screw/train/good/192.png",
+        "mvtec_ad/screw/train/good/083.png",
+        "mvtec_ad/screw/train/good/188.png",
+        "mvtec_ad/screw/train/good/156.png",
+        "mvtec_ad/screw/train/good/075.png",
+        "mvtec_ad/screw/train/good/298.png",
+        "mvtec_ad/screw/train/good/286.png",
+        "mvtec_ad/screw/train/good/215.png",
+        "mvtec_ad/screw/train/good/224.png",
+        "mvtec_ad/screw/train/good/150.png",
+        "mvtec_ad/screw/train/good/265.png",
+        "mvtec_ad/screw/train/good/029.png",
+        "mvtec_ad/screw/train/good/197.png",
+        "mvtec_ad/screw/train/good/105.png",
+        "mvtec_ad/screw/train/good/033.png",
+        "mvtec_ad/screw/train/good/311.png",
+        "mvtec_ad/screw/train/good/126.png",
+        "mvtec_ad/screw/train/good/293.png",
+        "mvtec_ad/screw/train/good/017.png",
+        "mvtec_ad/screw/train/good/056.png",
+        "mvtec_ad/screw/train/good/088.png",
+        "mvtec_ad/screw/train/good/160.png",
+        "mvtec_ad/screw/train/good/184.png",
+        "mvtec_ad/screw/train/good/177.png",
+        "mvtec_ad/screw/train/good/028.png",
+        "mvtec_ad/screw/train/good/067.png",
+        "mvtec_ad/screw/train/good/203.png",
+        "mvtec_ad/screw/train/good/176.png",
+        "mvtec_ad/screw/train/good/081.png",
+        "mvtec_ad/screw/train/good/194.png",
+        "mvtec_ad/screw/train/good/180.png",
+        "mvtec_ad/screw/train/good/289.png",
+        "mvtec_ad/screw/train/good/205.png",
+        "mvtec_ad/screw/train/good/058.png",
+        "mvtec_ad/screw/train/good/143.png",
+        "mvtec_ad/screw/train/good/120.png",
+        "mvtec_ad/screw/train/good/096.png",
+        "mvtec_ad/screw/train/good/117.png",
+        "mvtec_ad/screw/train/good/285.png",
+        "mvtec_ad/screw/train/good/213.png",
+        "mvtec_ad/screw/train/good/100.png",
+        "mvtec_ad/screw/train/good/072.png",
+        "mvtec_ad/screw/train/good/057.png",
+        "mvtec_ad/screw/train/good/240.png",
+        "mvtec_ad/screw/train/good/247.png",
+        "mvtec_ad/screw/train/good/145.png",
+        "mvtec_ad/screw/train/good/151.png",
+        "mvtec_ad/screw/train/good/287.png",
+        "mvtec_ad/screw/train/good/219.png",
+        "mvtec_ad/screw/train/good/182.png",
+        "mvtec_ad/screw/train/good/093.png",
+        "mvtec_ad/screw/train/good/155.png",
+        "mvtec_ad/screw/train/good/282.png",
+        "mvtec_ad/screw/train/good/249.png",
+        "mvtec_ad/screw/train/good/312.png",
+        "mvtec_ad/screw/train/good/158.png",
+        "mvtec_ad/screw/train/good/216.png",
+        "mvtec_ad/screw/train/good/248.png",
+        "mvtec_ad/screw/train/good/260.png",
+        "mvtec_ad/screw/train/good/168.png",
+        "mvtec_ad/screw/train/good/317.png",
+        "mvtec_ad/screw/train/good/241.png",
+        "mvtec_ad/screw/train/good/109.png",
+        "mvtec_ad/screw/train/good/014.png",
+        "mvtec_ad/screw/train/good/170.png",
+        "mvtec_ad/screw/train/good/169.png",
+        "mvtec_ad/screw/train/good/074.png",
+        "mvtec_ad/screw/train/good/299.png",
+        "mvtec_ad/screw/train/good/300.png",
+        "mvtec_ad/screw/train/good/292.png",
+        "mvtec_ad/screw/train/good/024.png",
+        "mvtec_ad/screw/train/good/230.png",
+        "mvtec_ad/screw/train/good/166.png",
+        "mvtec_ad/screw/train/good/154.png",
+        "mvtec_ad/screw/train/good/290.png",
+        "mvtec_ad/screw/train/good/245.png",
+        "mvtec_ad/screw/train/good/079.png",
+        "mvtec_ad/screw/train/good/122.png",
+        "mvtec_ad/screw/train/good/059.png",
+        "mvtec_ad/screw/train/good/007.png",
+        "mvtec_ad/screw/train/good/068.png",
+        "mvtec_ad/screw/train/good/146.png",
+        "mvtec_ad/screw/train/good/111.png",
+        "mvtec_ad/screw/train/good/130.png",
+        "mvtec_ad/screw/train/good/257.png",
+        "mvtec_ad/screw/train/good/025.png",
+        "mvtec_ad/screw/train/good/274.png",
+        "mvtec_ad/screw/train/good/046.png"
+      ],
+      "50": [
+        "mvtec_ad/screw/train/good/304.png",
+        "mvtec_ad/screw/train/good/087.png",
+        "mvtec_ad/screw/train/good/076.png",
+        "mvtec_ad/screw/train/good/277.png",
+        "mvtec_ad/screw/train/good/125.png",
+        "mvtec_ad/screw/train/good/138.png",
+        "mvtec_ad/screw/train/good/019.png",
+        "mvtec_ad/screw/train/good/118.png",
+        "mvtec_ad/screw/train/good/220.png",
+        "mvtec_ad/screw/train/good/042.png",
+        "mvtec_ad/screw/train/good/023.png",
+        "mvtec_ad/screw/train/good/308.png",
+        "mvtec_ad/screw/train/good/192.png",
+        "mvtec_ad/screw/train/good/083.png",
+        "mvtec_ad/screw/train/good/188.png",
+        "mvtec_ad/screw/train/good/156.png",
+        "mvtec_ad/screw/train/good/075.png",
+        "mvtec_ad/screw/train/good/298.png",
+        "mvtec_ad/screw/train/good/286.png",
+        "mvtec_ad/screw/train/good/215.png",
+        "mvtec_ad/screw/train/good/224.png",
+        "mvtec_ad/screw/train/good/150.png",
+        "mvtec_ad/screw/train/good/265.png",
+        "mvtec_ad/screw/train/good/029.png",
+        "mvtec_ad/screw/train/good/197.png",
+        "mvtec_ad/screw/train/good/105.png",
+        "mvtec_ad/screw/train/good/033.png",
+        "mvtec_ad/screw/train/good/311.png",
+        "mvtec_ad/screw/train/good/126.png",
+        "mvtec_ad/screw/train/good/293.png",
+        "mvtec_ad/screw/train/good/017.png",
+        "mvtec_ad/screw/train/good/056.png",
+        "mvtec_ad/screw/train/good/088.png",
+        "mvtec_ad/screw/train/good/160.png",
+        "mvtec_ad/screw/train/good/184.png",
+        "mvtec_ad/screw/train/good/177.png",
+        "mvtec_ad/screw/train/good/028.png",
+        "mvtec_ad/screw/train/good/067.png",
+        "mvtec_ad/screw/train/good/203.png",
+        "mvtec_ad/screw/train/good/176.png",
+        "mvtec_ad/screw/train/good/081.png",
+        "mvtec_ad/screw/train/good/194.png",
+        "mvtec_ad/screw/train/good/180.png",
+        "mvtec_ad/screw/train/good/289.png",
+        "mvtec_ad/screw/train/good/205.png",
+        "mvtec_ad/screw/train/good/058.png",
+        "mvtec_ad/screw/train/good/143.png",
+        "mvtec_ad/screw/train/good/120.png",
+        "mvtec_ad/screw/train/good/096.png",
+        "mvtec_ad/screw/train/good/117.png"
+      ],
+      "20": [
+        "mvtec_ad/screw/train/good/304.png",
+        "mvtec_ad/screw/train/good/087.png",
+        "mvtec_ad/screw/train/good/076.png",
+        "mvtec_ad/screw/train/good/277.png",
+        "mvtec_ad/screw/train/good/125.png",
+        "mvtec_ad/screw/train/good/138.png",
+        "mvtec_ad/screw/train/good/019.png",
+        "mvtec_ad/screw/train/good/118.png",
+        "mvtec_ad/screw/train/good/220.png",
+        "mvtec_ad/screw/train/good/042.png",
+        "mvtec_ad/screw/train/good/023.png",
+        "mvtec_ad/screw/train/good/308.png",
+        "mvtec_ad/screw/train/good/192.png",
+        "mvtec_ad/screw/train/good/083.png",
+        "mvtec_ad/screw/train/good/188.png",
+        "mvtec_ad/screw/train/good/156.png",
+        "mvtec_ad/screw/train/good/075.png",
+        "mvtec_ad/screw/train/good/298.png",
+        "mvtec_ad/screw/train/good/286.png",
+        "mvtec_ad/screw/train/good/215.png"
+      ]
+    },
+    "43": {
+      "100": [
+        "mvtec_ad/screw/train/good/201.png",
+        "mvtec_ad/screw/train/good/079.png",
+        "mvtec_ad/screw/train/good/167.png",
+        "mvtec_ad/screw/train/good/114.png",
+        "mvtec_ad/screw/train/good/074.png",
+        "mvtec_ad/screw/train/good/069.png",
+        "mvtec_ad/screw/train/good/224.png",
+        "mvtec_ad/screw/train/good/290.png",
+        "mvtec_ad/screw/train/good/054.png",
+        "mvtec_ad/screw/train/good/285.png",
+        "mvtec_ad/screw/train/good/230.png",
+        "mvtec_ad/screw/train/good/002.png",
+        "mvtec_ad/screw/train/good/266.png",
+        "mvtec_ad/screw/train/good/288.png",
+        "mvtec_ad/screw/train/good/312.png",
+        "mvtec_ad/screw/train/good/098.png",
+        "mvtec_ad/screw/train/good/105.png",
+        "mvtec_ad/screw/train/good/271.png",
+        "mvtec_ad/screw/train/good/198.png",
+        "mvtec_ad/screw/train/good/265.png",
+        "mvtec_ad/screw/train/good/205.png",
+        "mvtec_ad/screw/train/good/090.png",
+        "mvtec_ad/screw/train/good/179.png",
+        "mvtec_ad/screw/train/good/075.png",
+        "mvtec_ad/screw/train/good/143.png",
+        "mvtec_ad/screw/train/good/204.png",
+        "mvtec_ad/screw/train/good/242.png",
+        "mvtec_ad/screw/train/good/044.png",
+        "mvtec_ad/screw/train/good/283.png",
+        "mvtec_ad/screw/train/good/089.png",
+        "mvtec_ad/screw/train/good/213.png",
+        "mvtec_ad/screw/train/good/084.png",
+        "mvtec_ad/screw/train/good/073.png",
+        "mvtec_ad/screw/train/good/102.png",
+        "mvtec_ad/screw/train/good/067.png",
+        "mvtec_ad/screw/train/good/059.png",
+        "mvtec_ad/screw/train/good/068.png",
+        "mvtec_ad/screw/train/good/049.png",
+        "mvtec_ad/screw/train/good/173.png",
+        "mvtec_ad/screw/train/good/308.png",
+        "mvtec_ad/screw/train/good/256.png",
+        "mvtec_ad/screw/train/good/022.png",
+        "mvtec_ad/screw/train/good/006.png",
+        "mvtec_ad/screw/train/good/003.png",
+        "mvtec_ad/screw/train/good/261.png",
+        "mvtec_ad/screw/train/good/154.png",
+        "mvtec_ad/screw/train/good/220.png",
+        "mvtec_ad/screw/train/good/316.png",
+        "mvtec_ad/screw/train/good/180.png",
+        "mvtec_ad/screw/train/good/314.png",
+        "mvtec_ad/screw/train/good/142.png",
+        "mvtec_ad/screw/train/good/264.png",
+        "mvtec_ad/screw/train/good/043.png",
+        "mvtec_ad/screw/train/good/149.png",
+        "mvtec_ad/screw/train/good/221.png",
+        "mvtec_ad/screw/train/good/196.png",
+        "mvtec_ad/screw/train/good/237.png",
+        "mvtec_ad/screw/train/good/076.png",
+        "mvtec_ad/screw/train/good/014.png",
+        "mvtec_ad/screw/train/good/135.png",
+        "mvtec_ad/screw/train/good/128.png",
+        "mvtec_ad/screw/train/good/218.png",
+        "mvtec_ad/screw/train/good/293.png",
+        "mvtec_ad/screw/train/good/031.png",
+        "mvtec_ad/screw/train/good/066.png",
+        "mvtec_ad/screw/train/good/239.png",
+        "mvtec_ad/screw/train/good/096.png",
+        "mvtec_ad/screw/train/good/017.png",
+        "mvtec_ad/screw/train/good/177.png",
+        "mvtec_ad/screw/train/good/241.png",
+        "mvtec_ad/screw/train/good/248.png",
+        "mvtec_ad/screw/train/good/203.png",
+        "mvtec_ad/screw/train/good/070.png",
+        "mvtec_ad/screw/train/good/259.png",
+        "mvtec_ad/screw/train/good/300.png",
+        "mvtec_ad/screw/train/good/234.png",
+        "mvtec_ad/screw/train/good/260.png",
+        "mvtec_ad/screw/train/good/092.png",
+        "mvtec_ad/screw/train/good/289.png",
+        "mvtec_ad/screw/train/good/100.png",
+        "mvtec_ad/screw/train/good/113.png",
+        "mvtec_ad/screw/train/good/082.png",
+        "mvtec_ad/screw/train/good/187.png",
+        "mvtec_ad/screw/train/good/281.png",
+        "mvtec_ad/screw/train/good/133.png",
+        "mvtec_ad/screw/train/good/004.png",
+        "mvtec_ad/screw/train/good/240.png",
+        "mvtec_ad/screw/train/good/130.png",
+        "mvtec_ad/screw/train/good/081.png",
+        "mvtec_ad/screw/train/good/072.png",
+        "mvtec_ad/screw/train/good/009.png",
+        "mvtec_ad/screw/train/good/124.png",
+        "mvtec_ad/screw/train/good/120.png",
+        "mvtec_ad/screw/train/good/061.png",
+        "mvtec_ad/screw/train/good/176.png",
+        "mvtec_ad/screw/train/good/132.png",
+        "mvtec_ad/screw/train/good/296.png",
+        "mvtec_ad/screw/train/good/034.png",
+        "mvtec_ad/screw/train/good/047.png",
+        "mvtec_ad/screw/train/good/233.png"
+      ],
+      "50": [
+        "mvtec_ad/screw/train/good/201.png",
+        "mvtec_ad/screw/train/good/079.png",
+        "mvtec_ad/screw/train/good/167.png",
+        "mvtec_ad/screw/train/good/114.png",
+        "mvtec_ad/screw/train/good/074.png",
+        "mvtec_ad/screw/train/good/069.png",
+        "mvtec_ad/screw/train/good/224.png",
+        "mvtec_ad/screw/train/good/290.png",
+        "mvtec_ad/screw/train/good/054.png",
+        "mvtec_ad/screw/train/good/285.png",
+        "mvtec_ad/screw/train/good/230.png",
+        "mvtec_ad/screw/train/good/002.png",
+        "mvtec_ad/screw/train/good/266.png",
+        "mvtec_ad/screw/train/good/288.png",
+        "mvtec_ad/screw/train/good/312.png",
+        "mvtec_ad/screw/train/good/098.png",
+        "mvtec_ad/screw/train/good/105.png",
+        "mvtec_ad/screw/train/good/271.png",
+        "mvtec_ad/screw/train/good/198.png",
+        "mvtec_ad/screw/train/good/265.png",
+        "mvtec_ad/screw/train/good/205.png",
+        "mvtec_ad/screw/train/good/090.png",
+        "mvtec_ad/screw/train/good/179.png",
+        "mvtec_ad/screw/train/good/075.png",
+        "mvtec_ad/screw/train/good/143.png",
+        "mvtec_ad/screw/train/good/204.png",
+        "mvtec_ad/screw/train/good/242.png",
+        "mvtec_ad/screw/train/good/044.png",
+        "mvtec_ad/screw/train/good/283.png",
+        "mvtec_ad/screw/train/good/089.png",
+        "mvtec_ad/screw/train/good/213.png",
+        "mvtec_ad/screw/train/good/084.png",
+        "mvtec_ad/screw/train/good/073.png",
+        "mvtec_ad/screw/train/good/102.png",
+        "mvtec_ad/screw/train/good/067.png",
+        "mvtec_ad/screw/train/good/059.png",
+        "mvtec_ad/screw/train/good/068.png",
+        "mvtec_ad/screw/train/good/049.png",
+        "mvtec_ad/screw/train/good/173.png",
+        "mvtec_ad/screw/train/good/308.png",
+        "mvtec_ad/screw/train/good/256.png",
+        "mvtec_ad/screw/train/good/022.png",
+        "mvtec_ad/screw/train/good/006.png",
+        "mvtec_ad/screw/train/good/003.png",
+        "mvtec_ad/screw/train/good/261.png",
+        "mvtec_ad/screw/train/good/154.png",
+        "mvtec_ad/screw/train/good/220.png",
+        "mvtec_ad/screw/train/good/316.png",
+        "mvtec_ad/screw/train/good/180.png",
+        "mvtec_ad/screw/train/good/314.png"
+      ],
+      "20": [
+        "mvtec_ad/screw/train/good/201.png",
+        "mvtec_ad/screw/train/good/079.png",
+        "mvtec_ad/screw/train/good/167.png",
+        "mvtec_ad/screw/train/good/114.png",
+        "mvtec_ad/screw/train/good/074.png",
+        "mvtec_ad/screw/train/good/069.png",
+        "mvtec_ad/screw/train/good/224.png",
+        "mvtec_ad/screw/train/good/290.png",
+        "mvtec_ad/screw/train/good/054.png",
+        "mvtec_ad/screw/train/good/285.png",
+        "mvtec_ad/screw/train/good/230.png",
+        "mvtec_ad/screw/train/good/002.png",
+        "mvtec_ad/screw/train/good/266.png",
+        "mvtec_ad/screw/train/good/288.png",
+        "mvtec_ad/screw/train/good/312.png",
+        "mvtec_ad/screw/train/good/098.png",
+        "mvtec_ad/screw/train/good/105.png",
+        "mvtec_ad/screw/train/good/271.png",
+        "mvtec_ad/screw/train/good/198.png",
+        "mvtec_ad/screw/train/good/265.png"
+      ]
+    }
+  },
+  "notes": [
+    "路径相对 datasets 根目录；运行时以 --datasets-root 拼接。",
+    "runs 中为拟合图片路径，哈希见 fit_pool。",
+    "test/ground_truth 已锁定，禁止用于阈值或模型选择。",
+    "LOCO 评估时 logical_anomalies 与 structural_anomalies 分开报指标。"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "validation_root": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\validation_tc2_gpu\\naming_20261019\\transport_validation_301fb4cb",
+  "rendered_shell_commands": 15,
+  "actual_ssh_calls": 0,
+  "actual_scp_calls": 0,
+  "archive_round_trip": "PASS",
+  "hash_mismatch_refusal": "PASS",
+  "unexpected_archive_path_refusal": "PASS"
+}

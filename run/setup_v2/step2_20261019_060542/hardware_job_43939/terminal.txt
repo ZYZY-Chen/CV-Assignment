@@ -1,0 +1,196 @@
+TC2 step 2: Probe
+Local output: C:\Users\mhjv_\Desktop\CharGPT projects\CA6129 COMPUTER VISION & APPLICATIONS\output\tc2_setup_v2_20261019_065131_7cb9d616
+A submitted or running job is not a passed check. Passwords are not stored.
+Prepared 17 approved files; bundle SHA256=e33bffc8600311b4be76316fffdd9beb3b54a5033f2732312a51d648f383a46b
+SSH: enter the password in this terminal when requested.
+/------------------------------------------------------------------------\
+               **IMPORTANT NOTICE for Users of TC2**                                                                                                         
+System.Management.Automation.RemoteException
+ 1. System Administrators claim the right to remove the accounts of
+    users and the folders assigned to users without prior notice.
+System.Management.Automation.RemoteException
+ 2. NO backups will be provided for data stored in folders assigned to
+    users.  Users are responsible for protecting and maintaining their
+    own data.
+System.Management.Automation.RemoteException
+ 3. Additional user folders and additional QoS assigned to users will
+    be removed after the usage expiry date, without prior notice.
+System.Management.Automation.RemoteException
+ 4. Resources are to be used for academic purposes only. Use of
+    resources for purposes other than that for which they were granted
+    will result in the termination of the account.
+System.Management.Automation.RemoteException
+ 5. Your computation is being monitored. For jobs submitted with
+    unauthorised QoS (NOT assigned for your use) and operations, will
+    be terminated with no prior notification. Severe offenders may be
+    barred from the service.
+System.Management.Automation.RemoteException
+ 6. DO NOT access directories other than your Home Directory or
+    Shared Folder. Unauthorised access to other directories or files,
+    even for the purpose of "browsing", shall be deemed as a security
+    breach.  Serious action will be taken against users committing
+    any breach to the CCDS GPU Cluster.
+System.Management.Automation.RemoteException
+ 7. The user guide (PDF format) for this GPU Cluster is available
+    for download from the share folder: /tc2share.
+System.Management.Automation.RemoteException
+ 8. You may execute the command "mytcinfo" to view your user
+    information.
+System.Management.Automation.RemoteException
+ 9. For technical issues, please email to ccdsgpu-tc@ntu.edu.sg
+                                                                         <#
+\------------------------------------------------------------------------/
+Loading gcc/14.2.0
+  Loading requirement: gmp/6.3.0 mpfr/4.2.1 mpc/1.3.1
+[Quota and shared filesystem]
+Filesystem           Size  Used Avail Use% Mounted on
+10.128.10.41:/mcaai   10T  1.2T  8.9T  12% /home/mcaai
+SSH exit code: 0
+/------------------------------------------------------------------------\
+               **IMPORTANT NOTICE for Users of TC2**                                                                                                         
+System.Management.Automation.RemoteException
+ 1. System Administrators claim the right to remove the accounts of
+    users and the folders assigned to users without prior notice.
+System.Management.Automation.RemoteException
+ 2. NO backups will be provided for data stored in folders assigned to
+    users.  Users are responsible for protecting and maintaining their
+    own data.
+System.Management.Automation.RemoteException
+ 3. Additional user folders and additional QoS assigned to users will
+    be removed after the usage expiry date, without prior notice.
+System.Management.Automation.RemoteException
+ 4. Resources are to be used for academic purposes only. Use of
+    resources for purposes other than that for which they were granted
+    will result in the termination of the account.
+System.Management.Automation.RemoteException
+ 5. Your computation is being monitored. For jobs submitted with
+    unauthorised QoS (NOT assigned for your use) and operations, will
+    be terminated with no prior notification. Severe offenders may be
+    barred from the service.
+System.Management.Automation.RemoteException
+ 6. DO NOT access directories other than your Home Directory or
+    Shared Folder. Unauthorised access to other directories or files,
+    even for the purpose of "browsing", shall be deemed as a security
+    breach.  Serious action will be taken against users committing
+    any breach to the CCDS GPU Cluster.
+System.Management.Automation.RemoteException
+ 7. The user guide (PDF format) for this GPU Cluster is available
+    for download from the share folder: /tc2share.
+System.Management.Automation.RemoteException
+ 8. You may execute the command "mytcinfo" to view your user
+    information.
+System.Management.Automation.RemoteException
+ 9. For technical issues, please email to ccdsgpu-tc@ntu.edu.sg
+                                                                         <#
+\------------------------------------------------------------------------/
+SSH: enter the password in this terminal when requested.
+/------------------------------------------------------------------------\
+               **IMPORTANT NOTICE for Users of TC2**                                                                                                         
+System.Management.Automation.RemoteException
+ 1. System Administrators claim the right to remove the accounts of
+    users and the folders assigned to users without prior notice.
+System.Management.Automation.RemoteException
+ 2. NO backups will be provided for data stored in folders assigned to
+    users.  Users are responsible for protecting and maintaining their
+    own data.
+System.Management.Automation.RemoteException
+ 3. Additional user folders and additional QoS assigned to users will
+    be removed after the usage expiry date, without prior notice.
+System.Management.Automation.RemoteException
+ 4. Resources are to be used for academic purposes only. Use of
+    resources for purposes other than that for which they were granted
+    will result in the termination of the account.
+System.Management.Automation.RemoteException
+ 5. Your computation is being monitored. For jobs submitted with
+    unauthorised QoS (NOT assigned for your use) and operations, will
+    be terminated with no prior notification. Severe offenders may be
+    barred from the service.
+System.Management.Automation.RemoteException
+ 6. DO NOT access directories other than your Home Directory or
+    Shared Folder. Unauthorised access to other directories or files,
+    even for the purpose of "browsing", shall be deemed as a security
+    breach.  Serious action will be taken against users committing
+    any breach to the CCDS GPU Cluster.
+System.Management.Automation.RemoteException
+ 7. The user guide (PDF format) for this GPU Cluster is available
+    for download from the share folder: /tc2share.
+System.Management.Automation.RemoteException
+ 8. You may execute the command "mytcinfo" to view your user
+    information.
+System.Management.Automation.RemoteException
+ 9. For technical issues, please email to ccdsgpu-tc@ntu.edu.sg
+                                                                         <#
+\------------------------------------------------------------------------/
+Loading gcc/14.2.0
+  Loading requirement: gmp/6.3.0 mpfr/4.2.1 mpc/1.3.1
+configs/protocol_v2.json: OK
+configs/tc2_setup.json: OK
+requirements-lock.txt: OK
+scripts/check_setup_v2.py: OK
+scripts/prepare_tc2_environment_v2.sh: OK
+scripts/prepare_tc2_inputs_v2.py: OK
+scripts/slurm/check_setup_v2.sh: OK
+scripts/slurm/probe_hardware_v2.sh: OK
+scripts/slurm/prepare_tc2_v2.sh: OK
+manifests/manifest_mvtec_ad_bottle.json: OK
+manifests/manifest_mvtec_ad_cable.json: OK
+manifests/manifest_mvtec_ad_capsule.json: OK
+manifests/manifest_mvtec_ad_screw.json: OK
+manifests/manifest_mvtec_ad_tile.json: OK
+manifests/manifest_mvtec_ad_wood.json: OK
+manifests/manifest_mvtec_loco_juice_bottle.json: OK
+manifests/manifest_mvtec_loco_screw_bag.json: OK
+TC2_JOB_ID=43939
+[Personal queue]
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+TC2_JOB_ID=43939
+JobID           JobName      State ExitCode    Elapsed        NodeList 
+------------ ---------- ---------- -------- ---------- --------------- 
+43939        ca6129_ha+  COMPLETED      0:0   00:00:00          TC2N01 
+43939.batch       batch  COMPLETED      0:0   00:00:00          TC2N01 
+[Tail: /home/mcaai/huajie001/ca6129_v2_setup/run/setup_v2/slurm-43939.out]
+{
+  "checked_at_utc": "2026-10-18T22:51:58+00:00",
+  "slurm_job_id": "43939",
+  "node": "TC2N01",
+  "architecture": "x86_64",
+  "libc": [
+    "glibc",
+    "2.34"
+  ],
+  "visible_devices": "0",
+  "gpus": [
+    {
+      "model": "NVIDIA A40",
+      "driver": "570.148.08",
+      "memory_mib": "46068"
+    }
+  ],
+  "nvidia_smi": {
+    "returncode": 0,
+    "stdout": "NVIDIA A40, 570.148.08, 46068",
+    "stderr": ""
+  },
+  "ldd": {
+    "returncode": 0,
+    "stdout": "ldd (GNU libc) 2.34\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\nWritten by Roland McGrath and Ulrich Drepper.",
+    "stderr": ""
+  },
+  "checks": {
+    "linux": true,
+    "architecture": true,
+    "glibc": true,
+    "driver": true,
+    "nvidia_smi": true
+  },
+  "ready": true,
+  "protocol_sha256": "3098B6A86DBA64EE439BFE61C7A4FCFFCD082371D5A80FFBC7940997ED6A1ED1",
+  "meaning": "Conservative cu128 preparation gate; CUDA operations are not yet tested."
+}
+[Tail: /home/mcaai/huajie001/ca6129_v2_setup/run/setup_v2/slurm-43939.err]
+TC2_ARTIFACT_SHA256=3c4bf5352c5304bdee88ae088cafdb25d2cf44dab9bb7e2d28f81b8d6ff1904a
+SSH exit code: 0
+Downloaded 5 output files. SHA256=3C4BF5352C5304BDEE88AE088CAFDB25D2CF44DAB9BB7E2D28F81B8D6FF1904A
+Remote records: C:\Users\mhjv_\Desktop\CharGPT projects\CA6129 COMPUTER VISION & APPLICATIONS\output\tc2_setup_v2_20261019_065131_7cb9d616\remote
+Action finished. Review the downloaded records; step 2 is complete only if the all-mode setup_status.json says step_2_complete=true.
+Send this local output path back: C:\Users\mhjv_\Desktop\CharGPT projects\CA6129 COMPUTER VISION & APPLICATIONS\output\tc2_setup_v2_20261019_065131_7cb9d616\terminal.txt

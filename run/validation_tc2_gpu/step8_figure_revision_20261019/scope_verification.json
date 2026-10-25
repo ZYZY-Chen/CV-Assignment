@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "preexisting_source_files_preserved": 68,
+  "historical_run_files_preserved": 7371,
+  "helper_old_behavior_byte_preserved": true,
+  "existing_chinese_readme_preserved": true,
+  "new_runtime_sources": {
+    "configs/figure_revision_tc2_gpu.json": "6E9B646F7063AA6EF91C8C8B1318245AAE60A95A984E5CF333BB00A6884A07FA",
+    "docs/TC2_GPU_FIGURE_REVISION.md": "40282E2BFA821F913F7B2BD4BAD735B41167DD60810FECD7CC4BA2E9ED195421",
+    "scripts/collect_figure_revision_tc2_gpu.py": "C01DBF89C7CFFEB9921F1DDD1BBE1C2BE35698FAF9AFCC4BD337D4F22C12A82B",
+    "scripts/revise_figures_tc2_gpu.py": "D21C449E56FBA2D982537F7084458A1907023C9913C50D097E5F5E4E4D663C24",
+    "scripts/slurm/figure_revision_tc2_gpu.sh": "0DA7BCC47E7193AB5CBDE71DD4BBC5C683B4D813F9E222A1BFCB25A78D290936",
+    "tests/test_figure_revision_tc2_gpu.py": "6814B054A670DF15EBE010C5304FFD40ACE9F5CAD3F01D940FE0338D9269D2A5"
+  },
+  "helper_sha256": "84364DF44D35FDBEA225BA352F3BBFC432BCA576568AF0D3B730E52ACF81161E",
+  "readme_sha256": "53D9650A99E2B99A7ACFD2F003F0639DB94CE1A247ABC99FCB1A616E8DC8F59F",
+  "actual_tc2_connections": 0,
+  "actual_slurm_submissions": 0,
+  "step_8_complete": false,
+  "post_download_visual_review_required": true
+}

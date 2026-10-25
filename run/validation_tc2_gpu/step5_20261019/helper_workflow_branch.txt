@@ -1,0 +1,108 @@
+    } elseif ($Action -eq 'CheckWorkflow') {
+        $files = @(__FILES__)
+        $config = Get-Content -LiteralPath (Join-Path $CodeRoot 'configs/tc2_setup.json') -Raw | ConvertFrom-Json
+        $naming = Get-Content -LiteralPath (Join-Path $CodeRoot 'configs/tc2_gpu.json') -Raw | ConvertFrom-Json
+        $protocol = Get-Content -LiteralPath (Join-Path $CodeRoot 'configs/protocol_v2.json') -Raw | ConvertFrom-Json
+        if (-not $config.final_acceptance.step_2_complete -or $naming.workflow_id -ne 'tc2_gpu' -or $naming.frozen_protocol.sha256 -ne $config.protocol_sha256) { throw 'Verified setup or naming map differs.' }
+        $frozenRows = @($config.protocol_sha256.ToLowerInvariant() + '  configs/protocol_v2.json')
+        foreach ($entry in $protocol.data.frozen_manifests) { $frozenRows += $entry.file_sha256.ToLowerInvariant() + '  ' + $entry.path }
+        foreach ($name in @('environment-tc2.yml','requirements-tc2-lock.txt')) { $frozenRows += $config.final_acceptance.export_hashes.$name.ToLowerInvariant() + '  ' + $name }
+        foreach ($row in $frozenRows) {
+            $parts = $row -split '\s+',2
+            if ((Get-FileHash -LiteralPath (Join-Path $CodeRoot $parts[1]) -Algorithm SHA256).Hash.ToLowerInvariant() -ne $parts[0]) { throw ('Frozen input or actual environment lock differs: ' + $parts[1]) }
+        }
+        $payload = Join-Path $localRoot 'workflow_payload'
+        $hashLines = @()
+        foreach ($relative in $files) {
+            $target = Join-Path $payload $relative
+            $null = New-Item -ItemType Directory -Path (Split-Path -Parent $target) -Force
+            Copy-Item -LiteralPath (Join-Path $CodeRoot $relative) -Destination $target
+            $hashLines += (Get-FileHash -LiteralPath $target -Algorithm SHA256).Hash.ToLowerInvariant() + '  ' + $relative
+        }
+        $manifestText = ($hashLines -join "`n") + "`n"
+        [IO.File]::WriteAllText((Join-Path $payload 'workflow.sha256'),$manifestText,$utf8)
+        $bundle = Join-Path $localRoot 'workflow-files.tar'
+        Native $tar (@('-cf',$bundle,'-C',$payload,'--','workflow.sha256') + $files)
+        $bundleHash = (Get-FileHash -LiteralPath $bundle -Algorithm SHA256).Hash.ToLowerInvariant()
+        if ($ValidateOnly) { Log 'LOCAL VALIDATION ONLY. Thirty-two-file workflow bundle built; no connection or submission.'; exit 0 }
+        $workflowPreflight = @'
+cd -- "$root"
+workflow_file_allowed() {
+    case "$1" in __WHITELIST__) return 0 ;; *) return 1 ;; esac
+}
+all_job=$(cat "$(setup_record last_check_all_job.txt)")
+[[ "$all_job" =~ ^[0-9]+$ && -x "$root/envs/ca6129-ad-v2/bin/python" ]] || exit 2
+grep -Eq '"step_2_complete": true' "$(setup_record "job_${all_job}_all/setup_status.json")" || exit 2
+metric_job=$(cat run/validation_tc2_gpu/last_check_metrics_job.txt)
+algorithm_job=$(cat run/validation_tc2_gpu/last_check_algorithms_job.txt)
+[[ "$metric_job" =~ ^[0-9]+$ && "$algorithm_job" =~ ^[0-9]+$ ]] || exit 2
+metric_status="$root/run/validation_tc2_gpu/step3_job_${metric_job}/setup_status.json"
+algorithm_status="$root/run/validation_tc2_gpu/step4_job_${algorithm_job}/setup_status.json"
+for status in "$metric_status" "$algorithm_status"; do
+    [[ -f "$status" && ! -L "$status" ]] || exit 2
+    grep -Eq '"mode": "full"' "$status" || exit 2
+    grep -Eq '"status": "passed"' "$status" || exit 2
+done
+grep -Eq '"step_3_complete": true' "$metric_status" || exit 2
+grep -Eq '"step_4_complete": true' "$algorithm_status" || exit 2
+printf '%s' '__FROZEN__' | base64 -d | sha256sum --check -
+# Preserve the original remote compatibility snapshot; never upload the local summary.
+[[ "$(sha256sum configs/tc2_setup.json | cut -d' ' -f1)" == edf3d1d0380e0105a5173607ce360221fd43b059478915eec0ec04ed9110f913 ]] || { echo 'Unknown remote compatibility configuration; no overwrite.' >&2; exit 2; }
+[[ "$(sha256sum weights/resnet18-f37072fd.pth | cut -d' ' -f1)" == __WEIGHTHASH__ ]] || exit 2
+printf '%s' '__MANIFEST__' | base64 -d | while read -r hash relative; do
+    workflow_file_allowed "$relative" || exit 2
+    target="$root/$relative"
+    [[ ! -L "$target" && "$(readlink -m "$target")" == "$target" ]] || exit 2
+    case "$relative" in
+        src/metric_core.py|src/evaluate.py|src/data.py|tests/test_metrics_tc2_gpu.py|scripts/slurm/check_tc2_gpu_metrics.sh)
+            [[ -f "$target" ]] && grep -Fiq "\"$relative\": \"$hash\"" "$metric_status" || exit 2 ;;
+        __ALGORITHM_FILES__)
+            [[ -f "$target" ]] && grep -Fiq "\"$relative\": \"$hash\"" "$algorithm_status" || exit 2 ;;
+    esac
+    if [[ -e "$target" ]]; then
+        [[ -f "$target" && "$(sha256sum "$target" | cut -d' ' -f1)" == "$hash" ]] || { echo "Unknown workflow source; no overwrite: $relative" >&2; exit 2; }
+    fi
+done
+'@
+        $manifestEncoded = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes($manifestText))
+        $frozenEncoded = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes(($frozenRows -join "`n") + "`n"))
+        $workflowPreflight = $workflowPreflight.Replace('__MANIFEST__',$manifestEncoded).Replace('__FROZEN__',$frozenEncoded).Replace('__WEIGHTHASH__',$config.final_acceptance.weights_sha256.ToLowerInvariant())
+        Ssh ($guard + "`n" + $noOtherJobs + "`n" + $workflowPreflight)
+        $remoteBundle = $remoteRoot + '/_downloads/workflow-files-' + $runId + '.tar'
+        Native $scp @('-o','StrictHostKeyChecking=yes','-o','NumberOfPasswordPrompts=1','-P','22',$bundle,($server + ':' + $remoteBundle))
+        $workflowStage = @'
+archive="$root/_downloads/workflow-files-__RUNID__.tar"
+[[ "$(sha256sum "$archive" | cut -d' ' -f1)" == __BUNDLEHASH__ ]] || { echo 'Workflow bundle hash mismatch.' >&2; exit 2; }
+incoming="$root/tmp/workflow-files-__RUNID__"
+mkdir -- "$incoming"
+members=$(tar -tf "$archive")
+while IFS= read -r relative; do
+    [[ "$relative" == workflow.sha256 ]] || workflow_file_allowed "$relative" || exit 2
+done <<< "$members"
+tar -xf "$archive" -C "$incoming" --no-same-owner --no-same-permissions
+( cd "$incoming"; sha256sum --check workflow.sha256 )
+while read -r hash relative; do
+    workflow_file_allowed "$relative" || exit 2
+    target="$root/$relative"
+    [[ ! -L "$target" && "$(readlink -m "$target")" == "$target" ]] || exit 2
+    if [[ -e "$target" ]]; then
+        [[ -f "$target" && "$(sha256sum "$target" | cut -d' ' -f1)" == "$hash" ]] || exit 2
+    fi
+done < "$incoming/workflow.sha256"
+stage_record="$root/run/validation_tc2_gpu/workflow_stage___RUNID__"
+mkdir -- "$stage_record"
+cp -- "$incoming/workflow.sha256" "$stage_record/workflow.sha256"
+printf '%s\n' "$metric_job" > "$stage_record/metric_regression_job.txt"
+printf '%s\n' "$algorithm_job" > "$stage_record/algorithm_acceptance_job.txt"
+sha256sum -- configs/tc2_setup.json > "$stage_record/compatibility_configuration.sha256"
+while read -r hash relative; do
+    target="$root/$relative"
+    mkdir -p -- "$(dirname -- "$target")"
+    if [[ ! -e "$target" ]]; then cp --no-clobber -- "$incoming/$relative" "$target"; fi
+    [[ "$(sha256sum "$target" | cut -d' ' -f1)" == "$hash" ]] || exit 2
+done < "$incoming/workflow.sha256"
+echo 'Thirty-two verified workflow files staged; requesting synthetic GPU acceptance.'
+__SUBMISSION__'@
+        $workflowStage = $workflowStage.Replace('__RUNID__',$runId).Replace('__BUNDLEHASH__',$bundleHash)
+        Ssh ($guard + "`n" + $noOtherJobs + "`n" + $workflowPreflight + "`n" + $workflowStage + "`n" + $wait + "`n" + $collect)
+        Log 'Workflow completion requires full-mode step_5_complete=true and independent verification of returned artifacts.'

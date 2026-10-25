@@ -1,0 +1,37 @@
+[
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065834_e0fda803\\terminal.txt",
+    "record": "terminal.txt",
+    "sha256": "BC7A5D880D8BD42046F93BB7F5AD98643F69C4C75F8EE4A06F76CBD09BFE168C"
+  },
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065834_e0fda803\\remote\\run\\setup_v2\\slurm-43940.out",
+    "record": "slurm-43940.out",
+    "sha256": "5426FFACC0E301CD9418DF5BB46087E7259F323EE9ACE3815990233ACB0A3953"
+  },
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065834_e0fda803\\remote\\run\\setup_v2\\slurm-43940.err",
+    "record": "slurm-43940.err",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065834_e0fda803\\remote\\run\\setup_v2\\job_43940_prepare_environment\\conda-plan.json",
+    "record": "conda-plan.json",
+    "sha256": "FD2269C2BADCC79A681F1195324DCB63DC179D630045B3712776489FF2142AF7"
+  },
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065834_e0fda803\\remote\\run\\setup_v2\\job_43940_prepare_environment\\preflight.json",
+    "record": "preflight.json",
+    "sha256": "289183FF96994ED2DBD31B9B033BF99C0CD314C21D319BA065775FB863BE6C6C"
+  },
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065834_e0fda803\\remote\\run\\setup_v2\\job_43940_prepare_environment\\remaining-requirements.txt",
+    "record": "remaining-requirements.txt",
+    "sha256": "859E0A6FBF4C9C9C8486BC2A47009736588F82B14F40AE7DA3606DB5DF97CFCF"
+  },
+  {
+    "source": "C:\\Users\\mhjv_\\Desktop\\CharGPT projects\\CA6129 COMPUTER VISION & APPLICATIONS\\output\\tc2_setup_v2_20261019_065834_e0fda803\\remote\\run\\setup_v2\\job_43940_prepare_environment\\torch-plan.json",
+    "record": "torch-plan.json",
+    "sha256": "79F8737E0AA39D09CB9C3EC438D6A9B00B5CAE7E980CC8BFDAB3E4FAB8B8E506"
+  }
+]

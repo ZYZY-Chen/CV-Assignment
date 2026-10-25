@@ -1,0 +1,2680 @@
+{
+  "manifest_version": "1.0",
+  "dataset": "mvtec_ad",
+  "category": "tile",
+  "generated_at_utc": "2026-10-17T14:36:03+00:00",
+  "config": {
+    "split_seed": 20261017,
+    "dev_ratio": 0.2,
+    "dev_mode": "split_train",
+    "dev_note": "train/good 的 20%（split seed=20261017）",
+    "run_seeds": [
+      17,
+      29,
+      43
+    ],
+    "fit_sizes": [
+      100,
+      50,
+      20
+    ],
+    "main_fit_n": 100,
+    "image_size": 256,
+    "backbone": "ResNet18 (ImageNet pretrain)"
+  },
+  "split_hash": "7EB9701532F80177D61DDB3B8C6DB9A036CBF04BA750683F695A7AE06F5B0ABF",
+  "counts": {
+    "train_good_total": 230,
+    "dev_normal": 46,
+    "fit_pool": 184,
+    "test_good": 33,
+    "test_anomaly": 84,
+    "defect_types": 5,
+    "masks": 84
+  },
+  "dev": [
+    {
+      "path": "mvtec_ad/tile/train/good/004.png",
+      "sha256": "54A8CFBC3B7DA89F9FC1DB77EA71073EB989CF79FF20A9DA37654B93B0FFEC9D"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/008.png",
+      "sha256": "2F9E4642E8E8AA66837A43A078A61B65CD629E14DC5A47E0210F9A86B674C2E8"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/010.png",
+      "sha256": "73BD5499D6EE73FFB1209CF09B9254DB39F7CF18B2225F99C7F7C12A1A6B54AF"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/011.png",
+      "sha256": "7B0FB88C9BC73AC7CA30FC3E44F69ABD026A66D168C380E5BCA414398F79D44D"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/016.png",
+      "sha256": "EBD6A0A4C6977C1D7C10989A58730CA00880384AEB5D5A6F9FDB131AC5F14B79"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/017.png",
+      "sha256": "53908C1A4D2CC53205BD1112C248DA7A0B0E64EFC0DEAEE7947A9F12190E1805"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/043.png",
+      "sha256": "0C7DFD1BC47B4DCFA107614F1BBC12855972064828275244471030C58EB71DE6"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/048.png",
+      "sha256": "1713C71D9336FAD00129A52F5648FC4357C74F09203526FD3B078FA2E8C764B7"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/053.png",
+      "sha256": "B23E93626773CE945113FA2A8E2215E9B6532B5A765B6DE7B1C02A35640C35BB"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/054.png",
+      "sha256": "039BCED818EC63F6F7F6DD2A46A9E82D07A95EA0C0285640A87E1F4F3392099C"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/062.png",
+      "sha256": "457ED2F6C5C88192C0A097544CF814542503035B8E6DEDD1BE5A90523A6103A9"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/066.png",
+      "sha256": "75DEC44A00B249AA702FD76CE8E3697BA8F8889CFE0739C62D9289422935AB16"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/067.png",
+      "sha256": "3ADD495A7EEF2FEC7AE5948D66061D8467B2D2CA6B6585472B675E2FEC9013D5"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/072.png",
+      "sha256": "060B5D35BA95B10AEB372A4E6EE0E46276F8AA0B853A4EBEF410D596A7455966"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/079.png",
+      "sha256": "247C9DF5B62C6CF5C62F6AE9460434076CEDC6007F6292CF645EDB3F73B87C58"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/085.png",
+      "sha256": "21E81271982FF7D9EC4434E74857C6D9BEB13BB562A28D3284CDB2BD5D65E38A"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/091.png",
+      "sha256": "DFF7EEAC89D2E6BFA669FAEB1E506535E1BB58C0F678474F2BD75552B37B2BAA"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/099.png",
+      "sha256": "B117E06F277D4265A06961621ADBA4B4C25CF5BB0DB083168E94BB1E6BFEAE4D"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/100.png",
+      "sha256": "B77AE6E46F4EC51944E9389A4226D1ED5CFD77CBE18530AF1E02927BF4652416"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/105.png",
+      "sha256": "30186606104FFD5C1998A4E2EADEB1CE6ED66B3B9432A10C52A31E10314680A9"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/110.png",
+      "sha256": "4550B3D93CC17CF15AC58319288153D1271B8D895AA77813CD73441849C50B8B"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/113.png",
+      "sha256": "FC7CAB3D23190A772D93C9AB2334885B44B668691E71E8FB8039D338ED487735"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/117.png",
+      "sha256": "3D488418EBA719E63C8B83339B69DCB48693D235677E41E4CFD70CCAA847A3E4"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/121.png",
+      "sha256": "80D15D6D1A541BA50BF02184D3A0764EB99215FA4024FF1DBBF6D3078A50CF60"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/128.png",
+      "sha256": "304E2CDC1623290388AC3BA84F0C27AC2C47E5062AAD51B0169FD71C3459F64C"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/136.png",
+      "sha256": "31CA1448257210F53EA2B746A08BE7B397FF5F90A98C8FFD3AE3522834145868"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/147.png",
+      "sha256": "A2EDC22316B355E12421A16E02809F584AA5BEA757C959383AA17841F9CFE243"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/155.png",
+      "sha256": "E78D442BF66042C9812B35E463C834DA6096B1C5ABCAA2075CEB8740B5EC0AD2"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/164.png",
+      "sha256": "08D136381CE43AFEB9669A7F9EB8B26038EB96EF07638B904121830FCC6CF62B"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/166.png",
+      "sha256": "3043CF84D98DD56BC77E340D214321F2E5421A365D8A3D410B51E15029B8E541"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/168.png",
+      "sha256": "9C7261C1058D94DA2CE0CCB9BA688D4B4FD8A3E795A821C7D4A9FC6F3AEFD22C"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/171.png",
+      "sha256": "CFF815D654F8AC9C7DEDDFE5130F9549FD869ACB59FE789D42639768DF3FC3E7"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/173.png",
+      "sha256": "85C8CC811C640638BDFE18D64EA2B207F69A859D3827CAD9A29E1EA2DF7FE2BA"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/174.png",
+      "sha256": "7F6ED64E6388400776BFEF0B1E724156E66021269B5D5A5A56FC986C6F112252"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/176.png",
+      "sha256": "A21C81701FC60C336A497081B6802CDE8BCA1B165D626F9B3432271EC0CAECF0"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/177.png",
+      "sha256": "83093E9EBD3E95F1D57578EA46FB9A4A03226548FF3EC9E2B7FC4F973D56F724"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/182.png",
+      "sha256": "94497359FA615DFC741CACF2A7DE3CD487684BB5ACFC51C5C09CA6862508EA64"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/183.png",
+      "sha256": "F16BA1095B2A6DC7E1F22FAABD32957A3A16348D4D4226D0DF36D3A4CA979472"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/186.png",
+      "sha256": "4CDBBB797A4B55278997E905424CBED24F0E87C4D3ACF01DA20730EEC3A06CAF"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/189.png",
+      "sha256": "5437C1169394EC01247EFE349A8DAC30F5BCFB15C287666855394DAC2062A314"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/190.png",
+      "sha256": "AEF3B0D1F93B604F1374488D58E3793E6D4DA5C5BA1F87B212A5EB05FC69A066"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/194.png",
+      "sha256": "6A87B15BCB9C3D881DD17F4292F2539E5B5FBC8E92B8C2F4210414B3F9DC226F"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/196.png",
+      "sha256": "D220A32479654A246BE9E6411698E1B3F10175A76DC5D66EB962402A1310CA66"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/209.png",
+      "sha256": "1180EE96C2F977BF5E5DC0D8DF766E5AF30D46C1C1A2ED7400280E70C6EE2564"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/212.png",
+      "sha256": "301D1D1800E7E1966DF253F550FAFB09DC41B7FDB29EE9EAD35CC191E8BE9394"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/222.png",
+      "sha256": "CC517CABD2A6E56F31194E6608E12E15B02B962BAE34FB5E9AF9130D37C30C0B"
+    }
+  ],
+  "fit_pool": [
+    {
+      "path": "mvtec_ad/tile/train/good/000.png",
+      "sha256": "522535BEE0CC7E38A853DBDAB79302F99F2F0F7FE66533E386F1B0C558CE5D0B"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/001.png",
+      "sha256": "52199E4B50F6F4810EC40ADE431DE5942E5359DE9E8ECA70E4D817B14786FC0E"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/002.png",
+      "sha256": "2500B57FE2E0A7988629A6EE3639A028687AF02962CEBAC5F9E65103243C1B6F"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/003.png",
+      "sha256": "5D6EA45C70AD06E6EC2D395FD398CF29AB89C7B5A7C89E9782A4054505EAAD50"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/005.png",
+      "sha256": "46D1BB56698638A63D8B1AC435CC829FE4FA872CC0FD74AA684E13D8A8C5AA80"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/006.png",
+      "sha256": "9803B9529701332CA5E86938163C36C67D46EF3225ED17E0BA19ED578D125BA1"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/007.png",
+      "sha256": "10C2B2E340E7141D260C489194BEB4EEC27D92FEEBFB608A36093C6831DE2F66"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/009.png",
+      "sha256": "733F911BE0D800AD3A0312496FEE4940FC3912A3C117712BCADF77A619659011"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/012.png",
+      "sha256": "511C97E029C077EA35E8266BBBF1C7E180D870CB478D5D94CEB9B427E533E110"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/013.png",
+      "sha256": "C69D0FC50EA5DAE072553E83CA55E5A9C5A87C1E1D803500DCF567F2D543829B"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/014.png",
+      "sha256": "DF8E8CF6CB57C71DE6A4BB0DDB00AFFF01CCEE0CDF439F1019348FC8AD5C76FE"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/015.png",
+      "sha256": "9FD83DC8873F9D4D4631F62526ABA44C15336386BE9D35BDB5B36E5BD51333CB"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/018.png",
+      "sha256": "A2601D604DF139D18271891A897A4C01A968A7CE723073742F3231CE0B6016C8"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/019.png",
+      "sha256": "9AC704AE58FD162B943F61A699E45AD9CFE6DB3DF9F425162DC4E7C3F5574CCB"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/020.png",
+      "sha256": "D07F64275523D195A004F996A9EC6C4E654E4E8D2017DA79443317F1B0420726"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/021.png",
+      "sha256": "B4CAF5DA231D1E9D675BFDD5DB40E6BEF0530AC2C65B829AECB499601B3D2AE6"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/022.png",
+      "sha256": "AB91E4DD4CA874ACBEB4218E72ACB94149DD0037CFCAB4B00D9BED22E0C8CA46"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/023.png",
+      "sha256": "69A8515B65F91EFAAD7C7122D37650D7D6F5D85DBD2A34B867F1793864EC3E48"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/024.png",
+      "sha256": "AA8E36648B5A7367CC1E1E8E1C8F0EBF6B10C575A922A7C9B9F7ECE35DAC4251"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/025.png",
+      "sha256": "C1A48694A2DB89F8C80EA11BE41909785F2F0D79592FB1B73021D871FF15C433"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/026.png",
+      "sha256": "5925D663D43506DB84580E3AD6278D7BDE782A3EEC3B28318707CDAFA21E96E1"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/027.png",
+      "sha256": "09F5E05864055B906C997BBF615C980239F467A49545AF51D6FAE63C26606825"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/028.png",
+      "sha256": "5BFCD1AA20B4DA4E8F08B4D832F9CE1400988918DE47E2146751DF1E50307C77"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/029.png",
+      "sha256": "A0FBB4138B23FB89CF716EBB844D90A932E11382750C0EB54ED1D2924B99C15C"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/030.png",
+      "sha256": "AE7D276EE811931F0A47E499A0A5B2D527C78805A8053C240695B2BC30B95EF7"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/031.png",
+      "sha256": "73A8D069286F57BE6FA9F9CBB6F2A07D130F19CACA5C1F7E0A063DF69794AF09"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/032.png",
+      "sha256": "36DDFEB0874D84B81DEF9A6ADBC3C79B334E4D84ED2A4AD87D9C8226C12ABE91"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/033.png",
+      "sha256": "5C5FF89E65F36DD65FE62CE3539FA2213384FA3C1DA06BF8DC3171E736A5B9DD"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/034.png",
+      "sha256": "5B152D840B1225C6EFE46F349851470408C717B85D68CC7D299C818246EE4D9C"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/035.png",
+      "sha256": "F8147D417A49E52BDBD5CAB20D534D9E9DD81073C5535582BF4F392034EC21FC"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/036.png",
+      "sha256": "C629DDEA0DE789AA9ACEAB12D778A13ED5C5D8C2A565825B02013557FD4F0954"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/037.png",
+      "sha256": "F5D7C0C9BC0F5ED1C58ADC3119C9A6E5ACFF5EDFCD4A357EA80A49944914DB55"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/038.png",
+      "sha256": "BE311846D365A1AE76EAAEBCEECC9CDE3E01978587D91D87CFD899F935E0AA96"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/039.png",
+      "sha256": "3AD7443EF47AC16BB5FFC31C8C06E61AD9C10A7D4F011301E90EAC7E087DA358"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/040.png",
+      "sha256": "81C469A26B4746191197AEF96720AF1918E099B55833DCD83BE00285114A1AA3"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/041.png",
+      "sha256": "5AF757C8D0221C465BBC1FCA31F4B45CDF4125367189EA6E20C36F1EEF5EA00A"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/042.png",
+      "sha256": "F8D19CA52E054FB294EDED8179A301C1FCC5BC631224814F7B40BDA4F2D156BB"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/044.png",
+      "sha256": "57AC5E8FCB51FE93750725498123739BF85BF14D45397964264941AD43748AF0"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/045.png",
+      "sha256": "98E59B5101496FEA5FDBA1E7D5F7B2C0F5D76D0F88E89C8DA86FD7B511F86CDB"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/046.png",
+      "sha256": "2E7B605F82A02AA9497307CC538D0B16C55159AD14743A67F4C1D06A1C9D9B1B"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/047.png",
+      "sha256": "B7A1A6BB86833CFBDBF08B1FB64B33A06C2E5E133442A3A0130D54434A6CADC7"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/049.png",
+      "sha256": "14C31340427FA112DA537D6DF9114A938A9BB6F0DBC7F3C457505E4C15D1393C"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/050.png",
+      "sha256": "27EBA27FD9CAFFEDD37BF935256343B2914A8E508CF7F68D4AFAC9AAA3017A2D"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/051.png",
+      "sha256": "8362ED858C183F92E131CE96F8569766036E0AC0FA1271420F58BAD9B2FDCD5E"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/052.png",
+      "sha256": "44C234DCA4FA88129EBD95F27B6D84E08FAA4E936CB001F5E2CEE7A4C9E259CC"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/055.png",
+      "sha256": "15EA36AAA07389A0EF621FECBD4639AF552B55F6571A8D5DD1EE4C9959EF205D"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/056.png",
+      "sha256": "DC7FE9482DAC70BC218A16CAC59442386944B9C0CEE3D153A2FA567246A8FC78"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/057.png",
+      "sha256": "2BD97455EA895C1C393DD6E30327ACFC9DEB90C551DE7D714735A54783DF9903"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/058.png",
+      "sha256": "432719C78ED5E6DC5A9A394DC83CC129367B4C9E5065F52BEAD48317DCB55717"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/059.png",
+      "sha256": "F84DBF3CC02C3129ACDE715DE9C91BD7D7D2F7E82FD037F7883F6B87EDF4C4B0"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/060.png",
+      "sha256": "F3316C2E251642AE5FC4A7BC27FD947DCE06D6E2F116313500D428E5CDDFA00C"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/061.png",
+      "sha256": "5BB43C186DF4CE0B8B8288AE9C3A3F158BDD3CEC51C3E16BA245A60CB494B4B3"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/063.png",
+      "sha256": "3FC940A3673EDDF882FB1DB9B48F02403EFD645439B4D2B2D8841091D54E0632"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/064.png",
+      "sha256": "BBF8C0E583634BDA98F443DA6818A2C93226F2CB9DF756EA36C5A333A9CE3EB0"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/065.png",
+      "sha256": "63C605133756159AF11B5890765B1A922BEEC677AD3A7D5A8B569C45FB394B7F"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/068.png",
+      "sha256": "DA8A778FA9527C0ADFFC9DF343795D8DCDA7083CF410D0DAA87242C02F756899"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/069.png",
+      "sha256": "BD71218CF31A9F6C1664E20AF68E85F63C5AB608100492BF32DC1273B9D93748"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/070.png",
+      "sha256": "212AC38F1F625A9D18CC0385A4151F59C7914EE0B303991934FDA5CA827E48DB"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/071.png",
+      "sha256": "248D95311D64BA36837C9F2F5E6653F531CE65CFD77B6B8933788633E32363E9"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/073.png",
+      "sha256": "4B181C96B5202736378D298BC4F496426257E94CB25600C4BE5B878960518468"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/074.png",
+      "sha256": "F94B0D905621A351237EC39F291753BBC3E3D60CB613ADB99E9FBDF182D758CF"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/075.png",
+      "sha256": "0925FE584592B4609BAE53B8CF6349CA8FFAAF7C4B98D26AE7D661054CC6C04F"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/076.png",
+      "sha256": "365539A21B0A23B9E349ED02298B626DC86B7CA145CBDE0DA57B43641101AB90"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/077.png",
+      "sha256": "46E4E10A234BE285FE5BBD5EA82FAC1E67DFDBF498E1BFD0822E77C60AA78B85"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/078.png",
+      "sha256": "FD4BC2550AEE7CEA2EECEFC03B47D92BEFAFC93CC13AA3D5B72FFB5A0F8A0D5F"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/080.png",
+      "sha256": "1C76D297479DA1F40C13FDB6CBBA62201EB1406C51C33A066B2282B9B261D187"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/081.png",
+      "sha256": "086E1FF855DDE233F63E3FADF5001AC560FD4ED905997A36A9352475326A1710"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/082.png",
+      "sha256": "6DD06934CDB9AAE871986935F124FB5FFDB597AE4BA462575EA6727F1D08A609"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/083.png",
+      "sha256": "0B4205EBB0BBCAB63D39CBB25EECC1BDACD1F5D59B38F7517C23F39D3AE33A5D"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/084.png",
+      "sha256": "CCAF71E5A631D2B813D0EE1BCA13D63B68E3D4742E47FD80EAC4D9B6D229BCFC"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/086.png",
+      "sha256": "3BB582AA599DD50439C40160BBC9D1D1AE2F91BD5E4564FD64B821E0DAA0BC40"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/087.png",
+      "sha256": "5D1DCF186E63C1D75B79820527540AE546233E7295805B9C116EA12CEEDE97DE"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/088.png",
+      "sha256": "74324BA20CF1D62019312CCDA8410EE263D3C9EB3FFFBF52E3F3EE2AD8DEB008"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/089.png",
+      "sha256": "285B4241F566A6306E7E5F676FAA4879764B73F4C3155BC752BEAD981DCFD61B"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/090.png",
+      "sha256": "5B96A66289E25E24583D6F93F0C61A65A0BE6D64FEE386E75801EFF31808E647"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/092.png",
+      "sha256": "EAA16725461F726C6911AEC0D84C04837B691BF7BD214E68AC4DB8DEA1C26D6A"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/093.png",
+      "sha256": "F874EE9BE51CA343B0CE824D6E22A59A065D61D903BE161B1AC354AD2377F8DF"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/094.png",
+      "sha256": "E8465D0724187E0578E9FB0007E40D291CEE83FD2919B4FBA0DF02364DC5955E"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/095.png",
+      "sha256": "3953C1CE2D56B147CCE574DCB7FFC9BF5159141E1937D8AC71F3295FC13C0AEF"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/096.png",
+      "sha256": "5E64F513B492BD0C364FB19C362D880BE2165076131BD0759038A11F24838AE3"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/097.png",
+      "sha256": "14B5A7097BC219620D373050CC445D31B87F8F0B843EDFB7D1281C5B8372701C"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/098.png",
+      "sha256": "08E5EEC6227CAE3464C2221C38EE71A062A029C7CE6CC8FA9C5EC22374140027"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/101.png",
+      "sha256": "AE35484EDC0DE09BD1AEE965B1CE8E27A9F800D6284CFE9A8817EB21ADD5F78E"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/102.png",
+      "sha256": "5AA6F12367EFF18C5827F5783456D2A9CFEFBC55D5557C966E4458490A0AA716"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/103.png",
+      "sha256": "95ABD0AC9D371AB54D4CF0939689B4438E8EC65F0080254C83588500EDDCE393"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/104.png",
+      "sha256": "EEF143BC767F1F95D4D444EB5A42A4784E44E5FAE67D72F1CB6C85C7F796208F"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/106.png",
+      "sha256": "837ABB944A5B4B585851385C4D5DD2A259EE3531F649765FC0078277D2A56D5A"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/107.png",
+      "sha256": "BFA4237F4C6789025C5D790D770B319DC315C24FBCABCE753BCDF9EAF22F8014"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/108.png",
+      "sha256": "C5BE66D40ABB29AC4D3758C067BDFD5C028BFFD5CD391B0225E50FB78A6D0294"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/109.png",
+      "sha256": "D1D9334F15ED923B8F5D61990F6BB2AC67855FE8F1699BF346695D68D228316E"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/111.png",
+      "sha256": "8094C40DD5146681253A0828F0D8C203BD3679044DADC747D437804461E6EB53"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/112.png",
+      "sha256": "5C2BE748335949A5A6B70F189D1F991321496374956A2C830A8CF49E952B8A1E"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/114.png",
+      "sha256": "510013476E7F7B1FA4F6BD52F4AE029F5F7FD45D2D107DFCCB1A0002CE0B2FD4"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/115.png",
+      "sha256": "F3DCF51AC676D0AB9A38EA8F2D7842BF83449055D377232EC04141BF8A32332C"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/116.png",
+      "sha256": "41CAC85BB70BCC3CF873914C2EB4EC70376B42784EAC2B62C9584EA965141122"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/118.png",
+      "sha256": "E462B247F15DDEDFE83287223A8AEA333B340D5363B39B945B5BD0D89A8F429C"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/119.png",
+      "sha256": "BD5622828138777459788F88AEE5578567B69DA6FC9D978F9284F8310E9BEC9C"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/120.png",
+      "sha256": "AE3F38BE8E060345F7DDD8105E7FA9F0C5F3A39061C48DC58C1EC14162E347F4"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/122.png",
+      "sha256": "E13F583078A4A0D68D0E0480F1190ADDBADFB83E723673A1FAA9D25C0BCA59FA"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/123.png",
+      "sha256": "2D04F1EECE82046958715C5A04677C536CEBF5E4C610F03731216BDDAD6E5FD2"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/124.png",
+      "sha256": "A68EE7A6081FA681DABD0DEB137B5BEEC3FCDCC874DE2650904B0EBC38B97992"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/125.png",
+      "sha256": "EB1109718C431D506F2FBAA4BBB78330D13EFE5B5AE3DDAB1A51DC6121F8D3E9"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/126.png",
+      "sha256": "7E50129238A5A0C7F7ECA663533F56D11A56EBE946DD0FF9B683FC2F5AC7217F"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/127.png",
+      "sha256": "3C24CC429BE2DCCBEC4BF52B0B1C2206ACF3D130ADCD56DEE7A2346884FB45E5"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/129.png",
+      "sha256": "62E67A4E828FD54727F28B0D846549D5265F33AEC68568957A944F397A8B8577"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/130.png",
+      "sha256": "D049A3A8AF3991E1D305E21DC9F63D6979BA5D6EAB4CC9647DCF7256AAE3DFB1"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/131.png",
+      "sha256": "125CD393CC35804A04C01CED49B45A9C65DA5821890ABD041DAD974B58C7B57E"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/132.png",
+      "sha256": "EA807825ABCA67B1365B38F2FBF86D0F37BC9D3871A98EFB94095F990F745D68"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/133.png",
+      "sha256": "73BDAB1B1FDB2146948D406D214AC740070CAF5BCF38B3F9F91496AFBA33AD40"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/134.png",
+      "sha256": "A313D838AB6B59CA3F9C020191D086A7D6376D0AE6186D027E53612EE381655F"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/135.png",
+      "sha256": "3A34A15E8648ED0D4E513D97686705E824D947289EB70708DC0F294141E0992F"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/137.png",
+      "sha256": "FB90315ED0EBDE674AA8949BF6242B5145B2578FEBEB9B1136CC54B7CE02DC0B"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/138.png",
+      "sha256": "95B4D7F50E093C7477DF5D492C2FCA106D206D06301B1803D449FB1B7D04D5D9"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/139.png",
+      "sha256": "79A21ADFA5E67D5489D7919C88E487A9E75D0A7BE70E3797535FA4889FCB74BE"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/140.png",
+      "sha256": "2D43DFAFF38E3A9DEBF9132BEF698EE6A590F617D3B2F5A887A83E9032056065"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/141.png",
+      "sha256": "854D5E01BD1EC847D4993B355DE1E5459B1AE935D25C3B4A40C382E403180E8C"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/142.png",
+      "sha256": "06EDC550E35A7544DE18A3235F69E41359965E06576F87FA6F1AC49E1A3E3F26"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/143.png",
+      "sha256": "35B8114A6C59097E32C1DA45D5072FCA34BC59B9ACD7926E28947B4EDC6427B9"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/144.png",
+      "sha256": "30F39B68517FA012A9CA9AA7E2794B14E66F5416D3690167DE179A8ED132A548"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/145.png",
+      "sha256": "489F3E3F55BA9FEDD111D43B9F9296F38E97893EAA68B45337D41C11B5F33B8C"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/146.png",
+      "sha256": "E36BA27A01BB55401776586DF6EC71FE0CBEC8EBBF6AD2E154EBBCA789AD9197"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/148.png",
+      "sha256": "B7B9209CDABAEDAEB045B36B72B46D3B3CEE0280DE9566B3D561DD435DCBFF5B"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/149.png",
+      "sha256": "3273C53B996004496AAF6E4F59D603E20B679831F3720BD155FCEDBE9272A561"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/150.png",
+      "sha256": "679DCD6EC02A67AD2D8C21C364268266CB3331AFC39D37F66CA105BDB26F9F50"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/151.png",
+      "sha256": "7788C46D9D2996DA487A972521B21C865B5E1BD7FAB49F909E1649EA2A632066"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/152.png",
+      "sha256": "97F04C5A9F0A39078124808AC97C93047D813ECB201EFA8998FE8C28B53CE4E4"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/153.png",
+      "sha256": "3DAA2808414792CBD8C4E5401EB134D2A38960B23368237843987358AA967094"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/154.png",
+      "sha256": "4425B06747406C893A9164417EF5FCDF44BECC9E9867D29DEE2FE17B660D6818"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/156.png",
+      "sha256": "462EA7DF919F6EFA4EB5518AE2162D73197096B0543D044394BCFB5ECDF0C233"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/157.png",
+      "sha256": "80092725E5EB6735C86B36CFDB89E549EBA5BF23EEFC19701A01BD3B24ECE35B"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/158.png",
+      "sha256": "A7F0C3F1D8207F46491BFDF3381D5F4887A61574035C4B5EC83479DBAA35DEC0"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/159.png",
+      "sha256": "6E906BBB438D34D1B720B6F31DE8AA344F1CD54C2A7230D7910956CC9E95D737"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/160.png",
+      "sha256": "2212A4AABE4AF85B11E60C1147FA17D18627D813A1165020D50F7075D04D9484"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/161.png",
+      "sha256": "418CB95E18EA06ACE05D3B54C8B7B172CC452A2185B99666C0DB16A7B6F98845"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/162.png",
+      "sha256": "EAAAB02C7D65B77DE5D4A586EEF8B374C5504CA4823126E88EB9D787BE4AE2F3"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/163.png",
+      "sha256": "201EE966D3DB99F4B38CB45130EFA011EE309A5C2694CB836F67F1716AC696B1"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/165.png",
+      "sha256": "459E6FC46EA49186C5CF322FAD2A9C6C09FB1BFF284356BC295F1CD77F5B4F2B"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/167.png",
+      "sha256": "6EBA9C1498053704937CBF3ADD47A21418AF724F794D604C5522433492BA53A7"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/169.png",
+      "sha256": "01E240170911E5FC3B2CE0CF9D6F1CBFDE878DB20C4892473617507EF75C9D83"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/170.png",
+      "sha256": "F3BEF56D5A9B3CBB21BB4F86F575E441D2F77E8757D5C733256BDE0FF9B4DAF7"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/172.png",
+      "sha256": "088207D7B5C6994982207AC59DF6507EF46732E47A867A4AB0627CFD2F27F3FB"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/175.png",
+      "sha256": "A23DC6991C7DD4352C64D4EB8E73037C50B4BE43EF62E72D9A26968AE025B860"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/178.png",
+      "sha256": "28BC93CED9542E15E5CCFD4C54F77EDE102875924446FEE0E2BA189DE776BC15"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/179.png",
+      "sha256": "B21AD3BDF3A3DCA0A1BE4F4B2F6D155D4019170467BD4D54144031666991DAAA"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/180.png",
+      "sha256": "A8BC2E32FD6C55CF9D0902E31ABF5FF328F680AA493FF9FDA30FC21DE31F8710"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/181.png",
+      "sha256": "BE2FA523AE35B79FB434E786854B2388725517B18374B5512F3A4B61FEDA5B80"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/184.png",
+      "sha256": "0AE76AD587D16F604775F6CA7DC5B40C5A0FA2FE030CADCA90ED979D8D88841C"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/185.png",
+      "sha256": "57A28DD480892866769D8BF626E49D5A80F066EC6FB26897A0C64BB8950AE536"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/187.png",
+      "sha256": "32F4EB8EABB2AF43C1B86373E8050EB6A9A861B55AB99731F06EA1E2CC89F501"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/188.png",
+      "sha256": "41BA0A8A1BC1228C8111B6A0C216D695A572C84A5FD60090D8F46D6940885CF8"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/191.png",
+      "sha256": "A0333299D9317AE87D50368D821C71BF63411CDF4090A01A3478B2AB07D3271D"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/192.png",
+      "sha256": "85EFE0F3E81184001B646237F888AE2D02469CE73043410AC521D9CCB4A2E306"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/193.png",
+      "sha256": "E01A8F47C3F13DBC959174A8E419828CC6F8A42221FCBD695B8EB3EB50B809B0"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/195.png",
+      "sha256": "8CB4E71916FC8D9433FC3FFC09A8F2405098579FBC7DD6858E7C0478494C4BFC"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/197.png",
+      "sha256": "257CA4E926FF961359A592B9FCCB513B1101E2E9D85FDBF69A5167ECA2B5CA66"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/198.png",
+      "sha256": "2D7BC59465A284F6675DE62B35286CCECFB00292A972DFBBE30EBFFAEC9C7C9A"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/199.png",
+      "sha256": "9970C5DC64972BE561643EBA59B654FA39268CC05A80D92509AA111D7505A5B4"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/200.png",
+      "sha256": "0FC4EF4DEACBEBF1D93FBB9D2EF5024A5FC74981A69C03E1F2381977095286B2"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/201.png",
+      "sha256": "B5AD0F1072EA1296B467E02C0FF7B508E475281F82BD37B1B1E6AC3EBEE4635E"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/202.png",
+      "sha256": "A7EE586F09CF3688B4C3F0BA5175822416086D373627EB3442C5136EE813CE3B"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/203.png",
+      "sha256": "291448E6F4D2FBABC399437ED8EF750789D50C399D9E919BC5836FCA0ED2C36B"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/204.png",
+      "sha256": "E04C24F150845A918ED22A548085B64AA08FE79C439E0D5C0AE4F37F0899F2D6"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/205.png",
+      "sha256": "EA9ECF8A801806B35A35F18D968FFBAF3CA45437F43C6073CA466B54C789F511"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/206.png",
+      "sha256": "5ED30EC3EF73699F0C050E08F5C5A9D846FBE5E128EE2D342690AAD779965C04"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/207.png",
+      "sha256": "F0FB6CDA91DC84597DB026EAEC6B4281456E6EB4BEDF7A8D50EE28F024E796EE"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/208.png",
+      "sha256": "26AD44772A5641513F2DC4E9DD778ABA1385C123A0E79695D3F50EE3A12475C5"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/210.png",
+      "sha256": "6BE2517B063BB39C8740012E9AA9BFD35CE25896B18E00A6BA44581904DF2415"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/211.png",
+      "sha256": "EBE85AEA65F3C1500EB09684376236C904B40858D19F7C1A9EC44BF9862EC8D4"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/213.png",
+      "sha256": "1FCCB38DD2E7DCA1EFE717758F75E482B09752A92721967ABFAC71089577319B"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/214.png",
+      "sha256": "7074B174D609F5151DDCB09416DDAEABAC8A981FB9833A43E244E4D5F65917AC"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/215.png",
+      "sha256": "D848636532221AF1D9971B315E357A3EAEA55DE73F43E6301DCCE98B71B201A2"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/216.png",
+      "sha256": "B1A4285DB08C10207D9BD5AEE078B97920192B5BEC7A613438466AFF56A1559B"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/217.png",
+      "sha256": "CBD0849D0A1632E260ABD887526F82A3A5D96F533A8F0EF6F2A9CB854EF3BEEC"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/218.png",
+      "sha256": "DA43E47D67A88A61E9371F157ED3DC02F972EAE00CB77145E0EA8D421BD8C43E"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/219.png",
+      "sha256": "20481BF84F9794D130F27B7914A2A1CEF68AFFE0EB61D1E3AE475E7B5FA252AE"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/220.png",
+      "sha256": "B24DFCB61ED74D4DF94E17B9AFF803C9A7E43692C9BF8CA613556C04E1CC958C"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/221.png",
+      "sha256": "5A99689B24D4E653384415498DBF9037D75BFB21084FBCBFCCCD391926F4B1A7"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/223.png",
+      "sha256": "1C1A97A42BBC7E76DB37DCE8559F3A21FD7E9663F572CDE64D4001A889F47E55"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/224.png",
+      "sha256": "61CDAFFCCF045B0EB0FA17CF6461ECA34CF54110A0A1D84250DB216B489092C5"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/225.png",
+      "sha256": "445128E7ACE51B8AB77470A3A65D486100C1B73690264E9DFF9A91D1D4A21E69"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/226.png",
+      "sha256": "8E75F6CF208F5138D36CC5C58E4EA4E0B0E82FE38B8DAD4E6B75D2E78D3F5FF1"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/227.png",
+      "sha256": "133B8F56E395AF0CC41280B66F632D52060B66154151759C47CA3730B5F96FB0"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/228.png",
+      "sha256": "65597C553C087974575494806BFE5F2BD204D27FF400DA4A1426DAE3E8FD0299"
+    },
+    {
+      "path": "mvtec_ad/tile/train/good/229.png",
+      "sha256": "EE046418DB40407BE767812A871A22AE7D71F5711EE564EF5AA046CBBEEA9EAA"
+    }
+  ],
+  "test": {
+    "good": [
+      {
+        "path": "mvtec_ad/tile/test/good/000.png",
+        "sha256": "179FF21A9D65E9E6371C6383FFA970ADFA04502725A3C4D654E08D8377C0B781",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/001.png",
+        "sha256": "770946F93F0CCD8A7595954B0861876C697729CBE05E9FAFC57D0F9E8CBA5EC8",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/002.png",
+        "sha256": "AD5E3490A4383604D6BE5597342EB6236060280EBE16F29FC7D4B641413B4CE3",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/003.png",
+        "sha256": "56791AF1ADDFF97ADD7F104C229198AC686EC47F4E55FFF88ACE22D1C9764CE3",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/004.png",
+        "sha256": "55C5B09F1468BDCDCFE6BCD006FFB18FE57C03CBF7F297DC613C27C9A4A529B7",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/005.png",
+        "sha256": "905C233EEF1CACA99D54DBA85308825176EBE792E87F0521B5A2211F7414EB97",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/006.png",
+        "sha256": "221EB8DEA8E785515FA1EDB67F5A14680D63D902765A693315ADA242F847DF6E",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/007.png",
+        "sha256": "CE1A28683D27C18C60074F90AD84E214E64CCD55DD5E5EF6B7953E4A5585E42E",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/008.png",
+        "sha256": "07D413E6D377E9256F65F3173E8CAE38DB5E722B702286BEFA0816D63C9B6FFF",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/009.png",
+        "sha256": "96A8CABCD54E30EE7BC88C07246124AB8614E016A8453EF5EF5A920E8A1E348B",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/010.png",
+        "sha256": "E426F5D1279A771870C1C77288E70183A73E9088B6A0709BC3240E8ADC94C50D",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/011.png",
+        "sha256": "3FDE39BB5EECB444DAD9A347D285E614F55C611237375A939F10EBF5EC00D802",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/012.png",
+        "sha256": "262913657D71397E3C10D98F1430E4FB359770C297D41BBACF194979E5311A08",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/013.png",
+        "sha256": "47F60FE7D6ED65B6BF0CB00B6315E8075178A950077E5EA7D0215B79535FF39F",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/014.png",
+        "sha256": "4B45EE963CCEBE89FAF22009DFC004D0BE9FF40D601F913F8020B90CECA01B27",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/015.png",
+        "sha256": "2F17C797ABE2CE59B466E0D04B5F03BB39E3CD9226D38FF02D4A79C9739D4A86",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/016.png",
+        "sha256": "5A289452DAB654571C0F6C36B80C30BAAF082A709E4334AB6A6885C35324B3CD",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/017.png",
+        "sha256": "5E0B3E6003E8500C6162B059FDEC8B8E4F1D9D0C5D5C1B982BD5C3458BCCC03A",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/018.png",
+        "sha256": "63F751203A11395314D5D848C700887CBC09B8FC200F068F3C3B8785D1C61F4C",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/019.png",
+        "sha256": "1D0B49BCE9CED5DAA524FD3009927FA6CE8891EC7A9E275FE11E10174DF91B31",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/020.png",
+        "sha256": "423CBA8B4E78549FB42F8F70902836C8C2C908A1745C3663BBA68F23226B208C",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/021.png",
+        "sha256": "E166C7758F7C5DBB13EEABA52A163CB88E3A19E993531A483D842276824FE884",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/022.png",
+        "sha256": "A858E01A51AA31631EDC4C762EA609F76FF6FD849422D1BDB561308DF7FB69C0",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/023.png",
+        "sha256": "86611FBBA0E65E9D797DADF386C145E548B7954782B21FD2A65E213F9C87B3E8",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/024.png",
+        "sha256": "DEB505EFE09A74787BC1F62261FFA1751194264F097B9F88A233E7E6608B5860",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/025.png",
+        "sha256": "D1A2482AEB3B15836F44246F5373167243736CA50069F70C1C7B8B64B9EE7F07",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/026.png",
+        "sha256": "5A0C93924CE941799664D4B3F0D679128212A34B3A9BC95E16D6EF6C13076436",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/027.png",
+        "sha256": "3FA24074FB1C656DE9AD72837951C7CBDDE46AB075322154F7DD11FFAF8BF2B3",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/028.png",
+        "sha256": "F55AB6BB7CA0FBD0577AED3940F31189FE399831A57CA6EA29AC322B96816237",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/029.png",
+        "sha256": "F1B84BC0DA1A9DB17B78C6F7C7D6265AF59CF6E743B18D13E2EA458918086FA3",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/030.png",
+        "sha256": "5CF872BCF9916E9FAE4060EB2FEB2A7A2F5D1F2E825F4ECD24C42C2353A094A2",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/031.png",
+        "sha256": "B60DB6B64BC6A2FE219910F7AE34342EE14668AFE95444A476CB66EEEA886695",
+        "label": 0
+      },
+      {
+        "path": "mvtec_ad/tile/test/good/032.png",
+        "sha256": "0359712C21E4D31FC3E974A5B363F9E7D29A349DB0251092BD0B627B7BE718CC",
+        "label": 0
+      }
+    ],
+    "anomalies": [
+      {
+        "path": "mvtec_ad/tile/test/crack/000.png",
+        "sha256": "D10BE1F6EC065F83D54C03B4093D7D87DFCC77617D8EB0DF9F5A053AECE4BECF",
+        "label": 1,
+        "defect_type": "crack",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/crack/000_mask.png",
+            "sha256": "13AC4973D2F68BC6D0C2876C84DFF08E876485D0BC601382880C7DBDCF1DEBE8"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/crack/001.png",
+        "sha256": "3800EE4D98148C859EB56BD5A9350CE6BE768DC24FCD2203E3E36E3414DEFB5A",
+        "label": 1,
+        "defect_type": "crack",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/crack/001_mask.png",
+            "sha256": "4DBE54DE4131E98C7EB8CFA44C636703861369564DF73A47310EA29AA6355FAE"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/crack/002.png",
+        "sha256": "6DBE8D621A2A2D24EC5A3FD03D034063858E3007E1D5E1BB9F8440CBC91846CC",
+        "label": 1,
+        "defect_type": "crack",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/crack/002_mask.png",
+            "sha256": "1611D51B049884A5B2E4C5DCD666609057E169BDAFF753497D946C3689648AE2"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/crack/003.png",
+        "sha256": "59DC8CE1DC39774120B61E3E1D670D4B198A16C3DFDCA58B13F2D9A9B2CEB4B2",
+        "label": 1,
+        "defect_type": "crack",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/crack/003_mask.png",
+            "sha256": "406B4505DDAF39FA6B7EF298124EF2789D339E29BFB2FAADE9824422528BB485"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/crack/004.png",
+        "sha256": "2514D77178AB82111517E4616E0ACFFD937DCD6E637B61D5F4876E05060FA3B8",
+        "label": 1,
+        "defect_type": "crack",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/crack/004_mask.png",
+            "sha256": "936A3899E72DE6EB4E884E9A544CCDDC4CC3C4D5D4EA21CE7B1AD39D81267E3F"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/crack/005.png",
+        "sha256": "938435E2A921F293B281B3AA1F422983D6C748C6BD3986132280787E090C1C0A",
+        "label": 1,
+        "defect_type": "crack",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/crack/005_mask.png",
+            "sha256": "E638F6D25D77A54F6DBA807C83E231EC6DFC1230BC23E921FD7D7C5FB5DF38CD"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/crack/006.png",
+        "sha256": "3B89160799F05206A130B8F535D402D3026D1D817B07304B26004AD342EC3963",
+        "label": 1,
+        "defect_type": "crack",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/crack/006_mask.png",
+            "sha256": "B488F17141991DF173617C91EA4DE905CBF4AF5E51FFA7DE6F29C2C4F7A4DB48"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/crack/007.png",
+        "sha256": "225F5F8842F36BF81286344A804D8835EA59A4BBA107FA84640F0424F9AE0E74",
+        "label": 1,
+        "defect_type": "crack",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/crack/007_mask.png",
+            "sha256": "D4A9A4829B38BA2673DC0315886780F135E7068BF9C80B7B5C1C9A61B3453A4B"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/crack/008.png",
+        "sha256": "DCEBE4D302DB4B26947635C8B92C04FD7C2AB422DCF5B200C105B2FFCDF01C08",
+        "label": 1,
+        "defect_type": "crack",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/crack/008_mask.png",
+            "sha256": "95304D1338274B2C097F490CD0D43B5B53D2B9C40949B8D4C7B896815EBA5BAB"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/crack/009.png",
+        "sha256": "99524E3B79276C09172CB06F084690EBB4907B71BA5D9A80E295A8F21B198369",
+        "label": 1,
+        "defect_type": "crack",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/crack/009_mask.png",
+            "sha256": "A57579A744478164B4E66080C4C3A29F174BBEB016C829C3D2E6983A31A16A29"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/crack/010.png",
+        "sha256": "3147A26044E455F2D7D56A235AB99B77B94247BBB95B00441FCB39FD7D53F8CE",
+        "label": 1,
+        "defect_type": "crack",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/crack/010_mask.png",
+            "sha256": "3A833D9636552107FB83618DDAF75202339F29C181027EA73906C576C3F1E14C"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/crack/011.png",
+        "sha256": "72DB28BE0C9F6DC53A6C31C26C2D0A7080227B048DB965FF7EFC882FC03E0BAF",
+        "label": 1,
+        "defect_type": "crack",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/crack/011_mask.png",
+            "sha256": "D2C527D0E686901E3940385FD9D529F07C54F0A7C745A4B0CA05FB82F09CD861"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/crack/012.png",
+        "sha256": "B068A0DB244884E45FF581C344FF4D3A68CA6EA08CA26FA4CC5EF2057D32701F",
+        "label": 1,
+        "defect_type": "crack",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/crack/012_mask.png",
+            "sha256": "4AEAA5F7194C98B940CCC2D133695D9309CEAAD943F8C033EEFEDA0BD3F7B367"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/crack/013.png",
+        "sha256": "CFDEFD92B1376ED179785B82C42ABC72B481BC0986EF8AD96EBDEE0094141E3F",
+        "label": 1,
+        "defect_type": "crack",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/crack/013_mask.png",
+            "sha256": "49923F92D549A637455CFDA4759793D34146CCA15DAB0B376ACCF595117477C4"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/crack/014.png",
+        "sha256": "984F4BF61568861292A45DD02D7CD44D6F64F0C7B072923B5B13F5008C9F3A73",
+        "label": 1,
+        "defect_type": "crack",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/crack/014_mask.png",
+            "sha256": "8C3007F0E332C141D50B0890BE7098EA55971328C48A7BD2B380B42F954DE9ED"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/crack/015.png",
+        "sha256": "035D6F36EBC3DE5492FC92896E3805E9BE16D61CBBEFB964A38409AE7E12A59B",
+        "label": 1,
+        "defect_type": "crack",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/crack/015_mask.png",
+            "sha256": "273AF20839BC507F71C421D877284AB9483AD60C27C1BDE8E3265B510B3E7E06"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/crack/016.png",
+        "sha256": "34752DF557BBA13C45F3A3720AD1FAF11A6AC76E5340AB3B22A2452A287F7160",
+        "label": 1,
+        "defect_type": "crack",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/crack/016_mask.png",
+            "sha256": "7CBE27ED759E16D97CA85DB955A7A0A249A72EE9B0BC04FFA0CA9B3811F2A878"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/glue_strip/000.png",
+        "sha256": "789BF3426655AED432EA611D9C62354D6A43D13EFB0ACAACD27A49DE851E65F6",
+        "label": 1,
+        "defect_type": "glue_strip",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/glue_strip/000_mask.png",
+            "sha256": "3D79342B59A3946DCFA79AB96CCAF213724E16256B6ACDC378D11F318EBE7AD2"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/glue_strip/001.png",
+        "sha256": "CB9BFFE1FA32C62CEC0AFCF88FA17ADD4483B16FA2CE1B17BBD62256C576F0A3",
+        "label": 1,
+        "defect_type": "glue_strip",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/glue_strip/001_mask.png",
+            "sha256": "E23332366AA67E0E5353D5814A1E0FC3816D18F945022A39629DF1CB8852A4A4"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/glue_strip/002.png",
+        "sha256": "F2735E60B0D37CB4B5BD6E8F4CF2B3B2F2D76C0BBAB3880914EC56A444425FBA",
+        "label": 1,
+        "defect_type": "glue_strip",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/glue_strip/002_mask.png",
+            "sha256": "5058840C6246BBA3ADBF0AD7775FA3C48A9464C85E25EDDCB9B45F6066B17361"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/glue_strip/003.png",
+        "sha256": "ED60F426F6404C6B8C3DD7BA126A2320C1AB9442DBAA3E475D12A8BE630B1CEE",
+        "label": 1,
+        "defect_type": "glue_strip",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/glue_strip/003_mask.png",
+            "sha256": "74173313C0C81F8C15E437882E598BEE0D48EC650B80B962D1C33B23D2C490D4"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/glue_strip/004.png",
+        "sha256": "025FB362CBF1CA6077ADEE8E7B100BFB100746C0A84B6A70B840AA47697B0F10",
+        "label": 1,
+        "defect_type": "glue_strip",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/glue_strip/004_mask.png",
+            "sha256": "0CD33A275B5E2FFD7C176BAACA5C7501D56EACC3C11913C0A2F7FB7285A91B0E"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/glue_strip/005.png",
+        "sha256": "5A0C857CA5877B7C24C3F55B4E12A094683A3386E3F3D33515C605CCE560C0FC",
+        "label": 1,
+        "defect_type": "glue_strip",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/glue_strip/005_mask.png",
+            "sha256": "1C19A7E183962AA258A245C1E5223AA5656B30CA24C97995C195A62947342F1C"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/glue_strip/006.png",
+        "sha256": "4F746615FECC20880925BB8919B041F16AB498327C8C5EE7911AEA7ED6260F55",
+        "label": 1,
+        "defect_type": "glue_strip",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/glue_strip/006_mask.png",
+            "sha256": "9C4F36BDF3169D5B1A9945A7042975073C12C7629D5E003D59F34FAE111DA256"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/glue_strip/007.png",
+        "sha256": "95A8E1528672C64DE318EC442AA4A98F80A6E87EAFF50A565FDABEB5375A25F9",
+        "label": 1,
+        "defect_type": "glue_strip",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/glue_strip/007_mask.png",
+            "sha256": "BDA471129FA8F4EE89BE6FFE6AD65C05FA6590E516FC17C1926C53860430B94D"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/glue_strip/008.png",
+        "sha256": "AD1023EE4E2E2240BA3F762888561B57747D1B3F2BDA3C9657A9E02F397B5C8F",
+        "label": 1,
+        "defect_type": "glue_strip",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/glue_strip/008_mask.png",
+            "sha256": "A9E026F5A846D2EFF499027ACD4DC9A177A04A2935B5F3FCB18C3C01068F487B"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/glue_strip/009.png",
+        "sha256": "E927DCF53466F0606274EF4EE0080767B57218B0B7090D09B9CD5DBF15C71353",
+        "label": 1,
+        "defect_type": "glue_strip",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/glue_strip/009_mask.png",
+            "sha256": "231645CA95A055E995B1827EC437AA5C3D1EB92A23C44815A3122659BE99C611"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/glue_strip/010.png",
+        "sha256": "0B8BA11DAC1CF650782076D686A90FCDBEFF2B2CBD0671CB1DD35DEDBF3BB78B",
+        "label": 1,
+        "defect_type": "glue_strip",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/glue_strip/010_mask.png",
+            "sha256": "B2F8005573AC7B19A82DD670F1913EEF6DB31D0644EC5A90E1D6D70BC22A94EF"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/glue_strip/011.png",
+        "sha256": "D73DE51330B0AE5100C512EBFED59EB8347A536B12FC26F0A20D331889F8877C",
+        "label": 1,
+        "defect_type": "glue_strip",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/glue_strip/011_mask.png",
+            "sha256": "9EC53518ECE0BFE220120614EE9EDF6C3E4FDA7518DED093CE67D02F6C7C621A"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/glue_strip/012.png",
+        "sha256": "7DEC2433C10BE3192975CF9B65501FC4F246CC4C4D78699138AB4B95C4CF9C4B",
+        "label": 1,
+        "defect_type": "glue_strip",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/glue_strip/012_mask.png",
+            "sha256": "FBAB11C5681485A73A86BF6BBC39DD09A8D9AAEC5F7390B149AE7FD2C274655E"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/glue_strip/013.png",
+        "sha256": "BAACA0CE264720C3D3E615BC53854BE8B1F0640A9DCD0F37137665E574866499",
+        "label": 1,
+        "defect_type": "glue_strip",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/glue_strip/013_mask.png",
+            "sha256": "2D9CACA390A85E31B5DB290F9DCD3D84C4BBC75051FCE084AF3E0B5AA38C3503"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/glue_strip/014.png",
+        "sha256": "CA83E8C487A9CF6CDB608CEEA68234BBAADDF7764B1647EFFBBBA4161D96EDAA",
+        "label": 1,
+        "defect_type": "glue_strip",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/glue_strip/014_mask.png",
+            "sha256": "9ED6216BD2C16899B0EBDBBA1BDE6AD68CC48756A707D9EF8AFA086D26B6658E"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/glue_strip/015.png",
+        "sha256": "B438BE1BFEF36F836160E5D94B349C5A4ADCD93B503325E7807DF30E27D17FDF",
+        "label": 1,
+        "defect_type": "glue_strip",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/glue_strip/015_mask.png",
+            "sha256": "B4CA8653A47EAF32E1FEF1FA2AF15758A40821EC2A5BB9E20E76658E38E626BF"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/glue_strip/016.png",
+        "sha256": "7A21DF26EFC01AE8EDBB277F0411A22EFAF72088587E47A9413BCACA1D2FAC74",
+        "label": 1,
+        "defect_type": "glue_strip",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/glue_strip/016_mask.png",
+            "sha256": "23D2DCDCEF15925418F33D95C17341E823E349559125708F2BCE5EAE66744920"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/glue_strip/017.png",
+        "sha256": "B826808B3C2C0A246A7DF1B3C2CCFE4D3AB640B8EA7CB379E99259D2D5085169",
+        "label": 1,
+        "defect_type": "glue_strip",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/glue_strip/017_mask.png",
+            "sha256": "C3FF0D0475C949B3E67C0C4F916027B58D084303046ECA44C8DC316911E18D5E"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/gray_stroke/000.png",
+        "sha256": "687EE96B4B356DFA87E49B78A807DCDF026F80705801D6E670578648C5D3BBA2",
+        "label": 1,
+        "defect_type": "gray_stroke",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/gray_stroke/000_mask.png",
+            "sha256": "7DE31E7E8F94CFEE26550B3535141992388398EE5E8354FB0717ED35AEEA3AEB"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/gray_stroke/001.png",
+        "sha256": "E6D931DF7005C0E958EC4DA16C606546D77E25E41E37F2B83F8135B74770FF26",
+        "label": 1,
+        "defect_type": "gray_stroke",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/gray_stroke/001_mask.png",
+            "sha256": "3C63362D959D207E802BCA6931A6E58A5390E3246C5F7F341C7865F70CF9BC52"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/gray_stroke/002.png",
+        "sha256": "63D54AA8081DCBBF8DD2DE8E0BBA5696D83F09DF06D9D325335ED4D26EAFA3FE",
+        "label": 1,
+        "defect_type": "gray_stroke",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/gray_stroke/002_mask.png",
+            "sha256": "A2294818F7CFCAC77B619414612886115FF3056CFFA5E81428FDBEA3E0F54D70"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/gray_stroke/003.png",
+        "sha256": "5B7247A73D2D0F58410FA3DD777F8C43FC5DC7AE9A35C49512E8D9ABF459973C",
+        "label": 1,
+        "defect_type": "gray_stroke",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/gray_stroke/003_mask.png",
+            "sha256": "775BCAAA19365B0001568485B666BFFC5A61AAB231D39443548681CEE4BC7664"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/gray_stroke/004.png",
+        "sha256": "D723B9C45531C84562F7C22946A64C365805EF1D2B91827FF6532422547E17B2",
+        "label": 1,
+        "defect_type": "gray_stroke",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/gray_stroke/004_mask.png",
+            "sha256": "539D06AB4B00B0A16846E28394AA3037D8BB61311E608D048C52C0A583373C83"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/gray_stroke/005.png",
+        "sha256": "46A38AD033ACDC2FD6294B006E781C1D2F08C9A21E1E97CE4C45161188C92231",
+        "label": 1,
+        "defect_type": "gray_stroke",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/gray_stroke/005_mask.png",
+            "sha256": "0AD3EE4F29D4CD405E15FA602C3265C31307A28B560637483AA53F1040C9E3E1"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/gray_stroke/006.png",
+        "sha256": "E7A489E1B17DA90413292ABE242AD6203109992569C34855ECD2A6C979D23DD6",
+        "label": 1,
+        "defect_type": "gray_stroke",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/gray_stroke/006_mask.png",
+            "sha256": "3F615ED16F4E5C4658807519283FC6A9893EECA4266FDB7C9E965A5380588892"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/gray_stroke/007.png",
+        "sha256": "C42C297F8AAB7CA565935D4C723E88C4DAF9E7FF1ED688BD53D88A5ED9966464",
+        "label": 1,
+        "defect_type": "gray_stroke",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/gray_stroke/007_mask.png",
+            "sha256": "EB1AD881FAD4A892B6FD7AC5EF6944514123FE96D16A0AAE3C0E1203E122E8DB"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/gray_stroke/008.png",
+        "sha256": "F480D2B9BDBA7A3ED9BF1746BF06FEA5211CDE23770E1989334B81A3F3FB3E68",
+        "label": 1,
+        "defect_type": "gray_stroke",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/gray_stroke/008_mask.png",
+            "sha256": "B5419DADAB0CC7ED6C5B0EA5C9412C4867790A6D6644A8C9B81994F75735D353"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/gray_stroke/009.png",
+        "sha256": "CBD26DC2D5D6F78792FAB7E5CD0AC0403AE8993FEF2707E8D54F30E50D1675AF",
+        "label": 1,
+        "defect_type": "gray_stroke",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/gray_stroke/009_mask.png",
+            "sha256": "F7C51E0FE8783E2FF953DD45A14AFFA093C88E03E37422321D70AAA2CBBE8D8A"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/gray_stroke/010.png",
+        "sha256": "5F864308F674A2BD526888357B1486953BCE7EEB42EB261AFDB58943D354E149",
+        "label": 1,
+        "defect_type": "gray_stroke",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/gray_stroke/010_mask.png",
+            "sha256": "5F768E2EFBBF429FCF4D9A7F3E7BA3EAD12A084A2D3A93CE8C6A502D2CFE9653"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/gray_stroke/011.png",
+        "sha256": "243A6D9C384B3B9AB4319483AC1787211C891C04DF66FABD8649AF75C25D47BF",
+        "label": 1,
+        "defect_type": "gray_stroke",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/gray_stroke/011_mask.png",
+            "sha256": "B21BB43A4D609BCAEF38E98DDFD473758B719BCB1001A2932C38F85A032AE5C8"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/gray_stroke/012.png",
+        "sha256": "5186F90AA1A7015CDFC94136DD083792384025F0E5B7870A08F7B90E83D9F811",
+        "label": 1,
+        "defect_type": "gray_stroke",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/gray_stroke/012_mask.png",
+            "sha256": "574FC1EE0E29FBF7CE4196757DDC6582A08310DB88B63644AC12ACA586FF3107"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/gray_stroke/013.png",
+        "sha256": "D922E31B661578F8D8ACABB3CECF9DB77933392806A69D17C4F74F841A4BC267",
+        "label": 1,
+        "defect_type": "gray_stroke",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/gray_stroke/013_mask.png",
+            "sha256": "BECB29F0433A6EE5B3E45020C5283906F1B06A1B38AD7310EC06B9394E3016A6"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/gray_stroke/014.png",
+        "sha256": "7FF0C94DD33CDE6FFE27D76622B3E86509FB03DCC0FC6A0204A054C65B5DF3DF",
+        "label": 1,
+        "defect_type": "gray_stroke",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/gray_stroke/014_mask.png",
+            "sha256": "629360A33AFB40F879324B66011784121EC99DC973FA52785EF775C2C42A9CFC"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/gray_stroke/015.png",
+        "sha256": "29291E48A86C1BB4FB597A7958DEE18D9D7FE077D8567ECD698A229E8E2675B7",
+        "label": 1,
+        "defect_type": "gray_stroke",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/gray_stroke/015_mask.png",
+            "sha256": "A89C80503ACAA7AD7B1EB71EA1EB7EF5D16B143E44EDF84A8B26B7AF5A5EEEA6"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/oil/000.png",
+        "sha256": "CCE758DF17A18B3D60E54B367BEC27639DD48D83CFEE1F7546D80058188BA130",
+        "label": 1,
+        "defect_type": "oil",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/oil/000_mask.png",
+            "sha256": "3941EB8FEA0874D3DC18DC2D504E37127E7D2C3C4791A0F5937BCD1C01D01051"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/oil/001.png",
+        "sha256": "8D47F96CD4437C4848454BD60B46DEF1A7C470B5EE9E842891F02A346DE744D2",
+        "label": 1,
+        "defect_type": "oil",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/oil/001_mask.png",
+            "sha256": "0473A86A9E979BA6110127806572CAFAB77B223FBE38BA2C87FCAD00EE42D8B9"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/oil/002.png",
+        "sha256": "AF4711CDD10C0164949362D4133654EEC065A2BA8C34C671209F4C633B38B653",
+        "label": 1,
+        "defect_type": "oil",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/oil/002_mask.png",
+            "sha256": "4A648A02D74868291AF824EEB73CF5856C831D10ADDD0826E27B504D8A6FDFA7"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/oil/003.png",
+        "sha256": "3738AB51CEA0F00439B1263219F138C04FB925C2D12E835990F9608DDF88B7DE",
+        "label": 1,
+        "defect_type": "oil",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/oil/003_mask.png",
+            "sha256": "0316BCA1119E97BA55D48CF11FE4254FE66359AF139623DC8DC4A4EDA936A498"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/oil/004.png",
+        "sha256": "313D7C96B4653B2057C739EAD59D4D55771AF945D6B8278EDB91AC5EFA10F8FE",
+        "label": 1,
+        "defect_type": "oil",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/oil/004_mask.png",
+            "sha256": "CD7D24D1EB79BFB8DDBE766A1AC0E9B05D20CEF58F66C12A3E0F2B7D37DAABB2"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/oil/005.png",
+        "sha256": "C9E884FAFA003DF7948B2FFF2E02FCEAA5B6678344E71EE92E134A433D0ED4D7",
+        "label": 1,
+        "defect_type": "oil",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/oil/005_mask.png",
+            "sha256": "A68D16A236D6CC5968059C0ED560259EA4CCE887E07BE09E3FAA37371122FDF4"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/oil/006.png",
+        "sha256": "72542770D427F7959240CF3887ED7E6B5CF34D68C1F2684E8F6E44958A7018A1",
+        "label": 1,
+        "defect_type": "oil",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/oil/006_mask.png",
+            "sha256": "DF6EC6A60CB11DC0B8B05F39BF68248B21C3E222286E483126B10791F8557D11"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/oil/007.png",
+        "sha256": "D3CF0DDDCF7102F0064428A3D76AF8282C750254CCBE369B1DD253206B6DB6CA",
+        "label": 1,
+        "defect_type": "oil",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/oil/007_mask.png",
+            "sha256": "B26212E6D2478E1C9911489E40C6ED5FEC14ADB3FC287AD16A1BADAD29B1D7E8"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/oil/008.png",
+        "sha256": "54E44E20750DC25A396539533362ECF65AE47AC8481175541DAF8E424AF4DE28",
+        "label": 1,
+        "defect_type": "oil",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/oil/008_mask.png",
+            "sha256": "888B857AAA59CC02578876CA24FCB1E41B37ECA5356A7120C02CCFB05BDBB2A9"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/oil/009.png",
+        "sha256": "6BD32EC96D337B9E0DA78985720302A4446721EED67D9497836CAD01E6CF2A3D",
+        "label": 1,
+        "defect_type": "oil",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/oil/009_mask.png",
+            "sha256": "1C9853CE194AB7181B6C2F452FB2751C0AE5C934B49C024AAE1ED49F4A877DE1"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/oil/010.png",
+        "sha256": "10E4768A7CFED870775547B4C86FF1CEB8A0A02FD09F2E11D8DD130E31628545",
+        "label": 1,
+        "defect_type": "oil",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/oil/010_mask.png",
+            "sha256": "C3A5CFF8FD779CEE86023F1485AE0FECEBC78A9EC379BBF0B36F2F4D628CF618"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/oil/011.png",
+        "sha256": "C3DAF27A0785DD49ACA650546A8B0BE821D2700C98F5CD836F53C9F8168AB90D",
+        "label": 1,
+        "defect_type": "oil",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/oil/011_mask.png",
+            "sha256": "86C5001EDADFEF0FAE40519616BA1F61AFAB8D0DE38DE96C7CE5500F8A29E80E"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/oil/012.png",
+        "sha256": "767F8F64B335174675DADF5FA453E7E4A120C378E403401985BC96EC0E2D2BB0",
+        "label": 1,
+        "defect_type": "oil",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/oil/012_mask.png",
+            "sha256": "B9071420264BB60F2CEFFA67866621A09B726FCC318ADB6FE92C2E67C0F0543D"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/oil/013.png",
+        "sha256": "963647BB687D89D63F86379F52791B8C15A2E215AAB244873E041A3E42B158B7",
+        "label": 1,
+        "defect_type": "oil",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/oil/013_mask.png",
+            "sha256": "3A3CE867BADFB4DF2D379A11F14214D4AF67C7E33A1D4AD2592879B714F0AAA1"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/oil/014.png",
+        "sha256": "ED5426BE3817996C2D9A1542C8CA782B7237EDC2B8728A8C82A74DCBA0772E06",
+        "label": 1,
+        "defect_type": "oil",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/oil/014_mask.png",
+            "sha256": "314158BAB6F6F665E7E118C60915B39DCB508C35A6C21B22F30564034B4DFCA8"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/oil/015.png",
+        "sha256": "6CF80B7FBCF0A2693E53C60345390655DBC74B9E23399DF4148EA034227ADC16",
+        "label": 1,
+        "defect_type": "oil",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/oil/015_mask.png",
+            "sha256": "8266FA8E4377B34E230333E0A9265C15DEFE1863AAC852E08187EC348E30B4C3"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/oil/016.png",
+        "sha256": "DA569FD4FF1DEF579E3AE8CD4AF081FDAD8281972D46751EC62746B6F0353BB7",
+        "label": 1,
+        "defect_type": "oil",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/oil/016_mask.png",
+            "sha256": "10560C8CC26610085AD078E0A7B10BB452A11F96FF6D79DAE7DD355C23A0529D"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/oil/017.png",
+        "sha256": "E727E1F1939BEECC73C47D6A7687EB565831E5C4D9A6ED9F935B3D37D15647EB",
+        "label": 1,
+        "defect_type": "oil",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/oil/017_mask.png",
+            "sha256": "276F107DA1504D6A8DF2F430F11F92419F27D999131659AB178FCEDB0ABF410E"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/rough/000.png",
+        "sha256": "02E34713DBF8DB192267E62B44134B555E419C13B2A1D24460257E76A7A8155D",
+        "label": 1,
+        "defect_type": "rough",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/rough/000_mask.png",
+            "sha256": "7478B08D9B9658BFAD77B884DA8291DF1282FDD62D59A4B5BE0C6D5C26A91297"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/rough/001.png",
+        "sha256": "5508D71470F59E96183A8035FB90D63F050F3324E4884EF03F856528A4107D13",
+        "label": 1,
+        "defect_type": "rough",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/rough/001_mask.png",
+            "sha256": "178F3D81E47639D4238500F106F462333A9C8B2437EE78A25B96D1A01FABAFF5"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/rough/002.png",
+        "sha256": "92293A662B469D481FC6EE6C57E933B167AFFE61D82245F24CE0FF17C706BC86",
+        "label": 1,
+        "defect_type": "rough",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/rough/002_mask.png",
+            "sha256": "42D77BC6D13EAC6EAFDB854D98385258771B41BFCF506CCD0A8A4AF7F935F684"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/rough/003.png",
+        "sha256": "D73047C162E651440CAD7224E66394235920F9D28D2E2E1F664EDBDFC901E471",
+        "label": 1,
+        "defect_type": "rough",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/rough/003_mask.png",
+            "sha256": "32D856CF64BF1159CE3BF8E8C05056CEF649EBF69B6C95D64AE4011F8F9BF72D"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/rough/004.png",
+        "sha256": "9B85431679C66802C9D2294A775C5A904660D2387F3B8470B24A8AF9EC2E46E7",
+        "label": 1,
+        "defect_type": "rough",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/rough/004_mask.png",
+            "sha256": "8EF84C332894915476816D099CD057B6F2EEB91F835B9A85523FD0DEC1C57A4C"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/rough/005.png",
+        "sha256": "1733D7861ACE59E573AB5A7A9376B4C5BE6EBEE8BDD2ED87491BD0A617BBED33",
+        "label": 1,
+        "defect_type": "rough",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/rough/005_mask.png",
+            "sha256": "82104A8038B030AB90F26C00A478E4651B58C1A7057D23AF923533AEFFBC2CBF"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/rough/006.png",
+        "sha256": "BB218AB0648F7E1A6ACBF8FDF82D964D17A349886EBF9BB4C954FF0B156BF8B5",
+        "label": 1,
+        "defect_type": "rough",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/rough/006_mask.png",
+            "sha256": "6EAF6D815F716D8EA182298F74522C8FE30C4178269BDB709273BF75EA4E7FDB"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/rough/007.png",
+        "sha256": "677DF4DF71517A80C0B941F4F001BEB4F557E1272666EAEA39146405DA9041A3",
+        "label": 1,
+        "defect_type": "rough",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/rough/007_mask.png",
+            "sha256": "0AFF248B1878DA9FC58C22C32C549048B26C3E5B100DC51BECFAAD6CFDBCACC8"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/rough/008.png",
+        "sha256": "2A30AA536FE23BBD4C6FE300A11F11E0C19956C4D53B926A4CDA93A0F2F57F8C",
+        "label": 1,
+        "defect_type": "rough",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/rough/008_mask.png",
+            "sha256": "9E59274E849E5FB958FCD7094C35EB491D2D95F1FA954A129F8ACB97964787E1"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/rough/009.png",
+        "sha256": "3B3977C07ABFE407862A5903220DE8285C6096C5CD7B5FC12BED337FCA52DE2B",
+        "label": 1,
+        "defect_type": "rough",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/rough/009_mask.png",
+            "sha256": "3D0546D6A4BFF904508877DA069F611A13805CB4CE17610E33EBD45D7D4810D2"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/rough/010.png",
+        "sha256": "A241B9CDA66556D1771D67CAAADB4DD0C6741C0C30EEF295752C50B6416EEDA0",
+        "label": 1,
+        "defect_type": "rough",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/rough/010_mask.png",
+            "sha256": "9129F248A50DF38B76452055D77FD7EA91EFC983A6D6544CE83557FDD7ACF2DF"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/rough/011.png",
+        "sha256": "B1EEAF419D23E5F617948D5C8AC006C4B40A7D9939B537DF4681D02BBF965BF9",
+        "label": 1,
+        "defect_type": "rough",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/rough/011_mask.png",
+            "sha256": "74CC7958FE1AA6D03BDF89ED6AF22A73E0A8FD9528D72A3EB95D8ED7BC149983"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/rough/012.png",
+        "sha256": "594D97646F2197F11962B805BC9081D269A159BD82E6979D103596BC43DE1A63",
+        "label": 1,
+        "defect_type": "rough",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/rough/012_mask.png",
+            "sha256": "37B7B5CC208F5709D54C9D0BA3D3DF612AD41A0B7F91CB80EAD991F2624CBA56"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/rough/013.png",
+        "sha256": "8563CA3021B6A9C0360E6D57119491734F693B1BBA3C6DEE16D2EEB86F17CC80",
+        "label": 1,
+        "defect_type": "rough",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/rough/013_mask.png",
+            "sha256": "0FCEB7774A1E44E53DBF3A152D08A72D9DD2628152B562F5FB8161ED2A69467D"
+          }
+        ]
+      },
+      {
+        "path": "mvtec_ad/tile/test/rough/014.png",
+        "sha256": "B862AE4C2A41FF7A683AAA774FF1CE5BC169D8F1FFA31E9F0E64B7BA8DF1C742",
+        "label": 1,
+        "defect_type": "rough",
+        "masks": [
+          {
+            "path": "mvtec_ad/tile/ground_truth/rough/014_mask.png",
+            "sha256": "3AB2B24BAF4F16D1B43BB2B534EDEEED579517AA740305EA372B16CD8F276B40"
+          }
+        ]
+      }
+    ]
+  },
+  "runs": {
+    "17": {
+      "100": [
+        "mvtec_ad/tile/train/good/221.png",
+        "mvtec_ad/tile/train/good/028.png",
+        "mvtec_ad/tile/train/good/084.png",
+        "mvtec_ad/tile/train/good/093.png",
+        "mvtec_ad/tile/train/good/056.png",
+        "mvtec_ad/tile/train/good/202.png",
+        "mvtec_ad/tile/train/good/181.png",
+        "mvtec_ad/tile/train/good/145.png",
+        "mvtec_ad/tile/train/good/049.png",
+        "mvtec_ad/tile/train/good/152.png",
+        "mvtec_ad/tile/train/good/104.png",
+        "mvtec_ad/tile/train/good/107.png",
+        "mvtec_ad/tile/train/good/097.png",
+        "mvtec_ad/tile/train/good/213.png",
+        "mvtec_ad/tile/train/good/159.png",
+        "mvtec_ad/tile/train/good/229.png",
+        "mvtec_ad/tile/train/good/170.png",
+        "mvtec_ad/tile/train/good/055.png",
+        "mvtec_ad/tile/train/good/133.png",
+        "mvtec_ad/tile/train/good/069.png",
+        "mvtec_ad/tile/train/good/000.png",
+        "mvtec_ad/tile/train/good/185.png",
+        "mvtec_ad/tile/train/good/015.png",
+        "mvtec_ad/tile/train/good/144.png",
+        "mvtec_ad/tile/train/good/051.png",
+        "mvtec_ad/tile/train/good/058.png",
+        "mvtec_ad/tile/train/good/009.png",
+        "mvtec_ad/tile/train/good/080.png",
+        "mvtec_ad/tile/train/good/201.png",
+        "mvtec_ad/tile/train/good/160.png",
+        "mvtec_ad/tile/train/good/158.png",
+        "mvtec_ad/tile/train/good/071.png",
+        "mvtec_ad/tile/train/good/219.png",
+        "mvtec_ad/tile/train/good/108.png",
+        "mvtec_ad/tile/train/good/032.png",
+        "mvtec_ad/tile/train/good/150.png",
+        "mvtec_ad/tile/train/good/057.png",
+        "mvtec_ad/tile/train/good/226.png",
+        "mvtec_ad/tile/train/good/068.png",
+        "mvtec_ad/tile/train/good/044.png",
+        "mvtec_ad/tile/train/good/195.png",
+        "mvtec_ad/tile/train/good/003.png",
+        "mvtec_ad/tile/train/good/024.png",
+        "mvtec_ad/tile/train/good/014.png",
+        "mvtec_ad/tile/train/good/184.png",
+        "mvtec_ad/tile/train/good/070.png",
+        "mvtec_ad/tile/train/good/146.png",
+        "mvtec_ad/tile/train/good/102.png",
+        "mvtec_ad/tile/train/good/205.png",
+        "mvtec_ad/tile/train/good/081.png",
+        "mvtec_ad/tile/train/good/063.png",
+        "mvtec_ad/tile/train/good/138.png",
+        "mvtec_ad/tile/train/good/116.png",
+        "mvtec_ad/tile/train/good/178.png",
+        "mvtec_ad/tile/train/good/036.png",
+        "mvtec_ad/tile/train/good/095.png",
+        "mvtec_ad/tile/train/good/125.png",
+        "mvtec_ad/tile/train/good/140.png",
+        "mvtec_ad/tile/train/good/180.png",
+        "mvtec_ad/tile/train/good/130.png",
+        "mvtec_ad/tile/train/good/059.png",
+        "mvtec_ad/tile/train/good/120.png",
+        "mvtec_ad/tile/train/good/006.png",
+        "mvtec_ad/tile/train/good/199.png",
+        "mvtec_ad/tile/train/good/188.png",
+        "mvtec_ad/tile/train/good/142.png",
+        "mvtec_ad/tile/train/good/101.png",
+        "mvtec_ad/tile/train/good/134.png",
+        "mvtec_ad/tile/train/good/109.png",
+        "mvtec_ad/tile/train/good/143.png",
+        "mvtec_ad/tile/train/good/112.png",
+        "mvtec_ad/tile/train/good/033.png",
+        "mvtec_ad/tile/train/good/154.png",
+        "mvtec_ad/tile/train/good/025.png",
+        "mvtec_ad/tile/train/good/139.png",
+        "mvtec_ad/tile/train/good/197.png",
+        "mvtec_ad/tile/train/good/029.png",
+        "mvtec_ad/tile/train/good/203.png",
+        "mvtec_ad/tile/train/good/092.png",
+        "mvtec_ad/tile/train/good/200.png",
+        "mvtec_ad/tile/train/good/061.png",
+        "mvtec_ad/tile/train/good/193.png",
+        "mvtec_ad/tile/train/good/082.png",
+        "mvtec_ad/tile/train/good/088.png",
+        "mvtec_ad/tile/train/good/192.png",
+        "mvtec_ad/tile/train/good/216.png",
+        "mvtec_ad/tile/train/good/076.png",
+        "mvtec_ad/tile/train/good/013.png",
+        "mvtec_ad/tile/train/good/039.png",
+        "mvtec_ad/tile/train/good/137.png",
+        "mvtec_ad/tile/train/good/031.png",
+        "mvtec_ad/tile/train/good/123.png",
+        "mvtec_ad/tile/train/good/211.png",
+        "mvtec_ad/tile/train/good/074.png",
+        "mvtec_ad/tile/train/good/208.png",
+        "mvtec_ad/tile/train/good/073.png",
+        "mvtec_ad/tile/train/good/002.png",
+        "mvtec_ad/tile/train/good/210.png",
+        "mvtec_ad/tile/train/good/119.png",
+        "mvtec_ad/tile/train/good/218.png"
+      ],
+      "50": [
+        "mvtec_ad/tile/train/good/221.png",
+        "mvtec_ad/tile/train/good/028.png",
+        "mvtec_ad/tile/train/good/084.png",
+        "mvtec_ad/tile/train/good/093.png",
+        "mvtec_ad/tile/train/good/056.png",
+        "mvtec_ad/tile/train/good/202.png",
+        "mvtec_ad/tile/train/good/181.png",
+        "mvtec_ad/tile/train/good/145.png",
+        "mvtec_ad/tile/train/good/049.png",
+        "mvtec_ad/tile/train/good/152.png",
+        "mvtec_ad/tile/train/good/104.png",
+        "mvtec_ad/tile/train/good/107.png",
+        "mvtec_ad/tile/train/good/097.png",
+        "mvtec_ad/tile/train/good/213.png",
+        "mvtec_ad/tile/train/good/159.png",
+        "mvtec_ad/tile/train/good/229.png",
+        "mvtec_ad/tile/train/good/170.png",
+        "mvtec_ad/tile/train/good/055.png",
+        "mvtec_ad/tile/train/good/133.png",
+        "mvtec_ad/tile/train/good/069.png",
+        "mvtec_ad/tile/train/good/000.png",
+        "mvtec_ad/tile/train/good/185.png",
+        "mvtec_ad/tile/train/good/015.png",
+        "mvtec_ad/tile/train/good/144.png",
+        "mvtec_ad/tile/train/good/051.png",
+        "mvtec_ad/tile/train/good/058.png",
+        "mvtec_ad/tile/train/good/009.png",
+        "mvtec_ad/tile/train/good/080.png",
+        "mvtec_ad/tile/train/good/201.png",
+        "mvtec_ad/tile/train/good/160.png",
+        "mvtec_ad/tile/train/good/158.png",
+        "mvtec_ad/tile/train/good/071.png",
+        "mvtec_ad/tile/train/good/219.png",
+        "mvtec_ad/tile/train/good/108.png",
+        "mvtec_ad/tile/train/good/032.png",
+        "mvtec_ad/tile/train/good/150.png",
+        "mvtec_ad/tile/train/good/057.png",
+        "mvtec_ad/tile/train/good/226.png",
+        "mvtec_ad/tile/train/good/068.png",
+        "mvtec_ad/tile/train/good/044.png",
+        "mvtec_ad/tile/train/good/195.png",
+        "mvtec_ad/tile/train/good/003.png",
+        "mvtec_ad/tile/train/good/024.png",
+        "mvtec_ad/tile/train/good/014.png",
+        "mvtec_ad/tile/train/good/184.png",
+        "mvtec_ad/tile/train/good/070.png",
+        "mvtec_ad/tile/train/good/146.png",
+        "mvtec_ad/tile/train/good/102.png",
+        "mvtec_ad/tile/train/good/205.png",
+        "mvtec_ad/tile/train/good/081.png"
+      ],
+      "20": [
+        "mvtec_ad/tile/train/good/221.png",
+        "mvtec_ad/tile/train/good/028.png",
+        "mvtec_ad/tile/train/good/084.png",
+        "mvtec_ad/tile/train/good/093.png",
+        "mvtec_ad/tile/train/good/056.png",
+        "mvtec_ad/tile/train/good/202.png",
+        "mvtec_ad/tile/train/good/181.png",
+        "mvtec_ad/tile/train/good/145.png",
+        "mvtec_ad/tile/train/good/049.png",
+        "mvtec_ad/tile/train/good/152.png",
+        "mvtec_ad/tile/train/good/104.png",
+        "mvtec_ad/tile/train/good/107.png",
+        "mvtec_ad/tile/train/good/097.png",
+        "mvtec_ad/tile/train/good/213.png",
+        "mvtec_ad/tile/train/good/159.png",
+        "mvtec_ad/tile/train/good/229.png",
+        "mvtec_ad/tile/train/good/170.png",
+        "mvtec_ad/tile/train/good/055.png",
+        "mvtec_ad/tile/train/good/133.png",
+        "mvtec_ad/tile/train/good/069.png"
+      ]
+    },
+    "29": {
+      "100": [
+        "mvtec_ad/tile/train/good/163.png",
+        "mvtec_ad/tile/train/good/191.png",
+        "mvtec_ad/tile/train/good/143.png",
+        "mvtec_ad/tile/train/good/178.png",
+        "mvtec_ad/tile/train/good/184.png",
+        "mvtec_ad/tile/train/good/059.png",
+        "mvtec_ad/tile/train/good/112.png",
+        "mvtec_ad/tile/train/good/078.png",
+        "mvtec_ad/tile/train/good/013.png",
+        "mvtec_ad/tile/train/good/036.png",
+        "mvtec_ad/tile/train/good/123.png",
+        "mvtec_ad/tile/train/good/039.png",
+        "mvtec_ad/tile/train/good/071.png",
+        "mvtec_ad/tile/train/good/224.png",
+        "mvtec_ad/tile/train/good/207.png",
+        "mvtec_ad/tile/train/good/185.png",
+        "mvtec_ad/tile/train/good/229.png",
+        "mvtec_ad/tile/train/good/037.png",
+        "mvtec_ad/tile/train/good/094.png",
+        "mvtec_ad/tile/train/good/138.png",
+        "mvtec_ad/tile/train/good/015.png",
+        "mvtec_ad/tile/train/good/135.png",
+        "mvtec_ad/tile/train/good/029.png",
+        "mvtec_ad/tile/train/good/134.png",
+        "mvtec_ad/tile/train/good/018.png",
+        "mvtec_ad/tile/train/good/197.png",
+        "mvtec_ad/tile/train/good/150.png",
+        "mvtec_ad/tile/train/good/151.png",
+        "mvtec_ad/tile/train/good/088.png",
+        "mvtec_ad/tile/train/good/204.png",
+        "mvtec_ad/tile/train/good/076.png",
+        "mvtec_ad/tile/train/good/084.png",
+        "mvtec_ad/tile/train/good/050.png",
+        "mvtec_ad/tile/train/good/033.png",
+        "mvtec_ad/tile/train/good/192.png",
+        "mvtec_ad/tile/train/good/075.png",
+        "mvtec_ad/tile/train/good/126.png",
+        "mvtec_ad/tile/train/good/014.png",
+        "mvtec_ad/tile/train/good/157.png",
+        "mvtec_ad/tile/train/good/024.png",
+        "mvtec_ad/tile/train/good/052.png",
+        "mvtec_ad/tile/train/good/056.png",
+        "mvtec_ad/tile/train/good/092.png",
+        "mvtec_ad/tile/train/good/201.png",
+        "mvtec_ad/tile/train/good/200.png",
+        "mvtec_ad/tile/train/good/074.png",
+        "mvtec_ad/tile/train/good/026.png",
+        "mvtec_ad/tile/train/good/219.png",
+        "mvtec_ad/tile/train/good/149.png",
+        "mvtec_ad/tile/train/good/055.png",
+        "mvtec_ad/tile/train/good/203.png",
+        "mvtec_ad/tile/train/good/111.png",
+        "mvtec_ad/tile/train/good/220.png",
+        "mvtec_ad/tile/train/good/152.png",
+        "mvtec_ad/tile/train/good/063.png",
+        "mvtec_ad/tile/train/good/083.png",
+        "mvtec_ad/tile/train/good/161.png",
+        "mvtec_ad/tile/train/good/214.png",
+        "mvtec_ad/tile/train/good/040.png",
+        "mvtec_ad/tile/train/good/181.png",
+        "mvtec_ad/tile/train/good/122.png",
+        "mvtec_ad/tile/train/good/047.png",
+        "mvtec_ad/tile/train/good/019.png",
+        "mvtec_ad/tile/train/good/165.png",
+        "mvtec_ad/tile/train/good/034.png",
+        "mvtec_ad/tile/train/good/058.png",
+        "mvtec_ad/tile/train/good/148.png",
+        "mvtec_ad/tile/train/good/208.png",
+        "mvtec_ad/tile/train/good/020.png",
+        "mvtec_ad/tile/train/good/090.png",
+        "mvtec_ad/tile/train/good/022.png",
+        "mvtec_ad/tile/train/good/127.png",
+        "mvtec_ad/tile/train/good/077.png",
+        "mvtec_ad/tile/train/good/038.png",
+        "mvtec_ad/tile/train/good/030.png",
+        "mvtec_ad/tile/train/good/003.png",
+        "mvtec_ad/tile/train/good/216.png",
+        "mvtec_ad/tile/train/good/035.png",
+        "mvtec_ad/tile/train/good/057.png",
+        "mvtec_ad/tile/train/good/211.png",
+        "mvtec_ad/tile/train/good/223.png",
+        "mvtec_ad/tile/train/good/120.png",
+        "mvtec_ad/tile/train/good/142.png",
+        "mvtec_ad/tile/train/good/080.png",
+        "mvtec_ad/tile/train/good/217.png",
+        "mvtec_ad/tile/train/good/009.png",
+        "mvtec_ad/tile/train/good/081.png",
+        "mvtec_ad/tile/train/good/153.png",
+        "mvtec_ad/tile/train/good/000.png",
+        "mvtec_ad/tile/train/good/021.png",
+        "mvtec_ad/tile/train/good/046.png",
+        "mvtec_ad/tile/train/good/101.png",
+        "mvtec_ad/tile/train/good/006.png",
+        "mvtec_ad/tile/train/good/114.png",
+        "mvtec_ad/tile/train/good/007.png",
+        "mvtec_ad/tile/train/good/226.png",
+        "mvtec_ad/tile/train/good/044.png",
+        "mvtec_ad/tile/train/good/144.png",
+        "mvtec_ad/tile/train/good/068.png",
+        "mvtec_ad/tile/train/good/221.png"
+      ],
+      "50": [
+        "mvtec_ad/tile/train/good/163.png",
+        "mvtec_ad/tile/train/good/191.png",
+        "mvtec_ad/tile/train/good/143.png",
+        "mvtec_ad/tile/train/good/178.png",
+        "mvtec_ad/tile/train/good/184.png",
+        "mvtec_ad/tile/train/good/059.png",
+        "mvtec_ad/tile/train/good/112.png",
+        "mvtec_ad/tile/train/good/078.png",
+        "mvtec_ad/tile/train/good/013.png",
+        "mvtec_ad/tile/train/good/036.png",
+        "mvtec_ad/tile/train/good/123.png",
+        "mvtec_ad/tile/train/good/039.png",
+        "mvtec_ad/tile/train/good/071.png",
+        "mvtec_ad/tile/train/good/224.png",
+        "mvtec_ad/tile/train/good/207.png",
+        "mvtec_ad/tile/train/good/185.png",
+        "mvtec_ad/tile/train/good/229.png",
+        "mvtec_ad/tile/train/good/037.png",
+        "mvtec_ad/tile/train/good/094.png",
+        "mvtec_ad/tile/train/good/138.png",
+        "mvtec_ad/tile/train/good/015.png",
+        "mvtec_ad/tile/train/good/135.png",
+        "mvtec_ad/tile/train/good/029.png",
+        "mvtec_ad/tile/train/good/134.png",
+        "mvtec_ad/tile/train/good/018.png",
+        "mvtec_ad/tile/train/good/197.png",
+        "mvtec_ad/tile/train/good/150.png",
+        "mvtec_ad/tile/train/good/151.png",
+        "mvtec_ad/tile/train/good/088.png",
+        "mvtec_ad/tile/train/good/204.png",
+        "mvtec_ad/tile/train/good/076.png",
+        "mvtec_ad/tile/train/good/084.png",
+        "mvtec_ad/tile/train/good/050.png",
+        "mvtec_ad/tile/train/good/033.png",
+        "mvtec_ad/tile/train/good/192.png",
+        "mvtec_ad/tile/train/good/075.png",
+        "mvtec_ad/tile/train/good/126.png",
+        "mvtec_ad/tile/train/good/014.png",
+        "mvtec_ad/tile/train/good/157.png",
+        "mvtec_ad/tile/train/good/024.png",
+        "mvtec_ad/tile/train/good/052.png",
+        "mvtec_ad/tile/train/good/056.png",
+        "mvtec_ad/tile/train/good/092.png",
+        "mvtec_ad/tile/train/good/201.png",
+        "mvtec_ad/tile/train/good/200.png",
+        "mvtec_ad/tile/train/good/074.png",
+        "mvtec_ad/tile/train/good/026.png",
+        "mvtec_ad/tile/train/good/219.png",
+        "mvtec_ad/tile/train/good/149.png",
+        "mvtec_ad/tile/train/good/055.png"
+      ],
+      "20": [
+        "mvtec_ad/tile/train/good/163.png",
+        "mvtec_ad/tile/train/good/191.png",
+        "mvtec_ad/tile/train/good/143.png",
+        "mvtec_ad/tile/train/good/178.png",
+        "mvtec_ad/tile/train/good/184.png",
+        "mvtec_ad/tile/train/good/059.png",
+        "mvtec_ad/tile/train/good/112.png",
+        "mvtec_ad/tile/train/good/078.png",
+        "mvtec_ad/tile/train/good/013.png",
+        "mvtec_ad/tile/train/good/036.png",
+        "mvtec_ad/tile/train/good/123.png",
+        "mvtec_ad/tile/train/good/039.png",
+        "mvtec_ad/tile/train/good/071.png",
+        "mvtec_ad/tile/train/good/224.png",
+        "mvtec_ad/tile/train/good/207.png",
+        "mvtec_ad/tile/train/good/185.png",
+        "mvtec_ad/tile/train/good/229.png",
+        "mvtec_ad/tile/train/good/037.png",
+        "mvtec_ad/tile/train/good/094.png",
+        "mvtec_ad/tile/train/good/138.png"
+      ]
+    },
+    "43": {
+      "100": [
+        "mvtec_ad/tile/train/good/220.png",
+        "mvtec_ad/tile/train/good/139.png",
+        "mvtec_ad/tile/train/good/126.png",
+        "mvtec_ad/tile/train/good/203.png",
+        "mvtec_ad/tile/train/good/207.png",
+        "mvtec_ad/tile/train/good/127.png",
+        "mvtec_ad/tile/train/good/027.png",
+        "mvtec_ad/tile/train/good/122.png",
+        "mvtec_ad/tile/train/good/149.png",
+        "mvtec_ad/tile/train/good/206.png",
+        "mvtec_ad/tile/train/good/131.png",
+        "mvtec_ad/tile/train/good/001.png",
+        "mvtec_ad/tile/train/good/034.png",
+        "mvtec_ad/tile/train/good/111.png",
+        "mvtec_ad/tile/train/good/132.png",
+        "mvtec_ad/tile/train/good/070.png",
+        "mvtec_ad/tile/train/good/058.png",
+        "mvtec_ad/tile/train/good/082.png",
+        "mvtec_ad/tile/train/good/009.png",
+        "mvtec_ad/tile/train/good/012.png",
+        "mvtec_ad/tile/train/good/225.png",
+        "mvtec_ad/tile/train/good/211.png",
+        "mvtec_ad/tile/train/good/036.png",
+        "mvtec_ad/tile/train/good/041.png",
+        "mvtec_ad/tile/train/good/063.png",
+        "mvtec_ad/tile/train/good/087.png",
+        "mvtec_ad/tile/train/good/217.png",
+        "mvtec_ad/tile/train/good/023.png",
+        "mvtec_ad/tile/train/good/218.png",
+        "mvtec_ad/tile/train/good/098.png",
+        "mvtec_ad/tile/train/good/210.png",
+        "mvtec_ad/tile/train/good/088.png",
+        "mvtec_ad/tile/train/good/035.png",
+        "mvtec_ad/tile/train/good/052.png",
+        "mvtec_ad/tile/train/good/150.png",
+        "mvtec_ad/tile/train/good/125.png",
+        "mvtec_ad/tile/train/good/129.png",
+        "mvtec_ad/tile/train/good/097.png",
+        "mvtec_ad/tile/train/good/130.png",
+        "mvtec_ad/tile/train/good/141.png",
+        "mvtec_ad/tile/train/good/076.png",
+        "mvtec_ad/tile/train/good/114.png",
+        "mvtec_ad/tile/train/good/214.png",
+        "mvtec_ad/tile/train/good/156.png",
+        "mvtec_ad/tile/train/good/060.png",
+        "mvtec_ad/tile/train/good/120.png",
+        "mvtec_ad/tile/train/good/180.png",
+        "mvtec_ad/tile/train/good/188.png",
+        "mvtec_ad/tile/train/good/145.png",
+        "mvtec_ad/tile/train/good/081.png",
+        "mvtec_ad/tile/train/good/003.png",
+        "mvtec_ad/tile/train/good/028.png",
+        "mvtec_ad/tile/train/good/075.png",
+        "mvtec_ad/tile/train/good/026.png",
+        "mvtec_ad/tile/train/good/078.png",
+        "mvtec_ad/tile/train/good/080.png",
+        "mvtec_ad/tile/train/good/044.png",
+        "mvtec_ad/tile/train/good/134.png",
+        "mvtec_ad/tile/train/good/095.png",
+        "mvtec_ad/tile/train/good/031.png",
+        "mvtec_ad/tile/train/good/226.png",
+        "mvtec_ad/tile/train/good/073.png",
+        "mvtec_ad/tile/train/good/148.png",
+        "mvtec_ad/tile/train/good/165.png",
+        "mvtec_ad/tile/train/good/061.png",
+        "mvtec_ad/tile/train/good/163.png",
+        "mvtec_ad/tile/train/good/090.png",
+        "mvtec_ad/tile/train/good/102.png",
+        "mvtec_ad/tile/train/good/227.png",
+        "mvtec_ad/tile/train/good/059.png",
+        "mvtec_ad/tile/train/good/093.png",
+        "mvtec_ad/tile/train/good/071.png",
+        "mvtec_ad/tile/train/good/039.png",
+        "mvtec_ad/tile/train/good/219.png",
+        "mvtec_ad/tile/train/good/107.png",
+        "mvtec_ad/tile/train/good/096.png",
+        "mvtec_ad/tile/train/good/051.png",
+        "mvtec_ad/tile/train/good/002.png",
+        "mvtec_ad/tile/train/good/184.png",
+        "mvtec_ad/tile/train/good/162.png",
+        "mvtec_ad/tile/train/good/109.png",
+        "mvtec_ad/tile/train/good/000.png",
+        "mvtec_ad/tile/train/good/024.png",
+        "mvtec_ad/tile/train/good/223.png",
+        "mvtec_ad/tile/train/good/146.png",
+        "mvtec_ad/tile/train/good/069.png",
+        "mvtec_ad/tile/train/good/065.png",
+        "mvtec_ad/tile/train/good/083.png",
+        "mvtec_ad/tile/train/good/108.png",
+        "mvtec_ad/tile/train/good/019.png",
+        "mvtec_ad/tile/train/good/200.png",
+        "mvtec_ad/tile/train/good/228.png",
+        "mvtec_ad/tile/train/good/167.png",
+        "mvtec_ad/tile/train/good/104.png",
+        "mvtec_ad/tile/train/good/015.png",
+        "mvtec_ad/tile/train/good/101.png",
+        "mvtec_ad/tile/train/good/181.png",
+        "mvtec_ad/tile/train/good/205.png",
+        "mvtec_ad/tile/train/good/152.png",
+        "mvtec_ad/tile/train/good/140.png"
+      ],
+      "50": [
+        "mvtec_ad/tile/train/good/220.png",
+        "mvtec_ad/tile/train/good/139.png",
+        "mvtec_ad/tile/train/good/126.png",
+        "mvtec_ad/tile/train/good/203.png",
+        "mvtec_ad/tile/train/good/207.png",
+        "mvtec_ad/tile/train/good/127.png",
+        "mvtec_ad/tile/train/good/027.png",
+        "mvtec_ad/tile/train/good/122.png",
+        "mvtec_ad/tile/train/good/149.png",
+        "mvtec_ad/tile/train/good/206.png",
+        "mvtec_ad/tile/train/good/131.png",
+        "mvtec_ad/tile/train/good/001.png",
+        "mvtec_ad/tile/train/good/034.png",
+        "mvtec_ad/tile/train/good/111.png",
+        "mvtec_ad/tile/train/good/132.png",
+        "mvtec_ad/tile/train/good/070.png",
+        "mvtec_ad/tile/train/good/058.png",
+        "mvtec_ad/tile/train/good/082.png",
+        "mvtec_ad/tile/train/good/009.png",
+        "mvtec_ad/tile/train/good/012.png",
+        "mvtec_ad/tile/train/good/225.png",
+        "mvtec_ad/tile/train/good/211.png",
+        "mvtec_ad/tile/train/good/036.png",
+        "mvtec_ad/tile/train/good/041.png",
+        "mvtec_ad/tile/train/good/063.png",
+        "mvtec_ad/tile/train/good/087.png",
+        "mvtec_ad/tile/train/good/217.png",
+        "mvtec_ad/tile/train/good/023.png",
+        "mvtec_ad/tile/train/good/218.png",
+        "mvtec_ad/tile/train/good/098.png",
+        "mvtec_ad/tile/train/good/210.png",
+        "mvtec_ad/tile/train/good/088.png",
+        "mvtec_ad/tile/train/good/035.png",
+        "mvtec_ad/tile/train/good/052.png",
+        "mvtec_ad/tile/train/good/150.png",
+        "mvtec_ad/tile/train/good/125.png",
+        "mvtec_ad/tile/train/good/129.png",
+        "mvtec_ad/tile/train/good/097.png",
+        "mvtec_ad/tile/train/good/130.png",
+        "mvtec_ad/tile/train/good/141.png",
+        "mvtec_ad/tile/train/good/076.png",
+        "mvtec_ad/tile/train/good/114.png",
+        "mvtec_ad/tile/train/good/214.png",
+        "mvtec_ad/tile/train/good/156.png",
+        "mvtec_ad/tile/train/good/060.png",
+        "mvtec_ad/tile/train/good/120.png",
+        "mvtec_ad/tile/train/good/180.png",
+        "mvtec_ad/tile/train/good/188.png",
+        "mvtec_ad/tile/train/good/145.png",
+        "mvtec_ad/tile/train/good/081.png"
+      ],
+      "20": [
+        "mvtec_ad/tile/train/good/220.png",
+        "mvtec_ad/tile/train/good/139.png",
+        "mvtec_ad/tile/train/good/126.png",
+        "mvtec_ad/tile/train/good/203.png",
+        "mvtec_ad/tile/train/good/207.png",
+        "mvtec_ad/tile/train/good/127.png",
+        "mvtec_ad/tile/train/good/027.png",
+        "mvtec_ad/tile/train/good/122.png",
+        "mvtec_ad/tile/train/good/149.png",
+        "mvtec_ad/tile/train/good/206.png",
+        "mvtec_ad/tile/train/good/131.png",
+        "mvtec_ad/tile/train/good/001.png",
+        "mvtec_ad/tile/train/good/034.png",
+        "mvtec_ad/tile/train/good/111.png",
+        "mvtec_ad/tile/train/good/132.png",
+        "mvtec_ad/tile/train/good/070.png",
+        "mvtec_ad/tile/train/good/058.png",
+        "mvtec_ad/tile/train/good/082.png",
+        "mvtec_ad/tile/train/good/009.png",
+        "mvtec_ad/tile/train/good/012.png"
+      ]
+    }
+  },
+  "notes": [
+    "路径相对 datasets 根目录；运行时以 --datasets-root 拼接。",
+    "runs 中为拟合图片路径，哈希见 fit_pool。",
+    "test/ground_truth 已锁定，禁止用于阈值或模型选择。",
+    "LOCO 评估时 logical_anomalies 与 structural_anomalies 分开报指标。"
+  ]
+}

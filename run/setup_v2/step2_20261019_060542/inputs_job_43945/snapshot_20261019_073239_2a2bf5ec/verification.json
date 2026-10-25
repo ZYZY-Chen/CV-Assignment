@@ -1,0 +1,16 @@
+{
+  "archive_sha256": "F2607938735D69E8C1A6127F4B6C02A1961D6FF7E27387C375C7664E0A16049D",
+  "verified_record_count": 32,
+  "source_update_deployed": true,
+  "two_target_hashes_and_backups_verified": true,
+  "only_approved_configuration_fields_changed": true,
+  "job_id": "43945",
+  "reported_state": "RUNNING",
+  "reported_elapsed": "00:00:39",
+  "node": "TC2N01",
+  "stderr_size_bytes": 0,
+  "preparation_status_present": false,
+  "transfers_status_present": false,
+  "step_2_complete": false,
+  "snapshot_directory": "C:\\Users\\mhjv_\\PycharmProjects\\6129_assignment\\group_XX_code\\run\\setup_v2\\step2_20261019_060542\\inputs_job_43945\\snapshot_20261019_073239_2a2bf5ec"
+}
