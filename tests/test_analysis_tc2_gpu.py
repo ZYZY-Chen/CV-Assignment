@@ -447,6 +447,22 @@ class CollectionTests(unittest.TestCase):
         gate = patch.object(collector, "require_current_acceptance", return_value=None)
         gate.start(); self.addCleanup(gate.stop)
 
+    def test_pending_metadata_uses_current_manifest_hashes_and_rejects_changed_notes(self):
+        from scripts.tc2_gpu.collect import collect_analysis as collector
+        names = (collector.CONFIG, collector.EXPERIMENT_CONFIG, collector.PROTOCOL, *sorted(collector.MANIFESTS))
+        metadata = {name: (ROOT / name).read_bytes() for name in names}
+        state = {"job_id": "79862", "status": "missing", "stage_id": "analysis", "step_8_complete": False}
+        with patch.object(collector, "historical_config",
+                          side_effect=AssertionError("Current input hashes must not use historical configuration")):
+            collector._metadata(metadata, state, "79862")
+            for name in sorted(collector.MANIFESTS):
+                changed = dict(metadata)
+                manifest = json.loads(metadata[name])
+                manifest["notes"][0] += " Changed annotation."
+                changed[name] = json.dumps(manifest, ensure_ascii=True).encode("utf-8")
+                with self.subTest(manifest=name), self.assertRaisesRegex(ValueError, "manifest bytes differ"):
+                    collector._metadata(changed, state, "79862")
+
     def test_pending_collection_and_tamper_guards_without_models(self):
         from scripts.tc2_gpu.collect import collect_analysis as collector
         root = temporary(self)

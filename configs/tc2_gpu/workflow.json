@@ -8,13 +8,13 @@
   },
   "protocol": {
     "path": "configs/tc2_gpu/protocol.json",
-    "sha256": "FC240CD6E9AD72D37C79AD169E3E8CE05BCAB8E5ABDE3A4BCB2226E911C296FF",
+    "sha256": "52433DAF6E12195E53AFAD6F55F396B3B343131A315400AFDF85BAEA53F822F9",
     "protocol_id": "ca6129_industrial_ad_tc2_gpu",
     "human_readable_path": "docs/guides/TC2_GPU_PROTOCOL.md"
   },
   "frozen_protocol": {
     "path": "configs/tc2_gpu/protocol.json",
-    "sha256": "FC240CD6E9AD72D37C79AD169E3E8CE05BCAB8E5ABDE3A4BCB2226E911C296FF",
+    "sha256": "52433DAF6E12195E53AFAD6F55F396B3B343131A315400AFDF85BAEA53F822F9",
     "protocol_id": "ca6129_industrial_ad_tc2_gpu",
     "protocol_version": "2.0.0",
     "human_readable_path": "docs/guides/TC2_GPU_PROTOCOL.md"

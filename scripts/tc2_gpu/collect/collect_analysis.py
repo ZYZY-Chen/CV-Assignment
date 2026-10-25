@@ -510,8 +510,12 @@ def _metadata(meta, snapshot, job_id):
     if _bytes_sha(meta[PROTOCOL]) != PROTOCOL_SHA256 or _bytes_sha(meta[EXPERIMENT_CONFIG]) != CURRENT_DESIGN_SHA256:
         raise ValueError("Frozen protocol or experiment design bytes differ")
     design = _json(meta[EXPERIMENT_CONFIG])
-    for name in MANIFESTS:
-        if _bytes_sha(meta[name]) != historical_config(ROOT, "experiments")["scientific_source_hashes"][name]:
+    manifests = _json(meta[PROTOCOL])["data"]["frozen_manifests"]
+    manifest_hashes = {entry["path"]: entry["file_sha256"] for entry in manifests}
+    if len(manifests) != len(MANIFESTS) or set(manifest_hashes) != MANIFESTS:
+        raise ValueError("Current protocol manifest set differs")
+    for name, fingerprint in manifest_hashes.items():
+        if _bytes_sha(meta[name]) != fingerprint:
             raise ValueError("Frozen input manifest bytes differ")
     if state["status"] == "missing":
         return

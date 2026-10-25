@@ -1,33 +1,35 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-make_manifests.py — CA6129 小组项目：统一数据划分与 manifest 生成
-======================================================================
+make_manifests.py — CA6129 group project: consistent data splits and manifest generation
+=====================================================================================
 
-遵循《CA6129 工业异常检测小组选题与分工手册》第 2 页的划分协议：
+Follow the split protocol on page 2 of the CA6129 industrial anomaly detection
+topic and team assignment handbook:
 
-  1. 固定 split seed = 20261017；MVTec AD 每类从官方 train/good 中约 20%
-     划为「正常开发集」（只有正常图，用于校准分布/工作阈值，不用于选模型），
-     其余 80% 作为「正常拟合池」（fit pool）。
-  2. MVTec LOCO 不做切分：官方 validation/good 直接作为正常开发集，
-     train/good 全部作为拟合池。
-  3. 官方 test 与 ground_truth 全部锁定，绝不进入开发集/拟合池。
-  4. 标准实验 run seeds = 17 / 29 / 43，每个 seed 从拟合池抽 100 张；
-     同一 seed 下 20 / 50 / 100 张构成嵌套子集（20 ⊂ 50 ⊂ 100）；
-     同一 seed 下 PaDiM 与 PatchCore 共用同一份清单（本脚本只生成一份）。
-  5. 每个文件记录 SHA-256；每个类别输出一个 split_hash，供 run 证据记录。
+  1. Use fixed split seed 20261017. For each MVTec AD category, reserve about
+     20% of official train/good as the normal development set (normal images
+     only, for distribution/operating-threshold calibration, not model selection).
+     Use the remaining 80% as the normal fitting pool.
+  2. Do not split MVTec LOCO: use official validation/good as the normal
+     development set and all train/good images as the fitting pool.
+  3. Lock official test and ground_truth; exclude them from development/fitting.
+  4. Use run seeds 17 / 29 / 43, selecting 100 fitting-pool images per seed.
+     For the same seed, the 20 / 50 / 100 image subsets are nested (20⊂50⊂100).
+     PaDiM and PatchCore share the same manifest for each seed; generate it once.
+  5. Record each file's SHA-256 and one split_hash per category as run evidence.
 
-仅使用 Python 标准库，Python 3.8+ 可直接运行，无需 GPU。
+Uses only the Python standard library; runs on Python 3.8+ without a GPU.
 
-用法（在 tools/data/ 目录下）：
+Usage (from tools/data/):
     py make_manifests.py
     py make_manifests.py --datasets-root ../../datasets --out-dir ../../manifests
-    py make_manifests.py --rehash        # 不信任 file_inventory.csv，重新计算全部哈希
+    py make_manifests.py --rehash        # Recompute all hashes instead of trusting file_inventory.csv
 
-输出（写入 --out-dir，默认 ../../manifests/）：
-    manifest_<dataset>_<category>.json   每类完整清单（8 个）
-    manifest_index.json                  全局配置、计数与 split_hash 汇总
-    splits_overview.csv                  人类可读的划分总览
+Outputs (written to --out-dir, default ../../manifests/):
+    manifest_<dataset>_<category>.json   Complete manifest for each category (8 files)
+    manifest_index.json                 Configuration, counts, and split_hash summary
+    splits_overview.csv                 Human-readable split overview
 """
 
 import argparse
@@ -40,41 +42,41 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 # ---------------------------------------------------------------------------
-# 固定实验协议（不要随意改动；如改动需在报告中记录并更新 split_hash）
+# Fixed experiment protocol (record approved changes in the report and update split_hash)
 # ---------------------------------------------------------------------------
-SPLIT_SEED = 20261017          # 开发集/拟合池划分种子（MVTec AD 用）
-DEV_RATIO = 0.20               # 开发集占 train/good 的比例
-RUN_SEEDS = [17, 29, 43]       # 标准实验 run seeds
-FIT_SIZES = [100, 50, 20]      # 嵌套拟合子集（脚本保证 20 ⊂ 50 ⊂ 100）
-MAIN_FIT_N = 100               # B0 主实验拟合张数
+SPLIT_SEED = 20261017          # Development/fitting-pool split seed for MVTec AD
+DEV_RATIO = 0.20               # Development fraction of train/good
+RUN_SEEDS = [17, 29, 43]       # Standard experiment run seeds
+FIT_SIZES = [100, 50, 20]      # Nested fitting subsets (the script guarantees 20 ⊂ 50 ⊂ 100)
+MAIN_FIT_N = 100               # Number of fitting images for the main B0 experiment
 
 MANIFEST_VERSION = "1.0"
 
-# 数据集与类别（与 datasets/ 目录一致）
+# Datasets and categories (matching datasets/)
 DATASETS = {
     "mvtec_ad": {
         "categories": ["bottle", "cable", "capsule", "screw", "tile", "wood"],
-        "dev_mode": "split_train",          # 从 train/good 切 20%
+        "dev_mode": "split_train",          # Reserve 20% of train/good
     },
     "mvtec_loco": {
         "categories": ["juice_bottle", "screw_bag"],
-        "dev_mode": "official_validation",  # 直接用官方 validation/good
+        "dev_mode": "official_validation",  # Use official validation/good directly
     },
 }
 
-# 小组：MVTec AD 6 类为标准；LOCO 2 类为第二数据集扩展
+# Group scope: 6 MVTec AD categories as standard; 2 LOCO categories as the second-dataset extension
 MASK_SUBDIR = "ground_truth"
 
 
 # ---------------------------------------------------------------------------
-# 基础工具
+# Basic utilities
 # ---------------------------------------------------------------------------
 def log(msg):
     print(f"[make_manifests] {msg}", flush=True)
 
 
 def sha256_file(path, bufsize=1 << 20):
-    """计算单个文件的 SHA-256（1MB 缓冲区）。"""
+    """Compute one file's SHA-256 with a 1 MB buffer."""
     h = hashlib.sha256()
     with open(path, "rb") as f:
         while True:
@@ -86,7 +88,7 @@ def sha256_file(path, bufsize=1 << 20):
 
 
 def list_png(directory):
-    """列出目录下（不递归）所有 .png 文件，按文件名字典序返回绝对路径。"""
+    """List nonrecursive .png files as absolute paths in lexicographic filename order."""
     if not directory.is_dir():
         return []
     return sorted([p for p in directory.iterdir() if p.is_file() and p.suffix == ".png"],
@@ -94,27 +96,27 @@ def list_png(directory):
 
 
 def rel(datasets_root, path):
-    """相对 datasets 根目录的 POSIX 路径（跨平台、可移植到 HPC）。"""
+    """POSIX path relative to the datasets root, portable across platforms and HPC."""
     return Path(path).resolve().relative_to(Path(datasets_root).resolve()).as_posix()
 
 
 def load_inventory(datasets_root):
-    """读取 datasets/file_inventory.csv，返回 relative_path -> sha256 映射。"""
+    """Read datasets/file_inventory.csv and return the relative_path -> sha256 mapping."""
     inv_path = Path(datasets_root) / "file_inventory.csv"
     table = {}
     if not inv_path.is_file():
-        log("未找到 file_inventory.csv，将现场计算哈希（耗时会增加）。")
+        log("file_inventory.csv was not found; computing hashes directly will take longer.")
         return table, False
     with open(inv_path, "r", encoding="utf-8", newline="") as f:
         reader = csv.DictReader(f)
         for row in reader:
             table[row["relative_path"]] = row["sha256"].strip().upper()
-    log(f"已载入哈希清单 {inv_path.name}：{len(table)} 条。")
+    log(f"Loaded hash inventory {inv_path.name}: {len(table)} entries.")
     return table, True
 
 
 def make_entry(datasets_root, path, inventory, rehash, missing_hashes):
-    """生成 {path, sha256} 条目；优先用清单哈希，缺失则现场计算。"""
+    """Build a {path, sha256} entry, preferring inventory hashes and computing missing ones."""
     r = rel(datasets_root, path)
     if rehash or r not in inventory:
         digest = sha256_file(path)
@@ -125,16 +127,16 @@ def make_entry(datasets_root, path, inventory, rehash, missing_hashes):
 
 
 # ---------------------------------------------------------------------------
-# 掩膜路径映射
+# Mask path mapping
 # ---------------------------------------------------------------------------
 def masks_for_ad(datasets_root, cat_root, defect, image_path):
-    """MVTec AD：test/<defect>/<id>.png ↔ ground_truth/<defect>/<id>_mask.png。"""
+    """MVTec AD: test/<defect>/<id>.png ↔ ground_truth/<defect>/<id>_mask.png."""
     mask = cat_root / MASK_SUBDIR / defect / f"{image_path.stem}_mask.png"
     return [mask] if mask.is_file() else []
 
 
 def masks_for_loco(datasets_root, cat_root, defect, image_path):
-    """LOCO：test/<defect>/<id>.png ↔ ground_truth/<defect>/<id>/000.png[、001.png...]。"""
+    """LOCO: test/<defect>/<id>.png ↔ ground_truth/<defect>/<id>/000.png[,001.png...]."""
     mask_dir = cat_root / MASK_SUBDIR / defect / image_path.stem
     if not mask_dir.is_dir():
         return []
@@ -143,7 +145,7 @@ def masks_for_loco(datasets_root, cat_root, defect, image_path):
 
 
 # ---------------------------------------------------------------------------
-# 单个类别构建
+# Build one category
 # ---------------------------------------------------------------------------
 def build_category(dataset, category, datasets_root, inventory, rehash):
     cfg = DATASETS[dataset]
@@ -151,32 +153,32 @@ def build_category(dataset, category, datasets_root, inventory, rehash):
     missing_hashes = []
     errors = []
 
-    # --- 官方 train/good 全量 ---
+    # --- All official train/good images ---
     train_all = list_png(cat_root / "train" / "good")
     if not train_all:
-        raise RuntimeError(f"{dataset}/{category}: train/good 为空，路径是否正确？")
+        raise RuntimeError(f"{dataset}/{category}: train/good is empty; check the dataset path.")
 
-    # --- 开发集与拟合池 ---
+    # --- Development set and fitting pool ---
     if cfg["dev_mode"] == "split_train":
         n_dev = int(round(len(train_all) * DEV_RATIO + 1e-9))
         order = list(train_all)
-        random.Random(SPLIT_SEED).shuffle(order)  # 每类同一固定种子，可复现
+        random.Random(SPLIT_SEED).shuffle(order)  # Use the same fixed seed for each category for reproducibility
         dev_abs = sorted(order[:n_dev], key=lambda p: p.name)
         fit_abs = sorted(order[n_dev:], key=lambda p: p.name)
-        dev_note = f"train/good 的 {DEV_RATIO:.0%}（split seed={SPLIT_SEED}）"
+        dev_note = f"{DEV_RATIO:.0%} of train/good (split seed={SPLIT_SEED})"
     elif cfg["dev_mode"] == "official_validation":
         dev_abs = list_png(cat_root / "validation" / "good")
         fit_abs = train_all
         if not dev_abs:
-            raise RuntimeError(f"{dataset}/{category}: validation/good 为空。")
-        dev_note = "官方 validation/good（未从 train 切分）"
+            raise RuntimeError(f"{dataset}/{category}: validation/good is empty.")
+        dev_note = "Official validation/good (not split from train)"
     else:
         raise ValueError(cfg["dev_mode"])
 
     if len(fit_abs) < MAIN_FIT_N:
-        errors.append(f"拟合池仅 {len(fit_abs)} 张，不足主实验 {MAIN_FIT_N} 张！")
+        errors.append(f"The fitting pool has only {len(fit_abs)} images; the main experiment requires {MAIN_FIT_N}.")
 
-    # --- 官方测试集（锁定）---
+    # --- Official test set (locked)---
     test_dir = cat_root / "test"
     good_abs = list_png(test_dir / "good")
     mask_fn = masks_for_ad if dataset == "mvtec_ad" else masks_for_loco
@@ -187,7 +189,7 @@ def build_category(dataset, category, datasets_root, inventory, rehash):
         for img in list_png(d):
             mask_abs = mask_fn(datasets_root, cat_root, d.name, img)
             if not mask_abs:
-                errors.append(f"异常图缺少掩膜：{rel(datasets_root, img)}")
+                errors.append(f"Anomaly image has no mask: {rel(datasets_root, img)}")
             anomalies.append({
                 "path": rel(datasets_root, img),
                 "sha256": (sha256_file(img) if rehash or rel(datasets_root, img) not in inventory
@@ -199,17 +201,17 @@ def build_category(dataset, category, datasets_root, inventory, rehash):
             })
     anomalies.sort(key=lambda x: (x["defect_type"], x["path"]))
 
-    # --- 条目化（带哈希）---
+    # --- Build entries with hashes---
     dev_entries = [make_entry(datasets_root, p, inventory, rehash, missing_hashes) for p in dev_abs]
     fit_entries = [make_entry(datasets_root, p, inventory, rehash, missing_hashes) for p in fit_abs]
     good_entries = [make_entry(datasets_root, p, inventory, rehash, missing_hashes) for p in good_abs]
-    # 异常图哈希若在上面现场计算过，补登 missing_hashes
+    # Add anomaly images to missing_hashes if their hashes were computed above
     for a in anomalies:
         if rehash or a["path"] not in inventory:
             if a["path"] not in missing_hashes:
                 missing_hashes.append(a["path"])
 
-    # --- 三个 run seed 的嵌套拟合子集 ---
+    # --- Nested fitting subsets for the three run seeds ---
     fit_paths = [e["path"] for e in fit_entries]
     runs = {}
     for seed in RUN_SEEDS:
@@ -221,22 +223,22 @@ def build_category(dataset, category, datasets_root, inventory, rehash):
                 picks[n] = shuffled[:n]
         runs[str(seed)] = {str(n): picks[n] for n in FIT_SIZES}
 
-    # --- 一致性校验 ---
+    # --- Consistency checks ---
     dev_set = {e["path"] for e in dev_entries}
     fit_set = set(fit_paths)
     test_set = {e["path"] for e in good_entries} | {a["path"] for a in anomalies}
     if dev_set & fit_set:
-        errors.append("开发集与拟合池存在交集！")
+        errors.append("The development set and fitting pool overlap!")
     if (dev_set | fit_set) & test_set:
-        errors.append("train 与官方 test 存在交集！")
+        errors.append("The training and official test sets overlap!")
     for seed in RUN_SEEDS:
         s20, s50, s100 = (set(runs[str(seed)][str(n)]) for n in (20, 50, 100))
         if not (s20 <= s50 <= s100):
-            errors.append(f"seed={seed} 嵌套关系 20⊂50⊂100 不成立！")
+            errors.append(f"seed={seed}: the 20⊂50⊂100 nested-subset relation does not hold!")
         if len(s100) != MAIN_FIT_N:
-            errors.append(f"seed={seed} 主实验抽取数 != {MAIN_FIT_N}。")
+            errors.append(f"seed={seed}: main experiment sample count != {MAIN_FIT_N}.")
 
-    # --- split_hash（对划分本身做确定性哈希，供 run 证据记录）---
+    # --- split_hash (deterministic hash of the split itself for run evidence)---
     canonical = json.dumps({
         "manifest_version": MANIFEST_VERSION,
         "dataset": dataset,
@@ -288,10 +290,10 @@ def build_category(dataset, category, datasets_root, inventory, rehash):
         },
         "runs": runs,
         "notes": [
-            "路径相对 datasets 根目录；运行时以 --datasets-root 拼接。",
-            "runs 中为拟合图片路径，哈希见 fit_pool。",
-            "test/ground_truth 已锁定，禁止用于阈值或模型选择。",
-            "LOCO 评估时 logical_anomalies 与 structural_anomalies 分开报指标。",
+            "Paths are relative to the datasets root; resolve them with --datasets-root at runtime.",
+            "runs contains paths to fitting images; their hashes are recorded in fit_pool.",
+            "test/ground_truth is locked and must not be used for threshold or model selection.",
+            "Report logical_anomalies and structural_anomalies metrics separately for LOCO.",
         ],
     }
     overview_row = {
@@ -314,29 +316,29 @@ def build_category(dataset, category, datasets_root, inventory, rehash):
 
 
 # ---------------------------------------------------------------------------
-# 主流程
+# Main workflow
 # ---------------------------------------------------------------------------
 def main():
     here = Path(__file__).resolve().parent
-    parser = argparse.ArgumentParser(description="CA6129 统一数据划分与 manifest 生成")
+    parser = argparse.ArgumentParser(description="CA6129 consistent data splits and manifest generation")
     parser.add_argument("--datasets-root", default=str(here / ".." / ".." / "datasets"),
-                        help="datasets 目录路径（默认 ../../datasets）")
+                        help="Path to the datasets directory (default: ../../datasets)")
     parser.add_argument("--out-dir", default=str(here / ".." / ".." / "manifests"),
-                        help="manifest 输出目录（默认 ../../manifests）")
+                        help="Manifest output directory (default: ../../manifests)")
     parser.add_argument("--rehash", action="store_true",
-                        help="忽略 file_inventory.csv，重新计算全部文件 SHA-256")
+                        help="Ignore file_inventory.csv and recompute SHA-256 for every file")
     args = parser.parse_args()
 
     datasets_root = Path(args.datasets_root).resolve()
     out_dir = Path(args.out_dir).resolve()
     if not datasets_root.is_dir():
-        log(f"错误：找不到数据集目录 {datasets_root}")
+        log(f"Error: datasets directory not found: {datasets_root}")
         sys.exit(1)
     out_dir.mkdir(parents=True, exist_ok=True)
 
     inventory, have_inv = load_inventory(datasets_root)
     if args.rehash:
-        log("--rehash：将重新计算全部文件 SHA-256。")
+        log("--rehash: recomputing SHA-256 for every file.")
 
     index = {
         "manifest_version": MANIFEST_VERSION,
@@ -374,7 +376,7 @@ def main():
                 f"fit={row['fit_pool']} good={row['test_good']} "
                 f"anom={row['test_anomaly']} masks={row['masks']} -> {out_path.name}")
 
-    # 全局 split_hash（跨类别汇总，供整体复现核对）
+    # Global split_hash (category aggregate for overall reproducibility checks)
     index["global_split_hash"] = hashlib.sha256(
         json.dumps([d["split_hash"] for d in index["datasets"]],
                    sort_keys=True).encode("utf-8")).hexdigest().upper()
@@ -389,9 +391,9 @@ def main():
         writer.writeheader()
         writer.writerows(overview_rows)
 
-    # 控制台总览
+    # Console overview
     log("")
-    log("划分总览（每类；fit 子集以 seed 17 为例）：")
+    log("Split overview by category (fitting subsets shown for seed 17):")
     colw = 12
     header = f"{'dataset':<{colw}}{'category':<{colw}}{'dev':>4}{'fit':>5}{'good':>5}{'anom':>5}{'masks':>6}"
     print(header)
@@ -401,15 +403,15 @@ def main():
 
     log("")
     if total_errors:
-        log("校验发现问题：")
+        log("Validation found issues:")
         for e in total_errors:
             print("  [ERROR]", e)
         sys.exit(2)
-    log("全部一致性校验通过：开发集/拟合池/测试集互斥；20⊂50⊂100 嵌套成立；掩膜齐全。")
-    log(f"全局 global_split_hash = {index['global_split_hash']}")
+    log("All consistency checks passed: development/fitting/test sets are disjoint; 20⊂50⊂100 subsets are nested; all masks are present.")
+    log(f"Global split hash (global_split_hash) = {index['global_split_hash']}")
     if total_rehashed:
-        log(f"现场补算哈希 {total_rehashed} 个文件。")
-    log(f"输出目录：{out_dir}")
+        log(f"Computed missing hashes directly for {total_rehashed} files.")
+    log(f"Output directory: {out_dir}")
 
 
 if __name__ == "__main__":

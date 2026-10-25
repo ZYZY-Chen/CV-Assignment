@@ -1,6 +1,6 @@
 # Implementation history
 
-This is a readable history of the original steps 1-8 and earlier local usage. Its sequential accounts retain the wording and status visible at each implementation stage; statements such as "pending" or "no real-data fitting" describe that stage's snapshot. The [experiment ledger](EXPERIMENT_LEDGER.md) identifies final accepted jobs and later repairs. This document is not the current operating guide.
+This is a readable history of the original steps 1-8 and earlier local usage. Its sequential accounts retain the meaning and status recorded at each implementation stage; statements such as "pending" or "no real-data fitting" describe that stage's snapshot. The [experiment ledger](EXPERIMENT_LEDGER.md) identifies final accepted jobs and later repairs. This document is not the current operating guide.
 
 The exact original source, configuration, documents and receipts are retained through the [archive index](../../archive/index.json). Archive locators below identify ZIP members, not live worktree paths. Current operation and source identity are documented in the [workflow guide](../guides/TC2_GPU_WORKFLOW.md). Historical jobs do not establish acceptance of this checkout.
 
@@ -26,7 +26,7 @@ The TC2 allocation has been reclaimed. Legacy maintenance actions remain histori
 
 ## Retained README account
 
-比较 PaDiM 和 PatchCore。实验代码在这个目录，图片不放进 Git 仓库。
+The project compares PaDiM and PatchCore. The experiment code is in this directory; images are excluded from the Git repository.
 
 ## TC2 GPU Experiment Protocol and historical results
 
@@ -114,7 +114,7 @@ The pre-correction downloader example below is historical; its script is now arc
 python scripts/download_datasets.py --accept-license
 ```
 
-本机已经有图片时会跳过。下载完成后的目录是：
+Images already present locally are skipped. The directory structure after download is:
 
 ```
 datasets/
@@ -131,7 +131,7 @@ $env:CUDA_VISIBLE_DEVICES = "-1"
 python run.py --config configs/b0_patchcore.yaml --dataset mvtec_ad --category bottle --device cpu
 ```
 
-这台笔记本的独显在大块距离计算时蓝屏过，实验请加 `--device cpu`，并把 `CUDA_VISIBLE_DEVICES` 设为 `-1`。进展、已知问题和计时见 `run/HANDOFF_续作说明.md`。
+This laptop's discrete GPU previously caused a blue screen during large distance computations. Run the experiments with `--device cpu` and set `CUDA_VISIBLE_DEVICES` to `-1`. Progress, known issues and timing are recorded in the [archived continuation notes](../../archive/index.json).
 
 ## Temporary test artifact cleanup (2026-10-25)
 

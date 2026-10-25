@@ -1,0 +1,21 @@
+{
+  "status": "failed",
+  "created_utc": "2026-10-25T10:11:57.283000+00:00",
+  "tests_run": 28,
+  "failures": 0,
+  "errors": 1,
+  "skipped": 0,
+  "full_requested": false,
+  "full_plot_render_executed": false,
+  "full_plot_render_passed": false,
+  "local_core_tests_passed": false,
+  "gpu_or_models_executed": false,
+  "torch_imported": false,
+  "source_hashes": {
+    "scripts/tc2_gpu/analysis/analyze_results.py": "FCF9B2A79C62ADE01C7CD78111278258C229F3FFAB00EF72DFAF256B0DA091BA",
+    "scripts/tc2_gpu/analysis/plot_results.py": "C4AD7E9B6BB2D6D6428099EC255EBAE5BA624CD0B4F636D4CC7468C096F867B5",
+    "scripts/tc2_gpu/collect/collect_analysis.py": "3AF587323614EBF9E3EE7CE777C3C058D511A6FAF17FCF09DF10AD0F7F0BD48C",
+    "tests/test_analysis_tc2_gpu.py": "B244365D9960968128B31890EF71541861F09412CA0FD57A2C4BA3673ED4EAC9"
+  },
+  "render_scope": "Core, hash, path, CSV and asset validation only; rendering awaits the required full TC2 CPU checks"
+}

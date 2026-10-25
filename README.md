@@ -1,4 +1,4 @@
-# CA6129 工业异常检测小组作业
+# CA6129 Industrial Anomaly Detection Group Project
 
 ## Current workflow
 
@@ -29,13 +29,13 @@ The current configurations and independent source manifest are in [configs/tc2_g
 
 The archive keeps original bytes and paths. Readable historical Markdown copies are navigational records; their old commands, pending flags and remote locations are not current operating instructions. Formal scientific returns remain in their original external collections.
 
-## 数据集
+## Datasets
 
-只用 MVTec AD 的 bottle、cable、capsule、screw、tile、wood，以及 MVTec LOCO 的 juice_bottle、screw_bag。许可是 CC BY-NC-SA 4.0，仅限非商业用途。
+The project uses bottle, cable, capsule, screw, tile and wood from MVTec AD, and juice_bottle and screw_bag from MVTec LOCO. Both datasets are licensed under CC BY-NC-SA 4.0 for noncommercial use.
 
-官方下载页：
+Official download pages:
 
-- MVTec AD：https://www.mvtec.com/research-teaching/datasets/mvtec-ad/downloads
-- MVTec LOCO：https://www.mvtec.com/research-teaching/datasets/mvtec-loco-ad/downloads
+- MVTec AD: https://www.mvtec.com/research-teaching/datasets/mvtec-ad/downloads
+- MVTec LOCO: https://www.mvtec.com/research-teaching/datasets/mvtec-loco-ad/downloads
 
 Current input preparation is described in the [workflow guide](docs/guides/TC2_GPU_WORKFLOW.md); the earlier local downloader and CPU examples are retained in the [implementation history](docs/experiment_history/IMPLEMENTATION_HISTORY.md).

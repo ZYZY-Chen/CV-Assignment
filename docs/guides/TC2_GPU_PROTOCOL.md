@@ -21,7 +21,9 @@ The original frozen protocol and explanation remain byte-identical in the [histo
 
 PaDiM/PatchCore parameters, layers, anomaly-map processing, image scores, development thresholds and metric definitions remain as specified. Naming/storage/source metadata changes do not change numerical algorithm or plotting implementations.
 
-The 66 configurations and run keys remain equivalent. Cache/result identity also includes protocol and source fingerprints, so historical results are not automatic current-profile reuse candidates. The original 64-new-fit execution plan reflected two already accepted historical pilot results; that reuse does not authorize new source.
+The 66 configurations and run keys remain equivalent. Cache/result identity also includes protocol and source fingerprints, so historical results are not automatic current-profile reuse candidates.
+
+English translations of the current manifests' `config.dev_note` and `notes` change their file hashes and the referencing current protocol/source fingerprints. The image and mask hashes, sample lists, split hashes and scientific settings remain unchanged. Translated source comments and documentation also change source fingerprints, so the current cache/result identity changes. Historical manifests, protocol identities and accepted evidence retain their original bytes in the archive. The original 64-new-fit execution plan reflected two already accepted historical pilot results; that reuse does not authorize new source.
 
 ## Configuration roles
 

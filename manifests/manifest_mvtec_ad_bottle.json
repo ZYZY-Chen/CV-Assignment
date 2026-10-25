@@ -7,7 +7,7 @@
     "split_seed": 20261017,
     "dev_ratio": 0.2,
     "dev_mode": "split_train",
-    "dev_note": "train/good 的 20%（split seed=20261017）",
+    "dev_note": "20% of train/good (split seed=20261017)",
     "run_seeds": [
       17,
       29,
@@ -2271,9 +2271,9 @@
     }
   },
   "notes": [
-    "路径相对 datasets 根目录；运行时以 --datasets-root 拼接。",
-    "runs 中为拟合图片路径，哈希见 fit_pool。",
-    "test/ground_truth 已锁定，禁止用于阈值或模型选择。",
-    "LOCO 评估时 logical_anomalies 与 structural_anomalies 分开报指标。"
+    "Paths are relative to the datasets root; resolve them with --datasets-root at runtime.",
+    "runs contains paths to fitting images; their hashes are recorded in fit_pool.",
+    "test/ground_truth is locked and must not be used for threshold or model selection.",
+    "Report logical_anomalies and structural_anomalies metrics separately for LOCO."
   ]
 }
